@@ -10,19 +10,19 @@
 Give your AI agent live search results as data: Google, Bing, Maps, Shopping, Flights, Hotels, News, YouTube, AI answers and 100+ more engines, for any country, language or city.
 
 [![Add the SearchApi MCP to Claude](https://img.shields.io/badge/Claude-Add_SearchApi-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=SearchApi&connectorUrl=https%3A%2F%2Fwww.searchapi.io%2Fmcp)
-[![Add the SearchApi MCP to Cursor](https://img.shields.io/badge/Cursor-Add_SearchApi-000000?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
+[![Add the SearchApi MCP to Cursor](https://img.shields.io/badge/Cursor-Add_SearchApi-30363D?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
 [![Add the SearchApi MCP to VS Code](https://img.shields.io/badge/VS_Code-Add_SearchApi-0098FF?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
 [![Add the SearchApi MCP to VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Add_SearchApi-24BFA5?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D&quality=insiders)
 [![Add the SearchApi MCP to Visual Studio](https://img.shields.io/badge/Visual_Studio-Add_SearchApi-C16FDE?style=flat-square)](https://vs-open.link/mcp-install?%7B%22name%22%3A%22searchapi%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
 [![Add the SearchApi MCP to Kiro](https://img.shields.io/badge/Kiro-Add_SearchApi-9046FF?style=flat-square)](https://kiro.dev/launch/mcp/add?name=searchapi&config=%7B%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
 [![Add the SearchApi MCP to LM Studio](https://img.shields.io/badge/LM_Studio-Add_SearchApi-4338CA?style=flat-square&logo=lmstudio&logoColor=white)](https://lmstudio.ai/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
-[![Add the SearchApi MCP to Goose](https://img.shields.io/badge/Goose-Add_SearchApi-000000?style=flat-square)](https://goose-docs.ai/extension?url=https%3A%2F%2Fwww.searchapi.io%2Fmcp&type=streamable_http&id=searchapi&name=SearchApi&description=Live%20search%20results%20as%20data%20from%20Google%2C%20Bing%2C%20Maps%20and%20100%2B%20engines)
+[![Add the SearchApi MCP to Goose](https://img.shields.io/badge/Goose-Add_SearchApi-30363D?style=flat-square)](https://goose-docs.ai/extension?url=https%3A%2F%2Fwww.searchapi.io%2Fmcp&type=streamable_http&id=searchapi&name=SearchApi&description=Live%20search%20results%20as%20data%20from%20Google%2C%20Bing%2C%20Maps%20and%20100%2B%20engines)
 
 [![Add the SearchApi MCP to Claude Code](https://img.shields.io/badge/Claude_Code-Setup_steps-D97757?style=flat-square&logo=claude&logoColor=white)](#add-the-mcp-server)
 [![Add the SearchApi MCP to ChatGPT](https://img.shields.io/badge/ChatGPT-Setup_steps-10A37F?style=flat-square)](#add-the-mcp-server)
-[![Add the SearchApi MCP to Codex](https://img.shields.io/badge/Codex-Setup_steps-000000?style=flat-square)](#add-the-mcp-server)
+[![Add the SearchApi MCP to Codex](https://img.shields.io/badge/Codex-Setup_steps-30363D?style=flat-square)](#add-the-mcp-server)
 [![Add the SearchApi MCP to Gemini CLI](https://img.shields.io/badge/Gemini_CLI-Setup_steps-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](#add-the-mcp-server)
-[![Add the SearchApi MCP to Windsurf](https://img.shields.io/badge/Windsurf-Setup_steps-0B100F?style=flat-square&logo=windsurf&logoColor=white)](#add-the-mcp-server)
+[![Add the SearchApi MCP to Windsurf](https://img.shields.io/badge/Windsurf-Setup_steps-30363D?style=flat-square&logo=windsurf&logoColor=white)](#add-the-mcp-server)
 
 ## Why use this skill
 
