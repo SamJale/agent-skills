@@ -48,6 +48,7 @@ The [skills CLI](https://github.com/vercel-labs/skills) asks which skills to ins
 | Agent | Install |
 |---|---|
 | Claude Code | `/plugin marketplace add searchapi/agent-skills`, then `/plugin install searchapi@searchapi` |
+| Claude (web and desktop) | Customize, Plugins, Add, Add marketplace: `searchapi/agent-skills`, then add SearchApi and connect it on the plugin's Connectors tab. It syncs to Cowork and Claude Code |
 | Codex | `codex plugin marketplace add searchapi/agent-skills`, then `codex plugin add searchapi@searchapi` |
 | Cursor | Cursor Marketplace (coming soon), or `npx skills add searchapi/agent-skills -a cursor` |
 | Gemini CLI | `gemini extensions install https://github.com/searchapi/agent-skills` |
@@ -55,7 +56,7 @@ The [skills CLI](https://github.com/vercel-labs/skills) asks which skills to ins
 | Kiro | `npx skills add searchapi/agent-skills -a kiro-cli` |
 | Hermes Agent | `hermes skills install searchapi/agent-skills/hermes/searchapi` and `hermes skills install searchapi/agent-skills/hermes/searchapi-migrate` |
 | OpenClaw | `npx skills add searchapi/agent-skills -a openclaw` |
-| Grok Build | `grok plugin install searchapi/agent-skills` |
+| Grok Build | `grok plugin install searchapi/agent-skills --trust` (without `--trust` it only prints a warning; trust turns on the MCP server) |
 
 Use one install route per agent. Two routes (for example the skills CLI and an agent's own installer) give the agent two copies of each skill.
 
