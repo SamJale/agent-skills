@@ -118,6 +118,16 @@ def make_handler(state):
         def log_message(self, *a):
             pass
 
+        def uncount(self):
+            with state.lock:
+                if getattr(self, "counted", False):
+                    self.counted = False
+                    state.inflight -= 1
+
+        def send_response(self, code, message=None):
+            self.uncount()             # answered before the client can see it, so its next request never overlaps this one
+            super().send_response(code, message)
+
         def send(self, code, body, extra=None):
             data = body if isinstance(body, bytes) else json.dumps(body).encode("utf-8")
             self.send_response(code)
@@ -126,7 +136,10 @@ def make_handler(state):
             for k, v in (extra or {}).items():
                 self.send_header(k, v)
             self.end_headers()
-            self.wfile.write(data)
+            try:
+                self.wfile.write(data)
+            except (BrokenPipeError, ConnectionResetError):   # the client gave up first (timeout tests): expected
+                pass
 
         def do_POST(self):
             n = int(self.headers.get("Content-Length") or 0)
@@ -142,13 +155,13 @@ def make_handler(state):
                 state.requests.append((method, self.path, query, {k.lower(): v for k, v in self.headers.items()}))
                 state.inflight += 1
                 state.max_inflight = max(state.max_inflight, state.inflight)
+                self.counted = True
                 key = json.dumps(sorted(query.items()))
                 state.attempts[key] = attempt = state.attempts.get(key, 0) + 1
             try:
                 self.route(path, query, attempt)
             finally:
-                with state.lock:
-                    state.inflight -= 1
+                self.uncount()
 
         def route(self, path, query, attempt):
             if path == "/_mock/requests":            # what clients sent, for tests that drive real agents
