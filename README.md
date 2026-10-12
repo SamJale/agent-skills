@@ -1,11 +1,28 @@
-![SearchApi](assets/logo.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.png">
+    <img src="assets/logo.png" alt="SearchApi" width="360">
+  </picture>
+</p>
 
 # SearchApi agent skills
 
 Give your AI agent live search results as data: Google, Bing, Maps, Shopping, Flights, Hotels, News, YouTube, AI answers and 100+ more engines, for any country, language or city.
 
-[![Add the SearchApi MCP to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
-[![Add the SearchApi MCP to VS Code](https://img.shields.io/badge/VS_Code-Add_SearchApi_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
+[![Add the SearchApi MCP to Claude](https://img.shields.io/badge/Claude-Add_SearchApi-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=SearchApi&connectorUrl=https%3A%2F%2Fwww.searchapi.io%2Fmcp)
+[![Add the SearchApi MCP to Cursor](https://img.shields.io/badge/Cursor-Add_SearchApi-000000?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
+[![Add the SearchApi MCP to VS Code](https://img.shields.io/badge/VS_Code-Add_SearchApi-0098FF?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
+[![Add the SearchApi MCP to VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Add_SearchApi-24BFA5?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D&quality=insiders)
+[![Add the SearchApi MCP to Visual Studio](https://img.shields.io/badge/Visual_Studio-Add_SearchApi-C16FDE?style=flat-square)](https://vs-open.link/mcp-install?%7B%22name%22%3A%22searchapi%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
+[![Add the SearchApi MCP to Kiro](https://img.shields.io/badge/Kiro-Add_SearchApi-9046FF?style=flat-square)](https://kiro.dev/launch/mcp/add?name=searchapi&config=%7B%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
+[![Add the SearchApi MCP to LM Studio](https://img.shields.io/badge/LM_Studio-Add_SearchApi-4338CA?style=flat-square&logo=lmstudio&logoColor=white)](https://lmstudio.ai/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
+[![Add the SearchApi MCP to Goose](https://img.shields.io/badge/Goose-Add_SearchApi-000000?style=flat-square)](https://goose-docs.ai/extension?url=https%3A%2F%2Fwww.searchapi.io%2Fmcp&type=streamable_http&id=searchapi&name=SearchApi&description=Live%20search%20results%20as%20data%20from%20Google%2C%20Bing%2C%20Maps%20and%20100%2B%20engines)
+
+[![Add the SearchApi MCP to Claude Code](https://img.shields.io/badge/Claude_Code-Setup_steps-D97757?style=flat-square&logo=claude&logoColor=white)](#add-the-mcp-server)
+[![Add the SearchApi MCP to ChatGPT](https://img.shields.io/badge/ChatGPT-Setup_steps-10A37F?style=flat-square)](#add-the-mcp-server)
+[![Add the SearchApi MCP to Codex](https://img.shields.io/badge/Codex-Setup_steps-000000?style=flat-square)](#add-the-mcp-server)
+[![Add the SearchApi MCP to Gemini CLI](https://img.shields.io/badge/Gemini_CLI-Setup_steps-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](#add-the-mcp-server)
+[![Add the SearchApi MCP to Windsurf](https://img.shields.io/badge/Windsurf-Setup_steps-0B100F?style=flat-square&logo=windsurf&logoColor=white)](#add-the-mcp-server)
 
 ## Why use this skill
 
@@ -64,7 +81,22 @@ The skill uses the SearchApi MCP server if your agent has one, otherwise its scr
 
    Paste the key at the hidden prompt. It saves the key to `~/.config/searchapi/key` (only you can read it) and checks it. Setting `SEARCHAPI_API_KEY` works too. On Windows, use `py` instead of `python3`.
 2. **I need a key.** [Sign up for SearchApi](https://www.searchapi.io/users/sign_up?utm_source=github&utm_medium=agent-skill&utm_campaign=searchapi-skill), then do step 1.
-3. **Use MCP instead.** Add `https://www.searchapi.io/mcp` as a remote MCP server (or use the buttons above). It signs in with OAuth, no key to copy.
+3. **Use MCP instead.** Use a button at the top, or the steps in [Add the MCP server](#add-the-mcp-server). It signs in with OAuth, no key to copy.
+
+## Add the MCP server
+
+The buttons at the top add the SearchApi MCP server, `https://www.searchapi.io/mcp`, in one click to Claude, Cursor, VS Code, VS Code Insiders, Visual Studio, Kiro, LM Studio and Goose. It signs in with OAuth, so there is no key to copy. The Claude Code, Cursor and Gemini CLI plugins in this repo already include it. For the rest:
+
+| Assistant | Add it |
+|---|---|
+| Claude Code | `claude mcp add --transport http --scope user searchapi https://www.searchapi.io/mcp`, then run `/mcp` to sign in |
+| ChatGPT | On chatgpt.com/plugins, click **+**, then **Add custom MCP server**: URL `https://www.searchapi.io/mcp`, authentication OAuth, then **Create as a plugin** |
+| Codex | `codex mcp add searchapi --url https://www.searchapi.io/mcp` (it starts the OAuth sign-in) |
+| Gemini CLI | `gemini mcp add --transport http --scope user searchapi https://www.searchapi.io/mcp` |
+| Windsurf (Devin Desktop) | `devin mcp add -s user searchapi https://www.searchapi.io/mcp`, then `devin mcp login searchapi` |
+| Any other MCP client | Remote server `https://www.searchapi.io/mcp`, Streamable HTTP, OAuth |
+
+On Claude Team and Enterprise plans, an Owner adds it once for everyone under Organization settings, Connectors.
 
 ## Usage
 
@@ -128,7 +160,7 @@ The MCP server needs no local settings.
 | `commands/` | The 4 slash commands (`.md`), plus generated `.toml` copies for Gemini CLI |
 | `hermes/`, `clawhub/` | Generated copies for Hermes and ClawHub (`python3 build/variants.py`) |
 | `.claude-plugin/`, `.cursor-plugin/`, `.agents/plugins/`, `plugin.json`, `.mcp.json`, `mcp.json`, `gemini-extension.json` | Plugin manifests and MCP config for Claude Code, Cursor, Codex, Grok, Copilot, Kiro and Gemini CLI |
-| `assets/` | logo.png (wordmark) and icon.png (512 px square, for listings) |
+| `assets/` | logo.png and logo-white.png (wordmark for light and dark themes) and icon.png (512 px square, for listings) |
 | `build/lint.py`, `tests/` | Lint and offline tests against saved real responses and a local mock (no network, no credits) |
 
 ```bash
