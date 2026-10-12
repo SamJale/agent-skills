@@ -1,0 +1,112 @@
+[
+  {
+    "google_id": 1022762,
+    "google_parent_id": 21167,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,New York,United States",
+    "target_type": "Borough",
+    "country_code": "US",
+    "reach": 4130000,
+    "lat": 40.6781784,
+    "lon": -73.9441579
+  },
+  {
+    "google_id": 9051654,
+    "google_parent_id": 21156,
+    "name": "Brooklyn Park",
+    "canonical_name": "Brooklyn Park,Minnesota,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 314000,
+    "lat": 45.0941315,
+    "lon": -93.3563405
+  },
+  {
+    "google_id": 9051652,
+    "google_parent_id": 21156,
+    "name": "Brooklyn Center",
+    "canonical_name": "Brooklyn Center,Minnesota,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 228000,
+    "lat": 45.076076,
+    "lon": -93.3327283
+  },
+  {
+    "google_id": 9060311,
+    "google_parent_id": 21142,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,Florida,United States",
+    "target_type": "Neighborhood",
+    "country_code": "US",
+    "reach": 185000,
+    "lat": 30.3217892,
+    "lon": -81.6760985
+  },
+  {
+    "google_id": 9051651,
+    "google_parent_id": 21168,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,Ohio,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 178000,
+    "lat": 41.4301349,
+    "lon": -81.7512107
+  },
+  {
+    "google_id": 9051655,
+    "google_parent_id": 21153,
+    "name": "Brooklyn Park",
+    "canonical_name": "Brooklyn Park,Maryland,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 168000,
+    "lat": 39.2284408,
+    "lon": -76.6163555
+  },
+  {
+    "google_id": 1018525,
+    "google_parent_id": 21153,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,Maryland,United States",
+    "target_type": "Neighborhood",
+    "country_code": "US",
+    "reach": 126000,
+    "lat": 39.2381955,
+    "lon": -76.6037222
+  },
+  {
+    "google_id": 9051653,
+    "google_parent_id": 21168,
+    "name": "Brooklyn Heights",
+    "canonical_name": "Brooklyn Heights,Ohio,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 108000,
+    "lat": 41.4164222,
+    "lon": -81.6665149
+  },
+  {
+    "google_id": 1014684,
+    "google_parent_id": 21139,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,Connecticut,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 23000,
+    "lat": 41.7881236,
+    "lon": -71.9497216
+  },
+  {
+    "google_id": 9121841,
+    "google_parent_id": 21314,
+    "name": "Brooklyn",
+    "canonical_name": "Brooklyn,Wellington,New Zealand",
+    "target_type": "Neighborhood",
+    "country_code": "NZ",
+    "reach": 22000,
+    "lat": -41.3054337,
+    "lon": 174.763325
+  }
+]

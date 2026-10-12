@@ -1,0 +1,162 @@
+{
+  "search_metadata": {
+    "id": "search_yawpDZvY5Rcaon6V1vWPdXoM",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:18Z",
+    "request_time_taken": 1.89,
+    "parsing_time_taken": 0.04,
+    "total_time_taken": 1.93,
+    "request_url": "https://www.google.com/search?q=site%3Asearchapi.io&oq=site%3Asearchapi.io&gl=us&hl=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5Rcaon6V1vWPdXoM.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5Rcaon6V1vWPdXoM"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "site:searchapi.io",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "site:searchapi.io",
+    "total_results": 292,
+    "time_taken_displayed": 0.22,
+    "detected_location": "Sugar Hill, Georgia",
+    "has_no_results_for": false
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Google Search API for real-time SERP scraping",
+      "link": "https://www.searchapi.io/",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io",
+      "snippet": "Scrape organic results, ads, related searches, inline questions and more. Receive structured results in JSON format. Sign up for a free plan today!",
+      "snippet_highlighted_words": [
+        "Scrape organic results, ads, related searches, inline questions and more"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 2,
+      "title": "Amazon ASIN API",
+      "link": "https://www.searchapi.io/amazon",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › amazon",
+      "snippet": "Apple 2023 MacBook Pro Laptop M3 chip with 8-core CPU, 10-core GPU: Built for Apple Intelligence, 14.2-inch Liquid Retina XDR Display, 8GB Unified Memory, 512 ...",
+      "snippet_highlighted_words": [
+        "Apple 2023 MacBook Pro Laptop"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 3,
+      "title": "Baidu Search API",
+      "link": "https://www.searchapi.io/baidu",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › baidu",
+      "snippet": "Extracts headline news stories, offering immediate access to the latest news directly through the search results. Inline Videos. Collects video ...",
+      "snippet_highlighted_words": [
+        "Extracts headline news stories"
+      ],
+      "date": "Jan 4, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 4,
+      "title": "Bing Search API for Real-time SERP Scraping",
+      "link": "https://www.searchapi.io/bing",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › bing",
+      "snippet": "WEBChatGPT helps you get answers, find inspiration and be more productive. It is free to use and easy to try. Just ask and ChatGPT can help with writing, ...",
+      "snippet_highlighted_words": [
+        "WEBChatGPT helps you get answers, find inspiration and be more productive"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 5,
+      "title": "Affordable SERP API Pricing",
+      "link": "https://www.searchapi.io/pricing",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › pricing",
+      "snippet": "Experience lightning-fast results! With our SearchAPI, you'll receive real-time data in mere seconds. Is the API capable of handling large- ...",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 6,
+      "title": "SearchApi: Changelog",
+      "link": "https://www.searchapi.io/announcements",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › announcements",
+      "snippet": "The ​Google AI Mode API​ returns results from Google's new AI-generated answers interface (the “AI Overview” style results). The response ...",
+      "snippet_highlighted_words": [
+        "Google AI Mode API"
+      ],
+      "date": "Jun 5, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 7,
+      "title": "Searchapi Careers",
+      "link": "https://www.searchapi.io/careers",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › careers",
+      "snippet": "Work from anywhere. We believe in flexibility and trust. Open Source. Be part of a team that values opensource and giving back to the community. Transparency.",
+      "snippet_highlighted_words": [
+        "Work from anywhere"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 8,
+      "title": "YouTube API",
+      "link": "https://www.searchapi.io/youtube",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › youtube",
+      "snippet": "Scrape channel information, video details, subscribers count, and more. Get structured results in JSON format. Start with a free plan now!",
+      "snippet_highlighted_words": [
+        "Scrape channel information, video details, subscribers count, and more"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 9,
+      "title": "SearchApi Press Kit",
+      "link": "https://www.searchapi.io/press",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io › press",
+      "snippet": "SearchApi has focus on open-source and transparency. We are building a community around our product and we are always open to feedback and suggestions. We are ...",
+      "snippet_highlighted_words": [
+        "SearchApi"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 10,
+      "title": "status.searchapi.io - Status",
+      "link": "https://status.searchapi.io/",
+      "source": "status.searchapi.io",
+      "domain": "status.searchapi.io",
+      "displayed_link": "https://status.searchapi.io",
+      "snippet": "All systems are operational. Sites. Landing Page. AVG RESPONSE. 306. ms. 7 DAY. 100. API. AVG RESPONSE. 47. ms. 7 DAY. 100. Incidents (last 3 months).",
+      "snippet_highlighted_words": [
+        "All systems are operational"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEX//f1HcEzrYkTqWTfqWTbqWzrrXT3qWTjqWTfqWTfqWTfqWTfqWTfqWTfqWTfqWTftdF0W03/iAAAAEXRSTlMBAA1duyoZRpvprv/4iHnSBTNlYh8AAAEDSURBVHgBbdEHggUREARQLVMt3P+0q9ifzchPZi6fWCeX1vXRfPhFiSlFEZvLxUKF5mgbutxsFPSuiD8YK2oILSv8/EKJHj6KOAXcjw1UGoDhptwsLUMu1b5r9MfKMnUVOcr7Pp+GEYJ/Kc3TBg1tchEqLZ5x4VhxYiRspeVt8RjnONoscy1pmx4t2if3PXj7q3nVkkv1oLZls3EKI9MVdcLH+De7rGMk7mhrf24oRxFpywzxqBO3rdI6ShIa1TiU3mje0lSPHZWE6peNuQ2B9qaNZvc+NZDetS8Ly7jeuxHtwMjOnDN8Y8BwXlv+MWIvaboClG8jejammsPFLE1kzg/7AytiDh3JKZyRAAAAAElFTkSuQmCC"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=site%3Asearchapi.io&oq=site%3Asearchapi.io&gl=us&hl=en&pws=0&start=10"
+  }
+}

@@ -1,0 +1,457 @@
+openapi: 3.0.0
+info:
+  title: Google Patents API
+  description: |
+    Google Patents API allows you to search for patents and patent applications. You can filter by country, language, status, type, dates, inventors, assignees, and more.
+    
+    **Cross-linking**: The `patent_id` returned in `organic_results` can be used with the Google Patents Details API to fetch comprehensive information about a specific patent. Pass it as the `patent_id` parameter to the Google Patents Details API.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Patents Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: [google_patents]
+        - name: q
+          in: query
+          required: true
+          description: Search query. You can use anything that you would use in a regular Google Patents search including AND, OR operators. For multiple queries, split them with semicolon.
+          schema:
+            type: string
+        - name: countries
+          in: query
+          required: false
+          description: Filter results by country codes including ISO 3166-1 alpha-2 codes and patent organization codes (e.g., EP for European Patent Office, WO for WIPO). To specify multiple countries, separate them with commas.
+          schema:
+            type: string
+        - name: language
+          in: query
+          required: false
+          description: Filter results by language. To specify multiple languages, separate them with commas.
+          schema:
+            type: string
+            enum: [ARABIC, CHINESE, DANISH, DUTCH, ENGLISH, FINNISH, FRENCH, GERMAN, ITALIAN, JAPANESE, KOREAN, NORWEGIAN, PORTUGUESE, RUSSIAN, SPANISH, SWEDISH]
+        - name: patent_status
+          in: query
+          required: false
+          description: Filter patent results by status
+          schema:
+            type: string
+            enum: [GRANT, APPLICATION]
+        - name: patent_type
+          in: query
+          required: false
+          description: Filter patent results by type
+          schema:
+            type: string
+            enum: [PATENT, DESIGN]
+        - name: litigation
+          in: query
+          required: false
+          description: Filter patent results by litigation status
+          schema:
+            type: string
+            enum: [YES, NO]
+        - name: clustered
+          in: query
+          required: false
+          description: Group results by CPC classification
+          schema:
+            type: boolean
+        - name: dups
+          in: query
+          required: false
+          description: Define how duplicates are handled
+          schema:
+            type: string
+            enum: [family, language]
+        - name: sort
+          in: query
+          required: false
+          description: Control the sorting order. new - Sort by filing date (newest first). old - Sort by filing date (oldest first)
+          schema:
+            type: string
+            enum: [new, old]
+        - name: patents
+          in: query
+          required: false
+          description: Control inclusion of patent results
+          schema:
+            type: boolean
+        - name: scholar
+          in: query
+          required: false
+          description: Control inclusion of scholarly article results
+          schema:
+            type: boolean
+        - name: inventor
+          in: query
+          required: false
+          description: Filter results by inventor names. To specify multiple inventors, separate them with commas
+          schema:
+            type: string
+        - name: assignee
+          in: query
+          required: false
+          description: Filter results by assignee names. To specify multiple assignees, separate them with commas
+          schema:
+            type: string
+        - name: before
+          in: query
+          required: false
+          description: 'Restrict results to those before a specific date. Format: YYYYMMDD or type:YYYYMMDD where type is priority, filing, or publication'
+          schema:
+            type: string
+            pattern: '^((priority|filing|publication):)?\d{8}$'
+        - name: after
+          in: query
+          required: false
+          description: 'Restrict results to those after a specific date. Format: YYYYMMDD or type:YYYYMMDD where type is priority, filing, or publication'
+          schema:
+            type: string
+            pattern: '^((priority|filing|publication):)?\d{8}$'
+        - name: num
+          in: query
+          required: false
+          description: Number of results to display per page
+          schema:
+            type: integer
+            minimum: 1
+        - name: page
+          in: query
+          required: false
+          description: Page of results to return
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PatentResult'
+          description: Array of patent and scholarly article search results
+        summary:
+          $ref: '#/components/schemas/Summary'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if the search failed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Patents URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        countries:
+          type: string
+          description: Countries filter
+        language:
+          type: string
+          description: Language filter
+        status:
+          type: string
+          description: Patent status filter (maps to patent_status parameter)
+        type:
+          type: string
+          description: Patent type filter (maps to patent_type parameter)
+        litigation:
+          type: string
+          description: Litigation filter
+        clustered:
+          type: boolean
+          description: Whether results are clustered
+        dups:
+          type: string
+          description: Duplicate handling method
+        sort:
+          type: string
+          description: Sort order
+        patents:
+          type: boolean
+          description: Include patents
+        scholar:
+          type: boolean
+          description: Include scholarly results
+        inventor:
+          type: string
+          description: Inventor filter
+        assignee:
+          type: string
+          description: Assignee filter
+        before:
+          type: string
+          description: Before date filter
+        after:
+          type: string
+          description: After date filter
+        num:
+          type: integer
+          description: Results per page
+        page:
+          type: integer
+          description: Page number
+    SearchInformation:
+      type: object
+      properties:
+        total_results:
+          type: integer
+          description: Total number of results found
+        total_pages:
+          type: integer
+          description: Total number of pages available
+        page_number:
+          type: integer
+          description: Current page number
+    PatentResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        rank:
+          type: integer
+          description: Rank in search results
+        cpc:
+          type: string
+          description: CPC classification code (when clustered=true)
+        cpc_description:
+          type: string
+          description: CPC classification description (when clustered=true)
+        patent_id:
+          type: string
+          description: Patent identifier. Use this ID with the Google Patents Details API to fetch comprehensive patent information
+        scholar_id:
+          type: string
+          description: Scholarly article identifier (when scholar=true)
+        is_scholar:
+          type: boolean
+          description: Indicates if this is a scholarly article result
+        title:
+          type: string
+          description: Patent or article title
+        snippet:
+          type: string
+          description: Description snippet
+        priority_date:
+          type: string
+          description: Priority date
+        filing_date:
+          type: string
+          description: Filing date
+        grant_date:
+          type: string
+          description: Grant date (for granted patents)
+        publication_date:
+          type: string
+          description: Publication date
+        inventor:
+          type: string
+          description: Inventor name(s)
+        assignee:
+          type: string
+          description: Assignee name(s)
+        publication_number:
+          type: string
+          description: Publication number
+        language:
+          type: string
+          description: Document language
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        pdf:
+          type: string
+          description: PDF document URL
+        figures:
+          type: array
+          items:
+            $ref: '#/components/schemas/Figure'
+          description: Patent figures with thumbnail and full image URLs
+        country_status:
+          type: object
+          additionalProperties:
+            type: string
+          description: Patent status by country code
+        url_hostname:
+          type: string
+          description: Hostname of scholarly article source (when scholar=true)
+        author:
+          type: string
+          description: Article author(s) (when scholar=true)
+        author_etal:
+          type: boolean
+          description: Indicates if there are additional authors not listed (when scholar=true)
+        publication_venue:
+          type: string
+          description: Publication venue for scholarly articles (when scholar=true)
+    Figure:
+      type: object
+      properties:
+        thumbnail:
+          type: string
+          description: Figure thumbnail URL
+        full:
+          type: string
+          description: Full figure image URL
+    Summary:
+      type: object
+      properties:
+        assignee:
+          type: array
+          items:
+            $ref: '#/components/schemas/SummaryItem'
+          description: Top assignees with distribution
+        inventor:
+          type: array
+          items:
+            $ref: '#/components/schemas/SummaryItem'
+          description: Top inventors with distribution
+        cpc:
+          type: array
+          items:
+            $ref: '#/components/schemas/SummaryItem'
+          description: Top CPC classifications with distribution
+    SummaryItem:
+      type: object
+      properties:
+        key:
+          type: string
+          description: Name or code
+        percentage:
+          type: number
+          description: Percentage of results
+        frequency:
+          type: array
+          items:
+            $ref: '#/components/schemas/Frequency'
+          description: Distribution over time periods
+    Frequency:
+      type: object
+      properties:
+        year_range:
+          type: string
+          description: Year range
+        percentage:
+          type: number
+          description: Percentage for this period
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        total_pages:
+          type: integer
+          description: Total number of pages
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

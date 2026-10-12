@@ -1,0 +1,310 @@
+openapi: 3.0.0
+info:
+  title: Google Ads Transparency Center API
+  description: |
+    The Google Ads Transparency Center API provides access to Google's Ad Transparency Center data, allowing you to search for ads by advertiser ID or domain name.
+    
+    This API returns information about ad creatives including their format, target domains, show dates, and advertiser details.
+    
+    **Cross-linking**: The advertiser_id parameter returned in the ad_creatives can be used to make additional searches with this same API to get all ads from that specific advertiser.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Ads Transparency Center Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to 'google_ads_transparency_center' for Google Ads Transparency Center search
+          schema:
+            type: string
+            enum: ["google_ads_transparency_center"]
+            default: "google_ads_transparency_center"
+        - name: advertiser_id
+          in: query
+          required: false
+          description: Advertiser ID in the format AR followed by 20 digits. Can be comma-separated for multiple IDs. Either advertiser_id or domain must be provided.
+          schema:
+            type: string
+            pattern: ^(AR\d{20})(,\s*AR\d{20})*$
+        - name: domain
+          in: query
+          required: false
+          description: Domain name to search for ads. Matched against the advertiser's own domain, so subdomains such as blog.example.com return no results. A pasted URL is accepted; any scheme, www prefix, port, path, query and fragment are stripped. Other subdomains are left intact. Either advertiser_id or domain must be provided.
+          schema:
+            type: string
+            maxLength: 253
+        - name: region
+          in: query
+          required: false
+          description: Region to filter ads by. Can be a 2-letter ISO country code or region code. 
+          schema:
+            type: string
+            enum: ["ANYWHERE", "AL", "AQ", "DZ", "AS", "AD", "AO", "AG", "AZ", "AR", "AU", "AT", "BS", "BH", "BD", "AM", "BB", "BE", "BM", "BT", "BO", "BA", "BW", "BV", "BR", "BZ", "IO", "SB", "VG", "BN", "BG", "MM", "BI", "BY", "KH", "CM", "CA", "CV", "KY", "CF", "LK", "TD", "CL", "CN", "TW", "CX", "CC", "CO", "KM", "YT", "CG", "CD", "CK", "CR", "HR", "CY", "CZ", "BJ", "DK", "DM", "DO", "EC", "SV", "GQ", "ET", "ER", "EE", "FO", "FK", "GS", "FJ", "FI", "FR", "GF", "PF", "TF", "DJ", "GA", "GE", "GM", "PS", "DE", "GH", "GI", "KI", "GR", "GL", "GD", "GP", "GU", "GT", "GN", "GY", "HT", "HM", "VA", "HN", "HK", "HU", "IS", "IN", "ID", "IQ", "IE", "IL", "IT", "CI", "JM", "JP", "KZ", "JO", "KE", "KR", "KW", "KG", "LA", "LB", "LS", "LV", "LR", "LY", "LI", "LT", "LU", "MO", "MG", "MW", "MY", "MV", "ML", "MT", "MQ", "MR", "MU", "MX", "MC", "MN", "MD", "ME", "MS", "MA", "MZ", "OM", "NA", "NR", "NP", "NL", "CW", "AW", "SX", "BQ", "NC", "VU", "NZ", "NI", "NE", "NG", "NU", "NF", "NO", "MP", "UM", "FM", "MH", "PW", "PK", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "GW", "TL", "PR", "QA", "RE", "RO", "RW", "SH", "KN", "AI", "LC", "MF", "PM", "VC", "SM", "ST", "SA", "SN", "SC", "SL", "SG", "SK", "VN", "SI", "SO", "ZA", "ZW", "ES", "EH", "SR", "SJ", "SZ", "SE", "CH", "TJ", "TH", "TG", "TK", "TO", "TT", "AE", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "MK", "EG", "GB", "GG", "JE", "IM", "TZ", "US", "VI", "BF", "UY", "UZ", "VE", "WF", "WS", "YE", "ZM", "IC"]
+            default: "ANYWHERE"
+        - name: platform
+          in: query
+          required: false
+          description: Platform to filter ads by
+          schema:
+            type: string
+            enum: ["google_play", "google_maps", "google_search", "google_shopping", "youtube"]
+        - name: time_period
+          in: query
+          required: false
+          description: Time period for ads. Can be a preset or custom date range in YYYY-MM-DD..YYYY-MM-DD format
+          schema:
+            type: string
+            pattern: ^(today|yesterday|last_7_days|last_30_days|\d{4}-\d{2}-\d{2}\.\.\d{4}-\d{2}-\d{2})$
+        - name: ad_format
+          in: query
+          required: false
+          description: Format of ads to filter by
+          schema:
+            type: string
+            enum: ["text", "image", "video"]
+        - name: num
+          in: query
+          required: false
+          description: Number of results to return
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 40
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for pagination to get the next page of results
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ad_creatives:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdCreative'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if no results found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Ads Transparency Center URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine identifier
+        advertiser_id:
+          type: string
+          description: Advertiser ID(s) searched for
+        domain:
+          type: string
+          description: Domain searched for
+        ad_format:
+          type: string
+          description: Ad format filter applied
+        time_period:
+          type: string
+          description: Time period filter applied
+        platform:
+          type: string
+          description: Platform filter applied
+        num:
+          type: integer
+          description: Number of results requested
+        region:
+          type: string
+          description: Region filter applied
+        next_page_token:
+          type: string
+          description: Pagination token used
+    SearchInformation:
+      type: object
+      properties:
+        total_results:
+          type: integer
+          description: Total number of results found
+        legal_name:
+          type: string
+          description: Legal name of the advertiser
+        based_in:
+          type: string
+          description: Country where the advertiser is based
+    AdCreative:
+      type: object
+      required: [position, id, first_shown_datetime, last_shown_datetime, total_days_shown, advertiser, details_link]
+      properties:
+        position:
+          type: integer
+          description: Position of the ad creative in the results
+        id:
+          type: string
+          description: Unique identifier for the ad creative
+        target_domain:
+          type: string
+          description: Domain that the ad targets
+        advertiser:
+          $ref: '#/components/schemas/Advertiser'
+        geographic_regions:
+          type: array
+          items:
+            type: string
+          description: Geographic regions where the ad was shown
+        first_shown_datetime:
+          type: string
+          format: date-time
+          description: First time the ad was shown
+        last_shown_datetime:
+          type: string
+          format: date-time
+          description: Last time the ad was shown
+        total_days_shown:
+          type: integer
+          description: Total number of days the ad was shown
+        format:
+          type: string
+          description: Format of the ad creative
+          enum: ["text", "image", "video"]
+        image:
+          $ref: '#/components/schemas/Image'
+        details_link:
+          type: string
+          description: Link to view more details about this ad creative
+        details_script_link:
+          type: string
+          description: Script link for display ad details
+    Advertiser:
+      type: object
+      required: [id, name]
+      properties:
+        id:
+          type: string
+          description: Advertiser ID
+        name:
+          type: string
+          description: Advertiser name
+        is_not_verified:
+          type: boolean
+          description: Whether the advertiser is not verified
+    Image:
+      type: object
+      required: [link, height, width]
+      properties:
+        link:
+          type: string
+          description: URL of the ad image
+        height:
+          type: integer
+          description: Height of the image in pixels
+        width:
+          type: integer
+          description: Width of the image in pixels
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to retrieve the next page of results
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

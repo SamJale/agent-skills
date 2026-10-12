@@ -1,0 +1,369 @@
+openapi: 3.0.0
+info:
+  title: Google Trends API
+  description: |
+    Analyze trending search topics and compare interest over time with Google Trends. This API provides data on search term popularity across different time periods, locations, and categories.
+    
+    **Cross-linking**: The results from this API can be used to identify trending topics that can be further explored using the Google Trends Autocomplete API or other search APIs.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Trends Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Must be set to google_trends
+          schema:
+            type: string
+            enum: ["google_trends"]
+        - name: q
+          in: query
+          required: false
+          description: Search query keywords (comma-separated, max 5 keywords, max 100 characters each). Required when data_type is TIMESERIES (with cat=0) or GEO_MAP.
+          schema:
+            type: string
+        - name: data_type
+          in: query
+          required: true
+          description: Type of data to retrieve
+          schema:
+            type: string
+            enum: ["TIMESERIES", "GEO_MAP", "RELATED_TOPICS", "RELATED_QUERIES"]
+            default: "TIMESERIES"
+        - name: geo
+          in: query
+          required: false
+          description: Geographic location (country or region code)
+          schema:
+            type: string
+            default: ""
+        - name: tz
+          in: query
+          required: false
+          description: Timezone offset in minutes from UTC
+          schema:
+            type: integer
+            minimum: -1439
+            maximum: 1439
+            default: 420
+        - name: time
+          in: query
+          required: false
+          description: Time range for the data
+          schema:
+            type: string
+            pattern: '^(?:now (?:1-H|4-H|1-d|7-d)|today (?:1-m|3-m|12-m|5-y)|all|\d{4}-\d{2}-\d{2}(?:T\d{2})? \d{4}-\d{2}-\d{2}(?:T\d{2})?)$'
+            default: "today 12-m"
+        - name: cat
+          in: query
+          required: false
+          description: Category to filter results
+          schema:
+            type: string
+            default: "0"
+        - name: region
+          in: query
+          required: false
+          description: Resolution level for geographic data (defaults to CITY when geo is specified, otherwise COUNTRY)
+          schema:
+            type: string
+            enum: ["COUNTRY", "REGION", "DMA", "CITY"]
+        - name: gprop
+          in: query
+          required: false
+          description: Google property to search within
+          schema:
+            type: string
+            enum: ["", "images", "news", "froogle", "youtube"]
+            default: ""
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        interest_over_time:
+          $ref: '#/components/schemas/InterestOverTime'
+        interest_by_region:
+          type: array
+          description: Geographic distribution of interest (only for GEO_MAP data_type)
+          items:
+            $ref: '#/components/schemas/RegionData'
+        related_topics:
+          $ref: '#/components/schemas/RelatedTopics'
+        related_queries:
+          $ref: '#/components/schemas/RelatedQueries'
+        error:
+          type: string
+          description: Error message when data is unavailable
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Trends URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query keywords
+        geo:
+          type: string
+          description: Geographic location
+        tz:
+          type: integer
+          description: Timezone offset
+        data_type:
+          type: string
+          description: Type of data retrieved
+        cat:
+          type: string
+          description: Category filter
+        region:
+          type: string
+          description: Geographic resolution level
+        gprop:
+          type: string
+          description: Google property searched
+        time:
+          type: string
+          description: Time range
+    InterestOverTime:
+      type: object
+      description: Interest over time data (only for TIMESERIES data_type)
+      properties:
+        averages:
+          type: array
+          description: Average interest values for each query
+          items:
+            type: object
+            required: [query, value]
+            properties:
+              query:
+                type: string
+                description: Search query keyword
+              value:
+                type: integer
+                description: Average interest value
+        timeline_data:
+          type: array
+          description: Time series data points
+          items:
+            type: object
+            required: [date, timestamp, values]
+            properties:
+              date:
+                type: string
+                description: Formatted date string
+              timestamp:
+                type: string
+                description: Unix timestamp
+              values:
+                type: array
+                description: Interest values for each query
+                items:
+                  type: object
+                  required: [query, value, extracted_value]
+                  properties:
+                    query:
+                      type: string
+                      description: Search query keyword
+                    value:
+                      type: string
+                      description: Formatted interest value
+                    extracted_value:
+                      type: integer
+                      description: Numeric interest value (0-100)
+    RegionData:
+      type: object
+      required: [geo, name, values]
+      properties:
+        geo:
+          type: string
+          description: Geographic code
+        name:
+          type: string
+          description: Geographic name
+        values:
+          type: array
+          description: Interest values for each query
+          items:
+            type: object
+            required: [query, value, extracted_value]
+            properties:
+              query:
+                type: string
+                description: Search query keyword
+              value:
+                type: string
+                description: Formatted interest value
+              extracted_value:
+                type: integer
+                description: Numeric interest value
+    RelatedTopics:
+      type: object
+      description: Related topics data (only for RELATED_TOPICS data_type)
+      properties:
+        top:
+          type: array
+          description: Top related topics
+          items:
+            $ref: '#/components/schemas/Topic'
+        rising:
+          type: array
+          description: Rising related topics
+          items:
+            $ref: '#/components/schemas/Topic'
+    RelatedQueries:
+      type: object
+      description: Related queries data (only for RELATED_QUERIES data_type)
+      properties:
+        top:
+          type: array
+          description: Top related queries
+          items:
+            $ref: '#/components/schemas/Query'
+        rising:
+          type: array
+          description: Rising related queries
+          items:
+            $ref: '#/components/schemas/Query'
+    Topic:
+      type: object
+      required: [position, id, title, type, value, extracted_value, link]
+      properties:
+        position:
+          type: integer
+          description: Position in the list
+        id:
+          type: string
+          description: Topic identifier
+        title:
+          type: string
+          description: Topic title
+        type:
+          type: string
+          description: Topic type
+        value:
+          type: string
+          description: Formatted interest value
+        extracted_value:
+          type: integer
+          description: Numeric interest value
+        link:
+          type: string
+          description: Google Trends URL for this topic
+    Query:
+      type: object
+      required: [position, query, values, extracted_value, link]
+      properties:
+        position:
+          type: integer
+          description: Position in the list
+        query:
+          type: string
+          description: Related search query
+        values:
+          type: string
+          description: Formatted interest value
+        extracted_value:
+          type: integer
+          description: Numeric interest value
+        link:
+          type: string
+          description: Google Trends URL for this query
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

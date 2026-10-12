@@ -1,0 +1,541 @@
+openapi: 3.0.0
+info:
+  title: Yandex API
+  description: |
+    Yandex API allows you to search the Russian search engine Yandex. You can search in multiple languages and filter by location, time period, and specific Yandex domains.
+    
+    **Cross-linking**: This API does not directly cross-link with other SearchAPI services, but the organic results and knowledge graph information provide comprehensive search data from the Russian market.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Yandex Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["yandex"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: yandex_domain
+          in: query
+          required: false
+          description: Yandex domain to use for search
+          schema:
+            type: string
+            enum: ["yandex.com", "yandex.ru", "ya.ru", "yandex.by", "yandex.kz", "yandex.uz", "yandex.com.tr", "yandex.fr", "yandex.az", "yandex.com.ge", "yandex.com.am", "yandex.co.il", "yandex.lv", "yandex.lt", "yandex.ee", "yandex.md", "yandex.tm", "yandex.tj", "yandex.eu"]
+            default: "yandex.com"
+        - name: lang
+          in: query
+          required: false
+          description: Language code for search results
+          schema:
+            type: string
+            enum: ["be", "en", "fr", "de", "id", "kk", "ru", "tt", "tr", "uk", "uz", "az", "hy", "lv", "lt", "et", "ro", "tk"]
+        - name: location
+          in: query
+          required: false
+          description: Location ID to filter results. The location IDs correspond to cities, regions, and countries. Common location IDs include "213" for Moscow, "2" for St. Petersburg, "225" for Russia, "187" for Ukraine, "157" for Minsk, "143" for Kiev. For a full list, refer to Yandex's location documentation.
+          schema:
+            type: string
+        - name: time_period
+          in: query
+          required: false
+          description: Filter results by time period
+          schema:
+            type: string
+            enum: ["last_day", "last_two_weeks", "last_month"]
+        - name: page
+          in: query
+          required: false
+          description: Page number (starts from 1)
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ads:
+          type: array
+          description: Sponsored advertisement results
+          items:
+            $ref: '#/components/schemas/Ad'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          description: Organic search results
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        inline_images:
+          type: array
+          description: Inline image results
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        inline_videos:
+          type: array
+          description: Inline video results
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+    
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the search request"
+        status:
+          type: string
+          description: "Status of the search request"
+        created_at:
+          type: string
+          format: date-time
+          description: "Timestamp when the search was created"
+        request_time_taken:
+          type: number
+          description: "Time taken to make the request in seconds"
+        parsing_time_taken:
+          type: number
+          description: "Time taken to parse the results in seconds"
+        total_time_taken:
+          type: number
+          description: "Total time taken for the search in seconds"
+        request_url:
+          type: string
+          description: "Yandex URL for this search"
+        html_url:
+          type: string
+          description: "URL to view HTML results"
+        json_url:
+          type: string
+          description: "URL to view JSON results"
+    
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        location:
+          type: string
+          description: Location ID used for search
+        lang:
+          type: string
+          description: Language code used
+        yandex_domain:
+          type: string
+          description: Yandex domain used
+        time_period:
+          type: string
+          description: Time period filter applied
+        page:
+          type: integer
+          description: Page number
+    
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed by Yandex
+        detected_location:
+          type: string
+          description: Location detected by Yandex
+        did_you_mean:
+          type: string
+          description: Suggested alternative query
+        auto_corrected:
+          type: string
+          description: Auto-corrected query if applied
+    
+    Ad:
+      type: object
+      required: [position, title, tracking_link, link, domain, displayed_link, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position of the ad in results
+        title:
+          type: string
+          description: Title of the ad
+        link:
+          type: string
+          description: Target URL of the ad
+        domain:
+          type: string
+          description: Domain of the target URL
+        displayed_link:
+          type: string
+          description: Display URL shown to users
+        tracking_link:
+          type: string
+          description: Tracking URL for the ad click
+        snippet:
+          type: string
+          description: Ad description text
+        sitelinks:
+          type: object
+          properties:
+            inline:
+              type: array
+              description: Inline sitelinks for the ad
+              items:
+                type: object
+                required: [title, tracking_link, link]
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  tracking_link:
+                    type: string
+                    description: Tracking URL for the sitelink
+                  link:
+                    type: string
+                    description: Target URL of the sitelink
+        phone:
+          type: string
+          description: Phone number if displayed
+        assets:
+          type: object
+          properties:
+            promotion:
+              type: object
+              description: Promotion information
+              properties:
+                title:
+                  type: string
+                  description: Promotion title
+                link:
+                  type: string
+                  description: Promotion link
+        extensions:
+          type: array
+          description: Ad extensions
+          items:
+            type: string
+    
+    KnowledgeGraph:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the entity
+        type:
+          type: string
+          description: Type of entity
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: integer
+          description: Number of reviews
+        website:
+          type: string
+          description: Website URL
+        directions:
+          type: string
+          description: Directions link
+        phone:
+          type: string
+          description: Phone number
+        description:
+          type: string
+          description: Entity description
+        address:
+          type: string
+          description: Physical address
+        source:
+          type: object
+          description: Source of the description
+          properties:
+            name:
+              type: string
+              description: Source name
+            link:
+              type: string
+              description: Source URL
+        facts:
+          type: object
+          description: Dynamic facts about the entity. Keys are dynamically generated based on fact names.
+          additionalProperties: true
+        profiles:
+          type: array
+          description: Social or other profiles
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Profile name
+              link:
+                type: string
+                description: Profile URL
+        people_also_search_for:
+          type: array
+          description: Related entities people search for
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Entity title
+              link:
+                type: string
+                description: Entity search link
+              thumbnail:
+                type: string
+                description: Thumbnail URL
+        cast:
+          type: array
+          description: Cast members for media entities
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Cast member name
+              link:
+                type: string
+                description: Cast member link
+              thumbnail:
+                type: string
+                description: Thumbnail URL
+        images:
+          type: array
+          description: Images related to the entity
+          items:
+            type: object
+            properties:
+              source:
+                type: object
+                description: Source of the image
+                properties:
+                  name:
+                    type: string
+                    description: Source name
+                  link:
+                    type: string
+                    description: Source URL
+              original:
+                type: object
+                description: Original image information
+                properties:
+                  link:
+                    type: string
+                    description: Original image URL
+                  height:
+                    type: integer
+                    description: Image height in pixels
+                  width:
+                    type: integer
+                    description: Image width in pixels
+              thumbnail:
+                type: string
+                description: Thumbnail URL
+    
+    OrganicResult:
+      type: object
+      required: [position, title, link, domain, displayed_link, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Result title
+        link:
+          type: string
+          description: Result URL
+        domain:
+          type: string
+          description: Domain of the result
+        displayed_link:
+          type: string
+          description: Display URL shown to users
+        snippet:
+          type: string
+          description: Result description snippet
+        snippet_highlighted_words:
+          type: array
+          description: Highlighted words from the snippet
+          items:
+            type: string
+        date:
+          type: string
+          description: Publication date if available
+        sitelinks:
+          type: object
+          properties:
+            inline:
+              type: array
+              description: Inline sitelinks
+              items:
+                type: object
+                required: [title, link]
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  link:
+                    type: string
+                    description: Sitelink URL
+                  snippet:
+                    type: string
+                    description: Sitelink description
+        cached_page_link:
+          type: string
+          description: URL to cached version of the page
+    
+    InlineImage:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Image title
+        original:
+          type: object
+          description: Original image information
+          properties:
+            link:
+              type: string
+              description: Original image URL
+            height:
+              type: integer
+              description: Image height in pixels
+            width:
+              type: integer
+              description: Image width in pixels
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    
+    InlineVideo:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in video results
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        source:
+          type: string
+          description: Video source platform
+        channel:
+          type: string
+          description: Video channel name
+        duration:
+          type: string
+          description: Video duration
+        views:
+          type: integer
+          description: Number of views
+        date:
+          type: string
+          description: Upload date
+        image:
+          type: string
+          description: Video thumbnail URL
+    
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        first_page:
+          type: string
+          description: URL to first page
+        next:
+          type: string
+          description: URL to next page
+        other_pages:
+          type: object
+          description: Map of page numbers to URLs
+          additionalProperties:
+            type: string
+    
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

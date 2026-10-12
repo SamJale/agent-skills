@@ -1,0 +1,509 @@
+openapi: 3.0.0
+info:
+  title: Google Shopping Search API
+  description: |
+    The Google Shopping Search API provides access to Google Shopping search results data using the modern UDM (Updated Design Model) layout.
+
+    **Cross-linking**: The product_id or prds returned by this API can be used with the Google Product API to fetch detailed product information. Pass it as the product_id parameter. The product_token field provides encoded product data for detailed queries.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Shopping Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Defines the engine that will be used to retrieve real-time data. It must be set to google_shopping.
+          schema:
+            type: string
+            enum: ["google_shopping"]
+        - name: q
+          in: query
+          required: true
+          description: Search query for Google Shopping
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Defines from where you want the search to originate. If several locations match the requested location, the most popular one is selected. Head to the Locations API for more precise control.
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Defines the Google encoded location for the search. SearchApi automatically generates the uule parameter when the location parameter is used, but it can be overwritten directly. uule and location cannot be used together.
+          schema:
+            type: string
+        - name: gl
+          in: query
+          required: false
+          description: Country code for the search
+          schema:
+            type: string
+            default: "us"
+            enum: ["ae", "ai", "ar", "at", "au", "aw", "be", "bm", "br", "ca", "cc", "ch", "cl", "co", "cx", "cz", "de", "dk", "es", "fi", "fk", "fr", "gb", "gf", "gp", "gr", "gs", "hk", "hm", "hu", "id", "ie", "il", "in", "io", "it", "jp", "kr", "ky", "mq", "ms", "mx", "my", "nc", "nf", "nl", "no", "nz", "pf", "ph", "pl", "pm", "pt", "re", "ro", "ru", "sa", "se", "sg", "sk", "tc", "tf", "th", "tk", "tr", "tw", "ua", "uk", "us", "vg", "vn", "wf", "yt", "za"]
+        - name: hl
+          in: query
+          required: false
+          description: Interface language for the search
+          schema:
+            type: string
+            default: "en"
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+        - name: page
+          in: query
+          required: false
+          description: Page number to return
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: num
+          in: query
+          required: false
+          description: Number of results per page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 60
+        - name: tbs
+          in: query
+          required: false
+          description: Advanced filter parameter
+          schema:
+            type: string
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort results by specific criteria
+          schema:
+            type: string
+            enum: ["relevance", "review_score", "price_low_to_high", "price_high_to_low"]
+        - name: price_min
+          in: query
+          required: false
+          description: Minimum price for products
+          schema:
+            type: string
+        - name: price_max
+          in: query
+          required: false
+          description: Maximum price for products
+          schema:
+            type: string
+        - name: condition
+          in: query
+          required: false
+          description: Filter by product condition
+          schema:
+            type: string
+            enum: ["new", "used"]
+        - name: shoprs
+          in: query
+          required: false
+          description: Encoded filter values for strict filtering
+          schema:
+            type: string
+        - name: include_favicon
+          in: query
+          required: false
+          description: Include seller favicon URLs in results
+          schema:
+            type: boolean
+        - name: include_base_images
+          in: query
+          required: false
+          description: Include base64 image URLs in results
+          schema:
+            type: boolean
+        - name: link
+          in: query
+          required: false
+          description: 'How product ad links are returned. "raw" (default) returns Google''s encrypted redirect (google.com/goto?url=...) when Google serves one; "resolved" follows each redirect to the merchant URL (best-effort, adds latency). The merchant domain is always returned separately.'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        filters:
+          type: array
+          description: Available filters for refining search results
+          items:
+            $ref: '#/components/schemas/Filter'
+        shopping_ads:
+          type: array
+          description: Sponsored product advertisements
+          items:
+            $ref: '#/components/schemas/ShoppingAd'
+        shopping_results:
+          type: array
+          description: Organic shopping results
+          items:
+            $ref: '#/components/schemas/ShoppingResult'
+        categorized_shopping_results:
+          type: array
+          description: Titled product carousels, such as themed sets, deals and price ranges
+          items:
+            $ref: '#/components/schemas/CategorizedShoppingResult'
+        popular_products:
+          type: array
+          description: Popular product recommendations
+          items:
+            $ref: '#/components/schemas/ShoppingResult'
+        all_filters_token:
+          type: string
+          description: Token for accessing all filters interface
+        error:
+          type: string
+          description: Error message when Google returns a malformed request response
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Shopping URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query used
+        location:
+          type: string
+          description: Location parameter provided
+        location_used:
+          type: string
+          description: Canonical location name used for the search
+        uule:
+          type: string
+          description: Google encoded location used
+        gl:
+          type: string
+          description: Country code used
+        hl:
+          type: string
+          description: Interface language used
+        page:
+          type: integer
+          description: Page number returned
+        shoprs:
+          type: string
+          description: Encoded filter string used
+        price_min:
+          type: string
+          description: Minimum price filter used
+        price_max:
+          type: string
+          description: Maximum price filter used
+        condition:
+          type: string
+          description: Product condition filter used
+        include_favicon:
+          type: boolean
+          description: Whether favicon URLs were included
+        include_base_images:
+          type: boolean
+          description: Whether base64 images were included
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed by Google
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: object
+          properties:
+            text:
+              type: string
+              description: Suggested alternative query
+            link:
+              type: string
+              description: Link to search with suggested query
+    Filter:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Type of filter (e.g., Price, Brand, Features)
+        options:
+          type: array
+          description: Available filter options
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+                description: Display text for the filter option
+              shoprs:
+                type: string
+                description: Encoded value to apply this filter
+    ShoppingAd:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position of the ad in the results
+        block_position:
+          type: string
+          description: Position block of the ad (e.g., top)
+        title:
+          type: string
+          description: Product title
+        seller:
+          type: string
+          description: Seller name
+        link:
+          type: string
+          description: Link to the product. Google serves this as an encrypted redirect (google.com/goto?url=...) on some searches; add link=resolved to have it followed to the merchant URL.
+        domain:
+          type: string
+          description: Merchant domain (e.g. yaasa.com), returned whether or not the link is encrypted
+        price:
+          type: string
+          description: Display price
+        extracted_price:
+          type: number
+          description: Extracted numeric price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+        promo_code:
+          type: string
+          description: Promotional code if available
+        installment:
+          $ref: '#/components/schemas/Installment'
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        condition:
+          type: string
+          description: Product condition
+        delivery:
+          type: string
+          description: Delivery information
+        tag:
+          type: string
+          description: Product tag (e.g., Sale, Popular)
+        image:
+          type: string
+          description: Product image URL
+    CategorizedShoppingResult:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Carousel title
+        shopping_results:
+          type: array
+          description: Products in the carousel, positioned from 1
+          items:
+            $ref: '#/components/schemas/ShoppingResult'
+    ShoppingResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in the results
+        product_id:
+          type: string
+          description: Google product ID for cross-linking with Google Product API
+        prds:
+          type: string
+          description: Alternative product identifier when product_id is not available
+        title:
+          type: string
+          description: Product title
+        product_link:
+          type: string
+          description: Link to product details on Google Shopping
+        offers:
+          type: string
+          description: Number of offers available
+        extracted_offers:
+          type: integer
+          description: Extracted numeric offers count
+        offers_link:
+          type: string
+          description: Link to view all offers
+        price:
+          type: string
+          description: Display price
+        extracted_price:
+          type: number
+          description: Extracted numeric price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+        installment:
+          $ref: '#/components/schemas/Installment'
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        tag:
+          type: string
+          description: Product tag (e.g., Sale, Popular)
+        delivery:
+          type: string
+          description: Delivery information
+        delivery_return:
+          type: string
+          description: Delivery and return information
+        condition:
+          type: string
+          description: Product condition
+        seller:
+          type: string
+          description: Seller name
+        seller_favicon:
+          type: string
+          description: Seller favicon URL (when include_favicon is true)
+        thumbnail:
+          type: string
+          description: Product thumbnail image URL
+        thumbnail_video:
+          type: string
+          description: Video thumbnail URL
+        product_token:
+          type: string
+          description: Encoded product token for detailed queries
+    Installment:
+      type: object
+      properties:
+        down_payment:
+          type: string
+          description: Down payment amount
+        extracted_down_payment:
+          type: number
+          description: Extracted numeric down payment
+        months:
+          type: string
+          description: Number of months
+        extracted_months:
+          type: integer
+          description: Extracted numeric months
+        cost_per_month:
+          type: string
+          description: Monthly payment amount
+        extracted_cost_per_month:
+          type: number
+          description: Extracted numeric monthly payment
+        extracted_cost_per_moth:
+          type: number
+          description: Extracted numeric monthly payment (legacy field name)
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

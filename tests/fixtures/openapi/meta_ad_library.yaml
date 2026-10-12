@@ -1,0 +1,848 @@
+openapi: 3.0.0
+info:
+  title: Meta Ad Library API
+  description: |
+    Search for ads across Meta's platforms (Facebook, Instagram, Audience Network, Messenger, and Threads) using Meta's Ad Library. Returns ad creatives, advertiser page information, targeting platforms, and run dates.
+
+    **Cross-linking**: Each ad includes an `ad_details_token` that can be passed to the Meta Ad Library Ad Details API (`engine=meta_ad_library_ad_details`) to fetch detailed information about a single ad. The `page_id` values can be used with the Meta Ad Library Page Info API (`engine=meta_ad_library_page_info`) to fetch advertiser page details, and page IDs can be discovered with the Meta Ad Library Page Search API (`engine=meta_ad_library_page_search`).
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Meta Ad Library Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to `meta_ad_library` for Meta Ad Library search
+          schema:
+            type: string
+            default: "meta_ad_library"
+            enum: ["meta_ad_library"]
+        - name: q
+          in: query
+          required: false
+          description: Search query to filter ads. Either `q`, `page_id`, or `location_id` must be present. When present together with `page_id` or `location_id`, it filters that page or location for the keyword.
+          schema:
+            type: string
+        - name: page_id
+          in: query
+          required: false
+          description: Unique ID of an advertiser page to list ads from. Either `q`, `page_id`, or `location_id` must be present. Page IDs can be found with the Meta Ad Library Page Search API.
+          schema:
+            type: string
+        - name: location_id
+          in: query
+          required: false
+          description: Meta location ID to filter ads by geographic location. Either `q`, `page_id`, or `location_id` must be present. Requires `location_name` and `location_type` to be set.
+          schema:
+            type: string
+        - name: location_name
+          in: query
+          required: false
+          description: Name of the location. Required when `location_id` is provided.
+          schema:
+            type: string
+        - name: location_type
+          in: query
+          required: false
+          description: Type of the location. Required when `location_id` is provided.
+          schema:
+            type: string
+            enum: ["COUNTRY", "REGION", "CITY"]
+        - name: ad_type
+          in: query
+          required: false
+          description: Type of ads to return. Some values are only supported in certain countries.
+          schema:
+            type: string
+            default: "all"
+            enum: ["all", "political_and_issue_ads", "housing_ads", "employment_ads", "credit_ads"]
+        - name: active_status
+          in: query
+          required: false
+          description: Filter ads by their status.
+          schema:
+            type: string
+            default: "active"
+            enum: ["all", "active", "inactive"]
+        - name: country
+          in: query
+          required: false
+          description: Country to search ads in. `ALL` searches across all countries.
+          schema:
+            type: string
+            default: "ALL"
+            enum: ["ALL", "US", "CA", "GB", "AR", "AU", "AT", "BE", "BR", "CL", "CN", "CO", "HR", "DK", "DO", "EG", "FI", "FR", "DE", "GR", "HK", "IN", "ID", "IE", "IL", "IT", "JP", "JO", "KW", "LB", "MY", "MX", "NL", "NZ", "NG", "NO", "PK", "PA", "PE", "PH", "PL", "RU", "SA", "RS", "SG", "ZA", "KR", "ES", "SE", "CH", "TW", "TH", "TR", "AE", "VE", "PT", "LU", "BG", "CZ", "SI", "IS", "SK", "LT", "TT", "BD", "LK", "KE", "HU", "MA", "CY", "JM", "EC", "RO", "BO", "GT", "CR", "QA", "SV", "HN", "NI", "PY", "UY", "PR", "BA", "PS", "TN", "BH", "VN", "GH", "MU", "UA", "MT", "BS", "MV", "OM", "MK", "LV", "EE", "IQ", "DZ", "AL", "NP", "MO", "ME", "SN", "GE", "BN", "UG", "GP", "BB", "AZ", "TZ", "LY", "MQ", "CM", "BW", "ET", "KZ", "NA", "MG", "NC", "MD", "FJ", "BY", "JE", "GU", "YE", "ZM", "IM", "HT", "KH", "AW", "PF", "AF", "BM", "GY", "AM", "MW", "AG", "RW", "GG", "GM", "FO", "LC", "KY", "BJ", "AD", "GD", "VI", "BZ", "VC", "MN", "MZ", "ML", "AO", "GF", "UZ", "DJ", "BF", "MC", "TG", "GL", "GA", "GI", "CD", "KG", "PG", "BT", "KN", "SZ", "LS", "LA", "LI", "MP", "SR", "SC", "VG", "TC", "DM", "MR", "AX", "SM", "SL", "NE", "CG", "AI", "YT", "CV", "GN", "TM", "BI", "TJ", "VU", "SB", "ER", "WS", "AS", "FK", "GQ", "TO", "KM", "PW", "FM", "CF", "SO", "MH", "VA", "TD", "KI", "ST", "TV", "NR", "RE", "LR", "ZW", "CI", "MM", "AN", "AQ", "BQ", "BV", "IO", "CX", "CC", "CK", "CW", "TF", "GW", "HM", "XK", "MS", "NU", "NF", "PN", "BL", "SH", "MF", "PM", "SX", "GS", "SS", "SJ", "TL", "TK", "UM", "WF", "EH"]
+        - name: media_type
+          in: query
+          required: false
+          description: Filter ads by media type.
+          schema:
+            type: string
+            default: "all"
+            enum: ["all", "video", "image", "meme", "image_and_meme", "none"]
+        - name: platforms
+          in: query
+          required: false
+          description: Comma-separated list of platforms where the ads appear. Supported values are `facebook`, `instagram`, `audience_network`, `messenger`, and `threads`.
+          schema:
+            type: string
+            pattern: '^(facebook|instagram|audience_network|messenger|threads)(,(facebook|instagram|audience_network|messenger|threads))*$'
+        - name: content_languages
+          in: query
+          required: false
+          description: 'Comma-separated list of content languages to filter ads by. Supported values are two-letter language codes such as `en`, `es`, or `fr`.'
+          schema:
+            type: string
+            pattern: '^(aa|ab|ae|af|ak|am|an|ar|as|av|ay|az|ba|be|bg|bh|bi|bl|bm|bn|bo|br|bs|ca|cb|ce|ch|ci|ck|co|cr|cs|cu|cv|cx|cy|da|de|dr|dv|dz|ee|el|en|eo|es|et|eu|fa|ff|fi|fj|fo|fr|fy|ga|gd|gl|gn|gu|gv|ha|he|hi|ho|hr|ht|hu|hy|hz|ia|id|ie|ig|ii|ik|io|is|it|iu|ja|jv|ka|kg|ki|kj|kk|kl|km|kn|ko|kr|ks|ku|kv|kw|ky|la|lb|lg|li|ln|lo|lt|lu|lv|mg|mh|mi|mk|ml|mn|mo|mr|ms|mt|my|na|nb|nd|ne|ng|nl|nn|no|nr|ns|nv|ny|oc|oj|om|or|os|pa|pi|pl|ps|pt|qu|rm|rn|ro|ru|rw|ry|sa|sc|sd|se|sg|sh|si|sk|sl|sm|sn|so|sq|sr|ss|st|su|sv|sw|sy|sz|ta|te|tg|th|ti|tk|tl|tn|to|tpi|tr|ts|tt|tw|ty|tz|ug|uk|ur|uz|ve|vi|vo|wa|wy|wo|xh|xx|yi|yo|za|zh|zu|zz|cmn|yue|arb|acm|apc|ars|arz|ary|mos)(,(aa|ab|ae|af|ak|am|an|ar|as|av|ay|az|ba|be|bg|bh|bi|bl|bm|bn|bo|br|bs|ca|cb|ce|ch|ci|ck|co|cr|cs|cu|cv|cx|cy|da|de|dr|dv|dz|ee|el|en|eo|es|et|eu|fa|ff|fi|fj|fo|fr|fy|ga|gd|gl|gn|gu|gv|ha|he|hi|ho|hr|ht|hu|hy|hz|ia|id|ie|ig|ii|ik|io|is|it|iu|ja|jv|ka|kg|ki|kj|kk|kl|km|kn|ko|kr|ks|ku|kv|kw|ky|la|lb|lg|li|ln|lo|lt|lu|lv|mg|mh|mi|mk|ml|mn|mo|mr|ms|mt|my|na|nb|nd|ne|ng|nl|nn|no|nr|ns|nv|ny|oc|oj|om|or|os|pa|pi|pl|ps|pt|qu|rm|rn|ro|ru|rw|ry|sa|sc|sd|se|sg|sh|si|sk|sl|sm|sn|so|sq|sr|ss|st|su|sv|sw|sy|sz|ta|te|tg|th|ti|tk|tl|tn|to|tpi|tr|ts|tt|tw|ty|tz|ug|uk|ur|uz|ve|vi|vo|wa|wy|wo|xh|xx|yi|yo|za|zh|zu|zz|cmn|yue|arb|acm|apc|ars|arz|ary|mos))*$'
+        - name: start_date
+          in: query
+          required: false
+          description: 'The earliest date to include ads from. Format: YYYY-MM-DD. Cannot be in the future.'
+          schema:
+            type: string
+        - name: end_date
+          in: query
+          required: false
+          description: 'The latest date to include ads from. Format: YYYY-MM-DD. Cannot be in the future or before `start_date`.'
+          schema:
+            type: string
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort order of the results.
+          schema:
+            type: string
+            default: "impressions_high_to_low"
+            enum: ["most_recent", "impressions_high_to_low"]
+        - name: search_type
+          in: query
+          required: false
+          description: Controls how `q` is matched. `keyword_unordered` matches ads containing all keywords in any order, `keyword_exact_phrase` matches the exact phrase. When not set, fully-quoted queries use exact phrase matching and all other queries use unordered matching.
+          schema:
+            type: string
+            enum: ["keyword_unordered", "keyword_exact_phrase"]
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for fetching the next page of results, obtained from the `pagination.next_page_token` field of the previous response. Tokens can grow large after several pages; if URL length limits cause 413 or 414 errors, send a POST request with the token in the JSON body instead.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ads:
+          type: array
+          description: Array of ads matching the search criteria
+          items:
+            $ref: '#/components/schemas/Ad'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are found or the requested page does not exist
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the search request"
+        status:
+          type: string
+          description: "Status of the search request"
+        created_at:
+          type: string
+          format: date-time
+          description: "Timestamp when the search was created"
+        request_time_taken:
+          type: number
+          description: "Time taken to make the request in seconds"
+        parsing_time_taken:
+          type: number
+          description: "Time taken to parse the results in seconds"
+        total_time_taken:
+          type: number
+          description: "Total time taken for the search in seconds"
+        request_url:
+          type: string
+          description: "Meta Ad Library URL for this search"
+        html_url:
+          type: string
+          description: "URL to view HTML results"
+        json_url:
+          type: string
+          description: "URL to view JSON results"
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query used
+        page_id:
+          type: string
+          description: Advertiser page ID used
+        location_id:
+          type: string
+          description: Location ID used
+        location_name:
+          type: string
+          description: Location name used
+        location_type:
+          type: string
+          description: Location type used
+        ad_type:
+          type: string
+          description: Ad type filter applied
+        country:
+          type: string
+          description: Country filter applied
+        media_type:
+          type: string
+          description: Media type filter applied
+        platforms:
+          type: string
+          description: Platforms filter applied
+        content_languages:
+          type: string
+          description: Content languages filter applied
+        start_date:
+          type: string
+          description: Start date filter applied
+        end_date:
+          type: string
+          description: End date filter applied
+        sort_by:
+          type: string
+          description: Sort order applied
+        search_type:
+          type: string
+          description: Search type used for keyword matching
+        next_page_token:
+          type: string
+          description: Pagination token used
+    SearchInformation:
+      type: object
+      properties:
+        total_results:
+          type: integer
+          description: Total number of ads matching the search
+        ad_library_page_info:
+          $ref: '#/components/schemas/AdLibraryPageInfo'
+        page:
+          $ref: '#/components/schemas/Page'
+    AdLibraryPageInfo:
+      type: object
+      description: Summary information about the advertiser page. Only present when searching with `page_id`.
+      properties:
+        hidden_ads:
+          type: integer
+          description: Number of hidden ads for the page
+        page_profile_uri:
+          type: string
+          description: URL of the Facebook page
+        page_name:
+          type: string
+          description: Name of the page
+        page_id:
+          type: string
+          description: Unique identifier of the page
+        page_verification:
+          type: string
+          description: Verification status of the page
+        page_is_deleted:
+          type: boolean
+          description: Whether the page has been deleted
+        has_blank_ads:
+          type: boolean
+          description: Whether the page has blank ads
+        related_pages:
+          type: array
+          description: Pages related to the advertiser page
+          items:
+            type: object
+        entity_type:
+          type: string
+          description: Entity type of the page
+        page_alias:
+          type: string
+          description: Alias of the page
+        likes:
+          type: integer
+          description: Number of likes on the page
+        page_category:
+          type: string
+          description: Category of the page
+        ig_verification:
+          type: boolean
+          description: Whether the linked Instagram account is verified
+        ig_username:
+          type: string
+          description: Username of the linked Instagram account
+        ig_followers:
+          type: integer
+          description: Number of followers of the linked Instagram account
+    Page:
+      type: object
+      description: Detailed page transparency information. Only present when searching with `page_id`.
+      properties:
+        name:
+          type: string
+          description: Name of the page
+        id:
+          type: string
+          description: Unique identifier of the page
+        is_delegate_page_with_linked_primary_profile:
+          type: boolean
+          description: Whether the page is a delegate page with a linked primary profile
+        confirmed_page_owner:
+          type: object
+          description: Confirmed owner of the page
+          properties:
+            id:
+              type: string
+              description: Unique identifier of the page owner
+            name:
+              type: string
+              description: Name of the page owner
+            information:
+              type: object
+              description: Additional information about the page owner
+              properties:
+                address:
+                  type: object
+                  properties:
+                    country:
+                      type: string
+                      description: Country of the page owner address
+        about:
+          type: object
+          description: About section of the page
+          properties:
+            text:
+              type: string
+              description: About text of the page
+        pages_transparency_info:
+          $ref: '#/components/schemas/PagesTransparencyInfo'
+        ad_library_page_targeting_insight:
+          type: object
+          description: Targeting insight summary for the page
+          properties:
+            ad_library_page_has_siep_ads:
+              type: boolean
+              description: Whether the page has social issue, electoral or political ads
+            ad_library_page_targeting_age:
+              type: array
+              description: Age targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_custom_audience:
+              type: array
+              description: Custom audience targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_detailed:
+              type: array
+              description: Detailed targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_gender:
+              type: array
+              description: Gender targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_language:
+              type: array
+              description: Language targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_location:
+              type: array
+              description: Location targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_lookalike_audience:
+              type: array
+              description: Lookalike audience targeting breakdown for the page
+              items:
+                type: object
+            ad_library_page_targeting_summary:
+              type: object
+              properties:
+                ds:
+                  type: string
+                  description: Date of the targeting summary snapshot
+                main_currency:
+                  type: string
+                  description: Main currency of the targeting summary
+                detailed_spend:
+                  type: array
+                  description: Detailed spend breakdown
+                  items:
+                    type: object
+                total_num_ads:
+                  type: integer
+                  description: Total number of ads in the targeting summary
+                total_spend_formatted:
+                  type: string
+                  description: Formatted total ad spend
+                is_30_day_available:
+                  type: boolean
+                  description: Whether 30-day targeting data is available
+                is_90_day_available:
+                  type: boolean
+                  description: Whether 90-day targeting data is available
+    PagesTransparencyInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Transparency record identifier
+        history_items:
+          type: array
+          description: Page history events such as name changes and creation
+          items:
+            type: object
+            properties:
+              event_time:
+                type: string
+                format: date-time
+                description: Timestamp of the history event
+              item_type:
+                type: string
+                description: Type of the history event
+        admin_locations:
+          type: object
+          description: Locations of the page administrators
+          properties:
+            admin_country_counts:
+              type: array
+              description: Number of page administrators per country
+              items:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Number of administrators in the country
+                  country:
+                    type: object
+                    properties:
+                      iso_name:
+                        type: string
+                        description: Name of the country
+                      id:
+                        type: string
+                        description: Unique identifier of the country
+    Ad:
+      type: object
+      description: A single ad from Meta's Ad Library. Fields mirror Meta's Ad Library payload and may vary by ad type; political and issue ads include additional transparency fields.
+      properties:
+        ad_archive_id:
+          type: string
+          description: Unique identifier of the ad in Meta's Ad Library
+        page_id:
+          type: string
+          description: Unique identifier of the advertiser page
+        page_name:
+          type: string
+          description: Name of the advertiser page
+        page_is_deleted:
+          type: boolean
+          description: Whether the advertiser page has been deleted
+        is_active:
+          type: boolean
+          description: Whether the ad is currently active
+        is_profile_page:
+          type: boolean
+          description: Whether the advertiser page is a profile page
+        archive_types:
+          type: array
+          description: Archive types of the ad
+          items:
+            type: string
+        snapshot:
+          $ref: '#/components/schemas/Snapshot'
+        start_date:
+          type: string
+          format: date-time
+          description: Date the ad started running
+        end_date:
+          type: string
+          format: date-time
+          description: Date the ad stopped or is scheduled to stop running
+        publisher_platform:
+          type: array
+          description: Platforms where the ad appears
+          items:
+            type: string
+        categories:
+          type: array
+          description: Categories of the ad
+          items:
+            type: string
+        currency:
+          type: string
+          description: Currency of the ad spend
+        entity_type:
+          type: string
+          description: Entity type of the advertiser
+        gated_type:
+          type: string
+          description: Gating status of the ad
+        hide_data_status:
+          type: string
+          description: Status of hidden data for the ad
+        has_user_reported:
+          type: boolean
+          description: Whether users have reported the ad
+        is_aaa_eligible:
+          type: boolean
+          description: Whether the ad is eligible for the additional ad archive
+        contains_digital_created_media:
+          type: boolean
+          description: Whether the ad contains digitally created media
+        contains_sensitive_content:
+          type: boolean
+          description: Whether the ad contains sensitive content
+        impressions_with_index:
+          type: object
+          description: Impressions information for the ad
+          properties:
+            impressions_index:
+              type: integer
+              description: Index of the impressions range
+            impressions_text:
+              type: string
+              description: Human-readable impressions range
+        collation_count:
+          type: integer
+          description: Number of collated ad versions
+        collation_id:
+          type: string
+          description: Identifier of the ad collation group
+        total_active_time:
+          type: integer
+          description: Total time the ad has been active in seconds
+        menu_items:
+          type: array
+          description: Menu items associated with the ad
+          items:
+            type: object
+        targeted_or_reached_countries:
+          type: array
+          description: Countries the ad targeted or reached
+          items:
+            type: string
+        political_countries:
+          type: array
+          description: Countries where the ad is classified as political
+          items:
+            type: string
+        regional_regulation_data:
+          type: object
+          description: Regional regulation flags for the ad
+          properties:
+            finserv:
+              type: object
+              description: Financial services regulation flags
+              properties:
+                is_deemed_finserv:
+                  type: boolean
+                  description: Whether the ad is deemed a financial services ad
+                is_limited_delivery:
+                  type: boolean
+                  description: Whether the ad has limited delivery under financial services regulation
+            tw_anti_scam:
+              type: object
+              description: Taiwan anti-scam regulation flags
+              properties:
+                is_limited_delivery:
+                  type: boolean
+                  description: Whether the ad has limited delivery under Taiwan anti-scam regulation
+        hidden_safety_data:
+          type: boolean
+          description: Whether safety data is hidden for the ad
+        ad_details_token:
+          type: string
+          description: Token to fetch detailed information about this ad using the Meta Ad Library Ad Details API. Pass it as the `ad_details_token` parameter with `engine=meta_ad_library_ad_details`.
+    Snapshot:
+      type: object
+      description: Creative content of the ad
+      properties:
+        page_id:
+          type: string
+          description: Unique identifier of the advertiser page
+        page_name:
+          type: string
+          description: Name of the advertiser page
+        current_page_name:
+          type: string
+          description: Current name of the advertiser page
+        page_is_deleted:
+          type: boolean
+          description: Whether the advertiser page has been deleted
+        page_is_profile_page:
+          type: boolean
+          description: Whether the advertiser page is a profile page
+        page_profile_uri:
+          type: string
+          description: URL of the advertiser page
+        page_profile_picture_url:
+          type: string
+          description: URL of the advertiser page profile picture
+        page_categories:
+          type: array
+          description: Categories of the advertiser page
+          items:
+            type: string
+        page_entity_type:
+          type: string
+          description: Entity type of the advertiser page
+        page_like_count:
+          type: integer
+          description: Number of likes on the advertiser page
+        title:
+          type: string
+          description: Title of the ad
+        byline:
+          type: string
+          description: Byline of the ad
+        caption:
+          type: string
+          description: Caption displayed on the ad
+        body:
+          type: object
+          description: Body content of the ad
+          properties:
+            text:
+              type: string
+              description: Body text of the ad
+        cta_text:
+          type: string
+          description: Call to action text on the ad button
+        cta_type:
+          type: string
+          description: Call to action type of the ad
+        link_url:
+          type: string
+          description: Landing page URL of the ad
+        link_description:
+          type: string
+          description: Description of the ad link
+        display_format:
+          type: string
+          description: Display format of the ad
+        cards:
+          type: array
+          description: Carousel cards of the ad
+          items:
+            $ref: '#/components/schemas/Card'
+        images:
+          type: array
+          description: Images in the ad
+          items:
+            $ref: '#/components/schemas/Image'
+        videos:
+          type: array
+          description: Videos in the ad
+          items:
+            $ref: '#/components/schemas/Video'
+        is_reshared:
+          type: boolean
+          description: Whether the ad is a reshared post
+        extra_links:
+          type: array
+          description: Additional links in the ad
+          items:
+            type: string
+        extra_texts:
+          type: array
+          description: Additional texts in the ad
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+                description: Additional text content
+        extra_images:
+          type: array
+          description: Additional images in the ad
+          items:
+            $ref: '#/components/schemas/Image'
+        extra_videos:
+          type: array
+          description: Additional videos in the ad
+          items:
+            type: object
+        ec_certificates:
+          type: array
+          description: E-commerce certificates associated with the ad
+          items:
+            type: object
+    Card:
+      type: object
+      description: A single carousel card of the ad
+      properties:
+        title:
+          type: string
+          description: Title of the card
+        body:
+          type: string
+          description: Body text of the card
+        caption:
+          type: string
+          description: Caption of the card
+        cta_text:
+          type: string
+          description: Call to action text on the card
+        cta_type:
+          type: string
+          description: Call to action type of the card
+        link_url:
+          type: string
+          description: Landing page URL of the card
+        link_description:
+          type: string
+          description: Description of the card link
+        original_image_url:
+          type: string
+          description: URL of the original image
+        resized_image_url:
+          type: string
+          description: URL of the resized image
+        watermarked_resized_image_url:
+          type: string
+          description: URL of the watermarked resized image
+        image_crops:
+          type: array
+          description: Crop variants of the card image
+          items:
+            type: object
+        video_hd_url:
+          type: string
+          description: URL of the HD video
+        video_sd_url:
+          type: string
+          description: URL of the SD video
+        video_preview_image_url:
+          type: string
+          description: URL of the video preview image
+        watermarked_video_hd_url:
+          type: string
+          description: URL of the watermarked HD video
+        watermarked_video_sd_url:
+          type: string
+          description: URL of the watermarked SD video
+    Image:
+      type: object
+      properties:
+        original_image_url:
+          type: string
+          description: URL of the original image
+        resized_image_url:
+          type: string
+          description: URL of the resized image
+        watermarked_resized_image_url:
+          type: string
+          description: URL of the watermarked resized image
+        image_crops:
+          type: array
+          description: Crop variants of the image
+          items:
+            type: object
+    Video:
+      type: object
+      properties:
+        video_hd_url:
+          type: string
+          description: URL of the HD video
+        video_sd_url:
+          type: string
+          description: URL of the SD video
+        video_preview_image_url:
+          type: string
+          description: URL of the video preview image
+        watermarked_video_hd_url:
+          type: string
+          description: URL of the watermarked HD video
+        watermarked_video_sd_url:
+          type: string
+          description: URL of the watermarked SD video
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to fetch the next page of results. Pass it as the `next_page_token` parameter.
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

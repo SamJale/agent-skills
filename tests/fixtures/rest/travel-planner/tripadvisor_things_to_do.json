@@ -1,0 +1,683 @@
+{
+  "search_metadata": {
+    "id": "search_DWmO1QkoEbuyAR3pz4J2r8Ga",
+    "status": "Success",
+    "created_at": "2026-06-16T12:58:31Z",
+    "request_time_taken": 0.88,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 0.89,
+    "request_url": "https://www.tripadvisor.com/Search?q=Los+Angeles&ssrc=A&geo=1&offset=0&limit=30",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_DWmO1QkoEbuyAR3pz4J2r8Ga.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_DWmO1QkoEbuyAR3pz4J2r8Ga"
+  },
+  "search_parameters": {
+    "engine": "tripadvisor",
+    "tripadvisor_domain": "tripadvisor.com",
+    "q": "Los Angeles",
+    "category": "things_to_do",
+    "page": 1
+  },
+  "search_information": {
+    "total_results": 2000
+  },
+  "place_results": [
+    {
+      "position": 1,
+      "place_id": 1639371,
+      "title": "Another Side Of Los Angeles Tours",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d1639371-Reviews-Another_Side_Of_Los_Angeles_Tours-Los_Angeles_California.html",
+      "description": "Our tours have been created with love, compassion, and forethought from beginning to the end. We treat our guests like family and we exist for any visitor that wants the best of the best tours in LA. We love Los Angeles and we are passionate about providing the finest tour services here. Our tours are perfect for families and corporate groups alike. Feel free to book via our secure website or by calling us at anytime.",
+      "rating": 4.9,
+      "reviews": 1096,
+      "mentions": 185,
+      "review_snippet": "I would definitely recommend them if you want to take a tour in Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/0e/b3/d0/take-me-to-hollywood.jpg",
+        "width": 1200,
+        "height": 789
+      }
+    },
+    {
+      "position": 2,
+      "place_id": 12165131,
+      "title": "Full-Day Iconic Sights of LA, Hollywood, Beverly Hills, Beaches and More",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d12165131-Full_Day_Iconic_Sights_of_LA_Hollywood_Beverly_Hills_Beaches_and_More-Los_Angeles_C.html",
+      "description": "From the Hollywood Sign to the sunny beaches of Santa Monica and the glitz of Beverly Hills, Los Angeles is full of iconic sights. This guided full-day tour transports you by air-conditioned coach to top attractions—from Venice Beach to the Sunset Strip to Griffith Park and more—with included lunch at the Farmers' Market and optional hotel pickup for select locations.",
+      "rating": 4.9,
+      "reviews": 4480,
+      "mentions": 485,
+      "review_snippet": "We hired a private driver for three days to explore Los Angeles, and it",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/a0/cd/e5/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 3,
+      "place_id": 491889,
+      "title": "Metro Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d491889-Reviews-Metro_Los_Angeles-Los_Angeles_California.html",
+      "rating": 4,
+      "reviews": 683,
+      "mentions": 123,
+      "review_snippet": "As a Los Angeles resident, I have mixed feelings about the city's Metro",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/fc/3b/13/caption.jpg",
+        "width": 960,
+        "height": 720
+      }
+    },
+    {
+      "position": 4,
+      "place_id": 23746701,
+      "title": "Best of Los Angeles Guided City Tour with 4 Stops & Free Time",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d23746701-Best_of_Los_Angeles_Guided_City_Tour_with_4_Stops_Free_Time-Los_Angeles_California.html",
+      "description": "Los Angeles is filled with must-see landmarks, from the famous Hollywood sign to Santa Monica Pier. But neighborhoods are spread out, and it can be tough to make much progress with limited time to spare. Ideal for time-pressed travelers, this easy half-day tour covers the highlights by luxury bus. Depart from Hollywood or Santa Monica, and take in destinations like Rodeo Drive and Griffith Observatory without dedicating days to sightseeing.",
+      "rating": 4.9,
+      "reviews": 1677,
+      "mentions": 117,
+      "review_snippet": "We had an amazing experience on this Los Angeles half-day tour, and a big",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/9e/14/b5/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 5,
+      "place_id": 5567409,
+      "title": "The Real Los Angeles Tours",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d5567409-Reviews-The_Real_Los_Angeles_Tours-Los_Angeles_California.html",
+      "description": "On our tours we walk the streets, cycle the city & ride the Metro so YOU can authentically experience L.A. We have tours of Hollywood, downtown LA, Griffith Park, Santa Monica & Venice. We have all day tours, layover tours, true crime tours, bike tours, private tours and food and bar tours. Join us if you like to immerse yourself in the city you're visiting!",
+      "rating": 4.8,
+      "reviews": 510,
+      "mentions": 65,
+      "review_snippet": "Experience the best of Los Angeles and, great food.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/10/89/c0/caption.jpg",
+        "width": 1313,
+        "height": 875
+      }
+    },
+    {
+      "position": 6,
+      "place_id": 207644,
+      "title": "Calle Olvera",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d207644-Reviews-Calle_Olvera-Los_Angeles_California.html",
+      "description": "The oldest street in Los Angeles is fun to visit, especially during special events like the \"Blessing of the Animals\" or \"Dia De Los Muertos\" (Day of the Dead.)",
+      "rating": 4.1,
+      "reviews": 1381,
+      "mentions": 345,
+      "review_snippet": "The nicest and most historic place in Los Angeles, this is where Los Angeles",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles",
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/6d/33/7c/huarache-sandals-and.jpg",
+        "width": 2016,
+        "height": 1512
+      }
+    },
+    {
+      "position": 7,
+      "place_id": 116885,
+      "title": "Los Angeles Zoo & Botanical Gardens",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d116885-Reviews-Los_Angeles_Zoo_Botanical_Gardens-Los_Angeles_California.html",
+      "description": "The Los Angeles Zoo is accredited by the Association of Zoos and Aquariums (AZA) and meets or exceeds the highest standard for animal care and animal health. The landmark L.A. Zoo is a world-class destination and one of the city’s top attractions. This lush 133-acre oasis is home to thousands of animals including one of the largest troops of chimpanzees in North America. Exhibit highlights include Rainforest of the Americas, which transports guests to a tropical rainforest that's home to piranhas, giant otters, harpy eagles, tapirs, and jaguars, and more. Other highlights include the new Cape vulture habitat and the LAIR (Living Amphibians, Invertebrates, and Reptiles), where guests can view rare and endangered critters, some of which can be seen at no other zoo in the world. The L.A. Zoo works with partners locally and around the globe on conservation programs geared toward creating a just and sustainable world where people and wildlife thrive, together.",
+      "rating": 3.8,
+      "reviews": 1046,
+      "mentions": 90,
+      "review_snippet": "We have visited Los Angeles many times and have never gone here, so we",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/33/18/31/rainforest-of-the-americas.jpg",
+        "width": 1200,
+        "height": 857
+      }
+    },
+    {
+      "position": 8,
+      "place_id": 1488909,
+      "title": "Architecture Tours L.A.",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d1488909-Reviews-Architecture_Tours_L_A-Los_Angeles_California.html",
+      "rating": 5,
+      "reviews": 755,
+      "mentions": 180,
+      "review_snippet": "There is so much cool history in Los Angeles, and while you inherently",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/32/d5/8c/filename-la2-jpg-thumbnail0.jpg",
+        "width": 778,
+        "height": 519
+      }
+    },
+    {
+      "position": 9,
+      "place_id": 116887,
+      "title": "Griffith Observatory",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d116887-Reviews-Griffith_Observatory-Los_Angeles_California.html",
+      "description": "A public observatory in Los Angeles, Griffith Observatory has been featured in many movies, from 'Rebel Without a Cause' to 'La La Land'. Nestled on Mount Hollywood, Griffith Observatory boasts some of the best views of the city—the best time to visit is at sunset. Inside, the observatory offers quite the experience as well—it has a planetarium, various exhibits, free-to-use telescopes, and more. The best part? Admission is free and it’s easily accessible with plenty of parking. Make a day out of your visit at Griffith Park, where you’ll find hiking trails and horseback riding. – Tripadvisor",
+      "rating": 4.6,
+      "reviews": 20844,
+      "mentions": 2059,
+      "review_snippet": "Angeles.",
+      "review_snippet_highlighted_words": [
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/e0/4f/1d/vistas-desde-el-observatorio.jpg",
+        "width": 2177,
+        "height": 1456
+      }
+    },
+    {
+      "position": 10,
+      "place_id": 560853,
+      "title": "Los Angeles Convention Center",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d560853-Reviews-Los_Angeles_Convention_Center-Los_Angeles_California.html",
+      "description": "The Los Angeles Convention Center attracts millions of visitors annually and is renowned internationally as a prime site for conventions, trade shows, and exhibitions. Located in the cultural, business, and entertainment mecca of Downtown Los Angeles, the LACC is an integral economic component of the Southern California area, and remains an enduring symbol of environmental sustainability and social responsibility for our community. First opened to the public in 1971, the LACC has since undergone modernization and expansion; as a testament to our continuous effort to enhance our facility and services, the LACC is embarking on its fourth phase of renovation under AEG’s management this year. The year-long transformation will enhance both functionality and aesthetics of the LACC, and will include replacing existing carpet, installing the latest energy-efficient products such as “cool roofs” and new air handling units, completely remodeling the theatre, and upgrading IT infrastructure and operating systems throughout the Center.",
+      "rating": 4.1,
+      "reviews": 230,
+      "mentions": 25,
+      "review_snippet": "The Los Angeles Convention Center is pretty comparable to other large US",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/e1/01/5d/lacc-south-hall-looking.jpg",
+        "width": 3883,
+        "height": 2910
+      }
+    },
+    {
+      "position": 11,
+      "place_id": 106166,
+      "title": "Los Angeles County Museum of Art",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d106166-Reviews-Los_Angeles_County_Museum_of_Art-Los_Angeles_California.html",
+      "description": "Since its inception in 1965, the Los Angeles County Museum of Art (LACMA) has been devoted to collecting works of art that span both history and geography, in addition to representing Los Angeles's uniquely diverse population. Today LACMA is the largest art museum in the western United States, with a collection that includes over 120,000 objects dating from antiquity to the present, encompassing the geographic world and nearly the entire history of art. Among the museum's strengths are its holdings of Asian art, Latin American art, ranging from pre-Columbian masterpieces to works by leading modern and contemporary artists; and Islamic art, of which LACMA hosts one of the most significant collections in the world. A museum of international stature as well as a vital part of Southern California, LACMA shares its vast collections through exhibitions, public programs, and research facilities that attract over a million visitors annually, in addition to serving millions through digital initiatives, such as online collections, scholarly catalogues, and interactive engagement online. Situated in Hancock Park on over 20 acres in the heart of Los Angeles, LACMA is located between the ocean and downtown. With this much to explore, we encourage you to spend an entire day with us, delving deep into the work of your favorite artists, taking a free tour, catching a film or concert, or just letting your curiosity lead the way.",
+      "rating": 4.5,
+      "reviews": 2850,
+      "mentions": 167,
+      "review_snippet": "The Los Angeles County Museum of Art, the largest art museum in the western",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/43/81/31/los-angeles-county-museum.jpg",
+        "width": 2000,
+        "height": 1500
+      }
+    },
+    {
+      "position": 12,
+      "place_id": 14061731,
+      "title": "Full-Day LA Tour: Santa Monica, Hollywood and Beverly Hills",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d14061731-Full_Day_LA_Tour_Santa_Monica_Hollywood_and_Beverly_Hills-Los_Angeles_California.html",
+      "description": "See the best that the Los Angeles area has to offer on this full-day tour. Visit four popular parts of L.A., Santa Monica Pier, the Farmers Market, Griffith Observatory, and the Hollywood Walk of Fame, with 1-hour stops in each area. See the most-famous landmarks of the city and get insider tips from your guide about the best things to see, eat, and do.",
+      "rating": 4.9,
+      "reviews": 2610,
+      "mentions": 179,
+      "review_snippet": "Your driving, stories, and guidance made our visit to Los Angeles and Hollywood",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/97/9c/21/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 13,
+      "place_id": 147966,
+      "title": "The Getty Center",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d147966-Reviews-The_Getty_Center-Los_Angeles_California.html",
+      "description": "The Getty Center in Los Angeles is an astounding place to spend a day marveling at world-class art and relaxing in beautifully manicured gardens. Take the tram up to this lavish postmodern complex, which houses a sprawling museum featuring masterpieces by the likes of Van Gogh, Monet, and Cezanne. You can also enjoy superb views of the city from the Cactus Garden, and savor a delicious contemporary menu at the center's restaurant. You can visit the complex for free, though there is a parking fee. To skip the lines, book a museum tour to delve deeper into the art with the help of a knowledgeable guide. – Tripadvisor",
+      "rating": 4.8,
+      "reviews": 14875,
+      "mentions": 1650,
+      "review_snippet": "The Getty Center Museum is truly one of Los Angeles’ most iconic and inspiring",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles’"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/cf/8d/93/the-getty-center.jpg",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "position": 14,
+      "place_id": 143621,
+      "title": "Los Angeles Central Library",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d143621-Reviews-Los_Angeles_Central_Library-Los_Angeles_California.html",
+      "description": "Restored, historic library with Egyptian influenced architecture.",
+      "rating": 4.5,
+      "reviews": 445,
+      "mentions": 58,
+      "review_snippet": "Born and raised in Los Angeles and for some reason have never been here",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/7d/8e/1a/filename-la-central-library.jpg",
+        "width": 317,
+        "height": 450
+      }
+    },
+    {
+      "position": 15,
+      "place_id": 103412,
+      "title": "Natural History Museum of Los Angeles County",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d103412-Reviews-Natural_History_Museum_of_Los_Angeles_County-Los_Angeles_California.html",
+      "description": "Discover your world past and present. See dinosaurs in our new Dinosaur Hall, including the world’s only Tyrannosaurus rex growth series. Get the behind- the- scenes look at how scientists work on fossils at our Dino Lab. See 240 specimens, including skeletons from mastodons to whales, animal dioramas from North American and Africa, and more.Stroll through our extensive Nature Gardens, and discover true stories about plants and animals in our Nature Lab. See and touch more than 2,000 spectacular specimens displayed in our Gem and Mineral Hall, and enter into the vault to view diamonds, rubies, sapphires, and other exquisite gems. Our Butterfly and Spider Pavilions are open seasonally. Here you can wander through the changing ecosystem with over 30 species of fluttering butterflies all around you, or witness arachnids up close and personal.",
+      "rating": 4.6,
+      "reviews": 1390,
+      "mentions": 102,
+      "review_snippet": "Founded in 1990, the Natural History Museum of Los Angeles County has become",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/47/dc/6d/natural-history-museum.jpg",
+        "width": 1502,
+        "height": 989
+      }
+    },
+    {
+      "position": 16,
+      "place_id": 560855,
+      "title": "Los Angeles Memorial Coliseum",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d560855-Reviews-Los_Angeles_Memorial_Coliseum-Los_Angeles_California.html",
+      "description": "Home to the USC football team since 1923, and a designated National Historic Landmark, the Los Angeles Memorial Coliseum has the most diverse and all encompassing history of any stadium in the world. It has hosted two Super Bowls (I and VII), a World Series (1959), and two Olympiads (X and XXIII). Along with the adjacent Sports Arena, which closed its doors in 2016, the Coliseum is credited with helping to start the migration of professional sports teams to the West Coast. The complex provided a home for the Rams (1946-79, returning again in 2016), the Dodgers (1958-61), and the Lakers (1960-67), and has also been home to a variety of Southern California teams, including: the Raiders (1982-94), UCLA Football (1933-81), the Chargers (1960), Clippers (1984-99), USC Basketball (1959-2006), UCLA Basketball (1959-65), the Cobras (1988, Arena Football), Ice Dogs (1995-96, IHL), Sharks (1972-74, WHA), Stars (1968-70, ABA) and Kings (1967, NHL). The Coliseum has also welcomed a wide range of diverse and legendary events, such as entertainer Evel Knievel (1973), a Papal Mass by Pope John Paul II (1987), Nelson Mandela’s “Crusade against Apartheid” (1990), visits from several U.S. Presidents (FDR, JFK, and Reagan, to name a few), and endless sold-out concerts from such iconic artists as Pink Floyd, U2, The Who, Metallica, Bruce Springsteen, The Rolling Stones, and many more. Come find out why we are known as the \"Greatest Stadium in the World\"!",
+      "rating": 4,
+      "reviews": 226,
+      "mentions": 25,
+      "review_snippet": "nation's most iconic stadiums: the Los Angeles Memorial Coliseum.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/04/44/7e/usc-vs-ucla-2015.jpg",
+        "width": 2000,
+        "height": 750
+      }
+    },
+    {
+      "position": 17,
+      "place_id": 1231268,
+      "title": "Downtown Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d1231268-Reviews-Downtown_Los_Angeles-Los_Angeles_California.html",
+      "rating": 3.7,
+      "reviews": 248,
+      "mentions": 19,
+      "review_snippet": "Los Angeles Downtown is expectedly picturesque, so it should be on the",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/3a/82/1d/taken-from-historic-bridge.jpg",
+        "width": 2000,
+        "height": 1281
+      }
+    },
+    {
+      "position": 18,
+      "place_id": 129312,
+      "title": "Griffith Park",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d129312-Reviews-Griffith_Park-Los_Angeles_California.html",
+      "description": "Covering more than 4,107 acres of natural terrain, this is the largest municipal park and urban wilderness area in the United States, which offers numerous family attractions and activities.",
+      "rating": 4.6,
+      "reviews": 3218,
+      "mentions": 308,
+      "review_snippet": "Vast natural area in the Santa Monica Mountains overlooking Los Angeles",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/be/da/81/griffith-park.jpg",
+        "width": 2000,
+        "height": 1008
+      }
+    },
+    {
+      "position": 19,
+      "place_id": 1078681,
+      "title": "Los Angeles Sightseeing",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g33052-d1078681-Reviews-Los_Angeles_Sightseeing-Santa_Monica_California.html",
+      "description": "LA Sightseeing Tours & Charters has been providing the best tours of Los Angeles, Hollywood, Beverly Hills for over 15 years. Let us make your trip a memorable experience of fun, thrills, and excitement.",
+      "rating": 3.2,
+      "reviews": 154,
+      "mentions": 32,
+      "review_snippet": "We just stayed a week end in Los angeles, and were a little bit sad to",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "angeles"
+      ],
+      "location": "Santa Monica, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/76/04/98/los-angeles-sightseeing.jpg",
+        "width": 800,
+        "height": 533
+      }
+    },
+    {
+      "position": 20,
+      "place_id": 116315,
+      "title": "Union Station",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d116315-Reviews-Union_Station-Los_Angeles_California.html",
+      "description": "Los Angeles Union Station is the main railroad station in Los Angeles, California, and the largest railroad passenger terminal in the Western US. Union Station is a major transportation hub for Southern California, serving almost 110,000 passengers a day. The station is the hub of the Amtrak's California regional routes, Amtrak's long distance trains, Metrolink commuter trains, several Metro Rail subway and light rail lines, buses and coach services. History: Established in 1939. Built in 1939, Union Station combines Spanish Colonial Revival architecture, Mission Revival and Streamline Moderne styles. The architecture team included John and Donald Parkinson who also designed Los Angeles City Hall and other city landmarks. Originally intended as a transcontinental terminus station for the Union Pacific, Santa Fe and Southern Pacific Railways, the station was a major hub for troop movement during World War II. The station's historic 161,000 square foot terminal was placed on the National Register of Historic Places in 1980 and the station was restored in 1992. Beginning in the 1970s, growing use of Amtrak and expansion of local and regional rail revitalized the station as a major transportation hub of Southern California. Metro acquired the station in 2011, managing the property that currently serves as a transportation hub for Metro, Metrolink, Amtrak and other transportation services as well an urban mixed-use development site.",
+      "rating": 4.3,
+      "reviews": 1866,
+      "mentions": 232,
+      "review_snippet": "angeles.",
+      "review_snippet_highlighted_words": [
+        "angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/e5/36/81/union-station.jpg",
+        "width": 632,
+        "height": 427
+      }
+    },
+    {
+      "position": 21,
+      "place_id": 2021286,
+      "title": "City Sightseeing Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d2021286-Reviews-City_Sightseeing_Los_Angeles-Los_Angeles_California.html",
+      "rating": 3.1,
+      "reviews": 270,
+      "mentions": 17,
+      "review_snippet": "Been in other cities without issue but the Los Angeles people clearly don",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/4d/20/55/downtown.jpg",
+        "width": 2000,
+        "height": 1500
+      }
+    },
+    {
+      "position": 22,
+      "place_id": 151972,
+      "title": "Bahia de Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g1673264-d151972-Reviews-Bahia_de_Los_Angeles-Bahia_de_Los_Angeles_Ensenada_Municipality_Baja_California.html",
+      "description": "This beautiful, island-studded bay is a prime spot for all kinds of aquatic activities, including windsurfing, kayaking and whale-watching.",
+      "rating": 4.4,
+      "reviews": 115,
+      "mentions": 20,
+      "review_snippet": "The highway South is fixed (for now) all the way to Bahia de Los Angeles",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Bahia de Los Angeles, Mexico",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/c4/e4/9b/baja-it-s-scenic.jpg",
+        "width": 2000,
+        "height": 1125
+      }
+    },
+    {
+      "position": 23,
+      "place_id": 11910894,
+      "title": "Downtown Los Angeles Food Tour",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d11910894-Downtown_Los_Angeles_Food_Tour-Los_Angeles_California.html",
+      "description": "Tasting some of the best food in Los Angeles isn't just about experiencing the local cuisine, but learning about the dynamic food culture that's emerging in Downtown LA. On this foodie-friendly walking tour, you taste creations at a few standout downtown eateries. Start walking from Pershing Square, enjoy your guide's live narration about LA and Hollywood history, and hear about the local food scene while you explore.",
+      "rating": 4.8,
+      "reviews": 382,
+      "mentions": 61,
+      "review_snippet": "Next time I'm in Los Angeles, I plan to head back to the area to sample",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/97/90/69/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 24,
+      "place_id": 156672,
+      "title": "El Pueblo de Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d156672-Reviews-El_Pueblo_de_Los_Angeles-Los_Angeles_California.html",
+      "description": "Consisting of forty-four acres, this region is a historical re-creation of a typical Spanish village representing the origins of Los Angeles.",
+      "rating": 4.1,
+      "reviews": 359,
+      "mentions": 54,
+      "review_snippet": "Los Angeles has some of the most 20th Century history in the United States",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/ae/fc/fb/el-pueblo-la.jpg",
+        "width": 1023,
+        "height": 689
+      }
+    },
+    {
+      "position": 25,
+      "place_id": 12649613,
+      "title": "Los Angeles and Hollywood Small Group Day Tour from Las Vegas",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g45963-d12649613-Los_Angeles_and_Hollywood_Small_Group_Day_Tour_from_Las_Vegas-Las_Vegas_Nevada.html",
+      "description": "Visit Los Angeles from Las Vegas without the hassle of planning logistics or staying the night on this day trip. The tour is limited to just fourteen people for a small-group experience, and your driver-guide will provide commentary about the city as you see areas such as Hollywood and Rodeo Drive. Snacks and lunch are included for a seamless experience.",
+      "rating": 4.8,
+      "reviews": 592,
+      "mentions": 67,
+      "review_snippet": "Angeles was incredible.",
+      "review_snippet_highlighted_words": [
+        "Angeles"
+      ],
+      "location": "Las Vegas, Nevada",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/97/ce/67/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 26,
+      "place_id": 144152,
+      "title": "Hollywood Sign",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d144152-Reviews-Hollywood_Sign-Los_Angeles_California.html",
+      "description": "Perched atop Mount Lee, this global symbol of Hollywood glamour measures 450 feet in length with mammoth white letters, each standing 45 feet high, spelling out the name of the city. There is no access to The Hollywood Sign as it sits on restricted property however; there are several scenic view points which provide great photo opportunities . 1) Hollywood and Highland. Farther away but easy , especially if you are already in Hollywood. 2) The Griffith Observatory. Take the Metro Red Line at Hollywood and Highland to the Griffith Observatory stop. From here board the DASH Observatory shuttle operating 7 days a week ( beginning 3/21/17) to the front lawn of The Griffith Observatory for views of The Hollywood Sign. 3) The Sign is best viewed from the interior of Griffith Park. Trail signs will guide you to these sites. Please stay on the designated trails and enjoy the great views of The Hollywood Sign !",
+      "rating": 4,
+      "reviews": 7762,
+      "mentions": 330,
+      "review_snippet": "of Los Angeles' prosperity and industry.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles'"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/ab/c5/c2/vuew-from-hollywood-lake.jpg",
+        "width": 960,
+        "height": 720
+      }
+    },
+    {
+      "position": 27,
+      "place_id": 1847123,
+      "title": "Los Angeles Urban Adventures",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d1847123-Reviews-Los_Angeles_Urban_Adventures-Los_Angeles_California.html",
+      "description": "We are authentic LA locals and will welcome you like friends on our neighborhood tours. We'll show you local hotspots hidden from mass tourism and help demystify this expansive city. Whether it’s tasting favorite food and drink, ogling awesome architecture, or soaking up the local ambiance, we’ll ensure your Los Angeles experience is fun, fantastic and totally off the beaten path!",
+      "rating": 4.8,
+      "reviews": 425,
+      "mentions": 34,
+      "review_snippet": "Angeles Urban Adventures and we got Tom Dennis.",
+      "review_snippet_highlighted_words": [
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ee/3c/bc/getting-a-view-of-the.jpg",
+        "width": 2000,
+        "height": 1399
+      }
+    },
+    {
+      "position": 28,
+      "place_id": 291236,
+      "title": "San Antonio Winery - Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d291236-Reviews-San_Antonio_Winery_Los_Angeles-Los_Angeles_California.html",
+      "description": "This wine shop in the heart of Downtown Los Angeles has been established as a Los Angeles City Historical Landmark. With the new addition of, The 1917 Wine Bar & Bistro located on-site, outside of the original winery. With a food & beverage menu of all its own, you'll get to experience wine country without having to road trip. View food menu: https://sanantoniowinery.com/locations/los-angeles/the-1917-wine-bar-bistro/the-1917-patio-tastings/#",
+      "rating": 4.6,
+      "reviews": 185,
+      "mentions": 35,
+      "review_snippet": "I was on business recently in Los Angeles when I had my afternoon meeting",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f4/11/ce/img-26311-largejpg.jpg",
+        "width": 1296,
+        "height": 968
+      }
+    },
+    {
+      "position": 29,
+      "place_id": 13336836,
+      "title": "Virtual Room Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d13336836-Reviews-Virtual_Room_Los_Angeles-Los_Angeles_California.html",
+      "description": "A truly immersive and mind-blowing virtual adventure for groups of 2 to 4 players who must work together to travel through time in a totally realistic environment! Each player has a dedicated room, specially designed and equipped with the latest VR gear. The participants will get to move around, search for items, manipulate objects and collaborate with their fellow team members.",
+      "rating": 4.9,
+      "reviews": 135,
+      "mentions": 6,
+      "review_snippet": "Angeles for Mission2.",
+      "review_snippet_highlighted_words": [
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/18/f8/12/join-us-on-the-moon-and.jpg",
+        "width": 3000,
+        "height": 1800
+      }
+    },
+    {
+      "position": 30,
+      "place_id": 106087,
+      "title": "Raging Waters Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g33013-d106087-Reviews-Raging_Waters_Los_Angeles-San_Dimas_California.html",
+      "description": "- Temporarily closed Raging Waters Los Angeles has a lot to like about this summer! With more rides, slides and attractions than any other water park in California, this 50 acre water adventure is sure to deliver gallons of fun and thrills for the whole family. Featuring cabanas and picnic areas to host your next birthday party, family reunion, or corporate get together, Raging Waters is convenient and hassle free. Surfs Up! Can’t make it to the beach, then grab a board and catch a wave on the Flowrider. Need a little R&R, why not float down the Amazon River or catch a wave in the Wave Pool. Younger guests will never tire of Kids Kingdom and Splash Island. Whether you’re mild or wild or just in between, guests of all ages always have a raging time at Raging Waters, California’s Largest Water Park!Family fun is guaranteed at this 44-acre water park located 30 minutes from downtown Los Angeles.",
+      "rating": 2.8,
+      "reviews": 284,
+      "mentions": 2,
+      "review_snippet": "Raging Water Los Angeles is a fun place. I was there this summer.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "San Dimas, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/db/b2/e3/photo5jpg.jpg",
+        "width": 2048,
+        "height": 1536
+      }
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": 2,
+    "total_pages": 67
+  }
+}

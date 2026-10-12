@@ -1,0 +1,450 @@
+openapi: 3.0.0
+info:
+  title: Google Images API
+  description: |
+    Google Images API allows you to search for images on Google. You can filter by size, color, type, usage rights, aspect ratio, and other criteria to find relevant images.
+
+    **Cross-linking**: The images returned by this API contain direct links to the original images and source pages. No additional API calls are needed to access the images.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Images Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to google_images
+          schema:
+            type: string
+            enum: ["google_images"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: device
+          in: query
+          required: false
+          description: Device type for search results
+          schema:
+            type: string
+            enum: ["desktop", "mobile", "tablet"]
+            default: "desktop"
+        - name: location
+          in: query
+          required: false
+          description: 'Geographic location for the search. SearchApi automatically generates the uule parameter when you use the location parameter. Note: location and uule cannot be used together.'
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: 'Google encoded location parameter. This is automatically generated when using the location parameter. Note: uule and location cannot be used together.'
+          schema:
+            type: string
+        - name: gl
+          in: query
+          required: false
+          description: Country for the search (ISO 3166-1 alpha-2 country code)
+          schema:
+            type: string
+            default: "us"
+            enum: ["af", "al", "dz", "as", "ad", "ao", "ai", "aq", "ag", "ar", "am", "aw", "au", "at", "az", "bs", "bh", "bd", "bb", "by", "be", "bz", "bj", "bm", "bt", "bo", "ba", "bw", "bv", "br", "io", "bn", "bg", "bf", "bi", "kh", "cm", "ca", "cv", "ky", "cf", "td", "cl", "cn", "cx", "cc", "co", "km", "cg", "cd", "ck", "cr", "ci", "hr", "cu", "cy", "cz", "dk", "dj", "dm", "do", "ec", "eg", "sv", "gq", "er", "ee", "et", "fk", "fo", "fj", "fi", "fr", "gf", "pf", "tf", "ga", "gm", "ge", "de", "gh", "gi", "gr", "gl", "gd", "gp", "gu", "gt", "gn", "gw", "gy", "ht", "hm", "va", "hn", "hk", "hu", "is", "in", "id", "ir", "iq", "ie", "il", "it", "jm", "jp", "jo", "kz", "ke", "ki", "kp", "kr", "kw", "kg", "la", "lv", "lb", "ls", "lr", "ly", "li", "lt", "lu", "mo", "mk", "mg", "mw", "my", "mv", "ml", "mt", "mh", "mq", "mr", "mu", "yt", "mx", "fm", "md", "mc", "mn", "ms", "ma", "mz", "mm", "na", "nr", "np", "nl", "nc", "nz", "ni", "ne", "ng", "nu", "nf", "mp", "no", "om", "pk", "pw", "ps", "pa", "pg", "py", "pe", "ph", "pn", "pl", "pt", "pr", "qa", "re", "ro", "ru", "rw", "sh", "kn", "lc", "pm", "vc", "ws", "sm", "st", "sa", "sn", "rs", "sc", "sl", "sg", "sk", "si", "sb", "so", "za", "gs", "es", "lk", "sd", "sr", "sj", "sz", "se", "ch", "sy", "tw", "tj", "tz", "th", "tl", "tg", "tk", "to", "tt", "tn", "tr", "tm", "tc", "tv", "ug", "ua", "ae", "uk", "gb", "us", "um", "uy", "uz", "vu", "ve", "vn", "vg", "vi", "wf", "eh", "ye", "zm", "zw", "gg", "je", "im", "me"]
+        - name: hl
+          in: query
+          required: false
+          description: Interface language for search results
+          schema:
+            type: string
+            default: "en"
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+        - name: lr
+          in: query
+          required: false
+          description: Restricts search results to documents written in specified languages. Use lang_{2-letter country code} format (e.g., lang_ja for Japanese). Multiple languages can be specified using | separator (e.g., lang_it|lang_de)
+          schema:
+            type: string
+            enum: ["lang_ar", "lang_hy", "lang_bg", "lang_ca", "lang_cs", "lang_da", "lang_de", "lang_el", "lang_en", "lang_es", "lang_et", "lang_tl", "lang_fi", "lang_fr", "lang_hr", "lang_hi", "lang_hu", "lang_id", "lang_is", "lang_it", "lang_iw", "lang_ja", "lang_ko", "lang_lt", "lang_lv", "lang_nl", "lang_no", "lang_fa", "lang_pl", "lang_pt", "lang_ro", "lang_ru", "lang_sk", "lang_sl", "lang_sr", "lang_sv", "lang_th", "lang_tr", "lang_uk", "lang_vi", "lang_zh-CN", "lang_zh-TW"]
+        - name: cr
+          in: query
+          required: false
+          description: Restricts search results to documents originating from a particular country
+          schema:
+            type: string
+            enum: ["af", "al", "dz", "as", "ad", "ao", "ai", "aq", "ag", "ar", "am", "aw", "au", "at", "az", "bs", "bh", "bd", "bb", "by", "be", "bz", "bj", "bm", "bt", "bo", "ba", "bw", "bv", "br", "io", "bn", "bg", "bf", "bi", "kh", "cm", "ca", "cv", "ky", "cf", "td", "cl", "cn", "cx", "cc", "co", "km", "cg", "cd", "ck", "cr", "ci", "hr", "cy", "cz", "dk", "dj", "dm", "do", "tl", "ec", "eg", "sv", "gq", "er", "ee", "et", "fk", "fo", "fj", "fi", "fr", "gf", "pf", "tf", "ga", "gm", "ge", "de", "gh", "gi", "gr", "gl", "gd", "gp", "gu", "gt", "gn", "gw", "gy", "ht", "hm", "hn", "hk", "hu", "is", "in", "id", "iq", "ie", "il", "it", "jm", "jp", "jo", "kz", "ke", "ki", "kw", "kg", "la", "lv", "lb", "ls", "lr", "ly", "li", "lt", "lu", "mo", "mk", "mg", "mw", "my", "mv", "ml", "mt", "mh", "mq", "mr", "mu", "yt", "mx", "fm", "md", "mc", "mn", "ms", "ma", "mz", "na", "nr", "np", "nl", "nc", "nz", "ni", "ne", "ng", "nu", "nf", "mp", "no", "om", "pk", "pw", "ps", "pa", "pg", "py", "pe", "ph", "pn", "pl", "pt", "pr", "qa", "re", "ro", "ru", "rw", "kn", "lc", "vc", "ws", "sm", "st", "sa", "sn", "cs", "sc", "sl", "sg", "sk", "si", "sb", "so", "za", "gs", "kr", "es", "lk", "sh", "pm", "sr", "sj", "sz", "se", "ch", "tw", "tj", "tz", "th", "tg", "tk", "to", "tt", "tn", "tr", "tm", "tc", "tv", "ug", "ua", "ae", "gb", "us", "um", "uy", "uz", "vu", "va", "ve", "vn", "vg", "vi", "wf", "eh", "ye", "zm", "zw"]
+        - name: nfpr
+          in: query
+          required: false
+          description: Exclude auto-corrected results
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+        - name: filter
+          in: query
+          required: false
+          description: Controls duplicate content and host crowding filters
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 1
+        - name: safe
+          in: query
+          required: false
+          description: SafeSearch filtering level
+          schema:
+            type: string
+            enum: ["active", "blur", "off"]
+            default: "blur"
+        - name: tbs
+          in: query
+          required: false
+          description: Advanced search parameter for custom filters. Automatically constructed from size, color, image_type, time_period, and usage_rights parameters
+          schema:
+            type: string
+        - name: size
+          in: query
+          required: false
+          description: Filter images by size
+          schema:
+            type: string
+            enum: ["large", "medium", "icon", "larger_than_400x300", "larger_than_640x480", "larger_than_800x600", "larger_than_1024x768", "larger_than_2mp", "larger_than_4mp", "larger_than_6mp", "larger_than_8mp", "larger_than_12mp", "larger_than_15mp", "larger_than_20mp", "larger_than_40mp", "larger_than_70mp"]
+        - name: color
+          in: query
+          required: false
+          description: Filter images by color
+          schema:
+            type: string
+            enum: ["black_and_white", "color", "transparent", "red", "orange", "yellow", "green", "teal", "blue", "purple", "pink", "white", "gray", "black", "brown"]
+        - name: image_type
+          in: query
+          required: false
+          description: Filter images by type
+          schema:
+            type: string
+            enum: ["clipart", "line_drawing", "gif", "face", "photo"]
+        - name: time_period
+          in: query
+          required: false
+          description: Filter images by time period
+          schema:
+            type: string
+            enum: ["last_hour", "last_day", "last_week", "last_month", "last_year"]
+        - name: usage_rights
+          in: query
+          required: false
+          description: Filter images by usage rights
+          schema:
+            type: string
+            enum: ["creative_commons_licenses", "commercial_or_other_licenses"]
+        - name: aspect_ratio
+          in: query
+          required: false
+          description: Filter images by aspect ratio
+          schema:
+            type: string
+            enum: ["square", "tall", "wide", "panoramic"]
+        - name: page
+          in: query
+          required: false
+          description: Page number for pagination
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        suggestions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Suggestion'
+          description: Related search suggestions
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+          description: Array of image search results
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+          description: Related search queries
+        error:
+          type: string
+          description: Error message if the search failed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Images URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        device:
+          type: string
+          description: Device type used
+        uule:
+          type: string
+          description: Google encoded location
+        location:
+          type: string
+          description: Location parameter
+        location_used:
+          type: string
+          description: Actual location used by Google
+        cr:
+          type: string
+          description: Country restriction
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country code for search
+        lr:
+          type: string
+          description: Language restriction
+        nfpr:
+          type: integer
+          description: Auto-correction filter
+        filter:
+          type: integer
+          description: Duplicate content filter
+        safe:
+          type: string
+          description: SafeSearch setting
+        page:
+          type: integer
+          description: Current page number
+        tbs:
+          type: string
+          description: Advanced search filters
+        chips:
+          type: string
+          description: Refinement chips
+        size:
+          type: string
+          description: Image size filter
+        color:
+          type: string
+          description: Image color filter
+        image_type:
+          type: string
+          description: Image type filter
+        time_period:
+          type: string
+          description: Time period filter
+        usage_rights:
+          type: string
+          description: Usage rights filter
+        aspect_ratio:
+          type: string
+          description: Aspect ratio filter
+        next_page_token:
+          type: string
+          description: Token for next page
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed in the search results
+        total_results:
+          type: integer
+          description: Total number of results found
+        page:
+          type: integer
+          description: Current page number
+        time_taken_displayed:
+          type: number
+          description: Time taken as displayed in search results
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Alternative query suggestion
+        has_no_results_for:
+          type: boolean
+          description: Whether there are no results for the query
+        showing_results_for:
+          type: string
+          description: Query that results are actually shown for
+    Suggestion:
+      type: object
+      required: [title, link]
+      properties:
+        title:
+          type: string
+          description: Suggestion title
+        link:
+          type: string
+          description: Search URL for the suggestion
+        thumbnail:
+          type: string
+          description: Thumbnail image URL for the suggestion
+    Image:
+      type: object
+      required: [position, title, source, original, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Image title or description
+        source:
+          $ref: '#/components/schemas/ImageSource'
+        original:
+          $ref: '#/components/schemas/OriginalImage'
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+        tag:
+          type: string
+          description: Image tag or label
+    ImageSource:
+      type: object
+      required: [name, link]
+      properties:
+        name:
+          type: string
+          description: Source website name
+        link:
+          type: string
+          description: Source page URL
+    OriginalImage:
+      type: object
+      required: [link, width, height]
+      properties:
+        link:
+          type: string
+          description: Direct link to the original image
+        width:
+          type: integer
+          description: Image width in pixels
+        height:
+          type: integer
+          description: Image height in pixels
+    RelatedSearch:
+      type: object
+      required: [link, query]
+      properties:
+        link:
+          type: string
+          description: URL for the related search
+        query:
+          type: string
+          description: Related search query text
+        highlighted:
+          type: array
+          items:
+            type: string
+          description: Highlighted terms in the query
+        thumbnail:
+          type: string
+          description: Thumbnail image URL for the related search
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

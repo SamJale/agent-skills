@@ -1,0 +1,44 @@
+{
+  "search_metadata": {
+    "id": "search_DWmO1QkoEbuyARZzl4J2r8Ga",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:22Z",
+    "request_time_taken": 0.71,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.71,
+    "request_url": "https://library.tiktok.com/ads",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_DWmO1QkoEbuyARZzl4J2r8Ga.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_DWmO1QkoEbuyARZzl4J2r8Ga"
+  },
+  "search_parameters": {
+    "engine": "tiktok_ads_library_advertiser_search",
+    "q": "Nike"
+  },
+  "advertisers": [
+    {
+      "id": "7587573238117498896",
+      "name": "NIKE COM SRL",
+      "advertiser_token": "eyJpZCI6Ijc1ODc1NzMyMzgxMTc0OTg4OTYiLCJuYW1lIjoiTklLRSBDT00gU1JMIn0="
+    },
+    {
+      "id": "7536115608476188689",
+      "name": "NIKE RETAIL SERVICES, INC",
+      "advertiser_token": "eyJpZCI6Ijc1MzYxMTU2MDg0NzYxODg2ODkiLCJuYW1lIjoiTklLRSBSRVRBSUwgU0VSVklDRVMsIElOQyJ9"
+    },
+    {
+      "id": "6876453864464188162",
+      "name": "NIKE Retail B.V.",
+      "advertiser_token": "eyJpZCI6IjY4NzY0NTM4NjQ0NjQxODgxNjIiLCJuYW1lIjoiTklLRSBSZXRhaWwgQi5WLiJ9"
+    },
+    {
+      "id": "7519143751852310529",
+      "name": "Nike Budapest",
+      "advertiser_token": "eyJpZCI6Ijc1MTkxNDM3NTE4NTIzMTA1MjkiLCJuYW1lIjoiTmlrZSBCdWRhcGVzdCJ9"
+    },
+    {
+      "id": "7556565840037199889",
+      "name": "Nike Factory ",
+      "advertiser_token": "eyJpZCI6Ijc1NTY1NjU4NDAwMzcxOTk4ODkiLCJuYW1lIjoiTmlrZSBGYWN0b3J5ICJ9"
+    }
+  ]
+}

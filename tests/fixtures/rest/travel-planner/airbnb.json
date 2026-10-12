@@ -1,0 +1,1037 @@
+{
+  "search_metadata": {
+    "id": "search_W75dANvqloTpXLW974blrDJ3",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:54Z",
+    "request_time_taken": 2.16,
+    "parsing_time_taken": 0.03,
+    "total_time_taken": 2.19,
+    "request_url": "https://www.airbnb.com/s/Los-Angeles/homes?checkin=2026-07-15&checkout=2026-07-22&adults=2&currency=USD",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_W75dANvqloTpXLW974blrDJ3.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_W75dANvqloTpXLW974blrDJ3"
+  },
+  "search_parameters": {
+    "engine": "airbnb",
+    "airbnb_domain": "airbnb.com",
+    "currency": "USD",
+    "q": "Los Angeles",
+    "check_in_date": "2026-07-15",
+    "check_out_date": "2026-07-22",
+    "adults": "2"
+  },
+  "search_information": {
+    "query_displayed": "Homes in Los Angeles",
+    "results": "Over 1,000 homes in Los Angeles",
+    "time_period": "Jul 15 – 22",
+    "check_in_date": "2026-07-15",
+    "check_out_date": "2026-07-22",
+    "guests": "2 guests",
+    "adults": 2
+  },
+  "properties": [
+    {
+      "position": 1,
+      "id": "1675550059013239515",
+      "title": "New ! Ocean Breeze Hideaway – Steps to the Beach",
+      "description": "Apartment in Santa Monica",
+      "link": "https://www.airbnb.com/rooms/1675550059013239515",
+      "booking_link": "https://www.airbnb.com/rooms/1675550059013239515?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNjc1NTUwMDU5MDEzMjM5NTE1In0=",
+      "price": {
+        "total_price": "$2,198",
+        "extracted_total_price": 2198.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $327.84",
+        "extracted_price_per_qualifier": 327.84,
+        "breakdown": [
+          {
+            "description": "7 nights x $327.84",
+            "price": "$2,294.88",
+            "extracted_price": 2294.88
+          },
+          {
+            "description": "Price after discount",
+            "price": "$2,197.68",
+            "extracted_price": 2197.68
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.0143,
+        "longitude": -118.4922
+      },
+      "badges": [
+        "Superhost"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/0e7287d3-ea70-4819-ac84-1b46011412cb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/8e85e0de-ff60-49a1-89e2-a22838dbad28.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/5948695e-9ff9-44a7-ac12-ef0434abe068.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/fb5f2345-dde5-43f0-bfa2-a51f542fa6e4.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/d13d41c6-923b-432c-9d1a-1a6ef6a455c3.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1675550059013239515/original/42dea83f-d268-4444-ab04-97f27ec672eb.png"
+      ]
+    },
+    {
+      "position": 2,
+      "id": "956528800294163802",
+      "title": "Bright Studio with Garden",
+      "description": "Loft in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/956528800294163802",
+      "booking_link": "https://www.airbnb.com/rooms/956528800294163802?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI5NTY1Mjg4MDAyOTQxNjM4MDIifQ==",
+      "rating": 5.0,
+      "reviews": 89,
+      "price": {
+        "total_price": "$937",
+        "extracted_total_price": 937.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,021",
+        "extracted_original_price": 1021.0,
+        "price_per_qualifier": "7 nights x $145.84",
+        "extracted_price_per_qualifier": 145.84,
+        "breakdown": [
+          {
+            "description": "7 nights x $145.84",
+            "price": "$1,020.91",
+            "extracted_price": 1020.91
+          },
+          {
+            "description": "Price after discount",
+            "price": "$936.91",
+            "extracted_price": 936.91
+          }
+        ]
+      },
+      "accommodations": [
+        "1 double bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.11374,
+        "longitude": -118.20389
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/e2220f58-5bef-434e-b310-c6d3925774e5.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/f5860ef8-d6b7-4bb6-81ce-c1545752cce7.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/d3fd9c24-225a-4841-8f4f-6e2f183c4bb1.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/77a1faf0-0f05-43f3-921b-e1028936d499.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/de74bac7-60a4-4577-a2b7-977d81215e1c.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-956528800294163802/original/db43f1e3-dc7d-4689-9cc8-e2f48367f1e8.jpeg"
+      ]
+    },
+    {
+      "position": 3,
+      "id": "841466367221083323",
+      "title": "Beautiful Guesthouse Cottage in the Heart of L.A",
+      "description": "Cottage in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/841466367221083323",
+      "booking_link": "https://www.airbnb.com/rooms/841466367221083323?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI4NDE0NjYzNjcyMjEwODMzMjMifQ==",
+      "rating": 4.92,
+      "reviews": 36,
+      "price": {
+        "total_price": "$1,232",
+        "extracted_total_price": 1232.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,347",
+        "extracted_original_price": 1347.0,
+        "price_per_qualifier": "7 nights x $192.34",
+        "extracted_price_per_qualifier": 192.34,
+        "breakdown": [
+          {
+            "description": "7 nights x $192.34",
+            "price": "$1,346.40",
+            "extracted_price": 1346.4
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,231.90",
+            "extracted_price": 1231.9
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 double bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.0519,
+        "longitude": -118.357
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-841466367221083323/original/76d6bd56-aa51-4632-a62f-5d01178a014e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-841466367221083323/original/2b41e6ac-07c8-4577-8b63-e7fc64a2b03e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-841466367221083323/original/e56ee818-807e-4546-8d88-55f9270c2d0b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-841466367221083323/original/538195e0-ebee-47ea-9fa6-ecbe22110896.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-841466367221083323/original/3720c63b-24bb-46c1-ba21-6911d3142117.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODQxNDY2MzY3MjIxMDgzMzIz/original/298c9d97-cc24-4249-94f4-54e3fdb6019a.jpeg"
+      ]
+    },
+    {
+      "position": 4,
+      "id": "1700022095691188312",
+      "title": "New, Modern, Stylish guesthouse",
+      "description": "Guesthouse in Downey",
+      "link": "https://www.airbnb.com/rooms/1700022095691188312",
+      "booking_link": "https://www.airbnb.com/rooms/1700022095691188312?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNzAwMDIyMDk1NjkxMTg4MzEyIn0=",
+      "price": {
+        "total_price": "$1,026",
+        "extracted_total_price": 1026.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,117",
+        "extracted_original_price": 1117.0,
+        "price_per_qualifier": "7 nights x $159.55",
+        "extracted_price_per_qualifier": 159.55,
+        "breakdown": [
+          {
+            "description": "7 nights x $159.55",
+            "price": "$1,116.85",
+            "extracted_price": 1116.85
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,025.35",
+            "extracted_price": 1025.35
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 33.9329,
+        "longitude": -118.1486
+      },
+      "badges": [
+        "Superhost"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/0693636a-d79c-4f40-9a8d-39a76a4060f9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/b7f01aaa-a207-4ace-ac62-537114d8681c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/b44cab31-7efc-493a-8528-a181a287a1e4.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/ead24185-5e29-4c61-92b4-5e7b7673e355.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/c37473d8-cc00-4f0b-a733-57887ab97b17.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1700022095691188312/original/5a0ef583-0389-4759-8511-c77ebf8ce6cd.png"
+      ]
+    },
+    {
+      "position": 5,
+      "id": "1229312718785600648",
+      "title": "Sunny Master Suite with Private Bath",
+      "description": "Place to stay in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/1229312718785600648",
+      "booking_link": "https://www.airbnb.com/rooms/1229312718785600648?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxMjI5MzEyNzE4Nzg1NjAwNjQ4In0=",
+      "rating": 5.0,
+      "reviews": 19,
+      "price": {
+        "total_price": "$693",
+        "extracted_total_price": 693.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$941",
+        "extracted_original_price": 941.0,
+        "price_per_qualifier": "7 nights x $134.39",
+        "extracted_price_per_qualifier": 134.39,
+        "breakdown": [
+          {
+            "description": "7 nights x $134.39",
+            "price": "$940.70",
+            "extracted_price": 940.7
+          },
+          {
+            "description": "Price after discount",
+            "price": "$692.75",
+            "extracted_price": 692.75
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 33.9737,
+        "longitude": -118.3104
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/1ec6c438-5a43-498a-a08e-00876de22b7a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/5fa00cb6-0c75-45a3-b853-189c3c0cd215.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/a31468c5-09dd-4a8a-bc0d-82d60b87971f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/1151703d-93b1-4570-9bd2-d96b6872ab27.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/d284ea77-b371-40b3-a0c9-83c8934fc36d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1229312718785600648/original/73fe6328-6322-4b65-9d45-2216ba08cd09.jpeg"
+      ]
+    },
+    {
+      "position": 6,
+      "id": "51281711",
+      "title": "The Beautiful Blue Bungalow -World Cup near So-Fi",
+      "description": "Bungalow in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/51281711",
+      "booking_link": "https://www.airbnb.com/rooms/51281711?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI1MTI4MTcxMSJ9",
+      "rating": 4.92,
+      "reviews": 188,
+      "price": {
+        "total_price": "$1,299",
+        "extracted_total_price": 1299.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $193.38",
+        "extracted_price_per_qualifier": 193.38,
+        "breakdown": [
+          {
+            "description": "7 nights x $193.38",
+            "price": "$1,353.67",
+            "extracted_price": 1353.67
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,298.77",
+            "extracted_price": 1298.77
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.02064,
+        "longitude": -118.34019
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-51281711/original/89720eb0-e80e-4d1c-a988-55524f25cb41.jpg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-51281711/original/9b6069da-b439-4eff-a40f-357565ccf418.jpeg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-51281711/original/7cce7ebf-c442-4bc2-b595-4c2fa9948449.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-51281711/original/641184c1-ac5f-4d0f-bd37-edeb3400614c.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-51281711/original/222ad372-0df6-4280-b99d-543e052cdaee.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-51281711/original/d4e2bb7a-40c8-4c90-8e4b-452fb88c3c05.jpg"
+      ]
+    },
+    {
+      "position": 7,
+      "id": "962609656618616621",
+      "title": "Beverly Hills 1 BR Gem + Parking, Pool, Gym Access",
+      "description": "Apartment in Beverly Hills",
+      "link": "https://www.airbnb.com/rooms/962609656618616621",
+      "booking_link": "https://www.airbnb.com/rooms/962609656618616621?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI5NjI2MDk2NTY2MTg2MTY2MjEifQ==",
+      "rating": 4.71,
+      "reviews": 103,
+      "price": {
+        "total_price": "$1,538",
+        "extracted_total_price": 1538.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,658",
+        "extracted_original_price": 1658.0,
+        "price_per_qualifier": "7 nights x $236.74",
+        "extracted_price_per_qualifier": 236.74,
+        "breakdown": [
+          {
+            "description": "7 nights x $236.74",
+            "price": "$1,657.17",
+            "extracted_price": 1657.17
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,537.17",
+            "extracted_price": 1537.17
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.07371,
+        "longitude": -118.39464
+      },
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/f215479b-93a0-44db-b4f4-5bf6bc4b956a.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/8399379e-4748-408d-8e76-2c9b4b2ed60f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/f55e1f61-4356-4a9f-a7e4-713834cb6682.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/044f45a3-04c6-432a-809a-14cd50679853.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/41caf457-7ee4-461e-a318-d8f1a01156f6.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-962609656618616621/original/48437505-181f-4dc4-9719-303094f8b5ee.jpeg"
+      ]
+    },
+    {
+      "position": 8,
+      "id": "18098133",
+      "title": "Remodeled Studio near Sofi and LAX free parking",
+      "description": "Guest suite in Hawthorne",
+      "link": "https://www.airbnb.com/rooms/18098133",
+      "booking_link": "https://www.airbnb.com/rooms/18098133?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxODA5ODEzMyJ9",
+      "rating": 4.94,
+      "reviews": 450,
+      "price": {
+        "total_price": "$1,064",
+        "extracted_total_price": 1064.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,175",
+        "extracted_original_price": 1175.0,
+        "price_per_qualifier": "7 nights x $167.86",
+        "extracted_price_per_qualifier": 167.86,
+        "breakdown": [
+          {
+            "description": "7 nights x $167.86",
+            "price": "$1,175.00",
+            "extracted_price": 1175.0
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,064.00",
+            "extracted_price": 1064.0
+          }
+        ]
+      },
+      "accommodations": [
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 33.92842,
+        "longitude": -118.34563
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-18098133/original/373308fc-9bae-4cd7-a1a9-4a4cbe03a305.jpeg",
+        "https://a0.muscache.com/im/pictures/680c62f3-0ce7-4d08-b049-0a81df1ec1b6.jpg",
+        "https://a0.muscache.com/im/pictures/369c46d0-a963-44dd-9e46-d55f74a98e15.jpg",
+        "https://a0.muscache.com/im/pictures/c6d1b435-eba3-42a4-9e2f-ee9d32000591.jpg",
+        "https://a0.muscache.com/im/pictures/41787737-5584-4242-9d90-18993f1a6a7c.jpg",
+        "https://a0.muscache.com/im/pictures/7bf2ab01-2e1e-45e3-a666-496431c11921.jpg"
+      ]
+    },
+    {
+      "position": 9,
+      "id": "592021018503110622",
+      "title": "Cozy studio in trendy Highland Park",
+      "description": "Home in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/592021018503110622",
+      "booking_link": "https://www.airbnb.com/rooms/592021018503110622?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI1OTIwMjEwMTg1MDMxMTA2MjIifQ==",
+      "rating": 4.84,
+      "reviews": 155,
+      "price": {
+        "total_price": "$941",
+        "extracted_total_price": 941.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,033",
+        "extracted_original_price": 1033.0,
+        "price_per_qualifier": "7 nights x $147.55",
+        "extracted_price_per_qualifier": 147.55,
+        "breakdown": [
+          {
+            "description": "7 nights x $147.55",
+            "price": "$1,032.82",
+            "extracted_price": 1032.82
+          },
+          {
+            "description": "Price after discount",
+            "price": "$940.24",
+            "extracted_price": 940.24
+          }
+        ]
+      },
+      "accommodations": [
+        "1 king bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.12199,
+        "longitude": -118.18875
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/6ca1755f-8bf9-4b4b-88fd-abfaefdac178.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/011c8ed5-cc70-46a2-9e57-8976300359c7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/4de83d03-0d8e-4635-a8ae-617ada879b6b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/388cae41-c40b-40d3-b42f-dff975f7e93d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/9ca786d0-d60a-431a-b37f-66329b26d6df.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTkyMDIxMDE4NTAzMTEwNjIy/original/a4091ad0-4e78-4f21-9204-ce6a533756b4.jpeg"
+      ]
+    },
+    {
+      "position": 10,
+      "id": "1183456401526906190",
+      "title": "Sunny Culver Studio Apt – Steps to Shops & Cafés!",
+      "description": "Apartment in Culver City",
+      "link": "https://www.airbnb.com/rooms/1183456401526906190",
+      "booking_link": "https://www.airbnb.com/rooms/1183456401526906190?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxMTgzNDU2NDAxNTI2OTA2MTkwIn0=",
+      "rating": 5.0,
+      "reviews": 84,
+      "price": {
+        "total_price": "$1,331",
+        "extracted_total_price": 1331.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,450",
+        "extracted_original_price": 1450.0,
+        "price_per_qualifier": "7 nights x $207.09",
+        "extracted_price_per_qualifier": 207.09,
+        "breakdown": [
+          {
+            "description": "7 nights x $207.09",
+            "price": "$1,449.61",
+            "extracted_price": 1449.61
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,330.61",
+            "extracted_price": 1330.61
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.0294,
+        "longitude": -118.3802
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE4MzQ1NjQwMTUyNjkwNjE5MA==/original/b48143b8-ecda-4b28-8a97-b9c18692570f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1183456401526906190/original/778bf23d-ef2e-4239-a7ef-31ce019bdd79.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1183456401526906190/original/672ba4a0-cbc1-4d7c-9477-343f0d808681.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1183456401526906190/original/46d24a32-f9a5-458c-8559-35ef51c05244.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1183456401526906190/original/c6d78dd7-db8e-40ab-8c9c-b56839da153b.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1183456401526906190/original/ef7c3cc4-3806-4494-b8db-01c4dc064423.jpeg"
+      ]
+    },
+    {
+      "position": 11,
+      "id": "1666361247319919617",
+      "title": "Twin Palms Bungalow | Private Venice Beach Retreat",
+      "description": "Guesthouse in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/1666361247319919617",
+      "booking_link": "https://www.airbnb.com/rooms/1666361247319919617?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNjY2MzYxMjQ3MzE5OTE5NjE3In0=",
+      "price": {
+        "total_price": "$1,891",
+        "extracted_total_price": 1891.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $276.99",
+        "extracted_price_per_qualifier": 276.99,
+        "breakdown": [
+          {
+            "description": "7 nights x $276.99",
+            "price": "$1,938.91",
+            "extracted_price": 1938.91
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,890.76",
+            "extracted_price": 1890.76
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.00149960148644,
+        "longitude": -118.4461488088573
+      },
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/14a7d446-c99e-452c-b8e4-68e8b84a6997.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/17c7a3a1-9c6d-40ee-b6e6-f22d37e3cd70.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/c4acf123-9aaf-4cb9-9cc1-7ff41243404f.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/d63d1140-6cb0-417c-a5eb-9d1b39828e4e.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/e4a99c73-e9f7-4e27-8a2e-c64374cef78a.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1666361247319919617/original/dbee5df9-0100-473c-9ca4-dd126b161fae.png"
+      ]
+    },
+    {
+      "position": 12,
+      "id": "1636519658027001148",
+      "title": "Peaceful Guesthouse in Del Aire",
+      "description": "Guesthouse in Inglewood",
+      "link": "https://www.airbnb.com/rooms/1636519658027001148",
+      "booking_link": "https://www.airbnb.com/rooms/1636519658027001148?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNjM2NTE5NjU4MDI3MDAxMTQ4In0=",
+      "rating": 5.0,
+      "reviews": 8,
+      "price": {
+        "total_price": "$1,096",
+        "extracted_total_price": 1096.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,189",
+        "extracted_original_price": 1189.0,
+        "price_per_qualifier": "7 nights x $169.78",
+        "extracted_price_per_qualifier": 169.78,
+        "breakdown": [
+          {
+            "description": "7 nights x $169.78",
+            "price": "$1,188.49",
+            "extracted_price": 1188.49
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,095.19",
+            "extracted_price": 1095.19
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "4 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 33.92718,
+        "longitude": -118.37705
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/b5633e5f-8ac1-4dbd-855c-ee534a18ec08.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/5b6d664f-5adb-461c-b057-f0a4fea8474d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/47ef2d62-8a25-41fe-91e0-4062d88e308c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/689b5cc2-a63e-492d-8a17-fea614000ca9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/ff8f4e6b-2746-4f89-81cd-59fb9dea9eb6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1636519658027001148/original/61b10488-e9bb-401b-be93-e9e5febc58b7.jpeg"
+      ]
+    },
+    {
+      "position": 13,
+      "id": "10340951",
+      "title": "Gated Guesthouse w/ parking near SoFi Intuit Forum",
+      "description": "Home in Inglewood",
+      "link": "https://www.airbnb.com/rooms/10340951",
+      "booking_link": "https://www.airbnb.com/rooms/10340951?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxMDM0MDk1MSJ9",
+      "rating": 4.98,
+      "reviews": 100,
+      "price": {
+        "total_price": "$1,339",
+        "extracted_total_price": 1339.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,611",
+        "extracted_original_price": 1611.0,
+        "price_per_qualifier": "7 nights x $230.09",
+        "extracted_price_per_qualifier": 230.09,
+        "breakdown": [
+          {
+            "description": "7 nights x $230.09",
+            "price": "$1,610.61",
+            "extracted_price": 1610.61
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,338.66",
+            "extracted_price": 1338.66
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 33.937,
+        "longitude": -118.3511
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-10340951/original/0d470ae4-db97-44de-acf2-9ac3d8380012.jpeg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-10340951/original/1167173c-9077-4aab-b35a-5e409c1ab911.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-10340951/original/75296f7e-6579-4fd0-becb-568113c07f1d.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-10340951/original/4495b89e-1696-4998-ba46-c021dd5d64c4.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-10340951/original/e9a8b6ef-5fd0-4d45-857c-1a208daeec84.jpg",
+        "https://a0.muscache.com/im/pictures/airflow/Hosting-10340951/original/8e362017-cff8-4d7e-a50c-87f2991f1249.jpg"
+      ]
+    },
+    {
+      "position": 14,
+      "id": "1300901872770380699",
+      "title": "Adorable New Guesthouse",
+      "description": "Guesthouse in Culver City",
+      "link": "https://www.airbnb.com/rooms/1300901872770380699",
+      "booking_link": "https://www.airbnb.com/rooms/1300901872770380699?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxMzAwOTAxODcyNzcwMzgwNjk5In0=",
+      "rating": 5.0,
+      "reviews": 68,
+      "price": {
+        "total_price": "$1,175",
+        "extracted_total_price": 1175.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $167.83",
+        "extracted_price_per_qualifier": 167.83,
+        "breakdown": [
+          {
+            "description": "7 nights x $167.83",
+            "price": "$1,174.84",
+            "extracted_price": 1174.84
+          }
+        ]
+      },
+      "accommodations": [
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.01600648354117,
+        "longitude": -118.4098603339526
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1300901872770380699/original/384f17d3-b10b-49bd-97c7-a5183ed41e7f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMwMDkwMTg3Mjc3MDM4MDY5OQ%3D%3D/original/6ffc82b3-a79b-40cf-bd2f-f119b1c4020c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMwMDkwMTg3Mjc3MDM4MDY5OQ%3D%3D/original/5692e4d5-f304-4e4d-82ba-3010c9a0983e.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1300901872770380699/original/683125f2-794b-4889-8ef3-343b0399341c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMwMDkwMTg3Mjc3MDM4MDY5OQ%3D%3D/original/34b36a65-3a82-4cad-9a54-d3fc2c8e7e42.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMwMDkwMTg3Mjc3MDM4MDY5OQ%3D%3D/original/5cba854c-8c59-4817-be3f-0020b4b3ad1d.jpeg"
+      ]
+    },
+    {
+      "position": 15,
+      "id": "1616132820020264070",
+      "title": "Private studio",
+      "description": "Apartment in West Hollywood",
+      "link": "https://www.airbnb.com/rooms/1616132820020264070",
+      "booking_link": "https://www.airbnb.com/rooms/1616132820020264070?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNjE2MTMyODIwMDIwMjY0MDcwIn0=",
+      "rating": 4.77,
+      "reviews": 22,
+      "price": {
+        "total_price": "$1,086",
+        "extracted_total_price": 1086.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$1,185",
+        "extracted_original_price": 1185.0,
+        "price_per_qualifier": "7 nights x $169.18",
+        "extracted_price_per_qualifier": 169.18,
+        "breakdown": [
+          {
+            "description": "7 nights x $169.18",
+            "price": "$1,184.26",
+            "extracted_price": 1184.26
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,085.26",
+            "extracted_price": 1085.26
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.08788523022792,
+        "longitude": -118.3557140924011
+      },
+      "badges": [
+        "Superhost"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/a32bff0c-5207-4c5e-b14f-26d131f7cc1a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/1e0638b7-5140-421b-b500-dc28a12fc90c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/1c58785d-1b3c-413d-8af2-a7196b6177ba.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/b94d0f7d-f863-4a00-b8b0-e139bbaedfae.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/d0e934e4-5904-45b0-8f7c-504044f351e5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1616132820020264070/original/b50229b6-5be6-4bce-815b-d87a5dc67eda.jpeg"
+      ]
+    },
+    {
+      "position": 16,
+      "id": "1195153629766619634",
+      "title": "Nice room 4 rent, private bath,shared living room",
+      "description": "Room in Culver City",
+      "link": "https://www.airbnb.com/rooms/1195153629766619634",
+      "booking_link": "https://www.airbnb.com/rooms/1195153629766619634?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxMTk1MTUzNjI5NzY2NjE5NjM0In0=",
+      "rating": 4.97,
+      "reviews": 77,
+      "price": {
+        "total_price": "$705",
+        "extracted_total_price": 705.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "original_price": "$771",
+        "extracted_original_price": 771.0,
+        "price_per_qualifier": "7 nights x $110.03",
+        "extracted_price_per_qualifier": 110.03,
+        "breakdown": [
+          {
+            "description": "7 nights x $110.03",
+            "price": "$770.21",
+            "extracted_price": 770.21
+          },
+          {
+            "description": "Price after discount",
+            "price": "$704.91",
+            "extracted_price": 704.91
+          }
+        ]
+      },
+      "accommodations": [
+        "4 single beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.0065,
+        "longitude": -118.3905
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/09050fda-51b2-43de-83d1-26985278c8c2.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/8fe3c24a-f493-4271-8be8-59f99fac9c3d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/99f2f72c-2a03-48d8-8a7e-19a13bb105e3.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/dc92f233-7706-47f3-b213-630e4bb5e390.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/2aea1cd1-182c-4734-babe-b5c15aacb912.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1195153629766619634/original/1fd6bc4d-f660-4a96-bb94-9c330c88100d.jpeg"
+      ]
+    },
+    {
+      "position": 17,
+      "id": "29222500",
+      "title": "New Guesthouse, Courtyard nr UCLA Century City BH",
+      "description": "Guesthouse in Los Angeles",
+      "link": "https://www.airbnb.com/rooms/29222500",
+      "booking_link": "https://www.airbnb.com/rooms/29222500?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIyOTIyMjUwMCJ9",
+      "rating": 4.99,
+      "reviews": 106,
+      "price": {
+        "total_price": "$1,606",
+        "extracted_total_price": 1606.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $239.01",
+        "extracted_price_per_qualifier": 239.01,
+        "breakdown": [
+          {
+            "description": "7 nights x $239.01",
+            "price": "$1,673.10",
+            "extracted_price": 1673.1
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,605.34",
+            "extracted_price": 1605.34
+          }
+        ]
+      },
+      "accommodations": [
+        "1 queen bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.06868,
+        "longitude": -118.43162
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/2f02e5f1-c18a-4918-a57a-ca859180a579.jpg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-29222500/original/9c1d8308-6abc-49e0-be89-1a395feebffa.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-29222500/original/fca07db9-eaf8-4cad-b6d7-3be8161cef0b.jpeg",
+        "https://a0.muscache.com/im/pictures/fd268bcb-0103-4108-8e12-c088e3884d16.jpg",
+        "https://a0.muscache.com/im/pictures/ec9a6eed-bf2f-4170-803c-43e7de42044a.jpg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-29222500/original/123830ec-4496-46ce-977a-fb845e6211ce.jpeg"
+      ]
+    },
+    {
+      "position": 18,
+      "id": "1422812192167509120",
+      "title": "Hollywood Studio - Free Parking | Private Balcony",
+      "description": "Apartment in West Hollywood",
+      "link": "https://www.airbnb.com/rooms/1422812192167509120",
+      "booking_link": "https://www.airbnb.com/rooms/1422812192167509120?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNDIyODEyMTkyMTY3NTA5MTIwIn0=",
+      "rating": 4.9,
+      "reviews": 30,
+      "price": {
+        "total_price": "$1,745",
+        "extracted_total_price": 1745.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $259.83",
+        "extracted_price_per_qualifier": 259.83,
+        "breakdown": [
+          {
+            "description": "7 nights x $259.83",
+            "price": "$1,818.84",
+            "extracted_price": 1818.84
+          },
+          {
+            "description": "Price after discount",
+            "price": "$1,744.69",
+            "extracted_price": 1744.69
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "1 bed"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.09341606991377,
+        "longitude": -118.3451530634775
+      },
+      "badges": [
+        "Superhost"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1422812192167509120/original/a7d059b0-1e9f-4cb7-a234-962a762d30e0.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1422812192167509120/original/14eabde6-0f74-4358-8790-53dfa5cfd5b3.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1422812192167509120/original/bc5f85ff-8c56-4059-9003-83b41a499253.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1422812192167509120/original/3ae3e4e4-1dae-495b-bdd0-037e8418514f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1422812192167509120/original/cbf88dab-cb31-4ec1-9da0-7480f3407b4a.png",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1422812192167509120/original/da37086b-c3fd-4990-b06b-1887d08fba2a.jpeg"
+      ]
+    },
+    {
+      "position": 19,
+      "id": "1567023162760660220",
+      "title": "Lux King Bed w Pool/Gym/Hottub/Rooftoop/Parking",
+      "description": "Apartment in Glendale",
+      "link": "https://www.airbnb.com/rooms/1567023162760660220",
+      "booking_link": "https://www.airbnb.com/rooms/1567023162760660220?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiIxNTY3MDIzMTYyNzYwNjYwMjIwIn0=",
+      "rating": 4.88,
+      "reviews": 8,
+      "price": {
+        "total_price": "$2,032",
+        "extracted_total_price": 2032.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $302.01",
+        "extracted_price_per_qualifier": 302.01,
+        "breakdown": [
+          {
+            "description": "7 nights x $302.01",
+            "price": "$2,114.08",
+            "extracted_price": 2114.08
+          },
+          {
+            "description": "Price after discount",
+            "price": "$2,031.16",
+            "extracted_price": 2031.16
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.15162,
+        "longitude": -118.25764
+      },
+      "badges": [
+        "Superhost"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/99935892-48b6-40dc-967b-3db046502813.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/02599532-bb33-4264-b6d4-30b8f0ecd108.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/526f6dce-d93b-49e4-ab1f-2bf02d335221.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/c25c4546-d0c1-402a-9cc8-8fc521bf0d14.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/70515019-7790-478e-83e8-2796c8297081.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1567023162760660220/original/6cad832f-8531-4681-8d67-37b5bbecdc75.png"
+      ]
+    },
+    {
+      "position": 20,
+      "id": "822620155766229408",
+      "title": "WeHome For Now",
+      "description": "Guest suite in West Hollywood",
+      "link": "https://www.airbnb.com/rooms/822620155766229408",
+      "booking_link": "https://www.airbnb.com/rooms/822620155766229408?check_in=2026-07-15&check_out=2026-07-22&adults=2&children=0&infants=0&pets=0&federated_search_id=665d6216-5c3f-4baa-b25a-702fe5586e55",
+      "booking_token": "eyJjaGVja19pbiI6IjIwMjYtMDctMTUiLCJjaGVja19vdXQiOiIyMDI2LTA3LTIyIiwiYWR1bHRzIjoiMiIsImNoaWxkcmVuIjowLCJpbmZhbnRzIjowLCJwZXRzIjowLCJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwicHJvcGVydHlfaWQiOiI4MjI2MjAxNTU3NjYyMjk0MDgifQ==",
+      "rating": 4.96,
+      "reviews": 156,
+      "price": {
+        "total_price": "$2,105",
+        "extracted_total_price": 2105.0,
+        "qualifier": "for 7 nights",
+        "extracted_qualifier": 7,
+        "price_per_qualifier": "7 nights x $305.63",
+        "extracted_price_per_qualifier": 305.63,
+        "breakdown": [
+          {
+            "description": "7 nights x $305.63",
+            "price": "$2,139.39",
+            "extracted_price": 2139.39
+          },
+          {
+            "description": "Price after discount",
+            "price": "$2,104.81",
+            "extracted_price": 2104.81
+          }
+        ]
+      },
+      "accommodations": [
+        "1 bedroom",
+        "2 beds"
+      ],
+      "gps_coordinates": {
+        "latitude": 34.08777,
+        "longitude": -118.36959
+      },
+      "badges": [
+        "Guest favorite"
+      ],
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/0a67e130-56a9-47d3-84ae-70eecefd7412.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/f89f7553-1c3c-4763-b44d-5d26bc391a29.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/061b8d82-b618-4246-9a7c-d51bf7755810.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/dfa96907-02f7-4da2-b4a6-71ffe7afe1be.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/62f0ba5b-5fad-4871-b024-a9d48cd63eed.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-822620155766229408/original/02d9dd44-62e4-4c01-acff-af4475a6fb6a.jpeg"
+      ]
+    }
+  ],
+  "pagination": {
+    "next_page_token": "eyJmZWRlcmF0ZWRfc2VhcmNoX2lkIjoiNjY1ZDYyMTYtNWMzZi00YmFhLWIyNWEtNzAyZmU1NTg2ZTU1IiwiZmVkZXJhdGVkX3NlYXJjaF9zZXNzaW9uX2lkIjoiYzgzMDJlNDMtNDM0OC00MGUzLWFlY2YtNTcwNmFiNmZhNTM3IiwiY3Vyc29yIjoiZXlKelpXTjBhVzl1WDI5bVpuTmxkQ0k2TUN3aWFYUmxiWE5mYjJabWMyVjBJam94T0N3aWRtVnljMmx2YmlJNk1YMD0ifQ=="
+  }
+}

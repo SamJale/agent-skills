@@ -1,0 +1,307 @@
+openapi: 3.0.0
+info:
+  title: Google Related Questions API
+  description: |
+    Expand People Also Ask questions from Google Search to get detailed answers and discover more related questions.
+
+    **How it works**: Use the `next_page_token` from Google Search API's `related_questions` array to fetch expanded answers.
+
+    **Pagination**: Each related question in the response includes its own `next_page_token` (when available) that can be used to fetch further expanded questions via recursive calls to this API.
+
+    **Cross-linking**: This API uses tokens from the [Google Search API](/docs/google). The `next_page_token` contains embedded localization settings from the original search.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Related Questions Search
+      description: Fetch expanded answers for People Also Ask questions using next_page_token
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Must be set to google_related_questions
+          schema:
+            type: string
+            enum: ["google_related_questions"]
+        - name: next_page_token
+          in: query
+          required: true
+          description: Token from Google Search API's related_questions array. Contains embedded gl and hl settings.
+          schema:
+            type: string
+        - name: link
+          in: query
+          required: false
+          description: 'How reference links are returned. "raw" (default) returns Google''s redirect URL (google.com/goto?url=...); "resolved" returns the direct destination URL (best-effort, adds latency).'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        related_questions:
+          type: array
+          description: Array of related questions with answers
+          items:
+            $ref: '#/components/schemas/RelatedQuestion'
+        error:
+          type: string
+          description: Error message if no results found
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Public Google search URL for the expanded question
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        next_page_token:
+          type: string
+          description: Token used for this request
+
+    RelatedQuestion:
+      type: object
+      description: Related question with answer. Can be traditional answer with source or AI Overview.
+      properties:
+        question:
+          type: string
+          description: The question text
+        answer:
+          type: string
+          description: Full answer text (traditional answers)
+        answer_highlight:
+          type: string
+          description: Highlighted portion of the answer
+        answer_list:
+          type: array
+          description: Answer as list items
+          items:
+            oneOf:
+              - type: object
+                properties:
+                  text:
+                    type: string
+                    description: List item text
+              - type: object
+                properties:
+                  text:
+                    type: string
+                    description: Item text
+                  link:
+                    type: string
+                    description: Item link
+                  image:
+                    type: string
+                    description: Item image URL
+        answer_table:
+          type: object
+          description: Answer as table structure
+          additionalProperties: true
+        date:
+          type: string
+          description: Publication date
+        duration:
+          type: string
+          description: Duration information
+        entity:
+          type: object
+          description: Entity information
+          properties:
+            subject:
+              type: string
+              description: Entity subject
+            attribute:
+              type: string
+              description: Entity attribute
+            value:
+              type: string
+              description: Entity value
+        source:
+          type: object
+          description: Source information (traditional answers)
+          properties:
+            title:
+              type: string
+              description: Source page title
+            link:
+              type: string
+              description: Source URL
+            displayed_link:
+              type: string
+              description: Formatted URL display
+            domain:
+              type: string
+              description: Source domain
+            source:
+              type: string
+              description: Source publisher name
+            snippet:
+              type: string
+              description: Source snippet
+            favicon:
+              type: string
+              description: Source favicon URL
+        search:
+          type: object
+          description: Related search information
+          properties:
+            title:
+              type: string
+              description: Search title
+            link:
+              type: string
+              description: Search URL
+        is_ai_overview:
+          type: boolean
+          description: True when the answer is AI-generated
+        text_blocks:
+          type: array
+          description: AI Overview content blocks
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: Block type (paragraph, list, etc.)
+              answer:
+                type: string
+                description: Block content text
+        markdown:
+          type: string
+          description: AI Overview response formatted as markdown
+        reference_links:
+          type: array
+          description: Reference links used by AI Overview
+          items:
+            type: object
+            properties:
+              index:
+                type: integer
+                description: Position of the reference link
+              title:
+                type: string
+                description: Title of the source
+              link:
+                type: string
+                description: URL of the source
+              snippet:
+                type: string
+                description: Text excerpt from the source
+              date:
+                type: string
+                description: Publication date
+              source:
+                type: string
+                description: Source domain or publication name
+              thumbnail:
+                type: string
+                description: Image URL from the source
+        next_page_token:
+          type: string
+          description: Token to fetch more related questions via Google Related Questions API
+        error:
+          type: string
+          description: Reason the answer is missing from this response. Set when Google ships the AI Overview answer in a later async payload instead of inline.
+        page_token:
+          type: string
+          description: Token to fetch this question's AI Overview answer via the Google AI Overview API.
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

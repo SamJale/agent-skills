@@ -1,0 +1,154 @@
+{
+  "search_metadata": {
+    "id": "search_Lpb2Z8vDqds9dM1LZkVgQzRy",
+    "status": "Success",
+    "created_at": "2026-06-16T12:55:55Z",
+    "request_time_taken": 0.83,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.83,
+    "request_url": null,
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_Lpb2Z8vDqds9dM1LZkVgQzRy.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_Lpb2Z8vDqds9dM1LZkVgQzRy"
+  },
+  "search_parameters": {
+    "engine": "google_ads_transparency_center_advertiser_search",
+    "q": "Nike",
+    "region": "US",
+    "num_advertisers": 10,
+    "num_domains": 10
+  },
+  "advertisers": [
+    {
+      "name": "Nike, Inc.",
+      "id": "AR16735076323512287233",
+      "region": "US",
+      "ads_count": {
+        "lower": 10000,
+        "upper": 20000
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Irina Nikel",
+      "id": "AR09275785137675567105",
+      "region": "CA",
+      "ads_count": {
+        "lower": 19,
+        "upper": 19
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nike Lee",
+      "id": "AR18100938063227125761",
+      "region": "US",
+      "ads_count": {
+        "lower": 13,
+        "upper": 13
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nike Klara",
+      "id": "AR17567291692413878273",
+      "region": "US",
+      "ads_count": {
+        "lower": 12,
+        "upper": 12
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nike, Inc.",
+      "id": "AR04119126533128323073",
+      "region": "US",
+      "ads_count": {
+        "lower": 7,
+        "upper": 7
+      },
+      "is_verified": true
+    },
+    {
+      "name": "NIKE SRL",
+      "id": "AR17365672681860497409",
+      "region": "IT",
+      "ads_count": {
+        "lower": 6,
+        "upper": 6
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nikel Kola",
+      "id": "AR04767743191271079937",
+      "region": "US",
+      "ads_count": {
+        "lower": 3,
+        "upper": 3
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nike Kola",
+      "id": "AR05316777725531258881",
+      "region": "US",
+      "ads_count": {
+        "lower": 1,
+        "upper": 1
+      },
+      "is_verified": true
+    },
+    {
+      "name": "Nikeson AB",
+      "id": "AR00386048032979812353",
+      "region": "SE",
+      "ads_count": {
+        "lower": 1,
+        "upper": 1
+      },
+      "is_verified": true
+    },
+    {
+      "name": "NIKE, Inc.",
+      "id": "AR06535278389996027905",
+      "region": "US",
+      "ads_count": {
+        "lower": 1,
+        "upper": 1
+      },
+      "is_verified": true
+    }
+  ],
+  "domains": [
+    {
+      "name": "nike.cl"
+    },
+    {
+      "name": "nike.ae"
+    },
+    {
+      "name": "nike.in"
+    },
+    {
+      "name": "nike.qa"
+    },
+    {
+      "name": "nike.com"
+    },
+    {
+      "name": "uniker.com"
+    },
+    {
+      "name": "kannike.eu"
+    },
+    {
+      "name": "nike.com.br"
+    },
+    {
+      "name": "nikenix.com"
+    },
+    {
+      "name": "nike.com.ar"
+    }
+  ]
+}

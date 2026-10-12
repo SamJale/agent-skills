@@ -1,0 +1,506 @@
+openapi: 3.0.0
+info:
+  title: Google Videos API
+  description: |
+    The Google Videos API provides comprehensive video search results from Google, including regular videos, video carousels, and YouTube Shorts.
+    
+    **Cross-linking**: This API complements other video-related APIs by providing Google's aggregated video search results from various sources. For detailed YouTube-specific searches, use the YouTube Search API.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Videos Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to 'google_videos' for Google Videos search
+          schema:
+            type: string
+            enum: ["google_videos"]
+            default: "google_videos"
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: device
+          in: query
+          required: false
+          description: Device type for search results
+          schema:
+            type: string
+            enum: ["desktop", "mobile", "tablet"]
+            default: "desktop"
+        - name: location
+          in: query
+          required: false
+          description: Location for the search
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google encoded location
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language
+          schema:
+            type: string
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country for search results
+          schema:
+            type: string
+            default: "us"
+        - name: lr
+          in: query
+          required: false
+          description: Language restriction
+          schema:
+            type: string
+        - name: cr
+          in: query
+          required: false
+          description: Country restriction (ISO 3166-1 Alpha-2)
+          schema:
+            type: string
+        - name: nfpr
+          in: query
+          required: false
+          description: Auto-correction behavior
+          schema:
+            type: string
+            enum: ["0", "1"]
+            default: "0"
+        - name: filter
+          in: query
+          required: false
+          description: Duplicate content filter
+          schema:
+            type: string
+            enum: ["0", "1"]
+            default: "1"
+        - name: safe
+          in: query
+          required: false
+          description: SafeSearch filtering level
+          schema:
+            type: string
+            enum: ["active", "blur", "off"]
+            default: "blur"
+        - name: page
+          in: query
+          required: false
+          description: Page number (starts from 1)
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: tbs
+          in: query
+          required: false
+          description: Advanced search parameters
+          schema:
+            type: string
+        - name: duration
+          in: query
+          required: false
+          description: Video duration filter
+          schema:
+            type: string
+            enum: ["short", "medium", "long"]
+        - name: time_period
+          in: query
+          required: false
+          description: Time period filter
+          schema:
+            type: string
+            enum: ["last_hour", "last_day", "last_week", "last_month", "last_year"]
+        - name: time_period_min
+          in: query
+          required: false
+          description: Custom time period start date (MM/DD/YYYY)
+          schema:
+            type: string
+            pattern: '^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$'
+        - name: time_period_max
+          in: query
+          required: false
+          description: Custom time period end date (MM/DD/YYYY)
+          schema:
+            type: string
+            pattern: '^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$'
+        - name: quality
+          in: query
+          required: false
+          description: Video quality filter
+          schema:
+            type: string
+            enum: ["high"]
+        - name: captioned
+          in: query
+          required: false
+          description: Closed caption filter
+          schema:
+            type: string
+            enum: ["closed"]
+        - name: source
+          in: query
+          required: false
+          description: Video source filter
+          schema:
+            type: string
+            enum: ["youtube", "cncc", "cnn", "ted", "cbsnews", "twitter", "tiktok", "facebook", "timesnownews", "nbcnews", "foxnews"]
+        - name: link
+          in: query
+          required: false
+          description: 'How result links are returned. "raw" (default) returns Google''s redirect URL (google.com/goto?url=...); "resolved" returns the direct destination URL (adds latency).'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        videos:
+          type: array
+          description: Array of video search results
+          items:
+            $ref: '#/components/schemas/Video'
+        videos_carousel:
+          type: array
+          description: Video carousel results (mobile)
+          items:
+            $ref: '#/components/schemas/VideoCarousel'
+        shorts:
+          type: array
+          description: YouTube Shorts results
+          items:
+            $ref: '#/components/schemas/Short'
+        related_searches:
+          type: array
+          description: Related search suggestions
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Videos URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        device:
+          type: string
+          description: Device type used
+        uule:
+          type: string
+          description: Encoded location used
+        location:
+          type: string
+          description: Location parameter
+        location_used:
+          type: string
+          description: Canonical location name used
+        cr:
+          type: string
+          description: Country restriction
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country for results
+        lr:
+          type: string
+          description: Language restriction
+        nfpr:
+          type: string
+          description: Auto-correction setting
+        filter:
+          type: string
+          description: Duplicate content filter setting
+        safe:
+          type: string
+          description: SafeSearch setting
+        page:
+          type: integer
+          description: Current page number
+        tbs:
+          type: string
+          description: Advanced search parameters
+        duration:
+          type: string
+          description: Duration filter applied
+        time_period:
+          type: string
+          description: Time period filter applied
+        time_period_min:
+          type: string
+          description: Custom time period start date
+        time_period_max:
+          type: string
+          description: Custom time period end date
+        quality:
+          type: string
+          description: Quality filter applied
+        captioned:
+          type: string
+          description: Caption filter applied
+        source:
+          type: string
+          description: Source filter applied
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed by Google
+        total_results:
+          type: integer
+          description: Total number of results found
+        page:
+          type: integer
+          description: Current page number in results
+        time_taken_displayed:
+          type: number
+          description: Time taken for search as displayed
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Suggested query correction
+        has_no_results_for:
+          type: boolean
+          description: Whether no results were found
+        showing_results_for:
+          type: string
+          description: Alternative query Google is showing results for
+    Video:
+      type: object
+      required: [position, title, link]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Link to the video
+        displayed_link:
+          type: string
+          description: Display URL shown in results
+        snippet:
+          type: string
+          description: Video description snippet
+        highlighted:
+          type: array
+          description: Highlighted text snippets
+          items:
+            type: string
+        length:
+          type: string
+          description: Video duration
+        source:
+          type: string
+          description: Video source platform
+        date:
+          type: string
+          description: Upload or publish date
+        channel:
+          type: string
+          description: Channel or creator name
+        key_moments:
+          type: array
+          description: Key moments in the video
+          items:
+            $ref: '#/components/schemas/KeyMoment'
+        thumbnail:
+          type: string
+          description: Video thumbnail URL
+    VideoCarousel:
+      type: object
+      required: [position, title, snippet, link, displayed_link, length, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in carousel
+        title:
+          type: string
+          description: Video title
+        snippet:
+          type: string
+          description: Video description
+        link:
+          type: string
+          description: Link to the video
+        displayed_link:
+          type: string
+          description: Display URL
+        length:
+          type: string
+          description: Video duration
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    Short:
+      type: object
+      required: [position, title, link, source, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Short title
+        link:
+          type: string
+          description: Link to the short
+        source:
+          type: string
+          description: Platform source
+        author:
+          type: string
+          description: Creator name
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    KeyMoment:
+      type: object
+      properties:
+        time:
+          type: string
+          description: Time display (e.g., "2:30")
+        seconds:
+          type: integer
+          description: Time in seconds
+        title:
+          type: string
+          description: Moment title
+        link:
+          type: string
+          description: Direct link to moment
+        thumbnail:
+          type: string
+          description: Moment thumbnail
+    RelatedSearch:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Link to perform the search
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

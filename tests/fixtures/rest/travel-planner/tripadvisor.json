@@ -1,0 +1,681 @@
+{
+  "search_metadata": {
+    "id": "search_yawpDZvY5RcaonamAvWPdXoM",
+    "status": "Success",
+    "created_at": "2026-06-16T12:58:11Z",
+    "request_time_taken": 0.94,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.94,
+    "request_url": "https://www.tripadvisor.com/Search?q=Los+Angeles&ssrc=a&geo=1&offset=0&limit=30",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5RcaonamAvWPdXoM.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5RcaonamAvWPdXoM"
+  },
+  "search_parameters": {
+    "engine": "tripadvisor",
+    "tripadvisor_domain": "tripadvisor.com",
+    "q": "Los Angeles",
+    "category": "places",
+    "page": 1
+  },
+  "search_information": {
+    "total_results": 2000
+  },
+  "place_results": [
+    {
+      "position": 1,
+      "place_id": 32655,
+      "title": "Los Angeles",
+      "type": "Destination",
+      "link": "https://www.tripadvisor.com/Tourism-g32655-Los_Angeles_California-Vacations.html",
+      "description": "Hollywood beckons to tourists who long for a brush with Tinseltown glamor. Tour movie studios, slip your hands into the famous prints at the TCL Chinese Theatre, or indulge in a celeb sighting at one of LA’s white-hot nightspots. Spot your favorite star while shopping at The Grove, or forget all about the famous eye candy as you take in the iconic artwork at The Getty Center. For a different type of star-gazing, peek through the telescopes at the Griffith Observatory.  ",
+      "location": "California, United States",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bf/5e/5e/caption.jpg",
+        "width": 5760,
+        "height": 3840
+      }
+    },
+    {
+      "position": 2,
+      "place_id": 8678267,
+      "title": "InterContinental Los Angeles Downtown",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d8678267-Reviews-InterContinental_Los_Angeles_Downtown-Los_Angeles_California.html",
+      "description": "Revel in glamour and exhilaration that defines what it means to live the InterContinental life at the InterContinental Los Angeles Downtown. Excite in breathtaking views from the 70th-floor sky lobby and indulge in globally-inspired cuisine at our cutting-edge restaurants. Host your next event at our beautifully customizable meeting spaces with sweeping views of Los Angeles.",
+      "rating": 4.2,
+      "reviews": 1437,
+      "mentions": 178,
+      "review_snippet": "My wife Cecilia and I travel to Los Angeles at least once a year and there",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/3d/bd/f9/welcome-to-one-of-the.jpg",
+        "width": 12211,
+        "height": 5782
+      }
+    },
+    {
+      "position": 3,
+      "place_id": 77866,
+      "title": "The Biltmore Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77866-Reviews-The_Biltmore_Los_Angeles-Los_Angeles_California.html",
+      "description": "The historic Biltmore Los Angeles has been a legendary Los Angeles landmark since 1923. With exquisite Spanish-Italian Renaissance architecture, including stunning hand-painted ceilings, it's rich history is most noted for its connection with the Oscars - the founding banquet for the Academy of Motion Picture Arts and Sciences was held in the Crystal Ballroom in 1927, where the original \"Oscar\" statuette was sketched on a Biltmore napkin, and eight Academy Awards banquets were held in the Biltmore Bowl during the '30s and '40s.",
+      "rating": 3.9,
+      "reviews": 1890,
+      "mentions": 169,
+      "review_snippet": "This hotel is a statement of Los Angeles… glamour in its fullest.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2f/1b/07/hotel-exterior.jpg",
+        "width": 1800,
+        "height": 1605
+      }
+    },
+    {
+      "position": 4,
+      "place_id": 77804,
+      "title": "Omni Los Angeles Hotel At California Plaza",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77804-Reviews-Omni_Los_Angeles_Hotel_At_California_Plaza-Los_Angeles_California.html",
+      "description": "Situated across the street from the Museum of Contemporary Art in Los Angeles, Omni Los Angeles Hotel at California Plaza is a posh downtown LA oasis sitting atop Bunker Hill. This sophisticated hotel features a chic cafe, coffee shop, and elegant international restaurant with patio. There's also an outdoor lap pool, spa services, and sleek fitness center. Refined rooms and suites include flat-screen TVs and 24/7 room service. Club quarters add lounge access with free breakfast and cocktails. Our hotel in downtown Los Angeles rises 17 stories and reflects the sophistication of downtown Los Angeles, California. Iconic L.A. staples like Grand Central Market, The Broad Museum and Angels Flight Railway are just a few steps from our hotel. For sports fans, the hotel is near Dodger Stadium and STAPLES Center.",
+      "rating": 4.5,
+      "reviews": 4661,
+      "mentions": 636,
+      "review_snippet": "I highly recommend the Omni in Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/f1/54/8d/omni-los-angeles-hotel.jpg",
+        "width": 5795,
+        "height": 3847
+      }
+    },
+    {
+      "position": 5,
+      "place_id": 78694,
+      "title": "Hilton Los Angeles/Universal City",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d78694-Reviews-Hilton_Los_Angeles_Universal_City-Los_Angeles_California.html",
+      "description": "Experience this AAA 4 Diamond hotel, situated just a block away from the entrance to Universal Studios and minutes from Hollywood. The Hilton Los Angeles/Universal City hotel is perfect for travelers looking to explore some of Los Angeles' greatest attractions. All guest rooms and suites feature attractive decor and have high-speed internet access. Keep up-to-date with work at any time in the 24-hour business center. Have a Hollywood wedding in the 16,000 sq. ft. Sierra Ballroom, or hold conferences and meetings in the hotel's 32,000 sq. ft. of function space. Enjoy local cuisine in the Café Sierra hotel restaurant, which offers California, Continental and Chinese cuisine in a modern, brightly lit setting.",
+      "rating": 4.2,
+      "reviews": 6654,
+      "mentions": 309,
+      "review_snippet": "I came to Los Angeles with my husband, 2 children and my grandchildren",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/df/5e/18/front-entrance.jpg",
+        "width": 1070,
+        "height": 662
+      }
+    },
+    {
+      "position": 6,
+      "place_id": 153349,
+      "title": "Los Angeles Locos",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g644396-d153349-Reviews-Los_Angeles_Locos-Tenacatita_Costalegre.html",
+      "description": "A 4-star all inclusive resort located in the idyllic beaches of Tenacatita Bay, in Mexico's famed Costalegre, only 45 minutes from Manzanillo's Airport. Fulfill your dreams and connect with nature..take a jungle riverboat ride through the magical world of pristine mangroves or go horseback riding along our extensive beach. A haven of fun and relaxation for nature lovers and lovers of all kinds!",
+      "rating": 3.3,
+      "reviews": 542,
+      "mentions": 38,
+      "review_snippet": "We stayed in Los Angeles Locos in January 2017.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Tenacatita, Jalisco, Mexico",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/ce/be/0a/blue-bay-los-angeles.jpg",
+        "width": 2000,
+        "height": 906
+      }
+    },
+    {
+      "position": 7,
+      "place_id": 78046,
+      "title": "Sheraton Gateway Los Angeles Hotel",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d78046-Reviews-Sheraton_Gateway_Los_Angeles_Hotel-Los_Angeles_California.html",
+      "description": "Located just minutes away from the SoFi Stadium and LAX Airport, the Sheraton Gateway Los Angeles Hotel offers the perfect blend of comfort and convenience. Our 24-hour shuttle service ensures stress-free travel to and from the airport terminals. Stay active with our modern fitness center or unwind by the resort-style outdoor pool, complete with private cabanas. Indulge in California cuisine and expertly crafted cocktails at one of our several restaurants and bars. From intimate poolside weddings to large-scale conferences for up to 1,500 guests, our renovated meeting venues and all-inclusive conference center are equipped to handle any event. After a long day, retreat to one of our stylish rooms or suites featuring marble bathrooms, high-speed Wi-Fi, large TVs, and our signature Sheraton Sleep Experience. Let us be your home away from home during your Los Angeles adventures.",
+      "rating": 4,
+      "reviews": 2267,
+      "mentions": 102,
+      "review_snippet": "⸻ I recently stayed at the Sheraton Gateway Los Angeles Hotel and wanted",
+      "review_snippet_highlighted_words": [
+        "os ",
+        "ngeles "
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/44/ea/ab/pool.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 8,
+      "place_id": 77798,
+      "title": "Sheraton Grand Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77798-Reviews-Sheraton_Grand_Los_Angeles-Los_Angeles_California.html",
+      "description": "Thrive at our DTLA family hotel brimming with style and substance. Sheraton Grand Los Angeles is situated in the heart of the Los Angeles Financial District with effortless access to Crypto.com Arena, Dodger Stadium, Koreatown, the Fashion District, and Little Tokyo. When hunger strikes, head to District Kitchen & Bar, our innovative on-site restaurant serving creative libations and farm-to-table cuisine. Work and play like a Los Angeleno at our fully equipped Sheraton Fitness Center. If you are planning a professional meeting, special event, or lavish wedding, ask about our indoor and outdoor event venues offering more than 35,000 square feet of space. After a busy day in DTLA, unwind in a beautiful dog-friendly Los Angeles hotel room or suite with views of downtown, cutting-edge technology, and a Sheraton Signature Sleep Experience bed. At our Los Angeles family-friendly hotel, we'll make your stay extraordinary.",
+      "rating": 4.5,
+      "reviews": 1671,
+      "mentions": 196,
+      "review_snippet": "I stayed at the Sheraton Grand Los Angeles for a weekend trip and had a",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/68/33/63/exterior.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 9,
+      "place_id": 84167,
+      "title": "Hilton Los Angeles Airport",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d84167-Reviews-Hilton_Los_Angeles_Airport-Los_Angeles_California.html",
+      "description": "Daily Mandatory Charge includes: California Tourism Assessment and LA Tourism Assessment Step into the welcoming embrace of Hilton Los Angeles Airport, where every detail is designed for ultimate comfort and convenience, just moments from LAX. Our 24/7 complimentary shuttle service ensures your travel to and from the airport is effortless, setting the stage for a stay defined by luxury and ease in the dynamic landscape of Los Angeles. Our hotel is full of amenities designed for both leisure and business travelers. Immerse yourself in relaxation at our outdoor pool and whirlpool, maintain your fitness routine in the 24-hour fitness center, and indulge in the varied dining experiences offered by The Cafe, Andiamo, Landings Bar and Grill, and The Bistro, which is open 24 hours. With 1,234 sophisticated guest rooms and complimentary WiFi in public spaces, your stay can be as connected or tranquil as you desire.",
+      "rating": 3.8,
+      "reviews": 7705,
+      "mentions": 321,
+      "review_snippet": "My family and I recently stayed at the Hilton Los Angeles Airport for five",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/9a/02/c3/lobby.jpg",
+        "width": 2250,
+        "height": 1500
+      }
+    },
+    {
+      "position": 10,
+      "place_id": 1563899,
+      "title": "The Ritz-Carlton, Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d1563899-Reviews-The_Ritz_Carlton_Los_Angeles-Los_Angeles_California.html",
+      "description": "Set within vibrant downtown surroundings The Ritz-Carlton, Los Angeles effortlessly embodies the timeless appeal of a legendary city. Located at L.A. LIVE, home to world-class sports and extraordinary live entertainment our downtown LA luxury hotel features a captivating atmosphere shaped by dynamic surroundings. Discover a singular sense of place through luxurious accommodations, dramatic downtown L.A. skyline views, relaxing spa services, and imaginative cuisine all enhanced by unparalleled local access. This is where the free spirit of southern California combines with the discerning sophistication of Los Angeles.",
+      "rating": 4.4,
+      "reviews": 842,
+      "mentions": 127,
+      "review_snippet": "So we drove all the way to RC Los Angeles and the lovely lady at the Front",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/d5/50/7c/hotel-exterior.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 11,
+      "place_id": 1639371,
+      "title": "Another Side Of Los Angeles Tours",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d1639371-Reviews-Another_Side_Of_Los_Angeles_Tours-Los_Angeles_California.html",
+      "description": "Our tours have been created with love, compassion, and forethought from beginning to the end. We treat our guests like family and we exist for any visitor that wants the best of the best tours in LA. We love Los Angeles and we are passionate about providing the finest tour services here. Our tours are perfect for families and corporate groups alike. Feel free to book via our secure website or by calling us at anytime.",
+      "rating": 4.9,
+      "reviews": 1096,
+      "mentions": 185,
+      "review_snippet": "I would definitely recommend them if you want to take a tour in Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/0e/b3/d0/take-me-to-hollywood.jpg",
+        "width": 1200,
+        "height": 789
+      }
+    },
+    {
+      "position": 12,
+      "place_id": 119421,
+      "title": "Los Angeles Athletic Club",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d119421-Reviews-Los_Angeles_Athletic_Club-Los_Angeles_California.html",
+      "description": "Offering more than a hotel stay, LAAC guests have access to a legendary private club. 72 elegantly appointed rooms atop Los Angeles Athletic Club await you. Guests have full access to 6 floors of exceptional athletic facilities including indoor pool, basketball court, squash courts, fitness classes and more. Plus, access to co-working spaces, spa, barber shop, two restaurants and lounges with weekly events. Near Crypto.com Arena, Dodger Stadium, Disney Hall and more. Unwind at the gym or lounge while traveling on business, indulge in a couples weekend, or take in a nearby game during your stay at LAAC.",
+      "rating": 4.3,
+      "reviews": 627,
+      "mentions": 91,
+      "review_snippet": "downtown Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/59/79/8b/los-angeles-athletic.jpg",
+        "width": 2000,
+        "height": 1346
+      }
+    },
+    {
+      "position": 13,
+      "place_id": 12165131,
+      "title": "Full-Day Iconic Sights of LA, Hollywood, Beverly Hills, Beaches and More",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d12165131-Full_Day_Iconic_Sights_of_LA_Hollywood_Beverly_Hills_Beaches_and_More-Los_Angeles_C.html",
+      "description": "From the Hollywood Sign to the sunny beaches of Santa Monica and the glitz of Beverly Hills, Los Angeles is full of iconic sights. This guided full-day tour transports you by air-conditioned coach to top attractions—from Venice Beach to the Sunset Strip to Griffith Park and more—with included lunch at the Farmers' Market and optional hotel pickup for select locations.",
+      "rating": 4.9,
+      "reviews": 4480,
+      "mentions": 485,
+      "review_snippet": "We hired a private driver for three days to explore Los Angeles, and it",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/a0/cd/e5/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 14,
+      "place_id": 77700,
+      "title": "W Los Angeles - West Beverly Hills",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77700-Reviews-W_Los_Angeles_West_Beverly_Hills-Los_Angeles_California.html",
+      "description": "W Los Angeles – West Beverly Hills offers personalized service, luxury amenities, and high-energy interiors for a unique urban retreat experience. Located in Westwood, LA, guests can enjoy proximity to UCLA, Rodeo Drive, Santa Monica beaches, and West LA museums. The pet-friendly hotel features spacious suites with cutting-edge technology, indulgent bedding, Baja Californian-inspired cuisine at the Beach House restaurant, poolside cabanas, and event spaces with custom catering and state-of-the-art technology.",
+      "rating": 4.1,
+      "reviews": 1112,
+      "mentions": 111,
+      "review_snippet": "Big shout out to Daniel from W Hotel Los Angeles for creating in the spirit",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/60/14/c8/front-entrance-at-night.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 15,
+      "place_id": 77874,
+      "title": "The Westin Bonaventure Hotel & Suites, Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77874-Reviews-The_Westin_Bonaventure_Hotel_Suites_Los_Angeles-Los_Angeles_California.html",
+      "description": "Elegantly presiding over the City of Angels, The Westin Bonaventure Hotel & Suites, Los Angeles provides the ultimate urban oasis in the heart of Los Angeles, California's business district. An international symbol that has come to represent the beauty and sophistication of the city itself, this famous hotel in downtown Los Angeles is one of the most photographed destinations in the world. Stroll through our atrium lobby and you'll immediately see why. Whether you're visiting for a leisurely weekend getaway, business meeting or special event, our centrally located Los Angeles accommodations define the essence of modern luxury.",
+      "rating": 3.8,
+      "reviews": 3627,
+      "mentions": 259,
+      "review_snippet": "If you are participating in the Los Angeles Marathon and do not want to",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/02/ee/ff/exterior.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 16,
+      "place_id": 3513974,
+      "title": "Hyatt Place Los Angeles/lax/El Segundo",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32341-d3513974-Reviews-Hyatt_Place_Los_Angeles_lax_El_Segundo-El_Segundo_California.html",
+      "description": "Experience the West Coast’s most happening hub with comfort and convenience during your stay at Hyatt Place LAX / El Segundo! Enjoy our newly renovated hotel with large rooms and suites with kitchenettes. Our hotel’s ideal location is less than three miles from both top destination beaches and LAX, the largest international airport in California. Free grab and go Breakfast. Parking charge is $30.00 USD per night.",
+      "rating": 4.2,
+      "reviews": 2084,
+      "mentions": 101,
+      "review_snippet": "We enjoyed our stay at Hyatt Place while in Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "El Segundo, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/af/99/4a/evening-entrance.jpg",
+        "width": 3265,
+        "height": 4634
+      }
+    },
+    {
+      "position": 17,
+      "place_id": 491889,
+      "title": "Metro Los Angeles",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d491889-Reviews-Metro_Los_Angeles-Los_Angeles_California.html",
+      "rating": 4,
+      "reviews": 683,
+      "mentions": 123,
+      "review_snippet": "As a Los Angeles resident, I have mixed feelings about the city's Metro",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/fc/3b/13/caption.jpg",
+        "width": 960,
+        "height": 720
+      }
+    },
+    {
+      "position": 18,
+      "place_id": 223046,
+      "title": "Miyako Hotel Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d223046-Reviews-Miyako_Hotel_Los_Angeles-Los_Angeles_California.html",
+      "description": "Welcome to Miyako Hotel Los Angeles, your Los Angeles “home away from home.” Miyako Hotel Los Angeles aims to make your visit as relaxing and enjoyable as possible, which is why so many guests continue to come back year after year. For those interested in checking out popular landmarks while visiting Los Angeles, Miyako Hotel Los Angeles is located a short distance from City Hall (0.3 mi) and Bradbury Building (0.5 mi). You’ll enjoy relaxing rooms that offer a flat screen TV and air conditioning, and you can stay connected during your stay as Miyako Hotel Los Angeles offers guests free wifi. The hotel features a 24 hour front desk, a concierge, and room service. Plus, Miyako Hotel Los Angeles offers a fitness center and a lounge, providing a pleasant respite from your busy day. For guests with a vehicle, there is paid private parking available on-site. During your visit, be sure to check out one of Los Angeles' popular shrimp restaurants such as Perch, Bottega Louie, and Water Grill, all a short distance from Miyako Hotel Los Angeles. If you are interested in exploring Los Angeles, check out a military museum, such as Go For Broke NEC. Miyako Hotel Los Angeles puts the best of Los Angeles at your fingertips, making your stay both relaxing and enjoyable.",
+      "rating": 3.9,
+      "reviews": 900,
+      "mentions": 87,
+      "review_snippet": "The Miyako Hotel is in the center of Little Toyoko in Down Town Los Angeles.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles."
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/1f/a4/a9/exterior.jpg",
+        "width": 3731,
+        "height": 2798
+      }
+    },
+    {
+      "position": 19,
+      "place_id": 76049,
+      "title": "Four Seasons Hotel Los Angeles at Beverly Hills",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d76049-Reviews-Four_Seasons_Hotel_Los_Angeles_at_Beverly_Hills-Los_Angeles_California.html",
+      "description": "In the heart of Los Angeles stands a city icon, buzzing with the energy and excitement of one of the most diverse destinations in the world. When you're not out roaming the Hollywood Hills, shopping on Rodeo Drive and exploring our city's notable art museums, settle in and unwind at Four Seasons Hotel Los Angeles at Beverly Hills. Soak up the sun at our resort-style pool, savour award-winning Italian cuisine at Culina Ristorante and discover a new level of wellness at our Spa - or in the comfort of your very own guest room.",
+      "rating": 4.6,
+      "reviews": 1949,
+      "mentions": 188,
+      "review_snippet": "The Four Seasons Hotel Los Angeles at Beverly Hills is one of those places",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/0a/c1/29/exterior-of-four-seasons.jpg",
+        "width": 7946,
+        "height": 6222
+      }
+    },
+    {
+      "position": 20,
+      "place_id": 13202468,
+      "title": "Hyatt Place Glendale/Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32431-d13202468-Reviews-Hyatt_Place_Glendale_Los_Angeles-Glendale_California.html",
+      "description": "If you’re looking for a hotel in Glendale, look no further than Hyatt Place Glendale/Los Angeles.\nGiven the close proximity of popular landmarks, such as Glendale Federal Savings Building (0.3 mi) and The Parish Church of St. Mark (0.9 mi), guests of Hyatt Place Glendale/Los Angeles can easily experience some of Glendale's most well known attractions.\nRooms at Hyatt Place Glendale/Los Angeles offer air conditioning providing exceptional comfort and convenience, and guests can go online with free wifi.\nA 24 hour front desk, a concierge, and room service are some of the conveniences offered at this hotel. A pool and a lounge will also help to make your stay even more special. If you are driving to Hyatt Place Glendale/Los Angeles, there is paid private parking available on-site.\nWhile visiting Glendale, you may want to try some crab at one of the nearby restaurants, such as Las Vegas Seafood Buffet, Din Tai Fung Dumpling House, or Crab Avenue.\nGlendale is also home to Power and the Passion, a popular  that is not too far from Hyatt Place Glendale/Los Angeles.\nThe staff at Hyatt Place Glendale/Los Angeles looks forward to serving you during your upcoming visit.\n",
+      "rating": 4.3,
+      "reviews": 851,
+      "mentions": 28,
+      "review_snippet": "We have stayed in this property many times when visiting Los Angeles and",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Glendale, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/83/37/19/exterior.jpg",
+        "width": 1500,
+        "height": 1000
+      }
+    },
+    {
+      "position": 21,
+      "place_id": 23746701,
+      "title": "Best of Los Angeles Guided City Tour with 4 Stops & Free Time",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g32655-d23746701-Best_of_Los_Angeles_Guided_City_Tour_with_4_Stops_Free_Time-Los_Angeles_California.html",
+      "description": "Los Angeles is filled with must-see landmarks, from the famous Hollywood sign to Santa Monica Pier. But neighborhoods are spread out, and it can be tough to make much progress with limited time to spare. Ideal for time-pressed travelers, this easy half-day tour covers the highlights by luxury bus. Depart from Hollywood or Santa Monica, and take in destinations like Rodeo Drive and Griffith Observatory without dedicating days to sightseeing.",
+      "rating": 4.9,
+      "reviews": 1677,
+      "mentions": 117,
+      "review_snippet": "We had an amazing experience on this Los Angeles half-day tour, and a big",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/9e/14/b5/caption.jpg",
+        "width": 720,
+        "height": 480
+      }
+    },
+    {
+      "position": 22,
+      "place_id": 76254,
+      "title": "Los Angeles Marriott Burbank Airport",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32123-d76254-Reviews-Los_Angeles_Marriott_Burbank_Airport-Burbank_California.html",
+      "description": "Enjoy spacious rooms and modern amenities at the Los Angeles Marriott Burbank Airport. Our hotel in Burbank, California places you near the Hollywood Burbank Airport, Universal Studios Hollywood, the North Hollywood Arts District and Burbank Town Center. Unwind in luxurious rooms with plush bedding, mini-refrigerators and flat-screen TVs. Enjoy healthy breakfast options, innovative Californian cuisine and signature cocktails at our on-site restaurants and bar. Our Burbank hotel also has a state-of-the-art fitness center, two outdoor pools and shaded cabanas surrounding fire pits for a peaceful evening under the California stars.",
+      "rating": 3.9,
+      "reviews": 1143,
+      "mentions": 47,
+      "review_snippet": "If you live in Los Angeles, not close to Burbank, great to drop a little",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Burbank, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/0a/51/81/exterior.jpg",
+        "width": 4000,
+        "height": 2667
+      }
+    },
+    {
+      "position": 23,
+      "place_id": 77888,
+      "title": "Hilton Checkers Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d77888-Reviews-Hilton_Checkers_Los_Angeles-Los_Angeles_California.html",
+      "description": "Hilton Checkers Los Angeles is a full-service hotel located in the heart of the financial district in downtown Los Angeles. This boutique-style, historic hotel, is only blocks away from Crypto.com Arena, Dodger Stadium, L.A. Live, Los Angeles Convention Center, and Walt Disney Concert Hall. Within walking distance to restaurants, shopping centers, and sightseeing destinations, Hilton Checkers Los Angeles is accessible to all that downtown has to offer. \n\nGuests can indulge in the beautiful Southern California weather, while taking in sweeping views of downtown's skyline from the hotel's iconic rooftop terrace.\n\nDaily Mandatory Charge includes: Destination Charge with premium WIFI, daily $10 food and beverage credit for use in all hotel outlets; daily $15 dry cleaning/laundry credit; 3 hour bicycle rental. Mandatory Charge also includes CA Tourism and LA Tourism Marketing District assessments.",
+      "rating": 3.8,
+      "reviews": 1803,
+      "mentions": 173,
+      "review_snippet": "The perfect base for anyone exploring Los Angeles and the surrounding areas",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/18/41/eb/hilton-checkers-los-angeles.jpg",
+        "width": 2000,
+        "height": 1334
+      }
+    },
+    {
+      "position": 24,
+      "place_id": 5567409,
+      "title": "The Real Los Angeles Tours",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d5567409-Reviews-The_Real_Los_Angeles_Tours-Los_Angeles_California.html",
+      "description": "On our tours we walk the streets, cycle the city & ride the Metro so YOU can authentically experience L.A. We have tours of Hollywood, downtown LA, Griffith Park, Santa Monica & Venice. We have all day tours, layover tours, true crime tours, bike tours, private tours and food and bar tours. Join us if you like to immerse yourself in the city you're visiting!",
+      "rating": 4.8,
+      "reviews": 510,
+      "mentions": 65,
+      "review_snippet": "Experience the best of Los Angeles and, great food.",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/10/89/c0/caption.jpg",
+        "width": 1313,
+        "height": 875
+      }
+    },
+    {
+      "position": 25,
+      "place_id": 11894770,
+      "title": "Freehand Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d11894770-Reviews-Freehand_Los_Angeles-Los_Angeles_California.html",
+      "description": "Housed in the historic Commercial Exchange building in Downtown Los Angeles, Freehand LA is truly one-of-a-kind, featuring suites, premium hotel rooms and shared accommodations with interiors designed by Roman & Williams. Home to the award-winning Broken Shaker Rooftop Pool & Bar, Freehand LA offers exceptional food & beverage with a strong sense of comfort and community. Conveniently located with close proximity to the Staples Center, Fashion, Finance and Arts Districts, Downtown Los Angles is home to world class attractions, unique restaurants and a thriving nightlife scene. Come see us here in LA!",
+      "rating": 3.7,
+      "reviews": 688,
+      "mentions": 40,
+      "review_snippet": "I will see you again Freehand Los Angeles!",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d0/66/82/photo1jpg.jpg",
+        "width": 2048,
+        "height": 2048
+      }
+    },
+    {
+      "position": 26,
+      "place_id": 3511057,
+      "title": "Los Angeles",
+      "type": "Restaurant",
+      "link": "https://www.tripadvisor.com/Restaurant_Review-g187479-d3511057-Reviews-Los_Angeles-Tenerife_Canary_Islands.html",
+      "rating": 3.9,
+      "reviews": 453,
+      "mentions": 52,
+      "review_snippet": "Angeles.",
+      "review_snippet_highlighted_words": [
+        "Angeles."
+      ],
+      "location": "Tenerife, Tenerife, Spain",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/2c/84/48/great-bar.jpg",
+        "width": 964,
+        "height": 665
+      }
+    },
+    {
+      "position": 27,
+      "place_id": 207644,
+      "title": "Calle Olvera",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d207644-Reviews-Calle_Olvera-Los_Angeles_California.html",
+      "description": "The oldest street in Los Angeles is fun to visit, especially during special events like the \"Blessing of the Animals\" or \"Dia De Los Muertos\" (Day of the Dead.)",
+      "rating": 4.1,
+      "reviews": 1381,
+      "mentions": 345,
+      "review_snippet": "The nicest and most historic place in Los Angeles, this is where Los Angeles",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles",
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/6d/33/7c/huarache-sandals-and.jpg",
+        "width": 2016,
+        "height": 1512
+      }
+    },
+    {
+      "position": 28,
+      "place_id": 23845025,
+      "title": "Conrad Los Angeles",
+      "type": "Hotel",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g32655-d23845025-Reviews-Conrad_Los_Angeles-Los_Angeles_California.html",
+      "description": "Daily Mandatory Destination Charge includes: Premium guest internet access; daily $15 food and beverage credit; house car use; Conrad Spa dry sauna & tea blending bar; in-lobby premium coffee; RunGo app access for trails; PressReader access. Surrounded by iconic art, theatre, and music institutions, Conrad Los Angeles channels the bold originality, creative innovation and dynamic energy that fuels Downtown LA's newest cultural corridor. Heralded by the vision of legendary architect Frank Gehry, our hotel is an elegant destination for vibrant social events, remarkable gatherings and curated dining experiences by acclaimed chef and humanitarian Jose Andres. Here, framed by dramatic views of the Walt Disney Concert Hall and Downtown LA, discover energizing experiences that will ignite your inspiration.",
+      "rating": 4.5,
+      "reviews": 220,
+      "mentions": 55,
+      "review_snippet": "In sum, I can highly recommend Conrad Los Angeles for an enjoyable visit",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/19/be/17/conrad-los-angeles.jpg",
+        "width": 3000,
+        "height": 2365
+      }
+    },
+    {
+      "position": 29,
+      "place_id": 364721,
+      "title": "Philippe the Original",
+      "type": "Restaurant",
+      "link": "https://www.tripadvisor.com/Restaurant_Review-g32655-d364721-Reviews-Philippe_the_Original-Los_Angeles_California.html",
+      "description": "Philippe the Original opened its doors to Los Angelenos back in 1908 and is credited with inventing the French Dip Sandwich. Since the creation of the French Dip, Philippe's has served the classic dish along with popular sides including, potato salad, coleslaw, beef stew and chili. Still owned and operated by the same family since the 1920's, Philippe's celebrated their 110th Anniversary in 2018 - being the oldest continually operating restaurant in Los Angeles!",
+      "rating": 4.4,
+      "reviews": 2275,
+      "mentions": 344,
+      "review_snippet": "Local experience in Los Angeles!",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/a6/07/01/philippe-s-french-dip.jpg",
+        "width": 800,
+        "height": 533
+      }
+    },
+    {
+      "position": 30,
+      "place_id": 116885,
+      "title": "Los Angeles Zoo & Botanical Gardens",
+      "type": "Attraction",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g32655-d116885-Reviews-Los_Angeles_Zoo_Botanical_Gardens-Los_Angeles_California.html",
+      "description": "The Los Angeles Zoo is accredited by the Association of Zoos and Aquariums (AZA) and meets or exceeds the highest standard for animal care and animal health. The landmark L.A. Zoo is a world-class destination and one of the city’s top attractions. This lush 133-acre oasis is home to thousands of animals including one of the largest troops of chimpanzees in North America. Exhibit highlights include Rainforest of the Americas, which transports guests to a tropical rainforest that's home to piranhas, giant otters, harpy eagles, tapirs, and jaguars, and more. Other highlights include the new Cape vulture habitat and the LAIR (Living Amphibians, Invertebrates, and Reptiles), where guests can view rare and endangered critters, some of which can be seen at no other zoo in the world. The L.A. Zoo works with partners locally and around the globe on conservation programs geared toward creating a just and sustainable world where people and wildlife thrive, together.",
+      "rating": 3.8,
+      "reviews": 1046,
+      "mentions": 90,
+      "review_snippet": "We have visited Los Angeles many times and have never gone here, so we",
+      "review_snippet_highlighted_words": [
+        "Los",
+        "Angeles"
+      ],
+      "location": "Los Angeles, California",
+      "thumbnail": {
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/33/18/31/rainforest-of-the-americas.jpg",
+        "width": 1200,
+        "height": 857
+      }
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": 2,
+    "total_pages": 67
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "search_metadata": {
+    "id": "search_yawpDZvY5RcaonZ7EvWPdXoM",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:45Z",
+    "request_time_taken": 0.32,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.32,
+    "request_url": null,
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5RcaonZ7EvWPdXoM.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_yawpDZvY5RcaonZ7EvWPdXoM"
+  },
+  "search_parameters": {
+    "engine": "google_autocomplete",
+    "q": "serp api",
+    "hl": "en",
+    "gl": "us",
+    "client": "chrome"
+  },
+  "suggestions": [
+    {
+      "value": "serp api key",
+      "relevance": 750,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api pricing",
+      "relevance": 601,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api lawsuit",
+      "relevance": 600,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api login",
+      "relevance": 561,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api alternatives",
+      "relevance": 560,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api careers",
+      "relevance": 559,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api reddit",
+      "relevance": 558,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api meaning",
+      "relevance": 557,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api mcp",
+      "relevance": 556,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api linkedin",
+      "relevance": 555,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api status",
+      "relevance": 554,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api github",
+      "relevance": 553,
+      "type": "QUERY"
+    },
+    {
+      "value": "serpapi google flights",
+      "relevance": 552,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api austin",
+      "relevance": 551,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api used for",
+      "relevance": 550,
+      "type": "QUERY"
+    }
+  ],
+  "verbatim_relevance": 1300
+}

@@ -1,0 +1,341 @@
+{
+  "search_metadata": {
+    "id": "search_mpO7djkNqos9Ma0NMvAPE9xq",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:24Z",
+    "request_time_taken": 1.57,
+    "parsing_time_taken": 0.05,
+    "total_time_taken": 1.62,
+    "request_url": "https://www.bing.com/search?form=PERE&q=best+serp+api&cc=US",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mpO7djkNqos9Ma0NMvAPE9xq.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mpO7djkNqos9Ma0NMvAPE9xq"
+  },
+  "search_parameters": {
+    "engine": "bing",
+    "q": "best serp api",
+    "device": "desktop",
+    "country_code": "US",
+    "language": "en"
+  },
+  "search_information": {
+    "query_displayed": "best serp api",
+    "page": 1,
+    "detected_location": "Los Angeles, California"
+  },
+  "ai_overview": {
+    "related_queries": [
+      {
+        "query": "Real-time SERP scraping tools",
+        "link": "https://www.bing.com/copilotsearch?q=Real-time+SERP+scraping+tools&form=CSSANS"
+      },
+      {
+        "query": "Real-time Google SERP examples",
+        "link": "https://www.bing.com/copilotsearch?q=Real-time+Google+SERP+examples&form=CSSANS"
+      },
+      {
+        "query": "Open-source SERP scrapers",
+        "link": "https://www.bing.com/copilotsearch?q=Open-source+SERP+scrapers&form=CSSANS"
+      }
+    ],
+    "text_blocks": [
+      {
+        "type": "header",
+        "answer": "Top SERP APIs in 2026 include Scrapingdog, SerpAPI, Bright Data, Serper, and ScrapingBee, each excelling in speed, scalability, and structured data delivery."
+      },
+      {
+        "type": "header",
+        "answer": "Overview of Leading SERP APIs"
+      },
+      {
+        "type": "paragraph",
+        "answer": "Scrapingdog is recognized for its fastest response time (~1.83s), high scalability, and cost-effectiveness at scale. It provides structured JSON outputs for Google search results, including organic results, ads, featured snippets, and local packs, making it ideal for SEO tools and lead generation workflows. SerpAPI offers a feature-rich solution with broad coverage of Google products, including Shopping, Maps, Knowledge Graph, and Stories. It supports geo-targeting at city and coordinate levels, device-specific tracking, and integrates with Google Sheets for reporting. Each request runs in a full browser, producing structured JSON in about 1.4 seconds. Bright Data is an enterprise-grade API with global coverage and high-volume handling. It returns data in JSON, raw HTML, or AI-ready Markdown formats and supports maps, news, and shopping searches. Its pay-per-success model and flexible plans make it suitable for large organizations requiring reliable, scalable search data. Serper is a performance-focused API with low latency (~2.87s) and a generous free tier of 2,500 credits. It is ideal for Google-only SERP work at low to medium volume, though it lacks coverage for other search engines or AI Overviews. ScrapingBee emphasizes developer experience and reliability, with automatic proxy rotation and CAPTCHA handling. It offers transparent pricing, Python SDK support, and competitive response times under 3 seconds, making it suitable for developers integrating Google SERP data into applications.",
+        "reference_indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "Key Considerations When Choosing a SERP API"
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Speed and Latency: Scrapingdog and SerpAPI are among the fastest, ensuring minimal delay in automated workflows."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Data Coverage: SerpAPI and Bright Data provide the broadest coverage across Google products and other search engines."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Geo-targeting: APIs like SerpAPI allow precise city-level targeting, essential for local SEO campaigns."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Pricing and Free Tiers: Serper and ScrapingBee offer free or low-cost entry points, while Bright Data and SerpAPI cater to enterprise-scale usage."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Developer-Friendliness: ScrapingBee and SerpAPI provide well-documented SDKs and simple integration methods."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "Recommendation"
+      },
+      {
+        "type": "paragraph",
+        "answer": "For high-volume, enterprise-grade SEO and analytics, Bright Data or SerpAPI are optimal. For fast, cost-effective Google SERP scraping, Scrapingdog is the best choice. For low-volume or beginner-friendly use, Serper or ScrapingBee provide accessible entry points with reliable performance. Choosing the right API depends on your volume, target search engines, geolocation needs, and budget. Each of these top providers has been tested for speed, reliability, and structured data quality in 2026.",
+        "reference_indexes": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ]
+      }
+    ],
+    "markdown": "## Top SERP APIs in 2026 include Scrapingdog, SerpAPI, Bright Data, Serper, and ScrapingBee, each excelling in speed, scalability, and structured data delivery.\n\n## Overview of Leading SERP APIs\n\nScrapingdog is recognized for its fastest response time (~1.83s), high scalability, and cost-effectiveness at scale. It provides structured JSON outputs for Google search results, including organic results, ads, featured snippets, and local packs, making it ideal for SEO tools and lead generation workflows. SerpAPI offers a feature-rich solution with broad coverage of Google products, including Shopping, Maps, Knowledge Graph, and Stories. It supports geo-targeting at city and coordinate levels, device-specific tracking, and integrates with Google Sheets for reporting. Each request runs in a full browser, producing structured JSON in about 1.4 seconds. Bright Data is an enterprise-grade API with global coverage and high-volume handling. It returns data in JSON, raw HTML, or AI-ready Markdown formats and supports maps, news, and shopping searches. Its pay-per-success model and flexible plans make it suitable for large organizations requiring reliable, scalable search data. Serper is a performance-focused API with low latency (~2.87s) and a generous free tier of 2,500 credits. It is ideal for Google-only SERP work at low to medium volume, though it lacks coverage for other search engines or AI Overviews. ScrapingBee emphasizes developer experience and reliability, with automatic proxy rotation and CAPTCHA handling. It offers transparent pricing, Python SDK support, and competitive response times under 3 seconds, making it suitable for developers integrating Google SERP data into applications. [0](https://www.scrapingdog.com/blog/best-serp-apis/) [1](https://geekflare.com/guides/best-serp-api/) [2](https://brightdata.com/blog/web-data/best-serp-apis) [3](https://www.openwebninja.com/blog/best-serp-apis-2026) [4](https://www.scrapingbee.com/blog/best-serp-apis/)\n\n## Key Considerations When Choosing a SERP API\n\n- Speed and Latency: Scrapingdog and SerpAPI are among the fastest, ensuring minimal delay in automated workflows.\n- Data Coverage: SerpAPI and Bright Data provide the broadest coverage across Google products and other search engines.\n- Geo-targeting: APIs like SerpAPI allow precise city-level targeting, essential for local SEO campaigns.\n- Pricing and Free Tiers: Serper and ScrapingBee offer free or low-cost entry points, while Bright Data and SerpAPI cater to enterprise-scale usage.\n- Developer-Friendliness: ScrapingBee and SerpAPI provide well-documented SDKs and simple integration methods.\n\n## Recommendation\n\nFor high-volume, enterprise-grade SEO and analytics, Bright Data or SerpAPI are optimal. For fast, cost-effective Google SERP scraping, Scrapingdog is the best choice. For low-volume or beginner-friendly use, Serper or ScrapingBee provide accessible entry points with reliable performance. Choosing the right API depends on your volume, target search engines, geolocation needs, and budget. Each of these top providers has been tested for speed, reliability, and structured data quality in 2026. [1](https://geekflare.com/guides/best-serp-api/) [2](https://brightdata.com/blog/web-data/best-serp-apis) [3](https://www.openwebninja.com/blog/best-serp-apis-2026) [4](https://www.scrapingbee.com/blog/best-serp-apis/) [0](https://www.scrapingdog.com/blog/best-serp-apis/)\n\n[[0] - 10 Best SERP APIs in 2026 to Scale Data Extraction from Google Search](https://www.scrapingdog.com/blog/best-serp-apis/)\n[[1] - 9 Best SERP APIs for SEO Rank Tracking in 2026](https://geekflare.com/guides/best-serp-api/)\n[[2] - The 16 Best SERP and Web Search APIs of 2026](https://brightdata.com/blog/web-data/best-serp-apis)\n[[3] - Best SERP APIs in 2026: 7 Tested and Compared | OpenWeb Ninja](https://www.openwebninja.com/blog/best-serp-apis-2026)\n[[4] - 8 Best SERP APIs in 2026](https://www.scrapingbee.com/blog/best-serp-apis/)",
+    "reference_links": [
+      {
+        "index": 0,
+        "title": "10 Best SERP APIs in 2026 to Scale Data Extraction from Google Search",
+        "link": "https://www.scrapingdog.com/blog/best-serp-apis/",
+        "displayed_link": "https://www.scrapingdog.com/blog/best-serp-apis/",
+        "source": "scrapingdog.com"
+      },
+      {
+        "index": 1,
+        "title": "9 Best SERP APIs for SEO Rank Tracking in 2026",
+        "link": "https://geekflare.com/guides/best-serp-api/",
+        "displayed_link": "https://geekflare.com/guides/best-serp-api/",
+        "source": "Geekflare"
+      },
+      {
+        "index": 2,
+        "title": "The 16 Best SERP and Web Search APIs of 2026",
+        "link": "https://brightdata.com/blog/web-data/best-serp-apis",
+        "displayed_link": "https://brightdata.com/blog/web-data/best-serp-apis",
+        "source": "brightdata.com"
+      },
+      {
+        "index": 3,
+        "title": "Best SERP APIs in 2026: 7 Tested and Compared | OpenWeb Ninja",
+        "link": "https://www.openwebninja.com/blog/best-serp-apis-2026",
+        "displayed_link": "https://www.openwebninja.com/blog/best-serp-apis-2026",
+        "source": "openwebninja.com"
+      },
+      {
+        "index": 4,
+        "title": "8 Best SERP APIs in 2026",
+        "link": "https://www.scrapingbee.com/blog/best-serp-apis/",
+        "displayed_link": "https://www.scrapingbee.com/blog/best-serp-apis/",
+        "source": "scrapingbee.com"
+      }
+    ]
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "The 16 Best SERP and Web Search APIs of 2026",
+      "source": "Bright Data",
+      "link": "https://brightdata.com/blog/web-data/best-serp-apis",
+      "domain": "www.bing.com",
+      "displayed_link": "https://brightdata.com › blog › web-data › best-serp-apis",
+      "snippet": "Compare the 16 best SERP and web search APIs of 2026 on pricing, features, search engines, and AI integration to find the right tool for your needs.",
+      "favicon": "https://th.bing.com/th/id/ODF.M24gNqF_DkpNyaIIRsPoTA?w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2",
+      "images": [
+        "https://th.bing.com/th/id/OIP.mdoTv2r4H5zxO9lbSaAZVQHaEA?w=197&h=108&c=7&qlt=90&bgcl=37a211&r=0&o=6&pid=13.1",
+        "https://th.bing.com/th/id/OIP.ZI0oesDT6FbjbuCGTIuj4AHaDd?w=229&h=108&c=7&qlt=90&bgcl=8e7f82&r=0&o=6&pid=13.1",
+        "https://th.bing.com/th/id/OIP.xyDdIubaxu9qtJOP7HNPfAHaDq?w=218&h=108&c=7&qlt=90&bgcl=ac1bfb&r=0&o=6&pid=13.1"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "10+ Best SERP API Solutions for Accurate Google Search …",
+      "source": "LinkedIn",
+      "link": "https://www.linkedin.com/pulse/10-best-serp-api-solutions-accurate-google-search-results-pfwlc",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.linkedin.com › pulse",
+      "snippet": "The best serp api for your team depends on data accuracy, speed, pricing, geo targeting, and integration needs. Some tools focus on enterprise …",
+      "date": "Apr 20, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.F8hkx5f_DpSQJ5Rg49E4Pg?w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 3,
+      "title": "8 Best SERP APIs in 2026 - scrapingbee.com",
+      "source": "ScrapingBee",
+      "link": "https://www.scrapingbee.com/blog/best-serp-apis/",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.scrapingbee.com › blog › best-serp-apis",
+      "snippet": "After testing dozens of providers and analyzing performance metrics, pricing structures, and real-world reliability, I've identified the best Google SERP …",
+      "date": "Apr 8, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.b-T5PDI1rkmRDMnaHO1Auw?w=32&h=32&qlt=92&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 4,
+      "title": "13 Best SERP APIs in 2025 (Updated) - scrapediary.com",
+      "source": "scrapediary.com",
+      "link": "https://www.scrapediary.com/best-serp-apis/",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.scrapediary.com › best-serp-apis",
+      "snippet": "After reviewing all the options, the best SERP API is Apify because it offers comprehensive data extraction from Google search results, including …",
+      "date": "Feb 27, 2025",
+      "favicon": "https://th.bing.com/th/id/ODF.K2DzCymjwQMfNMnq4jCqwg?w=32&h=32&qlt=93&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 5,
+      "title": "Best SERP APIs in 2026: 7 Tested and Compared - OpenWeb Ninja",
+      "source": "openwebninja.com",
+      "link": "https://www.openwebninja.com/blog/best-serp-apis-2026",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.openwebninja.com › blog",
+      "snippet": "We compared 7 SERP APIs on pricing, response time, and data depth. Code examples and JSON responses for OpenWeb Ninja, SerpAPI, DataForSEO, Serper, and more.",
+      "date": "May 2, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.x1OGt4G0n6VV0vbh0Dl-OA?w=32&h=32&qlt=94&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 6,
+      "title": "10 Best SERP APIs in 2026 to Scale Data Extraction from …",
+      "source": "Scrapingdog",
+      "link": "https://www.scrapingdog.com/blog/best-serp-apis/",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.scrapingdog.com › blog › best-serp-apis",
+      "snippet": "We have collected the list of 10 best APIs to easily get the Google Search Results. Tried and Tested each of them we have kept them in the …",
+      "date": "4 days ago",
+      "favicon": "https://th.bing.com/th/id/ODF.LHByV0UP76yOAiB2RYrPzA?w=32&h=32&qlt=95&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 7,
+      "title": "Best SERP APIs in 2026 (+ Alternatives) - RapidSeedbox",
+      "source": "RapidSeedbox",
+      "link": "https://www.rapidseedbox.com/blog/best-serp-apis",
+      "domain": "www.bing.com",
+      "displayed_link": "https://www.rapidseedbox.com › blog › best-serp-apis",
+      "snippet": "Top SERP APIs in 2026 compared by speed, price, features, and scale—plus real-world alternatives for devs, marketers, and SEO teams.",
+      "date": "Jun 1, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.SdGHjXMHPoto66Lj6d1kVQ?w=32&h=32&qlt=96&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 8,
+      "title": "I Tested 7 SERP APIs in 2026 - DEV Community",
+      "source": "DEV Community",
+      "link": "https://dev.to/leo_o_f54073165eadd8c5e2d/i-tested-7-serp-apis-in-2026-heres-whos-overpriced-and-whos-actually-worth-it-5d5m",
+      "domain": "www.bing.com",
+      "displayed_link": "https://dev.to",
+      "snippet": "I've spent the last three weeks stress-testing 7 major SERP APIs on the market in 2026. I measured real request latency, success rates, pricing transparency, and — most importantly — what …",
+      "date": "May 29, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.tBsEOsspFef3YvzwFAWGUA?w=32&h=32&qlt=97&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 9,
+      "title": "Best SERP APIs in 2026: 8 Google Search APIs Compared",
+      "source": "scrape.do",
+      "link": "https://scrape.do/blog/google-serp-api/",
+      "domain": "www.bing.com",
+      "displayed_link": "https://scrape.do › blog › google-serp-api",
+      "snippet": "Compare 8 Google Search APIs side by side: speed, cost, AI Overview detection, and output richness benchmarked across 25 queries. Find the best …",
+      "date": "Mar 25, 2026",
+      "favicon": "https://th.bing.com/th/id/ODF.u6IRuSPjpkOZ9eWzh6m2lA?w=32&h=32&qlt=98&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 10,
+      "title": "9 Best SERP APIs for SEO Rank Tracking in 2026 - Geekflare",
+      "source": "Geekflare",
+      "link": "https://geekflare.com/guides/best-serp-api/",
+      "domain": "www.bing.com",
+      "displayed_link": "https://geekflare.com › guides › best-serp-api",
+      "snippet": "SERP APIs provide structured, real-time access to organic rankings, featured snippets, and local metrics. In this post, we review and compare the best SERP API tools.",
+      "date": "5 days ago",
+      "favicon": "https://th.bing.com/th/id/ODF.ZxkeRQyHrWNXIvr43UFTaw?w=32&h=32&qlt=99&pcl=fffffa&o=6&pid=1.2"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "best serp api for search engine",
+      "link": "https://www.bing.com/ck/a?!&&p=b2e59cfae296a92a482aa8c21d57328aece0594fb73908d7de527a9d55987e71JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPWJlc3Qrc2VycCthcGkrZm9yK3NlYXJjaCtlbmdpbmUmRk9STT1RU1JFMQ&ntb=1"
+    },
+    {
+      "query": "best serp api for web scraping",
+      "link": "https://www.bing.com/ck/a?!&&p=dbd2592cbeb672db20354e6fc1610a9dcbea0ea2fad759759d0fac86de3528adJmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPWJlc3Qrc2VycCthcGkrZm9yK3dlYitzY3JhcGluZyZGT1JNPVFTUkUy&ntb=1"
+    },
+    {
+      "query": "best paid serp api",
+      "link": "https://www.bing.com/ck/a?!&&p=be0cc931ab25a80ee73716c20d5b552d9f562d2fa40bfc517e32f779e6f5eb69JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPWJlc3QrcGFpZCtzZXJwK2FwaSZGT1JNPVFTUkUz&ntb=1"
+    },
+    {
+      "query": "best paid search engine api",
+      "link": "https://www.bing.com/ck/a?!&&p=7aeea024569883d94759a6cc64424a4c56f4cd51eb0316a45a94a9656a6c1662JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPWJlc3QrcGFpZCtzZWFyY2grZW5naW5lK2FwaSZGT1JNPVFTUkU0&ntb=1"
+    },
+    {
+      "query": "serp api free alternative",
+      "link": "https://www.bing.com/ck/a?!&&p=1523dfcc8b84fbed120e022065d917abefc1f512825cb45cb4b8a4b0d2de37f6JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPXNlcnArYXBpK2ZyZWUrYWx0ZXJuYXRpdmUmRk9STT1RU1JFNQ&ntb=1"
+    },
+    {
+      "query": "google search api for free",
+      "link": "https://www.bing.com/ck/a?!&&p=530b88533fbf02efd9fdb76799b1ce5ec0493c5afc77e038bb295f087d5389d4JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPUdvb2dsZStzZWFyY2grYXBpK2ZvcitmcmVlJkZPUk09UVNSRTY&ntb=1"
+    },
+    {
+      "query": "google serp api free",
+      "link": "https://www.bing.com/ck/a?!&&p=62d7898ddd415587b6c0bb55788d3d349197875652df04babbc24748aa4e743fJmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPUdvb2dsZStzZXJwK2FwaStmcmVlJkZPUk09UVNSRTc&ntb=1"
+    },
+    {
+      "query": "search engine free api",
+      "link": "https://www.bing.com/ck/a?!&&p=845f4ef5cf69df5bf67771603588e01d0e6257a494db32bb3533c4f9f8fe1883JmltdHM9MTc4MTU2ODAwMA&ptn=3&ver=2&hsh=4&fclid=21cdcf5a-4b07-6552-3174-d8204a5d6484&u=a1L3NlYXJjaD9xPXNlYXJjaCtlbmdpbmUrZnJlZSthcGkmRk9STT1RU1JFOA&ntb=1"
+    }
+  ],
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "Build a Google Web Scraper with AI in 7 Minutes (NO CAPTCHAS) | SERP API + DeepSeek V4",
+      "link": "https://www.youtube.com/watch?v=aG0_SGrGAu4",
+      "video_link": "https://th.bing.com/th/id/OM.jhf5gcv1q4PSFg_1779267380?pid=1.7",
+      "source": "YouTube",
+      "channel": "The Metaverse Guy",
+      "is_adult": "false",
+      "views": 7900,
+      "duration": "7:55",
+      "date": "1 month ago",
+      "thumbnail": "https://th.bing.com/th/id/OVP.x_lVhnGdITfePogI9Cx2wQEsDh?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7"
+    },
+    {
+      "position": 2,
+      "title": "Stop Paying $300/Month for Rank Tracking - Use SERP API + n8n Instead",
+      "link": "https://www.youtube.com/watch?v=Kq8M5btTjSk",
+      "source": "YouTube",
+      "channel": "HasData – Scraping APIs & No-Code Scrapers",
+      "is_adult": "false",
+      "views": 31,
+      "duration": "8:12",
+      "date": "1 month ago",
+      "thumbnail": "https://th.bing.com/th/id/OVP.qSnAwzdzcQ8UOTIibzTUvgHgFo?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7"
+    },
+    {
+      "position": 3,
+      "title": "How to Build a Keyword Rank Tracker using Python & Google SERP API",
+      "link": "https://www.youtube.com/watch?v=lwCLuUfGddE",
+      "source": "YouTube",
+      "channel": "Scrapingdog",
+      "is_adult": "false",
+      "views": 40,
+      "duration": "6:28",
+      "date": "1 month ago",
+      "thumbnail": "https://th.bing.com/th/id/OVP.9osYLvHqjIQDa3sRS7OFCAHgFo?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.bing.com/search?rdr=1&q=best+serp+api&qs=n&cc=US&rdrig=49847C647D0B4E1A9625F9374E9374A9&FPIG=567DAFD270304A158C75F3F5B310D5AE&first=11&FORM=PORE",
+    "other_pages": {
+      "2": "https://www.bing.com/search?rdr=1&q=best+serp+api&qs=n&cc=US&rdrig=49847C647D0B4E1A9625F9374E9374A9&FPIG=567DAFD270304A158C75F3F5B310D5AE&first=11&FORM=PERE",
+      "3": "https://www.bing.com/search?rdr=1&q=best+serp+api&qs=n&cc=US&rdrig=49847C647D0B4E1A9625F9374E9374A9&FPIG=567DAFD270304A158C75F3F5B310D5AE&first=21&FORM=PERE1"
+    }
+  }
+}

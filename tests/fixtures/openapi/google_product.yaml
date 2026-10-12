@@ -1,0 +1,656 @@
+openapi: 3.0.0
+info:
+  title: Google Product API
+  description: |
+    Get detailed product information from Google Shopping, including offers, prices, reviews, specifications, and related products.
+
+    **Cross-linking**: This API requires a `product_token` minted by the Google Shopping API. Call `engine=google_shopping` first, then pass any `product_token` from the returned `shopping_results` entries to this API as the `product_token` parameter.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Product Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["google_product"]
+            default: "google_product"
+        - name: product_token
+          in: query
+          required: true
+          description: Encoded product token minted by the Google Shopping API. Call `engine=google_shopping` first and reuse the `product_token` returned in each `shopping_results` entry.
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Location name for localized results
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google's UULE parameter for geolocation
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language
+          schema:
+            type: string
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country code for results
+          schema:
+            type: string
+            enum: ["ae", "ai", "ar", "au", "bm", "br", "ca", "cc", "ch", "cl", "co", "cx", "fk", "gb", "gs", "hk", "hm", "id", "il", "in", "io", "jp", "kr", "ky", "ms", "mx", "my", "nf", "nz", "ph", "ru", "sa", "sg", "tc", "th", "tk", "tr", "tw", "ua", "uk", "us", "vg", "vn", "za", "at", "aw", "be", "cz", "de", "dk", "es", "fi", "fr", "gf", "gp", "gr", "hu", "ie", "it", "mq", "nc", "nl", "no", "pf", "pl", "pm", "pt", "re", "ro", "se", "sk", "tf", "wf", "yt"]
+            default: "us"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        product:
+          $ref: '#/components/schemas/Product'
+        offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Offer'
+          description: List of merchant offers for the product
+        typical_prices:
+          $ref: '#/components/schemas/TypicalPrices'
+        review_results:
+          $ref: '#/components/schemas/ReviewResults'
+        top_insights:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopInsight'
+          description: List of top insights about the product
+        specifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/Specification'
+          description: Product specifications
+        discussions_and_forums:
+          type: array
+          items:
+            $ref: '#/components/schemas/Discussion'
+          description: List of discussions and forum posts about the product
+        related_products:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedProduct'
+          description: List of related products
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+          description: List of related search queries
+        error:
+          type: string
+          description: Error message if the search failed
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Product URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        product_token:
+          type: string
+          description: Product token parameter used
+        uule:
+          type: string
+          description: UULE parameter used
+        location:
+          type: string
+          description: Location parameter provided
+        location_used:
+          type: string
+          description: Canonical location name actually used
+        hl:
+          type: string
+          description: Interface language used
+        gl:
+          type: string
+          description: Country code used
+
+    Product:
+      type: object
+      properties:
+        product_id:
+          type: string
+          description: Google product ID
+        prds:
+          type: string
+          description: Product review data specification
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        brand:
+          type: string
+          description: Product brand
+        reviews:
+          type: integer
+          description: Total number of reviews
+        rating:
+          type: number
+          description: Average rating
+        web_reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/WebReview'
+          description: Web reviews from various sources
+        description:
+          type: string
+          description: Product description
+        variations:
+          $ref: '#/components/schemas/ProductVariations'
+        reviews_histogram:
+          type: object
+          additionalProperties:
+            type: integer
+          description: Review count by star rating
+        video:
+          type: string
+          description: Product video URL
+        images:
+          type: array
+          items:
+            type: string
+          description: Product images
+        videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVideo'
+          description: Product videos
+
+    ProductVariations:
+      type: array
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            description: Variation category title
+          options:
+            type: array
+            items:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Option title
+                product_token:
+                  type: string
+                  description: Product token for this variation
+                is_available:
+                  type: boolean
+                  description: Whether the option is available
+                is_current_product:
+                  type: boolean
+                  description: Whether this is the current product
+                image:
+                  type: string
+                  description: Option image URL
+
+    Offer:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position of the offer
+        title:
+          type: string
+          description: Offer title
+        link:
+          type: string
+          description: Link to the merchant offer
+        price:
+          type: string
+          description: Product price
+        extracted_price:
+          type: number
+          description: Extracted numeric price
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+        delivery_price:
+          type: string
+          description: Delivery price
+        extracted_delivery_price:
+          type: number
+          description: Extracted numeric delivery price
+        total_price:
+          type: string
+          description: Total price including all costs
+        extracted_total_price:
+          type: number
+          description: Extracted numeric total price
+        installment:
+          $ref: '#/components/schemas/Installment'
+        rating:
+          type: number
+          description: Merchant rating
+        reviews:
+          type: integer
+          description: Number of merchant reviews
+        details:
+          type: array
+          items:
+            type: string
+          description: Offer details
+        payment_methods:
+          type: string
+          description: Accepted payment methods
+        merchant:
+          $ref: '#/components/schemas/Merchant'
+        tag:
+          type: string
+          description: Offer tag (e.g., "Low Price")
+
+    Installment:
+      type: object
+      properties:
+        down_payment:
+          type: string
+          description: Down payment amount
+        extracted_down_payment:
+          type: number
+          description: Extracted numeric down payment
+        months:
+          type: string
+          description: Number of months
+        extracted_months:
+          type: integer
+          description: Extracted numeric months
+        cost_per_month:
+          type: string
+          description: Cost per month
+        extracted_cost_per_month:
+          type: number
+          description: Extracted numeric cost per month
+
+    Merchant:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Merchant name
+        favicon:
+          type: string
+          description: Merchant favicon URL
+
+    TypicalPrices:
+      type: object
+      properties:
+        low_price:
+          type: string
+          description: Lowest typical price
+        extracted_low_price:
+          type: number
+          description: Extracted numeric low price
+        high_price:
+          type: string
+          description: Highest typical price
+        extracted_high_price:
+          type: number
+          description: Extracted numeric high price
+        popular_choice:
+          type: string
+          description: Popular choice merchant
+        popular_choice_link:
+          type: string
+          description: Link to popular choice
+        popular_choice_price:
+          type: string
+          description: Popular choice price
+        extracted_popular_choice_price:
+          type: number
+          description: Extracted numeric popular choice price
+
+    ReviewResults:
+      type: object
+      properties:
+        reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/Review'
+          description: List of reviews
+
+    Review:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Reviewer username
+        source:
+          type: string
+          description: Review source
+        title:
+          type: string
+          description: Review title
+        date:
+          type: string
+          description: Review date
+        rating:
+          type: number
+          description: Review rating
+        text:
+          type: string
+          description: Review text
+        
+    Specification:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Specification name
+        value:
+          type: string
+          description: Specification value
+
+    RelatedProduct:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position of the related product
+        product_id:
+          type: string
+          description: >-
+            Catalog ID of the related product, accepted as the `product_id` parameter of the
+            google_product_page API. Omitted for carousel cards that carry no catalog ID.
+        product_token:
+          type: string
+          description: >-
+            Encoded product token for detailed queries. Accepted by the google_product_page API,
+            which returns a full token usable with google_product. Omitted for carousel cards
+            that carry no catalog ID.
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        price:
+          type: string
+          description: Product price
+        extracted_price:
+          type: number
+          description: Extracted numeric price
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+        currency:
+          type: string
+          description: ISO 4217 currency code for price and original_price (e.g., "USD", "EUR")
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        seller:
+          type: string
+          description: Product seller
+        thumbnail:
+          type: string
+          description: Product thumbnail image
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+    
+    TopInsight:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Main insight title
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Item title
+              username:
+                type: string
+                description: Username or author
+              link:
+                type: string
+                description: URL link
+              source:
+                type: string
+                description: Source website or platform
+              snippet:
+                type: string
+                description: Text snippet or content
+              highlight:
+                type: string
+                description: Highlighted text
+              date:
+                type: string
+                description: Date information
+              pros:
+                type: array
+                items:
+                  type: string
+                description: List of pros
+              cons:
+                type: array
+                items:
+                  type: string
+                description: List of cons
+              favicon:
+                type: string
+                description: Favicon URL
+    
+    Discussion:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Discussion title
+        link:
+          type: string
+          description: Discussion URL
+        source:
+          type: string
+          description: Source platform or website
+        date:
+          type: string
+          description: Date of discussion
+        favicon:
+          type: string
+          description: Source favicon URL
+        posts:
+          type: string
+          description: Number of posts
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              snippet:
+                type: string
+                description: Answer text snippet
+              link:
+                type: string
+                description: Answer URL
+              votes:
+                type: integer
+                description: Vote count
+              is_top_answer:
+                type: boolean
+                description: Whether this is the top answer
+    
+    RelatedSearch:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Related search query text
+        link:
+          type: string
+          description: Search result URL
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+    
+    WebReview:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Review title
+        link:
+          type: string
+          description: Review URL
+        source:
+          type: string
+          description: Review source
+        snippet:
+          type: string
+          description: Review snippet
+        rating:
+          type: number
+          description: Review rating
+        favicon:
+          type: string
+          description: Source favicon URL
+    
+    ProductVideo:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        source:
+          type: string
+          description: Video source
+        duration:
+          type: string
+          description: Video duration
+        channel:
+          type: string
+          description: Video channel
+        thumbnail:
+          type: string
+          description: Video thumbnail URL

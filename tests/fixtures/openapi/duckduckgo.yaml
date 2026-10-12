@@ -1,0 +1,536 @@
+openapi: 3.0.0
+info:
+  title: DuckDuckGo Search API
+  description: |
+    DuckDuckGo Search API provides web search results from DuckDuckGo's search engine. This API offers organic search results, ads, 
+    AI-powered answers, knowledge graph data, inline images and videos, top stories, and related searches.
+    
+    The API supports pagination through next page tokens, safe search filtering, locale-based search, and time period filtering.
+    
+    **Cross-linking**: The search results returned by this API can be used with other SearchAPI engines for deeper insights 
+    or related searches based on the content found.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: DuckDuckGo Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: The search engine to use
+          schema:
+            type: string
+            enum: ["duckduckgo"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+            maxLength: 500
+        - name: locale
+          in: query
+          required: false
+          description: Search locale for region and language
+          schema:
+            type: string
+            enum: ["xa-ar", "xa-en", "ar-es", "au-en", "at-de", "be-fr", "be-nl", "br-pt", "bg-bg", "ca-en", "ca-fr", "ct-ca", "cl-es", "cn-zh", "co-es", "hr-hr", "cz-cs", "dk-da", "ee-et", "fi-fi", "fr-fr", "de-de", "gr-el", "hk-tzh", "hu-hu", "in-en", "id-id", "id-en", "ie-en", "il-he", "it-it", "jp-jp", "kr-kr", "lv-lv", "lt-lt", "xl-es", "my-ms", "my-en", "mx-es", "nl-nl", "nz-en", "no-no", "pe-es", "ph-en", "ph-tl", "pl-pl", "pt-pt", "ro-ro", "ru-ru", "sg-en", "sk-sk", "sl-sl", "za-en", "es-es", "se-sv", "ch-de", "ch-fr", "ch-it", "tw-tzh", "th-th", "tr-tr", "ua-uk", "uk-en", "us-en", "ue-es", "ve-es", "vn-vi", "wt-wt"]
+            default: "us-en"
+        - name: time_period
+          in: query
+          required: false
+          description: Filter results by time period or date range
+          schema:
+            type: string
+            pattern: '^(\d{4}-\d{2}-\d{2}\.\.\d{4}-\d{2}-\d{2}|any_time|past_year|past_month|past_week|past_day)$'
+            default: "any_time"
+        - name: safe
+          in: query
+          required: false
+          description: Safe search filter
+          schema:
+            type: string
+            enum: ["on", "moderate", "off"]
+            default: "on"
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for pagination to get the next page of results
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        error:
+          type: string
+          description: Error message when no results are returned
+        ai_overview:
+          $ref: '#/components/schemas/AiOverview'
+        ads:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ad'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        top_stories:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopStory'
+        inline_images:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        inline_videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: DuckDuckGo URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        locale:
+          type: string
+          description: Search locale for region and language
+        time_period:
+          type: string
+          description: Time period filter
+        safe:
+          type: string
+          description: Safe search setting
+        next_page_token:
+          type: string
+          description: Token for pagination
+
+    AiOverview:
+      type: object
+      required: [answer, sources]
+      properties:
+        answer:
+          type: string
+          description: AI-generated answer to the query
+        sources:
+          type: array
+          description: Sources used for the AI answer
+          items:
+            type: object
+            required: [link, source, title]
+            properties:
+              link:
+                type: string
+                description: URL of the source
+              source:
+                type: string
+                description: Domain or name of the source
+              title:
+                type: string
+                description: Title of the source article
+
+    Ad:
+      type: object
+      required: [position, title, link, tracking_link, source, snippet, favicon]
+      properties:
+        position:
+          type: integer
+          description: Position of the ad in the results
+        title:
+          type: string
+          description: Title of the ad
+        link:
+          type: string
+          description: Destination URL of the ad
+        tracking_link:
+          type: string
+          description: DuckDuckGo tracking URL
+        source:
+          type: string
+          description: Source domain of the ad
+        snippet:
+          type: string
+          description: Description text of the ad
+        favicon:
+          type: string
+          description: Favicon URL of the advertiser
+        date:
+          type: string
+          description: Date information if available
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted words from the snippet
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Ad extensions
+        structured_snippet:
+          type: string
+          description: Structured snippet text
+        promotion:
+          type: object
+          properties:
+            description:
+              type: string
+              description: Promotion description
+            code:
+              type: string
+              description: Promotion code
+            expiration:
+              type: string
+              description: Promotion expiration date
+            occasion:
+              type: string
+              description: Promotion occasion
+            link:
+              type: string
+              description: Promotion destination URL
+            tracking_link:
+              type: string
+              description: Promotion tracking URL
+        sitelinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sitelink'
+
+    KnowledgeGraph:
+      type: object
+      required: [title, subtitle, description, source, thumbnail, people_also_search_for, profiles, facts]
+      properties:
+        title:
+          type: string
+          description: Main title of the knowledge graph entity
+        subtitle:
+          type: string
+          description: Subtitle or brief description
+        description:
+          type: string
+          description: Detailed description
+        website:
+          type: string
+          description: Official website URL
+        source:
+          type: object
+          required: [name, link]
+          properties:
+            name:
+              type: string
+              description: Name of the data source
+            link:
+              type: string
+              description: Link to the source
+        facts:
+          type: object
+          additionalProperties: true
+          description: Dynamic key-value pairs of facts
+        profiles:
+          type: array
+          items:
+            type: object
+            required: [name, link, thumbnail]
+            properties:
+              name:
+                type: string
+                description: Profile platform name
+              link:
+                type: string
+                description: Profile URL
+              thumbnail:
+                type: string
+                description: Profile icon URL
+        people_also_search_for:
+          type: array
+          items:
+            type: object
+            required: [query, link]
+            properties:
+              query:
+                type: string
+                description: Related search query
+              link:
+                type: string
+                description: Search URL for the related query
+        thumbnail:
+          type: string
+          description: Main image URL for the entity
+
+    OrganicResult:
+      type: object
+      required: [position, title, link, snippet, favicon]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Title of the result
+        link:
+          type: string
+          description: URL of the result
+        source:
+          type: string
+          description: Source domain
+        snippet:
+          type: string
+          description: Description snippet
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted words from the snippet
+        date:
+          type: string
+          description: Date information if available
+        favicon:
+          type: string
+          description: Favicon URL
+        sitelinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sitelink'
+
+    Sitelink:
+      type: object
+      required: [title, link, snippet]
+      properties:
+        title:
+          type: string
+          description: Sitelink title
+        link:
+          type: string
+          description: Sitelink URL
+        tracking_link:
+          type: string
+          description: Tracking URL for ads
+        snippet:
+          type: string
+          description: Sitelink description
+
+    TopStory:
+      type: object
+      required: [title, link, source, date, snippet, thumbnail]
+      properties:
+        title:
+          type: string
+          description: News article title
+        link:
+          type: string
+          description: Article URL
+        source:
+          type: string
+          description: News source name
+        date:
+          type: string
+          description: Publication date
+        snippet:
+          type: string
+          description: Article excerpt
+        thumbnail:
+          type: string
+          description: Article thumbnail URL
+
+    InlineImage:
+      type: object
+      required: [title, source, original, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Image title
+        source:
+          type: object
+          required: [name, link]
+          properties:
+            name:
+              type: string
+              description: Source website name
+            link:
+              type: string
+              description: Source page URL
+        original:
+          type: object
+          required: [link, height, width]
+          properties:
+            link:
+              type: string
+              description: Full-size image URL
+            height:
+              type: integer
+              description: Image height in pixels
+            width:
+              type: integer
+              description: Image width in pixels
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+
+    InlineVideo:
+      type: object
+      required: [position, title, link, video_link, source, channel, description, views, duration, date, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in video results
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video page URL
+        video_link:
+          type: string
+          description: Embed URL for the video
+        source:
+          type: string
+          description: Video platform name
+        channel:
+          type: string
+          description: Channel or uploader name
+        description:
+          type: string
+          description: Video description
+        views:
+          type: integer
+          description: View count
+        duration:
+          type: string
+          description: Video duration
+        date:
+          type: string
+          description: Upload date
+        thumbnail:
+          type: string
+          description: Video thumbnail URL
+
+    RelatedSearch:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: DuckDuckGo search URL for this query
+
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to retrieve the next page of results
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

@@ -1,0 +1,602 @@
+openapi: 3.0.0
+info:
+  title: Airbnb Property API
+  description: |
+    Retrieve detailed information about a specific Airbnb property, including title, description, host details, pricing, availability, amenities, sleeping arrangements, ratings, location, images, and policies.
+
+    **Cross-linking**: The `property_id` and `booking_token` parameters required by this API are obtained from the Airbnb Search API results. Each property in the search response includes an `id` (use as `property_id`) and a `booking_token` (preferred — preserves dates and guest counts).
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Airbnb Property
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to `airbnb_property` for this API.
+          schema:
+            type: string
+            enum: ["airbnb_property"]
+            default: "airbnb_property"
+        - name: property_id
+          in: query
+          required: false
+          description: Airbnb property ID. Required if `booking_token` is not provided. Obtained from Airbnb Search API results or Airbnb URLs.
+          schema:
+            type: string
+        - name: booking_token
+          in: query
+          required: false
+          description: Token from Airbnb Search API results that contains property ID, dates, and guest counts. Required if `property_id` is not provided. Preferred over `property_id` because it preserves search context and enables full pricing.
+          schema:
+            type: string
+        - name: check_in_date
+          in: query
+          required: false
+          description: 'Check-in date in YYYY-MM-DD format. Required when `check_out_date` is provided. Required together with `check_out_date` to retrieve pricing.'
+          schema:
+            type: string
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+        - name: check_out_date
+          in: query
+          required: false
+          description: 'Check-out date in YYYY-MM-DD format. Must be after `check_in_date`.'
+          schema:
+            type: string
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+        - name: adults
+          in: query
+          required: false
+          description: Number of adult guests.
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 16
+        - name: children
+          in: query
+          required: false
+          description: Number of children.
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 15
+        - name: infants
+          in: query
+          required: false
+          description: Number of infants.
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 5
+        - name: pets
+          in: query
+          required: false
+          description: Number of pets.
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 5
+        - name: airbnb_domain
+          in: query
+          required: false
+          description: Airbnb domain to use. Affects language and regional results.
+          schema:
+            type: string
+            enum: ["airbnb.com", "sw.airbnb.com", "sq.airbnb.com", "ar.airbnb.com", "airbnb.com.ar", "airbnb.am", "airbnb.com.au", "airbnb.at", "airbnb.az", "airbnb.be", "fr.airbnb.be", "airbnb.com.bz", "airbnb.com.bo", "airbnb.ba", "airbnb.com.br", "bg.airbnb.com", "airbnb.ca", "fr.airbnb.ca", "airbnb.cl", "airbnb.cn", "airbnb.com.co", "airbnb.co.cr", "hr.airbnb.com", "airbnb.cz", "airbnb.dk", "airbnb.com.ec", "airbnb.com.sv", "airbnb.com.ee", "airbnb.fi", "airbnb.fr", "ka.airbnb.com", "airbnb.de", "airbnb.gr", "airbnb.com.gt", "airbnb.gy", "airbnb.com.hn", "airbnb.com.hk", "airbnb.hu", "airbnb.is", "airbnb.co.in", "hi.airbnb.co.in", "kn.airbnb.co.in", "mr.airbnb.co.in", "airbnb.co.id", "airbnb.ie", "ga.airbnb.ie", "he.airbnb.com", "airbnb.it", "airbnb.jp", "airbnb.lv", "airbnb.lt", "airbnb.lu", "de.airbnb.lu", "airbnb.com.my", "mt.airbnb.com.mt", "airbnb.mx", "airbnb.me", "airbnb.nl", "airbnb.co.nz", "airbnb.com.ni", "mk.airbnb.com", "airbnb.no", "airbnb.com.pa", "airbnb.com.py", "airbnb.com.pe", "airbnb.com.ph", "airbnb.pl", "airbnb.pt", "airbnb.com.ro", "airbnb.ru", "airbnb.rs", "airbnb.com.sg", "sk.airbnb.com", "airbnb.si", "xh.airbnb.co.za", "zu.airbnb.co.za", "airbnb.co.kr", "airbnb.cat", "airbnb.es", "airbnb.se", "fr.airbnb.ch", "airbnb.ch", "it.airbnb.ch", "airbnb.com.tw", "th.airbnb.com", "airbnb.com.tr", "airbnb.com.ua", "airbnb.ae", "airbnb.co.uk", "zh.airbnb.com", "zh-t.airbnb.com", "es.airbnb.com", "airbnb.co.ve", "airbnb.com.vn"]
+            default: "airbnb.com"
+        - name: currency
+          in: query
+          required: false
+          description: Currency code (ISO 4217) for pricing.
+          schema:
+            type: string
+            enum: ["USD", "AUD", "BRL", "BGN", "BAM", "CAD", "CLP", "CNY", "COP", "CRC", "CZK", "DKK", "EGP", "AED", "EUR", "GHS", "GTQ", "HNL", "HKD", "HUF", "INR", "IDR", "ILS", "JPY", "KZT", "KES", "MYR", "MXN", "MAD", "TWD", "NZD", "NOK", "PEN", "PHP", "PLN", "GBP", "QAR", "RON", "RUB", "SAR", "SGD", "ZAR", "KRW", "SEK", "CHF", "THB", "TRY", "UGX", "UAH", "UYU", "VND"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    PropertyResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        property:
+          $ref: '#/components/schemas/Property'
+        host:
+          $ref: '#/components/schemas/Host'
+        error:
+          type: string
+          description: Error message returned when the property cannot be found or parsed.
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Airbnb URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: The engine used for this search
+        airbnb_domain:
+          type: string
+          description: The Airbnb domain used for this search
+        currency:
+          type: string
+          description: The currency used for pricing
+        booking_token:
+          type: string
+          description: The booking token used for this search
+        property_id:
+          type: string
+          description: The property ID used for this search
+        check_in_date:
+          type: string
+          description: The check-in date used for this search
+        check_out_date:
+          type: string
+          description: The check-out date used for this search
+        adults:
+          type: string
+          description: The number of adults used for this search
+        children:
+          type: string
+          description: The number of children used for this search
+        infants:
+          type: string
+          description: The number of infants used for this search
+        pets:
+          type: string
+          description: The number of pets used for this search
+
+    Property:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique property listing ID
+        title:
+          type: string
+          description: Property title
+        description:
+          type: string
+          description: Property description with newlines preserved
+        link:
+          type: string
+          description: URL to the property page on Airbnb
+        rating:
+          type: number
+          format: float
+          description: Average rating score
+        reviews:
+          type: integer
+          description: Total number of reviews
+        is_guest_favorite:
+          type: boolean
+          description: Whether the property is marked as a guest favorite by Airbnb
+        highlights:
+          type: array
+          description: Notable highlights about the property
+          items:
+            $ref: '#/components/schemas/Highlight'
+        is_booking_available:
+          type: boolean
+          description: Present and `true` when pricing was retrieved successfully (requires `booking_token` or `check_in_date` + `check_out_date`)
+        is_booking_unavailable:
+          type: boolean
+          description: Present and `true` when pricing could not be retrieved for the requested dates
+        price:
+          $ref: '#/components/schemas/Price'
+        guest_capacity:
+          type: integer
+          description: Maximum number of guests allowed
+        accomodations:
+          type: array
+          description: List of accommodation summary items (e.g., bedroom and bathroom counts)
+          items:
+            type: string
+        sleeping_arrangements:
+          type: array
+          description: Bedroom-by-bedroom sleeping arrangements
+          items:
+            $ref: '#/components/schemas/SleepingArrangement'
+        amenities:
+          type: array
+          description: List of amenities offered (and explicitly not offered) at the property
+          items:
+            $ref: '#/components/schemas/Amenity'
+        property_ratings:
+          type: array
+          description: Rating breakdown by category (cleanliness, accuracy, etc.)
+          items:
+            $ref: '#/components/schemas/PropertyRating'
+        cancellation_policy:
+          $ref: '#/components/schemas/CancellationPolicy'
+        house_rules:
+          $ref: '#/components/schemas/HouseRules'
+        safety_policies:
+          type: array
+          description: Safety policies and property notices
+          items:
+            $ref: '#/components/schemas/SafetyPolicy'
+        location:
+          $ref: '#/components/schemas/Location'
+        gps_coordinates:
+          $ref: '#/components/schemas/GpsCoordinates'
+        images:
+          type: array
+          description: Preview images of the property
+          items:
+            $ref: '#/components/schemas/Image'
+
+    Highlight:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Highlight title
+        description:
+          type: string
+          description: Highlight subtitle or supporting text
+
+    SleepingArrangement:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Room title (e.g., "Bedroom 1")
+        beds:
+          type: array
+          description: Bed entries for the room
+          items:
+            type: string
+        images:
+          type: array
+          description: Images of the sleeping arrangement (when available)
+          items:
+            $ref: '#/components/schemas/Image'
+
+    Amenity:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Amenity name
+        is_available:
+          type: boolean
+          description: Present and `true` when the amenity is offered
+        is_not_available:
+          type: boolean
+          description: Present and `true` when the amenity is explicitly listed as not offered
+
+    PropertyRating:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Rating category label (e.g., "Cleanliness")
+        value:
+          type: number
+          format: float
+          description: Rating value for the category
+
+    Price:
+      type: object
+      properties:
+        total_price:
+          type: string
+          description: Formatted total price for the stay
+        extracted_total_price:
+          type: number
+          format: float
+          description: Numeric total price extracted from `total_price`
+        qualifier:
+          type: string
+          description: Pricing qualifier label (e.g., "$249.00 x 7 nights")
+        extracted_qualifier:
+          type: integer
+          description: Numeric qualifier extracted from `qualifier`
+        original_price:
+          type: string
+          description: Formatted original price before discount
+        extracted_original_price:
+          type: number
+          format: float
+          description: Numeric original price extracted from `original_price`
+        discount:
+          type: string
+          description: Formatted discount amount
+        extracted_discount:
+          type: number
+          format: float
+          description: Numeric discount amount extracted from `discount`
+        taxes:
+          type: string
+          description: Formatted tax amount included in `total_price`
+        extracted_taxes:
+          type: number
+          format: float
+          description: Numeric tax amount extracted from `taxes`
+        price_per_qualifier:
+          type: string
+          description: Formatted price per qualifier unit (e.g., per night)
+        extracted_price_per_qualifier:
+          type: number
+          format: float
+          description: Numeric price per qualifier extracted from `price_per_qualifier`
+        breakdown:
+          type: array
+          description: Itemized pricing breakdown
+          items:
+            $ref: '#/components/schemas/PriceBreakdownItem'
+        currency:
+          type: string
+          description: Currency code for the prices (ISO 4217)
+
+    PriceBreakdownItem:
+      type: object
+      properties:
+        description:
+          type: string
+          description: Description of the line item
+        price:
+          type: string
+          description: Formatted price for the line item
+        extracted_price:
+          type: number
+          format: float
+          description: Numeric price extracted from `price`
+
+    CancellationPolicy:
+      type: object
+      properties:
+        description:
+          type: string
+          description: Human-readable cancellation policy description
+        start_datetime:
+          type: string
+          description: Start of the cancellation window in ISO 8601 format
+        end_datetime:
+          type: string
+          description: End of the cancellation window in ISO 8601 format
+
+    HouseRules:
+      type: object
+      properties:
+        check_in:
+          type: string
+          description: Check-in time or window
+        check_out:
+          type: string
+          description: Check-out time
+        checking_system:
+          type: string
+          description: Self check-in method or system used by the property
+        during_your_stay:
+          type: array
+          description: Short rule labels that apply during the stay (e.g., "No smoking", "Quiet hours 9:00 PM - 8:00 AM"). The host's free-text rules are not included.
+          items:
+            type: string
+
+    SafetyPolicy:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Safety policy title
+        description:
+          type: string
+          description: Safety policy description
+
+    Location:
+      type: object
+      properties:
+        name:
+          type: string
+          description: City and region of the property (e.g., "Rome, Lazio, Italy")
+        description:
+          type: string
+          description: Location description with newlines preserved
+
+    GpsCoordinates:
+      type: object
+      properties:
+        latitude:
+          type: number
+          format: float
+          description: Latitude of the property
+        longitude:
+          type: number
+          format: float
+          description: Longitude of the property
+
+    Image:
+      type: object
+      properties:
+        caption:
+          type: string
+          description: Accessibility caption for the image
+        link:
+          type: string
+          description: URL of the image
+
+    Host:
+      type: object
+      description: |
+        The host object varies by property. Properties using Airbnb's modern "Meet your host" section return the full host card with rating, reviews, time-as-host, response stats, and any cohosts. Older listings return a host profile section with `joined`, `registration_number`, and a subset of the fields. All fields below are optional; consumers should treat any missing field as not present.
+      properties:
+        id:
+          type: string
+          description: Unique host identifier (modern host card only)
+        name:
+          type: string
+          description: Host display name
+        profile_link:
+          type: string
+          description: URL to the host's Airbnb profile page (modern host card only)
+        about:
+          type: string
+          description: About-the-host description with newlines preserved
+        is_superhost:
+          type: boolean
+          description: Whether the host is a Superhost
+        is_verified:
+          type: boolean
+          description: Whether the host's identity is verified
+        is_airbnb_managed:
+          type: boolean
+          description: Whether the listing is managed by Airbnb rather than by the host directly. Only returned when true.
+        rating:
+          type: number
+          format: float
+          description: Average host rating (modern host card only)
+        reviews:
+          type: integer
+          description: Total number of host reviews
+        time_as_host:
+          $ref: '#/components/schemas/TimeAsHost'
+        facts:
+          type: array
+          description: Short host highlights (e.g., languages spoken, profession)
+          items:
+            type: string
+        joined:
+          type: string
+          description: When the host joined Airbnb (legacy host profile only)
+        registration_number:
+          type: string
+          description: Property registration number, where required by local law (legacy host profile only)
+        response_rate:
+          type: string
+          description: Formatted response rate (e.g., "100%")
+        extracted_response_rate:
+          type: integer
+          description: Numeric response rate extracted from `response_rate`
+        response_time:
+          type: string
+          description: Typical response time (e.g., "within an hour")
+        avatar:
+          type: string
+          description: URL of the host's profile picture
+        cohosts:
+          type: array
+          description: Cohosts on the listing (modern host card only)
+          items:
+            $ref: '#/components/schemas/Cohost'
+
+    TimeAsHost:
+      type: object
+      properties:
+        years:
+          type: integer
+          description: Years hosting on Airbnb
+        months:
+          type: integer
+          description: Additional months hosting beyond `years`
+        days:
+          type: integer
+          description: Additional days hosting beyond `years` and `months`
+
+    Cohost:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique cohost identifier
+        name:
+          type: string
+          description: Cohost display name
+        profile_link:
+          type: string
+          description: URL to the cohost's Airbnb profile page
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

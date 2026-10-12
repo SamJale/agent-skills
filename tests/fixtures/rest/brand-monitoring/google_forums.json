@@ -1,0 +1,210 @@
+{
+  "search_metadata": {
+    "id": "search_1r3VbxvXpgta35za5vB26gOP",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:20Z",
+    "request_time_taken": 4.69,
+    "parsing_time_taken": 0.02,
+    "total_time_taken": 4.71,
+    "request_url": "https://www.google.com/search?q=searchapi&oq=searchapi&gl=us&hl=en&udm=18&tbs=&ie=UTF-8",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_1r3VbxvXpgta35za5vB26gOP.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_1r3VbxvXpgta35za5vB26gOP"
+  },
+  "search_parameters": {
+    "engine": "google_forums",
+    "q": "searchapi",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "searchapi",
+    "total_results": 120000,
+    "time_taken_displayed": 0.38,
+    "detected_location": "Iredell County, North Carolina",
+    "did_you_mean": "search api",
+    "has_no_results_for": false
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Google Custom Search API is closing. Need affordable ...",
+      "link": "https://www.reddit.com/r/googlecloud/comments/1qp4mlz/google_custom_search_api_is_closing_need/",
+      "source": "Reddit · r/googlecloud",
+      "domain": "www.reddit.com",
+      "displayed_link": "20+ comments  ·  4 months ago",
+      "snippet": "Each API call to Vertex is limited to searching 50 domains. Previously, in custom search, you could search globally across all domains in a ...",
+      "sitelinks": {
+        "list": [
+          {
+            "title": "Anyone Using Search APIs as a Data Source? - Reddit",
+            "link": "https://www.reddit.com/r/datascience/comments/1mxyprj/anyone_using_search_apis_as_a_data_source/",
+            "answer_count": 15,
+            "date": "Aug 23, 2025"
+          },
+          {
+            "title": "What is the best Google SearchAPI? : r/learnpython ...",
+            "link": "https://www.reddit.com/r/learnpython/comments/1cidmbw/what_is_the_best_google_searchapi/",
+            "answer_count": 2,
+            "date": "May 2, 2024"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 2,
+      "title": "How can I use the search api?",
+      "link": "https://community.openai.com/t/how-can-i-use-the-search-api/1003091",
+      "source": "OpenAI Developer Community",
+      "domain": "community.openai.com",
+      "displayed_link": "https://community.openai.com › how-can-i-use-the-sear...",
+      "snippet": "Currently there is no support for web search via API. If you would like to try search via API, the simplest is to use Perplexity AI's “online” suite of models.",
+      "snippet_highlighted_words": [
+        "no support for web search via API"
+      ],
+      "date": "Nov 3, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAR2LVAAAAEnRSTlMAMlFAIfb/1ggSYbPDg+pxnOCDnJWcAAAAv0lEQVR4AcXQMW7EIAAF0cHAGIyN4f6XjZwGxcrW+9rRbz5fFrbIBym7a0yhwFv1AJpmT97OC0LPEWi+2i00b9gq7IOFkqdEIe16ETMLe0PiZDhI01uWJE/U1jxgM7McOzwxQLAHmGPFrVOsoQP0YaNaVjVxeU6eGBD6tuKVC/X0gMP4jmR/P5h95icWC4txupVn2584Byw5sumAZMTXu9cEKjQvqpG/+gxw2wqMwdtQbVCG/KOSpnoWPqiJL/sBFpkGhRkrfIQAAAAASUVORK5CYII="
+    },
+    {
+      "position": 3,
+      "title": "[Dispute] SearchApi, LLC v. SerpApi, LLC #325",
+      "link": "https://github.com/gnh1201/welsonjs/discussions/325",
+      "source": "GitHub",
+      "domain": "github.com",
+      "displayed_link": "https://github.com › gnh1201 › welsonjs › discussions",
+      "snippet": "In summary, the switch to SerpApi was driven by the requirements of a major customer, not by false claims or improper conduct. We value the ...",
+      "date": "Sep 3, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX////4+Pi3ubtvcnZNUVU+Q0cpLjLr6+x3en0sMTYkKS59gIORk5aUl5n8/Pzw8PFTV1tbX2Pc3d5DSEzn5+g3PECLjpFKTlKFh4qxs7XCxMUuMze/wcLh4uPV1tZzd3o/Q0jOz9CmqKpjZ2qfoaTxAyfNAAABPUlEQVR4AW3TBYKDMBQE0AltAgzuzur9z7ibH5oKfWjc4UEFl6s2Rl8vgcJZGMX04iTEM5UaPomzHA+KkidVAa/WfKNpffMd32oKCHUlWfb27Q19ZSMVrNHGTMDckMtQLqSegdXGpvi3Sf93W9UudRby2WzsEgL4oMvwoqY1AsrQNfFipbXkCGh1BV6oT1pfRwvfOJlo9ZA5NAonStbmB1pawBuDTAgkX4MzV/eC2H3e0C7lk1aBEzd+7SpigJOZVoXx+J5UxzADil+8+KZYoRaK5y2WZxSdgm0j+dakzkIc2kzT6W3IcFnDTzdt4sKbWMqkpNl229IMsfMmg6UaMsJXmv4qCMXDoI4mO5oADwyFDnGoO3KI0jSHQ6E3eJum5TP4Y+EVyUOGXHZjgWd7ZEwOJzZRjbPQt7mF8P4AzsYZpmkFLF4AAAAASUVORK5CYII="
+    },
+    {
+      "position": 4,
+      "title": "Brave Search API vs Scrapeless Deep SERP API",
+      "link": "https://community.n8n.io/t/why-scrapeless-deep-serp-api-outperforms-brave-search-api-for-real-world-data-use-cases/134586",
+      "source": "n8n Community",
+      "domain": "community.n8n.io",
+      "displayed_link": "https://community.n8n.io › why-scrapeless-deep-serp-a...",
+      "snippet": "In this post, we'll compare Brave Search API with the Scrapeless Deep SERP API, which provides direct access to structured Google Search results.",
+      "snippet_highlighted_words": [
+        "Brave Search API"
+      ],
+      "date": "Jun 18, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEzqS3HqS3HqS3HqS3HrS3HqS3HqS3HqS3HqS3HqS3EQEzAQEzAQEzAQEzDqS3HqS3HqS3HdpweHAAAAEnRSTlMAlvD/0SHkOXyHE6D/Zc2rYoPTwZSQAAAAfklEQVR4AcWSVQKFIAAEVxbpvP9hX6fUp6Pk0IBT2QTlPnCKd3TXGaodGwX+0JL8dBL8H5icSYM7ltLBHodVr1T8L8iHmAIyXmRSanxlSAkFDU+Z0PIddiXLTObvYlqp2m18JQ3q/QAqBRp+js41UsuxfF2Xa6+ruej5EzmfKw+KA8b1Da2OAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 5,
+      "title": "Update: Search API Access for Help Desk Users",
+      "link": "https://developer.sailpoint.com/discuss/t/update-search-api-access-for-help-desk-users/202029",
+      "source": "SailPoint Developer Community",
+      "domain": "developer.sailpoint.com",
+      "displayed_link": "https://developer.sailpoint.com › ... › Product News",
+      "snippet": "We have updated API enforcement to ensure Help Desk users do not have access to the Search API. This matches our published User Level Access ...",
+      "snippet_highlighted_words": [
+        "Search API"
+      ],
+      "date": "Apr 8, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAAllBMVEVHcEwtMaMAM6FvLqfWH7AAN6QAM6FGMKTPJrAAM6EDM6HUJbHMJ7AAVLnMJ7DNJ7AAMqGrKq3MJ7AAM6GNLKrMJ7DMJ7AAX8EAM6EAMaDLI68AS7IASrDSSrvTS7vTTLwAlu4ActAAcs8Ac9C2fdLlgdThf9L2v/MAcc6XedDhf9JadM8Acc7jf9IAcc4Acc4Acc6PeNBZZFdGAAAAMnRSTlMAYrH/FoT//81C/v9NHv/58f+O1/9O+zUN////+fn/rA+B6f////8H///n/6DbVbK/otm0QasAAADYSURBVHgBfc/RFsFADEXRoA0MAYACKAXw/z9nqrGympl2v+Y+nICrAuWqtQDKhFhvQIkmYsu0oVAHLepCoR5afRpAgSGmRkRBUeBPzZC/s4KZuiEa+wOZHUzA1cI/sgbeQNYncjurKEZkNXQg4zdIdU4xI2/kO2eYZ0h1DtWAMoEKVG9IZ4hC3pDOJjL9BnfqQHmDO3tzD7NgAYRRFC0dK7beAGx3+4PjGGdOZ0h1dvsk7xKfUldgzuYWy52dYXpXA3vXZGMHD/B6vpKUuqvNO0mO+q43H2BfngEk7YVUH6oAAAAASUVORK5CYII="
+    },
+    {
+      "position": 6,
+      "title": "Search Accuracy of Microsoft Graph Search API",
+      "link": "https://learn.microsoft.com/en-us/answers/questions/5917427/search-accuracy-of-microsoft-graph-search-api",
+      "source": "Microsoft Learn",
+      "domain": "learn.microsoft.com",
+      "displayed_link": "https://learn.microsoft.com › en-us › answers › questions",
+      "snippet": "Microsoft Graph Search is primarily keyword-based (lexical) with ranking, rather than a true semantic search engine. While Microsoft 365 ...",
+      "snippet_highlighted_words": [
+        "Microsoft Graph Search"
+      ],
+      "date": "5 days ago",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABnRSTlMAAAAAAABupgeRAAAAWklEQVR4AWP4FKBEJPrip8wABrV7GOp3EYtGhgWjFoxaMGrBqAXf/OSIRD995CEWVO9hqN1FLBoOYNlnotF3iI7/O4lHQOVL3hONPo9agB2NWjBqwagFoxYAAB2zMZ7bQW2tAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 7,
+      "title": "Programmable Search Engine and Custom Search API",
+      "link": "https://meta.discourse.org/t/google-search-for-discourse-ai-programmable-search-engine-and-custom-search-api/307107",
+      "source": "Discourse Meta",
+      "domain": "meta.discourse.org",
+      "displayed_link": "https://meta.discourse.org › Documentation › Integrations",
+      "snippet": "Deprecation Notice (March 2026): Google has discontinued the “Search the entire web” option for Programmable Search Engines.",
+      "date": "May 7, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAz1BMVEX////6+vqwsLBoaGgnJycGBgYrKytwcHC6urqdnZ0AAABQUFCAgIBJSUllDRWpFiTNIyPNJBymFhJLAACGhoaMjIyyGCfjNiXwUhv2nWL7xYb+q3KsSSvJycnq6urmPxz0j1X+9bD//Lb/+bP//7e8qnKUlJQrhVw8PDyZ1o4AQFe93o0Ahpb6wIMAoa6EynITo8JCAAAAqlEklsrndU91w2gIrawbZIoVAAAAqH4qoNxvMB+r2pMGFx5raU5ehmgASlAAOF8AhqIWqs/z8/Mi30XvAAAA1klEQVR4AcWSNUJEQRAFqwV3d4kIiTgC1+YURIS4u8Pqd4/3JSM1084AJLltrJ8aOJZuOwnW5NFE9kwnSz+n2uAS6BsYf8jDpU+YDBAiT8DCeWZ2O2BjoUZGN4Dr3M+9C3xsTLsAmJ0HX9OfGiYSMbq6Cz+k8CyESSaq8JVPBVnM5QJbRfiYIlc4L8CdrEBmMFaAJ2vd+OOiexnuX0l41nn349isJ9BGZeNRcRMx+MkVYRwOwto9LbwE/37bRZiXfCYpVTXxSQNsTSzeFyfhMD4d0WXA6gEuSCr6yoqKhAAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 8,
+      "title": "Creating SearchAPI searches without using Views",
+      "link": "https://drupal.stackexchange.com/questions/48067/creating-searchapi-searches-without-using-views",
+      "source": "Drupal Answers",
+      "domain": "drupal.stackexchange.com",
+      "displayed_link": "https://drupal.stackexchange.com › questions › creating...",
+      "snippet": "Realized I never added a follow up. Search API Page does not solve all the cases, and this is possible in Drupal 8 as well.",
+      "snippet_highlighted_words": [
+        "Search API Page"
+      ],
+      "date": "Oct 18, 2012",
+      "sitelinks": {
+        "list": [
+          {
+            "title": "Programmatical use of Search API - Drupal Answers",
+            "link": "https://drupal.stackexchange.com/questions/107345/programmatical-use-of-search-api",
+            "answer_count": 2,
+            "date": "Mar 20, 2014"
+          },
+          {
+            "title": "Programatically use search api - Drupal Answers",
+            "link": "https://drupal.stackexchange.com/questions/225008/programatically-use-search-api",
+            "answer_count": 3,
+            "date": "Jan 9, 2017"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAolBMVEVHcEwACxEDIDMEEh0AAAAAAAAAAwQJDhIFAwsAAAAAFSIKOVwBITIAK0QALkkOY6s2ntEmvOkac60zotkPUo8MPm0VU4h21vCg4fTB7vkdp9ULv+kAsuXx9vqO1/E2//8Nb94JXJgNg9ELb7gOjN4Wo+gLecqR8vkIY7MNl+ANuuoIVp4zxu0MZaAITJIMaqcNeLlh2/O69fsj4PFv6vaQ4fQ1D6fAAAAAIHRSTlMAHUEnAgMUCwYBNHdQYGjXHPRek72kOfvK5KzIbiRvHM+rXjMAAAEGSURBVCiRzc7ZboMwEAVQFmNjsyVk6y5hFmMgpJD0/3+tYwMRRKHPvU8jHV/PGMa/zuYv3H2uEtqcXtbMfWtu4ufrqcWyarqb6F+fLI4zKfO86UTfPyo9FhnnPNN6eixGRZGm36DbToiPpZEyLc/ni9LqKt6XeCzLJEku0JV5c90u0a4VTtUHNNo6UZoWgNVufipyDK+tW/VvkclcEgPRO7mE0IPqAvKMx8h1R1WGTdv02jIF45GFMSaDUqSNWb5/2EfR3vMtZgM6GnURLAg9SBgGvmWbmDjLZhCEQMG8Oe20GbNUGIPetHO8FmNzjD5nunZgFx4MgdFx7qaYIoQcHRjoTNbzCxxqGw1Ou9fpAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 9,
+      "title": "LangChain offers a variety of tools ...",
+      "link": "https://www.facebook.com/groups/DeepNetGroup/posts/2081456135580591/",
+      "source": "Facebook · Artificial Intelligence & Deep Learning",
+      "domain": "www.facebook.com",
+      "displayed_link": "6 comments  ·  2 years ago",
+      "snippet": "... SearchApi:** Provides access to various search engines like Google, Bing, and DuckDuckGo. 1. **DataForSeoAPISearch:** Retrieves data from ...",
+      "snippet_highlighted_words": [
+        "SearchApi"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEVHcEwHZv8HaP8IZ/8IZ/8IZv8IaP8IZ/8HZv8Haf8IZ/8IaP8IZ/8AXv8AV/8AYv+SqP/P1//m6//e5f9wlP////+tvP9jiv82c/8IZ/8Iaf+fsf////////8AW/+wrobhAAAAH3RSTlMAM4bC6v1h7v8Z3UL///////7/////////wRiFwenBhp/Z0gAAAOhJREFUeAFtk0UWwzAMBWWHFHOZe/9bBn9Nr7Mdg5AiQjZt17WNFFTTDxwZ+kKNigvUmJw2XGF0dByx1jlnPTPDjiYqDofj8XQ4L9bsL6vozpedq13/3eJk4G+XXPIac8zBHUs5EIl48Q4Tws3ziiAZ5f7j3Vq7O5b0iOGE1Z0cRxpqS3mwSbbU4VHndukW8GwHiQ/BzUO2KceIw7MIqJBHyIZk/WwKSv6KcD/frlsqt/P5joBELJ+3iNZD8YDC/82zz1pWS5U1u5bmmY1JLdMQmVoaOIxmIdVYDXWUxVAD8Xp/FvnN1mEG0f0e5ixC4ikAAAAASUVORK5CYII="
+    },
+    {
+      "position": 10,
+      "title": "search api not working for episodes",
+      "link": "https://community.spotify.com/t5/Spotify-for-Developers/search-api-not-working-for-episodes/td-p/6018541",
+      "source": "The Spotify Community",
+      "domain": "community.spotify.com",
+      "displayed_link": "https://community.spotify.com › td-p",
+      "snippet": "I want to get the id of a podcast episode whose name I know with Python, but when I search with the API, the item parameter returns empty.",
+      "date": "Apr 20, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAS1BMVEUAXgAAZQAAbAEAdAIzgzp6q4aXu6S1y8nd4P3Y3PZKl0wHfgOmxLAYigRwrVg2lgmLuIHR2utQoAyUvI5aoxFopyBhpQ5gpBttpym4Rs+OAAAAGXRSTlP//////////////////////////////9fXRN7jagAAAS9JREFUeAFdkAWCxSAMBatI8SD773/SfUh16pkIZbqZb5bON748me7wbdfBdKXP2844Z/v2kE1UxYUQUuLGj27VKWcGcSIYTAUSeYt+OFg95AqWZ12vhTJdHnBiMOyhjDETGqxcSr0fFSxYNs+bRP0mJEfOwFisG6XGuSp35O5Mc4AGqHBaCu8gMVf3kSGE9mAowoKrNEZxzNDOVJxlAduACHdEk3GGozDSHhnzFvmYKSEJ0jkz2na4J4xEW0oJ0vmayaxN2cb6JzpA+tQlQQbrmdbREvlQc0UupUyY6/jdV3KbJOCpSgJZPhDhLOyS/HfjY7pkIiZeTleXIVOFvBSXkj5BQUM2TVlja9r26RqHzRmyUZBjY/2ZkmoclCpPPcg302lyP15Mfw9+P5wP/gHWOyJw+APcAwAAAABJRU5ErkJggg=="
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "Google custom search api reddit",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&udm=18&hl=en&gl=us&q=Google+custom+search+api+reddit&sa=X&ved=2ahUKEwipu8nD54uVAxWlmbAFHe9XIk0Q1QJ6BAg_EAE"
+    },
+    {
+      "query": "Google search API reddit",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&udm=18&hl=en&gl=us&q=Google+search+API+reddit&sa=X&ved=2ahUKEwipu8nD54uVAxWlmbAFHe9XIk0Q1QJ6BAhAEAE"
+    },
+    {
+      "query": "Best web search API",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&udm=18&hl=en&gl=us&q=Best+web+search+API&sa=X&ved=2ahUKEwipu8nD54uVAxWlmbAFHe9XIk0Q1QJ6BAhBEAE"
+    },
+    {
+      "query": "Google custom search reddit",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&udm=18&hl=en&gl=us&q=Google+custom+search+reddit&sa=X&ved=2ahUKEwipu8nD54uVAxWlmbAFHe9XIk0Q1QJ6BAhCEAE"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=searchapi&oq=searchapi&gl=us&hl=en&start=10&udm=18&tbs=&ie=UTF-8"
+  }
+}

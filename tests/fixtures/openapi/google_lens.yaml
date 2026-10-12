@@ -1,0 +1,329 @@
+openapi: 3.0.0
+info:
+  title: Google Lens API
+  description: |
+    The Google Lens API allows you to perform reverse image searches and find visually similar images, exact matches, 
+    and related searches based on an image URL. Google Lens uses advanced image recognition to identify
+    objects, products, text, and other visual elements in images.
+
+    **Cross-linking**: The visual matches and exact matches returned by this API often contain product information
+    that can be used with the Google Shopping API for more detailed product searches.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Lens Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: 'Search engine. Must be set to: `google_lens`'
+          schema:
+            type: string
+            enum: ["google_lens"]
+        - name: url
+          in: query
+          required: true
+          description: URL of the image to search. Must be a publicly accessible image URL.
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: false
+          description: Search query to refine results. Only available when search_type is all or visual_matches.
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Language code for the search interface.
+          schema:
+            type: string
+            default: "en"
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+        - name: country
+          in: query
+          required: false
+          description: Country code for localized results.
+          schema:
+            type: string
+            enum: ["ae", "af", "ag", "ai", "al", "am", "ao", "ar", "at", "au", "aw", "az", "ba", "bb", "bd", "be", "bg", "bh", "bj", "bn", "bo", "br", "bs", "bw", "by", "bz", "ca", "cg", "ch", "ci", "cl", "cm", "cn", "co", "cr", "cv", "cy", "cz", "de", "dk", "do", "dz", "ec", "ee", "eg", "es", "et", "fi", "fr", "gb", "ge", "gh", "gp", "gr", "gt", "gy", "hk", "hn", "hr", "ht", "hu", "id", "ie", "il", "in", "iq", "is", "it", "jm", "jo", "jp", "ke", "kg", "kh", "kr", "kw", "ky", "kz", "la", "lb", "lc", "lk", "lt", "lu", "lv", "ly", "ma", "md", "me", "mg", "mk", "ml", "mm", "mn", "mo", "mq", "mt", "mu", "mv", "mx", "my", "mz", "na", "nc", "ng", "ni", "nl", "no", "np", "nz", "om", "pa", "pe", "ph", "pk", "pl", "pr", "ps", "pt", "py", "qa", "re", "ro", "rs", "ru", "sa", "sc", "sd", "se", "sg", "si", "sk", "sn", "sr", "sv", "th", "tn", "tr", "tt", "tw", "tz", "ua", "ug", "us", "uy", "uz", "vc", "ve", "vn", "xk", "ye", "za", "zm", "zw"]
+        - name: search_type
+          in: query
+          required: false
+          description: Type of search results to return.
+          schema:
+            type: string
+            default: "all"
+            enum: ["all", "visual_matches", "exact_matches"]
+        - name: safe_search
+          in: query
+          required: false
+          description: Safe search filter. Only available for exact_matches search type.
+          schema:
+            type: string
+            enum: ["active", "blur", "off"]
+        - name: crop
+          in: query
+          required: false
+          description: Crop region of the image to search. Format is left;top;right;bottom with normalized coordinates between 0 and 1. For example, 0.0;0.0;0.5;1.0 searches the left half of the image.
+          schema:
+            type: string
+          example: "0.1;0.2;0.6;0.8"
+        - name: link
+          in: query
+          required: false
+          description: 'How result links are returned when Google serves them as an encrypted redirect (google.com/goto?url=...). Mainly affects search_type=exact_matches; visual_matches links are already direct. "raw" (default) returns the redirect as-is; "resolved" follows each one to its destination URL (best-effort). An exact_matches page can carry several hundred links, so resolving noticeably increases response time.'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: |     
+            Successful response. The schema varies based on the `search_type` parameter:
+              - `all`, `visual_matches` → Returns VisualMatchesResponse with visual_matches and related_searches
+              - `exact_matches` → Returns ExactMatchesResponse with exact_matches only
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/VisualMatchesResponse'
+                  - $ref: '#/components/schemas/ExactMatchesResponse'
+                  - $ref: '#/components/schemas/ErrorResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values, or Google Lens could not load the image from the `url` parameter.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the search request"
+        status:
+          type: string
+          description: "Status of the search request"
+        created_at:
+          type: string
+          format: date-time
+          description: "Timestamp when the search was created"
+        request_time_taken:
+          type: number
+          description: "Time taken to make the request in seconds"
+        parsing_time_taken:
+          type: number
+          description: "Time taken to parse the results in seconds"
+        total_time_taken:
+          type: number
+          description: "Total time taken for the search in seconds"
+        request_url:
+          type: string
+          description: "Google Lens URL for this search"
+        html_url:
+          type: string
+          description: "URL to view HTML results"
+        json_url:
+          type: string
+          description: "URL to view JSON results"
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: "Search engine used"
+        url:
+          type: string
+          description: "Image URL that was searched"
+        q:
+          type: string
+          description: "Search query used to refine results"
+        hl:
+          type: string
+          description: "Language code used"
+        country:
+          type: string
+          description: "Country code used"
+        search_type:
+          type: string
+          description: "Type of search performed"
+        safe_search:
+          type: string
+          description: "Safe search filter applied"
+    VisualMatchesResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        visual_matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/VisualMatch'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+    ExactMatchesResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        exact_matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExactMatch'
+    VisualMatch:
+      type: object
+      required: [position, title, link, source, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: "Position in the results"
+        title:
+          type: string
+          description: "Title of the visual match"
+        link:
+          type: string
+          description: "URL to the source of the visual match"
+        image:
+          type: object
+          required: [link, height, width]
+          properties:
+            link:
+              type: string
+              description: "Full resolution image URL"
+            height:
+              type: integer
+              description: "Image height in pixels"
+            width:
+              type: integer
+              description: "Image width in pixels"
+        source:
+          type: string
+          description: "Source website of the visual match"
+        thumbnail:
+          type: string
+          description: "Thumbnail image URL"
+        price:
+          type: string
+          description: "Price of the item if available"
+        extracted_price:
+          type: number
+          description: "Numeric price value extracted from the price string"
+        currency:
+          type: string
+          description: "ISO 4217 currency code when the displayed token identifies it unambiguously; omitted for shared symbols without seller context"
+        rating:
+          type: number
+          description: "Rating of the item"
+        reviews:
+          type: integer
+          description: "Number of reviews"
+        stock_information:
+          type: string
+          description: "Stock availability information"
+    ExactMatch:
+      type: object
+      required: [position, title, link, source, extensions]
+      properties:
+        position:
+          type: integer
+          description: "Position in the results"
+        title:
+          type: string
+          description: "Title of the exact match"
+        link:
+          type: string
+          description: "URL to the source of the exact match"
+        source:
+          type: string
+          description: "Source website of the exact match"
+        extensions:
+          type: array
+          items:
+            type: string
+          description: "Additional information snippets"
+        thumbnail:
+          type: string
+          description: "Thumbnail image URL"
+        price:
+          type: string
+          description: "Price of the item if available"
+        extracted_price:
+          type: number
+          description: "Numeric price value extracted from the price string"
+        currency:
+          type: string
+          description: "ISO 4217 currency code when the displayed token identifies it unambiguously; omitted for shared symbols without seller context"
+        stock_information:
+          type: string
+          description: "Stock availability information"
+    RelatedSearch:
+      type: object
+      required: [title, link, thumbnail]
+      properties:
+        title:
+          type: string
+          description: "Title of the related search"
+        link:
+          type: string
+          description: "URL to perform the related search"
+        thumbnail:
+          type: string
+          description: "Base64 data URI of the related search thumbnail"
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

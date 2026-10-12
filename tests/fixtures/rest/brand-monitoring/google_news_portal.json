@@ -1,0 +1,629 @@
+{
+  "search_metadata": {
+    "id": "search_mMjwVJvBznTK8pXl2vynp5OY",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:42Z",
+    "request_time_taken": 1.93,
+    "parsing_time_taken": 0.09,
+    "total_time_taken": 2.02,
+    "request_url": "https://news.google.com/search?q=SearchApi&hl=en-US&gl=US&ceid=US:en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mMjwVJvBznTK8pXl2vynp5OY.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mMjwVJvBznTK8pXl2vynp5OY"
+  },
+  "search_parameters": {
+    "engine": "google_news_portal",
+    "ceid": "US:en",
+    "q": "SearchApi"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "The Brave Search API shows exponential growth, emerging as the best search tool to power AI apps",
+      "link": "https://brave.com/blog/search-api-growth/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNWZkVzlMVDFjelVHOVBkelE0VFJDaUFSaTNBaWdCTWdhbFZJeXRwUVk=-w400-h224-p-df",
+      "iso_date": "2026-02-24T08:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 2,
+      "title": "SerpApi Files Suit Against SearchApi for Stealing Proprietary Technology",
+      "link": "https://www.prnewswire.com/news-releases/serpapi-files-suit-against-searchapi-for-stealing-proprietary-technology-302689903.html",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNDJSSEZJUW5SV1QwWjBNblJ5VFJEWEFSaklBU2dLTWdhQk1ZQ09JUW8=-w400-h224-p-df",
+      "iso_date": "2026-02-17T08:00:00Z",
+      "source": {
+        "name": "PR Newswire",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.prnewswire.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 3,
+      "title": "SearchApi moves to dismiss SerpApi suit born from a failed acquisition",
+      "link": "https://ppc.land/searchapi-moves-to-dismiss-serpapi-suit-born-from-a-failed-acquisition/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNTZWMUphVTFGdU1sbEdkamhuVFJDZkF4ampCU2dLTWdB=-w400-h224-p-df",
+      "iso_date": "2026-04-21T07:00:00Z",
+      "source": {
+        "name": "PPC Land",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://ppc.land&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 4,
+      "title": "Perplexity Launches Search API to Power Next-Gen AI Applications",
+      "link": "https://www.infoq.com/news/2025/09/perplexity-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNXdibDlwUlhRNVUyUmpOM1k0VFJDakFSaTJBaWdCTWdrQkVvaXVvV1RRcndF=-w400-h224-p-df",
+      "iso_date": "2025-09-30T07:00:00Z",
+      "source": {
+        "name": "infoq.com",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.infoq.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Robert Krzaczynski"
+      }
+    },
+    {
+      "position": 5,
+      "title": "Perplexity Says New Search API Accesses Same Infrastructure as Public Search Engine",
+      "link": "https://www.pymnts.com/news/artificial-intelligence/2025/perplexity-says-new-search-api-accesses-same-infrastructure-as-public-search-engine/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNUZPVzUyV1RoT1JXaFpkVGRrVFJDY0FoakpBeWdLTWdZVms1UW9OUWM=-w400-h224-p-df",
+      "iso_date": "2025-09-26T07:00:00Z",
+      "source": {
+        "name": "PYMNTS.com",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.pymnts.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 6,
+      "title": "Perplexity launches massive search API to take on Google’s dominance",
+      "link": "https://venturebeat.com/infrastructure/perplexity-launches-massive-search-api-to-take-on-googles-dominance",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVNaaTB3ZDNSR2NEaFNTRkZTVFJDZUF4amtCU2dLTWdZZGhJb0txZ2M=-w400-h224-p-df",
+      "iso_date": "2025-09-25T07:00:00Z",
+      "source": {
+        "name": "VentureBeat",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://venturebeat.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Michael Nuñez"
+      }
+    },
+    {
+      "position": 7,
+      "title": "From answer engine to infrastructure: Perplexity launches Search API for developers",
+      "link": "https://www.infoworld.com/article/4064296/from-answer-engine-to-infrastructure-perplexity-launches-search-api-for-developers.html",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNUhjVXN6YkhweGQwTllNbVl0VFJEd0FoakNCaWdLTWdtOWNJeVh1R1ZGU3dJ=-w400-h224-p-df",
+      "iso_date": "2025-09-26T07:00:00Z",
+      "source": {
+        "name": "InfoWorld",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.infoworld.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Taryn Plumb"
+      }
+    },
+    {
+      "position": 8,
+      "title": "Brave is the only search API offering true Zero Data Retention, unlocking growth and privacy compliance for AI companies",
+      "link": "https://brave.com/blog/search-api-zero-data-retention/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNU5jaTFwV1RkVlJIbG1YM1JKVFJDaUFSaTNBaWdCTWdhaGRJNnRxUVU=-w400-h224-p-df",
+      "iso_date": "2026-01-26T08:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 9,
+      "title": "Perplexity launches new Search API to power AI applications",
+      "link": "https://americanbazaaronline.com/2025/09/26/perplexity-launches-new-search-api-to-power-ai-applications-468154/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNVpkVmRLVkhkTVNucGpXV3h3VFJEZ0F4aUFCU2dLTWdB=-w400-h224-p-df",
+      "iso_date": "2025-09-26T07:00:00Z",
+      "source": {
+        "name": "The American Bazaar",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://americanbazaaronline.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 10,
+      "title": "What Are the Benefits of Perplexity Search API?",
+      "link": "https://analyticsindiamag.com/ai-news-updates/perplexity-announces-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNHpPRmhyWjBFd1gxZFJUblZsVFJDZkF4ampCU2dLTWdZeFJZcXZJUWs=-w400-h224-p-df",
+      "iso_date": "2025-09-26T07:00:00Z",
+      "source": {
+        "name": "Analytics India Magazine",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://analyticsindiamag.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Supreeth Koundinya"
+      }
+    },
+    {
+      "position": 11,
+      "title": "How to use the Brave Search API with OpenClaw",
+      "link": "https://brave.com/search/api/guides/use-with-openclaw/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2026-04-01T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 12,
+      "title": "Changes to the code search API",
+      "link": "https://github.blog/changelog/2023-03-10-changes-to-the-code-search-api/",
+      "iso_date": "2023-03-10T08:00:00Z",
+      "source": {
+        "name": "The GitHub Blog",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://github.blog&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 13,
+      "title": "Introducing the Relevance Search API",
+      "link": "https://www.microsoft.com/en-us/power-platform/blog/2020/10/13/introducing-relevance-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iJ0NnNVpOVk0xZWsxaVZqaHVVSFpmVFJEZkFSaWNCU2dLTWdNQklDdw=-w400-h224-p-df",
+      "iso_date": "2020-10-13T07:00:00Z",
+      "source": {
+        "name": "Microsoft",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.microsoft.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Miti Joshi"
+      }
+    },
+    {
+      "position": 14,
+      "title": "Brave Search API now features Place Search, a new endpoint for map applications",
+      "link": "https://brave.com/blog/place-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNWxlVzlvUjNKck1GSkJNbTFEVFJDaUFSaTNBaWdCTWdhdGhaVE5zUVk=-w400-h224-p-df",
+      "iso_date": "2026-02-26T08:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 15,
+      "title": "Brave earns SOC 2 Type II attestation for Brave Search API",
+      "link": "https://brave.com/blog/soc2/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNDViR3hTVXpsNlgyVkNWVU10VFJDaUFSaTNBaWdCTWdZcFpaQ3VyUVk=-w400-h224-p-df",
+      "iso_date": "2025-10-24T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 16,
+      "title": "Brave Software announces availability of the Brave Search API in the new AWS Marketplace AI Agents and Tools category",
+      "link": "https://brave.com/blog/search-api-aws-marketplace/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5TRzVsYlRVd05URkhXVmQyVFJDZkF4ampCU2dLTWdZZFU1UnNwUWM=-w400-h224-p-df",
+      "iso_date": "2025-07-16T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 17,
+      "title": "Brave releases its Search API, bringing independence and competition to the search landscape",
+      "link": "https://brave.com/blog/search-api-launch/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVJlbDlCYjJORVQwSlliRWhMVFJDVUF4ajJCU2dLTWdhaFZJNnNwUVk=-w400-h224-p-df",
+      "iso_date": "2023-05-30T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 18,
+      "title": "Brave Search API vs the Bing API",
+      "link": "https://brave.com/search/api/guides/brave-search-api-vs-bing-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2023-09-22T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 19,
+      "title": "Announcing Image and Video results in Brave Search API",
+      "link": "https://brave.com/blog/brave-search-api-update/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVJlbDlCYjJORVQwSlliRWhMVFJDVUF4ajJCU2dLTWdhaFZJNnNwUVk=-w400-h224-p-df",
+      "iso_date": "2023-09-21T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 20,
+      "title": "How to add Brave Search to Claude Desktop with MCP",
+      "link": "https://brave.com/search/api/guides/use-with-claude-desktop-with-mcp/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNDJXbXRZY25CamNWRnVXWEZoVFJESEF4aWlCU2dLTWdhSlFwQXBvUWM=-w400-h224-p-df",
+      "iso_date": "2025-05-06T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 21,
+      "title": "Integrate dynamic web content in your generative AI application using a web search API and Amazon Bedrock Agents",
+      "link": "https://aws.amazon.com/blogs/machine-learning/integrate-dynamic-web-content-in-your-generative-ai-application-using-a-web-search-api-and-amazon-bedrock-agents/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iJ0NnNDFSV0pMVlhCWE9FdEliVk13VFJDZUF4amtCU2dLTWdNSmdoUQ=-w400-h224-p-df",
+      "iso_date": "2024-09-20T07:00:00Z",
+      "source": {
+        "name": "Amazon Web Services (AWS)",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://aws.amazon.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 22,
+      "title": "How does the Brave Search API compare to other Web search API options?",
+      "link": "https://brave.com/search/api/guides/what-sets-brave-search-api-apart/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2023-09-22T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 23,
+      "title": "Brave Releases its Search API",
+      "link": "https://www.thurrott.com/cloud/web-browsers/283850/brave-releases-its-search-api",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVNabTlPTUVOM2QyMXJXRjlZVFJDZkF4amlCU2dLTWdhbFZhRE1wUWs=-w400-h224-p-df",
+      "iso_date": "2023-05-31T07:00:00Z",
+      "source": {
+        "name": "Thurrott.com",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.thurrott.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Paul Thurrott"
+      }
+    },
+    {
+      "position": 24,
+      "title": "Using Brave Search for higher quality training data and better AI",
+      "link": "https://brave.com/search/api/guides/using-brave-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2023-12-15T08:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 25,
+      "title": "How to use Brave Search with Open WebUI",
+      "link": "https://brave.com/search/api/guides/use-with-open-webui/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2024-05-02T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 26,
+      "title": "A Guide To Google’s Knowledge Graph Search API For SEO",
+      "link": "https://www.searchenginejournal.com/google-knowledge-graph-search-api/464370/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVFPVXB6WlZsaldGZFFaVTVUVFJDZkF4ampCU2dLTWdZQk5veExwZ2c=-w400-h224-p-df",
+      "iso_date": "2022-10-06T07:00:00Z",
+      "source": {
+        "name": "Search Engine Journal",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.searchenginejournal.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Ruth Everett"
+      }
+    },
+    {
+      "position": 27,
+      "title": "Slack Securely Powers Your Third-Party Agents With Your Business Context",
+      "link": "https://slack.com/blog/news/mcp-real-time-search-api-now-available",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNUVSMmxQUlZoUGVHMW5NWEY0VFJDcUJCaXFCQ2dLTWdtSklvaHdyZWFwTXdF=-w400-h224-p-df",
+      "iso_date": "2026-02-18T07:07:18Z",
+      "source": {
+        "name": "Slack",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://slack.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 28,
+      "title": "Bitbucket code search API is now available",
+      "link": "https://www.atlassian.com/blog/bitbucket/bitbucket-code-search-api-now-available",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNUNkVlJVUVdkR05UWkZkemt3VFJER0F4aWpCU2dLTWdhTk00ekpvUVU=-w400-h224-p-df",
+      "iso_date": "2018-04-05T07:00:00Z",
+      "source": {
+        "name": "Atlassian",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.atlassian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Andrew Mleczko"
+      }
+    },
+    {
+      "position": 29,
+      "title": "Microsoft hikes Bing Search API prices to “reflect technology investments”",
+      "link": "https://www.itpro.com/business/business-strategy/370107/microsoft-hikes-bing-search-api-prices",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVdlakJDZDJWQk9GUnVURFZ6VFJDZkF4amlCU2dLTWdhVlFZalNvQW8=-w400-h224-p-df",
+      "iso_date": "2023-02-21T08:00:00Z",
+      "source": {
+        "name": "IT Pro",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.itpro.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 30,
+      "title": "Mapping the AI software and services landscape",
+      "link": "https://brave.com/search/api/guides/mapping-the-ai-landscape/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNW5WMUpDZVhkVVgyNWxVbGwwVFJDUkF4ajhCU2dLTWdZSkk1RGxtUW8=-w400-h224-p-df",
+      "iso_date": "2025-05-06T07:00:00Z",
+      "source": {
+        "name": "Brave",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://brave.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 31,
+      "title": "Image results now available from the Custom Search API",
+      "link": "https://developers.googleblog.com/image-results-now-available-from-the-custom-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iJ0NnNUJabWhRVjNJMlRtUXhhVWRrVFJDWkF4anVCU2dLTWdNcEF5Zw=-w400-h224-p-df",
+      "iso_date": "2012-02-14T08:00:00Z",
+      "source": {
+        "name": "blog.google",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://developers.googleblog.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 32,
+      "title": "Code Search API",
+      "link": "https://github.blog/news-insights/product-news/code-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNUVSakl5TWpSaWVIRnhhVmd6VFJEUEFoaVVCeWdLTWdhQkpwSUhJZ2s=-w400-h224-p-df",
+      "iso_date": "2013-07-19T07:00:00Z",
+      "source": {
+        "name": "The GitHub Blog",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://github.blog&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Jason Rudolph"
+      }
+    },
+    {
+      "position": 33,
+      "title": "Anthropic unveils web search API for Claude AI",
+      "link": "https://www.techinasia.com/news/anthropic-unveils-web-search-api-claude-ai",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNWxXSFJ2VTIxME4xWjFTWFJ4VFJDakF4amNCU2dLTWdtSmNvd3lMYWk1TWdF=-w400-h224-p-df",
+      "iso_date": "2025-05-08T07:00:00Z",
+      "source": {
+        "name": "Tech in Asia",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.techinasia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 34,
+      "title": "What's Inside the Recent Massive Google Search API Leak?",
+      "link": "https://hackernoon.com/whats-inside-the-recent-massive-google-search-api-leak",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNXdTRlo0Vm1sQ1gybEZSamhJVFJDVEFSalhBaWdCTWdB=-w400-h224-p-df",
+      "iso_date": "2024-06-11T07:00:00Z",
+      "source": {
+        "name": "HackerNoon",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://hackernoon.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Vik Bogdanov"
+      }
+    },
+    {
+      "position": 35,
+      "title": "Brave Search API revamp makes web search useful for AI apps",
+      "link": "https://www.developer-tech.com/news/brave-search-api-revamp-makes-web-search-useful-for-ai-apps/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNTNWR0pqUzB0UVREZG5SbEl4VFJEZ0F4aUFCU2dLTWdZWlY0NHFLZ2M=-w400-h224-p-df",
+      "iso_date": "2026-02-13T15:24:20Z",
+      "source": {
+        "name": "Developer Tech News",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.developer-tech.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Ryan Daws"
+      }
+    },
+    {
+      "position": 36,
+      "title": "7 Free Web Search APIs for AI Agents",
+      "link": "https://www.kdnuggets.com/7-free-web-search-apis-for-ai-agents",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNUxNRGcwUzNsR1RIQkVkVmhHVFJDdEF4akxCU2dLTWdrQkFvUWppV1NTdHdB=-w400-h224-p-df",
+      "iso_date": "2025-09-16T07:00:00Z",
+      "source": {
+        "name": "KDnuggets",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.kdnuggets.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Abid Ali Awan"
+      }
+    },
+    {
+      "position": 37,
+      "title": "Microsoft ends Bing Search APIs on August 11, alternative costs 40-483% more",
+      "link": "https://ppc.land/microsoft-ends-bing-search-apis-on-august-11-alternative-costs-40-483-more/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNWhaVFZyTlVJMFluRlNiVGREVFJDZkF4ampCU2dLTWdhWklvS3NuUWc=-w400-h224-p-df",
+      "iso_date": "2025-06-09T07:00:00Z",
+      "source": {
+        "name": "PPC Land",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://ppc.land&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Luis Rijo"
+      }
+    },
+    {
+      "position": 38,
+      "title": "HabitNu Leverages Edamam’s Recipe Search API to Create Healthy Eating Habits",
+      "link": "https://asiafoodjournal.com/habitnu-leverages-edamam-recipe-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVpjR2w1WkY5V2JsUXhNWEl4VFJEWkF4aUlCU2dLTWdZVmhJcW9SUVE=-w400-h224-p-df",
+      "iso_date": "2022-12-30T08:00:00Z",
+      "source": {
+        "name": "Asia Food Journal",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://asiafoodjournal.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 39,
+      "title": "The Web Search API is Retiring",
+      "link": "https://developers.googleblog.com/the-web-search-api-is-retiring/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iJ0NnNW9lbGRKU2s1cmJtVlhUM1ZXVFJDSEF4aVBCaWdLTWdPNUJDNA=-w400-h224-p-df",
+      "iso_date": "2014-08-29T07:00:00Z",
+      "source": {
+        "name": "blog.google",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://developers.googleblog.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 40,
+      "title": "Using the TravelTime Search API to Generate an Isochrone",
+      "link": "https://www.geographyrealm.com/using-traveltime-search-api-generate-isochrone/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVFTVFpxWlRCblZIWmZOWEJIVFJEeEF4anBCQ2dLTWdhcE1wSk9JUWM=-w400-h224-p-df",
+      "iso_date": "2016-07-09T07:00:00Z",
+      "source": {
+        "name": "Geography Realm",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.geographyrealm.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 41,
+      "title": "Apple’s App Search API Validation Tool",
+      "link": "https://www.macstories.net/linked/apples-app-search-api-validation-tool/",
+      "iso_date": "2015-08-24T07:00:00Z",
+      "source": {
+        "name": "MacStories",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.macstories.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Federico Viticci"
+      }
+    },
+    {
+      "position": 42,
+      "title": "Gemini RAG capabilities power File Search API",
+      "link": "https://www.aicerts.ai/news/gemini-rag-capabilities-power-file-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNDVNRTVGVUdzNU4wMVphazFxVFJERUF4aW1CU2dLTWdtSlFZcld4S1J4U2dJ=-w400-h224-p-df",
+      "iso_date": "2025-11-06T08:00:00Z",
+      "source": {
+        "name": "AI CERTs",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.aicerts.ai&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 43,
+      "title": "Slack Launches Real-Time Search API, Transforming AI Collaboration Experience",
+      "link": "https://smallbiztrends.com/slack-launches-real-time-search-api-transforming-ai-collaboration-experience/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNUNSUzF6V1VkTVkwUmhXRWRXVFJDZkF4ampCU2dLTWdB=-w400-h224-p-df",
+      "iso_date": "2026-02-24T08:00:00Z",
+      "source": {
+        "name": "Small Business Trends",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://smallbiztrends.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 44,
+      "title": "Image Search with the AJAX Search API",
+      "link": "https://developers.googleblog.com/image-search-with-the-ajax-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iJ0NnNW9lbGRKU2s1cmJtVlhUM1ZXVFJDSEF4aVBCaWdLTWdPNUJDNA=-w400-h224-p-df",
+      "iso_date": "2007-07-23T07:00:00Z",
+      "source": {
+        "name": "blog.google",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://developers.googleblog.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 45,
+      "title": "Perplexity Launches the ‘Most Affordable’ GenAI Search API",
+      "link": "https://analyticsindiamag.com/ai-news-updates/perplexity-launches-the-most-affordable-genai-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNHpjRXhNVFZjeGJsQlNWa1V3VFJDZkF4ampCU2dLTWdZUktZNm5GZ28=-w400-h224-p-df",
+      "iso_date": "2025-01-22T08:00:00Z",
+      "source": {
+        "name": "Analytics India Magazine",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://analyticsindiamag.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 46,
+      "title": "How Y Combinator-backed Product Search API startup - Semantics3 is parsing e-commerce websites globally",
+      "link": "https://yourstory.com/2014/04/semantics3",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNW1NV1I0U0U0NWFYSk5RamcyVFJDSEF4aVBCaWdLTWdB=-w400-h224-p-df",
+      "iso_date": "2014-04-25T07:00:00Z",
+      "source": {
+        "name": "YourStory.com",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://yourstory.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Subodh Kolhe"
+      }
+    },
+    {
+      "position": 47,
+      "title": "Google app for Android updated with app-specific voice search API",
+      "link": "https://9to5google.com/2014/10/29/google-app-for-android-updated-with-app-specific-voice-search-api/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iL0NnNXdjRUZEVTNaSWFtcHlNMkZvVFJDMkF4aTlCU2dLTWdrSlFJcHdKT2FCNndF=-w400-h224-p-df",
+      "iso_date": "2014-10-29T07:00:00Z",
+      "source": {
+        "name": "9to5Google",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://9to5google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Mike Beasley"
+      }
+    },
+    {
+      "position": 48,
+      "title": "Effi launches loan product search API",
+      "link": "https://www.theadviser.com.au/tech/41809-effi-launches-product-search-api",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNVZWSFpXV21GM1JGZzNhREkxVFJEeUFoaThCaWdLTWdhTko0Q3BIZ28=-w400-h224-p-df",
+      "iso_date": "2021-07-22T07:00:00Z",
+      "source": {
+        "name": "The Adviser",
+        "favicon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theadviser.com.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Malavika Santhebennur"
+      }
+    },
+    {
+      "position": 49,
+      "title": "Search API for AI Agents: Top 10 Results Based on My Research",
+      "link": "https://editorialge.com/search-api-for-ai-agents/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iK0NnNUlPV3AxT0VkdmJrRTRhVnA0VFJDZkF4ampCU2dLTWdhQlVZaElxUWM=-w400-h224-p-df",
+      "iso_date": "2026-06-10T06:35:34Z",
+      "source": {
+        "name": "Editorialge",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://editorialge.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    },
+    {
+      "position": 50,
+      "title": "Anthropic amps Up Claude web search API for Real-Time Queries",
+      "link": "https://www.techjuice.pk/anthropic-amps-up-claude-web-search-api-for-real-time-queries/",
+      "thumbnail": "https://news.google.com/api/attachments/CC8iI0NnNDVlQzFXYjJWc2JqbHRkRGh6VFJDMEFSakFBaWdLTWdB=-w400-h224-p-df",
+      "iso_date": "2025-05-07T07:00:00Z",
+      "source": {
+        "name": "TechJuice",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.techjuice.pk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": "By Abdul Wasay"
+      }
+    }
+  ],
+  "menu_topics": [
+    {
+      "title": "U.S.",
+      "topic_token": "CAAqIggKIhxDQkFTRHdvSkwyMHZNRGxqTjNjd0VnSmxiaWdBUAE"
+    },
+    {
+      "title": "World",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Local",
+      "topic_token": "CAAqHAgKIhZDQklTQ2pvSWJHOWpZV3hmZGpJb0FBUAE"
+    },
+    {
+      "title": "Business",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Technology",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGRqTVhZU0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Entertainment",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNREpxYW5RU0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Sports",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Science",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp0Y1RjU0FtVnVHZ0pWVXlnQVAB"
+    },
+    {
+      "title": "Health",
+      "topic_token": "CAAqIQgKIhtDQkFTRGdvSUwyMHZNR3QwTlRFU0FtVnVLQUFQAQ"
+    }
+  ],
+  "related_publications": [
+    {
+      "title": "SearchApi"
+    }
+  ]
+}

@@ -1,0 +1,835 @@
+{
+  "search_metadata": {
+    "id": "search_6dAL2p4KqYsgpmx1zk7wnGOm",
+    "status": "Success",
+    "created_at": "2026-07-23T12:20:28Z",
+    "request_time_taken": 1.1,
+    "parsing_time_taken": 0.05,
+    "total_time_taken": 1.15,
+    "request_url": "https://www.youtube.com/results?search_query=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&gl=US&hl=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsgpmx1zk7wnGOm.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsgpmx1zk7wnGOm"
+  },
+  "search_parameters": {
+    "engine": "youtube",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "hl": "en",
+    "gl": "US"
+  },
+  "search_information": {
+    "total_results": 27230
+  },
+  "videos": [
+    {
+      "position": 1,
+      "id": "00Q0G84kq3M",
+      "title": "RAG vs. Fine Tuning",
+      "link": "https://www.youtube.com/watch?v=00Q0G84kq3M",
+      "description": "Get the guide to GAI, learn more → https://ibm.biz/BdKTbF Learn more about the technology → https://ibm.biz/BdKTbX Join Cedric ...",
+      "views": 436580,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "8:57",
+      "published_time": "1 year ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/00Q0G84kq3M/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBIz7Qt3JgizSPIU94pXxOEqp7Pnw",
+        "rich": "https://i.ytimg.com/vi/00Q0G84kq3M/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAkAmkSYW87SJS07xB7dj5mg2GIHw"
+      },
+      "key_moments": [
+        {
+          "title": "Introduction",
+          "start_seconds": 0,
+          "thumbnail": "https://i.ytimg.com/vi/00Q0G84kq3M/hqdefault_29000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDTe4SnVKzjxoFr220FoCT1E_Y2FA"
+        },
+        {
+          "title": "Retrieval Augmented Generation",
+          "start_seconds": 66,
+          "thumbnail": "https://i.ytimg.com/vi/00Q0G84kq3M/hqdefault_89500.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDwSW9DyWFSlflaZf3KOHeRc6oz1w"
+        },
+        {
+          "title": "Use Cases",
+          "start_seconds": 205,
+          "thumbnail": "https://i.ytimg.com/vi/00Q0G84kq3M/hqdefault_220000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCoxqDVJEIox_az6qGVF7b_Za_rsw"
+        },
+        {
+          "title": "Application Priorities",
+          "start_seconds": 357,
+          "thumbnail": "https://i.ytimg.com/vi/00Q0G84kq3M/hqdefault_384000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDQ8GmRD5jaq6CqHBjv2GIelkG_eQ"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "id": "zYGDpG-pTho",
+      "title": "RAG vs Fine-Tuning vs Prompt Engineering: Optimizing AI Models",
+      "link": "https://www.youtube.com/watch?v=zYGDpG-pTho",
+      "description": "Ready to become a certified watsonx AI Assistant Engineer? Register now and use code IBMTechYT20 for 20% off of your exam ...",
+      "views": 693841,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "13:10",
+      "published_time": "1 year ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/zYGDpG-pTho/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLADN_lsGiw7RtWpJY0_3drR8Kuikw",
+        "rich": "https://i.ytimg.com/vi/zYGDpG-pTho/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAE2MAfgDfpmJb8k1IjcE_zfQ91qA"
+      }
+    },
+    {
+      "position": 3,
+      "id": "UabBYexBD4k",
+      "title": "Is RAG Still Needed? Choosing the Best Approach for LLMs",
+      "link": "https://www.youtube.com/watch?v=UabBYexBD4k",
+      "description": "Ready to become a certified watsonx AI Assistant Engineer? Register now and use code IBMTechYT20 for 20% off of your exam ...",
+      "views": 888213,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "11:10",
+      "published_time": "4 months ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/UabBYexBD4k/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDsHMFtkB3CJ3nozhiMQRkOkrCD1w",
+        "rich": "https://i.ytimg.com/vi/UabBYexBD4k/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAn51myO6W97A4icWGm1NRH-SYV3A"
+      }
+    },
+    {
+      "position": 5,
+      "id": "T-D1OfcDW1M",
+      "title": "What is Retrieval-Augmented Generation (RAG)?",
+      "link": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "description": "Ready to become a certified GenAI engineer? Register now and use code IBMTechYT20 for 20% off of your exam ...",
+      "views": 1903859,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "6:36",
+      "published_time": "2 years ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/T-D1OfcDW1M/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCoIaZ4RPVVIQ7yivLhz_UHt7yXFg",
+        "rich": "https://i.ytimg.com/vi/T-D1OfcDW1M/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAL7R6uQoekWnwezKovYyM9c-kumQ"
+      },
+      "key_moments": [
+        {
+          "title": "Introduction",
+          "start_seconds": 0,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_0.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAiewYjkDj1uPlmTSIfaiBQbwlMWQ"
+        },
+        {
+          "title": "What is RAG",
+          "start_seconds": 18,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_25500.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCQcExhBsIwrws9sQ6gM6GyZVJa0w"
+        },
+        {
+          "title": "An anecdote",
+          "start_seconds": 42,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_71500.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCB-FBozAXio8WFtl1-qoUOgwCYrQ"
+        },
+        {
+          "title": "Two problems",
+          "start_seconds": 82,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_109000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCR4blNifZfksPj5p6mQsWcLCfaeA"
+        },
+        {
+          "title": "Large language models",
+          "start_seconds": 138,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_156500.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC-TFZly_EhoyHC5sHBj7ekGt6VyA"
+        },
+        {
+          "title": "How does RAG help",
+          "start_seconds": 263,
+          "thumbnail": "https://i.ytimg.com/vi/T-D1OfcDW1M/hqdefault_263000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC2Wzjh56sJlrSEoKM31HrGWuijUw"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "id": "-W2JdSl1v48",
+      "title": "Is Fine-Tuning Still Needed? LLMs, RAG, & LoRA",
+      "link": "https://www.youtube.com/watch?v=-W2JdSl1v48",
+      "description": "Learn more about Fine-Tuning here → https://ibm.biz/~c5OKNxoyO Is fine-tuning still needed for modern AI workflows?",
+      "views": 30730,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "10:52",
+      "published_time": "2 days ago",
+      "badges": [
+        "New",
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/-W2JdSl1v48/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCY5krr6cHxeboS1QSdAvn9C3alLg",
+        "rich": "https://i.ytimg.com/vi/-W2JdSl1v48/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCGDAj18cYFskyftpAHFVdqYERerw"
+      }
+    },
+    {
+      "position": 7,
+      "id": "rqyczEvh3D4",
+      "title": "What is Retrieval-Augmented Fine-Tuning (RAFT)?",
+      "link": "https://www.youtube.com/watch?v=rqyczEvh3D4",
+      "description": "Ready to become a certified watsonx Generative AI Engineer? Register now and use code IBMTechYT20 for 20% off of your exam ...",
+      "views": 42850,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "7:07",
+      "published_time": "1 year ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/rqyczEvh3D4/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA_i76WmjVPEnNrOZzpibkzUvQgzQ",
+        "rich": "https://i.ytimg.com/vi/rqyczEvh3D4/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDO0GGEND-_ZMR4pe1coyd9X4TV1A"
+      }
+    },
+    {
+      "position": 9,
+      "id": "xEZy2GhC7eA",
+      "title": "What are the Limitations of LLMs and How to Overcome Them: Fine-Tuning vs. RAG",
+      "link": "https://www.youtube.com/watch?v=xEZy2GhC7eA",
+      "description": "In this video, we explore the limitations of Large Language Models (LLMs) like GPT-3 and ChatGPT, and how to overcome them ...",
+      "views": 151,
+      "channel": {
+        "id": "UCY--ymVxtFo5u6mlioLSObw",
+        "title": "AI Foundation Learning",
+        "link": "https://www.youtube.com/@AIFoundationLearning",
+        "thumbnail": "https://yt3.ggpht.com/ihIb0Uj2qVsRs_9H6IIy_mAKF24HD-Fq5rYgG1YxqZrQYc5YfRi1MKWqtyTkNuuEBTDdw58VwQg=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "3:39",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/xEZy2GhC7eA/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAgOUmfS6NFO9v8HkVORhfJGYtlRg",
+        "rich": "https://i.ytimg.com/vi/xEZy2GhC7eA/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCPbSWBAFitK208GL-h4K_r9PiJyA"
+      }
+    },
+    {
+      "position": 10,
+      "id": "dvTEKuBbi4U",
+      "title": "When Do You Use Fine-Tuning Vs. Retrieval Augmented Generation (RAG)? (Guest: Harpreet Sahota)",
+      "link": "https://www.youtube.com/watch?v=dvTEKuBbi4U",
+      "description": "Get ready for a power-packed nugget of wisdom from Harpreet Sahota as we talk about augmenting your Generative AI model ...",
+      "views": 21365,
+      "channel": {
+        "id": "UCzZUKE892sdQ4-ogvSeHQjw",
+        "title": "Intelligence Briefing",
+        "link": "https://www.youtube.com/@intelligencebriefing",
+        "thumbnail": "https://yt3.ggpht.com/0apfRsVRCMPjHO59MNgMTKHjt33Ip9EOwxi1Zr9E1Y70I9pXu65v7UCG5stwizPxsowdXOk17w=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "0:53",
+      "published_time": "2 years ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/dvTEKuBbi4U/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCMaUhQKaDSxwBlFMHLc6vwe60C3Q",
+        "rich": "https://i.ytimg.com/vi/dvTEKuBbi4U/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBTf3pQKwKYYvU7kEXtNPkYE9Vk1g"
+      }
+    },
+    {
+      "position": 11,
+      "id": "Q-_D_2NWECE",
+      "title": "RAG vs Fine Tuning vs Prompt Engineering",
+      "link": "https://www.youtube.com/watch?v=Q-_D_2NWECE",
+      "description": "... we will understand the difference between RAG (Retrieval Augmented Generation), Fine tuning and Prompt Engineering.",
+      "views": 17092,
+      "channel": {
+        "id": "UCh9nVJoWXmFb7sLApWGcLPQ",
+        "title": "codebasics",
+        "link": "https://www.youtube.com/@codebasics",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/KsiMgWx72rX242hG5UIPVMwlIc5i8LUXMDRLLfa8bJvtJmwiMNU4LDveGqQZBx1g8VI-8OGKmD4=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "9:23",
+      "published_time": "9 months ago",
+      "badges": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/Q-_D_2NWECE/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB_ABshJHlhKeMotl-sKDcaa4UdlQ",
+        "rich": "https://i.ytimg.com/vi/Q-_D_2NWECE/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBDpITV35Q-1gVLrJfdNZ8wQRfZlA"
+      }
+    },
+    {
+      "position": 12,
+      "id": "_dY3TqHLbKY",
+      "title": "RAG vs. Fine-Tuning: Key Criteria for LLM Projects",
+      "link": "https://www.youtube.com/watch?v=_dY3TqHLbKY",
+      "description": "When building applications with large language models, the choice between RAG (Retrieval-Augmented Generation) and ...",
+      "views": 85,
+      "channel": {
+        "id": "UCnFBUa8irmxT8oHWWoRMG-Q",
+        "title": "AppliedAI",
+        "link": "https://www.youtube.com/@KaiJ-AppliedAI",
+        "thumbnail": "https://yt3.ggpht.com/ruXePm8NTdCQQXWScJsrLRlv3bqO302EnUhvS-MOIIcGr0UCYCHYi-2tJyjVE7O-v8mo6UgktQ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "4:53",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/_dY3TqHLbKY/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDM2t4-5tThP4lunhPaY_rn9GJL9Q",
+        "rich": "https://i.ytimg.com/vi/_dY3TqHLbKY/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDFtMSIamnXVFS42WoduYHXDaDEJw"
+      }
+    },
+    {
+      "position": 13,
+      "id": "L7PfLk4a2oY",
+      "title": "Fine-Tuning vs. RAG Explained in 4 Minutes | AI for Beginners",
+      "link": "https://www.youtube.com/watch?v=L7PfLk4a2oY",
+      "description": "What's the difference between fine-tuning and retrieval-augmented generation (RAG) when it comes to large language models ...",
+      "views": 8202,
+      "channel": {
+        "id": "UCVpWDEFirsEfz2WGJMVd4mA",
+        "title": "Tiny Technical Tutorials",
+        "link": "https://www.youtube.com/@TinyTechnicalTutorials",
+        "thumbnail": "https://yt3.ggpht.com/PlCwD4GHmkGqcctjNw_lkU39IDJKsxR5u0TVb3OJNCfksrHkuEUsX_iwBdVdal8l_hlYPGeNXDY=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "4:20",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/L7PfLk4a2oY/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC2AFN0aHRrkYrOch3SG70SuBIiFg",
+        "rich": "https://i.ytimg.com/vi/L7PfLk4a2oY/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBHxtPKZmQ9dhv1MIWJZUNUDHUZZg"
+      }
+    },
+    {
+      "position": 14,
+      "id": "_HQ2H_0Ayy0",
+      "title": "RAG Explained For Beginners",
+      "link": "https://www.youtube.com/watch?v=_HQ2H_0Ayy0",
+      "description": "Try RAG Hands-On Labs for Free - https://kode.wiki/4oANO8s Learn how RAG (Retrieval Augmented Generation) solves the ...",
+      "views": 632711,
+      "channel": {
+        "id": "UCSWj8mqQCcrcBlXPi4ThRDQ",
+        "title": "KodeKloud",
+        "link": "https://www.youtube.com/@KodeKloud",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/_pHLjGmYVp9Qv6r57IhDnEsej2tgpxSyBzD8kUUvDetLLPLGSkDlh77JLxtchccZhBwG8iqq=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "10:09",
+      "published_time": "11 months ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCAHiEfz47DTVq0n3-6T-oRLvmNcQ",
+        "rich": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAolcOwQiTjDD5eLbb1W77OaZwSOw"
+      },
+      "key_moments": [
+        {
+          "title": "Introduction to RAG",
+          "start_seconds": 0,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Why Traditional Search Methods Don't Work",
+          "start_seconds": 24,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "The RAG Method Explained",
+          "start_seconds": 55,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Step 1: Retrieval Process",
+          "start_seconds": 114,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Step 2: Augmentation Explained",
+          "start_seconds": 145,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Step 3: Generation Process",
+          "start_seconds": 195,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Strategies for RAG Calibration",
+          "start_seconds": 234,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Practical Lab Demo Introduction",
+          "start_seconds": 301,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Set up Development Environment",
+          "start_seconds": 327,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Initialize Vector Database",
+          "start_seconds": 370,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Chunking Strategy and Embedding",
+          "start_seconds": 389,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Feed AI Brain",
+          "start_seconds": 439,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Semantic Search",
+          "start_seconds": 470,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Demo - Launch a Simple Web Interface",
+          "start_seconds": 496,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        },
+        {
+          "title": "Conclusion & Free Lab Access",
+          "start_seconds": 583,
+          "thumbnail": "https://i.ytimg.com/vi/_HQ2H_0Ayy0/hqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "position": 15,
+      "id": "rv93dTrVYWM",
+      "title": "RAG vs Fine Tuning Explained in 5 Minutes | GenAI Architecture Every AI Engineer Must Know",
+      "link": "https://www.youtube.com/watch?v=rv93dTrVYWM",
+      "description": "RAG vs Fine Tuning explained with real-world examples. Learn when to use Retrieval Augmented Generation vs Fine Tuning in ...",
+      "views": 109,
+      "channel": {
+        "id": "UCHbxJZ-Suvd7_J2oIjkY1Dg",
+        "title": "Infinite Dreams",
+        "link": "https://www.youtube.com/@InfiniteDreamstutorials",
+        "thumbnail": "https://yt3.ggpht.com/z2oJgjC01fg07YWXnoSQu3GldQJgzDUALCoyxrZUfixlj5SiPTxCXo9SgcrV1bgf8i2zd4avSYI=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "6:32",
+      "published_time": "4 months ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/rv93dTrVYWM/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAz5kqUnA2RUGmkHo4aEnAxTTm6gQ",
+        "rich": "https://i.ytimg.com/vi/rv93dTrVYWM/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAV2nl0b1QYcv3jRtXJlarHvPUOrw"
+      },
+      "key_moments": [
+        {
+          "title": "Introduction",
+          "start_seconds": 0,
+          "thumbnail": "https://i.ytimg.com/vi/rv93dTrVYWM/hqdefault_6000.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDZ1OP0xfa0aGc0N2HbH5orXp538Q"
+        },
+        {
+          "title": "What is RAG?",
+          "start_seconds": 40,
+          "thumbnail": "https://i.ytimg.com/vi/rv93dTrVYWM/hqdefault_45966.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD44_9GnwDTZ1-SwnubIKu3zb0yXQ"
+        },
+        {
+          "title": "What is Fine Tuning?",
+          "start_seconds": 120,
+          "thumbnail": "https://i.ytimg.com/vi/rv93dTrVYWM/hqdefault_132800.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDGcOYbiEs71nnjowYoYgQXb4grgQ"
+        },
+        {
+          "title": "Key Differences",
+          "start_seconds": 210,
+          "thumbnail": "https://i.ytimg.com/vi/rv93dTrVYWM/hqdefault_237766.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCfk2m-b8AEAVCjFR_WEoksy_oduQ"
+        },
+        {
+          "title": "When to Use Each",
+          "start_seconds": 270,
+          "thumbnail": "https://i.ytimg.com/vi/rv93dTrVYWM/hqdefault_270233.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCKR3ClCp7izHvbsBoLbJdmq9WPPA"
+        }
+      ]
+    },
+    {
+      "position": 16,
+      "id": "JUhQqZBCSsI",
+      "title": "Fine-Tuning vs. Prompting vs. Retrieval-Augmented Generation (RAG) | A Complete Breakdown",
+      "link": "https://www.youtube.com/watch?v=JUhQqZBCSsI",
+      "description": "Are you confused about the differences between **Fine-Tuning**, **Prompting**, and **Retrieval-Augmented Generation (RAG)** ...",
+      "views": 93,
+      "channel": {
+        "id": "UCY--ymVxtFo5u6mlioLSObw",
+        "title": "AI Foundation Learning",
+        "link": "https://www.youtube.com/@AIFoundationLearning",
+        "thumbnail": "https://yt3.ggpht.com/ihIb0Uj2qVsRs_9H6IIy_mAKF24HD-Fq5rYgG1YxqZrQYc5YfRi1MKWqtyTkNuuEBTDdw58VwQg=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "5:14",
+      "published_time": "1 year ago",
+      "badges": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/JUhQqZBCSsI/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAlelqqHrkZi1kVqMpYAzHjmnQdnQ",
+        "rich": "https://i.ytimg.com/vi/JUhQqZBCSsI/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA5pKg4N2b1-5_aEghTag69m3NOPg"
+      }
+    },
+    {
+      "position": 17,
+      "id": "6StwSGgt2DI",
+      "title": "RAG vs Fine-Tuning Explained | When to Choose Retrieval-Augmented Generation or Fine-Tuning for LLMs",
+      "link": "https://www.youtube.com/watch?v=6StwSGgt2DI",
+      "description": "Website Link: systemdrd.com Should you use Retrieval-Augmented Generation (RAG) or Fine-Tuning for your AI application?",
+      "views": 130,
+      "channel": {
+        "id": "UCi1BkzqiwN5wChnvt20uBWQ",
+        "title": "SystemDR - Scalable System Design ",
+        "link": "https://www.youtube.com/@SystemDR",
+        "thumbnail": "https://yt3.ggpht.com/6ViFlHUJ07fkXQ0HsZJHzs-9FbiaWOp1ufGd4MRYnsklNlOo1MMhGpOJL4_UXq_v5odyPPp0bA=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "14:03",
+      "published_time": "2 weeks ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/6StwSGgt2DI/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB3MqcIZKrNPWCexzp8gEDLbvtgfQ",
+        "rich": "https://i.ytimg.com/vi/6StwSGgt2DI/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBiErO4RH9XXuFHJvHejrzdgeZfFQ"
+      }
+    },
+    {
+      "position": 18,
+      "id": "fB2JQXEH_94",
+      "title": "RAG vs Agentic AI: How LLMs Connect Data for Smarter AI",
+      "link": "https://www.youtube.com/watch?v=fB2JQXEH_94",
+      "description": "Ready to become a certified watsonx AI Assistant Engineer? Register now and use code IBMTechYT20 for 20% off of your exam ...",
+      "views": 162050,
+      "channel": {
+        "id": "UCKWaEZ-_VweaEx1j62do_vQ",
+        "title": "IBM Technology",
+        "link": "https://www.youtube.com/@IBMTechnology",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/7qCmNHAsFvD6RSINuJ1WoGZYoKmm7TDnhORKFqLb8QoeOFh2qFXal8brkzoxNrwqmJTuvOLs=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "10:01",
+      "published_time": "7 months ago",
+      "badges": [
+        "CC"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/fB2JQXEH_94/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCVpFWYmjaHuG-UHmgknDzbwCKFUA",
+        "rich": "https://i.ytimg.com/vi/fB2JQXEH_94/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCJWbmXljVCH8K9KzkmodUgcrNSoA"
+      }
+    },
+    {
+      "position": 19,
+      "id": "O4ksnydFxm4",
+      "title": "⚡ Fine-Tuning vs Retrieval-Augmented Generation (RAG)",
+      "link": "https://www.youtube.com/watch?v=O4ksnydFxm4",
+      "description": "Fine-tuning vs RAG — what's the real difference when it comes to adapting Large Language Models (LLMs)? In this video, we ...",
+      "views": 5,
+      "channel": {
+        "id": "UCjpbeRTqHMxIGnvALl21oew",
+        "title": "Rimi Singh",
+        "link": "https://www.youtube.com/@singh_rimi",
+        "thumbnail": "https://yt3.ggpht.com/4HAM9C1PoTrxrEfUfvAQoKlBB2t8C3-bun8zokMn90J6PV_KsDHATe8yZQxfrdvXv_hLIHXlmg=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "7:24",
+      "published_time": "9 months ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/O4ksnydFxm4/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBomTBXyV2U-E2em_OTjiZYPQPl2Q",
+        "rich": "https://i.ytimg.com/vi/O4ksnydFxm4/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB0vrHPRPkJNt7NUnrwdcBNtI8gcg"
+      }
+    },
+    {
+      "position": 20,
+      "id": "AJmlg7rdmLA",
+      "title": "RAG versus LLM Fine-Tuning",
+      "link": "https://www.youtube.com/watch?v=AJmlg7rdmLA",
+      "description": "VIDEO TITLE RAG versus Fine-Tuning ✍️VIDEO DESCRIPTION ✍️ In this video, we dive into the fascinating world of ...",
+      "views": 2869,
+      "channel": {
+        "id": "UCJJZgkHmW6jLRXSKjMejLmg",
+        "title": "New Machina",
+        "link": "https://www.youtube.com/@NewMachina",
+        "thumbnail": "https://yt3.ggpht.com/p1VhM2-JP3jJhXV-Nxns81jS8JIaegMkmWxnEaQJDn_pN_v_KkKLixQEwwDGkvIVWEvAXyhJ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "5:13",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/AJmlg7rdmLA/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDtxeXg2WURTGLAV_UYTcoGI7A7AA",
+        "rich": "https://i.ytimg.com/vi/AJmlg7rdmLA/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCGQTIlEpgx1M_pOBErQeftzN0nig"
+      }
+    },
+    {
+      "position": 21,
+      "id": "7f_8wsxhLA8",
+      "title": "Choosing Between RAG, In-Context Learning, and Fine-Tuning in LLMs",
+      "link": "https://www.youtube.com/watch?v=7f_8wsxhLA8",
+      "description": "In this video, we explore three powerful methodologies in AI: Retrieval-Augmented Generation (RAG), In-Context Learning (ICL), ...",
+      "views": 481,
+      "channel": {
+        "id": "UCnFBUa8irmxT8oHWWoRMG-Q",
+        "title": "AppliedAI",
+        "link": "https://www.youtube.com/@KaiJ-AppliedAI",
+        "thumbnail": "https://yt3.ggpht.com/ruXePm8NTdCQQXWScJsrLRlv3bqO302EnUhvS-MOIIcGr0UCYCHYi-2tJyjVE7O-v8mo6UgktQ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "6:50",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/7f_8wsxhLA8/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBbe94esj_yOLCkht1X_G5chA-Axg",
+        "rich": "https://i.ytimg.com/vi/7f_8wsxhLA8/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCVs83x5fIB6OAErUfYXa2425p4Wg"
+      }
+    },
+    {
+      "position": 22,
+      "id": "of4UDMvi2Kw",
+      "title": "A Helping Hand for LLMs (Retrieval Augmented Generation) - Computerphile",
+      "link": "https://www.youtube.com/watch?v=of4UDMvi2Kw",
+      "description": "More about Jane Street internships at: https://jane-st.co/internship-computerphile (episode sponsor) Mike Pound discusses how ...",
+      "views": 162213,
+      "channel": {
+        "id": "UC9-y-6csu5WGm29I7JiwpnA",
+        "title": "Computerphile",
+        "link": "https://www.youtube.com/@Computerphile",
+        "is_verified": true,
+        "thumbnail": "https://yt3.ggpht.com/ebHMyRfch3u2UTZN1WQJDp9J5U7o38T_WnGkd2QhAIQwBgvozdaOCOnfDMtngtoHWutJvLl4i0c=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "14:08",
+      "published_time": "1 year ago",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/of4UDMvi2Kw/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBmlA8zNT94iLSvPE3tNgZOYCT8Dw",
+        "rich": "https://i.ytimg.com/vi/of4UDMvi2Kw/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCwDWkk9S1sHpC4N3DqQgtaHAL4Mw"
+      }
+    }
+  ],
+  "shorts": [
+    {
+      "position": 4,
+      "items": [
+        {
+          "position": 1,
+          "id": "Zr1hfP-YSAk",
+          "title": "Full Fine‑Tuning vs LoRA vs RAG: How to Choose for LLMs",
+          "link": "https://www.youtube.com/shorts/Zr1hfP-YSAk",
+          "views": 1000,
+          "thumbnail": "https://i.ytimg.com/vi/Zr1hfP-YSAk/oar2.jpg?sqp=-oaymwEYCMAEENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLBpVjjMCAcW3KNt5oIeH3DFlGGX4w&usqp=CCk"
+        },
+        {
+          "position": 2,
+          "id": "5v_-IfQdDgU",
+          "title": "RAG vs Fine-tuning (n8n) #n8n #rag #finetuning",
+          "link": "https://www.youtube.com/shorts/5v_-IfQdDgU",
+          "views": 141000,
+          "thumbnail": "https://i.ytimg.com/vi/5v_-IfQdDgU/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLC6ankC4f9LH-2ga2xG6OJWmlp3lw&usqp=CCk"
+        },
+        {
+          "position": 3,
+          "id": "bRtnM07Vw5w",
+          "title": "RAG vs Fine Tuning EXPLAINED!",
+          "link": "https://www.youtube.com/shorts/bRtnM07Vw5w",
+          "views": 3600,
+          "thumbnail": "https://i.ytimg.com/vi/bRtnM07Vw5w/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBS0HGVF3rSkoMEMuh9kCu5s8nFHw&usqp=CCk"
+        },
+        {
+          "position": 4,
+          "id": "kf9GcMgzmrc",
+          "title": "Fine-tuning vs Retreival Augmented Generation #finetuning #RAG #AI #LLMs #artificialintelligence",
+          "link": "https://www.youtube.com/shorts/kf9GcMgzmrc",
+          "views": 1500,
+          "thumbnail": "https://i.ytimg.com/vi/kf9GcMgzmrc/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLCJkBiAkRQzUIROwvIlNB2qUmqqNw&usqp=CCk"
+        },
+        {
+          "position": 5,
+          "id": "A-H2ck-bOFQ",
+          "title": "RAG or Fine-tuning — Which is best? #generativeai #llms #llamaindex",
+          "link": "https://www.youtube.com/shorts/A-H2ck-bOFQ",
+          "views": 25000,
+          "thumbnail": "https://i.ytimg.com/vi/A-H2ck-bOFQ/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAX_xUOmqPpHAsCM7mo0KHi6JaeOA&usqp=CCk"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "items": [
+        {
+          "position": 1,
+          "id": "6MYs6Ko3WVQ",
+          "title": "RAG vs Fine-Tuning: What’s Right for Your Data?",
+          "link": "https://www.youtube.com/shorts/6MYs6Ko3WVQ",
+          "views": 648,
+          "thumbnail": "https://i.ytimg.com/vi/6MYs6Ko3WVQ/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLA6bDLzJG7QrXHafqaLlyA0d-6dmA&usqp=CCk"
+        },
+        {
+          "position": 2,
+          "id": "hP6poUqWQJs",
+          "title": "RAG vs Fine-Tuning: Which LLM Strategy Should You Choose",
+          "link": "https://www.youtube.com/shorts/hP6poUqWQJs",
+          "views": 1900,
+          "thumbnail": "https://i.ytimg.com/vi/hP6poUqWQJs/oar2.jpg?sqp=-oaymwEYCMAEENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLC0tRnu_h_dlknaJ2UmCmVKpdrNig&usqp=CCk"
+        },
+        {
+          "position": 3,
+          "id": "wUJOIjkcKUo",
+          "title": "What is the difference between fine-tuning an LLM and retrieval augmented generation?",
+          "link": "https://www.youtube.com/shorts/wUJOIjkcKUo",
+          "views": 165,
+          "thumbnail": "https://i.ytimg.com/vi/wUJOIjkcKUo/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAKhmerzUdQGL51KHyykHWKDrmWqg&usqp=CCk"
+        },
+        {
+          "position": 4,
+          "id": "pQm_tRaTocE",
+          "title": "Fine-Tuning vs Retrieval-augmented generations (RAGs) in Machine Learning #RAGs #prompt #chatgpt4o",
+          "link": "https://www.youtube.com/shorts/pQm_tRaTocE",
+          "views": 107,
+          "thumbnail": "https://i.ytimg.com/vi/pQm_tRaTocE/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAWMrqPi6oBeP_TS1JFa18USva2HA&usqp=CCk"
+        },
+        {
+          "position": 5,
+          "id": "XJ3TP2oQAXA",
+          "title": "LLM FineTune vs RAG-Retrieval  Augmented Generation",
+          "link": "https://www.youtube.com/shorts/XJ3TP2oQAXA",
+          "views": 1700,
+          "thumbnail": "https://i.ytimg.com/vi/XJ3TP2oQAXA/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBn2d6HWP2kq6QU6A5YUKF3GdgTnA&usqp=CCk"
+        },
+        {
+          "position": 6,
+          "id": "cfnD7fkPD-4",
+          "title": "Top Differences Between LLM Fine-Tuning and Retrieval-Augmented Generation 🧠🔍 #ai  #machinelearning",
+          "link": "https://www.youtube.com/shorts/cfnD7fkPD-4",
+          "views": 77,
+          "thumbnail": "https://i.ytimg.com/vi/cfnD7fkPD-4/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLDAu_A9QLq9jprAl0IcDsi2mK9ZQw&usqp=CCk"
+        },
+        {
+          "position": 7,
+          "id": "aiokDWXqcFU",
+          "title": "“RAG vs Fine-Tuning — What’s Better for Real-World AI?” #rag #retrievalaugmentedgeneration #llm",
+          "link": "https://www.youtube.com/shorts/aiokDWXqcFU",
+          "views": 160,
+          "thumbnail": "https://i.ytimg.com/vi/aiokDWXqcFU/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLC9PUtYL9LeYwes2-KUAVuXlJNQFg&usqp=CCk"
+        },
+        {
+          "position": 8,
+          "id": "iG9lvP1IpmI",
+          "title": "RAG vs fine tuning - Why I Choose RAG over Fine tuning? #llm #rag #ai #ai2025 #finetuning",
+          "link": "https://www.youtube.com/shorts/iG9lvP1IpmI",
+          "views": 202,
+          "thumbnail": "https://i.ytimg.com/vi/iG9lvP1IpmI/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLCuTOAxpzgstSwZEwsg7VdUbbF6ig&usqp=CCk"
+        },
+        {
+          "position": 9,
+          "id": "v7Y3HEDHPLQ",
+          "title": "When do you use fine-tuning vs. RAG? #ai #rag #llms #generativeai #shorts",
+          "link": "https://www.youtube.com/shorts/v7Y3HEDHPLQ",
+          "views": 711,
+          "thumbnail": "https://i.ytimg.com/vi/v7Y3HEDHPLQ/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLCFhOSg4zU-FlijLf6Bt6dCiU17ig&usqp=CCk"
+        },
+        {
+          "position": 10,
+          "id": "gXYzMGAv3CM",
+          "title": "RAG vs Fine-tuning#retrieval#augmented#generation#generativeai#supervised#finetuning#cost#latency#ai",
+          "link": "https://www.youtube.com/shorts/gXYzMGAv3CM",
+          "views": 196,
+          "thumbnail": "https://i.ytimg.com/vi/gXYzMGAv3CM/oar2.jpg?sqp=-oaymwEYCLAEENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLDOY4XwZ4jyf2WTnRlJPxUYBtZsbA&usqp=CCk"
+        },
+        {
+          "position": 11,
+          "id": "-DEny_VLSyI",
+          "title": "What is RAG? Tech explained simply #tech #technology",
+          "link": "https://www.youtube.com/shorts/-DEny_VLSyI",
+          "views": 180000,
+          "thumbnail": "https://i.ytimg.com/vi/-DEny_VLSyI/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAiKGvvPYOt7mgGF4KDkun0_0wJgg&usqp=CCk"
+        },
+        {
+          "position": 12,
+          "id": "EEli7VIoxNs",
+          "title": "#RAG vs. #FineTuning:Which is Best for Training you #LLMs? Introductory video on the key difference",
+          "link": "https://www.youtube.com/shorts/EEli7VIoxNs",
+          "views": 247,
+          "thumbnail": "https://i.ytimg.com/vi/EEli7VIoxNs/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBM2s_l1c6qOKp5PcKJ2JAs_v2Hog&usqp=CCk"
+        },
+        {
+          "position": 13,
+          "id": "Sx0I-sDW0mA",
+          "title": "Pros and cons of RAG vs. fine-tuning #ai #mlops ##llm #rag #finetuning",
+          "link": "https://www.youtube.com/shorts/Sx0I-sDW0mA",
+          "views": 1500,
+          "thumbnail": "https://i.ytimg.com/vi/Sx0I-sDW0mA/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBNAkJ9KutrMstOTWZqF7gTdfwjow&usqp=CCk"
+        },
+        {
+          "position": 14,
+          "id": "J6x3iXpXzyc",
+          "title": "AI concept made easy: RAG vs Fine-Tuning",
+          "link": "https://www.youtube.com/shorts/J6x3iXpXzyc",
+          "views": 1400,
+          "thumbnail": "https://i.ytimg.com/vi/J6x3iXpXzyc/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLANo5b4VTNk3SPXTEyMd0cEqlDOMg&usqp=CCk"
+        },
+        {
+          "position": 15,
+          "id": "Ymf4YxN2sfs",
+          "title": "Prompt Engineering Vs Fine-Tuning in LLMs",
+          "link": "https://www.youtube.com/shorts/Ymf4YxN2sfs",
+          "views": 33000,
+          "thumbnail": "https://i.ytimg.com/vi/Ymf4YxN2sfs/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAy0B7Uu2njTnnBqev7stBIGxtGgA&usqp=CCk"
+        },
+        {
+          "position": 16,
+          "id": "w-PKUkM5PQs",
+          "title": "RAG vs Fine-Tuning Explained with a Fishing Analogy (Most People Get This Wrong)",
+          "link": "https://www.youtube.com/shorts/w-PKUkM5PQs",
+          "views": 1600,
+          "thumbnail": "https://i.ytimg.com/vi/w-PKUkM5PQs/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLD1bC9-bn9lH-Est8W2pFzj8OO5AA&usqp=CCk"
+        },
+        {
+          "position": 17,
+          "id": "l1dOlZmRqxY",
+          "title": "RAG vs. Fine-Tuning: The Ultimate LLM Upgrade 🧠",
+          "link": "https://www.youtube.com/shorts/l1dOlZmRqxY",
+          "views": 45,
+          "thumbnail": "https://i.ytimg.com/vi/l1dOlZmRqxY/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAU6FJ3zjmcTPuaGmcFJ2zuoVLS-g&usqp=CCk"
+        },
+        {
+          "position": 18,
+          "id": "wqSVPDe5B3E",
+          "title": "AI: you don't need fine-tuning, just retrieval augmented generation and prompt engineering #shorts",
+          "link": "https://www.youtube.com/shorts/wqSVPDe5B3E",
+          "views": 398,
+          "thumbnail": "https://i.ytimg.com/vi/wqSVPDe5B3E/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLAnaAZC5cU55kLefbTDUzwJyutsrw&usqp=CCk"
+        },
+        {
+          "position": 19,
+          "id": "e6NudI1b26Y",
+          "title": "RAG vs Fine-Tuning: How to Kill Hallucinations in 60s #AI #RAG #LLM #MachineLearning #TechFacts",
+          "link": "https://www.youtube.com/shorts/e6NudI1b26Y",
+          "views": 90,
+          "thumbnail": "https://i.ytimg.com/vi/e6NudI1b26Y/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLDpfe9nB914T18HuOvXzKEKaqGqSQ&usqp=CCk"
+        },
+        {
+          "position": 20,
+          "id": "xS55duPS-Pw",
+          "title": "How Does Rag Work? - Vector Database and LLMs #datascience #naturallanguageprocessing #llm #gpt",
+          "link": "https://www.youtube.com/shorts/xS55duPS-Pw",
+          "views": 488000,
+          "thumbnail": "https://i.ytimg.com/vi/xS55duPS-Pw/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBiw4eRQ0Wsri8EGf1E-lKSv_fFyw&usqp=CCk"
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "next_page_token": "SBSCAQswMFEwRzg0a3EzTYIBC3pZR0RwRy1wVGhvggELVWFiQllleEJENGuCAQtULUQxT2ZjRFcxTYIBCy1XMkpkU2wxdjQ4ggELcnF5Y3pFdmgzRDSCAQt4RVp5MkdoQzdlQYIBC2R2VEVLdUJiaTRVggELUS1fRF8yTldFQ0WCAQtfZFkzVHFITGJLWYIBC0w3UGZMazRhMm9ZggELX0hRMkhfMEF5eTCCAQtydjkzZFRyVllXTYIBC0pVaFFxWkJDU3NJggELNlN0d1NHZ3QyREmCAQtmQjJKUVhFSF85NIIBC080a3NueWRGeG00ggELQUptbGc3cmRtTEGCAQs3Zl84d3N4aExBOIIBC29mNFVETXZpMkt3sgEGCgQIFhAC6gEECAIQGQ%3D%3D"
+  }
+}

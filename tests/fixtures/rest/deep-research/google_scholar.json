@@ -1,0 +1,824 @@
+{
+  "search_metadata": {
+    "id": "search_6dAL2p4KqYsgpmxaOk7wnGOm",
+    "status": "Success",
+    "created_at": "2026-07-23T12:20:24Z",
+    "request_time_taken": 1.18,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 1.19,
+    "request_url": "https://scholar.google.com/scholar?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=21",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsgpmxaOk7wnGOm.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsgpmxaOk7wnGOm"
+  },
+  "search_parameters": {
+    "engine": "google_scholar",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "hl": "en",
+    "num": "20"
+  },
+  "search_information": {
+    "query_displayed": "retrieval augmented generation vs fine-tuning for LLMs",
+    "total_results": 11100,
+    "page": 1,
+    "time_taken_displayed": 0.65
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Fine-Tuning, Retrieval-Augmented Generation, and Hybrid Large Language Models for Postoperative Decision Support: Comparative Analysis",
+      "data_cid": "zeoRu3K9AkIJ",
+      "link": "https://www.jmir.org/2026/1/e90692/",
+      "publication": "S Prabha, BG Collaco, CA Gomez-Cabello… - Journal of medical …, 2026 - jmir.org",
+      "snippet": "… general-purpose LLM deployment. This approach allows comparison against models specialized through supervised adaptation and/or retrieval augmentation, while acknowledging …",
+      "type": "HTML",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "4756572456919100109",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=4756572456919100109&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:zeoRu3K9AkIJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:zeoRu3K9AkIJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "jmir.org",
+        "format": "HTML",
+        "link": "https://www.jmir.org/2026/1/e90692/"
+      },
+      "authors": [
+        {
+          "name": "S Prabha",
+          "id": "zIKcZ6kAAAAJ",
+          "link": "https://scholar.google.com/citations?user=zIKcZ6kAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "BG Collaco",
+          "id": "ogMLFiEAAAAJ",
+          "link": "https://scholar.google.com/citations?user=ogMLFiEAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "CA Gomez-Cabello",
+          "id": "T0ox2_IAAAAJ",
+          "link": "https://scholar.google.com/citations?user=T0ox2_IAAAAJ&hl=en&num=20&oi=sra"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Retrieval-augmented LLM agents: Learning to learn from experience",
+      "data_cid": "0dl44OgB9PcJ",
+      "link": "https://arxiv.org/abs/2603.18272",
+      "publication": "TP Ferraz, R Deffayet, V Nikoulina, H Déjean… - arXiv preprint arXiv …, 2026 - arxiv.org",
+      "snippet": "… fine-tuning or training-free memory-augmented generation using retrieved experience; yet both have limitations: fine-tuning … integrates experience retrieval into the fine-tuning process. …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "17866907721395657169",
+          "total": 3,
+          "link": "https://scholar.google.com/scholar?cites=17866907721395657169&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "17866907721395657169",
+          "total": 11,
+          "link": "https://scholar.google.com/scholar?cluster=17866907721395657169&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:0dl44OgB9PcJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:0dl44OgB9PcJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "arxiv.org",
+        "format": "PDF",
+        "link": "https://arxiv.org/pdf/2603.18272"
+      },
+      "authors": [
+        {
+          "name": "TP Ferraz"
+        },
+        {
+          "name": "R Deffayet"
+        },
+        {
+          "name": "V Nikoulina"
+        },
+        {
+          "name": "H Déjean…"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Context tuning for retrieval augmented generation",
+      "data_cid": "tESAnlYxmnsJ",
+      "link": "https://aclanthology.org/2024.uncertainlp-1.2/",
+      "publication": "R Anantha, T Bethi, D Vodianik… - Proceedings of the 1st …, 2024 - aclanthology.org",
+      "snippet": "… The set of methods to augment LLM input with retrieved information, such as rel… augmentation enhances context retrieval when finetuning is not applied, while fine-tuning the retrieval …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "8906485461174731956",
+          "total": 32,
+          "link": "https://scholar.google.com/scholar?cites=8906485461174731956&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "8906485461174731956",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=8906485461174731956&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:tESAnlYxmnsJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:tESAnlYxmnsJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "aclanthology.org",
+        "format": "PDF",
+        "link": "https://aclanthology.org/2024.uncertainlp-1.2.pdf"
+      },
+      "authors": [
+        {
+          "name": "R Anantha",
+          "id": "w4mPWsEAAAAJ",
+          "link": "https://scholar.google.com/citations?user=w4mPWsEAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "T Bethi",
+          "id": "qLFWm-cAAAAJ",
+          "link": "https://scholar.google.com/citations?user=qLFWm-cAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "D Vodianik…"
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "title": "A COMPARATIVE STUDY OF FINE-TUNING, RETRIEVAL-AUGMENTED GENERATION AND HYBRID APPROACHES FOR LARGE LANGUAGE MODELS",
+      "data_cid": "GVMmA2SDgcsJ",
+      "link": "https://books.google.com/books?hl=en&lr=&id=oETOEQAAQBAJ&oi=fnd&pg=PA19&dq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&ots=LVD0PK9tcV&sig=WfA6cDVQGlWGbuBCS9Pyp4aMWXQ",
+      "publication": "K Aditya Dinesh, DK Sanjay… - … ON ADVANCED IT …, 2026 - books.google.com",
+      "snippet": "… Models (LLMs) are used through either by fine-tuning or Re-trieval Augmented Generation (RAG) … The three adapta-tion strategies, which are fine-tuning alone, RAG alone, and hybrid …",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "14664146327267857177",
+          "total": 2,
+          "link": "https://scholar.google.com/scholar?cluster=14664146327267857177&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:GVMmA2SDgcsJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "authors": [
+        {
+          "name": "K Aditya Dinesh"
+        },
+        {
+          "name": "DK Sanjay…"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Evaluating fine-tuning and retrieval-augmented generation for domain-specific language modeling in wood science",
+      "data_cid": "xXceHANZV1cJ",
+      "link": "https://link.springer.com/article/10.1186/s10086-026-02257-w",
+      "publication": "SW Hwang, WH Lee, B Koo - Journal of Wood Science, 2026 - Springer",
+      "snippet": "… LLM fine‑tuned on metadata from 16,929 wood science research articles, and examines the effects of fine‑tuning and retrieval‑augmented generation (… studies, fine‑tuning was found to …",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "6293596874165090245",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=6293596874165090245&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:xXceHANZV1cJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "springer.com",
+        "format": "PDF",
+        "link": "https://link.springer.com/content/pdf/10.1186/s10086-026-02257-w.pdf"
+      },
+      "authors": [
+        {
+          "name": "SW Hwang"
+        },
+        {
+          "name": "WH Lee"
+        },
+        {
+          "name": "B Koo"
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "title": "AdaptiRAG: Adaptive Retrieval-Augmented Generation with Co-Trained Domain-Specific Fine-Tuned LLMs for Question Answering",
+      "data_cid": "z193JQvmnT4J",
+      "link": "https://ieeexplore.ieee.org/abstract/document/11541964/",
+      "publication": "V Venganti, SR Rayarao - 2026 International Conference on …, 2026 - ieeexplore.ieee.org",
+      "snippet": "… finetuning baselines. Speculative decoding techniques offer complementary inference-time acceleration by generating … latency in retrievalaugmented settings where retrieved context …",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "4512015337242714063",
+          "total": 2,
+          "link": "https://scholar.google.com/scholar?cluster=4512015337242714063&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:z193JQvmnT4J:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "researchgate.net",
+        "format": "PDF",
+        "link": "https://www.researchgate.net/profile/Vijayakumar-Venganti/publication/405783231_AdaptiRAG_Adaptive_Retrieval-Augmented_Generation_with_Co-Trained_Domain-Specific_Fine-Tuned_LLMs_for_Question_Answering/links/6a25db8a68552924bbffe2d4/AdaptiRAG-Adaptive-Retrieval-Augmented-Generation-with-Co-Trained-Domain-Specific-Fine-Tuned-LLMs-for-Question-Answering.pdf"
+      },
+      "authors": [
+        {
+          "name": "V Venganti",
+          "id": "wQgb8lUAAAAJ",
+          "link": "https://scholar.google.com/citations?user=wQgb8lUAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "SR Rayarao"
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "title": "Ra-dit: Retrieval-augmented dual instruction tuning",
+      "data_cid": "CTaR_67mBl4J",
+      "link": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/536d18fbb454f80221465f1a42c6f389-Abstract-Conference.html",
+      "publication": "V Lin, X Chen, M Chen, W Shi, M Lomeli… - International …, 2024 - proceedings.iclr.cc",
+      "snippet": "… during fine-tuning, we guide the LLM to optimally utilize the … its contextual awareness in generating predictions. As shown … to fine-tuning the language model with retrieval augmentation…",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "6775356328711894537",
+          "total": 307,
+          "link": "https://scholar.google.com/scholar?cites=6775356328711894537&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "6775356328711894537",
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=6775356328711894537&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:CTaR_67mBl4J:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:CTaR_67mBl4J:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "iclr.cc",
+        "format": "PDF",
+        "link": "https://proceedings.iclr.cc/paper_files/paper/2024/file/536d18fbb454f80221465f1a42c6f389-Paper-Conference.pdf"
+      },
+      "authors": [
+        {
+          "name": "V Lin",
+          "id": "gYUOJwMAAAAJ",
+          "link": "https://scholar.google.com/citations?user=gYUOJwMAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "X Chen",
+          "id": "eUk_hy8AAAAJ",
+          "link": "https://scholar.google.com/citations?user=eUk_hy8AAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "M Chen",
+          "id": "aRncxakAAAAJ",
+          "link": "https://scholar.google.com/citations?user=aRncxakAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "W Shi",
+          "id": "zt73PHcAAAAJ",
+          "link": "https://scholar.google.com/citations?user=zt73PHcAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "M Lomeli",
+          "id": "8SK2fPAAAAAJ",
+          "link": "https://scholar.google.com/citations?user=8SK2fPAAAAAJ&hl=en&num=20&oi=sra"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "title": "Integrating fine-tuning and retrieval-augmented generation for healthcare AI systems: a scoping review",
+      "data_cid": "YTESqmDGlUkJ",
+      "link": "https://www.mdpi.com/2306-5354/13/2/225",
+      "publication": "BG Collaco, P Srinivasagam, CA Gomez-Cabello… - Bioengineering, 2026 - mdpi.com",
+      "snippet": "… LLMs to specialized medical contexts: Fine-Tuning (FT) and … fine-tuning (PEFT) methods (eg, LoRA, QLoRA, or related adapter-based approaches); (II) Retrieval-augmented generation (…",
+      "type": "HTML",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "5302362254771106145",
+          "total": 4,
+          "link": "https://scholar.google.com/scholar?cites=5302362254771106145&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "5302362254771106145",
+          "total": 9,
+          "link": "https://scholar.google.com/scholar?cluster=5302362254771106145&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:YTESqmDGlUkJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:YTESqmDGlUkJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "mdpi.com",
+        "format": "HTML",
+        "link": "https://www.mdpi.com/2306-5354/13/2/225"
+      },
+      "authors": [
+        {
+          "name": "BG Collaco",
+          "id": "ogMLFiEAAAAJ",
+          "link": "https://scholar.google.com/citations?user=ogMLFiEAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "P Srinivasagam",
+          "id": "zIKcZ6kAAAAJ",
+          "link": "https://scholar.google.com/citations?user=zIKcZ6kAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "CA Gomez-Cabello",
+          "id": "T0ox2_IAAAAJ",
+          "link": "https://scholar.google.com/citations?user=T0ox2_IAAAAJ&hl=en&num=20&oi=sra"
+        }
+      ]
+    },
+    {
+      "position": 9,
+      "title": "A dual-mode large language model assistant for on-surface reactions via fine-tuning and retrieval-augmented generation",
+      "data_cid": "qEM22qNM6dsJ",
+      "link": "https://pubs.rsc.org/sc/article-abstract/17/22/11114/1231470",
+      "publication": "J Xiang, Q Huang, X Zhang, T Yang, Z Zhu, C Li… - Chemical …, 2026 - pubs.rsc.org",
+      "snippet": "… LLM system that unifies parameter-efficient fine-tuning for reasoning with a dual-source retrieval-augmented generation … that domain-specific fine-tuning enhances performance over …",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "15846281030504170408",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=15846281030504170408&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:qEM22qNM6dsJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "rsc.org",
+        "format": "PDF",
+        "link": "https://pubs.rsc.org/sc/article-pdf/17/22/11114/12594591/d6sc01168c.pdf"
+      },
+      "authors": [
+        {
+          "name": "J Xiang"
+        },
+        {
+          "name": "Q Huang"
+        },
+        {
+          "name": "X Zhang"
+        },
+        {
+          "name": "T Yang"
+        },
+        {
+          "name": "Z Zhu"
+        },
+        {
+          "name": "C Li…"
+        }
+      ]
+    },
+    {
+      "position": 10,
+      "title": "Do Retrieval Augmented Language Models Know When They Don't Know?",
+      "data_cid": "68y5riJ8MrQJ",
+      "link": "https://ojs.aaai.org/index.php/AAAI/article/view/40822",
+      "publication": "Y Zhou, H Huang, Y Liu, R Dai, X Wang… - Proceedings of the …, 2026 - ojs.aaai.org",
+      "snippet": "… Existing large language models (LLMs) occasionally gen… mitigate hallucinations: retrieval-augmented language models (… can be mitigated through in-context fine-tuning. However, …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "12984577164064705771",
+          "total": 8,
+          "link": "https://scholar.google.com/scholar?cites=12984577164064705771&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "12984577164064705771",
+          "total": 2,
+          "link": "https://scholar.google.com/scholar?cluster=12984577164064705771&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:68y5riJ8MrQJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:68y5riJ8MrQJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "aaai.org",
+        "format": "PDF",
+        "link": "https://ojs.aaai.org/index.php/AAAI/article/download/40822/44783"
+      },
+      "authors": [
+        {
+          "name": "Y Zhou"
+        },
+        {
+          "name": "H Huang"
+        },
+        {
+          "name": "Y Liu"
+        },
+        {
+          "name": "R Dai"
+        },
+        {
+          "name": "X Wang…"
+        }
+      ]
+    },
+    {
+      "position": 11,
+      "title": "Two-Stage Fine-Tuning for Retrieval-Augmented Large Language Models via Retriever and Prompt Optimization",
+      "data_cid": "oDZUuDyvYWkJ",
+      "link": "https://ieeexplore.ieee.org/abstract/document/11384878/",
+      "publication": "X Lai, X Pan, Y Su, G Zhang - 2025 5th International …, 2025 - ieeexplore.ieee.org",
+      "snippet": "… a two-stage fine-tuning strategy that improves RAG efficiency while helping to preserve LLM … strong synergy between retriever fine-tuning and prompt-based generator adaptation. Using …",
+      "inline_links": {
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:oDZUuDyvYWkJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "authors": [
+        {
+          "name": "X Lai"
+        },
+        {
+          "name": "X Pan"
+        },
+        {
+          "name": "Y Su"
+        },
+        {
+          "name": "G Zhang"
+        }
+      ]
+    },
+    {
+      "position": 12,
+      "title": "Retrieval-augmented generation for natural language processing: A survey",
+      "data_cid": "qTldwqUWOZcJ",
+      "link": "https://link.springer.com/content/pdf/10.1007/s10462-026-11605-7_reference.pdf",
+      "publication": "S Wu, Y Xiong, Y Cui, H Wu, C Chen, Y Yuan, L Huang… - 2026 - Springer",
+      "snippet": "… of retrieval-augmented generation (RAG), which leverages an external knowledge base to augment LLMs, … Those retrieval fusions usually require fine-tuning or even pre-training the …",
+      "type": "PDF",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "10896765674585930153",
+          "total": 260,
+          "link": "https://scholar.google.com/scholar?cites=10896765674585930153&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "10896765674585930153",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=10896765674585930153&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:qTldwqUWOZcJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "springer.com",
+        "format": "PDF",
+        "link": "https://link.springer.com/content/pdf/10.1007/s10462-026-11605-7_reference.pdf"
+      },
+      "authors": [
+        {
+          "name": "S Wu"
+        },
+        {
+          "name": "Y Xiong"
+        },
+        {
+          "name": "Y Cui"
+        },
+        {
+          "name": "H Wu"
+        },
+        {
+          "name": "C Chen"
+        },
+        {
+          "name": "Y Yuan"
+        },
+        {
+          "name": "L Huang…"
+        }
+      ]
+    },
+    {
+      "position": 13,
+      "title": "Fine-tuning and retrieval augmented generation for question answering using affordable large language models",
+      "data_cid": "u9JBahDuy1AJ",
+      "link": "https://aclanthology.org/2024.unlp-1.10/",
+      "publication": "T Boroş, R Chivereanu, S Dumitrescu… - Proceedings of the …, 2024 - aclanthology.org",
+      "snippet": "… fine-tuning on a LLM and (b) we augment the input prompt with data extracted from our knowledge base. Apart from structured and unstructured fine-tuning, … if our fine-tuning was done …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "5822008697576084155",
+          "total": 14,
+          "link": "https://scholar.google.com/scholar?cites=5822008697576084155&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "5822008697576084155",
+          "total": 8,
+          "link": "https://scholar.google.com/scholar?cluster=5822008697576084155&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:u9JBahDuy1AJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:u9JBahDuy1AJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "aclanthology.org",
+        "format": "PDF",
+        "link": "https://aclanthology.org/2024.unlp-1.10.pdf"
+      },
+      "authors": [
+        {
+          "name": "T Boroş",
+          "id": "veRsdF4AAAAJ",
+          "link": "https://scholar.google.com/citations?user=veRsdF4AAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "R Chivereanu",
+          "id": "PsVJEdcAAAAJ",
+          "link": "https://scholar.google.com/citations?user=PsVJEdcAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "S Dumitrescu",
+          "id": "UR_c_N4AAAAJ",
+          "link": "https://scholar.google.com/citations?user=UR_c_N4AAAAJ&hl=en&num=20&oi=sra"
+        }
+      ]
+    },
+    {
+      "position": 14,
+      "title": "Fine-tuning small language models for industrial retrieval-augmented generation: Efficiency, factuality, and hallucination analysis",
+      "data_cid": "EXKcqaW-x6YJ",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0920548926000371",
+      "publication": "KC Pai, WC Hsu - Computer Standards & Interfaces, 2026 - Elsevier",
+      "snippet": "… LLMs (eg, GPT-4o) benefit more from retrieval integration, in contrast to open-weight models (eg, Llama-3. 1-8B) would gain more from in-context learning and adaptive prompting [25,…",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "12017783749385941521",
+          "total": 1,
+          "link": "https://scholar.google.com/scholar?cites=12017783749385941521&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:EXKcqaW-x6YJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "authors": [
+        {
+          "name": "KC Pai",
+          "id": "FeBTkLoAAAAJ",
+          "link": "https://scholar.google.com/citations?user=FeBTkLoAAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "WC Hsu"
+        }
+      ]
+    },
+    {
+      "position": 15,
+      "title": "A Multi-Task Embedder For Retrieval Augmented LLMs",
+      "data_cid": "w2WwUQhmn4wJ",
+      "link": "https://openreview.net/pdf?id=iFadi6plgn",
+      "publication": "P Zhang, S Xiao, Z Liu, Z Dou, JY Nie - arXiv preprint arXiv …, 2023 - openreview.net",
+      "snippet": "… as retrieval-augmented generation [… retrieval augmentation for LLMs. To harmonize the training impact across different data sources, we take advantage of instruction based fine-tuning, …",
+      "type": "PDF",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "10132929872523191747",
+          "total": 212,
+          "link": "https://scholar.google.com/scholar?cites=10132929872523191747&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "10132929872523191747",
+          "total": 3,
+          "link": "https://scholar.google.com/scholar?cluster=10132929872523191747&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:w2WwUQhmn4wJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:w2WwUQhmn4wJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "openreview.net",
+        "format": "PDF",
+        "link": "https://openreview.net/pdf?id=iFadi6plgn"
+      },
+      "authors": [
+        {
+          "name": "P Zhang"
+        },
+        {
+          "name": "S Xiao"
+        },
+        {
+          "name": "Z Liu"
+        },
+        {
+          "name": "Z Dou"
+        },
+        {
+          "name": "JY Nie"
+        }
+      ]
+    },
+    {
+      "position": 16,
+      "title": "Retrieval-augmented generation for large language models: A survey",
+      "data_cid": "iwzCABrgDH4J",
+      "link": "https://arxiv.org/abs/2312.10997",
+      "publication": "Y Gao, Y Xiong, X Gao, K Jia, J Pan, Y Bi, Y Dai… - arXiv preprint arXiv …, 2023 - arxiv.org",
+      "snippet": "… Section III focuses on optimization methods in retrieval,including indexing, query and … retrieval process and LLM fine-tuning in generation. Section V analyzes the three augmentation …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "9082880950785936523",
+          "total": 6766,
+          "link": "https://scholar.google.com/scholar?cites=9082880950785936523&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "9082880950785936523",
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=9082880950785936523&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:iwzCABrgDH4J:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:iwzCABrgDH4J:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "arxiv.org",
+        "format": "PDF",
+        "link": "https://arxiv.org/pdf/2312.10997"
+      },
+      "authors": [
+        {
+          "name": "Y Gao"
+        },
+        {
+          "name": "Y Xiong"
+        },
+        {
+          "name": "X Gao"
+        },
+        {
+          "name": "K Jia"
+        },
+        {
+          "name": "J Pan"
+        },
+        {
+          "name": "Y Bi"
+        },
+        {
+          "name": "Y Dai…"
+        }
+      ]
+    },
+    {
+      "position": 17,
+      "title": "Retrieval augmented generation (RAG) with enhanced SBERT fine-tuning vector summarization in medical domain",
+      "data_cid": "OD-sElZR4V4J",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0957417426013011",
+      "publication": "S Hariharan, S Balapriya, P Jose, Q Xu, J Lu… - Expert Systems with …, 2026 - Elsevier",
+      "snippet": "… and LLM-based evaluation using GPT-4. This paper discusses the fine-tuning of LLM … The study explores the application of LLMs in providing personalized healthcare support in …",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "6836835139447439160",
+          "total": 1,
+          "link": "https://scholar.google.com/scholar?cites=6836835139447439160&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "6836835139447439160",
+          "total": 3,
+          "link": "https://scholar.google.com/scholar?cluster=6836835139447439160&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:OD-sElZR4V4J:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "leedsbeckett.ac.uk",
+        "format": "PDF",
+        "link": "https://eprints.leedsbeckett.ac.uk/id/eprint/12893/1/RetrievalAugmentedGenerationRagWithEnhancedSbertFinetuningVectorSummarizationInMedicalDomainPV-KOR.pdf"
+      },
+      "authors": [
+        {
+          "name": "S Hariharan"
+        },
+        {
+          "name": "S Balapriya"
+        },
+        {
+          "name": "P Jose"
+        },
+        {
+          "name": "Q Xu"
+        },
+        {
+          "name": "J Lu…"
+        }
+      ]
+    },
+    {
+      "position": 18,
+      "title": "Improving Retrieval Augmented Generation for Health Care by Fine-Tuning Clinical Embedding Models: Development and Evaluation Study",
+      "data_cid": "mTP0OElg01QJ",
+      "link": "https://www.jmir.org/2026/1/e82997/",
+      "publication": "K Arzideh, H Schäfer, A Idrissi-Yaghir… - Journal of Medical …, 2026 - jmir.org",
+      "snippet": "… into Retrieval Augmented Generation (RAG) systems marks an advancement in information retrieval (… documents are retrieved and then incorporated into the LLM prompt. They combine …",
+      "type": "HTML",
+      "inline_links": {
+        "versions": {
+          "cluster_id": "6112334986876302233",
+          "total": 7,
+          "link": "https://scholar.google.com/scholar?cluster=6112334986876302233&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:mTP0OElg01QJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:mTP0OElg01QJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "jmir.org",
+        "format": "HTML",
+        "link": "https://www.jmir.org/2026/1/e82997/"
+      },
+      "authors": [
+        {
+          "name": "K Arzideh"
+        },
+        {
+          "name": "H Schäfer",
+          "id": "9lX7zD8AAAAJ",
+          "link": "https://scholar.google.com/citations?user=9lX7zD8AAAAJ&hl=en&num=20&oi=sra"
+        },
+        {
+          "name": "A Idrissi-Yaghir",
+          "id": "HJeCg5wAAAAJ",
+          "link": "https://scholar.google.com/citations?user=HJeCg5wAAAAJ&hl=en&num=20&oi=sra"
+        }
+      ]
+    },
+    {
+      "position": 19,
+      "title": "Enhancing Generative AI Capabilities Through Retrieval-Augmented Generation Systems and LLMs.",
+      "data_cid": "KPh-qy7WkL0J",
+      "link": "https://www.researchgate.net/profile/Swathi-Suddala/publication/385347153_Enhancing_Generative_AI_Capabilities_Through_Retrieval-Augmented_Generation_Systems_and_LLMs/links/672110c05852dd723c9c989a/Enhancing-Generative-AI-Capabilities-Through-Retrieval-Augmented-Generation-Systems-and-LLMs.pdf",
+      "publication": "A Bansal, S Suddala - Library of Progress-Library Science …, 2024 - researchgate.net",
+      "snippet": "… for retrieval at scale. On the reasoning task, we compare a recently proposed retrieval-augmented generation … it when it stands alone with no fine-tuning and when combined with a …",
+      "type": "PDF",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "13659653165748779048",
+          "total": 4,
+          "link": "https://scholar.google.com/scholar?cites=13659653165748779048&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "versions": {
+          "cluster_id": "13659653165748779048",
+          "total": 3,
+          "link": "https://scholar.google.com/scholar?cluster=13659653165748779048&hl=en&num=20&as_sdt=0,33"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:KPh-qy7WkL0J:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:KPh-qy7WkL0J:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "researchgate.net",
+        "format": "PDF",
+        "link": "https://www.researchgate.net/profile/Swathi-Suddala/publication/385347153_Enhancing_Generative_AI_Capabilities_Through_Retrieval-Augmented_Generation_Systems_and_LLMs/links/672110c05852dd723c9c989a/Enhancing-Generative-AI-Capabilities-Through-Retrieval-Augmented-Generation-Systems-and-LLMs.pdf"
+      },
+      "authors": [
+        {
+          "name": "A Bansal"
+        },
+        {
+          "name": "S Suddala"
+        }
+      ]
+    },
+    {
+      "position": 20,
+      "title": "Enhancing Medical Question Answering with LLMs via a Hybrid Retrieval-Augmented Generation Framework",
+      "data_cid": "Csc_EH0SifkJ",
+      "link": "https://www.mdpi.com/2078-2489/17/2/133",
+      "publication": "B Aljohani, T Alsanoosy - Information, 2026 - mdpi.com",
+      "snippet": "… This indicates that BioGPT requires further fine-tuning to be effective in question-answering tasks. Indeed, the authors of BioGPT themselves recommend additional fine-tuning or the …",
+      "type": "HTML",
+      "inline_links": {
+        "cited_by": {
+          "cites_id": "17980923315606243082",
+          "total": 4,
+          "link": "https://scholar.google.com/scholar?cites=17980923315606243082&as_sdt=5,33&sciodt=0,33&hl=en&num=20"
+        },
+        "related_articles_link": "https://scholar.google.com/scholar?q=related:Csc_EH0SifkJ:scholar.google.com/&scioq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:Csc_EH0SifkJ:scholar.google.com/+retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+      },
+      "resource": {
+        "name": "mdpi.com",
+        "format": "HTML",
+        "link": "https://www.mdpi.com/2078-2489/17/2/133"
+      },
+      "authors": [
+        {
+          "name": "B Aljohani"
+        },
+        {
+          "name": "T Alsanoosy"
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://scholar.google.com/scholar?start=20&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+    "other_pages": {
+      "2": "https://scholar.google.com/scholar?start=20&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "3": "https://scholar.google.com/scholar?start=40&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "4": "https://scholar.google.com/scholar?start=60&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "5": "https://scholar.google.com/scholar?start=80&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "6": "https://scholar.google.com/scholar?start=100&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "7": "https://scholar.google.com/scholar?start=120&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "8": "https://scholar.google.com/scholar?start=140&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "9": "https://scholar.google.com/scholar?start=160&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33",
+      "10": "https://scholar.google.com/scholar?start=180&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&hl=en&num=20&as_sdt=0,33"
+    }
+  }
+}

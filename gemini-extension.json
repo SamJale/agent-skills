@@ -1,0 +1,10 @@
+{
+  "name": "searchapi",
+  "version": "1.0.0",
+  "description": "SearchApi for AI agents: live search results as data from 100+ engines (Google, Bing, Maps, Shopping, Flights, News, YouTube, AI answers, ad libraries), lean responses, and a skill to migrate from other SERP APIs.",
+  "mcpServers": {
+    "searchapi": {
+      "httpUrl": "https://www.searchapi.io/mcp"
+    }
+  }
+}

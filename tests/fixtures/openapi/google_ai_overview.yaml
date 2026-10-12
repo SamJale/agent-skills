@@ -1,0 +1,498 @@
+openapi: 3.0.0
+info:
+  title: Google AI Overview API
+  description: |
+    Google AI Overview provides AI-powered summaries for search queries, extracting and synthesizing information from multiple sources to deliver comprehensive answers.
+
+    **Cross-linking**: The page_token parameter typically comes from Google Search API responses, either from the AI Overview section or from a related question whose AI Overview answer was not included. You can extract the page token from Google Search results to fetch detailed AI-generated content.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google AI Overview Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to `google_ai_overview` for Google AI Overview API
+          schema:
+            type: string
+            enum: ["google_ai_overview"]
+        - name: page_token
+          in: query
+          required: true
+          description: Base64-encoded page token containing the query and parameters for fetching AI overview content
+          schema:
+            type: string
+        - name: link
+          in: query
+          required: false
+          description: 'How reference links are returned. "raw" (default) returns Google''s redirect URL (google.com/goto?url=...); "resolved" returns the direct destination URL (best-effort, adds latency).'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/SearchResponse'
+                  - $ref: '#/components/schemas/AiModeResponse'
+                  - $ref: '#/components/schemas/ErrorResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        text_blocks:
+          type: array
+          description: Array of content blocks containing the AI-generated overview
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: Formatted markdown representation of the AI overview content
+        reference_links:
+          type: array
+          description: Source links referenced in the AI overview
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+      required: [search_metadata, search_parameters, text_blocks]
+    
+    AiModeResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        local_results:
+          type: array
+          description: Local business results relevant to the query
+          items:
+            $ref: '#/components/schemas/LocalResult'
+        web_results:
+          type: array
+          description: Web search results related to the AI overview
+          items:
+            $ref: '#/components/schemas/WebResult'
+        inline_shopping:
+          type: array
+          description: Shopping results embedded within the AI overview
+          items:
+            $ref: '#/components/schemas/InlineShoppingItem'
+        text_blocks:
+          type: array
+          description: Array of content blocks containing the AI-generated overview
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: Formatted markdown representation of the AI overview content
+        reference_links:
+          type: array
+          description: Source links referenced in the AI overview
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+      required: [search_metadata, search_parameters, text_blocks]
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google AI Overview URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: The engine used for the search
+        page_token:
+          type: string
+          description: The page token used for the request
+
+    TextBlock:
+      type: object
+      discriminator:
+        propertyName: type
+        mapping:
+          paragraph: '#/components/schemas/ParagraphBlock'
+          header: '#/components/schemas/HeaderBlock'
+          ordered_list: '#/components/schemas/OrderedListBlock'
+          unordered_list: '#/components/schemas/UnorderedListBlock'
+          table: '#/components/schemas/TableBlock'
+          code_blocks: '#/components/schemas/CodeBlock'
+          video: '#/components/schemas/VideoBlock'
+      oneOf:
+        - $ref: '#/components/schemas/ParagraphBlock'
+        - $ref: '#/components/schemas/HeaderBlock'
+        - $ref: '#/components/schemas/OrderedListBlock'
+        - $ref: '#/components/schemas/UnorderedListBlock'
+        - $ref: '#/components/schemas/TableBlock'
+        - $ref: '#/components/schemas/CodeBlock'
+        - $ref: '#/components/schemas/VideoBlock'
+
+    ParagraphBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["paragraph"]
+          description: Block type identifier
+        link:
+          type: string
+          description: Associated link for this paragraph
+        answer:
+          type: string
+          description: The paragraph text content
+        answer_highlight:
+          type: string
+          description: Highlighted portion of the answer
+        related_searches:
+          type: array
+          description: Related search suggestions within the paragraph
+          items:
+            type: object
+            properties:
+              query:
+                type: string
+                description: The related search query text
+              link:
+                type: string
+                description: Link to perform the related search
+        reference_indexes:
+          type: array
+          description: Indexes of source references for this content
+          items:
+            type: integer
+        thumbnail:
+          type: string
+          description: Thumbnail image URL associated with the paragraph
+
+    HeaderBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["header"]
+          description: Block type identifier
+        answer:
+          type: string
+          description: The header text
+        reference_indexes:
+          type: array
+          description: Indexes of source references for this header
+          items:
+            type: integer
+
+    OrderedListBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["ordered_list"]
+          description: Block type identifier
+        answer:
+          type: string
+          description: Optional introductory text for the list
+        items:
+          type: array
+          description: List items which can be any type of text block
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        reference_indexes:
+          type: array
+          description: Indexes of source references for this list
+          items:
+            type: integer
+
+    UnorderedListBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["unordered_list"]
+          description: Block type identifier
+        answer:
+          type: string
+          description: Optional introductory text for the list
+        items:
+          type: array
+          description: List items which can be any type of text block
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        reference_indexes:
+          type: array
+          description: Indexes of source references for this list
+          items:
+            type: integer
+
+    TableBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["table"]
+          description: Block type identifier
+        table:
+          type: object
+          description: Structured table data
+          properties:
+            headers:
+              type: array
+              description: Table column headers
+              items:
+                type: string
+            rows:
+              type: array
+              description: Table data rows
+              items:
+                type: array
+                items:
+                  type: string
+        answer:
+          type: string
+          description: Plain text representation of the table
+        reference_indexes:
+          type: array
+          description: Indexes of source references for this table
+          items:
+            type: integer
+
+    CodeBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["code_blocks"]
+          description: Block type identifier
+        language:
+          type: string
+          description: Programming language of the code
+        code:
+          type: string
+          description: The code content
+
+    VideoBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["video"]
+          description: Block type identifier
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Link to the video
+        duration:
+          type: string
+          description: Video duration
+        snippet:
+          type: string
+          description: Video description or snippet
+        source:
+          type: string
+          description: Video source platform
+        channel:
+          type: string
+          description: Channel or creator name
+        date:
+          type: string
+          description: Video publish date
+
+    ReferenceLink:
+      type: object
+      properties:
+        index:
+          type: integer
+          description: Reference number for citation
+        title:
+          type: string
+          description: Title of the referenced content
+        link:
+          type: string
+          description: URL to the source
+        snippet:
+          type: string
+          description: Brief excerpt from the source
+        date:
+          type: string
+          description: Publication date of the source
+        source:
+          type: string
+          description: Domain or publisher of the content
+        thumbnail:
+          type: string
+          description: Thumbnail image URL for the source
+
+    LocalResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in the results list
+        title:
+          type: string
+          description: Business name
+        link:
+          type: string
+          description: Link to the business listing
+        rating:
+          type: number
+          description: Average rating score
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          type: string
+          description: Price level indicator
+        type:
+          type: string
+          description: Business category
+        address:
+          type: string
+          description: Business address
+        is_closed:
+          type: boolean
+          description: Whether the business is currently closed
+
+    WebResult:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Web page title
+        link:
+          type: string
+          description: URL to the web page
+        displayed_link:
+          type: string
+          description: Display-friendly URL
+        source:
+          type: string
+          description: Website domain
+        snippet:
+          type: string
+          description: Brief excerpt from the page
+
+    InlineShoppingItem:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in the shopping results
+        title:
+          type: string
+          description: Product name
+        link:
+          type: string
+          description: Link to the product page
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          type: string
+          description: Current price
+        extracted_price:
+          type: number
+          description: Numeric price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numeric original price value
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

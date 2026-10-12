@@ -1,0 +1,212 @@
+openapi: 3.0.0
+info:
+  title: Google Trends Trending Now API
+  description: |
+    Retrieve real-time trending topics from Google Trends. This API provides information about current and recent trending searches, including search volume, percentage increase, and related keywords.
+    
+    **Cross-linking**: The `news_token` field returned by this API can be used with Google News APIs to fetch related news articles for each trending topic.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Trends Trending Now Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: The search engine to use for the request
+          schema:
+            type: string
+            enum: ["google_trends_trending_now"]
+            default: "google_trends_trending_now"
+        - name: geo
+          in: query
+          required: false
+          description: Geographic location to filter trends (ISO 3166 codes)
+          schema:
+            type: string
+            enum: ["AL", "DZ", "AO", "AR", "AR-C", "AR-B", "AR-K", "AR-H", "AR-U", "AR-X", "AR-W", "AR-E", "AR-P", "AR-Y", "AR-L", "AR-F", "AR-M", "AR-N", "AR-Q", "AR-R", "AR-A", "AR-J", "AR-D", "AR-Z", "AR-S", "AR-G", "AR-V", "AR-T", "AM", "AU", "AU-ACT", "AU-NSW", "AU-NT", "AU-QLD", "AU-SA", "AU-TAS", "AU-VIC", "AU-WA", "AT", "AT-1", "AT-2", "AT-3", "AT-5", "AT-6", "AT-7", "AT-4", "AT-9", "AT-8", "AZ", "BH", "BD", "BY", "BE", "BE-BRU", "BE-VLG", "BE-WAL", "BJ", "BO", "BA", "BR", "BR-DF", "BR-AC", "BR-AL", "BR-AP", "BR-AM", "BR-BA", "BR-CE", "BR-ES", "BR-GO", "BR-MA", "BR-MT", "BR-MS", "BR-MG", "BR-PA", "BR-PB", "BR-PR", "BR-PE", "BR-PI", "BR-RJ", "BR-RN", "BR-RS", "BR-RO", "BR-RR", "BR-SC", "BR-SP", "BR-SE", "BR-TO", "BG", "BF", "KH", "CM", "CA", "CA-AB", "CA-BC", "CA-MB", "CA-NB", "CA-NL", "CA-NT", "CA-NS", "CA-NU", "CA-ON", "CA-PE", "CA-QC", "CA-SK", "CA-YT", "CL", "CL-AN", "CL-AR", "CL-AP", "CL-AT", "CL-BI", "CL-CO", "CL-LL", "CL-LR", "CL-MA", "CL-ML", "CL-LI", "CL-RM", "CL-TA", "CL-VS", "CL-AI", "CO", "CO-AMA", "CO-ANT", "CO-ARA", "CO-ATL", "CO-DC", "CO-BOL", "CO-BOY", "CO-CAL", "CO-CAQ", "CO-CAS", "CO-CAU", "CO-CES", "CO-CHO", "CO-COR", "CO-CUN", "CO-GUA", "CO-GUV", "CO-HUI", "CO-LAG", "CO-MAG", "CO-MET", "CO-NAR", "CO-NSA", "CO-PUT", "CO-QUI", "CO-RIS", "CO-SAP", "CO-SAN", "CO-SUC", "CO-TOL", "CO-VAC", "CO-VAU", "CO-VID", "CD", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DK-84", "DK-82", "DK-81", "DK-83", "DK-85", "DO", "EC", "EC-A", "EC-B", "EC-F", "EC-C", "EC-H", "EC-X", "EC-O", "EC-E", "EC-W", "EC-G", "EC-I", "EC-L", "EC-R", "EC-M", "EC-S", "EC-D", "EC-Y", "EC-P", "EC-N", "EC-SE", "EC-SD", "EC-U", "EC-T", "EC-Z", "EG", "EG-KB", "EG-ALX", "EG-SHR", "EG-AST", "EG-ASN", "EG-BNS", "EG-C", "EG-DK", "EG-DT", "EG-BH", "EG-FYM", "EG-GH", "EG-GZ", "EG-IS", "EG-KFS", "EG-LX", "EG-MT", "EG-MN", "EG-MNF", "EG-WAD", "EG-SIN", "EG-PTS", "EG-KN", "EG-BA", "EG-SHG", "EG-JS", "EG-SUZ", "SV", "EE", "ET", "FI", "FR", "FR-A", "FR-B", "FR-C", "FR-E", "FR-D", "FR-F", "FR-G", "FR-H", "FR-I", "FR-J", "FR-K", "FR-L", "FR-M", "FR-P", "FR-N", "FR-O", "FR-R", "FR-S", "FR-T", "FR-U", "FR-V", "FR-Q", "FR-01", "FR-02", "FR-03", "FR-06", "FR-04", "FR-07", "FR-08", "FR-09", "FR-10", "FR-11", "FR-12", "FR-67", "FR-13", "FR-14", "FR-15", "FR-16", "FR-17", "FR-18", "FR-19", "FR-2A", "FR-22", "FR-23", "FR-21", "FR-79", "FR-24", "FR-25", "FR-26", "FR-91", "FR-27", "FR-28", "FR-29", "FR-30", "FR-32", "FR-33", "FR-68", "FR-2B", "FR-31", "FR-43", "FR-52", "FR-74", "FR-70", "FR-87", "FR-05", "FR-65", "FR-92", "FR-34", "FR-35", "FR-36", "FR-37", "FR-38", "FR-39", "FR-40", "FR-41", "FR-42", "FR-44", "FR-45", "FR-46", "FR-47", "FR-48", "FR-49", "FR-50", "FR-51", "FR-53", "FR-54", "FR-55", "FR-56", "FR-57", "FR-58", "FR-59", "FR-60", "FR-61", "FR-75", "FR-62", "FR-63", "FR-64", "FR-66", "FR-69", "FR-72", "FR-73", "FR-71", "FR-76", "FR-93", "FR-77", "FR-80", "FR-81", "FR-82", "FR-90", "FR-95", "FR-94", "FR-83", "FR-84", "FR-85", "FR-86", "FR-88", "FR-89", "FR-78", "GE", "DE", "DE-BW", "DE-BY", "DE-BE", "DE-BB", "DE-HB", "DE-HH", "DE-HE", "DE-NI", "DE-MV", "DE-NW", "DE-RP", "DE-SL", "DE-SN", "DE-ST", "DE-SH", "DE-TH", "GH", "GR", "GT", "HT", "HN", "HK", "HU", "IN", "IN-AN", "IN-AP", "IN-AR", "IN-AS", "IN-BR", "IN-CH", "IN-CT", "IN-DN", "IN-DD", "IN-DL", "IN-GA", "IN-GJ", "IN-HR", "IN-HP", "IN-JK", "IN-JH", "IN-KA", "IN-KL", "IN-LD", "IN-MP", "IN-MH", "IN-MN", "IN-ML", "IN-MZ", "IN-NL", "IN-OR", "IN-PY", "IN-PB", "IN-RJ", "IN-SK", "IN-TN", "IN-TG", "IN-TR", "IN-UP", "IN-UT", "IN-WB", "ID", "ID-AC", "ID-BA", "ID-BB", "ID-BT", "ID-BE", "ID-JT", "ID-KT", "ID-ST", "ID-JI", "ID-KI", "ID-NT", "ID-GO", "ID-JA", "ID-LA", "ID-MA", "ID-KU", "ID-MU", "ID-SA", "ID-SU", "ID-PA", "ID-RI", "ID-KR", "ID-SG", "ID-KS", "ID-SN", "ID-SS", "ID-JK", "ID-YO", "ID-JB", "ID-KB", "ID-NB", "ID-PB", "ID-SR", "ID-SB", "IR", "IQ", "IE", "IL", "IL-M", "IL-HA", "IL-JM", "IL-Z", "IL-D", "IL-TA", "IT", "IT-65", "IT-23", "IT-75", "IT-77", "IT-78", "IT-72", "IT-45", "IT-36", "IT-62", "IT-42", "IT-25", "IT-57", "IT-67", "IT-21", "IT-88", "IT-82", "IT-32", "IT-52", "IT-55", "IT-34", "JM", "JP", "JP-23", "JP-05", "JP-02", "JP-12", "JP-38", "JP-18", "JP-40", "JP-07", "JP-21", "JP-10", "JP-34", "JP-01", "JP-28", "JP-08", "JP-17", "JP-03", "JP-37", "JP-46", "JP-14", "JP-39", "JP-43", "JP-26", "JP-24", "JP-04", "JP-45", "JP-20", "JP-42", "JP-29", "JP-15", "JP-44", "JP-33", "JP-47", "JP-27", "JP-41", "JP-11", "JP-25", "JP-32", "JP-22", "JP-09", "JP-36", "JP-13", "JP-31", "JP-16", "JP-30", "JP-06", "JP-35", "JP-19", "JO", "KZ", "KE", "KW", "KG", "LV", "LB", "LY", "LT", "MY", "MY-14", "MY-01", "MY-02", "MY-03", "MY-15", "MY-04", "MY-05", "MY-06", "MY-07", "MY-08", "MY-09", "MY-16", "MY-12", "MY-13", "MY-10", "MY-11", "ML", "MX", "MX-AGU", "MX-BCN", "MX-BCS", "MX-CAM", "MX-CHP", "MX-CHH", "MX-COA", "MX-COL", "MX-DUR", "MX-GUA", "MX-GRO", "MX-HID", "MX-JAL", "MX-DIF", "MX-MIC", "MX-MOR", "MX-NAY", "MX-NLE", "MX-OAX", "MX-PUE", "MX-QUE", "MX-ROO", "MX-SLP", "MX-SIN", "MX-SON", "MX-MEX", "MX-TAB", "MX-TAM", "MX-TLA", "MX-VER", "MX-YUC", "MX-ZAC", "MD", "MA", "MZ", "MM", "NP", "NL", "NL-DR", "NL-FL", "NL-FR", "NL-GE", "NL-GR", "NL-LI", "NL-NB", "NL-NH", "NL-OV", "NL-ZH", "NL-UT", "NL-ZE", "NZ", "NZ-AUK", "NZ-BOP", "NZ-CAN", "NZ-GIS", "NZ-HKB", "NZ-MWT", "NZ-MBH", "NZ-NSN", "NZ-NTL", "NZ-OTA", "NZ-STL", "NZ-TKI", "NZ-TAS", "NZ-WKO", "NZ-WGN", "NZ-WTC", "NI", "NG", "NG-AB", "NG-AD", "NG-AK", "NG-AN", "NG-BA", "NG-BY", "NG-BE", "NG-BO", "NG-CR", "NG-DE", "NG-EB", "NG-ED", "NG-EK", "NG-EN", "NG-FC", "NG-GO", "NG-IM", "NG-JI", "NG-KD", "NG-KN", "NG-KT", "NG-KE", "NG-KO", "NG-KW", "NG-LA", "NG-NA", "NG-NI", "NG-OG", "NG-ON", "NG-OS", "NG-OY", "NG-PL", "NG-RI", "NG-SO", "NG-TA", "NG-YO", "NG-ZA", "MK", "NO", "OM", "PK", "PK-JK", "PK-BA", "PK-TA", "PK-GB", "PK-IS", "PK-KP", "PK-PB", "PK-SD", "PS", "PA", "PY", "PE", "PE-AMA", "PE-ANC", "PE-APU", "PE-ARE", "PE-AYA", "PE-CAJ", "PE-CAL", "PE-CUS", "PE-HUV", "PE-HUC", "PE-ICA", "PE-JUN", "PE-LAL", "PE-LAM", "PE-LIM", "PE-LOR", "PE-MDD", "PE-MOQ", "PE-PAS", "PE-PIU", "PE-PUN", "PE-SAM", "PE-TAC", "PE-TUM", "PE-UCA", "PH", "PH-14", "PH-05", "PH-02", "PH-40", "PH-13", "PH-03", "PH-07", "PH-15", "PH-11", "PH-08", "PH-01", "PH-00", "PH-41", "PH-10", "PH-12", "PH-06", "PH-09", "PL", "PL-WP", "PL-KP", "PL-MA", "PL-LD", "PL-DS", "PL-LU", "PL-LB", "PL-MZ", "PL-OP", "PL-PK", "PL-PD", "PL-PM", "PL-SL", "PL-SK", "PL-WN", "PL-ZP", "PT", "PT-01", "PT-20", "PT-02", "PT-03", "PT-04", "PT-05", "PT-06", "PT-07", "PT-08", "PT-09", "PT-10", "PT-11", "PT-30", "PT-12", "PT-13", "PT-14", "PT-15", "PT-16", "PT-17", "PT-18", "PR", "QA", "RO", "RU", "RU-AD", "RU-ALT", "RU-AL", "RU-AMU", "RU-ARK", "RU-AST", "RU-BEL", "RU-BRY", "RU-BU", "RU-CE", "RU-CHE", "RU-CHU", "RU-CU", "RU-DA", "RU-IN", "RU-IRK", "RU-IVA", "RU-YEV", "RU-KB", "RU-KGD", "RU-KL", "RU-KLU", "RU-KAM", "RU-KC", "RU-KEM", "RU-KHA", "RU-KHM", "RU-KIR", "RU-KO", "RU-KOS", "RU-KDA", "RU-KYA", "RU-KGN", "RU-KRS", "RU-LEN", "RU-LIP", "RU-MAG", "RU-ME", "RU-MO", "RU-MOW", "RU-MOS", "RU-MUR", "RU-NEN", "RU-NIZ", "RU-SE", "RU-NGR", "RU-NVS", "RU-OMS", "RU-ORE", "RU-ORL", "RU-PNZ", "RU-PER", "RU-PRI", "RU-PSK", "RU-BA", "RU-KR", "RU-KK", "RU-ROS", "RU-RYA", "RU-SPE", "RU-SA", "RU-SAK", "RU-SAM", "RU-SAR", "RU-SMO", "RU-STA", "RU-SVE", "RU-TAM", "RU-TA", "RU-TOM", "RU-TUL", "RU-TY", "RU-TVE", "RU-TYU", "RU-UD", "RU-ULY", "RU-VLA", "RU-VGG", "RU-VLG", "RU-VOR", "RU-YAN", "RU-YAR", "RU-ZAB", "SA", "SA-11", "SA-12", "SA-03", "SA-05", "SA-14", "SA-04", "SA-06", "SA-09", "SA-02", "SA-10", "SA-08", "SA-01", "SA-07", "SN", "RS", "SG", "SK", "SI", "ZA", "ZA-EC", "ZA-FS", "ZA-GT", "ZA-NL", "ZA-LP", "ZA-MP", "ZA-NW", "ZA-NC", "ZA-WC", "KR", "KR-26", "KR-43", "KR-44", "KR-27", "KR-30", "KR-42", "KR-29", "KR-41", "KR-47", "KR-48", "KR-28", "KR-49", "KR-45", "KR-46", "KR-11", "KR-31", "ES", "ES-AN", "ES-AR", "ES-AS", "ES-IB", "ES-PV", "ES-CN", "ES-CB", "ES-CL", "ES-CM", "ES-CT", "ES-CE", "ES-MD", "ES-EX", "ES-GA", "ES-RI", "ES-ML", "ES-NC", "ES-MC", "ES-VC", "LK", "SE", "SE-K", "SE-W", "SE-X", "SE-I", "SE-N", "SE-Z", "SE-F", "SE-H", "SE-G", "SE-BD", "SE-T", "SE-E", "SE-M", "SE-D", "SE-AB", "SE-C", "SE-S", "SE-AC", "SE-Y", "SE-U", "SE-O", "CH", "CH-AG", "CH-AI", "CH-AR", "CH-BL", "CH-BS", "CH-BE", "CH-FR", "CH-GL", "CH-JU", "CH-NE", "CH-OW", "CH-SH", "CH-SZ", "CH-SO", "CH-UR", "CH-ZG", "CH-GE", "CH-GR", "CH-LU", "CH-NW", "CH-SG", "CH-TG", "CH-TI", "CH-VS", "CH-VD", "CH-ZH", "SY", "TW", "TW-KHH", "TW-TPQ", "TW-TXG", "TW-TNN", "TW-TPE", "TW-TAO", "TZ", "TH", "TT", "TN", "TR", "TR-01", "TR-02", "TR-03", "TR-04", "TR-68", "TR-05", "TR-06", "TR-07", "TR-75", "TR-08", "TR-09", "TR-10", "TR-74", "TR-72", "TR-69", "TR-11", "TR-12", "TR-13", "TR-14", "TR-15", "TR-16", "TR-17", "TR-18", "TR-19", "TR-20", "TR-21", "TR-81", "TR-22", "TR-23", "TR-24", "TR-25", "TR-26", "TR-27", "TR-28", "TR-29", "TR-30", "TR-31", "TR-76", "TR-32", "TR-34", "TR-35", "TR-46", "TR-78", "TR-70", "TR-36", "TR-37", "TR-38", "TR-79", "TR-71", "TR-39", "TR-40", "TR-41", "TR-42", "TR-43", "TR-44", "TR-45", "TR-47", "TR-33", "TR-48", "TR-49", "TR-50", "TR-51", "TR-52", "TR-80", "TR-53", "TR-54", "TR-55", "TR-63", "TR-56", "TR-57", "TR-58", "TR-73", "TR-59", "TR-60", "TR-61", "TR-62", "TR-64", "TR-65", "TR-77", "TR-66", "TR-67", "TM", "UG", "UA", "UA-71", "UA-74", "UA-77", "UA-43", "UA-12", "UA-14", "UA-26", "UA-63", "UA-65", "UA-68", "UA-35", "UA-30", "UA-32", "UA-09", "UA-46", "UA-48", "UA-51", "UA-53", "UA-56", "UA-40", "UA-59", "UA-61", "UA-05", "UA-07", "UA-21", "UA-23", "UA-18", "AE", "AE-AZ", "AE-AJ", "AE-DU", "AE-FU", "AE-RK", "AE-SH", "AE-UQ", "GB", "GB-ENG", "GB-NIR", "GB-SCT", "GB-WLS", "US", "US-AL", "US-AK", "US-AZ", "US-AR", "US-CA", "US-CO", "US-CT", "US-DE", "US-DC", "US-FL", "US-GA", "US-HI", "US-ID", "US-IL", "US-IN", "US-IA", "US-KS", "US-KY", "US-LA", "US-ME", "US-MD", "US-MA", "US-MI", "US-MN", "US-MS", "US-MO", "US-MT", "US-NE", "US-NV", "US-NH", "US-NJ", "US-NM", "US-NY", "US-NC", "US-ND", "US-OH", "US-OK", "US-OR", "US-PA", "US-RI", "US-SC", "US-SD", "US-TN", "US-TX", "US-UT", "US-VT", "US-VA", "US-WA", "US-WV", "US-WI", "US-WY", "662", "525", "532", "790", "644", "583", "634", "743", "524", "520", "635", "800", "512", "537", "716", "692", "821", "756", "746", "502", "630", "559", "757", "506", "736", "514", "523", "754", "767", "637", "648", "519", "564", "517", "584", "575", "759", "602", "868", "515", "598", "510", "752", "546", "604", "522", "535", "673", "600", "623", "682", "542", "751", "679", "505", "606", "676", "765", "565", "516", "801", "802", "649", "745", "724", "513", "570", "866", "571", "670", "509", "592", "798", "773", "563", "755", "658", "518", "545", "567", "647", "636", "566", "569", "533", "710", "766", "744", "618", "691", "758", "527", "718", "639", "561", "574", "734", "603", "747", "616", "557", "702", "582", "642", "643", "551", "749", "839", "541", "558", "722", "693", "803", "529", "651", "503", "669", "737", "553", "813", "640", "711", "528", "617", "613", "687", "762", "686", "628", "828", "698", "659", "622", "501", "544", "740", "633", "650", "652", "534", "631", "632", "804", "656", "597", "675", "504", "753", "508", "820", "500", "552", "521", "717", "560", "764", "811", "556", "573", "611", "538", "610", "862", "576", "770", "661", "641", "825", "807", "855", "507", "819", "657", "612", "624", "725", "588", "881", "619", "543", "638", "609", "555", "530", "539", "581", "547", "605", "540", "531", "789", "671", "760", "709", "526", "626", "625", "511", "549", "705", "548", "554", "627", "678", "577", "550", "810", "536", "771", "596", "UY", "UY-AR", "UY-CA", "UY-CL", "UY-CO", "UY-DU", "UY-FS", "UY-FD", "UY-LA", "UY-MA", "UY-MO", "UY-PA", "UY-RN", "UY-RV", "UY-RO", "UY-SA", "UY-SJ", "UY-SO", "UY-TA", "UY-TT", "UZ", "VE", "VN", "VN-44", "VN-43", "VN-54", "VN-53", "VN-55", "VN-56", "VN-50", "VN-31", "VN-57", "VN-58", "VN-40", "VN-59", "VN-CT", "VN-04", "VN-DN", "VN-33", "VN-72", "VN-71", "VN-39", "VN-45", "VN-30", "VN-03", "VN-63", "VN-23", "VN-61", "VN-HP", "VN-HN", "VN-73", "VN-SG", "VN-14", "VN-66", "VN-34", "VN-47", "VN-28", "VN-01", "VN-35", "VN-09", "VN-02", "VN-41", "VN-67", "VN-22", "VN-18", "VN-36", "VN-68", "VN-32", "VN-24", "VN-27", "VN-29", "VN-13", "VN-25", "VN-52", "VN-05", "VN-37", "VN-20", "VN-69", "VN-21", "VN-26", "VN-46", "VN-51", "VN-07", "VN-49", "VN-70", "VN-06", "YE", "ZM", "ZW"]
+            default: "US"
+        - name: hl
+          in: query
+          required: false
+          description: Interface language (ISO 639-1 code)
+          schema:
+            type: string
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+            default: "en"
+        - name: time
+          in: query
+          required: false
+          description: Time range for trending topics
+          schema:
+            type: string
+            enum: ["past_4_hours", "past_24_hours", "past_48_hours", "past_7_days"]
+            default: "past_24_hours"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        trends:
+          type: array
+          description: Array of trending topics
+          items:
+            $ref: '#/components/schemas/Trend'
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the search request"
+        status:
+          type: string
+          description: "Status of the search request"
+        created_at:
+          type: string
+          format: date-time
+          description: "Timestamp when the search was created"
+        request_time_taken:
+          type: number
+          description: "Time taken to make the request in seconds"
+        parsing_time_taken:
+          type: number
+          description: "Time taken to parse the results in seconds"
+        total_time_taken:
+          type: number
+          description: "Total time taken for the search in seconds"
+        request_url:
+          type: string
+          description: "Google Trends URL for this search"
+        html_url:
+          type: string
+          description: "URL to view HTML results"
+        json_url:
+          type: string
+          description: "URL to view JSON results"
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        geo:
+          type: string
+          description: Geographic location
+        time:
+          type: string
+          description: Time range
+        hl:
+          type: string
+          description: Interface language
+    Trend:
+      type: object
+      required: [position, query, search_volume, percentage_increase, location, categories, start_date, keywords]
+      properties:
+        position:
+          type: integer
+          description: Position in the trending list
+        query:
+          type: string
+          description: The trending search query text
+        search_volume:
+          type: integer
+          description: Current search volume for this trend
+        percentage_increase:
+          type: integer
+          description: Percentage increase in search volume
+        location:
+          type: string
+          description: Geographic location where this is trending
+        categories:
+          type: array
+          description: Categories associated with this trend
+          items:
+            type: string
+        start_date:
+          type: string
+          format: date-time
+          description: When this topic started trending
+        end_date:
+          type: string
+          format: date-time
+          description: When this topic stopped trending (if applicable)
+        time_active_minutes:
+          type: integer
+          description: Duration this topic has been trending in minutes
+        is_active:
+          type: boolean
+          description: Whether this topic is still actively trending
+        keywords:
+          type: array
+          description: Related keywords for this trending topic
+          items:
+            type: string
+        news_token:
+          type: string
+          description: Token for fetching related news articles
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

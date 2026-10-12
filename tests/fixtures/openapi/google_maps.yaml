@@ -1,0 +1,469 @@
+openapi: 3.0.0
+info:
+  title: Google Maps Search API
+  version: 1.0.0
+  description: |
+    The Google Maps Search API provides access to Google Maps search results data.
+    Search for local businesses, places, and locations with detailed information including
+    ratings, reviews, contact details, and GPS coordinates.
+    
+    **Cross-linking**: The `place_id` returned by this API can be used with the Google Maps Place API
+    to fetch detailed information about a specific place. Pass it as the `place_id` parameter.
+
+servers:
+  - url: https://www.searchapi.io/api/v1
+
+paths:
+  /search:
+    get:
+      summary: Google Maps Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - $ref: '#/components/parameters/engine'
+        - $ref: '#/components/parameters/api_key'
+        - $ref: '#/components/parameters/q'
+        - $ref: '#/components/parameters/ll'
+        - $ref: '#/components/parameters/hl'
+        - $ref: '#/components/parameters/gl'
+        - $ref: '#/components/parameters/page'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  parameters:
+    # Search Query Parameters
+    q:
+      name: q
+      in: query
+      required: true
+      description: "Parameter defines the query you want to search. You can use anything that you would use in a regular Google Maps search."
+      schema:
+        type: string
+    
+    # Geographic Location Parameters
+    ll:
+      name: ll
+      in: query
+      required: false
+      description: "The parameter specifies the GPS coordinates for the location where the query (q) should be applied. It can be formatted in two ways: @latitude,longitude,zoom (e.g. @40.7009973,-73.994778,12z) or @latitude,longitude,meters (e.g. @40.7009973,-73.994778,500m). The last value can end with z (zoom, from 3z to 21z) or m (meters for radius, from 62m to 18636559m). While the zoom parameter is optional, it is advisable to use it for greater accuracy."
+      schema:
+        type: string
+        pattern: "^@[-+]?(?:90(?:[.,]0+)?|[0-8]?[0-9](?:[.,][0-9]+)?),[-+]?(?:180(?:[.,]0+)?|1[0-7][0-9](?:[.,][0-9]+)?|[0-9]{1,2}(?:[.,][0-9]+)?),[0-9]{1,8}(?:[.,][0-9]+)?[zm]$"
+
+    # Localization Parameters
+    hl:
+      name: hl
+      in: query
+      required: false
+      description: "The default parameter en defines the interface language of the search. Check the full list of supported Google hl languages."
+      schema:
+        type: string
+        default: en
+        enum: [af, ak, sq, am, ar, hy, az, eu, be, bem, bn, bh, xx-bork, bs, br, bg, km, ca, chr, ny, zh-cn, zh-tw, co, hr, cs, da, nl, xx-elmer, en, eo, et, ee, fo, tl, fi, fr, fy, gaa, gl, ka, de, el, kl, gn, gu, xx-hacker, ht, ha, haw, iw, hi, hu, is, ig, id, ia, ga, it, ja, jw, kn, kk, rw, rn, xx-klingon, kg, ko, kri, ku, ckb, ky, lo, la, lv, ln, lt, loz, lg, ach, mk, mg, my, ms, ml, mt, mv, mi, mr, mfe, mo, mn, sr-me, ne, pcm, nso, no, nn, oc, or, om, ps, fa, xx-pirate, pl, pt, pt-br, pt-pt, pa, qu, ro, rm, nyn, ru, gd, sr, sh, st, tn, crs, sn, sd, si, sk, sl, so, es, es-419, su, sw, sv, tg, ta, tt, te, th, ti, to, lua, tum, tr, tk, tw, ug, uk, ur, uz, vu, vi, cy, wo, xh, yi, yo, zu]
+    
+    gl:
+      name: gl
+      in: query
+      required: false
+      description: "Parameter defines the country of the search. Check the full list of supported Google gl countries."
+      schema:
+        type: string
+        enum: [af, al, dz, as, ad, ao, ai, aq, ag, ar, am, aw, au, at, az, bs, bh, bd, bb, by, be, bz, bj, bm, bt, bo, ba, bw, bv, br, io, bn, bg, bf, bi, kh, cm, ca, cv, ky, cf, td, cl, cn, cx, cc, co, km, cg, cd, ck, cr, ci, hr, cu, cy, cz, dk, dj, dm, do, ec, eg, sv, gq, er, ee, et, fk, fo, fj, fi, fr, gf, pf, tf, ga, gm, ge, de, gh, gi, gr, gl, gd, gp, gu, gt, gn, gw, gy, ht, hm, va, hn, hk, hu, is, in, id, ir, iq, ie, il, it, jm, jp, jo, kz, ke, ki, kp, kr, kw, kg, la, lv, lb, ls, lr, ly, li, lt, lu, mo, mk, mg, mw, my, mv, ml, mt, mh, mq, mr, mu, yt, mx, fm, md, mc, mn, ms, ma, mz, mm, na, nr, np, nl, nc, nz, ni, ne, ng, nu, nf, mp, no, om, pk, pw, ps, pa, pg, py, pe, ph, pn, pl, pt, pr, qa, re, ro, ru, rw, sh, kn, lc, pm, vc, ws, sm, st, sa, sn, rs, sc, sl, sg, sk, si, sb, so, za, gs, es, lk, sd, sr, sj, sz, se, ch, sy, tw, tj, tz, th, tl, tg, tk, to, tt, tn, tr, tm, tc, tv, ug, ua, ae, uk, gb, us, um, uy, uz, vu, ve, vn, vg, vi, wf, eh, ye, zm, zw, gg, je, im, me]
+
+    # Pagination Parameters
+    page:
+      name: page
+      in: query
+      required: false
+      description: "This parameter indicates which page of results to return. By default, it is set to 1."
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    
+    # Engine Parameters
+    engine:
+      name: engine
+      in: query
+      required: true
+      description: "Parameter defines an engine that will be used to retrieve real-time data. It must be set to google_maps."
+      schema:
+        type: string
+        enum: [google_maps]
+    
+    # API Key Parameters
+    api_key:
+      name: api_key
+      in: query
+      required: true
+      description: "The api_key authenticates your requests. Use it as a query parameter (https://www.searchapi.io/api/v1/search?api_key=YOUR_API_KEY) or in the Authorization header (Bearer YOUR_API_KEY)."
+      schema:
+        type: string
+  
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ads:
+          type: array
+          items:
+            $ref: '#/components/schemas/MapAd'
+          description: "Sponsored results"
+        local_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalResult'
+          description: "Array of place/location results"
+      additionalProperties: false
+    
+    SearchMetadata:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the search request"
+        status:
+          type: string
+          description: "Status of the search request"
+        created_at:
+          type: string
+          format: date-time
+          description: "Timestamp when the search was created"
+        request_time_taken:
+          type: number
+          description: "Time taken to make the request in seconds"
+        parsing_time_taken:
+          type: number
+          description: "Time taken to parse the results in seconds"
+        total_time_taken:
+          type: number
+          description: "Total time taken for the search in seconds"
+        request_url:
+          type: string
+          description: "Google Maps URL for this search"
+        html_url:
+          type: string
+          description: "URL to view HTML results"
+        json_url:
+          type: string
+          description: "URL to view JSON results"
+      required: [id, status, created_at]
+    
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: "Search engine used"
+        q:
+          type: string
+          description: "Search query"
+        ll:
+          type: string
+          description: "GPS coordinates"
+        hl:
+          type: string
+          description: "Interface language"
+        gl:
+          type: string
+          description: "Country of the search"
+        page:
+          type: integer
+          description: "Page number"
+    
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: "The query that was actually displayed/processed"
+        did_you_mean:
+          type: string
+          description: "Alternative spelling suggestion if available"
+        state:
+          type: string
+          description: "Information about the spelling state"
+          enum: ["Showing results for fixed spelling.", "Showing results for exact spelling.", "Showing results for original spelling."]
+      additionalProperties: false
+    
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+    
+    MapAd:
+      allOf:
+        - $ref: '#/components/schemas/LocalResult'
+        - type: object
+          properties:
+            tracking_title:
+              type: string
+              description: "Tracking title for ad"
+            tracking_link:
+              type: string
+              description: "Tracking link for ad"
+      
+    LocalResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: "Position in search results"
+        ludocid:
+          type: string
+          description: "Local unique document identifier"
+        place_id:
+          type: string
+          description: "Google Place ID"
+        kgmid:
+          type: string
+          description: "Knowledge Graph machine identifier"
+        data_id:
+          type: string
+          description: "Data identifier"
+        title:
+          type: string
+          description: "Place name"
+        description:
+          type: string
+          description: "Place description"
+        features:
+          type: array
+          items:
+            type: string
+          description: "List of features"
+        address:
+          type: string
+          description: "Physical address"
+        city:
+          type: string
+          description: "City (and region/country) label of the place"
+        country_code:
+          type: string
+          description: "Two-letter country code of the place"
+        timezone:
+          type: string
+          description: "Time zone of the place"
+        detour:
+          type: object
+          description: "Off-route deviation to reach this place (only present on search-along-route responses)"
+          properties:
+            duration:
+              type: integer
+              description: "Extra driving time in seconds"
+            formatted_duration:
+              type: string
+              description: "Localized extra driving time (e.g. \"4 min\")"
+            distance:
+              type: integer
+              description: "Extra distance in meters"
+            formatted_distance:
+              type: string
+              description: "Localized extra distance (e.g. \"0.8 mi\" or \"1,3 km\")"
+        fuel_price:
+          type: string
+          description: "Per-unit fuel price for gas stations (e.g. \"$5.80/Regular\")"
+        phone:
+          type: string
+          description: "Phone number"
+        price:
+          type: string
+          description: "Price level or cost information"
+        price_description:
+          type: string
+          description: "Description of pricing"
+        hotel_stars:
+          type: integer
+          description: "Hotel star rating"
+        rating:
+          type: number
+          description: "Average rating"
+        reviews:
+          type: integer
+          description: "Number of reviews"
+        reviews_link:
+          type: string
+          description: "Link to reviews"
+        review_text:
+          type: string
+          description: "Sample review text"
+        is_unclaimed_listing:
+          type: boolean
+          description: "Whether this is an unclaimed business listing"
+        website:
+          type: string
+          description: "Business website URL"
+        domain:
+          type: string
+          description: "Website domain"
+        gps_coordinates:
+          type: object
+          properties:
+            latitude:
+              type: number
+              description: "Latitude coordinate"
+            longitude:
+              type: number
+              description: "Longitude coordinate"
+          description: "GPS coordinates of the place"
+        type:
+          type: string
+          description: "Primary place type or category"
+        types:
+          type: array
+          items:
+            type: string
+          description: "Array of place types/categories"
+        tracking_title:
+          type: string
+          description: "Tracking title (for ads)"
+        tracking_link:
+          type: string
+          description: "Tracking link (for ads)"
+        posts:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: "Post title"
+              source:
+                type: string
+                description: "Post source"
+              link:
+                type: string
+                description: "Post link"
+            additionalProperties: false
+          description: "Related posts"
+        amenities:
+          type: array
+          items:
+            type: string
+          description: "Available amenities"
+        highlights:
+          type: array
+          items:
+            type: string
+          description: "Highlight attribute chips (e.g. LGBTQ+ friendly, Women-owned)"
+        open_state:
+          type: string
+          description: "Current operating status"
+        hours:
+          type: string
+          description: "Operating hours information"
+        open_hours:
+          type: object
+          additionalProperties:
+            type: string
+          description: "Detailed opening hours by day"
+        reservation:
+          type: object
+          description: "Primary reservation/booking provider for the place"
+          properties:
+            link:
+              type: string
+              description: "Reservation URL"
+            source:
+              type: string
+              description: "Reservation provider domain"
+        reservation_links:
+          type: array
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+                description: "Link text"
+              link:
+                type: string
+                description: "Reservation URL"
+            additionalProperties: false
+          description: "Reservation booking links"
+        extensions:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: "Extension category title"
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      description: "Item title"
+                    value:
+                      type: string
+                      description: "Item value"
+                  additionalProperties: false
+            additionalProperties: false
+          description: "Additional place information extensions"
+        images:
+          type: array
+          items:
+            type: string
+          description: "Array of image URLs"
+        thumbnail:
+          type: string
+          description: "Place thumbnail image URL"

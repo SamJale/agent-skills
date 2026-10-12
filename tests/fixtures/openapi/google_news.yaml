@@ -1,0 +1,414 @@
+openapi: 3.0.0
+info:
+  title: Google News API
+  description: |
+    Access real-time news articles from Google News with comprehensive search capabilities.
+    
+    This API provides structured access to news articles, top stories, and related metadata from Google News search results.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google News Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: The search engine to use
+          schema:
+            type: string
+            enum: ["google_news"]
+            default: "google_news"
+        - name: q
+          in: query
+          required: true
+          description: "Search query. When the site: operator is used, Google redirects the search to Google Search and the response carries web results. Use the Google News Portal API for news results filtered by publication."
+          schema:
+            type: string
+        - name: device
+          in: query
+          required: false
+          description: Device type for search results
+          schema:
+            type: string
+            enum: ["desktop", "mobile", "tablet"]
+            default: "desktop"
+        - name: location
+          in: query
+          required: false
+          description: Location for localized search results
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google's encoded location parameter
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language code
+          schema:
+            type: string
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country code for search results
+          schema:
+            type: string
+            default: "us"
+        - name: lr
+          in: query
+          required: false
+          description: Restricts search to documents written in a particular language
+          schema:
+            type: string
+        - name: cr
+          in: query
+          required: false
+          description: Restricts search results to documents from a particular country
+          schema:
+            type: string
+        - name: nfpr
+          in: query
+          required: false
+          description: Auto-correction control
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: filter
+          in: query
+          required: false
+          description: Controls duplicate content and host crowding filters
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: page
+          in: query
+          required: false
+          description: Page number for paginated results
+          schema:
+            type: integer
+            minimum: 1
+        - name: time_period
+          in: query
+          required: false
+          description: Time period filter for results
+          schema:
+            type: string
+            enum: ["last_hour", "last_day", "last_week", "last_month", "last_year"]
+        - name: time_period_min
+          in: query
+          required: false
+          description: 'Start date for custom time range. Format: MM/DD/YYYY'
+          schema:
+            type: string
+            pattern: '^(0?[1-9]|1[0-2])/(0?[1-9]|[12][0-9]|3[01])/(19|20)\d\d$'
+        - name: time_period_max
+          in: query
+          required: false
+          description: 'End date for custom time range. Format: MM/DD/YYYY'
+          schema:
+            type: string
+            pattern: '^(0?[1-9]|1[0-2])/(0?[1-9]|[12][0-9]|3[01])/(19|20)\d\d$'
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort order for results
+          schema:
+            type: string
+            enum: ["most_recent"]
+        - name: link
+          in: query
+          required: false
+          description: 'How result links are returned. "raw" (default) returns Google''s redirect URL (google.com/goto?url=...); "resolved" returns the direct destination URL (adds latency).'
+          schema:
+            type: string
+            enum: ["raw", "resolved"]
+            default: raw
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        organic_results:
+          $ref: '#/components/schemas/OrganicResults'
+        top_stories:
+          $ref: '#/components/schemas/TopStories'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if the request was malformed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google News URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        device:
+          type: string
+          description: Device type used
+        uule:
+          type: string
+          description: Google's encoded location parameter (when not using location)
+        location:
+          type: string
+          description: Location parameter used
+        location_used:
+          type: string
+          description: Canonical location name that was used
+        hl:
+          type: string
+          description: Interface language code
+        gl:
+          type: string
+          description: Country code used
+        lr:
+          type: string
+          description: Language restriction parameter
+        cr:
+          type: string
+          description: Country restriction parameter
+        nfpr:
+          type: string
+          description: Auto-correction setting
+        filter:
+          type: string
+          description: Filter setting
+        page:
+          type: string
+          description: Page number
+        time_period:
+          type: string
+          description: Time period filter (when not using custom range)
+        time_period_min:
+          type: string
+          description: Custom time range start date
+        time_period_max:
+          type: string
+          description: Custom time range end date
+        sort_by:
+          type: string
+          description: Sort order used
+    SearchInformation:
+      type: object
+      required: [query_displayed, total_results, time_taken_displayed, detected_location]
+      properties:
+        query_displayed:
+          type: string
+          description: The query as displayed by Google
+        total_results:
+          type: integer
+          description: Total number of results found
+        page:
+          type: integer
+          description: Current page number in search results
+        time_taken_displayed:
+          type: number
+          description: Time taken for the search as displayed by Google
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Suggested alternative query
+        has_no_results_for:
+          type: boolean
+          description: Whether Google returned no results for the query
+        showing_results_for:
+          type: string
+          description: Alternative query Google is showing results for
+    OrganicResults:
+      type: array
+      items:
+        $ref: '#/components/schemas/OrganicResult'
+    OrganicResult:
+      type: object
+      required: [position, title, link, source]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Article title
+        link:
+          type: string
+          description: URL to the article
+        source:
+          type: string
+          description: News source name
+        date:
+          type: string
+          description: Publication date
+        snippet:
+          type: string
+          description: Article excerpt
+        is_live:
+          type: boolean
+          description: Whether the article covers live/breaking news
+        favicon:
+          type: string
+          description: Source website favicon URL
+        thumbnail:
+          type: string
+          description: Article thumbnail image URL
+    TopStories:
+      type: array
+      items:
+        $ref: '#/components/schemas/TopStory'
+    TopStory:
+      type: object
+      required: [title, link, source, date, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Story title
+        link:
+          type: string
+          description: URL to the story
+        author:
+          type: string
+          description: Author name
+        author_link:
+          type: string
+          description: URL to author profile
+        source:
+          type: string
+          description: News source name
+        date:
+          type: string
+          description: Publication date
+        snippet:
+          type: string
+          description: Story excerpt
+        is_live:
+          type: boolean
+          description: Whether the story covers live/breaking news
+        is_video:
+          type: boolean
+          description: Whether the story contains video content
+        thumbnail:
+          type: string
+          description: Story thumbnail image URL
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: URL to previous page
+        next:
+          type: string
+          description: URL to next page
+        other_pages:
+          type: object
+          description: URLs to other pages (desktop only)
+          additionalProperties:
+            type: string
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

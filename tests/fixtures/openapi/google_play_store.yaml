@@ -1,0 +1,456 @@
+openapi: 3.0.0
+info:
+  title: Google Play Store API
+  description: |
+    Retrieve data from Google Play Store including apps, games, books, and movies. Supports search functionality, category browsing, and top charts.
+
+    **Cross-linking**: Product IDs returned by this API can be used with the Google Play Store Product API to fetch detailed information about specific items.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Play Store Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["google_play_store"]
+        - name: store
+          in: query
+          required: true
+          description: Type of store content to search
+          schema:
+            type: string
+            enum: ["apps", "games", "books", "movies"]
+        - name: q
+          in: query
+          required: false
+          description: Search query term
+          schema:
+            type: string
+        - name: store_device
+          in: query
+          required: false
+          description: Device type filter (only applicable for apps and games stores)
+          schema:
+            type: string
+            enum: ["phone", "windows", "tablet", "tv", "chromebook", "watch", "car"]
+        - name: price
+          in: query
+          required: false
+          description: Price filter
+          schema:
+            type: string
+            enum: ["1", "2"]
+        - name: age
+          in: query
+          required: false
+          description: Age range filter
+          schema:
+            type: string
+            enum: ["AGE_RANGE1", "AGE_RANGE2", "AGE_RANGE3"]
+        - name: category
+          in: query
+          required: false
+          description: Category filter (varies by store type)
+          schema:
+            type: string
+        - name: chart
+          in: query
+          required: false
+          description: Top charts identifier
+          schema:
+            type: string
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for pagination to retrieve subsequent pages of results
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language (ISO 639-1 code)
+          schema:
+            type: string
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country code for localized results (ISO 3166-1 alpha-2)
+          schema:
+            type: string
+            default: "us"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        top_charts:
+          type: array
+          description: Top charts data (when chart parameter is used)
+          items:
+            $ref: '#/components/schemas/TopChartItem'
+        organic_results:
+          description: Search results organized by sections (array for first page, object for paginated search)
+          oneOf:
+            - type: array
+              items:
+                $ref: '#/components/schemas/OrganicResultSection'
+            - $ref: '#/components/schemas/OrganicResultSection'
+        highlights:
+          type: array
+          description: Featured or highlighted content
+          items:
+            $ref: '#/components/schemas/HighlightItem'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Play Store URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        store:
+          type: string
+          description: Store type searched
+        q:
+          type: string
+          description: Search query term
+        store_device:
+          type: string
+          description: Device type filter
+        price:
+          type: string
+          description: Price filter
+        age:
+          type: string
+          description: Age range filter
+        category:
+          type: string
+          description: Category filter
+        chart:
+          type: string
+          description: Top charts identifier
+        next_page_token:
+          type: string
+          description: Pagination token
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country code
+
+    TopChartItem:
+      type: object
+      required: [title, product_id, link, author, category, images, currency, description, rating, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Title of the item
+        product_id:
+          type: string
+          description: Unique product identifier
+        link:
+          type: string
+          description: URL to the item's page
+        rating:
+          type: number
+          description: User rating
+        author:
+          type: string
+          description: Developer or author name
+        category:
+          type: string
+          description: Category of the item
+        extension:
+          type: string
+          description: Additional metadata (e.g., content rating for movies)
+        description:
+          type: string
+          description: Item description
+        price:
+          type: string
+          description: Price text as displayed
+        extracted_price:
+          type: number
+          description: Numeric price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numeric original price value
+        currency:
+          type: string
+          description: Currency code
+        free:
+          type: boolean
+          description: Returned as true only when the item is free. Omitted for paid items and when the store returns no price data.
+        video:
+          type: string
+          description: URL to promotional video
+        thumbnail:
+          type: string
+          description: URL to thumbnail image
+        images:
+          type: array
+          items:
+            type: string
+          description: Array of image URLs
+
+    OrganicResultSection:
+      type: object
+      required: [items]
+      properties:
+        title:
+          type: string
+          description: Section title
+        subtitle:
+          type: string
+          description: Section subtitle
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResultItem'
+          description: Array of items in this section
+
+    OrganicResultItem:
+      type: object
+      required: [title, link, product_id, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Title of the item
+        description:
+          type: string
+          description: Item description
+        product_id:
+          type: string
+          description: Unique product identifier
+        author:
+          type: string
+          description: Developer or author name
+        link:
+          type: string
+          description: URL to the item's page
+        rating:
+          type: number
+          description: User rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        downloads:
+          type: integer
+          description: Number of downloads
+        in_app_purchases:
+          type: string
+          description: In-app purchase price range, when the item offers them
+        content_rating:
+          type: string
+          description: Content rating (e.g., Everyone, Teen)
+        price:
+          type: string
+          description: Price text as displayed
+        extracted_price:
+          type: number
+          description: Numeric price value
+        video:
+          type: string
+          description: URL to promotional video
+        images:
+          type: array
+          items:
+            type: string
+          description: Array of image URLs
+        thumbnail:
+          type: string
+          description: URL to thumbnail image
+        logos:
+          type: array
+          items:
+            $ref: '#/components/schemas/LogoItem'
+          description: Array of logo images with different sizes
+        category:
+          type: string
+          description: Category of the item
+        currency:
+          type: string
+          description: Currency code
+        release_date:
+          type: string
+          description: Publication or release date, when the store provides one
+        extension:
+          type: string
+          description: Additional metadata
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numeric original price value
+        free:
+          type: boolean
+          description: Returned as true only when the item is free. Omitted for paid items and when the store returns no price data.
+
+    HighlightItem:
+      type: object
+      required: [title, link, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Highlight title
+        subtitle:
+          type: string
+          description: Highlight subtitle
+        product_id:
+          type: string
+          description: Unique product identifier
+        link:
+          type: string
+          description: URL to the item's page
+        thumbnail:
+          type: string
+          description: URL to thumbnail image
+        product:
+          type: object
+          description: Product details when highlight is product-specific
+          properties:
+            title:
+              type: string
+              description: Product title
+            author:
+              type: string
+              description: Product author/developer
+            cta:
+              type: string
+              description: Call-to-action text
+            cta_snippet:
+              type: string
+              description: Additional CTA information
+        feature:
+          type: string
+          description: Featured aspect description
+
+    LogoItem:
+      type: object
+      properties:
+        link:
+          type: string
+          description: URL to the logo image
+        width:
+          type: integer
+          description: Width of the logo in pixels
+        height:
+          type: integer
+          description: Height of the logo in pixels
+
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to retrieve the next page of results
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

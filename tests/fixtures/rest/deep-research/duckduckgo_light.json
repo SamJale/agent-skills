@@ -1,0 +1,179 @@
+{
+  "search_metadata": {
+    "id": "search_m3WR9zk90VHV2rqEGvyn8YoV",
+    "status": "Success",
+    "created_at": "2026-07-23T12:20:25Z",
+    "request_time_taken": 1.05,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 1.05,
+    "request_url": "https://html.duckduckgo.com/html/?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&kl=us-en&df=a",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_m3WR9zk90VHV2rqEGvyn8YoV.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_m3WR9zk90VHV2rqEGvyn8YoV"
+  },
+  "search_parameters": {
+    "engine": "duckduckgo_light",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "locale": "us-en",
+    "time_period": "any_time"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation",
+      "link": "https://www.mdpi.com/2306-5354/12/7/687",
+      "displayed_link": "www.mdpi.com/2306-5354/12/7/687",
+      "snippet": "To adapt LLMs for the medical domain, we explored three key techniques: (1) standard fine-tuning [7, 8], which updates the model's internal parameters using domain-specific data; (2) retrieval-augmented generation (RAG) [9], which improves performance by leveraging external knowledge at inference time without modifying model weights; and (3 ...",
+      "snippet_highlighted_words": [
+        "LLMs",
+        "for",
+        "fine-tuning",
+        "retrieval-augmented",
+        "generation"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.mdpi.com.ico"
+    },
+    {
+      "position": 2,
+      "title": "Fine-tuning vs. RAG for LLMs - Neo4j Graph Data Platform",
+      "link": "https://neo4j.com/blog/developer/fine-tuning-vs-rag/",
+      "displayed_link": "neo4j.com/blog/developer/fine-tuning-vs-rag/",
+      "snippet": "Explore the pros and cons of fine-tuning versus retrieval-augmented generation (RAG) for overcoming large language model (LLM) limitations.",
+      "snippet_highlighted_words": [
+        "fine-tuning",
+        "retrieval-augmented",
+        "generation",
+        "LLM"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/neo4j.com.ico"
+    },
+    {
+      "position": 3,
+      "title": "Augment LLMs with RAGs or Fine-Tuning | Microsoft Learn",
+      "link": "https://learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning",
+      "displayed_link": "learn.microsoft.com/en-us/azure/developer/ai/augment-llm-rag-fine-tuning",
+      "snippet": "Retrieval-augmented generation (RAG): Uses semantic search and contextual priming to find and add helpful information before the model answers. Learn more in Key concepts and considerations for building generative AI solutions. Fine-tuning: Retrains the LLM on a smaller, specific dataset so it gets better at certain tasks or topics.",
+      "snippet_highlighted_words": [
+        "Retrieval-augmented",
+        "generation",
+        "Fine-tuning",
+        "LLM"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/learn.microsoft.com.ico"
+    },
+    {
+      "position": 4,
+      "title": "RAG vs. fine-tuning - IBM",
+      "link": "https://www.ibm.com/think/topics/rag-vs-fine-tuning",
+      "displayed_link": "www.ibm.com/think/topics/rag-vs-fine-tuning",
+      "snippet": "RAG vs. fine-tuning Retrieval augmented generation (RAG) and fine-tuning are two methods enterprises can use to get more value out of large language models (LLMs). Both work by tailoring the LLM to the specific use cases, but the methodologies behind them differ significantly.",
+      "snippet_highlighted_words": [
+        "vs",
+        "fine-tuning",
+        "Retrieval",
+        "augmented",
+        "generation",
+        "fine-tuning",
+        "LLMs",
+        "LLM"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.ibm.com.ico"
+    },
+    {
+      "position": 5,
+      "title": "AmirhosseinHonardoust/RAG-vs-Fine-Tuning - GitHub",
+      "link": "https://github.com/AmirhosseinHonardoust/RAG-vs-Fine-Tuning",
+      "displayed_link": "github.com/AmirhosseinHonardoust/RAG-vs-Fine-Tuning",
+      "snippet": "A comprehensive, professional guide explaining the differences, strengths, and best practices of Retrieval-Augmented Generation (RAG) and Fine-Tuning for LLMs, including workflows, comparisons, decision frameworks, and real-world hybrid AI use cases.",
+      "snippet_highlighted_words": [
+        "Retrieval-Augmented",
+        "Generation",
+        "Fine-Tuning",
+        "for",
+        "LLMs"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/github.com.ico"
+    },
+    {
+      "position": 6,
+      "title": "RAG vs. fine-tuning vs. prompt engineering - IBM",
+      "link": "https://www.ibm.com/think/topics/rag-vs-fine-tuning-vs-prompt-engineering",
+      "displayed_link": "www.ibm.com/think/topics/rag-vs-fine-tuning-vs-prompt-engineering",
+      "snippet": "RAG vs. fine-tuning vs. prompt engineering Prompt engineering, fine-tuning and retrieval augmented generation (RAG) are three optimization methods that enterprises can use to get more value out of large language models (LLMs). All three optimize model behavior, but which one to use depends on the target use case and available resources.",
+      "snippet_highlighted_words": [
+        "vs",
+        "fine-tuning",
+        "vs",
+        "fine-tuning",
+        "retrieval",
+        "augmented",
+        "generation",
+        "LLMs"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.ibm.com.ico"
+    },
+    {
+      "position": 7,
+      "title": "RAG vs Fine-Tuning in LLMs: Differences, Benefits and Uses",
+      "link": "https://www.solulab.com/retrieval-augmented-generation-rag-vs-llm-fine-tuning/",
+      "displayed_link": "www.solulab.com/retrieval-augmented-generation-rag-vs-llm-fine-tuning/",
+      "snippet": "Retrieval-Augmented Generation (RAG) and LLM fine-tuning are two common methods used to improve how large language models deliver accurate, domain-specific answers. The main difference between RAG and Fine-Tuning is that RAG uses an LLM to access external knowledge sources, allowing the model to retrieve relevant information in real time before generating a response. Fine-tuning, on the other ...",
+      "snippet_highlighted_words": [
+        "Retrieval-Augmented",
+        "Generation",
+        "LLM",
+        "fine-tuning",
+        "Fine-Tuning",
+        "LLM",
+        "Fine-tuning"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.solulab.com.ico"
+    },
+    {
+      "position": 8,
+      "title": "RAG vs Fine-Tuning Understanding When and How to Use Each ... - LinkedIn",
+      "link": "https://www.linkedin.com/pulse/rag-vs-fine-tuning-understanding-when-how-use-each-balaji-jqryc/",
+      "displayed_link": "www.linkedin.com/pulse/rag-vs-fine-tuning-understanding-when-how-use-each-balaji-jqryc/",
+      "snippet": "Executive Summary: This article provides a comprehensive comparison between Retrieval Augmented Generation (RAG) and Fine-Tuning for Large Language Models (LLMs). Based on real-world enterprise ...",
+      "snippet_highlighted_words": [
+        "Retrieval",
+        "Augmented",
+        "Generation",
+        "Fine-Tuning",
+        "for",
+        "LLMs"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.linkedin.com.ico"
+    },
+    {
+      "position": 9,
+      "title": "[2403.01432] Fine Tuning vs. Retrieval Augmented Generation for Less ...",
+      "link": "https://arxiv.org/abs/2403.01432",
+      "displayed_link": "arxiv.org/abs/2403.01432",
+      "snippet": "The two prominent approaches to enhance the performance of LMs on low-frequent topics are: Retrieval Augmented Generation (RAG) and fine-tuning (FT) over synthetic data. This paper explores and evaluates the impact of RAG and FT on customizing LMs in handling low-frequency entities on question answering tasks.",
+      "snippet_highlighted_words": [
+        "Retrieval",
+        "Augmented",
+        "Generation",
+        "fine-tuning"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/arxiv.org.ico"
+    },
+    {
+      "position": 10,
+      "title": "RAG Vs Fine-Tuning for Enhancing LLM Performance",
+      "link": "https://www.geeksforgeeks.org/nlp/rag-vs-fine-tuning-for-enhancing-llm-performance/",
+      "displayed_link": "www.geeksforgeeks.org/nlp/rag-vs-fine-tuning-for-enhancing-llm-performance/",
+      "snippet": "Among the myriad approaches, two prominent techniques have emerged which are Retrieval-Augmented Generation (RAG) and Fine-tuning. The article aims to explore the importance of model performance and comparative analysis of RAG and Fine-tuning strategies.",
+      "snippet_highlighted_words": [
+        "Retrieval-Augmented",
+        "Generation",
+        "Fine-tuning",
+        "Fine-tuning"
+      ],
+      "favicon": "https://external-content.duckduckgo.com/ip3/www.geeksforgeeks.org.ico"
+    }
+  ],
+  "pagination": {
+    "next_page_token": "eyJ2cWQiOiI0LTIwMDgyOTI1MzMzOTg0Njg1OTc4OTk1NTYxMTA3OTczMDcxMDg1IiwiZGMiOiIxMSIsInYiOiJsIiwicyI6IjEwIn0="
+  }
+}

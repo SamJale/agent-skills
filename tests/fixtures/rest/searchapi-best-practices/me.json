@@ -1,0 +1,11 @@
+{
+  "account": {
+    "current_month_usage": 0,
+    "monthly_allowance": 0,
+    "remaining_credits": 999517
+  },
+  "api_usage": {
+    "searches_this_hour": 0,
+    "hourly_rate_limit": 200000
+  }
+}

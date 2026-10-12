@@ -1,0 +1,695 @@
+openapi: 3.0.0
+info:
+  title: Google Hotels Property API
+  description: |
+    The Google Hotels Property API provides detailed information about a specific hotel or vacation rental property, including pricing, availability, amenities, reviews, and booking options.
+
+    **Cross-linking**: The `property_token` parameter required by this API is obtained from the Google Hotels API search results. Each property in the search results includes a `property_token` that can be used with this API to fetch detailed property information.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Hotels Property Details
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to `google_hotels_property` for this API
+          schema:
+            type: string
+            enum: ["google_hotels_property"]
+        - name: property_token
+          in: query
+          required: true
+          description: Unique property identifier token obtained from Google Hotels search results
+          schema:
+            type: string
+        - name: check_in_date
+          in: query
+          required: true
+          description: Check-in date in YYYY-M-D format. Cannot be in the past.
+          schema:
+            type: string
+            pattern: '^\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])$'
+        - name: check_out_date
+          in: query
+          required: true
+          description: Check-out date in YYYY-M-D format. Cannot be in the past, must be after check-in date, and cannot exceed 30 days from check-in date.
+          schema:
+            type: string
+            pattern: '^\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])$'
+        - name: currency
+          in: query
+          required: false
+          description: Currency code
+          schema:
+            type: string
+            enum: ["ALL", "DZD", "ARS", "AMD", "AWG", "AUD", "AZN", "BSD", "BHD", "BYN", "BMD", "BAM", "BRL", "GBP", "BGN", "CAD", "XPF", "CLP", "CNY", "COP", "CRC", "CUP", "CZK", "DKK", "DOP", "EGP", "EUR", "GEL", "HKD", "HUF", "ISK", "INR", "IDR", "IRR", "ILS", "JMD", "JPY", "JOD", "KZT", "KWD", "LBP", "MKD", "MYR", "MXN", "MDL", "MAD", "TWD", "NZD", "NOK", "OMR", "PKR", "PAB", "PEN", "PHP", "PLN", "QAR", "RON", "RUB", "SAR", "RSD", "SGD", "ZAR", "KRW", "SEK", "CHF", "THB", "TRY", "UAH", "AED", "USD", "VND"]
+            default: "USD"
+        - name: hl
+          in: query
+          required: false
+          description: Interface language
+          schema:
+            type: string
+            enum: ["af", "bs", "ca", "cs", "da", "de", "et", "en-GB", "en-US", "es", "es-419", "eu", "fil", "fr", "gl", "hr", "id", "is", "it", "sw", "lv", "lt", "hu", "ms", "nl", "no", "pl", "pt-BR", "pt-PT", "ro", "sq", "sk", "sl", "sr-Latn", "fi", "sv", "vi", "tr", "el", "bg", "mk", "mn", "ru", "sr", "uk", "ka", "iw", "ur", "ar", "fa", "am", "ne", "mr", "hi", "bn", "pa", "gu", "ta", "te", "kn", "ml", "si", "th", "lo", "km", "ko", "ja", "zh-CN", "zh-TW"]
+            default: "en-US"
+        - name: gl
+          in: query
+          required: false
+          description: Country code
+          schema:
+            type: string
+            enum: ["AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AG", "AR", "AM", "AU", "AT", "AZ", "BS", "BH", "BD", "BY", "BE", "BZ", "BJ", "BT", "BO", "BA", "BW", "BR", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "CF", "TD", "CL", "CN", "CO", "CG", "CD", "CK", "CR", "CI", "HR", "CU", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "EE", "ET", "FJ", "FI", "FR", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GT", "GG", "GY", "HT", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LY", "LI", "LT", "LU", "MG", "MW", "MY", "MV", "ML", "MT", "MU", "MX", "FM", "MD", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NZ", "NI", "NE", "NG", "NU", "MK", "NO", "OM", "PK", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RO", "RU", "RW", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "KR", "ES", "LK", "SH", "VC", "SR", "SE", "CH", "TW", "TJ", "TZ", "TH", "TL", "TG", "TO", "TT", "TN", "TR", "TM", "UG", "UA", "AE", "GB", "US", "UY", "UZ", "VU", "VE", "VN", "ZM", "ZW"]
+            default: "US"
+        - name: adults
+          in: query
+          required: false
+          description: Number of adult guests. Total of adults plus children cannot exceed 10.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 10
+            default: 2
+        - name: children_ages
+          in: query
+          required: false
+          description: Comma-separated ages of children (1-17 years). Maximum 5 children allowed. Total of adults plus children cannot exceed 10.
+          schema:
+            type: string
+        - name: free_cancellation
+          in: query
+          required: false
+          description: Filter for free cancellation
+          schema:
+            type: boolean
+        - name: expanded_search
+          in: query
+          required: false
+          description: Set to `true` to fetch per-OTA pricing for vacation rental properties. Returns full OTA price comparison in `featured_offers` and `all_offers`.
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        property:
+          $ref: '#/components/schemas/Property'
+        top_things_to_know:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopThingToKnow'
+        people_also_viewed:
+          type: array
+          items:
+            $ref: '#/components/schemas/Property'
+        vacation_rentals_nearby:
+          type: array
+          items:
+            $ref: '#/components/schemas/Property'
+        error:
+          type: string
+          description: Error message when no results are found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Hotels Property URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        property_token:
+          type: string
+          description: Property token used in search
+        check_in_date:
+          type: string
+          description: Check-in date
+        check_out_date:
+          type: string
+          description: Check-out date
+        currency:
+          type: string
+          description: Currency code
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country code
+        adults:
+          type: integer
+          description: Number of adults
+        children_ages:
+          type: string
+          description: Ages of children
+        free_cancellation:
+          type: boolean
+          description: Free cancellation filter
+        expanded_search:
+          type: boolean
+          description: Per-OTA pricing for vacation rental properties
+    Property:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["hotel", "vacation_rental"]
+          description: Property type
+        property_token:
+          type: string
+          description: Unique property token
+        data_id:
+          type: string
+          description: Property data identifier
+        name:
+          type: string
+          description: Property name
+        link:
+          type: string
+          description: URL to property page
+        description:
+          type: string
+          description: Property description
+        address:
+          type: string
+          description: Property address
+        phone:
+          type: string
+          description: Phone number
+        phone_link:
+          type: string
+          description: Phone link
+        is_entity_closed:
+          type: boolean
+          description: Whether entity is closed
+        operational_status:
+          type: string
+          description: Operational status
+        gps_coordinates:
+          $ref: '#/components/schemas/GPSCoordinates'
+        city:
+          type: string
+          description: City name
+        country:
+          type: string
+          description: Country name
+        distance:
+          type: string
+          description: Distance information
+        check_in_time:
+          type: string
+          description: Check-in time
+        check_out_time:
+          type: string
+          description: Check-out time
+        price_per_night:
+          $ref: '#/components/schemas/Price'
+        total_price:
+          $ref: '#/components/schemas/Price'
+        price_insights:
+          $ref: '#/components/schemas/PriceInsights'
+        deal:
+          type: string
+          description: Deal information
+        deal_description:
+          type: string
+          enum: ["Deal", "Great Deal"]
+          description: Deal description
+        nearby_places:
+          type: array
+          items:
+            $ref: '#/components/schemas/NearbyPlace'
+        hotel_class:
+          type: integer
+          description: Hotel class rating
+        extracted_hotel_class:
+          type: integer
+          description: Extracted hotel class
+        featured_offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Offer'
+        all_offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Offer'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+        rating:
+          type: number
+          description: Overall rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_histogram:
+          type: object
+          additionalProperties:
+            type: integer
+          description: Reviews count by rating
+        location_rating:
+          type: number
+          description: Location rating
+        proximity_to_things_to_do_rating:
+          type: number
+          description: Proximity to attractions rating
+        proximity_to_transit_rating:
+          type: number
+          description: Transit proximity rating
+        airport_access_rating:
+          type: number
+          description: Airport access rating
+        review_results:
+          $ref: '#/components/schemas/ReviewResults'
+        reviews_breakdown:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReviewBreakdown'
+        eco_certified:
+          type: boolean
+          description: Eco certification status
+        amenities:
+          type: array
+          items:
+            type: string
+          description: List of amenities
+        excluded_amenities:
+          type: array
+          items:
+            type: string
+          description: List of excluded amenities
+        essential_info:
+          type: array
+          items:
+            type: string
+          description: Essential information
+    GPSCoordinates:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Latitude coordinate
+        longitude:
+          type: number
+          description: Longitude coordinate
+    Price:
+      type: object
+      properties:
+        price:
+          type: string
+          description: Formatted price string
+        extracted_price:
+          type: number
+          description: Numeric price value
+        price_before_taxes:
+          type: string
+          description: Price before taxes string
+        extracted_price_before_taxes:
+          type: number
+          description: Numeric price before taxes
+    PriceInsights:
+      type: object
+      properties:
+        lowest_price:
+          type: string
+          description: Lowest available price
+        price_level:
+          type: string
+          enum: ["low", "typical", "high"]
+          description: Price level indicator
+        typical_price_range:
+          $ref: '#/components/schemas/TypicalPriceRange'
+    TypicalPriceRange:
+      type: object
+      properties:
+        low_price:
+          type: string
+          description: Low end of price range
+        high_price:
+          type: string
+          description: High end of price range
+    NearbyPlace:
+      type: object
+      properties:
+        category:
+          type: string
+          description: Place category
+        data_id:
+          type: string
+          description: Place data identifier
+        name:
+          type: string
+          description: Place name
+        link:
+          type: string
+          description: URL to place
+        rating:
+          type: number
+          description: Place rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        description:
+          type: string
+          description: Place description
+        gps_coordinates:
+          $ref: '#/components/schemas/GPSCoordinates'
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        transportations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Transportation'
+    Transportation:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["Taxi", "Bike", "Walking", "Public Transport", "Flight"]
+          description: Transportation type
+        duration:
+          type: string
+          description: Duration information
+    Offer:
+      type: object
+      properties:
+        source:
+          type: string
+          description: Booking source name
+        tracking_link:
+          type: string
+          description: Tracking URL
+        link:
+          type: string
+          description: Direct booking link
+        logo:
+          type: string
+          description: Source logo URL
+        is_official:
+          type: boolean
+          description: Whether it's an official booking source
+        remarks:
+          type: array
+          items:
+            type: string
+          description: Additional remarks
+        num_guests:
+          type: integer
+          description: Number of guests
+        price_per_night:
+          $ref: '#/components/schemas/Price'
+        total_price:
+          $ref: '#/components/schemas/Price'
+        original_price_per_night:
+          $ref: '#/components/schemas/Price'
+        original_total_price:
+          $ref: '#/components/schemas/Price'
+        discount_remarks:
+          type: array
+          items:
+            type: string
+          description: Discount information
+        has_free_cancellation:
+          type: boolean
+          description: Free cancellation availability
+        free_cancellation_until:
+          $ref: '#/components/schemas/FreeCancellationUntil'
+        rooms:
+          type: array
+          items:
+            $ref: '#/components/schemas/Room'
+    FreeCancellationUntil:
+      type: object
+      properties:
+        date:
+          type: string
+          description: Cancellation date
+        time:
+          type: string
+          description: Cancellation time
+    Room:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Room name
+        description:
+          type: string
+          description: Room summary of beds, cancellation, breakfast and amenities
+        link:
+          type: string
+          description: Room booking link
+        num_guests:
+          type: integer
+          description: Number of guests
+        has_free_cancellation:
+          type: boolean
+          description: Free cancellation availability
+        free_cancellation_until:
+          $ref: '#/components/schemas/FreeCancellationUntil'
+        has_breakfast:
+          type: boolean
+          description: Breakfast is included in the first rate
+        amenities:
+          type: array
+          items:
+            type: string
+          description: List of room amenities
+        beds:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bed'
+        price_per_night:
+          $ref: '#/components/schemas/Price'
+        total_price:
+          $ref: '#/components/schemas/Price'
+        rates:
+          type: array
+          items:
+            $ref: '#/components/schemas/Rate'
+          description: Rate plans the room is sold at, cheapest first
+    Rate:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Booking link for this rate
+        num_guests:
+          type: integer
+          description: Number of guests
+        has_free_cancellation:
+          type: boolean
+          description: Free cancellation availability
+        free_cancellation_until:
+          $ref: '#/components/schemas/FreeCancellationUntil'
+        has_breakfast:
+          type: boolean
+          description: Breakfast is included in this rate
+        price_per_night:
+          $ref: '#/components/schemas/Price'
+        total_price:
+          $ref: '#/components/schemas/Price'
+    Bed:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: Number of beds of this type
+        type:
+          type: string
+          enum: ["king", "queen", "double", "twin", "sofa bed", "bunk"]
+          description: Bed type
+    Image:
+      type: object
+      properties:
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        original:
+          type: string
+          description: Original image URL
+    ReviewResults:
+      type: object
+      properties:
+        reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/GoogleReview'
+        on_other_sites:
+          type: array
+          items:
+            $ref: '#/components/schemas/OtherSiteReview'
+    GoogleReview:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Reviewer username
+        text:
+          type: string
+          description: Review text
+    OtherSiteReview:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Reviewer username
+        source:
+          type: string
+          description: Review source
+        link:
+          type: string
+          description: Link to review
+        date:
+          type: string
+          description: Review date
+        reviews:
+          type: integer
+          description: Number of reviews by user
+        rating:
+          type: number
+          description: Review rating
+        text:
+          type: string
+          description: Review text
+    ReviewBreakdown:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Breakdown category name
+        description:
+          type: string
+          description: Category description
+        total_mentions:
+          type: integer
+          description: Total mentions
+        positive:
+          type: integer
+          description: Positive mentions
+        neutral:
+          type: integer
+          description: Neutral mentions
+        negative:
+          type: integer
+          description: Negative mentions
+    TopThingToKnow:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title text
+        link:
+          type: string
+          description: Link URL
+        topic:
+          type: string
+          description: Topic description
+        review:
+          $ref: '#/components/schemas/TopThingReview'
+    TopThingReview:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Reviewer username
+        text:
+          type: string
+          description: Review text
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

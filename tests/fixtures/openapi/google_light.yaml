@@ -1,0 +1,533 @@
+openapi: 3.0.0
+info:
+  title: Google Light API
+  description: |
+    The Google Light API provides a lightweight version of Google Search with reduced features but faster response times.
+    
+    This API offers core Google search functionality including organic results, knowledge graph, answer boxes, 
+    and pagination with minimal overhead.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Light Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to 'google_light' for Google Light search
+          schema:
+            type: string
+            enum: ["google_light"]
+            default: "google_light"
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Location for the search
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google encoded location
+          schema:
+            type: string
+        - name: latitude
+          in: query
+          required: false
+          description: "Latitude of the search location, in decimal degrees (-90 to 90). Use with `longitude`. Cannot be combined with `location` or `uule`."
+          schema:
+            type: number
+            format: float
+            minimum: -90
+            maximum: 90
+        - name: longitude
+          in: query
+          required: false
+          description: "Longitude of the search location, in decimal degrees (-180 to 180). Use with `latitude`. Cannot be combined with `location` or `uule`."
+          schema:
+            type: number
+            format: float
+            minimum: -180
+            maximum: 180
+        - name: hl
+          in: query
+          required: false
+          description: Interface language
+          schema:
+            type: string
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: "Country code"
+          schema:
+            type: string
+        - name: lr
+          in: query
+          required: false
+          description: Language restriction
+          schema:
+            type: string
+        - name: nfpr
+          in: query
+          required: false
+          description: Exclude auto-corrected results (1) or include them (0)
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: filter
+          in: query
+          required: false
+          description: Enable (1) or disable (0) duplicate content and host crowding filters
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: safe
+          in: query
+          required: false
+          description: SafeSearch filtering level
+          schema:
+            type: string
+            enum: ["active", "blur", "off"]
+            default: "blur"
+        - name: page
+          in: query
+          required: false
+          description: >-
+            Page number. Pages after the first of a query that needs two or more quoted phrases (phrases
+            joined by OR or | count as one), excludes a word or phrase with a leading -, or uses an advanced
+            operator (site:, intitle:, inurl:, filetype: and similar) come from Google's Web results. On those pages each
+            organic result also carries source, domain, favicon and snippet_highlighted_words, its displayed_link
+            includes the scheme, and the page can include an ads block.
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        answer_box:
+          $ref: '#/components/schemas/AnswerBox'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        top_stories:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopStory'
+        latest_posts:
+          type: array
+          items:
+            $ref: '#/components/schemas/LatestPost'
+        related_questions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedQuestion'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when the search fails
+    
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Light URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Engine used for the search
+        q:
+          type: string
+          description: Search query
+        location:
+          type: string
+          description: Location for the search
+        location_used:
+          type: string
+          description: Canonical name of the location actually used
+        uule:
+          type: string
+          description: Google encoded location
+        latitude:
+          type: number
+          format: float
+          description: "Latitude of the search location, in decimal degrees"
+        longitude:
+          type: number
+          format: float
+          description: "Longitude of the search location, in decimal degrees"
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country code
+        lr:
+          type: string
+          description: Language restriction
+        nfpr:
+          type: string
+          description: Auto-correction setting
+        filter:
+          type: string
+          description: Filter setting
+        safe:
+          type: string
+          description: SafeSearch setting
+        page:
+          type: integer
+          description: Page number
+    
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed in the search results
+        page:
+          type: integer
+          description: Current page number
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Alternative query suggestion
+        showing_results_for:
+          type: string
+          description: Alternative query Google is showing results for
+    
+    AnswerBox:
+      type: object
+      properties:
+        question:
+          type: string
+          description: Question text
+        answer:
+          type: string
+          description: Answer text
+        answer_highlight:
+          type: string
+          description: Highlighted portion of the answer
+        answer_list:
+          type: array
+          items:
+            type: string
+          description: List items in the answer
+        answer_table:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+          description: Table data in the answer
+        source:
+          type: object
+          properties:
+            title:
+              type: string
+              description: Title of the answer source
+            link:
+              type: string
+              description: Link to the answer source
+            displayed_link:
+              type: string
+              description: Displayed link text
+    
+    KnowledgeGraph:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the knowledge graph entity
+        type:
+          type: string
+          description: Type of entity
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: integer
+          description: Number of reviews
+        website:
+          type: string
+          description: Website URL
+        directions:
+          type: string
+          description: Directions link
+        source:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Source name
+            link:
+              type: string
+              description: Source link
+        description:
+          type: string
+          description: Description of the entity
+        facts:
+          type: object
+          additionalProperties:
+            type: string
+          description: Facts about the entity
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        images:
+          type: array
+          items:
+            type: string
+          description: Image URLs
+    
+    OrganicResult:
+      type: object
+      required: [position, title, link, displayed_link]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Title of the result
+        link:
+          type: string
+          description: URL of the result
+        displayed_link:
+          type: string
+          description: Displayed URL text
+        snippet:
+          type: string
+          description: Snippet text
+        date:
+          type: string
+          description: Date associated with the result
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: integer
+          description: Number of reviews
+        sitelinks:
+          type: object
+          properties:
+            inline:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  link:
+                    type: string
+                    description: Sitelink URL
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional extension text snippets
+    
+    TopStory:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Story title
+        link:
+          type: string
+          description: Story URL
+        source:
+          type: string
+          description: Story source
+        date:
+          type: string
+          description: Publication date
+    
+    LatestPost:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Post title
+        link:
+          type: string
+          description: Post URL
+        source:
+          type: string
+          description: Post source
+        date:
+          type: string
+          description: Publication date
+    
+    RelatedQuestion:
+      type: object
+      properties:
+        question:
+          type: string
+          description: Related question text
+        answer:
+          type: string
+          description: Answer text
+        answer_highlight:
+          type: string
+          description: Highlighted portion of the answer
+        answer_list:
+          type: array
+          items:
+            type: string
+          description: List items in the answer
+        answer_table:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+          description: Table data in the answer
+        source:
+          type: object
+          properties:
+            title:
+              type: string
+              description: Title of the answer source
+            link:
+              type: string
+              description: Link to the answer source
+            displayed_link:
+              type: string
+              description: Displayed link text
+    
+    RelatedSearch:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Related search query
+    
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: URL for previous page
+        next:
+          type: string
+          description: URL for next page
+    
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

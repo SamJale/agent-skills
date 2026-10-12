@@ -1,0 +1,121 @@
+{
+  "search_metadata": {
+    "id": "search_mR5DzpePyDIXpDr7Y4YdGQno",
+    "status": "Success",
+    "created_at": "2026-07-23T12:20:20Z",
+    "request_time_taken": 3.02,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 3.02,
+    "request_url": "https://www.google.com/search?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&oq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&gl=us&hl=en&tbm=nws&tbs=sbd:1",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mR5DzpePyDIXpDr7Y4YdGQno.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mR5DzpePyDIXpDr7Y4YdGQno"
+  },
+  "search_parameters": {
+    "engine": "google_news_light",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us",
+    "sort_by": "most_recent"
+  },
+  "search_information": {
+    "query_displayed": "retrieval augmented generation vs fine-tuning for LLMs",
+    "detected_location": "Unknown"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Building Reliable LLM Systems with Fine-Tuning, RAG, and Prompt Engineering",
+      "link": "https://hackernoon.com/building-reliable-llm-systems-with-fine-tuning-rag-and-prompt-engineering",
+      "source": "HackerNoon",
+      "date": "1 month ago",
+      "snippet": "Building dependable, enterprise-ready AI systems requires moving beyond prompt adjustments and embracing rigorous software architecture.",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8SnCJrk3kWKxBD3E6xtegUFfXaA0EgVbscDbQSzCLGaaauHyMPzgR5klobw&s"
+    },
+    {
+      "position": 2,
+      "title": "MEMO: A Modular Framework for Training a Dedicated Memory Model on New Knowledge Without Modifying LLM Parameters",
+      "link": "https://www.marktechpost.com/2026/05/26/memo-a-modular-framework-for-training-a-dedicated-memory-model-on-new-knowledge-without-modifying-llm-parameters/",
+      "source": "MarkTechPost",
+      "date": "1 month ago",
+      "snippet": "MEMO encodes new knowledge into a dedicated MEMORY model using a five-step reflection QA pipeline without modifying LLM parameters.",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVsAVf4JDZ-5LZIVHMOr9R79RER3zjg70MbZbFM5YEUDCPYs0TkKZu_2BHPw&s"
+    },
+    {
+      "position": 3,
+      "title": "Compare 9 Large Language Models in Healthcare",
+      "link": "https://aimultiple.com/large-language-models-in-healthcare",
+      "source": "AIMultiple",
+      "date": "2 months ago",
+      "snippet": "We benchmarked 9 LLMs using the MedQA dataset, a graduate-level clinical exam benchmark derived from USMLE questions. Each model answered the same...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCFuKXBhyIrlrBnPxY7qucolqLyK0AxcLrUrHqMMfSGnALsAiaz4yq4_zRw&s"
+    },
+    {
+      "position": 4,
+      "title": "Grounding Your LLM: A Practical Guide to RAG for Enterprise Knowledge Bases",
+      "link": "https://towardsdatascience.com/grounding-your-llm-a-practical-guide-to-rag-for-enterprise-knowledge-bases/",
+      "source": "Towards Data Science",
+      "date": "3 months ago",
+      "snippet": "There is a moment every AI engineer knows well. You have just shipped a proof of concept. The demo went brilliantly. The LLM answered questions fluently,...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxvqpTmhD3ZF7gZ-F3OgxhbAWakpqdnywAPgSVNs4PEFePzzwlJ_oWlxPu8g&s"
+    },
+    {
+      "position": 5,
+      "title": "What Is Retrieval Augmented Generation (RAG)? Detailed Guide",
+      "link": "https://cybernews.com/ai-tools/retrieval-augmented-generation-rag/",
+      "source": "Cybernews",
+      "date": "3 months ago",
+      "snippet": "What is Retrieval Augmented Generation (RAG)? Learn how it combines LLMs with your data for more accurate, grounded AI apps, and how to start using it.",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRMHObMsI4PH9bv86xy7qwPuyojn5-gJIPmkcAJIbOfVpvYI6yr3D7TQpkTg&s"
+    },
+    {
+      "position": 6,
+      "title": "ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory",
+      "link": "https://ojs.aaai.org/index.php/AAAI/article/view/39773",
+      "source": "The Association for the Advancement of Artificial Intelligence",
+      "date": "4 months ago",
+      "snippet": "Authors. Cassandra Hui-Ming Tan Singapore Management University; Budhitama Subagdja Singapore Management University; Ah-Hwee Tan Singapore Management...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmEois6RSgAw5wcsAHjbNp6tvO1T3E9zPUgXfqLvb_KfH5X7S8B7HZuxLb7Q&s"
+    },
+    {
+      "position": 7,
+      "title": "10 Python Libraries Every LLM Engineer Should Know",
+      "link": "https://www.kdnuggets.com/10-python-libraries-every-llm-engineer-should-know",
+      "source": "KDnuggets",
+      "date": "4 months ago",
+      "snippet": "Interested in becoming an LLM engineer? Here's a list of Python libraries you'll find essential for your work.",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOMI8dCGJOc7DhbYIxh9-uRGjrjxM8hhQGAuWNyk3Wu5ID8cf7CDOJyvqYw&s"
+    },
+    {
+      "position": 8,
+      "title": "RAGMail: a cloud-based retrieval-augmented framework for reducing hallucinations in LLM text generation",
+      "link": "https://www.nature.com/articles/s41598-026-38913-w",
+      "source": "Nature",
+      "date": "5 months ago",
+      "snippet": "Cold emailing is used to personalize, target emails for outreach without prior contact. Automating this personalized cold email generation process can...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrFz9uveANiGebKg4u2x6WIdFnR7TiFtVUINAz1wMUWZK3x2co1XLjECo0xw&s"
+    },
+    {
+      "position": 9,
+      "title": "LLMs with retrieval-augmented generation: Good or bad for privacy compliance?",
+      "link": "https://iapp.org/news/a/llms-with-retrieval-augmented-generation-good-or-bad-for-privacy-compliance-",
+      "source": "IAPP",
+      "date": "7 months ago",
+      "snippet": "Osborne Clarke's Julia Kaufmann and Florian Eisenmenger discuss retrieval-augmented generation, a technique that enables AI systems with large language...",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6gjbHUfaWqKZXR2Uw3DqeR8PA_nc2Jn_tsJTVNif2hWhx2LvYDCnz-x13xA&s"
+    },
+    {
+      "position": 10,
+      "title": "What is RAG in AI? How it works, benefits, and cybersecurity concerns",
+      "link": "https://nordvpn.com/blog/what-is-rag-in-ai/",
+      "source": "NordVPN",
+      "date": "10 months ago",
+      "snippet": "Retrieval-augmented generation (RAG) enhances LLMs by retrieving external data before responding. Learn how it works, its benefits, and risks.",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB3bBwWoP65QHTggrUo6dO863JQ6ymuoNq-PREWbjx2ZvQLuMVI6Gobfidew&s"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&oq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&gl=us&hl=en&start=10&tbm=nws&tbs=,sbd:1&ie=UTF-8"
+  }
+}

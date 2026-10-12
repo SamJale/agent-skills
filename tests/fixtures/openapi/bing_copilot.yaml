@@ -1,0 +1,227 @@
+openapi: 3.0.0
+info:
+  title: Bing Copilot API
+  description: |
+    Bing Copilot Search provides AI-powered answers for search queries, synthesizing information from multiple sources into a comprehensive, citation-backed response.
+
+    The response includes structured `text_blocks` (paragraphs, headers, lists, images, tables, and code blocks), a `markdown` rendering of the full answer, and `reference_links` to the sources Bing Copilot cited.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Bing Copilot Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to `bing_copilot` for Bing Copilot API
+          schema:
+            type: string
+            enum: ["bing_copilot"]
+            default: "bing_copilot"
+        - name: q
+          in: query
+          required: true
+          description: Search query to send to Bing Copilot Search
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        text_blocks:
+          type: array
+          description: Array of content blocks containing the Bing Copilot answer
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: Formatted markdown representation of the Bing Copilot answer
+        reference_links:
+          type: array
+          description: Source links referenced in the Bing Copilot answer
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+      required: [search_metadata, search_parameters]
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Bing Copilot Search URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: The engine used for the search
+        q:
+          type: string
+          description: The search query used for the request
+
+    TextBlock:
+      type: object
+      required: [type]
+      properties:
+        type:
+          type: string
+          enum: ["paragraph", "header", "unordered_list", "ordered_list", "image", "table", "code_blocks"]
+          description: Type of content block
+        answer:
+          type: string
+          description: Text content for paragraph, header, list introduction, or a plaintext rendering of a table
+        items:
+          type: array
+          description: Nested content blocks (for ordered_list and unordered_list types)
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        reference_indexes:
+          type: array
+          description: Indexes of source references cited in this block
+          items:
+            type: integer
+        image:
+          type: string
+          description: Image URL (for image type)
+        title:
+          type: string
+          description: Caption or alt text (for image type)
+        table:
+          type: object
+          description: Structured table data (for table type)
+          properties:
+            headers:
+              type: array
+              description: Header cell text, one entry per column
+              items:
+                type: string
+            rows:
+              type: array
+              description: Body rows, each an array of cell text
+              items:
+                type: array
+                items:
+                  type: string
+        code:
+          type: string
+          description: Source code contents (for code_blocks type)
+        language:
+          type: string
+          description: Detected programming language (for code_blocks type)
+
+    ReferenceLink:
+      type: object
+      required: [index, title, link]
+      properties:
+        index:
+          type: integer
+          description: Reference number for citation
+        title:
+          type: string
+          description: Title of the referenced content
+        link:
+          type: string
+          description: URL to the source
+        snippet:
+          type: string
+          description: Brief excerpt from the source
+        source:
+          type: string
+          description: Domain or publisher of the content
+        displayed_link:
+          type: string
+          description: Display-friendly URL shown for the source
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

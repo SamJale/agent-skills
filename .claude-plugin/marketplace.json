@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "searchapi",
+  "owner": {
+    "name": "SearchApi",
+    "email": "support@searchapi.io"
+  },
+  "metadata": {
+    "description": "Official SearchApi skills for AI agents",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "searchapi",
+      "source": "./",
+      "description": "SearchApi for AI agents: live search results as data from 100+ engines (Google, Bing, Maps, Shopping, Flights, News, YouTube, AI answers, ad libraries), lean responses, and a skill to migrate from other SERP APIs.",
+      "version": "1.0.0",
+      "author": {
+        "name": "SearchApi",
+        "url": "https://www.searchapi.io"
+      },
+      "homepage": "https://www.searchapi.io",
+      "repository": "https://github.com/searchapi/agent-skills",
+      "license": "MIT",
+      "keywords": ["searchapi", "serp-api", "web-search", "google-search", "search-api", "serp", "seo"]
+    }
+  ]
+}

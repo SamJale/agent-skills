@@ -1,0 +1,40 @@
+{
+  "search_metadata": {
+    "id": "search_mpKN8l48W3i6z37X1e3n1ZDx",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:45Z",
+    "request_time_taken": 0.93,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 0.93,
+    "request_url": "https://www.google.com/search?q=What+is+the+fastest+SERP+API%3F",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mpKN8l48W3i6z37X1e3n1ZDx.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mpKN8l48W3i6z37X1e3n1ZDx"
+  },
+  "search_parameters": {
+    "engine": "google_related_questions",
+    "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJPVEZ0UXpZMVlsUXpMWEp4YkZObVNHTTBhbEJ1TlVWalRGRnRaVWQzVEdGeFprOU9hR0ZLVjA1bFJUVjJWVWRHWlVWb04zRjBUMWxvWldkSk4wUm1hWEJqWlZSU05qbHJSM2hTYUV4VWEyWkpkV3AzTUZwdldrdHZRUklYU3pCbmVHRnZhVWxCT1dGQ05VOU5VSFJpY1dOblVVVWFJa0ZLUzB4R2JVeFdWelJOT0U1MVVHSlVVVFJpWWtZeExVMWpXRVUwY0VWWk9GRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3akl5Y3ZiNTR1VkF4WFdBSGtHSFRVZEp4QVFxN2tCS0FCNkJBaFlFQUEiLCJxIjoiV2hhdCBpcyB0aGUgZmFzdGVzdCBTRVJQIEFQST8iLCJsayI6IkdoQm1ZWE4wWlhOMElITmxjbkFnWVhCcCIsInFjIjoiQ2cxaVpYTjBJSE5sY25BZ1lYQnBFQUI5b01FWVB3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ"
+  },
+  "related_questions": [
+    {
+      "is_ai_overview": true,
+      "question": "Is serp API legal?",
+      "error": "Google AI Overview didn't return any results.",
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJPVEZ0UXpZMVlsUXpMWEp4YkZObVNHTTBhbEJ1TlVWalRGRnRaVWQzVEdGeFprOU9hR0ZLVjA1bFJUVjJWVWRHWlVWb04zRjBUMWxvWldkSk4wUm1hWEJqWlZSU05qbHJSM2hTYUV4VWEyWkpkV3AzTUZwdldrdHZRUklYU3pCbmVHRnZhVWxCT1dGQ05VOU5VSFJpY1dOblVVVWFJa0ZLUzB4R2JVeFdWelJOT0U1MVVHSlVVVFJpWWtZeExVMWpXRVUwY0VWWk9GRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3amhzTW5xNTR1VkF4WGttYkFGSGUyQ0lWSVFxN2tCS0FCNkJBZ0RFQUEiLCJxIjoiSXMgc2VycCBBUEkgbGVnYWw_IiwibGsiOiJHaEZwY3lCelpYSndJR0Z3YVNCc1pXZGhiQSIsInFjIjoiQ2cxaVpYTjBJSE5sY25BZ1lYQnBFQUI5b01FWVB3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ"
+    },
+    {
+      "question": "Is FastAPI better than Rest?",
+      "answer": "The real difference in the REST API vs FastAPI discussion comes down to how modern, scalable, and performance-driven your product needs to be. For startups, SaaS platforms, and AI-powered systems in 2026 and beyond, FastAPI often provides the edge.Mar 5, 2026",
+      "answer_highlight": "FastAPI often provides the edge",
+      "date": "Mar 5, 2026",
+      "source": {
+        "title": "Rest API vs FastAPI: A Complete Guide",
+        "link": "https://zyneto.com/blog/restapi-vs-fastapi#:~:text=The%20real%20difference%20in%20the,FastAPI%20often%20provides%20the%20edge.",
+        "source": "Zyneto",
+        "domain": "zyneto.com",
+        "displayed_link": "https://zyneto.com › blog › restapi-vs-fastapi",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABW0lEQVR4AaXTA6xdQRRG4VNHtW3btm2bYe1GjWrbCvts27Zt25z1bF2s5A8nX7RHAgSKJyTqysyFvELkrR4o+WFO2dSLsPM2PPwIagbg4wfZWbIBBR+tyet1lvIeW6H/RpiwCRZvhZ274coF+PwYTFUgwqd1oDQwhYKnRhQfeYWYeR4m7YOpW2DOWli+HLYshaPL4MmFlkCLSssgIh5MHODTPzhxCVYshS2L4cGZFkD7hcXCjvMwdwVsXg8/3soOCIdAmHcehm+Aedvg8w8oK5MNKFD3JXv0DUq774Ix++GvNggB0AFQLkh560f44LckdLtF7uirCG1HaFlLoLxIEHw7Eqe+enh3/0709C+UOETIeEh54HE3D7NpYdiOccJvrRVFQZmyX2J0RCwOFi44mDtXzglnO2dcXFxaXWxsbEvg9u3bSJIk0yrftgQiIyOxtbWVaZVvqUvp71wBXnGDzN7sjB8AAAAASUVORK5CYII="
+      },
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJPVEZ0UXpZMVlsUXpMWEp4YkZObVNHTTBhbEJ1TlVWalRGRnRaVWQzVEdGeFprOU9hR0ZLVjA1bFJUVjJWVWRHWlVWb04zRjBUMWxvWldkSk4wUm1hWEJqWlZSU05qbHJSM2hTYUV4VWEyWkpkV3AzTUZwdldrdHZRUklYU3pCbmVHRnZhVWxCT1dGQ05VOU5VSFJpY1dOblVVVWFJa0ZLUzB4R2JVeFdWelJOT0U1MVVHSlVVVFJpWWtZeExVMWpXRVUwY0VWWk9GRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3amhzTW5xNTR1VkF4WGttYkFGSGUyQ0lWSVFxN2tCS0FCNkJBZ0VFQUEiLCJxIjoiSXMgRmFzdEFQSSBiZXR0ZXIgdGhhbiBSZXN0PyIsImxrIjoiR2h0cGN5Qm1ZWE4wWVhCcElHSmxkSFJsY2lCMGFHRnVJSEpsYzNRIiwicWMiOiJDZzFpWlhOMElITmxjbkFnWVhCcEVBQjlvTUVZUHciLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    }
+  ]
+}

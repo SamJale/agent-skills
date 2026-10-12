@@ -1,0 +1,373 @@
+openapi: 3.0.0
+info:
+  title: Google AI Mode API
+  description: |
+    Search Google with AI-powered overview mode. This API returns AI-generated overviews along with reference links, web results, local results, and inline shopping results.
+    
+    **Cross-linking**: The AI Mode API provides comprehensive search results with AI-generated summaries and various result types including web, local, and shopping results.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google AI Mode Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["google_ai_mode"]
+            default: "google_ai_mode"
+        - name: q
+          in: query
+          required: false
+          description: Search query. Required unless url parameter is provided. Cannot exceed 8193 characters, matching Google's own search input field limit.
+          schema:
+            type: string
+            maxLength: 8193
+        - name: url
+          in: query
+          required: false
+          description: Image URL to search. Required unless q parameter is provided
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Location for localized search results
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google's encoded location parameter. Automatically generated from location parameter if not provided
+          schema:
+            type: string
+        - name: gl
+          in: query
+          required: false
+          description: "This parameter defines the country of the search. It defaults to the country of location or uule, and to us without either. Check the full list of supported Google gl countries."
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: "The default parameter en defines the interface language of the search. Check the full list of supported Google hl languages."
+          schema:
+            type: string
+            default: "en"
+        - name: conversation_token
+          in: query
+          required: false
+          description: "Continues an existing AI Mode conversation. Pass the pagination.conversation_token returned by a previous response together with your follow-up question in q, and the answer will take the earlier turns into account. Each response returns a new token, so pass the most recent one to continue. gl, hl and uule are inherited from the conversation unless you set them explicitly. Cannot be combined with url. A conversation cannot be continued forever. Once it ends, the request returns a 400 error. Do not retry it, start a new conversation by sending q without conversation_token."
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values, Google AI Mode could not load the image from the `url` parameter, or the conversation of a `conversation_token` can no longer be continued.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        local_results:
+          type: array
+          description: Local business results for location-based searches
+          items:
+            $ref: '#/components/schemas/LocalResult'
+        web_results:
+          type: array
+          description: Web search results
+          items:
+            $ref: '#/components/schemas/WebResult'
+        inline_shopping:
+          type: array
+          description: Inline shopping results
+          items:
+            $ref: '#/components/schemas/InlineShoppingResult'
+        text_blocks:
+          type: array
+          description: AI-generated content blocks including paragraphs, lists, tables, and code
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: Markdown-formatted version of the AI-generated content with reference links
+        reference_links:
+          type: array
+          description: Reference links cited in the AI-generated content
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+      required:
+        - search_metadata
+        - search_parameters
+    Pagination:
+      type: object
+      properties:
+        conversation_token:
+          type: string
+          description: Opaque token that continues this conversation. Pass it back as the conversation_token request parameter alongside your next question. Absent when the conversation cannot be continued.
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google AI Mode URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        url:
+          type: string
+          description: Image URL searched
+        location:
+          type: string
+          description: Location parameter provided
+        location_used:
+          type: string
+          description: Canonical location name used for the search
+        uule:
+          type: string
+          description: Google's encoded location parameter
+        conversation_token:
+          type: string
+          description: Conversation token echoed back when the request continued an existing conversation
+    LocalResult:
+      type: object
+      required: [position, title, link, rating, reviews, price, address, type]
+      properties:
+        position:
+          type: integer
+          description: Position in the local results
+        title:
+          type: string
+          description: Business name
+        link:
+          type: string
+          description: Link to business listing
+        rating:
+          type: number
+          description: Business rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          type: string
+          description: Price range
+        address:
+          type: string
+          description: Business address
+        type:
+          type: string
+          description: Business type or category
+        is_closed:
+          type: boolean
+          description: Whether the business is currently closed
+    WebResult:
+      type: object
+      required: [title, link, displayed_link, source, snippet]
+      properties:
+        title:
+          type: string
+          description: Page title
+        link:
+          type: string
+          description: URL of the result
+        displayed_link:
+          type: string
+          description: Display URL shown in results
+        source:
+          type: string
+          description: Source website name
+        snippet:
+          type: string
+          description: Text snippet from the page
+    InlineShoppingResult:
+      type: object
+      required: [position, title, link]
+      properties:
+        position:
+          type: integer
+          description: Position in the shopping results
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          type: string
+          description: Product price
+        extracted_price:
+          type: number
+          description: Extracted numeric price
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+    TextBlock:
+      type: object
+      required: [type]
+      properties:
+        type:
+          type: string
+          enum: ["header", "paragraph", "unordered_list", "ordered_list", "table", "code_blocks"]
+          description: Type of content block
+        answer:
+          type: string
+          description: Text content for header, paragraph, or list introduction
+        reference_indexes:
+          type: array
+          description: Indexes of related reference links
+          items:
+            type: integer
+        items:
+          type: array
+          description: List items (for ordered/unordered lists) or code blocks (for paragraphs)
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        table:
+          type: object
+          description: Table data (for table type)
+          properties:
+            headers:
+              type: array
+              description: Table header row
+              items:
+                type: string
+            rows:
+              type: array
+              description: Table data rows
+              items:
+                type: array
+                items:
+                  type: string
+          required: [headers, rows]
+        language:
+          type: string
+          description: Programming language (for code_blocks type)
+        code:
+          type: string
+          description: Code content (for code_blocks type)
+    ReferenceLink:
+      type: object
+      required: [index, title, link, source]
+      properties:
+        index:
+          type: integer
+          description: Reference index number
+        title:
+          type: string
+          description: Page title
+        link:
+          type: string
+          description: URL of the reference. Google cites some sources through an encrypted redirect; those are resolved to the publisher URL. If a destination cannot be resolved, this falls back to a `https://www.google.com/goto?url=...` link that redirects on GET only (HEAD returns 200 with no Location).
+        snippet:
+          type: string
+          description: Text snippet from the referenced page
+        source:
+          type: string
+          description: Source website name
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

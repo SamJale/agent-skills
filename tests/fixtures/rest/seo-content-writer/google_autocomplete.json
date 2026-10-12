@@ -1,0 +1,63 @@
+{
+  "search_metadata": {
+    "id": "search_mOgBEZe50gHg0BdDZkzwL3jW",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:45Z",
+    "request_time_taken": 0.13,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.13,
+    "request_url": null,
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mOgBEZe50gHg0BdDZkzwL3jW.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mOgBEZe50gHg0BdDZkzwL3jW"
+  },
+  "search_parameters": {
+    "engine": "google_autocomplete",
+    "q": "best serp api",
+    "hl": "en",
+    "gl": "us",
+    "client": "chrome"
+  },
+  "suggestions": [
+    {
+      "value": "best serp api reddit",
+      "relevance": 601,
+      "type": "QUERY"
+    },
+    {
+      "value": "best free serp api",
+      "relevance": 600,
+      "type": "QUERY"
+    },
+    {
+      "value": "what is serp api",
+      "relevance": 555,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api pricing",
+      "relevance": 554,
+      "type": "QUERY"
+    },
+    {
+      "value": "serp api alternative",
+      "relevance": 553,
+      "type": "QUERY"
+    },
+    {
+      "value": "best serp tool",
+      "relevance": 552,
+      "type": "QUERY"
+    },
+    {
+      "value": "best serp",
+      "relevance": 551,
+      "type": "QUERY"
+    },
+    {
+      "value": "best serp tracking",
+      "relevance": 550,
+      "type": "QUERY"
+    }
+  ],
+  "verbatim_relevance": 1300
+}

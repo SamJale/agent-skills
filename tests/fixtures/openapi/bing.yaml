@@ -1,0 +1,1392 @@
+openapi: 3.0.0
+info:
+  title: Bing API
+  description: |
+    The Bing API provides web search results from Bing search engine with support for multiple languages, markets, and device types.
+    
+    **Cross-linking**: Search results may contain inline videos, images, and shopping results. Use the Bing Videos API, Bing Images API, or shopping-specific APIs for more detailed results in those categories.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Bing Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to 'bing' to use the Bing search engine
+          schema:
+            type: string
+            enum: ["bing"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: device
+          in: query
+          required: false
+          description: Device type for search results
+          schema:
+            type: string
+            enum: ["mobile", "desktop"]
+            default: "desktop"
+        - name: location
+          in: query
+          required: false
+          description: Location for localized results (e.g., "New York,United States")
+          schema:
+            type: string
+        - name: lat
+          in: query
+          required: false
+          description: Latitude for location-based results
+          schema:
+            type: number
+        - name: lon
+          in: query
+          required: false
+          description: Longitude for location-based results
+          schema:
+            type: number
+        - name: market_code
+          in: query
+          required: false
+          description: 'Market code for localized results. Format: language-country (e.g., en-US)'
+          schema:
+            type: string
+            enum: ["es-ar", "en-au", "de-at", "nl-be", "fr-be", "pt-br", "en-ca", "fr-ca", "es-cl", "da-dk", "fi-fi", "fr-fr", "de-de", "zh-hk", "en-in", "en-id", "it-it", "ja-jp", "ko-kr", "en-my", "es-mx", "nl-nl", "en-nz", "no-no", "zh-cn", "pl-pl", "en-ph", "ru-ru", "en-za", "es-es", "sv-se", "fr-ch", "de-ch", "zh-tw", "tr-tr", "en-gb", "en-us", "es-us"]
+        - name: country_code
+          in: query
+          required: false
+          description: ISO 3166-1 alpha-2 country code
+          schema:
+            type: string
+            enum: ["AR", "AU", "AT", "BE", "BR", "CA", "CL", "DK", "FI", "FR", "DE", "HK", "IN", "ID", "IT", "JP", "KR", "MY", "MX", "NL", "NZ", "NO", "PL", "PT", "PH", "RU", "SA", "ZA", "ES", "SE", "CH", "TW", "TR", "GB", "US", "CN"]
+            default: "US"
+        - name: language
+          in: query
+          required: false
+          description: Language code for search results
+          schema:
+            type: string
+            enum: ["ar", "eu", "bn", "bg", "ca", "zh-hans", "zh-hant", "hr", "cs", "da", "nl", "en", "en-gb", "et", "fi", "fr", "gl", "de", "gu", "he", "hi", "hu", "is", "it", "jp", "kn", "ko", "lv", "lt", "ms", "ml", "mr", "nb", "pl", "pt-br", "pt-pt", "pa", "ro", "ru", "sr", "sk", "sl", "es", "sv", "ta", "te", "th", "tr", "uk", "vi"]
+            default: "en"
+        - name: safe_search
+          in: query
+          required: false
+          description: Safe search filter level
+          schema:
+            type: string
+            enum: ["off", "moderate", "strict"]
+        - name: time_period
+          in: query
+          required: false
+          description: Restricts results to a relative time period. Cannot be combined with filters.
+          schema:
+            type: string
+            enum: ["last_day", "last_week", "last_month", "last_year"]
+        - name: time_period_min
+          in: query
+          required: false
+          description: Start of a custom time period, in MM/DD/YYYY or YYYY-MM-DD format. Cannot be combined with filters.
+          schema:
+            type: string
+            pattern: '^((0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(19|20)\d\d|(19|20)\d\d-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$'
+        - name: time_period_max
+          in: query
+          required: false
+          description: End of a custom time period, in MM/DD/YYYY or YYYY-MM-DD format. Cannot be combined with filters.
+          schema:
+            type: string
+            pattern: '^((0?[1-9]|1[0-2])\/(0?[1-9]|[12][0-9]|3[01])\/(19|20)\d\d|(19|20)\d\d-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]))$'
+        - name: filters
+          in: query
+          required: false
+          description: Additional search filters. Cannot be combined with the time_period parameters.
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          description: Page number for pagination (starts at 1)
+          schema:
+            type: integer
+        - name: num
+          in: query
+          required: false
+          description: Number of results per page
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ai_overview:
+          $ref: '#/components/schemas/AiOverview'
+        shopping_ads:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShoppingAd'
+        ads:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ad'
+        answer_box:
+          $ref: '#/components/schemas/AnswerBox'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        local_map:
+          $ref: '#/components/schemas/LocalMap'
+        local_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalResult'
+        top_stories:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopStory'
+        related_questions:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedQuestion'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        inline_videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        inline_shorts:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineShort'
+        inline_images:
+          $ref: '#/components/schemas/InlineImages'
+        inline_shopping:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineShoppingItem'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are returned
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Bing URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        device:
+          type: string
+          description: Device type used for search
+        location:
+          type: string
+          description: Location parameter provided
+        location_used:
+          type: string
+          description: Canonical location name actually used
+        lat:
+          type: number
+          description: Latitude provided
+        lon:
+          type: number
+          description: Longitude provided
+        market_code:
+          type: string
+          description: Market code used
+        country_code:
+          type: string
+          description: Country code used
+        language:
+          type: string
+          description: Language code used
+        safe_search:
+          type: string
+          description: Safe search filter used
+        filters:
+          type: string
+          description: Additional filters used
+        time_period:
+          type: string
+          description: Time period filter
+        time_period_min:
+          type: string
+          description: Start date for time period
+        time_period_max:
+          type: string
+          description: End date for time period
+        page:
+          type: integer
+          description: Page number requested
+        num:
+          type: integer
+          description: Number of results requested
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed by Bing
+        total_results:
+          type: integer
+          description: Total number of results found
+        page:
+          type: integer
+          description: Current page number
+        detected_location:
+          type: string
+          description: Location detected by Bing
+        detected_latitude:
+          type: string
+          description: Detected latitude
+        detected_longtitude:
+          type: string
+          description: Detected longitude
+    AiOverview:
+      type: object
+      properties:
+        text_blocks:
+          type: array
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: Markdown formatted version of the AI overview
+        reference_links:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+        organic_result:
+          $ref: '#/components/schemas/CopilotOrganicResult'
+        inline_video:
+          $ref: '#/components/schemas/CopilotInlineVideo'
+        web_results:
+          type: array
+          description: Supporting web snippets and related sites (Copilot answers)
+          items:
+            $ref: '#/components/schemas/CopilotWebResult'
+        related_questions:
+          type: array
+          description: People-also-ask cards rendered inside the Copilot answer
+          items:
+            $ref: '#/components/schemas/CopilotRelatedQuestion'
+        related_queries:
+          type: array
+          description: Suggested follow-up queries shown in the Copilot carousel
+          items:
+            $ref: '#/components/schemas/CopilotRelatedQuery'
+        error:
+          type: string
+          description: Error message when AI overview fails to load
+    TextBlock:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["paragraph", "header", "heading", "ordered_list", "unordered_list", "image", "table", "code_blocks"]
+          description: Type of text block
+        answer:
+          type: string
+          description: Text content for paragraph, header, or heading blocks, or a plaintext rendering of a table
+        reference_indexes:
+          type: array
+          items:
+            type: integer
+          description: Reference indexes linking to reference_links array
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/ListItem'
+          description: List items for ordered_list and unordered_list types
+        title:
+          type: string
+          description: Title or alt text for image blocks
+        image:
+          type: string
+          description: Image URL for image type blocks
+        table:
+          type: object
+          description: Structured table data (for table type)
+          properties:
+            headers:
+              type: array
+              description: Header cell text, one entry per column
+              items:
+                type: string
+            rows:
+              type: array
+              description: Body rows, each an array of cell text
+              items:
+                type: array
+                items:
+                  type: string
+        code:
+          type: string
+          description: Source code contents (for code_blocks type)
+        language:
+          type: string
+          description: Detected programming language (for code_blocks type)
+    ListItem:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["paragraph"]
+          description: Type of list item (always paragraph)
+        answer:
+          type: string
+          description: Text content of the list item
+        reference_indexes:
+          type: array
+          items:
+            type: integer
+          description: Reference indexes for the list item
+    ReferenceLink:
+      type: object
+      properties:
+        index:
+          type: integer
+          description: Zero-based reference index
+        title:
+          type: string
+          description: Title of reference
+        link:
+          type: string
+          description: URL of reference
+        displayed_link:
+          type: string
+          description: Displayed URL
+        snippet:
+          type: string
+          description: Snippet text
+        source:
+          type: string
+          description: Source name
+    ShoppingAd:
+      type: object
+      required: [position, title, link, price, image]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        block_position:
+          type: string
+          description: Block position identifier
+        title:
+          type: string
+          description: Product title
+        seller:
+          type: string
+          description: Seller name
+        link:
+          type: string
+          description: Product link
+        price:
+          type: string
+          description: Formatted price
+        extracted_price:
+          type: number
+          description: Extracted price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted original price value
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_link:
+          type: string
+          description: Link to reviews
+        image:
+          type: string
+          description: Product image URL
+        deal:
+          type: string
+          description: Deal information
+        delivery_price:
+          type: string
+          description: Delivery price
+        extracted_delivery_price:
+          type: number
+          description: Extracted delivery price value
+        delivery_return:
+          type: string
+          description: Delivery and return info
+        order_fulfillment_method:
+          type: string
+          description: Order fulfillment method
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional product features
+        views:
+          type: integer
+          description: Number of views
+        promo:
+          $ref: '#/components/schemas/ShoppingAdPromo'
+        installment:
+          $ref: '#/components/schemas/ShoppingAdInstallment'
+    ShoppingAdPromo:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Promotion text
+        footnote:
+          type: string
+          description: Promotion footnote
+        link:
+          type: string
+          description: Promotion link
+        code:
+          type: string
+          description: Promotion code
+    ShoppingAdInstallment:
+      type: object
+      properties:
+        down_payment:
+          type: string
+          description: Down payment amount
+        extracted_down_payment:
+          type: number
+          description: Extracted down payment value
+        months:
+          type: string
+          description: Number of months
+        extracted_months:
+          type: integer
+          description: Extracted months value
+        cost_per_month:
+          type: string
+          description: Cost per month
+        extracted_cost_per_month:
+          type: number
+          description: Extracted cost per month value
+    Ad:
+      type: object
+      required: [title, link, displayed_link, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        block_position:
+          type: string
+          description: Block position identifier
+        title:
+          type: string
+          description: Ad title
+        link:
+          type: string
+          description: Ad destination URL
+        source:
+          type: string
+          description: Ad source
+        displayed_link:
+          type: string
+          description: Display URL
+        tracking_link:
+          type: string
+          description: Click tracking URL
+        snippet:
+          type: string
+          description: Ad description
+        is_app:
+          type: boolean
+          description: Whether this is an app ad
+        sitelinks:
+          $ref: '#/components/schemas/AdSitelinks'
+        assets:
+          $ref: '#/components/schemas/AdAssets'
+        more_link:
+          type: string
+          description: Link to more results
+        images:
+          type: array
+          items:
+            type: string
+          description: Ad images
+        thumbnail:
+          type: string
+          description: Ad thumbnail image
+    AdAssets:
+      type: object
+      properties:
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: number
+          description: Number of reviews
+        structured_snippet:
+          $ref: '#/components/schemas/AdStructuredSnippet'
+        action:
+          $ref: '#/components/schemas/AdAction'
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdPrice'
+        promotion:
+          $ref: '#/components/schemas/AdPromotion'
+        application:
+          $ref: '#/components/schemas/AdApplication'
+        call_to_action:
+          $ref: '#/components/schemas/AdCallToAction'
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional ad extensions
+    AdStructuredSnippet:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Snippet title
+        text:
+          type: string
+          description: Snippet text
+    AdAction:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Action text
+        link:
+          type: string
+          description: Action link
+    AdPrice:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Price title
+        price:
+          type: string
+          description: Price text
+        extracted_price:
+          type: number
+          description: Extracted price value
+        description:
+          type: string
+          description: Price description
+        link:
+          type: string
+          description: Price link
+    AdPromotion:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Promotion title
+        link:
+          type: string
+          description: Promotion link
+    AdApplication:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Application title
+        link:
+          type: string
+          description: Application link
+        text:
+          type: string
+          description: Application text
+    AdCallToAction:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Call to action text
+        link:
+          type: string
+          description: Call to action link
+    AdSitelinks:
+      type: object
+      properties:
+        inline:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdSitelink'
+        expanded:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdSitelink'
+        list:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdSitelink'
+    AdSitelink:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Sitelink title
+        link:
+          type: string
+          description: Sitelink URL
+        snippet:
+          type: string
+          description: Sitelink description
+        position:
+          type: integer
+          description: Position in sitelinks
+    AnswerBox:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["organic_result", "core_answer"]
+          description: Type of answer box
+        title:
+          type: string
+          description: Answer title (organic_result type only)
+        answer:
+          type: string
+          description: Answer text
+        thumbnail:
+          type: string
+          description: Thumbnail URL (core_answer type only)
+        related_answers:
+          type: array
+          items:
+            type: string
+          description: Related answers (core_answer type only)
+        organic_result:
+          $ref: '#/components/schemas/OrganicResult'
+          description: Source organic result (organic_result type only)
+      additionalProperties: true
+      description: Answer box can have dynamic attributes from the organic result type
+    CopilotOrganicResult:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+          description: Article title
+        link:
+          type: string
+          description: Decoded destination URL
+        snippet:
+          type: string
+          description: Article excerpt
+        source:
+          type: string
+          description: Display source name
+        source_icon:
+          type: string
+          description: Source favicon URL
+        displayed_link:
+          type: string
+          description: Breadcrumb-style URL shown next to the source
+        thumbnail:
+          type: string
+          description: Hero image URL
+    CopilotInlineVideo:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL (decoded from Bing tracking)
+        thumbnail:
+          type: string
+          description: Video thumbnail URL
+        duration:
+          type: string
+          description: Video duration in mm:ss or h:mm:ss
+        date:
+          type: string
+          description: Upload date
+        source:
+          type: string
+          description: Video platform (e.g. YouTube, Vimeo)
+        channel:
+          type: string
+          description: Publishing channel
+        views:
+          type: string
+          description: View count as displayed (e.g. "882.2K views")
+        extracted_views:
+          type: integer
+          description: Numeric view count
+    CopilotWebResult:
+      type: object
+      required: [title]
+      properties:
+        position:
+          type: integer
+          description: 1-based position of the web result within the list
+        title:
+          type: string
+          description: Result title
+        link:
+          type: string
+          description: Decoded destination URL
+        snippet:
+          type: string
+          description: Result snippet
+        source:
+          type: string
+          description: Display source name
+        source_icon:
+          type: string
+          description: Source favicon URL
+        thumbnail:
+          type: string
+          description: Thumbnail URL when the card is a related-site magazine block
+    CopilotRelatedQuery:
+      type: object
+      required: [query]
+      properties:
+        query:
+          type: string
+          description: Suggested follow-up query
+        link:
+          type: string
+          description: Decoded `copilotsearch` URL for the suggested query
+    CopilotRelatedQuestion:
+      type: object
+      required: [question]
+      properties:
+        question:
+          type: string
+          description: People-also-ask question
+        answer:
+          type: string
+          description: Answer snippet
+        link:
+          type: string
+          description: Decoded source URL backing the answer
+        source:
+          type: string
+          description: Source domain
+    KnowledgeGraph:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Entity name
+        website:
+          type: string
+          description: Entity website
+        address:
+          type: string
+          description: Business address
+        phone:
+          type: string
+          description: Phone number
+        hours:
+          type: string
+          description: Operating hours text
+        open_hours:
+          type: array
+          items:
+            $ref: '#/components/schemas/OpenHour'
+          description: Structured opening hours
+    OpenHour:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Day name
+        value:
+          type: string
+          description: Hours for that day
+    OrganicResult:
+      type: object
+      required: [position, title, link, source, domain, displayed_link, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Result title
+        link:
+          type: string
+          description: Result URL
+        source:
+          type: string
+          description: Source name
+        domain:
+          type: string
+          description: Domain name
+        displayed_link:
+          type: string
+          description: Displayed URL
+        snippet:
+          type: string
+          description: Result snippet
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+        favicon:
+          type: string
+          description: Favicon URL
+        cached_page_link:
+          type: string
+          description: Cached page URL
+        date:
+          type: string
+          description: Result date
+        images:
+          type: array
+          items:
+            type: string
+          description: Images from result
+        thumbnail:
+          type: string
+          description: Result thumbnail image
+        sitelinks:
+          $ref: '#/components/schemas/Sitelinks'
+        rich_snippet:
+          $ref: '#/components/schemas/RichSnippet'
+        explore_further:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExploreFurther'
+    Sitelinks:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["inline", "expanded", "list"]
+          description: Type of sitelinks
+        sitelinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sitelink'
+    Sitelink:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Sitelink title
+        link:
+          type: string
+          description: Sitelink URL
+        snippet:
+          type: string
+          description: Sitelink description
+    RichSnippet:
+      type: object
+      properties:
+        detected_extensions:
+          type: object
+          properties:
+            rating:
+              type: number
+              description: Rating value
+            reviews:
+              type: integer
+              description: Number of reviews
+            table:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+              description: Table data from rich snippet
+            questions:
+              type: array
+              items:
+                type: object
+                properties:
+                  question:
+                    type: string
+                    description: Question text
+                  link:
+                    type: string
+                    description: Question URL
+                  answer:
+                    type: string
+                    description: Answer text
+              description: Questions and answers
+            coupons:
+              type: array
+              items:
+                type: object
+                properties:
+                  text:
+                    type: string
+                    description: Coupon text
+                  promo_code:
+                    type: string
+                    description: Promotional code
+              description: Available coupons
+            articles:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    description: Article title
+                  link:
+                    type: string
+                    description: Article URL
+                  thumbnail:
+                    type: string
+                    description: Article thumbnail image
+                  extension:
+                    type: string
+                    description: Article extension text
+              description: Related articles
+        extensions:
+          type: array
+          items:
+            type: string
+          description: List of text extensions
+    ExploreFurther:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of exploration
+        domain:
+          type: string
+          description: Domain to search
+        link:
+          type: string
+          description: Search URL
+    LocalMap:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Map link
+        image:
+          type: string
+          description: Map image URL
+        gps_coordinates:
+          $ref: '#/components/schemas/GpsCoordinates'
+    GpsCoordinates:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Latitude
+        longitude:
+          type: number
+          description: Longitude
+    LocalResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        id:
+          type: string
+          description: Business identifier
+        title:
+          type: string
+          description: Business name
+        link:
+          type: string
+          description: Business link
+        rating:
+          type: number
+          description: Business rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_source:
+          type: string
+          description: Source of reviews
+        price:
+          type: string
+          description: Price range
+        price_description:
+          type: string
+          description: Price range description
+        type:
+          type: string
+          description: Business type
+        address:
+          type: string
+          description: Business address
+        phone:
+          type: string
+          description: Phone number
+        is_sponsored:
+          type: boolean
+          description: Whether this is a sponsored result
+        is_closed:
+          type: boolean
+          description: Whether business is currently closed
+        is_open:
+          type: boolean
+          description: Whether business is currently open
+        open_hours:
+          type: string
+          description: Current hours status
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Business features
+        website:
+          type: string
+          description: Website URL
+        direction:
+          type: string
+          description: Directions URL
+        gps_coordinates:
+          $ref: '#/components/schemas/GpsCoordinates'
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+        is_copilot_answer:
+          type: boolean
+          description: Whether this is from copilot layout
+    TopStory:
+      type: object
+      required: [position, title, link, source, date]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Story title
+        snippet:
+          type: string
+          description: Story snippet
+        link:
+          type: string
+          description: Story URL
+        source:
+          type: string
+          description: News source
+        date:
+          type: string
+          description: Publication date
+        is_live:
+          type: boolean
+          description: Whether story is live
+        is_video:
+          type: boolean
+          description: Whether story is a video
+        tag:
+          type: string
+          description: Story tag/category
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+        is_copilot_answer:
+          type: boolean
+          description: Whether this is from copilot layout
+    RelatedQuestion:
+      type: object
+      required: [question, answer]
+      properties:
+        question:
+          type: string
+          description: Question text
+        answer:
+          type: string
+          description: Answer text
+        source:
+          $ref: '#/components/schemas/OrganicResult'
+          description: Source organic result
+    RelatedSearch:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Search link
+    InlineVideo:
+      type: object
+      required: [position, title, link, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        source:
+          type: string
+          description: Video source
+        channel:
+          type: string
+          description: Channel name
+        duration:
+          type: string
+          description: Video duration
+        views:
+          type: integer
+          description: View count
+        date:
+          type: string
+          description: Upload date
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+        description:
+          type: string
+          description: Video description
+        video_link:
+          type: string
+          description: Direct video link
+        is_adult:
+          type: string
+          description: Adult content flag
+    InlineShort:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Short video title
+        link:
+          type: string
+          description: Short video URL
+        source:
+          type: string
+          description: Video source
+        channel:
+          type: string
+          description: Channel name
+        views:
+          type: integer
+          description: View count
+        duration:
+          type: string
+          description: Duration
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    InlineImages:
+      type: object
+      properties:
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        suggestions:
+          type: array
+          items:
+            $ref: '#/components/schemas/ImageSuggestion'
+    InlineImage:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Image title
+        link:
+          type: string
+          description: Image link
+        source:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Source name
+          description: Image source information
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    ImageSuggestion:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Suggestion text
+        link:
+          type: string
+          description: Suggestion link
+        thumbnail:
+          type: string
+          description: Suggestion thumbnail URL
+    InlineShoppingItem:
+      type: object
+      required: [position, title, link, price, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product URL
+        seller:
+          type: string
+          description: Seller name
+        price:
+          type: string
+          description: Product price
+        extracted_price:
+          type: number
+          description: Extracted price value
+        original_price:
+          type: string
+          description: Original price
+        extracted_original_price:
+          type: number
+          description: Extracted original price
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        thumbnail:
+          type: string
+          description: Product image URL
+        rebate:
+          type: string
+          description: Rebate information
+        delivery:
+          type: string
+          description: Delivery information
+    Pagination:
+      type: object
+      required: [current]
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        next:
+          type: string
+          description: URL for next page
+        previous:
+          type: string
+          description: URL for previous page
+        other_pages:
+          type: object
+          additionalProperties:
+            type: string
+          description: URLs for specific page numbers
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

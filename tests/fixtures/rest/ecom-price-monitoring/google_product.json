@@ -1,0 +1,272 @@
+{
+  "search_metadata": {
+    "id": "search_QJGXn64VVWFJ83rpp45l1jp7",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:14Z",
+    "request_time_taken": 1.11,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 1.12,
+    "request_url": "https://www.google.com/search?ibp=oshop&q=airpods+pro&prds=headlineOfferDocid:12177022599732128483,imageDocid:2778873436628109764,pvo:3,pvt:hg&gl=us&hl=en&udm=28",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_QJGXn64VVWFJ83rpp45l1jp7.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_QJGXn64VVWFJ83rpp45l1jp7"
+  },
+  "search_parameters": {
+    "engine": "google_product",
+    "product_token": "eyJxIjoiYWlycG9kcyBwcm8iLCJnbCI6InVzIiwiaGwiOiJlbiIsImVpIjoiMTBjeGFxekZPNW1tcHRRUDI0Q2k2UVUiLCJwcm9kdWN0aWQiOiIxMjE3NzAyMjU5OTczMjEyODQ4MyIsImhlYWRsaW5lT2ZmZXJEb2NpZCI6IjEyMTc3MDIyNTk5NzMyMTI4NDgzIiwicmRzIjoiUENfMjIwOTQ1Mjk3Nzg3MTY3MjU4NnxQUk9EX1BDXzIyMDk0NTI5Nzc4NzE2NzI1ODYiLCJpbWFnZURvY2lkIjoiMjc3ODg3MzQzNjYyODEwOTc2NCIsInB2byI6MywicHZ0IjoiaGciLCJvYXB2ZmMiOiJFdUlDQ3FJQ1FVMXVNeTE1VVhWcWFIQTBZMVV4VldaT1RrODFWbmwyZVRWblkyRlFjVTFrZGkweGVGQnZURGt4ZDB4NmRYVlRiM2hSTUMxVFJEY3hhMnRZVEc4ek5WSkNkRlExV0dsS2RraE5jMUkwV1V4TlExTXhWR1pxZVVSb1QweE9WbWcwWlRkdUxVZEhaVmhYV0UxeU4xWktaRnBpVWw5VVIzRlFSM2d5VmpadVFrMHdUV0pxZWtOeE1HcEhRVFpFTlhWSk9FcExiR3htU0dnd2JYcEdRMHgxUVZGNmVVcFBlR1JDUTFGT09HNVVNVWxoY1UxUU1EaHRWM3BxZDBnNVgwcGllV1pvU25CSk1HcEpaVFI0YmtWSE1uTmtORTlxY1RFMVpWbFBSME5ZTkhsdGQxSXdVRFZVUWtGZlFYVTVUbGd6WldaVFFXUXRiazE1ZVhnNVNFRm5NWHBKY1VKV2RXbFhSVVJsWTNsd1RIUnhOVzlvYlhRMVQwY3lTalIxTjJZNFJWRVNGekV3WTNoaGNYcEdUelZ0YlhCMFVWQXlORU5wTmxGVkdpSkJTa3RNUm0xTFZFTTRUM2wzTWpSVFJWcENibG8wWDBRMGEyTjBOVVpIVjFwMyIsInhzcmYiOiJBS1BPcjFTZzhGLUtEcUxYdlVFdUtORVRlS0VPRkt6RDh3OjE3ODE2MTQ1NTIzMTgiLCJjb29raWUiOiJlNDl6RkZsMEtVaVZURzlOYnNWK0lwbmxxRDkydmR4b000cjUrRVZ2NzZiNExLZFJwcWNjaG92UlVEYWlSQzB6dWY0aXhtTm1jYVhVdVpFTkFnM2I3OXAxSFNXcU1SV1V4NzZ1a004RDJYSUJTNFlCeERaaDVFUmo0RWQ5R0x1UTJ0eW9OR1hBTFhlUjQxb2ozVmQ2Rkd5anF2N2ZKNnRaNHJOdytIdFZyS0gxdEtWeW9kTUJyb0ZBT0RYdEpnd2ZTZUU4TVVvY1o3MXA2c0dPRUI3aktrSHo2V2JOaG9yR1RKLy9YdjNKRW53VVI4K0wwQ3hGTDAvOEdCL1FZN0x3a3E5blZ5NEhqdjB1ZjJNUlY2enZwOVNCTjV0cWNUSVgrZGFXb1dsTDRaYWI4K2pTWi9Ibmg5SitDRTBjRkFYTFlPQjl5cHhTbmJnckpObU5VcXRvd1pJMTdnZjFlQmNhVElxNzV6d1FyVVhxN0d6ci0td213Z0ZWR2hFV0ErbVcwTS0tSTUxZGdIeFdKaHFxSkJvZUlTNE1pQT09In0=",
+    "hl": "en",
+    "gl": "us"
+  },
+  "product": {
+    "prds": "12177022599732128483",
+    "title": "Apple Airpods Pro White Wireless Bluetooth In-ear Earbuds With",
+    "link": "https://www.google.com/search?ibp=oshop&q=Apple+Airpods+Pro+White+Wireless+Bluetooth+In-ear+Earbuds+With&gl=us&hl=en&udm=28",
+    "brand": "Apple",
+    "reviews": 117862,
+    "rating": 4.56,
+    "reviews_histogram": {
+      "1": 6571,
+      "2": 2245,
+      "3": 4573,
+      "4": 9580,
+      "5": 94893
+    },
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRF9_raX7dosQ0ATwAeU-yVJgjhWmTkXxEAXwuJ7Spy_nmeCdEseqSp93e1IX-t8XreMJCTmpRBgVwcOruaGz7124P2fbbIGR2KVKCaK8sL",
+      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQPzDJfD1dUmqcf_47FiHsuMldfYmbmNAdDxSzUyp_M870raAEgTQ-4MlF29RV0ckgVanKdk3_gQn74fPnr-XOPMtlHtqN57eVVr7RFuq-gKb0GaD3QI_5g"
+    ]
+  },
+  "offers": [
+    {
+      "position": 1,
+      "title": "Apple Airpods Pro White Wireless Bluetooth In-ear Earbuds With",
+      "link": "https://www.ebay.com/itm/227270048954?chn=ps&mkevt=1&mkcid=28&google_free_listing_action=view_item",
+      "price": "$25.00",
+      "extracted_price": 25.0,
+      "delivery_price": "Delivery $10.30",
+      "extracted_delivery_price": 10.3,
+      "total_price": "$35.30",
+      "extracted_total_price": 35.3,
+      "details": [
+        "In stock online",
+        "Delivery $10.30",
+        "Not eligible for returns"
+      ],
+      "payment_methods": "PayPal, Google Pay, Klarna accepted",
+      "merchant": {
+        "name": "eBay",
+        "favicon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.ebay.com&client=SHOPPING&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    }
+  ],
+  "typical_prices": {
+    "popular_choice": "eBay",
+    "popular_choice_link": "https://www.ebay.com/itm/227270048954?chn=ps&mkevt=1&mkcid=28&google_free_listing_action=view_item",
+    "popular_choice_price": "$25.00",
+    "extracted_popular_choice_price": 25.0
+  },
+  "review_results": {
+    "reviews": [
+      {
+        "username": "tuyet.m",
+        "source": "influenster.com",
+        "date": "a year ago",
+        "rating": 4,
+        "text": "Airpods Pro are very cool, worth the price, decent active noise canceling for my area, great transparency mode. Great fit for my ears, im a android phone user and it connects to android. Great sound quality but kinda disappointed about the bass... but the bass is decent enough for people who don't like heavy bass. At least they have a bit more smooth bass then regular airpods. Great adaptive EQ. Great battery. Barely noticeable lag when playing mobile games such as pubg😁. Great compact charging case design for my pants pockets. Doesn't fall out my ears when I fit them to the right silicone tips, I shook my head vigorously and still managed to stay in my ears even when my head is titled also. Very comfortable fit. Nice control features one press pause/play, double press to skip track and triple press to previous track. Great for music, listening to phone calls and watching movies/videos, also great mic for calls. You can turn on or off the noise canceling/transparency mode by the earbuds itself. I have an android phone so you can't rename the airpods pro device with android, so your going to need an Mac/ipad/iPhone to rename the airpods pro device and also to change the features. You can't check the percentage of the device on android device, so you'll need a Mac/iPad/iPhone. Nvm I said anything about being disappointed about the bass, it's just some songs dont deliver that much bass as needed. They have really good smooth bass, if bass was a dish the airpods pro would be a very good plate for the yummy bass, for us bass heads😅. Their sweat proof, so if your running and sweat is trying to let your airpods pro fall out they'll stay where they supposed to be IN EARS😃 Great balanced audio bass/mids/and especially yes smooth crisp clear treble"
+      },
+      {
+        "username": "chris",
+        "source": "walmart.com",
+        "title": "AMAZING",
+        "date": "a year ago",
+        "rating": 5,
+        "text": "The Apple AirPods Pro with MagSafe Charging Case (1st Generation) offer excellent wireless earbuds to anyone seeking premium sound quality. The earbuds maintain a compact design and light weight structure which provides extended comfort during extended use. The Active Noise Cancellation feature stands out as a top benefit because it effectively removes background noise to help you concentrate on your music or calls or podcasts. You can activate Transparency Mode through a single tap to hear outside sounds while using the device.\n\nThe audio quality delivers clear and deep sound with strong bass notes and clear high tones. Apple devices connect automatically to these earbuds which enables seamless device switching. The touch controls located on the stems enable users to manage their music playback and calls without needing to access their phone.\n\nThe MagSafe Charging Case maintains a small size that makes it convenient to transport. The charging case provides fast battery replenishment to the AirPods and supports wireless charging capabilities. The AirPods deliver 4.5 hours of listening time after one charge and the case extends the total listening time to more than 24 hours.\n\nApple users who want wireless listening with great sound and noise cancellation should consider the AirPods Pro (1st Gen) as their excellent choice. I strongly advise you to purchase this model of AirPods because you should have a pair right now."
+      }
+    ]
+  },
+  "specifications": [
+    {
+      "name": "Form Factor",
+      "value": "In-Ear Only"
+    },
+    {
+      "name": "Number of Earpieces",
+      "value": "Double"
+    },
+    {
+      "name": "Wireless Technology",
+      "value": "Bluetooth"
+    },
+    {
+      "name": "Connectivity",
+      "value": "Bluetooth/Wireless"
+    },
+    {
+      "name": "Microphone Type",
+      "value": "Built-In"
+    }
+  ],
+  "related_products": [
+    {
+      "product_id": "6752970566661664550",
+      "title": "Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+AirPods+Pro+3+Wireless+Earbuds+with+Active+Noise+Cancellation&prds=headlineOfferDocid:8256134389929870629,imageDocid:6752970566661664550,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$46.43",
+      "extracted_price": 46.43,
+      "original_price": "$57",
+      "extracted_original_price": 57.0,
+      "rating": 4.73,
+      "reviews": 9,
+      "seller": "mercari.com",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTDOtaXtiLy5c3R7BznLe5Kt3RApZBNysx7pV6_V497wzV2u5klucF2nF8s_Br-oMmHeG0Kd-TSP8qAkK2guDR3uyPWHElcdQ"
+    },
+    {
+      "product_id": "8718576182720192872",
+      "title": "AirPods Pro",
+      "link": "https://www.google.com/search?ibp=oshop&q=AirPods+Pro&prds=headlineOfferDocid:13233523296187692032,imageDocid:8718576182720192872,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$30.00",
+      "extracted_price": 30.0,
+      "seller": "mercari.com",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQxoW01O7r4XFGYlG26153xX_79viOXFUWvOpYPomvzXhZE0HCArk_GiDzZ_izGodm09PxaPtyLN61HQ55NrRPR2ckH86cgfQ"
+    },
+    {
+      "product_id": "10713431794900976643",
+      "title": "Apple AirPods Pro 2",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+AirPods+Pro+2&prds=headlineOfferDocid:9416845976997568534,imageDocid:10713431794900976643,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$75.00",
+      "extracted_price": 75.0,
+      "original_price": "$85",
+      "extracted_original_price": 85.0,
+      "rating": 5.0,
+      "reviews": 4,
+      "seller": "mercari.com",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRGP_zXxWAvg2K9vrVtvIy-0lIBdY0i8B6VYbFuKsR7iW9xDaf_ieTiogMRqzYCTCLW0VCZ_Bn4-2RvS0C0J4JbhdvHBjS_"
+    },
+    {
+      "product_id": "6719549303433406158",
+      "title": "Pre-owned Apple Airpods Pro 2 With Magsafe Case Read Description",
+      "link": "https://www.google.com/search?ibp=oshop&q=Pre-owned+Apple+Airpods+Pro+2+With+Magsafe+Case+Read+Description&prds=headlineOfferDocid:1328434170502637331,imageDocid:6719549303433406158,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$68.00",
+      "extracted_price": 68.0,
+      "rating": 4.52,
+      "reviews": 9,
+      "seller": "eBay",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR2yHtfYIZvUnX4E4RZKWRmLmYAdsLSjeiFE9619HnspaseDl3KZVq3KVcZP6f8ZmTdm_SeH8FxBNmUyj01X-i7TCQsO0srFso_n-krakjwjWu69UDhy8OgXyD7"
+    },
+    {
+      "product_id": "17093165407539749349",
+      "title": "Airpod pros",
+      "link": "https://www.google.com/search?ibp=oshop&q=Airpod+pros&prds=headlineOfferDocid:15588676919614331301,imageDocid:17093165407539749349,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$70.00",
+      "extracted_price": 70.0,
+      "original_price": "$170",
+      "extracted_original_price": 170.0,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "Poshmark",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ027bdc9zxYm1BARRLxly51K5fWIiBVeF1VSVaEkruzQethXvToV2HcM7V1trKsTm2j3S1l475Sbm-EPCjyes7Y2E1k2jKvLZlgl0ybXZtuVEX0QST3XmQ"
+    },
+    {
+      "product_id": "5988368477680677146",
+      "title": "Apple Airpods Pro (active Noise Cancellation) – Excellent Condition –",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+Airpods+Pro+%28active+Noise+Cancellation%29+%E2%80%93+Excellent+Condition+%E2%80%93&prds=headlineOfferDocid:9365979971663610224,imageDocid:5988368477680677146,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$70.00",
+      "extracted_price": 70.0,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "eBay",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRTvDZtieG_0rlkdT6mSBvRS5dF2A-FNLrhFVflp-xoHTS9bpIR_pZjVwCvdkpG5ha3EmBJoSbp0to3sxuzeMedA2DZg1C1brFgAdsP0ntCnI5R_ySx6KLmsiU"
+    },
+    {
+      "product_id": "9775507162589971758",
+      "title": "Airpods Pro 2",
+      "link": "https://www.google.com/search?ibp=oshop&q=Airpods+Pro+2&prds=headlineOfferDocid:12257580204559924487,imageDocid:9775507162589971758,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$39.00",
+      "extracted_price": 39.0,
+      "rating": 4.52,
+      "reviews": 9,
+      "seller": "eBay",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRoyHlZEQ92HHfW3eGnbtN3V2UOvTH9d5zxFnOqla1qFqUiiEdpl55OP9FnZAhBS90Bb4PGf-pFo-1pXW2g4_2wv22iMYUxf5Xf2NQtE_Uy6QMz_Jetq9SHUQ"
+    },
+    {
+      "product_id": "11857636390070863635",
+      "title": "brand new airpod pros",
+      "link": "https://www.google.com/search?ibp=oshop&q=brand+new+airpod+pros&prds=headlineOfferDocid:16464557974742189501,imageDocid:11857636390070863635,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$45.00",
+      "extracted_price": 45.0,
+      "original_price": "$100",
+      "extracted_original_price": 100.0,
+      "seller": "Poshmark",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSmK0qpsN3as5ReDMe8fAs80o4pGziWxcPtG_E7hDdsf0DzMUbWNKTugHrSRwKZvpHo1D5qe61_he5kulrx3Y_83NBYUIZ8"
+    },
+    {
+      "product_id": "9909698686185586927",
+      "title": "Genuine Apple AirPods Pro (1st Gen) OEM Headsets | Earbud (In Ear) | White | Lightning | Bluetooth Connectivity",
+      "link": "https://www.google.com/search?ibp=oshop&q=Genuine+Apple+AirPods+Pro+%281st+Gen%29+OEM+Headsets+%7C+Earbud+%28In+Ear%29+%7C+White+%7C+Lightning+%7C+Bluetooth+Connectivity&prds=headlineOfferDocid:15335173197659820900,imageDocid:9909698686185586927,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$19.99",
+      "extracted_price": 19.99,
+      "seller": "eBay",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRJTV4IrP_FpZGWum8ktb_pqR2f74I8HttDakMFjiU0ZAC5MLzabuPLRcBVtT8xk3ubtfa4U1VrJSgmLeku2T5TZY5abMmadbVVxCvyLlzDKo_t-ujHXVUJGyU"
+    },
+    {
+      "product_id": "17850773394205279225",
+      "title": "AirPods Pro 2",
+      "link": "https://www.google.com/search?ibp=oshop&q=AirPods+Pro+2&prds=headlineOfferDocid:4396031850057136982,imageDocid:17850773394205279225,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$40.00",
+      "extracted_price": 40.0,
+      "original_price": "$45",
+      "extracted_original_price": 45.0,
+      "rating": 4.52,
+      "reviews": 9,
+      "seller": "Poshmark",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7oaSDq8BberLkAp7UA5ERhtVqmd6baQ9lrPTXrq5gxJgWRDzE13mCEIwtDIdNZOga1oEX7KzQvU5HsmavgV7zvQzi-4FD"
+    },
+    {
+      "product_id": "757407112142813272",
+      "title": "Apple Airpods Pro With Wireless Charging Case - White - Parts -",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+Airpods+Pro+With+Wireless+Charging+Case+-+White+-+Parts+-&prds=headlineOfferDocid:12121274485468243793,imageDocid:757407112142813272,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$20.00",
+      "extracted_price": 20.0,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "eBay - robisfinds",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSTvXQwlG05I8vl0FvvPDu9vmxbZoBHyqPhKCN4I_tU_OZUOTMEvk_rfEBz-w_vfkowGCgNuPCvICIf065PNVkJEFD-itRkcH3UAYSUBsZM2oQVq3E13zdrH0s"
+    },
+    {
+      "product_id": "14284152549735312011",
+      "title": "APPLE AirPods Pro 1st Gen | Canal Earbud (In Ear Canal) | Bluetooth | White",
+      "link": "https://www.google.com/search?ibp=oshop&q=APPLE+AirPods+Pro+1st+Gen+%7C+Canal+Earbud+%28In+Ear+Canal%29+%7C+Bluetooth+%7C+White&prds=headlineOfferDocid:6683599267000081191,imageDocid:14284152549735312011,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$12.99",
+      "extracted_price": 12.99,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "eBay",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSGgvVP5ATAsd2322NfMU94u1F7D1PmJ2UOCpfjoYug0dm6YgIii9Qczqhbdz_-78OBpFcr9GhPMl4xeesUbpGdPtcP8JLaZ8iiTXMTCXzY"
+    },
+    {
+      "product_id": "14697784974307660675",
+      "title": "Apple AirPods Pro (please Read Description) - Electronics",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+AirPods+Pro+%28please+Read+Description%29+-+Electronics&prds=headlineOfferDocid:8941530559012430795,imageDocid:14697784974307660675,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$22.00",
+      "extracted_price": 22.0,
+      "original_price": "$50",
+      "extracted_original_price": 50.0,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "Mercari",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRP2LhKdSpGNFn9MFSKgKBOuSt1gV99r5cxFp4nLgdRoiSbQxIxkNgRRmPf9SNzHUWF6vx24HhKvZ6Jj0UnABNJwytTRKkONrin4miuwJQ"
+    },
+    {
+      "product_id": "13440096659308007506",
+      "title": "Apple AirPods Pro - Electronics | Color: Silver",
+      "link": "https://www.google.com/search?ibp=oshop&q=Apple+AirPods+Pro+-+Electronics+%7C+Color%3A+Silver&prds=headlineOfferDocid:12715453956366505122,imageDocid:13440096659308007506,pvo:2,pvt:hg&gl=us&hl=en&udm=28",
+      "price": "$21.43",
+      "extracted_price": 21.43,
+      "original_price": "$25",
+      "extracted_original_price": 25.0,
+      "rating": 4.56,
+      "reviews": 9,
+      "seller": "Mercari",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSQxaL8FgS58hyajsSrqyDtL3o7tlCJN2NUgJnjtk1psm7mw3vVowm3b4bZo80tqd-lrJLyxiONGjYgD26Ek-RKAuUk4qzWV9BsU7TeLfro"
+    }
+  ]
+}

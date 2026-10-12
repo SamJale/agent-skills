@@ -1,0 +1,14 @@
+interface:
+  display_name: "SearchApi"
+  short_description: "SearchApi live search data: Google, Maps, News, YouTube, AI"
+  brand_color: "#2563EB"
+  default_prompt: "Use $searchapi to find who ranks for my keyword in my country, with the links."
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "searchapi"
+      description: "SearchApi MCP server (OAuth sign-in, no key needed)"
+      transport: "streamable_http"
+      url: "https://www.searchapi.io/mcp"

@@ -1,0 +1,806 @@
+openapi: 3.0.0
+info:
+  title: Yahoo Search API
+  description: |
+    Yahoo Search API provides search results from Yahoo search engine across multiple domains.
+    
+    This API supports both standard Yahoo search domains (e.g., search.yahoo.com) and the Japanese domain (search.yahoo.co.jp), which returns a different set of results.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Yahoo Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["yahoo"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: yahoo_domain
+          in: query
+          required: false
+          description: Yahoo domain to search on
+          schema:
+            type: string
+            default: "search.yahoo.com"
+            enum: [
+              "search.yahoo.com",
+              "espanol.search.yahoo.com",
+              "be.search.yahoo.com",
+              "fr.search.yahoo.com",
+              "br.search.yahoo.com",
+              "ca.search.yahoo.com",
+              "de.search.yahoo.com",
+              "es.search.yahoo.com",
+              "in.search.yahoo.com",
+              "id.search.yahoo.com",
+              "ie.search.yahoo.com",
+              "it.search.yahoo.com",
+              "malaysia.search.yahoo.com",
+              "nl.search.yahoo.com",
+              "no.search.yahoo.com",
+              "at.search.yahoo.com",
+              "ph.search.yahoo.com",
+              "pl.search.yahoo.com",
+              "qc.search.yahoo.com",
+              "ro.search.yahoo.com",
+              "ch.search.yahoo.com",
+              "sg.search.yahoo.com",
+              "za.search.yahoo.com",
+              "fi.search.yahoo.com",
+              "se.search.yahoo.com",
+              "tr.search.yahoo.com",
+              "uk.search.yahoo.com",
+              "vn.search.yahoo.com",
+              "gr.search.yahoo.com",
+              "ru.search.yahoo.com",
+              "ua.search.yahoo.com",
+              "il.search.yahoo.com",
+              "hk.search.yahoo.com",
+              "tw.search.yahoo.com",
+              "search.yahoo.co.jp"
+            ]
+        - name: page
+          in: query
+          required: false
+          description: Page number
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: safe
+          in: query
+          required: false
+          description: Safe search setting
+          schema:
+            type: string
+            default: "on"
+            enum: ["on", "moderate", "off"]
+        - name: allowed_domains
+          in: query
+          required: false
+          description: Comma-separated list of allowed domains to restrict results
+          schema:
+            type: string
+            pattern: '^([a-zA-Z0-9.-]+)(,[a-zA-Z0-9.-]+)*$'
+        - name: location
+          in: query
+          required: false
+          description: Location to search near
+          schema:
+            type: string
+        - name: time_period
+          in: query
+          required: false
+          description: Time period filter
+          schema:
+            type: string
+            default: "any_time"
+            enum: ["any_time", "last_month", "last_week", "last_day"]
+        - name: strict_match
+          in: query
+          required: false
+          description: Enable strict match for search query
+          schema:
+            type: string
+            default: "off"
+            enum: ["on", "off"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        error:
+          type: string
+          description: Error message if search failed
+        ads:
+          type: array
+          description: Paid advertisement results
+          items:
+            $ref: '#/components/schemas/Ad'
+        answer_box:
+          $ref: '#/components/schemas/AnswerBox'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          description: Organic search results
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        inline_images:
+          type: array
+          description: Inline image results
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        local_results:
+          type: array
+          description: Local business results
+          items:
+            $ref: '#/components/schemas/LocalResult'
+        related_questions:
+          type: array
+          description: Related questions
+          items:
+            $ref: '#/components/schemas/RelatedQuestion'
+        top_stories:
+          type: array
+          description: Top news stories
+          items:
+            $ref: '#/components/schemas/TopStory'
+        inline_videos:
+          type: array
+          description: Inline video results
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        related_searches:
+          type: array
+          description: Related search queries
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        trending_searches:
+          type: array
+          description: Trending search queries
+          items:
+            $ref: '#/components/schemas/TrendingSearch'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Yahoo URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        q:
+          type: string
+          description: Search query
+        yahoo_domain:
+          type: string
+          description: Yahoo domain used
+        page:
+          type: integer
+          description: Page number
+        safe:
+          type: string
+          description: Safe search setting
+        allowed_domains:
+          type: string
+          description: Allowed domains filter
+        location:
+          type: string
+          description: Location filter
+        time_period:
+          type: string
+          description: Time period filter
+        strict_match:
+          type: string
+          description: Strict match setting
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+    Ad:
+      type: object
+      required: [position, block_position, title, displayed_link, link, snippet, favicon]
+      properties:
+        position:
+          type: integer
+          description: Position of the ad
+        block_position:
+          type: string
+          description: Block position (top, bottom, right_top)
+        title:
+          type: string
+          description: Ad title
+        link:
+          type: string
+          description: Ad destination URL
+        displayed_link:
+          type: string
+          description: Display URL
+        snippet:
+          type: string
+          description: Ad description
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted words in snippet
+        sitelinks:
+          $ref: '#/components/schemas/Sitelinks'
+        assets:
+          $ref: '#/components/schemas/AdAssets'
+        favicon:
+          type: string
+          description: Website favicon URL
+        thumbnail:
+          type: string
+          description: Ad thumbnail image
+    AdAssets:
+      type: object
+      properties:
+        structured_snippet:
+          type: object
+          properties:
+            title:
+              type: string
+            text:
+              type: string
+        review:
+          type: object
+          properties:
+            text:
+              type: string
+            source:
+              type: string
+            link:
+              type: string
+        prices:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              price:
+                type: string
+              extracted_price:
+                type: number
+              link:
+                type: string
+        promotion:
+          type: object
+          properties:
+            title:
+              type: string
+            link:
+              type: string
+        extensions:
+          type: array
+          items:
+            type: string
+    AnswerBox:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Type of answer box (core_answer or organic_result)
+        answer:
+          type: string
+          description: Answer text
+        title:
+          type: string
+          description: Answer title (for organic_result type)
+        organic_result:
+          $ref: '#/components/schemas/OrganicResult'
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+    KnowledgeGraph:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Entity name
+        subtitle:
+          type: string
+          description: Entity subtitle
+        price:
+          type: string
+          description: Price information
+        rating:
+          type: number
+          description: Rating value
+        rating_max:
+          type: number
+          description: Maximum rating value
+        reviews_count:
+          type: integer
+          description: Number of reviews
+        hours:
+          type: string
+          description: Current hours status
+        open_hours:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string
+        website:
+          type: string
+          description: Website URL
+        menu:
+          type: string
+          description: Menu URL
+        reservation:
+          type: string
+          description: Reservation URL
+        phone:
+          type: string
+          description: Phone number
+        description:
+          type: string
+          description: Entity description
+        source:
+          type: string
+          description: Source URL
+        address:
+          type: string
+          description: Physical address
+        amenities:
+          type: array
+          items:
+            type: string
+          description: List of amenities
+        reviews_histogram:
+          type: object
+          description: Rating distribution
+        user_reviews:
+          type: array
+          items:
+            type: object
+            properties:
+              review:
+                type: string
+              link:
+                type: string
+              rating:
+                type: integer
+              user:
+                type: string
+              date:
+                type: string
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        profiles:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              link:
+                type: string
+        people_also_search_for:
+          type: array
+          items:
+            type: object
+            properties:
+              query:
+                type: string
+              link:
+                type: string
+              thumbnail:
+                type: string
+              is_trending:
+                type: boolean
+      additionalProperties:
+        oneOf:
+          - type: string
+            description: Dynamic fact field value
+          - type: array
+            description: Dynamic fact links field (field name ends with _links)
+            items:
+              type: object
+              properties:
+                text:
+                  type: string
+                link:
+                  type: string
+    OrganicResult:
+      type: object
+      required: [position, title, link, displayed_link, favicon, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Page title
+        link:
+          type: string
+          description: Page URL
+        displayed_link:
+          type: string
+          description: Display URL
+        snippet:
+          type: string
+          description: Page description
+        tabbed_snippets:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              snippet:
+                type: string
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted words in snippet
+        date:
+          type: string
+          description: Publication date
+        sitelinks:
+          $ref: '#/components/schemas/Sitelinks'
+        rich_snippet:
+          $ref: '#/components/schemas/RichSnippet'
+        images:
+          type: array
+          items:
+            type: string
+          description: Associated image URLs
+        favicon:
+          type: string
+          description: Website favicon URL
+    Sitelinks:
+      type: object
+      properties:
+        expanded:
+          type: array
+          items:
+            type: object
+            required: [title, link]
+            properties:
+              title:
+                type: string
+              link:
+                type: string
+              snippet:
+                type: string
+              inline_links:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    text:
+                      type: string
+                    link:
+                      type: string
+        inline:
+          type: array
+          items:
+            type: object
+            required: [title, link]
+            properties:
+              title:
+                type: string
+              link:
+                type: string
+    RichSnippet:
+      type: object
+      properties:
+        detected_extensions:
+          type: object
+          properties:
+            articles:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  link:
+                    type: string
+                  thumbnail:
+                    type: string
+        attributes:
+          type: object
+          description: Dynamic key-value pairs from structured data
+    InlineImage:
+      type: object
+      required: [title, thumbnail, source]
+      properties:
+        title:
+          type: string
+          description: Image title
+        source:
+          type: object
+          required: [name, link]
+          properties:
+            name:
+              type: string
+            link:
+              type: string
+        original:
+          type: object
+          required: [link, height, width, size]
+          properties:
+            link:
+              type: string
+            height:
+              type: integer
+            width:
+              type: integer
+            size:
+              type: string
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    LocalResult:
+      type: object
+      required: [position, title, link, address, phone, type, website]
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Business name
+        link:
+          type: string
+          description: Business link
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_source:
+          type: string
+          description: Reviews source text
+        price:
+          type: string
+          description: Price range
+        address:
+          type: string
+          description: Business address
+        phone:
+          type: string
+          description: Phone number
+        is_closed:
+          type: boolean
+          description: Whether business is closed
+        type:
+          type: string
+          description: Business type
+        order:
+          type: string
+          description: Order URL
+        website:
+          type: string
+          description: Website URL
+        menu:
+          type: string
+          description: Menu URL
+        request_a_quote:
+          type: string
+          description: Quote request URL
+        responds_in:
+          type: string
+          description: Response time
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional information
+        image:
+          type: string
+          description: Business image
+    RelatedQuestion:
+      type: object
+      properties:
+        question:
+          type: string
+          description: Question text
+        answer:
+          type: string
+          description: Answer text
+        source:
+          type: object
+          properties:
+            title:
+              type: string
+            link:
+              type: string
+    TopStory:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Story title
+        link:
+          type: string
+          description: Story URL
+        source:
+          type: string
+          description: News source
+        date:
+          type: string
+          description: Publication date
+        snippet:
+          type: string
+          description: Story summary
+        thumbnail:
+          type: string
+          description: Story image
+    InlineVideo:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in results
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        source:
+          type: string
+          description: Video source
+        date:
+          type: string
+          description: Upload date
+        views:
+          type: string
+          description: View count
+        length:
+          type: string
+          description: Video duration
+        image:
+          type: string
+          description: Thumbnail URL
+    RelatedSearch:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Search URL
+    TrendingSearch:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Trending topic
+        snippet:
+          type: string
+          description: Topic description
+        link:
+          type: string
+          description: Search URL
+        thumbnail:
+          type: string
+          description: Topic image
+    Pagination:
+      type: object
+      required: [current]
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: Previous page URL
+        next:
+          type: string
+          description: Next page URL
+        other_pages:
+          type: object
+          description: Map of page numbers to URLs

@@ -1,0 +1,503 @@
+openapi: 3.0.0
+info:
+  title: Google Scholar API
+  description: |
+    Google Scholar API allows you to search for scholarly literature including articles, theses, books, conference papers, and more. You can filter by language, year, and court decisions.
+
+    **Cross-linking**: The `cites_id` from cited_by can be used as the `cites` parameter to find all documents citing a specific article. The `cluster_id` from versions can be used as the `cluster` parameter to find all versions of a specific article.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Scholar Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use. Must be set to google_scholar
+          schema:
+            type: string
+            enum: ["google_scholar"]
+        - name: q
+          in: query
+          required: false
+          description: Search query. Not required if cites or cluster parameter is present
+          schema:
+            type: string
+        - name: cites
+          in: query
+          required: false
+          description: Find documents citing a specific article by its unique ID
+          schema:
+            type: string
+        - name: cluster
+          in: query
+          required: false
+          description: Find versions of a specific article by its unique ID
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language for search results
+          schema:
+            type: string
+            default: "en"
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "bt", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "ws", "xh", "yi", "yo", "zu"]
+        - name: lr
+          in: query
+          required: false
+          description: Restrict results to documents written in specific languages
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          description: Control duplicate content and host crowding filters
+          schema:
+            type: integer
+            default: 1
+            enum: [0, 1]
+        - name: as_ylo
+          in: query
+          required: false
+          description: Start year filter (YYYY format)
+          schema:
+            type: integer
+            minimum: 1900
+        - name: as_yhi
+          in: query
+          required: false
+          description: End year filter (YYYY format)
+          schema:
+            type: integer
+            minimum: 1900
+        - name: scisbd
+          in: query
+          required: false
+          description: Sort and filter mode
+          schema:
+            type: integer
+            default: 0
+            enum: [0, 1, 2]
+        - name: as_vis
+          in: query
+          required: false
+          description: Citations filter
+          schema:
+            type: integer
+            default: 0
+            enum: [0, 1]
+        - name: as_rr
+          in: query
+          required: false
+          description: Review articles filter
+          schema:
+            type: integer
+            default: 0
+            enum: [0, 1]
+        - name: as_sdt
+          in: query
+          required: false
+          description: Patent and US court filter
+          schema:
+            type: string
+            default: "0"
+        - name: source
+          in: query
+          required: false
+          description: Filter results by source
+          schema:
+            type: string
+        - name: num
+          in: query
+          required: false
+          description: Number of results per page (max 20)
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 20
+            default: 10
+        - name: page
+          in: query
+          required: false
+          description: Page number
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        profiles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScholarProfile'
+          description: Author profiles matching the search
+        organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Organization'
+          description: Organizations found in search
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScholarResult'
+          description: Main scholarly article results
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+          description: Related search suggestions
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when search fails
+    
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Scholar URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        cites:
+          type: string
+          description: Citation ID
+        cluster:
+          type: string
+          description: Cluster ID
+        hl:
+          type: string
+          description: Interface language
+        lr:
+          type: string
+          description: Language restriction
+        scisbd:
+          type: integer
+          description: Sort and filter mode
+        as_ylo:
+          type: integer
+          description: Start year filter
+        as_yhi:
+          type: integer
+          description: End year filter
+        as_rr:
+          type: integer
+          description: Review articles filter
+        as_vis:
+          type: integer
+          description: Citations filter
+        as_sdt:
+          type: string
+          description: Patent/court filter
+        filter:
+          type: integer
+          description: Content filter setting
+        source:
+          type: string
+          description: Source filter
+        num:
+          type: integer
+          description: Results per page
+        page:
+          type: integer
+          description: Page number
+    
+    SearchInformation:
+      type: object
+      properties:
+        total_results:
+          type: integer
+          description: Total number of results found
+        page:
+          type: integer
+          description: Current page number
+        time_taken_displayed:
+          type: number
+          description: Time taken as displayed
+        query_displayed:
+          type: string
+          description: Query as displayed in search results
+        did_you_mean:
+          type: object
+          properties:
+            text:
+              type: string
+              description: Suggested query text
+            link:
+              type: string
+              description: Link to suggested query
+          description: Query suggestion if available
+    
+    ScholarProfile:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Author name
+        link:
+          type: string
+          description: Link to author profile 
+        author_id:
+          type: string
+          description: Google Scholar author ID
+        affiliations:
+          type: string
+          description: Author affiliations
+        email:
+          type: string
+          description: Verified email domain
+        cited_by:
+          type: object
+          properties:
+            total:
+              type: integer
+              description: Total citation count
+          description: Citation information
+
+    Organization:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Organization name
+        link:
+          type: string
+          description: Link to organization results
+        org_id:
+          type: string
+          description: Organization identifier
+        university:
+          type: string
+          description: Associated university
+    
+    ScholarResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        title:
+          type: string
+          description: Article title
+        link:
+          type: string
+          description: Link to article
+        data_cid:
+          type: string
+          description: Data CID identifier
+        caselaw_id:
+          type: string
+          description: Numeric Google Scholar case identifier, present on case-law-mode results (set the `as_sdt` parameter). Pass into the `google_scholar_case_law` engine to retrieve the full opinion.
+        type:
+          type: string
+          description: Result type
+        publication:
+          type: string
+          description: Publication information summary
+        snippet:
+          type: string
+          description: Article snippet or abstract
+        resource:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Resource name
+            format:
+              type: string
+              description: Resource format (e.g., PDF)
+            link:
+              type: string
+              description: Link to resource
+          description: Available resource
+        authors:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Author name
+              id:
+                type: string
+                description: Author ID
+              link:
+                type: string
+                description: Link to author profile
+          description: Article authors
+        inline_links:
+          type: object
+          properties:
+            cited_by:
+              type: object
+              properties:
+                total:
+                  type: integer
+                  description: Number of citations
+                link:
+                  type: string
+                  description: Link to citing articles
+                cites_id:
+                  type: string
+                  description: Citation ID for cross-linking
+              description: Citation information
+            versions:
+              type: object
+              properties:
+                total:
+                  type: integer
+                  description: Number of versions
+                link:
+                  type: string
+                  description: Link to all versions
+                cluster_id:
+                  type: string
+                  description: Cluster ID for cross-linking
+              description: Version information
+            related_articles_link:
+              type: string
+              description: Link to related articles
+            cached_page_link:
+              type: string
+              description: Link to cached page
+          description: Related links and citations
+    
+    RelatedSearch:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Related search query
+        highlighted:
+          type: array
+          items:
+            type: string
+          description: Highlighted terms in the query
+        link:
+          type: string
+          description: Link to related search
+    
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: Link to previous page
+        next:
+          type: string
+          description: Link to next page
+        other_pages:
+          type: object
+          additionalProperties:
+            type: string
+          description: Links to other pages
+    
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

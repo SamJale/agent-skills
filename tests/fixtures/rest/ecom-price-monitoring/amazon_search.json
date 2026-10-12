@@ -1,0 +1,1270 @@
+{
+  "search_metadata": {
+    "id": "search_QJGXn64VVWFJ83nE245l1jp7",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:26Z",
+    "request_time_taken": 2.74,
+    "parsing_time_taken": 0.08,
+    "total_time_taken": 2.82,
+    "request_url": "https://www.amazon.com/s?k=airpods+pro",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_QJGXn64VVWFJ83nE245l1jp7.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_QJGXn64VVWFJ83nE245l1jp7"
+  },
+  "search_parameters": {
+    "engine": "amazon_search",
+    "q": "airpods pro",
+    "amazon_domain": "amazon.com",
+    "delivery_country": "us"
+  },
+  "search_information": {
+    "query_displayed": "airpods pro",
+    "price_min": "$4",
+    "extracted_price_min": 4,
+    "price_max": "$225+",
+    "extracted_price_max": 225
+  },
+  "filters": [
+    {
+      "type": "Eligible for Free Shipping",
+      "options": [
+        {
+          "text": "Free Shipping by Amazon",
+          "rh": "p_76:1249137011"
+        }
+      ]
+    },
+    {
+      "type": "Delivery Day",
+      "options": [
+        {
+          "text": "Get It by Tomorrow",
+          "rh": "p_90:8308921011"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "options": [
+        {
+          "text": "New",
+          "rh": "p_n_condition-type:2224371011"
+        },
+        {
+          "text": "Renewed",
+          "rh": "p_n_condition-type:16907720011"
+        },
+        {
+          "text": "Used",
+          "rh": "p_n_condition-type:2224373011"
+        }
+      ]
+    },
+    {
+      "type": "Brands",
+      "options": [
+        {
+          "text": "Apple",
+          "rh": "p_123:110955"
+        },
+        {
+          "text": "Beats",
+          "rh": "p_123:325772"
+        },
+        {
+          "text": "JBL",
+          "rh": "p_123:233043"
+        },
+        {
+          "text": "Samsung",
+          "rh": "p_123:46655"
+        },
+        {
+          "text": "JLab",
+          "rh": "p_123:170780"
+        },
+        {
+          "text": "Baseus",
+          "rh": "p_123:266211"
+        },
+        {
+          "text": "TOZO",
+          "rh": "p_123:137850"
+        },
+        {
+          "text": "SoundPEATS",
+          "rh": "p_123:84029"
+        },
+        {
+          "text": "Rinsmola",
+          "rh": "p_123:970532"
+        },
+        {
+          "text": "Kinglucky",
+          "rh": "p_123:1659284"
+        },
+        {
+          "text": "Srhythm",
+          "rh": "p_123:325007"
+        }
+      ]
+    },
+    {
+      "type": "Customer Reviews",
+      "options": [
+        {
+          "text": "4 Stars",
+          "rh": "p_72:1248879011"
+        }
+      ]
+    },
+    {
+      "type": "Deals & Discounts",
+      "options": [
+        {
+          "text": "Up to $10",
+          "rh": "p_36:-1000"
+        },
+        {
+          "text": "$10 to $15",
+          "rh": "p_36:1000-1500"
+        },
+        {
+          "text": "$15 to $60",
+          "rh": "p_36:1500-6000"
+        },
+        {
+          "text": "$60 to $200",
+          "rh": "p_36:6000-20000"
+        },
+        {
+          "text": "$200 & above",
+          "rh": "p_36:20000-"
+        }
+      ]
+    },
+    {
+      "type": "Color",
+      "options": [
+        {
+          "text": "Black",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376047011"
+        },
+        {
+          "text": "Grey",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376042011"
+        },
+        {
+          "text": "White",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376052011"
+        },
+        {
+          "text": "Beige",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376050011"
+        },
+        {
+          "text": "Red",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376043011"
+        },
+        {
+          "text": "Pink",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376057011"
+        },
+        {
+          "text": "Orange",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376044011"
+        },
+        {
+          "text": "Yellow",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376055011"
+        },
+        {
+          "text": "Green",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376051011"
+        },
+        {
+          "text": "Blue",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376048011"
+        },
+        {
+          "text": "Purple",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376054011"
+        },
+        {
+          "text": "Gold",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376041011"
+        },
+        {
+          "text": "Silver",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376053011"
+        },
+        {
+          "text": "Multi",
+          "rh": "p_n_feature_twenty-nine_browse-bin:204376045011"
+        }
+      ]
+    },
+    {
+      "type": "Connectivity",
+      "options": [
+        {
+          "text": "Wired",
+          "rh": "p_n_feature_ten_browse-bin:3150267011"
+        },
+        {
+          "text": "Wireless",
+          "rh": "p_n_feature_ten_browse-bin:3150268011"
+        }
+      ]
+    },
+    {
+      "type": "Noise Control",
+      "options": [
+        {
+          "text": "None",
+          "rh": "p_n_g-1003195531111:23746031011"
+        },
+        {
+          "text": "Active Noise Cancellation",
+          "rh": "p_n_g-1003195531111:23746030011"
+        },
+        {
+          "text": "Sound Isolation",
+          "rh": "p_n_g-1003195531111:23746032011"
+        },
+        {
+          "text": "Passive Noise Cancellation",
+          "rh": "p_n_g-1003195531111:110686947011"
+        },
+        {
+          "text": "Adaptive Noise Cancellation",
+          "rh": "p_n_g-1003195531111:110686945011"
+        },
+        {
+          "text": "Hybrid Noise Cancellation",
+          "rh": "p_n_g-1003195531111:110686943011"
+        },
+        {
+          "text": "Environmental Noise Cancellation",
+          "rh": "p_n_g-1003195531111:210912314011"
+        }
+      ]
+    },
+    {
+      "type": "Top Brands",
+      "options": [
+        {
+          "text": "Top Brands",
+          "rh": "p_n_g-101014971069111:119653281011"
+        }
+      ]
+    },
+    {
+      "type": "Features",
+      "options": [
+        {
+          "text": "Wireless",
+          "rh": "p_n_feature_thirteen_browse-bin:509316"
+        },
+        {
+          "text": "Sports & Exercise",
+          "rh": "p_n_feature_thirteen_browse-bin:2266980011"
+        },
+        {
+          "text": "Lightweight",
+          "rh": "p_n_feature_thirteen_browse-bin:12097488011"
+        },
+        {
+          "text": "Foldable",
+          "rh": "p_n_feature_thirteen_browse-bin:12097487011"
+        },
+        {
+          "text": "Microphone",
+          "rh": "p_n_feature_thirteen_browse-bin:2266981011"
+        }
+      ]
+    },
+    {
+      "type": "Wireless Technology",
+      "options": [
+        {
+          "text": "Bluetooth",
+          "rh": "p_n_feature_two_browse-bin:212335655011"
+        },
+        {
+          "text": "NFC",
+          "rh": "p_n_feature_two_browse-bin:212335652011"
+        },
+        {
+          "text": "Wi-Fi",
+          "rh": "p_n_feature_two_browse-bin:212335654011"
+        }
+      ]
+    },
+    {
+      "type": "Included Components",
+      "options": [
+        {
+          "text": "User Manual",
+          "rh": "p_n_g-1002989062111:76076001011"
+        },
+        {
+          "text": "Eartip",
+          "rh": "p_n_g-1002989062111:101369949011"
+        },
+        {
+          "text": "Wireless Charging Case",
+          "rh": "p_n_g-1002989062111:23657295011"
+        },
+        {
+          "text": "Cable",
+          "rh": "p_n_g-1002989062111:23657292011"
+        },
+        {
+          "text": "Charging Station",
+          "rh": "p_n_g-1002989062111:23657293011"
+        },
+        {
+          "text": "Ear Cushions",
+          "rh": "p_n_g-1002989062111:23657294011"
+        },
+        {
+          "text": "Protective Case",
+          "rh": "p_n_g-1002989062111:23657291011"
+        }
+      ]
+    },
+    {
+      "type": "Compatible Devices",
+      "options": [
+        {
+          "text": "Laptops",
+          "rh": "p_n_g-1003341941111:24003427011"
+        },
+        {
+          "text": "Tablets",
+          "rh": "p_n_g-1003341941111:24003432011"
+        },
+        {
+          "text": "Desktops",
+          "rh": "p_n_g-1003341941111:24003434011"
+        },
+        {
+          "text": "Gaming Consoles",
+          "rh": "p_n_g-1003341941111:24003430011"
+        },
+        {
+          "text": "Music Production Equipment",
+          "rh": "p_n_g-1003341941111:24003433011"
+        },
+        {
+          "text": "Telephones",
+          "rh": "p_n_g-1003341941111:24003426011"
+        }
+      ]
+    },
+    {
+      "type": "Impedance",
+      "options": [
+        {
+          "text": "Up to 1",
+          "rh": "p_n_g-101015490468111:122265093011"
+        },
+        {
+          "text": "3 & above",
+          "rh": "p_n_g-101015490468111:122265091011"
+        }
+      ]
+    },
+    {
+      "type": "Water Resistance Level",
+      "options": [
+        {
+          "text": "Not Water Resistant",
+          "rh": "p_n_g-101016670375111:207192564011"
+        },
+        {
+          "text": "Water Resistant",
+          "rh": "p_n_g-101016670375111:207192562011"
+        },
+        {
+          "text": "Waterproof",
+          "rh": "p_n_g-101016670375111:207192563011"
+        }
+      ]
+    },
+    {
+      "type": "Release Date",
+      "options": [
+        {
+          "text": "Last 30 days",
+          "rh": "p_n_date:1249088011"
+        },
+        {
+          "text": "Last 90 days",
+          "rh": "p_n_date:1249089011"
+        }
+      ]
+    },
+    {
+      "type": "Premium Brands",
+      "options": [
+        {
+          "text": "Premium Brands",
+          "rh": "p_n_g-101015887018111:204376014011"
+        }
+      ]
+    },
+    {
+      "type": "Noise Control Features",
+      "options": [
+        {
+          "text": "Transparency Mode",
+          "rh": "p_n_g-101017149505111:215591642011"
+        },
+        {
+          "text": "Wind Noise Reduction",
+          "rh": "p_n_g-101017149505111:215591644011"
+        }
+      ]
+    },
+    {
+      "type": "Purpose",
+      "options": [
+        {
+          "text": "Music Listening",
+          "rh": "p_n_g-101016755135111:207882059011"
+        },
+        {
+          "text": "Phone Calling",
+          "rh": "p_n_g-101016755135111:207882067011"
+        },
+        {
+          "text": "Exercising",
+          "rh": "p_n_g-101016755135111:207882058011"
+        },
+        {
+          "text": "Commuting",
+          "rh": "p_n_g-101016755135111:207882074011"
+        },
+        {
+          "text": "Cycling",
+          "rh": "p_n_g-101016755135111:207882073011"
+        },
+        {
+          "text": "Gaming",
+          "rh": "p_n_g-101016755135111:207882062011"
+        },
+        {
+          "text": "Podcasting",
+          "rh": "p_n_g-101016755135111:207882068011"
+        },
+        {
+          "text": "Running",
+          "rh": "p_n_g-101016755135111:207882064011"
+        },
+        {
+          "text": "Sleeping",
+          "rh": "p_n_g-101016755135111:207882060011"
+        },
+        {
+          "text": "Swimming",
+          "rh": "p_n_g-101016755135111:207882070011"
+        },
+        {
+          "text": "Traveling",
+          "rh": "p_n_g-101016755135111:207882065011"
+        },
+        {
+          "text": "Video Conferencing",
+          "rh": "p_n_g-101016755135111:207882061011"
+        },
+        {
+          "text": "Walking",
+          "rh": "p_n_g-101016755135111:207882071011"
+        },
+        {
+          "text": "Watching TV",
+          "rh": "p_n_g-101016755135111:207882069011"
+        }
+      ]
+    },
+    {
+      "type": "Battery Charge Time",
+      "options": [
+        {
+          "text": "1 to 1.9 h",
+          "rh": "p_n_g-101015490467111:122265086011"
+        },
+        {
+          "text": "2 to 2.9 h",
+          "rh": "p_n_g-101015490467111:122265088011"
+        },
+        {
+          "text": "3 h & above",
+          "rh": "p_n_g-101015490467111:122265087011"
+        }
+      ]
+    },
+    {
+      "type": "Audio Latency",
+      "options": [
+        {
+          "text": "Up to 19 ms",
+          "rh": "p_n_g-101015506076111:122272124011"
+        },
+        {
+          "text": "20 to 34 ms",
+          "rh": "p_n_g-101015506076111:122272125011"
+        },
+        {
+          "text": "50 ms & above",
+          "rh": "p_n_g-101015506076111:122272122011"
+        }
+      ]
+    },
+    {
+      "type": "Earpiece Shape",
+      "options": [
+        {
+          "text": "Bud",
+          "rh": "p_n_g-101014793102111:118149309011"
+        },
+        {
+          "text": "Stick",
+          "rh": "p_n_g-101014793102111:118149310011"
+        },
+        {
+          "text": "Circle",
+          "rh": "p_n_g-101014793102111:118149311011"
+        },
+        {
+          "text": "Oval",
+          "rh": "p_n_g-101014793102111:118149307011"
+        },
+        {
+          "text": "Hook",
+          "rh": "p_n_g-101014793102111:118149306011"
+        }
+      ]
+    },
+    {
+      "type": "Audio Driver Type",
+      "options": [
+        {
+          "text": "Dynamic Driver",
+          "rh": "p_n_g-101015499549111:122268314011"
+        },
+        {
+          "text": "Hybrid Driver",
+          "rh": "p_n_g-101015499549111:122268313011"
+        },
+        {
+          "text": "Planar Magnetic Driver",
+          "rh": "p_n_g-101015499549111:122268310011"
+        },
+        {
+          "text": "Balanced Armature Driver",
+          "rh": "p_n_g-101015499549111:122268312011"
+        },
+        {
+          "text": "Custom Driver",
+          "rh": "p_n_g-101015499549111:211954499011"
+        },
+        {
+          "text": "DLC Driver",
+          "rh": "p_n_g-101015499549111:211954500011"
+        }
+      ]
+    },
+    {
+      "type": "Control",
+      "options": [
+        {
+          "text": "Touch Control",
+          "rh": "p_n_g-1002989016111:122131394011"
+        },
+        {
+          "text": "Media Control",
+          "rh": "p_n_g-1002989016111:23641591011"
+        },
+        {
+          "text": "Siri",
+          "rh": "p_n_g-1002989016111:24086507011"
+        },
+        {
+          "text": "Button Control",
+          "rh": "p_n_g-1002989016111:122131395011"
+        },
+        {
+          "text": "Call Control",
+          "rh": "p_n_g-1002989016111:23641589011"
+        },
+        {
+          "text": "Voice Control",
+          "rh": "p_n_g-1002989016111:23641593011"
+        },
+        {
+          "text": "Volume Control",
+          "rh": "p_n_g-1002989016111:23641592011"
+        }
+      ]
+    },
+    {
+      "type": "Carrying Case Color",
+      "options": [
+        {
+          "text": "Black",
+          "rh": "p_n_g-101015500219111:122269856011"
+        },
+        {
+          "text": "White",
+          "rh": "p_n_g-101015500219111:122269858011"
+        },
+        {
+          "text": "Pink",
+          "rh": "p_n_g-101015500219111:122269850011"
+        },
+        {
+          "text": "Blue",
+          "rh": "p_n_g-101015500219111:122269855011"
+        },
+        {
+          "text": "Silver",
+          "rh": "p_n_g-101015500219111:122269847011"
+        }
+      ]
+    },
+    {
+      "type": "Battery Life",
+      "options": [
+        {
+          "text": "Up to 9 h",
+          "rh": "p_n_g-101015499813111:122268319011"
+        },
+        {
+          "text": "10 to 14 h",
+          "rh": "p_n_g-101015499813111:122268321011"
+        },
+        {
+          "text": "15 to 19 h",
+          "rh": "p_n_g-101015499813111:122268318011"
+        },
+        {
+          "text": "20 to 24 h",
+          "rh": "p_n_g-101015499813111:122268320011"
+        },
+        {
+          "text": "25 h & above",
+          "rh": "p_n_g-101015499813111:122268317011"
+        }
+      ]
+    },
+    {
+      "type": "Smart Home Compatibility",
+      "options": [
+        {
+          "text": "Not Smart Home Compatible",
+          "rh": "p_n_g-101017505917111:216905797011"
+        },
+        {
+          "text": "Smart Home Compatible",
+          "rh": "p_n_g-101017505917111:216905798011"
+        }
+      ]
+    },
+    {
+      "type": "Age Range",
+      "options": [
+        {
+          "text": "Adult",
+          "rh": "p_n_feature_browse-bin:23549351011"
+        }
+      ]
+    },
+    {
+      "type": "Headphones Form Factor",
+      "options": [
+        {
+          "text": "In Ear",
+          "rh": "p_n_feature_seventeen_browse-bin:23508656011"
+        },
+        {
+          "text": "On Ear",
+          "rh": "p_n_feature_seventeen_browse-bin:23508657011"
+        },
+        {
+          "text": "Over Ear",
+          "rh": "p_n_feature_seventeen_browse-bin:23508658011"
+        },
+        {
+          "text": "True Wireless",
+          "rh": "p_n_feature_seventeen_browse-bin:117806101011"
+        }
+      ]
+    },
+    {
+      "type": "Sustainability Features",
+      "options": [
+        {
+          "text": "Any Feature",
+          "rh": "p_n_cpf_labels:121136630011"
+        },
+        {
+          "text": "Carbon Impact",
+          "rh": "p_n_cpf_labels:116845688011"
+        },
+        {
+          "text": "Recycled Materials",
+          "rh": "p_n_cpf_labels:116845689011"
+        },
+        {
+          "text": "Safer Chemicals",
+          "rh": "p_n_cpf_labels:116845683011"
+        },
+        {
+          "text": "Worker Wellbeing",
+          "rh": "p_n_cpf_labels:116845686011"
+        }
+      ]
+    },
+    {
+      "type": "Frequency Response",
+      "options": [
+        {
+          "text": "Up to 99,999 Hz",
+          "rh": "p_n_g-101015501853111:122268329011"
+        }
+      ]
+    },
+    {
+      "type": "Carrying Case Material",
+      "options": [
+        {
+          "text": "Plastic",
+          "rh": "p_n_g-101015500290111:122269835011"
+        },
+        {
+          "text": "PVC",
+          "rh": "p_n_g-101015500290111:122269833011"
+        },
+        {
+          "text": "Microfiber",
+          "rh": "p_n_g-101015500290111:122269840011"
+        },
+        {
+          "text": "Rubber",
+          "rh": "p_n_g-101015500290111:122269837011"
+        },
+        {
+          "text": "Silicone",
+          "rh": "p_n_g-101015500290111:122269844011"
+        }
+      ]
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "asin": "B0FQFB8FMG",
+      "title": "AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High-Fidelity Sound, USB-C Charging",
+      "link": "https://www.amazon.com/Apple-Cancellation-Translation-Headphones-High-Fidelity/dp/B0FQFB8FMG/ref=sr_1_1?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-1",
+      "brand": "Apple",
+      "rating": 4.5,
+      "reviews": 10565,
+      "recent_sales": "10K+ bought in past month",
+      "extracted_recent_sales": 10000,
+      "price": "$179.99",
+      "extracted_price": 179.99,
+      "original_price": "$249.00",
+      "extracted_original_price": 249.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$155.78",
+        "extracted_lowest_price": 155.78,
+        "link": "https://www.amazon.com/gp/offer-listing/B0FQFB8FMG/ref=sr_1_1_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-1",
+        "offers_count": 7,
+        "description": "(7+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61solmQSSlL._AC_UY218_.jpg"
+    },
+    {
+      "position": 2,
+      "asin": "B0DGHMNQ5Z",
+      "title": "AirPods 4 Wireless Earbuds, Bluetooth Headphones, Personalized Spatial Audio, Sweat and Water Resistant, USB-C Charging Case, H2 Chip, Up to 30 Hours of Battery Life, Effortless Setup for iPhone",
+      "link": "https://www.amazon.com/Apple-Bluetooth-Headphones-Personalized-Effortless/dp/B0DGHMNQ5Z/ref=sr_1_2?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-2",
+      "brand": "Apple",
+      "rating": 4.6,
+      "reviews": 30710,
+      "recent_sales": "10K+ bought in past month",
+      "extracted_recent_sales": 10000,
+      "price": "$99.00",
+      "extracted_price": 99.0,
+      "original_price": "$129.00",
+      "extracted_original_price": 129.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$75.15",
+        "extracted_lowest_price": 75.15,
+        "link": "https://www.amazon.com/gp/offer-listing/B0DGHMNQ5Z/ref=sr_1_2_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-2",
+        "offers_count": 7,
+        "description": "(7+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61iBtxCUabL._AC_UY218_.jpg"
+    },
+    {
+      "position": 3,
+      "asin": "B0DGJ7HYG1",
+      "title": "AirPods 4 Wireless Earbuds, Bluetooth Headphones, with Active Noise Cancellation, Adaptive, Transparency Mode, Personalized Spatial Audio, USB-C Charging Case, Wireless Charging, H2 Chip",
+      "link": "https://www.amazon.com/Apple-Headphones-Cancellation-Transparency-Personalized/dp/B0DGJ7HYG1/ref=sr_1_3?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-3",
+      "brand": "Apple",
+      "rating": 4.6,
+      "reviews": 21506,
+      "recent_sales": "10K+ bought in past month",
+      "extracted_recent_sales": 10000,
+      "price": "$148.99",
+      "extracted_price": 148.99,
+      "original_price": "$179.00",
+      "extracted_original_price": 179.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$113.82",
+        "extracted_lowest_price": 113.82,
+        "link": "https://www.amazon.com/gp/offer-listing/B0DGJ7HYG1/ref=sr_1_3_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-3",
+        "offers_count": 7,
+        "description": "(7+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61iBtxCUabL._AC_UY218_.jpg"
+    },
+    {
+      "position": 4,
+      "asin": "B0B844T634",
+      "title": "Apple AirPods Pro Wireless Earbuds with MagSafe Charging Case (Renewed)",
+      "link": "https://www.amazon.com/Apple-AirPods-Wireless-Earbuds-Charging/dp/B0B844T634/ref=sr_1_4?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-4",
+      "rating": 3.5,
+      "reviews": 4641,
+      "recent_sales": "6K+ bought in past month",
+      "extracted_recent_sales": 6000,
+      "price": "$104.99",
+      "extracted_price": 104.99,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$102.00",
+        "extracted_lowest_price": 102.0,
+        "link": "https://www.amazon.com/gp/offer-listing/B0B844T634/ref=sr_1_4_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-4",
+        "offers_count": 21,
+        "description": "(21+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/41hofkZHlvL._AC_UY218_.jpg"
+    },
+    {
+      "position": 5,
+      "asin": "B0828BJGD2",
+      "title": "Apple AirPods Pro - 1st Gen (Renewed)",
+      "link": "https://www.amazon.com/Apple-MWP22AM-A-cr-AirPods-Renewed/dp/B0828BJGD2/ref=sr_1_5?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-5",
+      "rating": 4.1,
+      "reviews": 21132,
+      "recent_sales": "2K+ bought in past month",
+      "extracted_recent_sales": 2000,
+      "price": "$104.99",
+      "extracted_price": 104.99,
+      "original_price": "$263.86",
+      "extracted_original_price": 263.86,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Jun 20 - 22",
+          "type": "FREE delivery",
+          "date": "Jun 20 - 22"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "availability": "Only 3 left in stock - order soon.",
+      "more_offers": {
+        "lowest_price": "$98.13",
+        "extracted_lowest_price": 98.13,
+        "link": "https://www.amazon.com/gp/offer-listing/B0828BJGD2/ref=sr_1_5_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-5",
+        "offers_count": 25,
+        "description": "(25+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61suB7SdJkL._AC_UY218_.jpg"
+    },
+    {
+      "position": 6,
+      "asin": "B0BJQWYLYN",
+      "title": "Apple AirPods Pro (2nd Generation) (Renewed)",
+      "link": "https://www.amazon.com/Apple-AirPods-Pro-Generation-Renewed/dp/B0BJQWYLYN/ref=sr_1_6?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-6",
+      "rating": 4.2,
+      "reviews": 3194,
+      "recent_sales": "1K+ bought in past month",
+      "extracted_recent_sales": 1000,
+      "price": "$149.99",
+      "extracted_price": 149.99,
+      "original_price": "$284.64",
+      "extracted_original_price": 284.64,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$130.49",
+        "extracted_lowest_price": 130.49,
+        "link": "https://www.amazon.com/gp/offer-listing/B0BJQWYLYN/ref=sr_1_6_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-6",
+        "offers_count": 33,
+        "description": "(33+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_UY218_.jpg"
+    },
+    {
+      "position": 7,
+      "asin": "B0D1XD1ZV3",
+      "title": "AirPods Pro 2 Wireless Earbuds, Active Noise Cancellation, Hearing Aid Feature, Bluetooth Headphones, Transparency, Personalized Spatial Audio, High-Fidelity Sound, H2 Chip, USB-C Charging",
+      "link": "https://www.amazon.com/Apple-Cancellation-Transparency-Personalized-High-Fidelity/dp/B0D1XD1ZV3/ref=sr_1_7?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-7",
+      "brand": "Apple",
+      "rating": 4.6,
+      "reviews": 47111,
+      "recent_sales": "300+ bought in past month",
+      "extracted_recent_sales": 300,
+      "price": "$263.86",
+      "extracted_price": 263.86,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Tomorrow, Jun 17",
+          "type": "FREE delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$219.99",
+        "extracted_lowest_price": 219.99,
+        "link": "https://www.amazon.com/gp/offer-listing/B0D1XD1ZV3/ref=sr_1_7_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-7",
+        "offers_count": 3,
+        "description": "(3+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_UY218_.jpg"
+    },
+    {
+      "position": 8,
+      "asin": "B0CHWRXH8B",
+      "title": "AirPods Pro (2nd Generation) Wireless Ear Buds with USB-C Charging, Up to 2X More Active Noise Cancelling Bluetooth Headphones, Transparency Mode, Adaptive, Personalized Spatial Audio, White",
+      "link": "https://www.amazon.com/Apple-Generation-Cancelling-Transparency-Personalized/dp/B0CHWRXH8B/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-8",
+      "brand": "Apple",
+      "rating": 4.7,
+      "reviews": 28822,
+      "recent_sales": "500+ bought in past month",
+      "extracted_recent_sales": 500,
+      "price": "$263.86",
+      "extracted_price": 263.86,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Tomorrow, Jun 17",
+          "type": "FREE delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$196.35",
+        "extracted_lowest_price": 196.35,
+        "link": "https://www.amazon.com/gp/offer-listing/B0CHWRXH8B/ref=sr_1_8_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-8",
+        "offers_count": 2,
+        "description": "(2+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/51NRGHU2NoL._AC_UY218_.jpg"
+    },
+    {
+      "position": 9,
+      "asin": "B0DT2M5XC6",
+      "title": "Apple AirPods Pro (2nd Generation) with MagSafe Charging Case (USB-C) (Renewed Premium)",
+      "link": "https://www.amazon.com/Apple-AirPods-Generation-MagSafe-Charging/dp/B0DT2M5XC6/ref=sr_1_9?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-9",
+      "rating": 4.5,
+      "reviews": 146,
+      "recent_sales": "1K+ bought in past month",
+      "extracted_recent_sales": 1000,
+      "price": "$169.00",
+      "extracted_price": 169.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_UY218_.jpg"
+    },
+    {
+      "position": 10,
+      "asin": "B0GSS4SGZR",
+      "title": "AirPods Max 2 Wireless Over-Ear Headphones, Active Noise Cancellation, Adaptive Audio, Personalized Spatial Audio, Live Translation, Bluetooth Headphones for iPhone – Midnight",
+      "link": "https://www.amazon.com/Apple-Headphones-Cancellation-Personalized-Translation/dp/B0GSS4SGZR/ref=sr_1_10?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-10",
+      "brand": "Apple",
+      "rating": 4.6,
+      "reviews": 326,
+      "recent_sales": "4K+ bought in past month",
+      "extracted_recent_sales": 4000,
+      "price": "$499.00",
+      "extracted_price": 499.0,
+      "original_price": "$549.00",
+      "extracted_original_price": 549.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$469.31",
+        "extracted_lowest_price": 469.31,
+        "link": "https://www.amazon.com/gp/offer-listing/B0GSS4SGZR/ref=sr_1_10_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-10",
+        "offers_count": 7,
+        "description": "(7+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/71umw2cCkOL._AC_UY218_.jpg"
+    },
+    {
+      "position": 11,
+      "asin": "B0DJMCTZTS",
+      "title": "Apple AirPods 4 with Active Noise Cancellation (Renewed)",
+      "link": "https://www.amazon.com/Apple-AirPods-Active-Cancellation-Renewed/dp/B0DJMCTZTS/ref=sr_1_11?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-11",
+      "rating": 4.4,
+      "reviews": 346,
+      "recent_sales": "2K+ bought in past month",
+      "extracted_recent_sales": 2000,
+      "price": "$113.00",
+      "extracted_price": 113.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Tomorrow, Jun 17",
+          "type": "FREE delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$108.95",
+        "extracted_lowest_price": 108.95,
+        "link": "https://www.amazon.com/gp/offer-listing/B0DJMCTZTS/ref=sr_1_11_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-11",
+        "offers_count": 18,
+        "description": "(18+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/410S21l+1RL._AC_UY218_.jpg"
+    },
+    {
+      "position": 12,
+      "asin": "B07SKLLYTW",
+      "title": "(Renewed) Apple AirPods 2 with Charging Case - White",
+      "link": "https://www.amazon.com/Apple-AirPods-Charging-Case-Renewed/dp/B07SKLLYTW/ref=sr_1_12?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-12",
+      "rating": 3.9,
+      "reviews": 18991,
+      "recent_sales": "7K+ bought in past month",
+      "extracted_recent_sales": 7000,
+      "price": "$83.49",
+      "extracted_price": 83.49,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$79.95",
+        "extracted_lowest_price": 79.95,
+        "link": "https://www.amazon.com/gp/offer-listing/B07SKLLYTW/ref=sr_1_12_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-12",
+        "offers_count": 28,
+        "description": "(28+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/41XjE57VLvL._AC_UY218_.jpg"
+    },
+    {
+      "position": 13,
+      "asin": "B0DCH8VDXF",
+      "title": "EarPods Headphones with USB-C Plug, Wired Ear Buds with Built-in Remote to Control Music, Phone Calls, and Volume",
+      "link": "https://www.amazon.com/Apple-EarPods-Headphones-Built-Control/dp/B0DCH8VDXF/ref=sr_1_13?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-13",
+      "brand": "Apple",
+      "rating": 4.6,
+      "reviews": 14429,
+      "recent_sales": "10K+ bought in past month",
+      "extracted_recent_sales": 10000,
+      "price": "$19.00",
+      "extracted_price": 19.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21 on $35 of items shipped by Amazon",
+          "type": "FREE delivery",
+          "condition": "on $35 of items shipped by Amazon",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$16.31",
+        "extracted_lowest_price": 16.31,
+        "link": "https://www.amazon.com/gp/offer-listing/B0DCH8VDXF/ref=sr_1_13_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-13",
+        "offers_count": 3,
+        "description": "(3+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/513OSdW4elL._AC_UY218_.jpg"
+    },
+    {
+      "position": 14,
+      "asin": "B09M94KXPN",
+      "title": "Apple AirPods (3rd Generation) (Renewed)",
+      "link": "https://www.amazon.com/Apple-AirPods-3rd-Generation-Renewed/dp/B09M94KXPN/ref=sr_1_14?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-14",
+      "rating": 4.3,
+      "reviews": 6690,
+      "recent_sales": "400+ bought in past month",
+      "extracted_recent_sales": 400,
+      "price": "$99.95",
+      "extracted_price": 99.95,
+      "original_price": "$198.64",
+      "extracted_original_price": 198.64,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Sun, Jun 21",
+          "type": "FREE delivery",
+          "date": "Sun, Jun 21"
+        },
+        "fastest_delivery": {
+          "text": "Or fastest delivery Tomorrow, Jun 17",
+          "type": "Or fastest delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$79.00",
+        "extracted_lowest_price": 79.0,
+        "link": "https://www.amazon.com/gp/offer-listing/B09M94KXPN/ref=sr_1_14_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-14",
+        "offers_count": 23,
+        "description": "(23+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/41+SGuZhPML._AC_UY218_.jpg"
+    },
+    {
+      "position": 15,
+      "asin": "B0CHXRCG91",
+      "title": "AirPods Pro (2nd Gen) Wireless Earbuds, Personalized Spatial Audio MagSafe Charging Case (USB-C) Bluetooth Headphones for iPhone (MTJV3)",
+      "link": "https://www.amazon.com/Apple-Wireless-Personalized-Bluetooth-Headphones/dp/B0CHXRCG91/ref=sr_1_15?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-15",
+      "brand": "Apple",
+      "rating": 4.8,
+      "reviews": 5540,
+      "price": "$263.86",
+      "extracted_price": 263.86,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Tomorrow, Jun 17",
+          "type": "FREE delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/41mOF2No2ZL._AC_UY218_.jpg"
+    },
+    {
+      "position": 16,
+      "asin": "B08XY48BJD",
+      "title": "Apple AirPods Max - Space Gray (Renewed)",
+      "link": "https://www.amazon.com/Apple-AirPods-Max-Space-Renewed/dp/B08XY48BJD/ref=sr_1_16?dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&dib_tag=se&keywords=airpods+pro&qid=1781614588&sr=8-16",
+      "rating": 4.1,
+      "reviews": 2681,
+      "recent_sales": "200+ bought in past month",
+      "extracted_recent_sales": 200,
+      "price": "$389.00",
+      "extracted_price": 389.0,
+      "fulfillment": {
+        "standard_delivery": {
+          "text": "FREE delivery Tomorrow, Jun 17",
+          "type": "FREE delivery",
+          "date": "Tomorrow, Jun 17"
+        }
+      },
+      "more_offers": {
+        "lowest_price": "$329.99",
+        "extracted_lowest_price": 329.99,
+        "link": "https://www.amazon.com/gp/offer-listing/B08XY48BJD/ref=sr_1_16_olp?keywords=airpods+pro&dib_tag=se&dib=eyJ2IjoiMSJ9.ZBHSph1KuoPz2QnXWvkmQ7VxQSXhs_mWE9yuz7vJgoLOwt1EG7aYGA6AHJEPyJI5CBObzDTwqhuxudFyZFw-ANDq9bgwhJM3odhjCzcWGvuGnnXLWWy-OlSanHmxS1cM86m47WeqFNrhSWCVT_pPRvxdlyQkLibTBd5tL8bxHKUDFuNYL1WDzX8cvHMBy_NAhpcsayvWFeDFrEsPSYvt-V7Yr2X3MxYgWUk61zs3KS4.mrXrk3SS-mLb2-zlqVbFKZMcvouZPUhZT5tHfwmtWi0&qid=1781614588&sr=8-16",
+        "offers_count": 17,
+        "description": "(17+ used & new offers)"
+      },
+      "thumbnail": "https://m.media-amazon.com/images/I/81fSoQd7nsL._AC_UY218_.jpg"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.amazon.com/s?k=airpods+pro&page=2&xpid=l_ZmJKH8TbZSe&qid=1781614588&ref=sr_pg_1",
+    "other_pages": {
+      "2": "https://www.amazon.com/s?k=airpods+pro&page=2&xpid=l_ZmJKH8TbZSe&qid=1781614588&ref=sr_pg_2",
+      "3": "https://www.amazon.com/s?k=airpods+pro&page=3&xpid=l_ZmJKH8TbZSe&qid=1781614588&ref=sr_pg_3"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "search_metadata": {
+    "id": "search_WDz0ZKeWNOc8oPx3okQyABpo",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:37Z",
+    "request_time_taken": 8.06,
+    "parsing_time_taken": 0.02,
+    "total_time_taken": 8.07,
+    "request_url": "https://www.google.com/search?q=best+serp+api&oq=best+serp+api&gl=us&hl=en&udm=18&tbs=&ie=UTF-8",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_WDz0ZKeWNOc8oPx3okQyABpo.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_WDz0ZKeWNOc8oPx3okQyABpo"
+  },
+  "search_parameters": {
+    "engine": "google_forums",
+    "q": "best serp api",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "best serp api",
+    "total_results": 3,
+    "time_taken_displayed": 0.25,
+    "detected_location": "Miami-Dade County, Florida",
+    "has_no_results_for": false
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Want some support from community",
+      "link": "https://www.facebook.com/groups/vibecodinglife/posts/2059377647984095/",
+      "source": "Facebook · Vibe Coding is Life",
+      "domain": "www.facebook.com",
+      "displayed_link": "9 comments  ·  4 hours ago",
+      "snippet": "Elevate your SEO strategy with these 5 Top API's in 2019. 1. @MarketMuseCo (Great for your blogging) 2. Ubersuggest ( 1 of my faves) 3. @ ...",
+      "snippet_highlighted_words": [
+        "MarketMuseCo"
+      ],
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Any Serpapi Alternative?",
+            "link": "https://www.facebook.com/groups/vibecodinglife/posts/2059377647984095/#:~:text=Any%20SerpAPI%20alternative%3F"
+          },
+          {
+            "title": "Which Is The Cheapest Serp...",
+            "link": "https://www.facebook.com/groups/vibecodinglife/posts/2059377647984095/#:~:text=Which%20is%20the%20cheapest%20Serp%20api%20provider%20to%20extract%20top%2010%20google%20ranking%20websites%20domain%20names%20by%20providing%20the%20keyword%20and%20selecting%20location%20as%20input%3F"
+          },
+          {
+            "title": "Can Someone Recommend A...",
+            "link": "https://www.facebook.com/groups/vibecodinglife/posts/2059377647984095/#:~:text=Can%20someone%20recommend%20a%20person%20who%20can%20scrape%20google%20maps%20business%20that%20don%27t%20have%20a%20website."
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEVHcEwHZv8HaP8IZ/8IZ/8IZv8IaP8IZ/8HZv8Haf8IZ/8IaP8IZ/8AXv8AV/8AYv+SqP/P1//m6//e5f9wlP////+tvP9jiv82c/8IZ/8Iaf+fsf////////8AW/+wrobhAAAAH3RSTlMAM4bC6v1h7v8Z3UL///////7/////////wRiFwenBhp/Z0gAAAOhJREFUeAFtk0UWwzAMBWWHFHOZe/9bBn9Nr7Mdg5AiQjZt17WNFFTTDxwZ+kKNigvUmJw2XGF0dByx1jlnPTPDjiYqDofj8XQ4L9bsL6vozpedq13/3eJk4G+XXPIac8zBHUs5EIl48Q4Tws3ziiAZ5f7j3Vq7O5b0iOGE1Z0cRxpqS3mwSbbU4VHndukW8GwHiQ/BzUO2KceIw7MIqJBHyIZk/WwKSv6KcD/frlsqt/P5joBELJ+3iNZD8YDC/82zz1pWS5U1u5bmmY1JLdMQmVoaOIxmIdVYDXWUxVAD8Xp/FvnN1mEG0f0e5ixC4ikAAAAASUVORK5CYII="
+    },
+    {
+      "position": 2,
+      "title": "curious if it solves a real pain for agent devs : r/LangChain",
+      "link": "https://www.reddit.com/r/LangChain/comments/1u5u2ph/we_built_a_document_reasoning_api_curious_if_it/",
+      "source": "Reddit · r/LangChain",
+      "domain": "www.reddit.com",
+      "displayed_link": "10+ comments  ·  1 day ago",
+      "snippet": "Curious whether your API surfaces confidence scores or provenance metadata per extracted claim, or whether that's left to the caller to ...",
+      "snippet_highlighted_words": [
+        "API"
+      ],
+      "sitelinks": {
+        "list": [
+          {
+            "title": "Compared use.ai, Poe, and Typing Mind after 2 months - Reddit",
+            "link": "https://www.reddit.com/r/AppBuilding/comments/1u77ymx/compared_useai_poe_and_typing_mind_after_2_months/",
+            "date": "Jun 16, 2026"
+          },
+          {
+            "title": "Has anyone experienced SEO cloaking issues on WordPress?",
+            "link": "https://www.reddit.com/r/Wordpress/comments/1u6jofy/has_anyone_experienced_seo_cloaking_issues_on/",
+            "date": "Jun 15, 2026"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 3,
+      "title": "chrome://flags - Microsoft Q&A",
+      "link": "https://learn.microsoft.com/en-us/answers/questions/3743072/chrome-flags",
+      "source": "Microsoft Learn",
+      "domain": "learn.microsoft.com",
+      "displayed_link": "https://learn.microsoft.com › en-us › answers › questions",
+      "snippet": "Hello All, Whenever I made changes on \"chrome://flags\" the changes are not persistent. The changes are gone when we restart the browser. Please let ...",
+      "date": "Jan 25, 2024",
+      "rich_snippet": {
+        "detected_extensions": {
+          "answer_link": "https://learn.microsoft.com/en-us/answers/a/7542414",
+          "answer_count": 22,
+          "top_answer": "Parallel download enabled"
+        }
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABnRSTlMAAAAAAABupgeRAAAAWklEQVR4AWP4FKBEJPrip8wABrV7GOp3EYtGhgWjFoxaMGrBqAXf/OSIRD995CEWVO9hqN1FLBoOYNlnotF3iI7/O4lHQOVL3hONPo9agB2NWjBqwagFoxYAAB2zMZ7bQW2tAAAAAElFTkSuQmCC"
+    }
+  ],
+  "pagination": {
+    "current": 1
+  }
+}

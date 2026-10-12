@@ -1,0 +1,410 @@
+{
+  "search_metadata": {
+    "id": "search_8A9g6Ov07XHl85dLY4JlbW2m",
+    "status": "Success",
+    "created_at": "2026-07-23T12:20:27Z",
+    "request_time_taken": 0.8,
+    "parsing_time_taken": 0.03,
+    "total_time_taken": 0.84,
+    "request_url": "https://www.bing.com/search?form=PERE&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&mkt=en-us&setlang=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_8A9g6Ov07XHl85dLY4JlbW2m.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_8A9g6Ov07XHl85dLY4JlbW2m"
+  },
+  "search_parameters": {
+    "engine": "bing",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "device": "desktop",
+    "market_code": "en-us",
+    "language": "en"
+  },
+  "search_information": {
+    "query_displayed": "retrieval augmented generation vs fine-tuning for LLMs",
+    "total_results": 17400,
+    "page": 1,
+    "detected_location": "New York, New York",
+    "detected_latitude": "40.71277618408203",
+    "detected_longtitude": "-74.00597381591797"
+  },
+  "ai_overview": {
+    "text_blocks": [
+      {
+        "type": "header",
+        "answer": "Fine-tuning and Retrieval-Augmented Generation (RAG) are two distinct approaches to enhancing large language models (LLMs), each with unique advantages and use cases."
+      },
+      {
+        "type": "header",
+        "answer": "Fine-Tuning"
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Definition: Fine-tuning involves training a pre-existing LLM on a specific dataset to adapt its internal parameters for better performance on particular tasks or domains. This process modifies the model's behavior based on the new training data, allowing it to generate more accurate and contextually relevant responses without needing external information.",
+            "reference_indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "type": "paragraph",
+            "answer": "Advantages:Consistency: Fine-tuned models provide reliable outputs with a consistent tone and style, making them suitable for applications requiring specific formatting or reasoning patterns.Specialization: This method is effective in stable environments where the data and user intents remain consistent over time, such as in specialized fields like medicine or law.Performance: Fine-tuning can significantly improve the model's performance on tasks that require deep understanding of domain-specific language and concepts.",
+            "reference_indexes": [
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "type": "paragraph",
+            "answer": "Disadvantages:Resource Intensive: Fine-tuning requires substantial computational resources and labeled training data, which can be costly and time-consuming.Static Knowledge: Once fine-tuned, the model may not adapt to new information without undergoing another round of training, which can limit its effectiveness in rapidly changing domains.",
+            "reference_indexes": [
+              0,
+              1,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "Retrieval-Augmented Generation (RAG)"
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Definition: RAG combines retrieval-based systems with generative capabilities, allowing the model to access external knowledge sources in real-time. When a user submits a query, RAG retrieves relevant documents or data before generating a response, ensuring that the information is current and contextually appropriate.",
+            "reference_indexes": [
+              4,
+              2
+            ]
+          },
+          {
+            "type": "paragraph",
+            "answer": "Advantages:Up-to-Date Information: RAG excels in environments where information changes frequently, as it can pull in the latest data without needing to retrain the model.Cost-Effective: This approach reduces the need for frequent retraining, making it a more scalable solution for organizations with dynamic datasets.Enhanced Accuracy: By grounding responses in real-time data, RAG can provide more accurate and relevant answers, particularly in applications like customer support or technical documentation.",
+            "reference_indexes": [
+              4,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "type": "paragraph",
+            "answer": "Disadvantages:Dependency on External Sources: RAG's effectiveness relies on the quality and organization of the external data sources. Poorly structured or outdated information can lead to inaccurate responses.Complexity: Implementing RAG can be more complex than fine-tuning, as it requires a robust retrieval system and effective integration with the generative model.",
+            "reference_indexes": [
+              2,
+              0,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "answer": "Choosing between fine-tuning and RAG depends on the specific use case and operational needs. Fine-tuning is ideal for applications requiring consistent output and deep domain knowledge, while RAG is better suited for scenarios where up-to-date information is critical. In some cases, a hybrid approach that combines both methods may provide the best results, leveraging the strengths of each to enhance the model's performance and reliability.",
+        "reference_indexes": [
+          3,
+          0
+        ]
+      }
+    ],
+    "markdown": "## Fine-tuning and Retrieval-Augmented Generation (RAG) are two distinct approaches to enhancing large language models (LLMs), each with unique advantages and use cases.\n\n## Fine-Tuning\n\n- Definition: Fine-tuning involves training a pre-existing LLM on a specific dataset to adapt its internal parameters for better performance on particular tasks or domains. This process modifies the model's behavior based on the new training data, allowing it to generate more accurate and contextually relevant responses without needing external information. [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/) [1](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/)\n- Advantages:Consistency: Fine-tuned models provide reliable outputs with a consistent tone and style, making them suitable for applications requiring specific formatting or reasoning patterns.Specialization: This method is effective in stable environments where the data and user intents remain consistent over time, such as in specialized fields like medicine or law.Performance: Fine-tuning can significantly improve the model's performance on tasks that require deep understanding of domain-specific language and concepts. [2](https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/) [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/) [1](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/) [3](https://www.mdpi.com/2306-5354/12/7/687)\n- Disadvantages:Resource Intensive: Fine-tuning requires substantial computational resources and labeled training data, which can be costly and time-consuming.Static Knowledge: Once fine-tuned, the model may not adapt to new information without undergoing another round of training, which can limit its effectiveness in rapidly changing domains. [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/) [1](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/) [4](https://wizr.ai/blog/rag-vs-fine-tuning-llms/)\n\n## Retrieval-Augmented Generation (RAG)\n\n- Definition: RAG combines retrieval-based systems with generative capabilities, allowing the model to access external knowledge sources in real-time. When a user submits a query, RAG retrieves relevant documents or data before generating a response, ensuring that the information is current and contextually appropriate. [4](https://wizr.ai/blog/rag-vs-fine-tuning-llms/) [2](https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/)\n- Advantages:Up-to-Date Information: RAG excels in environments where information changes frequently, as it can pull in the latest data without needing to retrain the model.Cost-Effective: This approach reduces the need for frequent retraining, making it a more scalable solution for organizations with dynamic datasets.Enhanced Accuracy: By grounding responses in real-time data, RAG can provide more accurate and relevant answers, particularly in applications like customer support or technical documentation. [4](https://wizr.ai/blog/rag-vs-fine-tuning-llms/) [1](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/) [2](https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/) [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/)\n- Disadvantages:Dependency on External Sources: RAG's effectiveness relies on the quality and organization of the external data sources. Poorly structured or outdated information can lead to inaccurate responses.Complexity: Implementing RAG can be more complex than fine-tuning, as it requires a robust retrieval system and effective integration with the generative model. [2](https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/) [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/) [4](https://wizr.ai/blog/rag-vs-fine-tuning-llms/)\n\n## Conclusion\n\nChoosing between fine-tuning and RAG depends on the specific use case and operational needs. Fine-tuning is ideal for applications requiring consistent output and deep domain knowledge, while RAG is better suited for scenarios where up-to-date information is critical. In some cases, a hybrid approach that combines both methods may provide the best results, leveraging the strengths of each to enhance the model's performance and reliability. [3](https://www.mdpi.com/2306-5354/12/7/687) [0](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/)\n\n[[0] - Retrieval Augmented Generation vs Fine Tuning: Choosing the right approach](https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/)\n[[1] - RAG vs. Fine-Tuning: How to Choose - Oracle](https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/)\n[[2] - RAG vs. Fine-Tuning in 2025: A Practical Playbook for Teams](https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/)\n[[3] - Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation](https://www.mdpi.com/2306-5354/12/7/687)\n[[4] - RAG vs Fine-Tuning LLMs: Which Approach Fits Your Enterprise](https://wizr.ai/blog/rag-vs-fine-tuning-llms/)",
+    "reference_links": [
+      {
+        "index": 0,
+        "title": "Retrieval Augmented Generation vs Fine Tuning: Choosing the right approach",
+        "link": "https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/",
+        "displayed_link": "https://kairntech.com/blog/articles/retrieval-augmented-generation-vs-fine-tuning-choosing-the-right-approach/",
+        "source": "kairntech.com"
+      },
+      {
+        "index": 1,
+        "title": "RAG vs. Fine-Tuning: How to Choose - Oracle",
+        "link": "https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/",
+        "displayed_link": "https://www.oracle.com/artificial-intelligence/generative-ai/retrieval-augmented-generation-rag/rag-fine-tuning/",
+        "source": "Oracle"
+      },
+      {
+        "index": 2,
+        "title": "RAG vs. Fine-Tuning in 2025: A Practical Playbook for Teams",
+        "link": "https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/",
+        "displayed_link": "https://www.c-sharpcorner.com/article/rag-vs-fine-tuning-in-2025-a-practical-playbook-for-teams/",
+        "source": "C# Corner"
+      },
+      {
+        "index": 3,
+        "title": "Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation",
+        "link": "https://www.mdpi.com/2306-5354/12/7/687",
+        "displayed_link": "https://www.mdpi.com/2306-5354/12/7/687",
+        "source": "MDPI"
+      },
+      {
+        "index": 4,
+        "title": "RAG vs Fine-Tuning LLMs: Which Approach Fits Your Enterprise",
+        "link": "https://wizr.ai/blog/rag-vs-fine-tuning-llms/",
+        "displayed_link": "https://wizr.ai/blog/rag-vs-fine-tuning-llms/",
+        "source": "wizr.ai"
+      }
+    ]
+  },
+  "ads": [
+    {
+      "position": 1,
+      "block_position": "top",
+      "title": "Gen AI and LLMs for Dummies | Gen AI Training and Tuning",
+      "link": "https://www.snowflake.com/resource/generative-ai-and-llms-for-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=790738985a551ae8c04252fa5d5e22fd&gclsrc=3p.ds&msclkid=790738985a551ae8c04252fa5d5e22fd",
+      "source": "Snowflake",
+      "displayed_link": "https://www.snowflake.com › gen-ai-guide",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8c4Cqs8AKsoGFOCkgPbnbDzVUCUxJDCfndgI4EaHbbMjESl7LrmeTKaFDsN-lvaaxnSasYWdSlCrjDoKW62tkGjAiSkHswIeX38z5j7WFbdGWPqxDAQS0rkVMd4nLmK0nOKJKBJ5Hy4z0stYNycy7nwbNG7VvU40XsDYGclJblWtS8MH04U__gLfcyUvAt1t2e1VNUpnkF922bGcFB3cHmeO2ctA&u=aHR0cHMlM2ElMmYlMmZ3d3cuc25vd2ZsYWtlLmNvbSUyZnJlc291cmNlJTJmZ2VuZXJhdGl2ZS1haS1hbmQtbGxtcy1mb3ItZHVtbWllcyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBhaWRzZWFyY2glMjZ1dG1fY2FtcGFpZ24lM2RuYS11cy1lbi1uYi1nZW5haWxsbS1waHJhc2UlMjZ1dG1fY29udGVudCUzZGJpLXJzYS1ldmctZWItZ2VuZXJhdGl2ZS1haS1hbmQtbGxtcy1mb3ItZHVtbWllcyUyNnV0bV90ZXJtJTNkYy1vLWxsbSUyNTIwbW9kZWwtcC03ODc1MjcyODIwMTE5MiUyNmdjbGlkJTNkNzkwNzM4OTg1YTU1MWFlOGMwNDI1MmZhNWQ1ZTIyZmQlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2Q3OTA3Mzg5ODVhNTUxYWU4YzA0MjUyZmE1ZDVlMjJmZA&rlid=790738985a551ae8c04252fa5d5e22fd&ntb=1",
+      "snippet": "Embrace Generative AI and LLMs With the AI Data Cloud. Discover Techniques for Deploying Machine Learning Models With the AI Data Cloud.",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Dummies Guide",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/resource/cloud-data-warehousing-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=gl-ob-al-ly&utm_content=bi-sitelink-evg-eb-cloud-data-warehousing-dummies&utm_term={device}-{network}-{keyword}-{matchtype}&_bt={creative}&_bk={keyword}&_bm={matchtype}&_bn={network}&_bg={adgroupid}{ignore}&gclsrc=3p.ds&{_dsmrktparam}&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=aabf39f3c1061c4b318e5391c60d8db5&gclsrc=3p.ds&msclkid=aabf39f3c1061c4b318e5391c60d8db5"
+          },
+          {
+            "title": "Generative AI",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/data-trends-report/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-machinelearning-phrase&utm_content=bi-rsa-evg-eb-data-trends-report&utm_term=--machine+learning+data+analytics--&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=fbe8c33049f51e0e4179a9524efe67ec&gclsrc=3p.ds&msclkid=fbe8c33049f51e0e4179a9524efe67ec"
+          },
+          {
+            "title": "Snowflake",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/live-demo?utm_cta=website-nav-resources-banner-weekly-demo&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=a48bc534454b11483da2af5642403ea8&gclsrc=3p.ds&msclkid=a48bc534454b11483da2af5642403ea8"
+          },
+          {
+            "title": "About Snowflake",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=0825fe2286a112939c63944081aab7e5&gclsrc=3p.ds&msclkid=0825fe2286a112939c63944081aab7e5"
+          },
+          {
+            "title": "Data Lake for Dummies",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/resource/cloud-data-lakes-for-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-datalakegeneral-exact&utm_content=bi-rsa-evg-eb-cloud-data-lakes-for-dummies&utm_term=--datalakeservices-&_bt=&_bk=datalakeservices&_bm=&_bn=&_bg=&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=b76c40ab920e166927e02ac995053f39&gclsrc=3p.ds&msclkid=b76c40ab920e166927e02ac995053f39"
+          },
+          {
+            "title": "Data Lake Best Practices",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/resource/cloud-data-lakes-for-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-datalakeexplained-exact&utm_content=bi-eta-evg-eb-cloud-data-lakes-for-dummies&utm_term=--whatdatalake-&_bt=&_bk=whatdatalake&_bm=&_bn=&_bg=&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=b3aa40d27e6e187902822ab07965eee0&gclsrc=3p.ds&msclkid=b3aa40d27e6e187902822ab07965eee0"
+          },
+          {
+            "title": "Pricing & Structure",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/pricing/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=2abace95354215b3ab55a4f73249c01a&gclsrc=3p.ds&msclkid=2abace95354215b3ab55a4f73249c01a"
+          },
+          {
+            "title": "Education & Training",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/education-and-training/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=441996d4f3a11753f729fcb6f4aa05cb&gclsrc=3p.ds&msclkid=441996d4f3a11753f729fcb6f4aa05cb"
+          }
+        ]
+      }
+    },
+    {
+      "position": 2,
+      "block_position": "bottom",
+      "title": "Gen AI and LLMs for Dummies | Gen AI Training and Tuning",
+      "link": "https://www.snowflake.com/resource/generative-ai-and-llms-for-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=12e8024cc0b31e7080a6682ec7b83344&gclsrc=3p.ds&msclkid=12e8024cc0b31e7080a6682ec7b83344",
+      "source": "Snowflake",
+      "displayed_link": "https://www.snowflake.com › gen-ai-guide",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8qdZ6SdzyJWd7OxR9SWWwdTVUCUypRzQ-CB7QcXtQ3bRERq9RzdbRJ6r4-MtWUFWxY2h3vrLxegEozguj1qGJPawdCRyWir5Si68zlaLZVGun9jEqOkjb3Udd-2MEeXa9-wyA3JjwBUg9-Y_xIc9n7GYKLlx9Pb6XdCDhQeMerxpQ38mYvPcL93skapgB1Y0Zct2ZvwkL22JffeRw3drmptkU_J4&u=aHR0cHMlM2ElMmYlMmZ3d3cuc25vd2ZsYWtlLmNvbSUyZnJlc291cmNlJTJmZ2VuZXJhdGl2ZS1haS1hbmQtbGxtcy1mb3ItZHVtbWllcyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBhaWRzZWFyY2glMjZ1dG1fY2FtcGFpZ24lM2RuYS11cy1lbi1uYi1nZW5haWxsbS1waHJhc2UlMjZ1dG1fY29udGVudCUzZGJpLXJzYS1ldmctZWItZ2VuZXJhdGl2ZS1haS1hbmQtbGxtcy1mb3ItZHVtbWllcyUyNnV0bV90ZXJtJTNkYy1vLWxsbSUyNTIwbW9kZWwtcC03ODc1MjcyODIwMTE5MiUyNmdjbGlkJTNkMTJlODAyNGNjMGIzMWU3MDgwYTY2ODJlYzdiODMzNDQlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2QxMmU4MDI0Y2MwYjMxZTcwODBhNjY4MmVjN2I4MzM0NA&rlid=12e8024cc0b31e7080a6682ec7b83344&ntb=1",
+      "snippet": "Learn to Supercharge Your Data with LLMs and Gen AI Technology. Get Your Free Copy. Embrace Generative AI and LLMs With the AI Data Cloud.",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Data Modeling",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/en/fundamentals/data-modeling/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=829eadf5605f12f8235ec7976754ac70&gclsrc=3p.ds&msclkid=829eadf5605f12f8235ec7976754ac70"
+          },
+          {
+            "title": "Frankfurt",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://usergroups.snowflake.com/frankfurt/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=38904a6b3ca412b1aa4b20093baf707c&gclsrc=3p.ds&msclkid=38904a6b3ca412b1aa4b20093baf707c"
+          },
+          {
+            "title": "Vancouver",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://usergroups.snowflake.com/vancouver/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=200791108f051d44bdf9fb72880eb6a5&gclsrc=3p.ds&msclkid=200791108f051d44bdf9fb72880eb6a5"
+          },
+          {
+            "title": "Adelaide",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://usergroups.snowflake.com/adelaide/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=e61d99924ac212826e1df3f04dc9c78b&gclsrc=3p.ds&msclkid=e61d99924ac212826e1df3f04dc9c78b"
+          },
+          {
+            "title": "Guides",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/content/snowflake-site/global/en/developers/guides&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=4e2c9cf80cce1ad6cd15f69a0bc5ebb5&gclsrc=3p.ds&msclkid=4e2c9cf80cce1ad6cd15f69a0bc5ebb5"
+          },
+          {
+            "title": "Los Angeles",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://usergroups.snowflake.com/los-angeles/&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=19fb97cb42d91dcda621fda945d2c600&gclsrc=3p.ds&msclkid=19fb97cb42d91dcda621fda945d2c600"
+          },
+          {
+            "title": "Dummies Guide",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/resource/cloud-data-warehousing-dummies/?utm_source=bing&utm_medium=paidsearch&utm_campaign=gl-ob-al-ly&utm_content=bi-sitelink-evg-eb-cloud-data-warehousing-dummies&utm_term={device}-{network}-{keyword}-{matchtype}&_bt={creative}&_bk={keyword}&_bm={matchtype}&_bn={network}&_bg={adgroupid}{ignore}&gclsrc=3p.ds&{_dsmrktparam}&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=5158717c53d51462efc11b1e54dea944&gclsrc=3p.ds&msclkid=5158717c53d51462efc11b1e54dea944"
+          },
+          {
+            "title": "Snowflake",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/live-demo?utm_cta=website-nav-resources-banner-weekly-demo&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=3c07ee0d3ef31c309722846f39f8df1c&gclsrc=3p.ds&msclkid=3c07ee0d3ef31c309722846f39f8df1c"
+          },
+          {
+            "title": "Generative AI",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://www.snowflake.com/data-trends-report/?utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-machinelearning-phrase&utm_content=bi-rsa-evg-eb-data-trends-report&utm_term=--machine+learning+data+analytics--&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=011cbf229ec418e8b125d54099cfe6cd&gclsrc=3p.ds&msclkid=011cbf229ec418e8b125d54099cfe6cd"
+          },
+          {
+            "title": "About Snowflake",
+            "link": "https://clickserve.dartsearch.net/link/click?&&ds_e_adid=78752728201192&ds_e_target_id=kwd-78753116495849:loc-4116&&ds_e_network=o&ds_url_v=2&ds_dest_url=https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about&utm_source=bing&utm_medium=paidsearch&utm_campaign=na-us-en-nb-genaillm-phrase&utm_content=bi-rsa-evg-eb-generative-ai-and-llms-for-dummies&utm_term=c-o-llm%20model-p-78752728201192&gclid=af544fcfc42514e53fae25adc32ed1d5&gclsrc=3p.ds&msclkid=af544fcfc42514e53fae25adc32ed1d5"
+          }
+        ]
+      },
+      "assets": {
+        "extensions": [
+          "Site visitors: Over 10K in the past month",
+          "Near-Infinite Scalability · Free Live Product Demos · Instant Data Cloud · Start A 30-Day Free Trial",
+          "Popular Links: Data Modeling · Frankfurt · Vancouver · Adelaide · Guides · Los Angeles"
+        ]
+      }
+    },
+    {
+      "position": 3,
+      "block_position": "bottom",
+      "title": "An Overview of LLMs | Learn How LLMs Work",
+      "link": "https://www.databricks.com/resources/ebook/tap-full-potential-llm?scid=7018Y000001Fi0NQAS&utm_medium=paid+search&utm_source=bing&utm_campaign=688977634&utm_adgroup=1312819678066960&utm_content=ebook&utm_offer=tap-full-potential-llm&utm_ad=&utm_term=llm&msclkid=c80d0d1b887e1b76660a67798f7561d7",
+      "source": "Databricks",
+      "displayed_link": "https://www.databricks.com › llm › ebook",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8Xfy7vB26Y0vdp91KetUK6DVUCUy5gXTGNOKv4QONjQrDuyvgvmGb1AyHQKt3-Wx8HATz5UQ8Sqbwq0L-0C1sa9jvmrOr-O6U936ndZ1Fgn20PRsKi3EpN-MqLcNyIg_lpelWevbF61sqqHz6UoeLOfLLVC87LtLbXzAY-slDWVcFjg-RHOx5bkZ4VqJwbT6UOtHFKni0oLnF1EIqInbA9kXbLiE&u=aHR0cHMlM2ElMmYlMmZ3d3cuZGF0YWJyaWNrcy5jb20lMmZyZXNvdXJjZXMlMmZlYm9vayUyZnRhcC1mdWxsLXBvdGVudGlhbC1sbG0lM2ZzY2lkJTNkNzAxOFkwMDAwMDFGaTBOUUFTJTI2dXRtX21lZGl1bSUzZHBhaWQlMmJzZWFyY2glMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9jYW1wYWlnbiUzZDY4ODk3NzYzNCUyNnV0bV9hZGdyb3VwJTNkMTMxMjgxOTY3ODA2Njk2MCUyNnV0bV9jb250ZW50JTNkZWJvb2slMjZ1dG1fb2ZmZXIlM2R0YXAtZnVsbC1wb3RlbnRpYWwtbGxtJTI2dXRtX2FkJTNkJTI2dXRtX3Rlcm0lM2RsbG0lMjZtc2Nsa2lkJTNkYzgwZDBkMWI4ODdlMWI3NjY2MGE2Nzc5OGY3NTYxZDc&rlid=c80d0d1b887e1b76660a67798f7561d7&ntb=1",
+      "snippet": "In This eBook, Learn How to Establish the Right Data Foundation for Success With LLMs. Get the Databricks eBook and Learn How to Stay One Step Ahead of the AI Landscape.",
+      "assets": {
+        "extensions": [
+          "Unified Data Platform · Best-in-Class Price/Perf · 100TB TPC-DS World Record",
+          "Service catalog: Cloud Data Lake, Delta Lake, Unity Catalog, Data Warehousing"
+        ]
+      }
+    },
+    {
+      "position": 4,
+      "block_position": "bottom",
+      "title": "Generative AI Advanced Fine-Tuning for LLMs",
+      "link": "https://www.coursera.org/enroll/learn/generative-ai-advanced-fine-tuning-for-llms/paidmedia?specialization=ai-engineer&utm_medium=sem&utm_source=bg&utm_campaign=b2c_namer_ai-engineer_ibm_ftcof_professional-certificates_px_dr_bau_bg_sem_pr_us-ca_en_m_x_24-11_x&campaignid=662927682&adgroupid=1252345079252041&device=c&keyword=https%3A%2F%2Fwww.coursera.org%2Fenroll%2Flearn%2Fgenerative-ai-advanced-fine-tuning-for-llms%2Fpaidmedia%3Fspecialization%3Dai-engineer&matchtype=b&network=o&devicemodel=&adposition=&creativeid=78271697415547&adgroup=b2c_namer_ai-engineer_ibm_px_bau_bg_us-ca_x_x_dsa_x_hyb_x_x_professional-certificates_x&querystring=retrieval%20augmented%20generation%20vs%20fine-tuning%20for%20LLMs&targetid=dat-2330071298546589:loc-190&bidmatchtype=bb&extensionid=&msclkid=99521f7d7f9a12e30bc7751f78919dca",
+      "source": "Coursera",
+      "displayed_link": "https://www.coursera.org",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8KyTiIjaNlfkHDTFbfHa2VjVUCUytoZ69mBDz6qX0eFhWFgxZjsTl-1XdjPwh09GzXN0-wpXmFwNijXjPq2KSBm-QqpRW9L10KsOt9FM4n3PC7-UJ2dqlu34pN6ZFWv-CJZqK8b4kvsIITLTyRKqOZMl7gMRduDPbhz7dAVO2I-BHfO1K_c1hR2EmZpMFTrA7e0xOlexZ6VS_Qce4nVRcj_QT5zc&u=aHR0cHMlM2ElMmYlMmZ3d3cuY291cnNlcmEub3JnJTJmZW5yb2xsJTJmbGVhcm4lMmZnZW5lcmF0aXZlLWFpLWFkdmFuY2VkLWZpbmUtdHVuaW5nLWZvci1sbG1zJTJmcGFpZG1lZGlhJTNmc3BlY2lhbGl6YXRpb24lM2RhaS1lbmdpbmVlciUyNnV0bV9tZWRpdW0lM2RzZW0lMjZ1dG1fc291cmNlJTNkYmclMjZ1dG1fY2FtcGFpZ24lM2RiMmNfbmFtZXJfYWktZW5naW5lZXJfaWJtX2Z0Y29mX3Byb2Zlc3Npb25hbC1jZXJ0aWZpY2F0ZXNfcHhfZHJfYmF1X2JnX3NlbV9wcl91cy1jYV9lbl9tX3hfMjQtMTFfeCUyNmNhbXBhaWduaWQlM2Q2NjI5Mjc2ODIlMjZhZGdyb3VwaWQlM2QxMjUyMzQ1MDc5MjUyMDQxJTI2ZGV2aWNlJTNkYyUyNmtleXdvcmQlM2RodHRwcyUyNTNBJTI1MkYlMjUyRnd3dy5jb3Vyc2VyYS5vcmclMjUyRmVucm9sbCUyNTJGbGVhcm4lMjUyRmdlbmVyYXRpdmUtYWktYWR2YW5jZWQtZmluZS10dW5pbmctZm9yLWxsbXMlMjUyRnBhaWRtZWRpYSUyNTNGc3BlY2lhbGl6YXRpb24lMjUzRGFpLWVuZ2luZWVyJTI2bWF0Y2h0eXBlJTNkYiUyNm5ldHdvcmslM2RvJTI2ZGV2aWNlbW9kZWwlM2QlMjZhZHBvc2l0aW9uJTNkJTI2Y3JlYXRpdmVpZCUzZDc4MjcxNjk3NDE1NTQ3JTI2YWRncm91cCUzZGIyY19uYW1lcl9haS1lbmdpbmVlcl9pYm1fcHhfYmF1X2JnX3VzLWNhX3hfeF9kc2FfeF9oeWJfeF94X3Byb2Zlc3Npb25hbC1jZXJ0aWZpY2F0ZXNfeCUyNnF1ZXJ5c3RyaW5nJTNkcmV0cmlldmFsJTI1MjBhdWdtZW50ZWQlMjUyMGdlbmVyYXRpb24lMjUyMHZzJTI1MjBmaW5lLXR1bmluZyUyNTIwZm9yJTI1MjBMTE1zJTI2dGFyZ2V0aWQlM2RkYXQtMjMzMDA3MTI5ODU0NjU4OSUzYWxvYy0xOTAlMjZiaWRtYXRjaHR5cGUlM2RiYiUyNmV4dGVuc2lvbmlkJTNkJTI2bXNjbGtpZCUzZDk5NTIxZjdkN2Y5YTEyZTMwYmM3NzUxZjc4OTE5ZGNh&rlid=99521f7d7f9a12e30bc7751f78919dca&ntb=1",
+      "snippet": "Enroll in the IBM AI Engineering Professional Certificate program. Get expert-level training with the IBM AI Engineering Professional Certificate.",
+      "assets": {
+        "extensions": [
+          "100% Online Courses · 100% Online · Flexible Online Learning · 14d Money-Back Guarantee"
+        ]
+      }
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation",
+      "source": "MDPI",
+      "link": "https://www.mdpi.com/2306-5354/12/7/687",
+      "domain": "www.mdpi.com",
+      "displayed_link": "https://www.mdpi.com",
+      "snippet": "The test compared five LLMs—GEMMA, PHI, QWEN, LLAMA, and MISTRAL—over three fine-tuning techniques: fine-tuning (FT), retrieval-augmented generation (RAG), and an aggregated …",
+      "date": "Jun 24, 2025",
+      "favicon": "https://th.bing.com/th/id/ODF.gANUs38SnJCFFOl3LwSKpw?w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 2,
+      "title": "Fine-tuning vs. RAG for LLMs - Neo4j Graph Data Platform",
+      "source": "Neo4j",
+      "link": "https://neo4j.com/blog/developer/fine-tuning-vs-rag/",
+      "domain": "neo4j.com",
+      "displayed_link": "https://neo4j.com › blog › developer › fine-tuning-vs-rag",
+      "snippet": "Explore the pros and cons of fine-tuning versus retrieval-augmented generation (RAG) for overcoming large language model (LLM) limitations.",
+      "date": "Sep 11, 2024",
+      "favicon": "https://th.bing.com/th/id/ODF.9nn9ToyOICVhSQ5kkizLzQ?w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2"
+    },
+    {
+      "position": 3,
+      "title": "Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation",
+      "source": "nih.gov",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12292519/",
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "displayed_link": "https://pmc.ncbi.nlm.nih.gov › articles",
+      "snippet": "This section discusses the related works we considered before performing our research, giving an overview of prior research on fine-tuning, retrieval-augmented generation, and their applications in …",
+      "favicon": "https://th.bing.com/th/id/ODF.rd9dtjiWPRY_u6_Jkj9Tiw?w=32&h=32&qlt=92&pcl=fffffa&o=6&pid=1.2"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "retrieval augmented vs fine tuning",
+      "link": "https://www.bing.com/ck/a?!&&p=49a3a6eab73791386897fa52c2792f200b11bbb4e52f49694c13b4df10664238JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPXJldHJpZXZhbCthdWdtZW50ZWQrdnMrZmluZSt0dW5pbmcmRk9STT1RU1JFMQ&ntb=1"
+    },
+    {
+      "query": "llm retrieval augmented generation",
+      "link": "https://www.bing.com/ck/a?!&&p=e8332d3c3de6e4bd3ed523b31881f5be0a331efc80ca19557431dc9564e3308eJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPWxsbStyZXRyaWV2YWwrYXVnbWVudGVkK2dlbmVyYXRpb24mRk9STT1RU1JFMg&ntb=1"
+    },
+    {
+      "query": "fine tuning vs retrieval",
+      "link": "https://www.bing.com/ck/a?!&&p=24b905d27ddd17a31603a926dde793dcc7cf41e83db406bb21cafccdf2e44d5fJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPWZpbmUrdHVuaW5nK3ZzK3JldHJpZXZhbCZGT1JNPVFTUkUz&ntb=1"
+    },
+    {
+      "query": "retrieval augmented generation",
+      "link": "https://www.bing.com/ck/a?!&&p=b505f36d9034405048e06580ef1c0a101aa6dfb3df465e9987bda851645108d7JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPXJldHJpZXZhbCthdWdtZW50ZWQrZ2VuZXJhdGlvbiZGT1JNPVFTUkU0&ntb=1"
+    },
+    {
+      "query": "rag vs augment llms",
+      "link": "https://www.bing.com/ck/a?!&&p=f9318e6ae8e224ee995b616cbb19869f9b73ee32aab898056ce4d467531ee1ebJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPXJhZyt2cythdWdtZW50K2xsbXMmRk9STT1RU1JFNQ&ntb=1"
+    },
+    {
+      "query": "fine tuning llms",
+      "link": "https://www.bing.com/ck/a?!&&p=76e9aea35302a420237517b6b105d7f3f909643497fbe5d4fc2e6dd913462cadJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPWZpbmUrdHVuaW5nK2xsbXMmRk9STT1RU1JFNg&ntb=1"
+    },
+    {
+      "query": "augment llms rags",
+      "link": "https://www.bing.com/ck/a?!&&p=366ecb513e40ef09dac679cafd81b714796e53cc0718f9874f298b2e6b990fc9JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPWF1Z21lbnQrbGxtcytyYWdzJkZPUk09UVNSRTc&ntb=1"
+    },
+    {
+      "query": "augmenting llms",
+      "link": "https://www.bing.com/ck/a?!&&p=160ed48edf13db76c4f69b7e0a4e1503abe84641cd744b35407ea8e292c85fe6JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=1c4829be-86bd-6681-2742-3e2187fe6734&u=a1L3NlYXJjaD9xPWF1Z21lbnRpbmcrbGxtcyZGT1JNPVFTUkU4&ntb=1"
+    }
+  ],
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "RAG vs Fine-Tuning Explained | When to Choose Retrieval-Augmented Generation or Fine-Tuning for LLMs",
+      "link": "https://www.youtube.com/watch?v=6StwSGgt2DI",
+      "source": "YouTube",
+      "channel": "SystemDR - Scalable System Design",
+      "is_adult": "false",
+      "views": 104,
+      "duration": "14:03",
+      "date": "2 weeks ago"
+    },
+    {
+      "position": 2,
+      "title": "Stop Fine-Tuning Your LLM (You're Wasting Money)",
+      "link": "https://www.youtube.com/watch?v=9qxn2Yftmsg",
+      "source": "YouTube",
+      "channel": "AI with Thiru",
+      "is_adult": "false",
+      "views": 2900,
+      "duration": "10:33",
+      "date": "4 months ago"
+    },
+    {
+      "position": 3,
+      "title": "RAG vs Fine Tuning Simply Explained!",
+      "link": "https://www.youtube.com/watch?v=eaqajuQMR5A",
+      "video_link": "https://th.bing.com/th/id/OM.24YNto-tVadzJw_1781036020?pid=1.7",
+      "source": "YouTube",
+      "channel": "Cloud Champ",
+      "is_adult": "false",
+      "views": 3900,
+      "duration": "0:55",
+      "date": "1 month ago"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.bing.com/search?mkt=en-us&setlang=en&qs=n&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&rdr=1&rdrig=CCF79B116D4A413AA94B38A7EE08E299&FPIG=3C873A9CE5E1438DB24817864DC69077&first=4&FORM=PORE",
+    "other_pages": {
+      "2": "https://www.bing.com/search?mkt=en-us&setlang=en&qs=n&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&rdr=1&rdrig=CCF79B116D4A413AA94B38A7EE08E299&FPIG=3C873A9CE5E1438DB24817864DC69077&first=4&FORM=PERE",
+      "3": "https://www.bing.com/search?mkt=en-us&setlang=en&qs=n&q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&rdr=1&rdrig=CCF79B116D4A413AA94B38A7EE08E299&FPIG=3C873A9CE5E1438DB24817864DC69077&first=14&FORM=PERE1"
+    }
+  }
+}

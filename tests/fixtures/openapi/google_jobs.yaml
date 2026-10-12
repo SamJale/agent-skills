@@ -1,0 +1,596 @@
+openapi: 3.0.0
+info:
+  title: Google Jobs API
+  description: |
+    The Google Jobs API allows you to search for job listings and retrieve detailed information from Google Jobs.
+
+    This API returns structured data including job titles, company information, descriptions, application links, and various job attributes like salary, benefits, and remote work options.
+
+    **Cross-linking**: Job listings include `sharing_link` which can be used to view the job directly on Google.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Jobs Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["google_jobs"]
+        - name: q
+          in: query
+          required: true
+          description: Search query for job listings
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Location for job search (e.g., "New York", "Silicon Valley,California,United States")
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google's encoded location parameter. Overrides the location parameter when both are provided
+          schema:
+            type: string
+        - name: latitude
+          in: query
+          required: false
+          description: "Latitude of the search location, in decimal degrees (-90 to 90). Use with `longitude`. Cannot be combined with `location` or `uule`."
+          schema:
+            type: number
+            format: float
+            minimum: -90
+            maximum: 90
+        - name: longitude
+          in: query
+          required: false
+          description: "Longitude of the search location, in decimal degrees (-180 to 180). Use with `latitude`. Cannot be combined with `location` or `uule`."
+          schema:
+            type: number
+            format: float
+            minimum: -180
+            maximum: 180
+        - name: hl
+          in: query
+          required: false
+          description: 'Interface language of the search. The default follows the gl country, as listed at https://www.searchapi.io/docs/parameters/google-jobs/gl'
+          schema:
+            type: string
+        - name: gl
+          in: query
+          required: false
+          description: Country code for localizing search results. Defaults to the country of the location, and to us without one
+          schema:
+            type: string
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for retrieving the next page of results. When provided, returns continuation of previous search results
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ads:
+          type: array
+          description: Sponsored job advertisements
+          items:
+            $ref: '#/components/schemas/Ad'
+        local_ads:
+          type: object
+          description: Local job advertisements section
+          $ref: '#/components/schemas/LocalAds'
+        jobs:
+          type: array
+          description: Array of job listings
+          items:
+            $ref: '#/components/schemas/Job'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if the request failed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Jobs URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        location:
+          type: string
+          description: Location parameter used
+        location_used:
+          type: string
+          description: Actual location used by Google after resolving the location parameter
+        uule:
+          type: string
+          description: Encoded location parameter
+        latitude:
+          type: number
+          format: float
+          description: Latitude of the search location
+        longitude:
+          type: number
+          format: float
+          description: Longitude of the search location
+        hl:
+          type: string
+          description: Interface language
+        gl:
+          type: string
+          description: Country code
+        chips:
+          type: string
+          description: Filter chips
+        lrad:
+          type: string
+          description: Location radius
+        ltype:
+          type: string
+          description: Location type
+        page:
+          type: integer
+          description: Page number
+        next_page_token:
+          type: string
+          description: Token for next page
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed by Google
+        total_results:
+          type: integer
+          description: Total number of results
+        page:
+          type: integer
+          description: Current page number
+        time_taken_displayed:
+          type: string
+          description: Time taken as displayed by Google
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Suggested query correction
+        has_no_results_for:
+          type: boolean
+          description: Whether there are no results for the query
+        showing_results_for:
+          type: string
+          description: Alternative query Google is showing results for
+    Job:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position of the job in search results
+        title:
+          type: string
+          description: Job title
+        company_name:
+          type: string
+          description: Name of the hiring company
+        location:
+          type: string
+          description: Job location
+        via:
+          type: string
+          description: Job board or source where the listing was found
+        description:
+          type: string
+          description: Full job description
+        job_highlights:
+          type: array
+          description: Highlighted aspects of the job
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Category of highlights (e.g., "Qualifications", "Benefits")
+              items:
+                type: array
+                description: List of highlight items
+                items:
+                  type: string
+        extensions:
+          type: array
+          description: Additional job attributes as displayed
+          items:
+            type: string
+        detected_extensions:
+          type: object
+          description: Parsed job attributes
+          properties:
+            schedule:
+              type: string
+              description: Work schedule (e.g., "Full-time", "Part-time")
+            posted_at:
+              type: string
+              description: When the job was posted
+            salary:
+              type: string
+              description: Salary range or amount
+            work_from_home:
+              type: boolean
+              description: Whether remote work is available
+            no_degree_mentioned:
+              type: boolean
+              description: Whether no degree requirement is mentioned
+            health_insurance:
+              type: boolean
+              description: Whether health insurance is offered
+            dental_insurance:
+              type: boolean
+              description: Whether dental insurance is offered
+            paid_time_off:
+              type: boolean
+              description: Whether paid time off is offered
+        apply_link:
+          type: string
+          description: Direct link to apply for the job
+        apply_links:
+          type: array
+          description: Multiple application links with sources
+          items:
+            type: object
+            properties:
+              link:
+                type: string
+                description: Application URL
+              source:
+                type: string
+                description: Source of the application link
+        sharing_link:
+          type: string
+          description: Google Jobs sharing link for this job listing
+        thumbnail:
+          type: string
+          description: Company logo or thumbnail image URL
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to retrieve the next page of results. Pass this value as the next_page_token parameter in subsequent requests.
+    Ad:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position of the ad in the results
+        block_position:
+          type: string
+          enum: [top, middle, bottom]
+          description: Position of the ad block (top, middle, or bottom)
+        title:
+          type: string
+          description: Ad title
+        link:
+          type: string
+          description: Ad link URL
+        source:
+          type: string
+          description: Source or advertiser name
+        domain:
+          type: string
+          description: Domain of the advertiser
+        displayed_link:
+          type: string
+          description: Displayed link text
+        tracking_link:
+          type: string
+          description: Tracking link URL
+        snippet:
+          type: string
+          description: Ad description snippet
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted words in the snippet
+        sitelinks:
+          type: object
+          properties:
+            expanded:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  snippet:
+                    type: string
+                  snippet_highlighted_words:
+                    type: array
+                    items:
+                      type: string
+                  link:
+                    type: string
+              description: Expanded sitelinks with snippets
+            inline:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  link:
+                    type: string
+              description: Inline sitelinks
+        phone:
+          type: string
+          description: Contact phone number
+        phone_description:
+          type: string
+          description: Description for the phone number (mobile only)
+        address:
+          type: object
+          properties:
+            title:
+              type: string
+            tracking_link:
+              type: string
+          description: Address information
+        sale:
+          type: object
+          properties:
+            title:
+              type: string
+            snippet:
+              type: string
+            link:
+              type: string
+            tracking_link:
+              type: string
+          description: Sale information
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              tracking_link:
+                type: string
+              extensions:
+                type: array
+                items:
+                  type: string
+          description: Product listings in the ad
+        extensions:
+          type: array
+          items:
+            oneOf:
+              - type: string
+              - type: object
+          description: Ad extensions (desktop) or structured extensions (mobile)
+        rating:
+          type: number
+          description: Rating value
+        reviews:
+          type: integer
+          description: Number of reviews
+        rating_link:
+          type: string
+          description: Link to ratings/reviews
+        call:
+          type: object
+          properties:
+            title:
+              type: string
+            description:
+              type: string
+          description: Call information (mobile only)
+        website:
+          type: string
+          description: Website URL (mobile only)
+        addresses:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              link:
+                type: string
+              tracking_link:
+                type: string
+          description: Multiple addresses (mobile only)
+        application:
+          type: object
+          properties:
+            title:
+              type: string
+            link:
+              type: string
+            thumbnail:
+              type: string
+          description: Application download info (mobile only)
+        prices:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              price:
+                type: string
+              extracted_price:
+                type: number
+              description:
+                type: string
+              link:
+                type: string
+          description: Price listings (mobile only)
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        thumbnails:
+          type: array
+          items:
+            type: string
+          description: Multiple thumbnail image URLs
+        favicon:
+          type: string
+          description: Advertiser favicon URL
+        advertiser_info_token:
+          type: string
+          description: Token for advertiser information
+    LocalAds:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Section title for local ads
+        badge:
+          type: string
+          description: Badge text for the local ads section
+        ads:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              link:
+                type: string
+              badge:
+                type: string
+              phone:
+                type: string
+              rating:
+                type: number
+              reviews:
+                type: integer
+              message_link:
+                type: string
+              extensions:
+                type: array
+                items:
+                  type: string
+              thumbnail:
+                type: string
+          description: Array of local ad listings
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              link:
+                type: string
+          description: Category links for local ads
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

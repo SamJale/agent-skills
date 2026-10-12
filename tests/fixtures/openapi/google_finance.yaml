@@ -1,0 +1,721 @@
+openapi: 3.0.0
+info:
+  title: Google Finance API
+  description: |
+    Real-time stock market data, financial information, and market analytics from Google Finance. Access comprehensive financial data including stock prices, market trends, company financials, news, and market analysis.
+
+    **Key Features:**
+    - Real-time and historical stock price data
+    - Company financial statements (quarterly and annual)
+    - Market indices and trends across global markets
+    - Financial news and analysis
+    - Currency exchange rates
+    - Price charts with customizable time windows
+
+    **Cross-linking**: Financial data from this API can be used to get more detailed information:
+    - Use stock symbols (e.g., "AAPL:NASDAQ") to query specific companies
+    - Currency pairs (e.g., "EUR-USD") for exchange rate information
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Finance Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to query
+          schema:
+            type: string
+            enum: ["google_finance"]
+        - name: q
+          in: query
+          required: true
+          description: |
+            The parameter defines the query you want to search. The query can be one of the following types:
+              - Stock. For example - `NVDA:NASDAQ`
+              - Index. For example - `.DJI:INDEXDJX`
+              - Mutual Fund. For example - `VTSAX:MUTF`
+              - Currency. For example - `BTC-USD`
+              - Futures. For example - `GCW00:COMEX`
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language code (ISO 639-1)
+          schema:
+            type: string
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+            default: "en"
+        - name: window
+          in: query
+          required: false
+          description: Time window for historical data
+          schema:
+            type: string
+            enum: ["1D", "5D", "1M", "6M", "YTD", "1Y", "5Y", "MAX"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      description: |
+        Sections returned depend on the request. A `window` request uses a different
+        transport and returns only `summary`, `graph`, `knowledge_graph` and
+        `compare_to`. Currency pairs never return `financials`, and their
+        `knowledge_graph.about` is a per-currency list rather than a company record.
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        summary:
+          $ref: '#/components/schemas/Summary'
+        key_events:
+          type: array
+          description: |
+            Key events on the chart. Window-only, and Google has stopped populating the
+            underlying RPC - no window value currently returns any.
+          items:
+            $ref: '#/components/schemas/KeyEvent'
+        graph:
+          type: array
+          description: Historical price data points
+          items:
+            $ref: '#/components/schemas/GraphPoint'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        news:
+          type: array
+          description: Financial news grouped by categories
+          items:
+            $ref: '#/components/schemas/NewsCategory'
+        articles:
+          type: array
+          description: (Deprecated) Financial news articles. Mirrors `news[0].articles`; use `news` for new integrations.
+          deprecated: true
+          items:
+            $ref: '#/components/schemas/Article'
+        financials:
+          $ref: '#/components/schemas/Financials'
+        markets:
+          $ref: '#/components/schemas/Markets'
+        compare_to:
+          type: array
+          description: Related stocks for comparison
+          items:
+            $ref: '#/components/schemas/CompareStock'
+        discover_more:
+          type: array
+          description: (Deprecated) Additional stock recommendations. Use related_stocks for new integrations.
+          deprecated: true
+          items:
+            $ref: '#/components/schemas/DiscoverSection'
+        related_stocks:
+          type: array
+          description: Additional stock recommendations
+          items:
+            $ref: '#/components/schemas/RelatedStock'
+        lists:
+          type: array
+          description: Sidebar lists of related symbols (e.g., Equity sectors)
+          items:
+            $ref: '#/components/schemas/ListSection'
+        error:
+          type: string
+          description: Error message when no results are found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Finance URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Stock symbol or currency pair queried
+        hl:
+          type: string
+          description: Interface language used
+        window:
+          type: string
+          description: Time window for historical data
+    Summary:
+      type: object
+      # `stock`, `exchange` and `currency` are stock-only (81% of captures); `date` is 96%.
+      required: [title, price, price_change]
+      properties:
+        title:
+          type: string
+          description: Company or currency pair name
+        stock:
+          type: string
+          description: Stock symbol
+        exchange:
+          type: string
+          description: Stock exchange
+        price:
+          type: number
+          description: Current price
+        currency:
+          type: string
+          description: Price currency
+        date:
+          type: string
+          description: Timestamp of the price
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+    PriceChange:
+      type: object
+      required: [percentage, movement]
+      properties:
+        percentage:
+          type: number
+          description: Price change percentage
+        amount:
+          type: number
+          description: Price change amount
+        movement:
+          type: string
+          description: Price movement direction
+          enum: ["Up", "Down"]
+    KeyEvent:
+      type: object
+      required: [title, link, source, source_date, date, price_change]
+      properties:
+        title:
+          type: string
+          description: Event title
+        link:
+          type: string
+          description: URL to the event details
+        source:
+          type: string
+          description: Event source
+        source_date:
+          type: string
+          description: Date when the event was published
+        date:
+          type: string
+          description: Event occurrence date
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+    GraphPoint:
+      type: object
+      # `volume` is absent for currency pairs and indices; `currency` is absent on some FX charts.
+      required: [price, date]
+      properties:
+        price:
+          type: number
+          description: Price at this point in time
+        currency:
+          type: string
+          description: Price currency
+        date:
+          type: string
+          description: Date and time of the price point
+        volume:
+          type: integer
+          description: Trading volume
+    KnowledgeGraph:
+      type: object
+      properties:
+        tags:
+          type: array
+          description: (Deprecated) Financial tags and categories. Only present for legacy HTML
+          deprecated: true
+          items:
+            type: object
+            required: [title, description]
+            properties:
+              title:
+                type: string
+                description: Tag title
+              description:
+                type: string
+                description: Tag description
+        stats:
+          type: array
+          description: Key statistics
+          items:
+            type: object
+            required: [label, value]
+            properties:
+              label:
+                type: string
+                description: Statistic label
+              description:
+                type: string
+                description: (Deprecated) Statistic tooltip. Only present for legacy HTML
+                deprecated: true
+              value:
+                type: string
+                description: Statistic value
+        about:
+          oneOf:
+            - $ref: '#/components/schemas/CompanyAbout'
+            - $ref: '#/components/schemas/CurrencyAbout'
+    CompanyAbout:
+      type: object
+      # Google omits most company fields for futures and thinly covered tickers.
+      required: [company]
+      properties:
+        company:
+          type: string
+          description: Company name
+        description:
+          type: string
+          description: Company description
+        address:
+          type: string
+          description: Company headquarters address
+        founded:
+          type: string
+          description: Company founding date
+        ceo:
+          type: string
+          description: Chief Executive Officer name
+        employees:
+          type: integer
+          description: Number of employees
+        website:
+          type: string
+          description: Company website URL
+        wikipedia:
+          type: string
+          description: Wikipedia page URL
+    CurrencyAbout:
+      type: object
+      required: [currencies]
+      properties:
+        currencies:
+          type: array
+          description: Currency information
+          items:
+            type: object
+            required: [title, currency, description, wikipedia]
+            properties:
+              title:
+                type: string
+                description: Currency name
+              currency:
+                type: string
+                description: Currency code
+              description:
+                type: string
+                description: Currency description
+              wikipedia:
+                type: string
+                description: Wikipedia page URL
+    NewsCategory:
+      type: object
+      required: [articles]
+      properties:
+        title:
+          type: string
+          description: News section title
+        articles:
+          type: array
+          description: Articles in this category
+          items:
+            type: object
+            required: [link, source, date]
+            properties:
+              title:
+                type: string
+                description: Article title. Only present for latest HTML
+              snippet:
+                type: string
+                description: Article summary. Only present for legacy HTML
+              link:
+                type: string
+                description: Article URL
+              source:
+                type: string
+                description: News source
+              date:
+                type: string
+                description: Publication date (Google's locale-rendered relative string)
+              thumbnail:
+                type: string
+                description: Article thumbnail URL. Only present for legacy HTML
+              favicon:
+                type: string
+                description: Source favicon URL. Only present for latest HTML
+    Article:
+      type: object
+      required: [snippet, link, source, date, thumbnail]
+      properties:
+        snippet:
+          type: string
+          description: Article summary
+        link:
+          type: string
+          description: Article URL
+        source:
+          type: string
+          description: News source
+        date:
+          type: string
+          description: Publication date
+        thumbnail:
+          type: string
+          description: Article thumbnail URL
+        title:
+          type: string
+          description: Article headline. Absent on the legacy clustered-news layout
+        favicon:
+          type: string
+          description: Source favicon URL. Absent on the legacy clustered-news layout
+    Financials:
+      type: object
+      properties:
+        quarterly:
+          type: array
+          description: Quarterly financial data
+          items:
+            $ref: '#/components/schemas/QuarterlyFinancial'
+        annual:
+          type: array
+          description: Annual financial data
+          items:
+            $ref: '#/components/schemas/AnnualFinancial'
+    FinancialMetric:
+      type: object
+      required: [value]
+      properties:
+        value:
+          type: number
+          description: Current value
+        last_year_value:
+          type: number
+          description: Previous year value
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+    QuarterlyFinancial:
+      type: object
+      required: [year, quarter, currency]
+      properties:
+        year:
+          type: integer
+          description: Financial year
+        quarter:
+          type: integer
+          description: Financial quarter
+        currency:
+          type: string
+          description: Currency code
+        revenue:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_income:
+          $ref: '#/components/schemas/FinancialMetric'
+        earnings_per_share:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_profit_margin:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_change_in_cash:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_and_short_investments:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_assets:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_equity:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_liabilities:
+          $ref: '#/components/schemas/FinancialMetric'
+        shares_outstanding:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_operations:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_investing:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_financing:
+          $ref: '#/components/schemas/FinancialMetric'
+        free_cash_flow:
+          $ref: '#/components/schemas/FinancialMetric'
+        return_on_assets_percentage:
+          $ref: '#/components/schemas/FinancialMetric'
+        price_to_book:
+          $ref: '#/components/schemas/FinancialMetric'
+        operating_expense:
+          $ref: '#/components/schemas/FinancialMetric'
+        ebitda:
+          $ref: '#/components/schemas/FinancialMetric'
+        effective_tax_rate:
+          $ref: '#/components/schemas/FinancialMetric'
+        return_on_capital:
+          $ref: '#/components/schemas/FinancialMetric'
+    AnnualFinancial:
+      type: object
+      required: [year, currency]
+      properties:
+        year:
+          type: integer
+          description: Financial year
+        currency:
+          type: string
+          description: Currency code
+        revenue:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_income:
+          $ref: '#/components/schemas/FinancialMetric'
+        earnings_per_share:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_profit_margin:
+          $ref: '#/components/schemas/FinancialMetric'
+        net_change_in_cash:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_and_short_investments:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_assets:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_equity:
+          $ref: '#/components/schemas/FinancialMetric'
+        total_liabilities:
+          $ref: '#/components/schemas/FinancialMetric'
+        shares_outstanding:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_operations:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_investing:
+          $ref: '#/components/schemas/FinancialMetric'
+        cash_from_financing:
+          $ref: '#/components/schemas/FinancialMetric'
+        free_cash_flow:
+          $ref: '#/components/schemas/FinancialMetric'
+        return_on_assets_percentage:
+          $ref: '#/components/schemas/FinancialMetric'
+        price_to_book:
+          $ref: '#/components/schemas/FinancialMetric'
+        operating_expense:
+          $ref: '#/components/schemas/FinancialMetric'
+        ebitda:
+          $ref: '#/components/schemas/FinancialMetric'
+        effective_tax_rate:
+          $ref: '#/components/schemas/FinancialMetric'
+        return_on_capital:
+          $ref: '#/components/schemas/FinancialMetric'
+    Markets:
+      type: object
+      description: Market data organized by region/category
+      additionalProperties:
+        type: array
+        items:
+          $ref: '#/components/schemas/MarketStock'
+    MarketStock:
+      type: object
+      # The currencies and crypto tabs carry no ticker/exchange, `name` is index-tab only, and
+      # Google occasionally omits `company` for a foreign index (1 of 1704 rows observed).
+      required: [link, price, price_change]
+      properties:
+        stock:
+          type: string
+          description: Stock symbol
+        exchange:
+          type: string
+          description: Stock exchange
+        company:
+          type: string
+          description: Company name
+        link:
+          type: string
+          description: Link to stock details
+        name:
+          type: string
+          description: Display name
+        price:
+          type: number
+          description: Current price
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+        date:
+          type: string
+          description: Price timestamp
+    CompareStock:
+      type: object
+      # `stock`/`exchange` are absent when comparing currency pairs; `date` is 96%.
+      required: [company, link, name, price, price_change]
+      properties:
+        stock:
+          type: string
+          description: Stock symbol
+        exchange:
+          type: string
+          description: Stock exchange
+        company:
+          type: string
+          description: Company name
+        link:
+          type: string
+          description: Link to stock details
+        name:
+          type: string
+          description: Display name
+        price:
+          type: number
+          description: Current price
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+        date:
+          type: string
+          description: Price timestamp
+    DiscoverSection:
+      type: object
+      required: [title, items]
+      properties:
+        title:
+          type: string
+          description: Section title
+        items:
+          type: array
+          description: Recommended stocks
+          items:
+            $ref: '#/components/schemas/RelatedStock'
+    RelatedStock:
+      type: object
+      required: [stock, link, name, price]
+      properties:
+        stock:
+          type: string
+          description: Stock symbol
+        link:
+          type: string
+          description: Link to stock details
+        name:
+          type: string
+          description: Company name
+        price:
+          type: number
+          description: Current price
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+    ListSection:
+      type: object
+      required: [items]
+      properties:
+        title:
+          type: string
+          description: List title (e.g., "Equity sectors")
+        items:
+          type: array
+          description: Symbols in this list
+          items:
+            $ref: '#/components/schemas/ListItem'
+    ListItem:
+      type: object
+      required: [stock, name]
+      properties:
+        stock:
+          type: string
+          description: Symbol
+        name:
+          type: string
+          description: Symbol name
+        price:
+          type: number
+          description: Current price
+        price_change:
+          $ref: '#/components/schemas/PriceChange'
+        previous_close:
+          type: number
+          description: Previous close price
+        open:
+          type: number
+          description: Open price
+        high:
+          type: number
+          description: High price
+        low:
+          type: number
+          description: Low price
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

@@ -1,0 +1,640 @@
+openapi: 3.0.0
+info:
+  title: Google Maps Place API
+  description: |
+    The Google Maps Place API provides detailed information about specific places on Google Maps.
+    Use this API to fetch comprehensive details about businesses, landmarks, and locations using their
+    place_id or data_id identifiers.
+
+    **Cross-linking**: The place_id and data_id values returned by the Google Maps Search API can be used 
+    with this API to fetch detailed place information. Pass them as the place_id or data_id parameters.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Maps Place Details
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Set to google_maps_place
+          schema:
+            type: string
+            enum: ["google_maps_place"]
+        - name: place_id
+          in: query
+          required: false
+          description: Optional. Provide either place_id or data_id. At least one must be provided
+          schema:
+            type: string
+        - name: data_id
+          in: query
+          required: false
+          description: Optional. Provide either place_id or data_id. At least one must be provided
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Language for the search results
+          schema:
+            type: string
+            enum: ["af", "ak", "sq", "am", "ar", "hy", "az", "eu", "be", "bem", "bn", "bh", "xx-bork", "bs", "br", "bg", "km", "ca", "chr", "ny", "zh-cn", "zh-tw", "co", "hr", "cs", "da", "nl", "xx-elmer", "en", "eo", "et", "ee", "fo", "tl", "fi", "fr", "fy", "gaa", "gl", "ka", "de", "el", "kl", "gn", "gu", "xx-hacker", "ht", "ha", "haw", "iw", "hi", "hu", "is", "ig", "id", "ia", "ga", "it", "ja", "jw", "kn", "kk", "rw", "rn", "xx-klingon", "kg", "ko", "kri", "ku", "ckb", "ky", "lo", "la", "lv", "ln", "lt", "loz", "lg", "ach", "mk", "mg", "my", "ms", "ml", "mt", "mv", "mi", "mr", "mfe", "mo", "mn", "sr-me", "ne", "pcm", "nso", "no", "nn", "oc", "or", "om", "ps", "fa", "xx-pirate", "pl", "pt", "pt-br", "pt-pt", "pa", "qu", "ro", "rm", "nyn", "ru", "gd", "sr", "sh", "st", "tn", "crs", "sn", "sd", "si", "sk", "sl", "so", "es", "es-419", "su", "sw", "sv", "tg", "ta", "tt", "te", "th", "ti", "to", "lua", "tum", "tr", "tk", "tw", "ug", "uk", "ur", "uz", "vu", "vi", "cy", "wo", "xh", "yi", "yo", "zu"]
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country of the search
+          schema:
+            type: string
+            enum: ["af", "al", "dz", "as", "ad", "ao", "ai", "aq", "ag", "ar", "am", "aw", "au", "at", "az", "bs", "bh", "bd", "bb", "by", "be", "bz", "bj", "bm", "bt", "bo", "ba", "bw", "bv", "br", "io", "bn", "bg", "bf", "bi", "kh", "cm", "ca", "cv", "ky", "cf", "td", "cl", "cn", "cx", "cc", "co", "km", "cg", "cd", "ck", "cr", "ci", "hr", "cu", "cy", "cz", "dk", "dj", "dm", "do", "ec", "eg", "sv", "gq", "er", "ee", "et", "fk", "fo", "fj", "fi", "fr", "gf", "pf", "tf", "ga", "gm", "ge", "de", "gh", "gi", "gr", "gl", "gd", "gp", "gu", "gt", "gn", "gw", "gy", "ht", "hm", "va", "hn", "hk", "hu", "is", "in", "id", "ir", "iq", "ie", "il", "it", "jm", "jp", "jo", "kz", "ke", "ki", "kp", "kr", "kw", "kg", "la", "lv", "lb", "ls", "lr", "ly", "li", "lt", "lu", "mo", "mk", "mg", "mw", "my", "mv", "ml", "mt", "mh", "mq", "mr", "mu", "yt", "mx", "fm", "md", "mc", "mn", "ms", "ma", "mz", "mm", "na", "nr", "np", "nl", "nc", "nz", "ni", "ne", "ng", "nu", "nf", "mp", "no", "om", "pk", "pw", "ps", "pa", "pg", "py", "pe", "ph", "pn", "pl", "pt", "pr", "qa", "re", "ro", "ru", "rw", "sh", "kn", "lc", "pm", "vc", "ws", "sm", "st", "sa", "sn", "rs", "sc", "sl", "sg", "sk", "si", "sb", "so", "za", "gs", "es", "lk", "sd", "sr", "sj", "sz", "se", "ch", "sy", "tw", "tj", "tz", "th", "tl", "tg", "tk", "to", "tt", "tn", "tr", "tm", "tc", "tv", "ug", "ua", "ae", "uk", "gb", "us", "um", "uy", "uz", "vu", "ve", "vn", "vg", "vi", "wf", "eh", "ye", "zm", "zw", "gg", "je", "im", "me"]
+      x-required-one-of:
+        - ["place_id", "data_id"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        place_result:
+          $ref: '#/components/schemas/PlaceResult'
+        error:
+          type: string
+          description: Error message if the search failed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Maps URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: The search engine used
+        place_id:
+          type: string
+          description: The place ID searched for
+        data_id:
+          type: string
+          description: The data ID searched for
+        hl:
+          type: string
+          description: The language used for the search
+        gl:
+          type: string
+          description: The country used for the search
+    PlaceResult:
+      type: object
+      properties:
+        ludocid:
+          type: string
+          description: Unique ludocid identifier for the place
+        place_id:
+          type: string
+          description: Google Maps place ID
+        kgmid:
+          type: string
+          description: Knowledge Graph Machine ID
+        data_id:
+          type: string
+          description: Data ID for the place
+        title:
+          type: string
+          description: Name of the place
+        description:
+          type: string
+          description: Description of the place
+        weather:
+          $ref: '#/components/schemas/Weather'
+        features:
+          type: string
+          description: Features of the place
+        address:
+          type: string
+          description: Full address of the place
+        located_in:
+          type: string
+          description: Location where the place is situated
+        is_entity_closed:
+          type: boolean
+          description: Whether the entity is closed
+        operational_status:
+          type: string
+          description: Current operational status (e.g., "Temporarily closed", "Permanently closed")
+        phone:
+          type: string
+          description: Phone number of the place
+        plus_code:
+          type: string
+          description: Plus code for the location
+        price:
+          type: string
+          description: Price level or range
+        price_description:
+          type: string
+          description: Description of the price level
+        hotel_stars:
+          type: string
+          description: Hotel star rating
+        rating:
+          type: number
+          description: Average rating of the place
+        reviews:
+          type: integer
+          description: Total number of reviews
+        reviews_histogram:
+          type: object
+          properties:
+            '1':
+              type: integer
+              description: Number of 1-star reviews
+            '2':
+              type: integer
+              description: Number of 2-star reviews
+            '3':
+              type: integer
+              description: Number of 3-star reviews
+            '4':
+              type: integer
+              description: Number of 4-star reviews
+            '5':
+              type: integer
+              description: Number of 5-star reviews
+        reviews_link:
+          type: string
+          description: Link to reviews
+        pricing:
+          $ref: '#/components/schemas/Pricing'
+        is_unclaimed_listing:
+          type: boolean
+          description: Whether the listing is unclaimed
+        website:
+          type: string
+          description: Website URL of the place
+        domain:
+          type: string
+          description: Domain of the website
+        gps_coordinates:
+          $ref: '#/components/schemas/GPSCoordinates'
+        type:
+          type: string
+          description: Primary type of the place
+        types:
+          type: array
+          items:
+            type: string
+          description: All types associated with the place
+        reservation:
+          $ref: '#/components/schemas/Reservation'
+        menu:
+          $ref: '#/components/schemas/Menu'
+        amenities:
+          type: array
+          items:
+            type: string
+          description: List of amenities available at the place
+        open_state:
+          type: string
+          description: Current open/closed state
+        hours:
+          type: string
+          description: Operating hours summary
+        open_hours:
+          type: object
+          additionalProperties:
+            type: string
+          description: Operating hours by day of the week
+        reservation_links:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReservationLink'
+        booking_link:
+          type: string
+          description: Direct booking link
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+        extensions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Extension'
+        posts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
+        admissions:
+          type: array
+          items:
+            type: object
+        experiences:
+          type: array
+          items:
+            type: object
+        questions_and_answers:
+          type: object
+          description: Questions and answers about the place
+        at_this_place:
+          type: array
+          items:
+            type: object
+          description: Businesses or services at this location
+        hotels_nearby:
+          type: array
+          items:
+            type: object
+          description: Hotels near this location
+        review_results:
+          $ref: '#/components/schemas/ReviewResults'
+        similar_places_nearby:
+          type: array
+          items:
+            type: object
+          description: Similar places near this location
+        similar_rentals_nearby:
+          type: array
+          items:
+            type: object
+          description: Similar rental properties nearby
+        people_also_search_for:
+          type: array
+          items:
+            type: object
+          description: Related places people also search for
+        popular_times:
+          $ref: '#/components/schemas/PopularTimes'
+    Weather:
+      type: object
+      properties:
+        temperature:
+          type: object
+          properties:
+            fahrenheit:
+              type: integer
+              description: Temperature in Fahrenheit
+            celsius:
+              type: integer
+              description: Temperature in Celsius
+        conditions:
+          type: string
+          description: Weather conditions description
+    Pricing:
+      type: object
+      properties:
+        start_date:
+          type: string
+          description: Start date for pricing
+        end_date:
+          type: string
+          description: End date for pricing
+        offers:
+          $ref: '#/components/schemas/PricingOffers'
+    PricingOffers:
+      type: object
+      properties:
+        featured_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/PricingOffer'
+        all_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/PricingOffer'
+    PricingOffer:
+      type: object
+      properties:
+        source:
+          type: string
+          description: Source of the offer
+        price:
+          type: string
+          description: Price as displayed
+        extracted_price:
+          type: number
+          description: Extracted numeric price
+        price_with_taxes:
+          type: string
+          description: Price including taxes
+        extracted_price_with_taxes:
+          type: number
+          description: Extracted numeric price with taxes
+        tracking_link:
+          type: string
+          description: Link to track/book this offer
+        highlights:
+          type: array
+          items:
+            type: string
+          description: Offer highlights
+    GPSCoordinates:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Latitude coordinate
+        longitude:
+          type: number
+          description: Longitude coordinate
+    Reservation:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Reservation link
+        source:
+          type: string
+          description: Source of the reservation service
+    Menu:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Menu link
+        source:
+          type: string
+          description: Source of the menu
+    ReservationLink:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Display text for the link
+        link:
+          type: string
+          description: Reservation URL
+    Image:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Image title or caption
+        thumbnail:
+          type: string
+          description: Thumbnail URL
+    Extension:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Extension category title
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Item title
+              value:
+                type: string
+                description: Item value
+    Post:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Post title
+        source:
+          type: string
+          description: Post source
+        link:
+          type: string
+          description: Link to the post
+    ReviewResults:
+      type: object
+      properties:
+        hotel_summary:
+          $ref: '#/components/schemas/HotelSummary'
+        summaries:
+          type: array
+          items:
+            type: string
+          description: Review summaries
+        reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/Review'
+        web_reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/WebReview'
+          description: Web reviews from external sources
+    Review:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Reviewer username
+        rating:
+          type: number
+          description: Review rating
+        contributor_id:
+          type: string
+          description: Google contributor ID
+        description:
+          type: string
+          description: Review text
+        link:
+          type: string
+          description: Link to the review
+        date:
+          type: string
+          description: Review date
+        images:
+          type: array
+          items:
+            type: string
+          description: Review images
+    PopularTimes:
+      type: object
+      properties:
+        live:
+          type: object
+          properties:
+            info:
+              type: string
+              description: Live busyness information
+            day:
+              type: string
+              description: Day of the week the live busyness applies to, in the place's local time
+            time:
+              type: string
+              description: Hour the live busyness applies to
+            busyness_score:
+              type: integer
+              description: Live busyness level (0-100)
+            typical_time_spent:
+              type: string
+              description: Typical time spent at location
+        chart:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: object
+              properties:
+                time:
+                  type: string
+                  description: Time of day
+                busyness_score:
+                  type: integer
+                  description: Busyness level (0-100)
+                info:
+                  type: string
+                  description: Busyness description
+    HotelSummary:
+      type: object
+      properties:
+        rooms:
+          type: object
+          properties:
+            rating:
+              type: number
+              description: Rating for rooms
+            text:
+              type: string
+              description: Summary text for rooms
+        location:
+          type: object
+          properties:
+            rating:
+              type: number
+              description: Rating for location
+            text:
+              type: string
+              description: Summary text for location
+        service_and_facilities:
+          type: object
+          properties:
+            rating:
+              type: number
+              description: Rating for service and facilities
+            text:
+              type: string
+              description: Summary text for service and facilities
+    WebReview:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the review source
+        rating:
+          type: number
+          description: Average rating from this source
+        reviews:
+          type: integer
+          description: Number of reviews from this source
+        review_results:
+          type: array
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+                description: Reviewer username
+              link:
+                type: string
+                description: Link to the review
+              rating:
+                type: integer
+                description: Review rating
+              description:
+                type: string
+                description: Review text
+              date:
+                type: string
+                description: Review date
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

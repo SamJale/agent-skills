@@ -1,0 +1,1605 @@
+{
+  "search_metadata": {
+    "id": "search_6dAL2p4KqYsDnbLw7k7wnGOm",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:34Z",
+    "request_time_taken": 1.98,
+    "parsing_time_taken": 0.12,
+    "total_time_taken": 2.1,
+    "request_url": "https://www.google.com/search?q=best+serp+api&oq=best+serp+api&gl=us&hl=en&num=100&ie=UTF-8",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsDnbLw7k7wnGOm.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsDnbLw7k7wnGOm"
+  },
+  "search_parameters": {
+    "engine": "google_rank_tracking",
+    "q": "best serp api",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us",
+    "page": 1,
+    "num": 100
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "10 Best SERP APIs in 2026 to Scale Data Extraction from ...",
+      "link": "https://www.scrapingdog.com/blog/best-serp-apis/",
+      "source": "Scrapingdog",
+      "domain": "www.scrapingdog.com",
+      "displayed_link": "https://www.scrapingdog.com › Blog",
+      "snippet": "TL;DR · Scrapingdog – Best overall SERP API with the fastest response time (1.83s), high scalability, and low cost at scale. · Serper – ...",
+      "snippet_highlighted_words": [
+        "Scrapingdog – Best overall SERP API"
+      ],
+      "date": "4 days ago",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "10 Best SERP APIs for...",
+            "link": "https://www.scrapingdog.com/blog/best-serp-apis/#10-best-serp-apis-for-scraping-google-in-2026"
+          },
+          {
+            "title": "Scrapingdog's SERP API",
+            "link": "https://www.scrapingdog.com/blog/best-serp-apis/#scrapingdog-s-serp-api"
+          },
+          {
+            "title": "Why You Should Choose A...",
+            "link": "https://www.scrapingdog.com/blog/best-serp-apis/#why-you-should-choose-a-serp-api-instead-of-building-your-own-scraper"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEX////b29vFxcXh4eGampoAAACtra2dnZ0vLy8mJiazs7P4+Pjy8vKlpaVCQkJgYGC5ubkWFhZ0dHQRERGqqqpRUVGQkJCTk5PLzMszMzNGRkZcXFwdHR19fX1vb28pKSmX4nwnAAAAoElEQVR4AdXM1QECMRRE0btJZi2KO/RfJe7QwJ6vp8NwVcZY/nO6qvnRtJ16DyEqtQ0fajWZG5+az2+rwpsiy8tozIfx5D0U60hToOoszqIpD7M5ixYtgKUqVud2xsNCft3w1CSvBU9ZWgJWstdvZd4Y9QCbDUAvw4epPLBcAl6RL+utH+9ms93Yd2t+zBSz9zlqxh+l036vQ+G/YExgsE56wgaEEVthWwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 2,
+      "title": "Picking ONE Google SERP API in 2026 feels less like ...",
+      "link": "https://www.reddit.com/r/WebScrapingInsider/comments/1sesvvq/picking_one_google_serp_api_in_2026_feels_less/",
+      "source": "Reddit · r/WebScrapingInsider",
+      "domain": "www.reddit.com",
+      "displayed_link": "40+ comments  ·  2 months ago",
+      "snippet": "DataForSEO bills per SERP page, Bright Data and Oxylabs talk in results, SerpApi is per successful search, ScraperAPI wraps things in credits, ...",
+      "snippet_highlighted_words": [
+        "DataForSEO bills per SERP page"
+      ],
+      "sitelinks": {
+        "list": [
+          {
+            "title": "We should look for another option besides SerpAPI, right?",
+            "link": "https://www.reddit.com/r/n8n/comments/1gy42z9/we_should_look_for_another_option_besides_serpapi/",
+            "answer_count": 49,
+            "date": "Nov 23, 2024"
+          },
+          {
+            "title": "Alternatives to serp API for scrapping reviews : r ...",
+            "link": "https://www.reddit.com/r/webdev/comments/1oibczg/alternatives_to_serp_api_for_scrapping_reviews/",
+            "answer_count": 24,
+            "date": "Oct 28, 2025"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 3,
+      "title": "Top 7 Google SERP APIs in 2026",
+      "link": "https://www.scraperapi.com/web-scraping/best-web-scraping-apis/google-serp-api/",
+      "source": "ScraperAPI",
+      "domain": "www.scraperapi.com",
+      "displayed_link": "https://www.scraperapi.com › ... › Best APIs List",
+      "snippet": "Discover the 7 best Google SERP APIs in 2026. Compare pricing, speed, and features to find the best option for scraping search results.",
+      "snippet_highlighted_words": [
+        "7 best Google SERP APIs in 2026"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwYIOMaIuQZIeQYIOQZIeQaIuQZIeQaIuQaIuQaIuQZIeMaIeQaIuQAAOL////m5/wNGOTv8P3a2/pLUOgAD+SPkvDNz/g3Pee8vvX4+P6ho/JyduyEh+58f+0kLOVgZOp/BG0vAAAADXRSTlMACvswFnDLi+Lyu0amIm/CBAAAAX1JREFUOI1tU9m2gyAMpK0LdUkEwX37/6+8AYK19s6ThxkzkwSE+OCVVpmUWZW+xH9I3/WJd/pL1zfcJNmdr5/ZhX7IH54gH6cgulsIUJzkVh/2uW08jLLWnWRf+aBDnFgwzJ06kz6Yn7ExbDEgYgPu1MXIPa8ObMH02qGZ0HS4uBo5CZ6hQIuwILYe+hQ8ab7cAY6Aur5b1K/oYLAzuMLgCoxHzSGdR3ERdDC4DPT7ADzPQvAQFVlMevcOlho2XEHGKVJISyH9GGYKoSFOkwXk4dp0vMZJrbhaFsQ9uUEdoYnFddQDWxQsUG7USBFbCz1Cyx4Ft1nDsoHqemqy/xLkoowZUStexUH1KZEnSiF8/Q3nDZswaNLuC3YhJC+LOj92nHTAWNO3ZQchkrAKQtw2rOegEsEl1DCOBrZwXyiO+RQgSN8lKMWCfuVbKeOlfp6zCLC8qfNaJ1HxjeTzMJJ/Hoa88OfNvCC/P86kutJVcucdyjyj5b+zvLwc/gGlbS/OIXT/3wAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 4,
+      "title": "SerpApi: Google Search API",
+      "link": "https://serpapi.com/",
+      "source": "SerpApi",
+      "domain": "serpapi.com",
+      "displayed_link": "https://serpapi.com",
+      "snippet": "SerpApi is a real-time API to access Google search results. We handle proxies, solve captchas, and parse all rich structured data for you.",
+      "snippet_highlighted_words": [
+        "SerpApi"
+      ],
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Pricing",
+            "link": "https://serpapi.com/pricing"
+          },
+          {
+            "title": "APIs",
+            "link": "https://serpapi.com/search-engine-apis"
+          },
+          {
+            "title": "Integrations",
+            "link": "https://serpapi.com/integrations"
+          },
+          {
+            "title": "Features",
+            "link": "https://serpapi.com/#features"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEVHcExiYu03f+qKQvBUX+xVbOxVbOxjYe1VaexxWO43f+qNRfCNRvCNRfBPc+3///9PbuxIc+tdZe13VO9pXu6LR/D29/45fut8Ue/Au/dCeOtJX+uBTe9+Pe9oUe6FSu9iRO0eb+mvr/XLzfm6ovZhS+3t6/1xe+/i4fuTnfJkWe2GjPGZdvJEAbqyAAAADnRSTlMAuOPj/J4v/f78uLieLw44KcEAAAFqSURBVCiRXdLZYoIwEAXQUQGD1QYwBDESUWRx+f/v6yyh2s4TznEScgkAVhKnvR3a/eFwOp3PZVmutjsItTDGML61LL/E1us1Y7//oyueKwpUwnT/fzZRBappcdk0ZWyapmTeQawUjdZa1560vU1D92oIt6AIC6uxLGrb0ZN+4XizgixTykkHZ/1LnuyNCjFTbpDW1Pur/iiazNwkPzrv76FfU0FOo0/pjA/jrRjt2UBO6u7Ys8+HMQ8zsfFxEb9523F0EUVl2lrfQsxwDEoHoqiMr/XVS1Rw/FUlGpCUEZWW5VnT07Ic5AERNZMXihALfqGeFaoKOZxuLIooHMWTwmcinYvmEPgjgKUKncm5OT7DeKGag3dzVrYnhWVFu8onozDkfxRWmkJcsWKvzjiq+6AnDBkxhqRivVidc8zKYQgSJF7PDStiiIqRolrQ9Vu+kVQxosrF3QQMQQou5iufxEvEijXPCOOE+j9L4zsttDe+kQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 5,
+      "title": "The 5 Best SERP APIs for 2026",
+      "link": "https://proxyway.com/best/serp-api",
+      "source": "Proxyway",
+      "domain": "proxyway.com",
+      "displayed_link": "https://proxyway.com › Best",
+      "snippet": "The Best SERP APIs · 1. Oxylabs · 2. ScrapingBee · 3. Decodo (formerly Smartproxy) · 4. ScraperAPI · 5. Zyte API · 6. Apify · 7. NetNut.",
+      "snippet_highlighted_words": [
+        "Oxylabs"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEVHcEz3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0D3A0B5teuYAAAAEXRSTlMAJXetz+Du/2q+CYqb+EIWXOQQAKsAAAD7SURBVHgBfZEBCsQgDAS3qXVVtfb/rz2qTQlabgABMmzCCsMmuzsOt8uGL8TzxQtmAicCLHBciGacPD84EhQ7t8Z3/rpFuGIvTfzDLWT+IQMgWYIER+YgmTyCyK5CBU6SvvVTfeqFBVvb+WwYRh2GGEEQ2dmG0YZxUYk4OGjWcKYsz4fNblmFOUPxukKivSObhPgIYzS2mIiostwjqhGo5F6UjI+LrGOLz6Yo3O9G7jAZNFWj3JoaeqlSADTyghpxymjQiNuIIjIaC++JHa/GQ1PhwKBxNoKagz66zlNUqFl/R2meC77BUjhRMNF2GvaGlXQVV8nqypXw8gMqEBVZ6i+gwQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 6,
+      "title": "Which SERP API gives the fastest and most accurate results?",
+      "link": "https://www.quora.com/Which-SERP-API-gives-the-fastest-and-most-accurate-results",
+      "source": "Quora",
+      "domain": "www.quora.com",
+      "displayed_link": "1 answer  ·  1 month ago",
+      "snippet": "Generally, the best and fastest SERP APIs are those that offer up-to-date information from Google searches, good geo-targeting features, ...",
+      "snippet_highlighted_words": [
+        "those that offer up-to-date information from Google searches"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEy4Kia5Kie5Kie5Kia5Kie5Kye5Kya5Kia5Kya5Kye5Kye5Kia5Kie5Kye4KybpLYg9AAAAEHRSTlMADBsoY5+1xoDS+f/mdeg3NaD4rAAAALBJREFUeAFjIAIwKhsJIHjMrullIQZwuc7Vu3fvmgGTFwfygPxCqOTs3WCwUwAiuXv3ntirp3fvhkh37d7XyMAg8Xr3CrCxs3cfAdF+u3eCDGdZvbsBxOXYvcsBSInu3iMANvH07kAgpbZ7K8SG6N1JQNJ8914I9/buYjQummI0o9AsgjjjCcwZEEfugToS1QuJKB7cPR/mfaiHP8ADBwyS4EFXDgKN8IA1BgEBAuEPAM0eYq2VgXsvAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 7,
+      "title": "Best SERP API: Top Picks for SEO, AI and Tracking",
+      "link": "https://www.olostep.com/blog/best-serp-api",
+      "source": "Olostep",
+      "domain": "www.olostep.com",
+      "displayed_link": "https://www.olostep.com › blog › best-serp-api",
+      "snippet": "Best SERP API compared for SEO, AI, and rank tracking. See the 10-query test to spot bad data, lower costs, and choose the right tool.",
+      "snippet_highlighted_words": [
+        "Best SERP API compared for SEO, AI, and rank tracking"
+      ],
+      "date": "May 9, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAclBMVEVjW/9hWf9eVv9WTf9YT/9rZP9aUf9VTP9eVf+Qi//m5f/////4+P+cmP9TSf/Lyf/a2P9QRv+Ggf+/vf+lof/W1P9gWP91b//8/P/Fw//Rz//e3f/u7f+rqP9cU/+Uj/9xav+wrf97df/z8v9nYP+Ig/8aptLeAAAAuElEQVR4AdWRRQLCQBAESda3cHfn/08E4n5F+rJS49P7uoKgi4RCKm1sKzPO08cPhi3ewxHjyWQKY9GgYgY26Mk5LIY1tlzB2EQB1uDCKtQbmOn3RW5hJ2rV7OFwfF+OB8DUyiGF4Qk4Bw14ieEUuC6rsB/lzKCqespx1GAEHaxrvdgBEP0d5zCS9QHt4fROKrb1qG8tz3ATR32HgW7uRHlug8F67WTbLoeP2WI0ELZjoVrqN/pXvQD+twnXJA4IvAAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 8,
+      "title": "SERP API - SERP Scraper API - Free Trial",
+      "link": "https://brightdata.com/products/serp-api",
+      "source": "Bright Data",
+      "domain": "brightdata.com",
+      "displayed_link": "https://brightdata.com › products › serp-api",
+      "snippet": "SERP API. A comprehensive solution for easy, real-time search engine scraping, handling proxy management, unblocking, and parsing with ease.",
+      "snippet_highlighted_words": [
+        "SERP API"
+      ],
+      "rich_snippet": {
+        "detected_extensions": {
+          "rating": 4.6,
+          "reviews": 995
+        },
+        "extensions": [
+          "4.6",
+          "(995)"
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEU9f/w8fvxCgvxNif00fPx1o/2gwf5hl/y1zv72+f+Ls/280f7///+IsP5SjvzQ3/6VuP5Jh/z7/P/o7/9yoP2qxf1nm/ybvf2Cqv3d6f7w9P/E2P7X4/9Ghfx9p/260P6lb7ToAAAAe0lEQVR4Ac3NNQKDAAxA0Rju7nD/U1bXhKVF/voicEa4Q8S2iuOKpej5QciGURTHcWJgmr0wB1Sx8Mu4qtH62UQJ6YhFm3RNrZ+VfhiDwPrZTmVcGgjCs41Ie7jcDCl9YVeoJmsWxOXop6ggOn60bVGnItDyCdTwG/yjJ+gWB6/VJxq3AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 9,
+      "title": "SERPHouse: Free SERP API for Scraping Accurate SERP Data",
+      "link": "https://www.serphouse.com/",
+      "source": "SERPHouse",
+      "domain": "www.serphouse.com",
+      "displayed_link": "https://www.serphouse.com",
+      "snippet": "Tired of slow or unreliable SERP data? Try SERPHouse's free SERP API to scrape accurate search results effortlessly—built for speed and real performance.",
+      "snippet_highlighted_words": [
+        "SERPHouse's free SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEVHcEyEYOWEYOWEYOWEYOWEYOWEYOV/WeR6UeShh+vc0/f///+8q/Dz8P2JZufn4frLvvSwnO6TdeiEYOUN5I4AAAAAFHRSTlMATJbH6P8T////////////////+Nar5kQAAAEMSURBVHgBbJEHAoQgDARtYUNCsfz/r8chxjp2M7Slu9AP40Q0jUPffeAGujC4Z93KptybT/Ricpc6GQAZ7qPO3vPbsP5BoioEG+U+P3DQSmBcZ+qs96iNaOM46wBJai3n+pAE62Kvz1pZmBetzLtR8q3P1H6iuE2mSt8NJuSV9xx4zSYM3WiCJEKKcQWBl0MYu8kEDfC54OGJIalF0TLwcRdEihA0cFvo1gRi/v/1mkV9eS1RoAltCAGTh9fFV6FwpG2TXBi0hrWcSGLC+FgmiPBY5jsokmtQr6htS4+o2xj8G47IIhjdhBMMZpITYEckOYKJFluyZ0WSJ5Rx8GY9YSbSMi8i+wsLo2V/AHIJF6Lz8io7AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 10,
+      "title": "The 16 Best SERP and Web Search APIs of 2026",
+      "link": "https://brightdata.com/blog/web-data/best-serp-apis",
+      "source": "Bright Data",
+      "domain": "brightdata.com",
+      "displayed_link": "https://brightdata.com › blog › web-data › best-serp-apis",
+      "snippet": "Compare the 16 best SERP and web search APIs of 2026 on pricing, features, search engines, and AI integration to find the right tool for your needs.",
+      "snippet_highlighted_words": [
+        "Compare the 16 best SERP and web search APIs of 2026"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEU9f/w8fvxCgvxNif00fPx1o/2gwf5hl/y1zv72+f+Ls/280f7///+IsP5SjvzQ3/6VuP5Jh/z7/P/o7/9yoP2qxf1nm/ybvf2Cqv3d6f7w9P/E2P7X4/9Ghfx9p/260P6lb7ToAAAAe0lEQVR4Ac3NNQKDAAxA0Rju7nD/U1bXhKVF/voicEa4Q8S2iuOKpej5QciGURTHcWJgmr0wB1Sx8Mu4qtH62UQJ6YhFm3RNrZ+VfhiDwPrZTmVcGgjCs41Ie7jcDCl9YVeoJmsWxOXop6ggOn60bVGnItDyCdTwG/yjJ+gWB6/VJxq3AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 11,
+      "title": "ScrapingBee – The Best Web Scraping API",
+      "link": "https://www.scrapingbee.com/",
+      "source": "ScrapingBee",
+      "domain": "www.scrapingbee.com",
+      "displayed_link": "https://www.scrapingbee.com",
+      "snippet": "ScrapingBee is the best web scraping API that handles proxies and headless browsers for you — so you can focus on extracting the data you need.",
+      "snippet_highlighted_words": [
+        "ScrapingBee is the best web scraping API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAmVBMVEX/yR//yh//ziD/0SD/zyDuuxyObgBTPQBXQACXdQD6xR//zR+xixMAAACPkZbLzM6Ag4nEmxrPoxfx8fH////h4eLktBsxIQC/wMKio6ZhSgDp6en/2SFUWGAAAAuHiYu8kwvxvh0ADy2DZgAnHAAdKT0ZBwA/MxBsb3VJNQDarByFahV8YhS3uLt4e4KigBdtVxNvVgCkgABIZKtmAAAAwklEQVR4Ac3RBYKDQAxAUUKGWja4O+t1uf/dKrgdoB/n4UhvG8iIMsybUBbL1XpDc4YfrGqazoY8NTLZsp857MIE0fPtsiDEsQGwXRXxFDds13GMSBPUkpSrViaOMONcKYqNy7blf37hANNvInhWlNf/yWmAZrlZo/OLAyTooc3Qv24qVejWSD3Ev1yUy/X/y/wt9pB2qYJEuGOr/BK7wUcURro3jANnvn88sSFGn35zvlwuh2sYXm/THwck6gikd+0BCCEQN2sYGfIAAAAASUVORK5CYII="
+    },
+    {
+      "position": 12,
+      "title": "Want some support from community",
+      "link": "https://www.facebook.com/groups/vibecodinglife/posts/2059377647984095/",
+      "source": "Facebook · Vibe Coding is Life",
+      "domain": "www.facebook.com",
+      "displayed_link": "9 comments  ·  4 hours ago",
+      "snippet": "Elevate your SEO strategy with these 5 Top API's in 2019. 1. @MarketMuseCo (Great for your blogging) 2. Ubersuggest ( 1 of my faves) 3. @ ...",
+      "snippet_highlighted_words": [
+        "MarketMuseCo"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEVHcEwHZv8HaP8IZ/8IZ/8IZv8IaP8IZ/8HZv8Haf8IZ/8IaP8IZ/8AXv8AV/8AYv+SqP/P1//m6//e5f9wlP////+tvP9jiv82c/8IZ/8Iaf+fsf////////8AW/+wrobhAAAAH3RSTlMAM4bC6v1h7v8Z3UL///////7/////////wRiFwenBhp/Z0gAAAOhJREFUeAFtk0UWwzAMBWWHFHOZe/9bBn9Nr7Mdg5AiQjZt17WNFFTTDxwZ+kKNigvUmJw2XGF0dByx1jlnPTPDjiYqDofj8XQ4L9bsL6vozpedq13/3eJk4G+XXPIac8zBHUs5EIl48Q4Tws3ziiAZ5f7j3Vq7O5b0iOGE1Z0cRxpqS3mwSbbU4VHndukW8GwHiQ/BzUO2KceIw7MIqJBHyIZk/WwKSv6KcD/frlsqt/P5joBELJ+3iNZD8YDC/82zz1pWS5U1u5bmmY1JLdMQmVoaOIxmIdVYDXWUxVAD8Xp/FvnN1mEG0f0e5ixC4ikAAAAASUVORK5CYII="
+    },
+    {
+      "position": 13,
+      "title": "SERP API as an alternative for Google scraping - feature",
+      "link": "https://forum.seocontentmachine.com/t/serp-api-as-an-alternative-for-google-scraping/257",
+      "source": "SEO Content Machine Forum",
+      "domain": "forum.seocontentmachine.com",
+      "displayed_link": "https://forum.seocontentmachine.com › serp-api-as-an-a...",
+      "snippet": "Scrape Google search results in JSON format automatically using custom parameters. Search for keywords by location, date and more with SerpApi.",
+      "snippet_highlighted_words": [
+        "Scrape Google search results in JSON format automatically using custom parameters"
+      ],
+      "date": "May 17, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAP1BMVEVHcExegaxegaxegaxegaxegaxegaxegaxegaxYdJhegaxMVmpMVmpMVmpMVmpMVmpMVmpMVmpSZIBMVmpMVmqXgYKbAAAAFXRSTlMAcDPl/6Nd9EUOyKLMjLxw/zUa4U586HQ8AAAAuUlEQVR4AYWQBxKDMAwEZXpz5/9vjc50pAmbUJc7F/rElEOlqpuWuqYfNNkcjIocdqcWt2jk7kmqiTMVX0eEFdkTqHGjJI95CdkZrKSMbIw6277l0o7AvPDJunsxwGx9CCHSyGd/yqnDCe5i3vevTzRuu5cvKffL34KCwPjoleQSQDo+ClnIrc7q0h5jS3m8cUJ6O+9RBGfrSZmTyyUmmP+sM4aL+JZryfiSX0UUC+QzWjVSRANOH/wAkg0NM9X6BmYAAAAASUVORK5CYII="
+    },
+    {
+      "position": 14,
+      "title": "Brave Search API",
+      "link": "https://brave.com/search/api/",
+      "source": "Brave",
+      "domain": "brave.com",
+      "displayed_link": "https://brave.com › search › api",
+      "snippet": "The Brave Search API excels in RAG pipelines, and it's the leading search tool for applications that use Claude MCP. Train foundation models.",
+      "snippet_highlighted_words": [
+        "Brave Search API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAn1BMVEVHcEz/PQH/TwD/IwH/TQD/Sx//IgH/RQD/LAD/PAH/RgH/QQD/UAH/JwH/KgD/TwD/QQD/RgD/PwD/UwH/NAD/////KQD/NAD/OgD/RQD/UAD/TQD/QgD/LwD/SQD/UwD/IgD/JgD/PgX/FgD/AQD/tqr/Xjz/k3//8u7/yr//08z/+vj/vrT/dVn///7/q57/Z0r/n43/29X/5N//gWiLoOUoAAAAFHRSTlMAZMzHoPsnM5BNEwmL5qyx4vnc3wLYJjQAAAFvSURBVCiRdZLploIwDIVhBBHXWU4X9kqhRZBNff9nm7QVleNM/lD4muQmXMua4iMI4jinlOyttzikEySrGVjb/jZ9wmTl25uJeVkYpTEwmiQE2BFjfFw+WJgKOZBgrGtJmJD5ER+ZoQeAeYVe4loA3E+Z9IRmcS6mTDtLJapkeyshvSrbQVao5cw3A2ZhB7frG28REsWthpeGs4WGWdiaYqcRIVmbs8t2GjpZfNYfSuhcmmNfMLMK/y6ow9DzivU1EGR6bmAUUiuJDQgqTuoEo9w39AMbIle4z4UoSpBWwIYWd7gFSC9QrRJDo4RxgNP2oWkUGR2lfjCA3rR5gLEatee81EMCfP7nMAra7iKSfmTi0gzwWxYPuIWyAaG6Zs84TjC2H9ADmE7LP7ME4PJpBQXTZFRMcqLgi08cBQMydI3ARMFXG200DKjrEqrh3GKuNlhuDLZbW/Nw/rOmkfxlIPXemUpW0PkTqeTP71naL1HPNp8JfoNYAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 15,
+      "title": "SerpAPI vs Serper vs Scrapingdog: We Tested All Three ...",
+      "link": "https://medium.com/@darshankhandelwal12/serpapi-vs-serper-vs-scrapingdog-we-tested-all-three-so-you-dont-have-to-c7d5ff0f3079",
+      "source": "Medium · Darshan Khandelwal",
+      "domain": "medium.com",
+      "displayed_link": "7 likes  ·  1 year ago",
+      "snippet": "SerpAPI: SERP 5.49 s, Scholar 3.25 s, News 4.50 s; 100 free credits; $0.015→$0.0075; 24/7 support. Verdict: Scrapingdog wins on speed + cost; ...",
+      "snippet_highlighted_words": [
+        "Scrapingdog wins on speed + cost"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAARVBMVEVHcEwAAAAAAAAAAAAAAAAAAABwcHCoqKifn58bGxt8fHzKysr///8rKyv5+fnW1tbp6emQkJCsrKxaWlq0tLTBwcE+Pj777dpoAAAABnRSTlMAS8D5/5mXKh4CAAAA3ElEQVR4AXzRUQ6EIAwEUNRZClgFQb3/UbfQEDUbd76qL5WMGGOGccJPpnEwkg9e8pE9vGYw4zuOZnrHyeBPFC055zw0wTkKN8TMzEHHZWWOuCMJJh03QXpgrlr0IzLmB+6L4KzHZ0Ub947+EF3q4rI3zByuzSLogDOiYeCICxGZVxmsYuR8x9DaJFQkL3UoX+iTvNg2xbPVvrB37ZgfeGr7/tl0Q/2HXjEjSe0HWnlWJGz1DEXEAsla2lyXcIj2K6O6Wvr1kQXCnL7DG9l4kwneBIY3aeJN1HizAwDOfRO3mlC3PQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 16,
+      "title": "5+ Best Google Rank Tracking and SERP APIs of 2026",
+      "link": "https://www.lobstr.io/blog/google-rank-tracking-api",
+      "source": "Lobstr.io",
+      "domain": "www.lobstr.io",
+      "displayed_link": "https://www.lobstr.io › blog › google-rank-tracking-api",
+      "snippet": "Bright Data is best if you want a reliable SERP API with fast speed and wide coverage of search engines and Google products. But it gets ...",
+      "snippet_highlighted_words": [
+        "Bright Data"
+      ],
+      "date": "Jan 5, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAP1BMVEVHcEz/AAD/AAD2AADvAAD/AAD/AAD8AAD+AAD7AAD/AAD/AAD/AAD+AAD9AAD9AAD7AAD8AAD9AAD+AAD+AAAa2O2dAAAAFXRSTlMAhPU2Eb5FVsiV2An/sGUqch2mzuo/RJ7HAAAA/UlEQVR4AWIgEgAKnQsjsWEgAIArM5xB0H+r4Tx7fgcEh6lLvQfDOM3L+hRM2B6ie0A3+9KRcD4Er0j0t6/lIyJm8/AQvlKUerxZ614G/7Uy4ir1AqYxjXH9i02KlFk74JzJkWHeqLp8kRKYbgwxcLVatjjXHAiQG7RsaTVbzyhtQN3BveHs/8xzUtMdyX9p2a4uFdd4r+jfhDDM89TFGHFecNRyZG+clWGtII96b92bNK7rAjn4GMxyS23OuY98ZW9cI30Md9oiotwptsGrcYZQqCemmN+Uth1JYjxhnbzqu/T/tqLfdm+jY/RgCLQZb+07cC5pOz1Zz913fgLvigorYhgXAQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 17,
+      "title": "Google Search scraper and SERP API",
+      "link": "https://apify.com/apify/google-search-scraper",
+      "source": "Apify",
+      "domain": "apify.com",
+      "displayed_link": "https://apify.com › apify › google-search-scraper",
+      "snippet": "Scrape Google Search Engine Results Pages (SERPs). Select the country or language and extract organic and paid results, AI Mode, AI overviews, ads, queries, ...",
+      "rich_snippet": {
+        "detected_extensions": {
+          "rating": 4.8,
+          "reviews": 144
+        },
+        "extensions": [
+          "4.8",
+          "(144)"
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAjVBMVEX///+AwpNVsnFZs3R4wI15nv9Xh/9bif+Bo/8MoEUXoUoAmTLY7N7Z4v8AWv8cav8SZ/8go06Jx5uKqv8kbf8opVMscf8AmzjU3/8AXv/M5tPN2v/7qon6kGDF1P9nuX/7sZL4WAD4WgD6mm9pk/9Kr2r4Zgb3+f9Ngv/6oXv7tZf4YwD94tf5djX5hFDdPf2nAAAApUlEQVR4AcXMVRaDMBBA0am3uLu77393uE3hn4dE7kngqm73x9D9CfB6f4be3xXvP2KIpABohh3i3is+CL7vJ0CfyEl97AcjIU8LhT1BlZoWmn7E3w3mvtzxJKwdTqrGhqaO8feEXS8OI6AQkvOllj2NDrPh3Z1Gzw/CaRa9V4wXS5JZ02zFzXrN4aRiMKTYpnzr3LBiW9XDVqL8YrOqbv6qK7ioDvzrGACRXlrnAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 18,
+      "title": "What is the best Google SERP scraper? Either ...",
+      "link": "https://www.quora.com/What-is-the-best-Google-SERP-scraper-Either-programming-solution-or-online-service-e-g-for-competitive-analysis",
+      "source": "Quora",
+      "domain": "www.quora.com",
+      "displayed_link": "1 answer  ·  8 years ago",
+      "snippet": "The best tool to scrape google search results is Scrapingdog. What Is Scrapingdog? It is an API that can handle million of proxies, and CAPTCHAs ...",
+      "snippet_highlighted_words": [
+        "Scrapingdog"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEy4Kia5Kie5Kie5Kia5Kie5Kye5Kya5Kia5Kya5Kye5Kye5Kia5Kie5Kye4KybpLYg9AAAAEHRSTlMADBsoY5+1xoDS+f/mdeg3NaD4rAAAALBJREFUeAFjIAIwKhsJIHjMrullIQZwuc7Vu3fvmgGTFwfygPxCqOTs3WCwUwAiuXv3ntirp3fvhkh37d7XyMAg8Xr3CrCxs3cfAdF+u3eCDGdZvbsBxOXYvcsBSInu3iMANvH07kAgpbZ7K8SG6N1JQNJ8914I9/buYjQummI0o9AsgjjjCcwZEEfugToS1QuJKB7cPR/mfaiHP8ADBwyS4EFXDgKN8IA1BgEBAuEPAM0eYq2VgXsvAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 19,
+      "title": "Best SERP APIs in 2026: 7 Tested and Compared",
+      "link": "https://www.openwebninja.com/blog/best-serp-apis-2026",
+      "source": "OpenWeb Ninja",
+      "domain": "www.openwebninja.com",
+      "displayed_link": "https://www.openwebninja.com › Blog",
+      "snippet": "We compared 7 SERP APIs on pricing, response time, and data depth. Code examples and JSON responses for OpenWeb Ninja, SerpAPI, DataForSEO, ...",
+      "snippet_highlighted_words": [
+        "SERP"
+      ],
+      "date": "May 2, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAHKUlEQVR4Ae1XA3Sd2xLOU2wnF1WchnVj89S2bduIWcU2rs3c2jpNcZ2sRmWM077vzf7XyV6nZ73y4XKvNT9n5vtmZv979q/wqxh/DgD/uPHdrS3nL4tjm5ubDV7ERiwWK7a3t/doa2t7g9m/iA3zfebi5dhKwuI2AP5ScfJMaY9BImjZeiOn9J0rpGj4FKKK9+7dm304q7Bi1c7ojrEL1mP8wg1Ysye2IzWvtOLhw4ezxWIoPsXWML2w/KqmjSfMXEfixNnzZQxboaury0k0fTlUzd0weckmaNkQiRJGou4JEi0tLfaHM/OvmbuOgJZDKEzdZ6Nn4Er08F8GE7fp0LQPhqX7KKQVlFWSroNc5IZp+WVXNa29MGnxJqiYuWHc/HXo6OiwZMw0knKKf9Kh6JOyi6Bi7gpNIpFb+u6V7nI0tTUNWbp5X6O6rT96iTbCelI4TD3nQssuBCoWniRe0HYcBm0ipmrphdU7oxqbmpqGdqc9vaBcrG7lATULdyTlFEHL2gNJucU/AlAVGBKTPvGpedUMfMiwGdgVc5iUvJBX9t5lctB3e9TBeg27YFhPjsSbAcuJpAeUKAplGVHq4wplc3e6JqH7PfHJDSxraQXlV9UtPbAz6hBcRs4mWzckpOZWUbn6yGaJSDSaxafkVJs6B2GwaAY0rT2hTZmIS8npYqmzGr8fr3kvYEAkBEpCJLqv+VkgQ8ICiEnKkWhYssh9MHT4HBg7BSAsMa2tsbHRXEF+SDNhFpuUVc1YZhW+jdFz1wqAJp7z0XvYJimgKxO65oCciJLsNYmGjT8GL8xAaMQFhESch/PUaNh6jUXD3btLFJ42GjsazWOIhJqZKwdznBINhylR6BW4AsZDJ0Pbnmpv5iG8U+ztBk3bQBgOGo+e/kthN3E/XJblw3fTe9B1GoHQyIsIIbGbsA8+4xcgv/z9CiqrLQd8SibM98Qmt7AIVc09IYq8gNCoy8wRnS9CRDI8ms6R54R3ouhL9JwJey9cCzqMmMvSHLxBGdRzHon563d31TU0jFd43rhy7Xq0o99ESrErdB1EEDFwcjoi+gKLiAAJiINeFoRdhxDoiBiBhKBvOGAs3qR547v1M4GQ7djdWLEtsq29/UGPZ62Kxqt3Rv5T386XlCNg1G80Byg4UYUvr9ZgxpEr7J6R4GCzkq6gorIWecd+lr67DKOB42HlPgZWo7bAjj7d/rMTyV8ofqz+ecczM/BjVdXCr4+fKv684kS5cb9REEnTOjruEo7dqENjSzMWpYt5updmidHc2oKKa7UYFcvAWbkuw6D/WBw/c+5CQfl77yVll5zYk5BSa+kxBl98czxb4UUGKaYYUO0oAzwqFvXizGtC3UOk6R9GJZES4hISfga6jiJ8+NnX6bI9h/rH1KbOJqsXInDs9LlD6lbesB6zA4MWpCJg59dS4Evw3/ElzELXok/IKvhs+VgADd5/Ci7LC2A9ahs0bAOET7Ti2OnDCq86jp08d0irbxB6BK2CUm8XErZM+1Ntx5FzD+n37ioAadsF06R1ZzpPLFbHTp459DJtWZc1iB07dvyV3X9+9FQWI/Cm33IORtK9CnIg/oyDu3JiX3x9PKe76zLf1CP0/y14TV3dpOVbIzpGzVmN7VGH7x7MLLwQMnWpxMRtFgxdphGg1DGd5cD5ysjfSYURCJ2+QnIgo/D8zujDDSPJ97Jt4Z019TVT5fH/EnYg/bYuzdqeoetg5DoTeoMm4nXfxTAbvpk1GA4ku9QyQGWekW5C8tdERLZf0P3+hNQa+dT/ZVvk4Sb9gRNgPTEMNlNjhM73ht8yqFp4yaRWvgx05g2JCX/PCXAbGb1tUYcaGeaTq9+NW2H2vhOEaNVt/KBs4QFFYa13ga7zKHYvBebp7nbMAXmLNvcgmxFkz8smBXeFvf9EiG/e3M+BZbNw98GDGRlF5V/sik2uDzuY9tg5cDJ0qCz6gybIlMCVejoH5FGqmgtnrsMakTYt407kI+xg+uNdccl1zHfDvYZZPPqnjR+qq+eNn7/+ESvJGzQPODiJHWUpKbv4MQeTCntm7Tn2ifqrW/uyjLDt16OfqqoWKbzIYI1i7tpdEmPa8/Wg9ksOeKoZ+PlLV9MK3/n4PbrnpWBS/O4nH5w8fzHDSkqCv5dOvHnrdksePOBN6OlDIunwHxAyDQaDJ/HoFMnhUNqqXbxaeRDAX9/9+Its+S/i3U+/zC8uLv7b6UtXjpC91JbPFdplTYdEIvF7kcVIe29c8n2lPi6CA20bL9AWvLWqtnZht873P/68XceO0islyDa0t777YVf3+6rbtxfR995K2zI+Sfcnpt0FoPVCZWBb9Xc++bycdrAVN77/Poz9fMj/YGQUvnWjr+94Kss4ZJW8cwOAgawOs6m8dSs8Oafkm7c//ryU+VT4b46amhrVzs62UY8edY5k16/q58/xL9PYM4mWP1OGAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 20,
+      "title": "Top 7 Google SERP APIs for Efficient Web Scraping (Free ...",
+      "link": "https://github.com/lenoarditrryh/scraping/blob/main/api/Top%207%20Google%20SERP%20APIs%20for%20Efficient%20Web%20Scraping%20(Free%20%26%20Paid).md",
+      "source": "GitHub",
+      "domain": "github.com",
+      "displayed_link": "https://github.com › scraping › blob › main › api › Top ...",
+      "snippet": "The 7 Best Google SERP APIs · 1. ScraperAPI (Best Overall) · 2. SERP API (Best for Search Engine Variety) · 3. DataForSEO (Best for Marketing Teams) · 4. OxyLabs ( ...",
+      "snippet_highlighted_words": [
+        "1. ScraperAPI (Best Overall"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX////4+Pi3ubtvcnZNUVU+Q0cpLjLr6+x3en0sMTYkKS59gIORk5aUl5n8/Pzw8PFTV1tbX2Pc3d5DSEzn5+g3PECLjpFKTlKFh4qxs7XCxMUuMze/wcLh4uPV1tZzd3o/Q0jOz9CmqKpjZ2qfoaTxAyfNAAABPUlEQVR4AW3TBYKDMBQE0AltAgzuzur9z7ibH5oKfWjc4UEFl6s2Rl8vgcJZGMX04iTEM5UaPomzHA+KkidVAa/WfKNpffMd32oKCHUlWfb27Q19ZSMVrNHGTMDckMtQLqSegdXGpvi3Sf93W9UudRby2WzsEgL4oMvwoqY1AsrQNfFipbXkCGh1BV6oT1pfRwvfOJlo9ZA5NAonStbmB1pawBuDTAgkX4MzV/eC2H3e0C7lk1aBEzd+7SpigJOZVoXx+J5UxzADil+8+KZYoRaK5y2WZxSdgm0j+dakzkIc2kzT6W3IcFnDTzdt4sKbWMqkpNl229IMsfMmg6UaMsJXmv4qCMXDoI4mO5oADwyFDnGoO3KI0jSHQ6E3eJum5TP4Y+EVyUOGXHZjgWd7ZEwOJzZRjbPQt7mF8P4AzsYZpmkFLF4AAAAASUVORK5CYII="
+    },
+    {
+      "position": 21,
+      "title": "Octoparse: Web Scraping Tool & Free Web Crawlers",
+      "link": "https://www.octoparse.com/",
+      "source": "Octoparse",
+      "domain": "www.octoparse.com",
+      "displayed_link": "https://www.octoparse.com",
+      "snippet": "Google Search Scraper. Extract Google SERP data: titles, links, descriptions, rankings, html, and domains using Octoparse. Fast and simple.",
+      "snippet_highlighted_words": [
+        "Google Search Scraper"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAKlBMVEVHcEw0cP80cP80cP80cP80cP80cP80cP80cP80cP80cP80cP80cP80cP8SQqugAAAADXRSTlMAPMVzsO/blhwNYC1RYm+6JgAAANZJREFUKJGNUlEWwyAIq6hgtbn/dQe6tWLXvfHhE4NACNv2n1UhJjm+QREfizcsAVRbaZX0cv8X3tcAJIcVoJ3OfgV2E4hL4xJnlNkFnr2NpyJaJS+th2eQXEdLWmB3eerkBfAcWh1vcqFL0aVI+QUmN6HkhBHfXsM0MJWrlWjUqtgZ+QpWBVl10hY1SvNzl3z8jcjmJGTVynTFeBh0CvWrIaKMMyOkc11se4LJRjh6EZ1IEUpl0GIrb7mGO/M8xjYq2EdqvU1ynk0P7oF5xbY9ye3tl70ArasJHKhnuqgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 22,
+      "title": "Google Search Engine Results API",
+      "link": "https://serpapi.com/search-api",
+      "source": "SerpApi",
+      "domain": "serpapi.com",
+      "displayed_link": "https://serpapi.com › search-api",
+      "snippet": "Scrape Google search results in JSON format automatically using custom parameters. Search for keywords by location, date and more with SerpApi.",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEVHcExiYu03f+qKQvBUX+xVbOxVbOxjYe1VaexxWO43f+qNRfCNRvCNRfBPc+3///9PbuxIc+tdZe13VO9pXu6LR/D29/45fut8Ue/Au/dCeOtJX+uBTe9+Pe9oUe6FSu9iRO0eb+mvr/XLzfm6ovZhS+3t6/1xe+/i4fuTnfJkWe2GjPGZdvJEAbqyAAAADnRSTlMAuOPj/J4v/f78uLieLw44KcEAAAFqSURBVCiRXdLZYoIwEAXQUQGD1QYwBDESUWRx+f/v6yyh2s4TznEScgkAVhKnvR3a/eFwOp3PZVmutjsItTDGML61LL/E1us1Y7//oyueKwpUwnT/fzZRBappcdk0ZWyapmTeQawUjdZa1560vU1D92oIt6AIC6uxLGrb0ZN+4XizgixTykkHZ/1LnuyNCjFTbpDW1Pur/iiazNwkPzrv76FfU0FOo0/pjA/jrRjt2UBO6u7Ys8+HMQ8zsfFxEb9523F0EUVl2lrfQsxwDEoHoqiMr/XVS1Rw/FUlGpCUEZWW5VnT07Ic5AERNZMXihALfqGeFaoKOZxuLIooHMWTwmcinYvmEPgjgKUKncm5OT7DeKGag3dzVrYnhWVFu8onozDkfxRWmkJcsWKvzjiq+6AnDBkxhqRivVidc8zKYQgSJF7PDStiiIqRolrQ9Vu+kVQxosrF3QQMQQou5iufxEvEijXPCOOE+j9L4zsttDe+kQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 23,
+      "title": "Best SERP API in 2026: Compared on Speed, Pricing, and ...",
+      "link": "https://bishopi.io/blog/best-serp-api-in-2026-compared-on-speed-pricing-and-use-cases",
+      "source": "Bishopi",
+      "domain": "bishopi.io",
+      "displayed_link": "https://bishopi.io › blog › best-serp-api-in-2026-compa...",
+      "snippet": "The DataForSEO SERP API is built for teams that care about cost per request at scale. It's not the easiest API to work with, but it's one of the ...",
+      "snippet_highlighted_words": [
+        "DataForSEO SERP API"
+      ],
+      "date": "Mar 30, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABGlBMVEUABg4ABQ0AAAAAAAMAAA4lc7QcVYkUQGcner8JHjUiaqYndrQxmOwNJkA0oPcfW40sidYfYJYAAAo3p/Eznewuj9crgsU/vP8shsUjaZxCwf81nugwjsoPLEklbJpGyv87ru4XQmQZSm8BCh82ntlFy/8mcaA9rucTNVIiYowfWn4uhbpJ0v8fV3o5pNkvhbNJ0P8kZ4wpdaAAAAgTOlFAtusLIDAse58gW3c4n8wGFCAlZ4RQ3/8jYnYxiatAtNdS4f8wg5gcTl9JyOoQLToWOkU7oLdL0ewtfIlT5PshXGc2lKRV6PENIytHv9ApcXxArLNO09xKxcQ6npxW6OodTEtHvrU0i4YkYF5NzsQrdG43k4ZMyrY+pZS6U9A/AAABjUlEQVR4AWIgCgDIngcsBoIgAKKZiq21bd7/cLHzNPhNAfcLDP9sNJ5ws+ls/qUgWCxXay5BbLY7BDxtuN4fmB6lg7iifNwz2q8fKpCWCqjavaxurFGWG8QDTWt5QwGHC9osLfOBAxx3DYa3xg8II9dmHTvPpiSxDYlrpG7sqa51IIv1F+axUcA6jcvcNXxwDDd/jYtvVNGcoqppDLK08nw+F207t79gH5/7pArjBmIgON75CtSAGzDzMzMz999G9AGFfWItCHe0d8KCsTjjct2sN9v15nDY3T52+kV8P2weD35zZTIWBBdBlGRAkR4gP59EkVRZk3HGZqPjq+8ZhilJqqXbWIH2TANnZik4mis77vKSZyI5sqs5woc1PN/hEPghaIR+AM7xPTAwikGQ+Ema0op2regraAFZlEdRlOdRxn0BVyi8EqQqgLqmpCpG6RXsPZumBSpKAM1tJaBtmo/TEI4Kun4ZL8x+oBYcYWfBCmM7CYSC3DTMdMiwN/XYYemgG2OGMJR9aqZ6Hi+NdTps+yeKmwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 24,
+      "title": "Best SerpApi Alternatives in 2026: 7 Cheaper SERP APIs ...",
+      "link": "https://scrape.do/blog/serpapi-alternatives/",
+      "source": "Scrape.do",
+      "domain": "scrape.do",
+      "displayed_link": "https://scrape.do › blog › serpapi-alternatives",
+      "snippet": "1. Scrape.do (Best Overall Alternative). Scrape.do Google Search API. Scrape.do is 21.6x cheaper than SerpApi and actually faster ...",
+      "snippet_highlighted_words": [
+        "Scrape.do Google Search API"
+      ],
+      "date": "May 30, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADYklEQVR4Ab2WY5QdTRCG57Nt27Y1VTObz7Zt27Zt27ZjJ109641tJ/d21T2d7R+Tsx3OTnZS51zf7nq68HYFeWxqcui6RsFTTDCRFXSb0OfQVYNFYdP1wRtJgi8yhdOYoJI+REdnF+rYNsDmouBNVlByDmd/GB1fWIzj+njbisYPmKDsnbjm+C6VxjvuKwzAJoftIgq/YEJu4Vik5uT/7bCXL7TTp+8no74/oc0BTN9wb9bwg3M2y7FGluqT/7JD3z7HOXaPNgfg3vHBQtHvfm7RcPUZv8jIT05PnRYCYAj+9/JLWOKaM76T0V+f5DmdD4BQ9JptvHqZXACzV3Sl7uK37OTRBzonmQDSh4KhRsVX2J6XLJUPwIvCUU3c/6GbsgJ4axMY4FJivzh5iVYBGAr/MxoG+Zsd39MMe/WCBaZAhV8LYZMHo6FBdHSWtcFimQAq1dE9A/49b1mm8DYhHD9b+/0uo749cX5F+O+/9y1pCC4xGgbOFpXqMkUnZwJIv5tcu/caRofPMeGMFl1RMrXnfWrHdW43vy6wyclLm754NRMM89RSQR9R0TEZAHwJNgo+83SB4knSeOVLMvKz0+bXhnZAczRVeJMoHDVbarqV+mJVJoDUbB/Yy9WIfwFVjc+iA1bFK7DCO4VwnA+CHWxf3C1I5Va0+wPe5RbMazNR8dFMkOS5jMb3xFU4gfvFXeHpWhUNCYzG972TKRhV0XCjC+FcT3TffYubJLyYCYbmUUJbXbU66+iHdO2sk1UIes92sqGGwqs8YfE2OnTLvFLs0u0BpObaxbVNFmGxCW7c5gDOnHC4CUcIG/2IRPVCcKYNgsWKA/BATl5CmnNtyFdHplCXdbsTbE24SaEAnrAouKZMONwDSaL6wgE8kCEnL8cEt7CCMQs7E4rCV1sF4IHUHbMSE9xjFExoLUCpz2FHiMYeLeR9Uv65UeN2WQFYxaFo7OjNHRrGlAnOzA2QpQusjvcXgr+9dLnIabzXRdL9pxAAS/EeTPizP+TAZFbRI5aOXC2TgzwAlnAnIfjGvz3Dac2PZ6ao/ddO17Y5AFP0uFHhJ6yRWwy3M0SHr9i6aH1vYTEAXqjLQvj2jNpDNw2KtKl6n3V858gmwY9tTbRVsKhMCF5icqHGr8oq3jHPHjMBAwsonEBQiB8AAAAASUVORK5CYII="
+    },
+    {
+      "position": 25,
+      "title": "8 Best SERP Scraper APIs for 2026",
+      "link": "https://www.designrush.com/agency/it-services/trends/serp-scraper-api",
+      "source": "DesignRush",
+      "domain": "www.designrush.com",
+      "displayed_link": "https://www.designrush.com › Trends › IT Services",
+      "snippet": "1. Bright Data SERP API: Best for Enterprise-Scale Global SERP Extraction · 2. SerpApi: Best for Multi-Engine SERP Data With Rich Structured ...",
+      "snippet_highlighted_words": [
+        "Bright Data SERP API: Best for Enterprise-Scale Global SERP Extraction"
+      ],
+      "date": "Mar 5, 2026",
+      "favicon": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3NTc3Nzc3Nzg3Nzc3MTc3Nzc3Nzc3NzU3NzU3Nzc3Nzc3Nzc2Nzc3Nzc3NzE1NzcyN//AABEIABwAHAMBEQACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAEBQYHAv/EACUQAAIBAwMEAgMAAAAAAAAAAAEDAgQRIQAFEgYiUWETMRRB4f/EABgBAQADAQAAAAAAAAAAAAAAAAUDBAYH/8QAJREAAQQCAQQBBQAAAAAAAAAAAQACAxEEITESQVHwcQUTYWLR/9oADAMBAAIRAxEAPwBbXv8AvOt5BGmiV10106zqOVbyiyK4onCnaDaJqe0wgfViSfWpMvNbhhnmxY/XdlVJpenhSiFESPIWINiNLud4VDJloIyMCRjUJKzk2QS/SIrqgcu4njfNvu3rUEMfhblxWibBQ1GwbfGW31iNz2nc0sNMTzQ0umIj4wYk2naAAyPqWY2yBlSsypKkaWSMIvgihe99t/nto2jZX9XKjuq9iTsNfGjNYuorp3bUrQrgpHLIhHJJ+/WLedMYOW7Kj6+mm8CzZNdz7zaHz5enV7QSk9gxqdztrPuftJqtpnOw1cjbQXRnupXfQfU25dMUdfQ1NBUvWE/kIXJcrqmbWJ8QN7k/q3s6C+qYEOa9kjXgG6Jvkf0e8IqeYNsqeYuse/8AMrw0sqiW/KyNvkuckfzSAMbW/bj4bqvCzGU9xPU7uj1J7BjUDnbRbn7UhEcmHlnTB0F0iZxpOI19ZJrGyqnFjl/EyZmbzhjtJ/YwMeh41TMMYAaGigbHz5+VnMyRw4KYoa10FQayc4qjxWJG4gPA8DVZzWtJIHKCnkc4UTwmiojgNVXHaOcTa//Z"
+    },
+    {
+      "position": 26,
+      "title": "Best SERP APIs in 2026: Official Google Alternatives & ...",
+      "link": "https://scrapfly.io/blog/posts/google-serp-api-and-alternatives",
+      "source": "Scrapfly",
+      "domain": "scrapfly.io",
+      "displayed_link": "https://scrapfly.io › Blog › seo",
+      "snippet": "SerpApi is the most established third-party SERP API provider, offering access to 80+ search engines including Google, Bing, Baidu, and Yandex.",
+      "snippet_highlighted_words": [
+        "SerpApi"
+      ],
+      "date": "Mar 24, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACwklEQVR4AdXXA4ycQRjG8bPtoIrOvqtt27Zt27aD2m1Q21asmuva/CeZJJPN7N3ubHnJ77Tzft/z8Z3xcPTV/cD7UCzHM6xGuHKgujYC60TtEoQUWqTYSD2YsQtmNHahtrlUa0ItnQD1YcY2mNHUhdqWdrW1dQIEYwm+YBVCXagNwzpRuxBBLgcQGyoFI6pq1NaAAXniX9oBDKjiRoDc3xaA/4cjzO0AosALOWiJYoUFEI/pOqxAcGEB+FkcLZENL1WASrgHG04jDvkwo4ndWH/Mwmu8wiT42o1pATOykYBzsOEuyqsCjBMBJsOCiiLEedxAhnSmhsCKQRgBK/rCU4zJwm2cQQyqwCKCPsAoVYDqeAwTPmGA+H8KruI6KqE7TJgGX/hjHgzoiMq4hUtIEtsYhE8w4RGqqAJ4oxy6Yj1M6CI+S8Ul2PARRxAq1UbiDN7jBS4gGZ7oBhPWoivKKu8BxQ22DGZ0gSeKoQGuYDM87cLvxTnUQ1Fp5xatfiCFMGEIKqASzmOLgwAnUVGMHQqz/c51QiyFFQYY8RUbFQF24QuMMMCKxYqda/WELOSiJM44OAP7cAx5YmyW4v3gdoD8QgIclQJkKgJoXwKbs5dAGmfFQu1LoLgJKzp9EwLDYXZ0H+g+hg0LeQzPo4H0GHaHxXEI9Yuoi+JFlIbLsOEDjiJMqo3CWbyHDReRLIUwYQ26oAy8XHkVp0qv4oroCiNmwg8BWIjnaI9KuCkCJ4ttDJZexQ9RRacZpUvNaCCsGIrRsKKXXTO6pWhGExXNSNmOz9i148Z2Y/0wXWrHE+CjmBmbXGnH8oSkuBMTkhCsxlIEOTEhKYFW6gmJ/pQsDCH6U7L/YFJa+q9Ny8U1XoqvWO3iwiQc66WFSbA7S7OtukszqbaOToC6MGG3/uKUWrE4dacTPsUqjeX5WlG7qKA+8BPtsdlRi/J20wAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 27,
+      "title": "Best SERP APIs",
+      "link": "https://rapidapi.com/collection/serp-api",
+      "source": "RapidAPI",
+      "domain": "rapidapi.com",
+      "displayed_link": "https://rapidapi.com › collection › serp-api",
+      "snippet": "Whatsmyserp, SerpHouse, Apify, DataForSeo, Zernserp, and Serpstack are examples of free SERP APIs.",
+      "snippet_highlighted_words": [
+        "SerpHouse",
+        "Zernserp",
+        "Serpstack",
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAaVBMVEVHcEweRXMdQ3EdQ3EdQ3EcQ3EdQ3EdQ3EeRHIdQ3EdQ3EgRnQFOGsdQ3ETPm6AkKeos8ONm7AAMWf///+7w88dQ3FYb49wg54cQ3HW2+L3+frHztgAAFE2VX4AJWFnepfr7vJGYIUAAVbyPfH2AAAAGXRSTlMADWKpyefYeiv/RQj/9P////////+7//+SziUNaQAAASpJREFUeAFt0QUWgzAQRdHBGZoG+bjD/hfZpHNI9dV70Qm5PD8IoygOkpS+S0N2xdmnBfxReHs7YiT/KRNL7ti3u5DOi6Jk9akx26oSz8pKVI6ciBWQUIs21jy26RauTrMtM9jLjgMwmtcwmpfsGhpkQWBSLdBVE6DlP49S+aIxzR1M+VxjEfXJF1RAsW5Atxa4sKfEIcYJmHYAh2BDvcMrh+FfbC9MBKs/GFDGguM7ynwTujHrqloXJyNQL6yq54hivdXDbrcvnnZOsO2aichX8qtl+xdQnDXsKHVPpoi3Li+P1UC7TkC52qNWsmYpa62Unemh2A6oUzK814JqjIv9s8pRKFlOqbd4sJZxaGshSbKv0FVAb6XxO90z+ixrLop9+lPqJ4n/vtMDABEijS/EMKgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 28,
+      "title": "Best SERP API 2026: 8 Tested, Ranked by Real Cost",
+      "link": "https://vendor.example/blog/best_serp_apis/",
+      "source": "vendor.example",
+      "domain": "vendor.example",
+      "displayed_link": "https://vendor.example › Blog",
+      "snippet": "Best SERP API 2026: 8 Tested, Ranked by Real Cost · 1. vendor — best for AI-native cross-surface SERP intelligence · 2. SerpApi — best breadth of ...",
+      "snippet_highlighted_words": [
+        "1. vendor — best for AI-native cross-surface SERP intelligence"
+      ],
+      "date": "Dec 2, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA5UlEQVR4Aa2RIQzCMBBFz85nBo3EJ3jM5CwKhUFW4earsLjpJfPJ5Hxq55ZM1k1NPghNL80At6fu+ns/vV/ZiMNB/vAYAaY6ly8syl1WDEB3K8rKQbXSPPSZdqZfzRlRjpCoVrXABFdtFjpRLhTimWJ7hl3i6UUKOEngySBKM2efB9YS6GijdFvycKRPGvRaiQ9Fq2ZOJwcva7HBBU+vuTu1NSBvKuZkuWcsPztbZg2whGOse8Y4FxgZ0zC7VGvgknYsotQxePXRdXYOph+fbY2petI59Yosd/li384A3sof8ky24QV9QKc6E+/aHwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 29,
+      "title": "Google Search API for real-time SERP scraping",
+      "link": "https://www.searchapi.io/",
+      "source": "SearchApi",
+      "domain": "www.searchapi.io",
+      "displayed_link": "https://www.searchapi.io",
+      "snippet": "Real-time SERP API for easy SERP scraping. Pay only for successful searches. Precise coordinate-level geo-targetting. 99.9% success rate.",
+      "snippet_highlighted_words": [
+        "Real-time SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEVPRuVMQuVEOeQ9MuNBNuRkXefAvvTk4/quq/H///+xrvJFO+Sgne+Ef+s5LeNNROVHPeSZle5JP+SUj+5UTOZtZ+hfV+f9/f88MePe3fliWufU0vfy8f26t/MfCOHKyfZoYuiJhOx7derHxfXE9wZ6AAAAzklEQVR4Ac3R1QGEMBAE0CQbLgzEDnftv8dzhQKY3xdZYUcOF0SC75sMTkqdArlnFEJFkUJIW4s1jBWxNdDxvzmP8/1BeYZ3f5iksI5fi3IWqf9/NVKU5YzlGako3uL1u6K4fvyPlPxiQl9WpnR9lrxznq7PUlp+tLpjVQfeN3V1x+oHQ1WhadsGlQp/kLp+aNsrjuMV23bou8+ziQEw0QNpAmCST0U+m5NlhR1Hi3VJ5sz/TC+RdbdU41gtXS0Tt9kYcbGugpNk+xGCHToXdYwODzWZbBgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 30,
+      "title": "DataForSEO API v.3",
+      "link": "https://docs.dataforseo.com/v3/",
+      "source": "DataForSEO",
+      "domain": "docs.dataforseo.com",
+      "displayed_link": "https://docs.dataforseo.com › ...",
+      "snippet": "Welcome to DataForSEO API! This is the starting point on your journey towards building powerful SEO software, data analysis pipelines, and robust no-code ...",
+      "snippet_highlighted_words": [
+        "DataForSEO API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEVHcEwgLJ0gLJ4gLJ4gLZ4gLZ4gLZ0fLJwgLZ4gLJ0WH5wSIKEAEaUAFKT/1QD90wDzywD70AD70AD4zQD7zwD6zwD70AD70AD6zwD70AD60AD70AD6zwD6zwCbli+nAAAAHnRSTlMAQI3M9v9tIelXDaL///+jDPT/HGsu6sxbwJDZh0BDBrAJAAAA70lEQVR4AYWPBYLEIAwAp+7uK///5kGD3PrUaAYiOIIwipMkjsKAZ1IlLHH6oLI8eSDPcBTJC8Fn521mc4VBlgWhrSCZzV/xlChHkcqyxFFK5ykgq9OlVZWeViaCwJVPffrCBEPJL06s7SMkkvSSSrA7IymZ+YOyNZB8taIBqtpRQdnoBa0G6FpHB72Eh1ExwTw6Zlj0d2XTnx16LzFbDy76s9l/s5OrXty4n4HFWHE+OEh6RT933YzmsDE5sPHA1aRgPe26YJHgFc00CsfeQ79vu9gJcOU9dzy/7LQ+2oUH5sGrdeeZ5XasShw3f+wPV8cYQ9OKu/4AAAAASUVORK5CYII="
+    },
+    {
+      "position": 31,
+      "title": "Google SERP APIs Ranked by Speed, Cost, and Pain ...",
+      "link": "https://hasdata.com/blog/best-serp-apis",
+      "source": "HasData",
+      "domain": "hasdata.com",
+      "displayed_link": "https://hasdata.com › blog › best-serp-apis",
+      "snippet": "The best Google SERP APIs in 2026 include HasData for real-time data with 100% accuracy, DataForSEO for affordability and scalability, and ...",
+      "snippet_highlighted_words": [
+        "HasData for real-time data with 100% accuracy"
+      ],
+      "date": "Jan 5, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAkFBMVEX////u9f+Kvf8Ahf+Swf9fqf8Aif8YkP9nrP/2+v81mP8Jjf8Aiv8Ai/89m//5/P/h7f/J3//D3P/n8f8Ahv+cx/+31f+92P9ysf+bxv9Rov8hk/80nv/V6v/U5v+t0P9bsP9gs/9Gpv8qmP88of+Jxv+Oyf9Qqf+azv90uv+p1P+Awv9+wf+/3/9st/+02f9gJ21XAAABU0lEQVR4AXWTVQLDIBAFt8Y2JYG60ihQid3/dl2o2/tJYJDB4C2dDvxNt9fr/2MDhsiGP1Ew4hiGGAn5zcacI5tMGXI++2TTOXIknRl95pN3tughIsByBVJE2Fu8sjXDiPP1Zt7bAAwZztdPtnWN+4TJlqr7cwy395W7aaYAO3SJlIQVCeyu++E09zCjj4+zjRlRDwXHaAkBjX2FWwlJRJ/nsH1v5TKibXTDBn5n0kxwt21+PSziQ9LlKkvdTskszQsaTUjaiXmceOkiTzPpu+ZKi6vIeExbRFFa5Z5JYw9UQPTbNp1fWWqN9NDYTGm9I7rpE9tprTJrCDp6NPZ0pZxf2cmaI9xyLm2llCYtUtFKV7Y8wyN1aY32WoJUjC1reMm+9FoUdbCm3MNbZqSVEnWa5usOBtbYRqmGPhK+Q9Jl6VR+pi2NKVv4k7iq4n/s6zlcAMZeIVgJ2P4DAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 32,
+      "title": "The Best SERP and Web Search APIs of 2025",
+      "link": "https://www.scrapeless.com/en/wiki/best-serp-apis",
+      "source": "Scrapeless",
+      "domain": "www.scrapeless.com",
+      "displayed_link": "https://www.scrapeless.com › wiki › best-serp-apis",
+      "snippet": "Discover the best SERP and Web Search APIs for 2025, with detailed reviews, features, and integration options, including Scrapeless SERP API.",
+      "snippet_highlighted_words": [
+        "Scrapeless SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAk1BMVEVHcEwXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcWFRUTEREYGBgXFxcRCAoCAAArMC8ZHh0XFxcVFRVSV1avr6/Q0NDg4ODs7Oy+vr5tbW3///+Xl5ccJCNjjIV2lY9Tc244Pjx6u7C77+VvsKWI0sWMjIyn1s2GzMBrpZsfj4IQnIwRp5Y0nI4VSUMTg3YZdmsVYVcUosDrAAAAE3RSTlMAG1KZxev55f///yvN/////8swD1DOIgAAAfVJREFUeAFkkoWaq0AMhYtnsjeBulF8i9Xe/+nuJPVvU4Xzz4mQyTsc1/ODMAx8z3Umf8PxInhF5P1BPBUMIhr9A96X/PNPbhJDHMcJszLTn7c+C6zMPF8sV+vVcrMlEiSYvc6rvl3ubKw3+/1iM0+VeHpYf+S9yKstsMR8mwgxfdVneCP6QrRDlqeEsQD3Sh3R9fwGuSircp4khlgBcO4GvNX09nhV5XndNE2dA0pj1sKJrMFKgF+Oj1VWt42+ukSIyJm4L4OCs6q1x9tSoVo7cW0GwwsBlikfq7op+34Yx1PZNgfWMn0wyVIB5OOxPdgOzv04DnXTFgjgTwLAWEtYxXxsc0YARCHK5kAAwSS0wHonseVDY7Q7PI82S9uBgVABcZAqMTcoFiZVizIVILjXoMQ2Bfidk7W4WItegMAWCdrFg5FxAJAAV2nUl0HSfPcOBVCBXPfGBWux+QC2dK9hvEmbrozalrl86Qs00oWNM+qodRspfXpsCB8l9Km5P29HO+fC7ttyM2fRb2pA8rhfC20S5oSYDBiyCS7jhUANJKZCJOeYCJEovtoGLhfZuelradXifL2dz7fLMA638w2MLu177W1gYtWhv9wSSsm81149NIshk6b/J8ABlETLOFCXgtVAohPhPsKZFy37s7OxsaNmfwA3oT6bTeXa/wAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 33,
+      "title": "Topvisor — all SEO tools on one platform",
+      "link": "https://topvisor.com/",
+      "source": "Topvisor",
+      "domain": "topvisor.com",
+      "displayed_link": "https://topvisor.com",
+      "snippet": "Topvisor — all you need for SEO on one platform. Gather all SEO processes in one place: work with semantics and URLs from SERP Top, check rankings and keywords ...",
+      "snippet_highlighted_words": [
+        "Topvisor"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEw7YYY7YIU8YIY9Yoc7YIU9Yoc7YIY7YIU7YYU8YoY8YYZCZYw7YIU7YIUjY+r9AAAADnRSTlMASeN0D/UeqbyILWEC0DReI34AAAD5SURBVCiRXVNJAsQgCFMB9/H/zx1ZXGoutQ0EgtS5hQg50Ai5VPfC/8ZGaB8K8/jgFw9Xw3hAfnP0chPGouWF4mP1xSJJla2eddEdWF3p8w5UU7Sj1YOY64hdWC2zDoW/wSwegIPAEvSJ81MS+ZE4jjRD2smcxwdAGLACswum2uUwjVGYdZsWJWsMRR5YAM0CuTUOPMM5JKsTLllRO7I9hSwmYZFXQxs9KcdWcJuPnnEPQRN5atXm3Pf4ul/jc+V7gc66EX+9PWTM15VZASajb2Ut2rrDZGQdF3aVpG/pUGfBZFPmlM5+3qs5LZZ4ZvQstZPtYFef3+EPxqAW82clulkAAAAASUVORK5CYII="
+    },
+    {
+      "position": 34,
+      "title": "Exa | Web Search API, AI Search Engine, & Website Crawler",
+      "link": "https://exa.ai/",
+      "source": "Exa",
+      "domain": "exa.ai",
+      "displayed_link": "https://exa.ai",
+      "snippet": "Real-time AI search engine with a powerful web search API, web crawling API, SERP API, and deep research tools. Search and extract structured content from ...",
+      "snippet_highlighted_words": [
+        "Real-time AI search engine"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAdVBMVEUfQO0gQe0eQO0PN+wAM+wAMewALuwXO+0iQu2aqPfJ0PrL0frY3PtjefIAIOvO1/z///+sufm0v/rk6f1zh/TT2fszTO4AE+oAH+tTZfC7w/nu8f43Ue8jRO1HXu/g4vxBWO9tf/Khq/aFlPSUofX4+P7ByvriBD8xAAAAr0lEQVR4Aa3SAwKEQAAF0GzbGtz/hots/9yrMfFCyP9Wn5ZGjTMzmmG5NizDT0jgRElW2kiSyghj1HRDMa06pm043BQlw/V8LQg0P7QjurYB5diWEipNqUzJC56coq6UscgTVGrFJT22GnO2skuaBjHkKWKBXCLnaRZHKU8u0fcTO9Ltgp5YjTLCErYNFNZdvILbxW43aLsrW4NwYfi2B357yrYne3uZbC+wS0vzcr7SpBNhV3PZ3QAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 35,
+      "title": "Tested the Best SERP Scraper APIs in 2026",
+      "link": "https://aimultiple.com/serp-scraper-api",
+      "source": "AIMultiple",
+      "domain": "aimultiple.com",
+      "displayed_link": "https://aimultiple.com › Data › Web Data Scraping",
+      "snippet": "1. Bright Data . Bright Data. Best Overall: 220+ data fields (2x market avg) ; 2. Oxylabs . Oxylabs. Best for Enterprise: Most stable at scale (~ ...",
+      "snippet_highlighted_words": [
+        "Bright Data"
+      ],
+      "date": "Jun 2, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAclBMVEX////p7v/P2v9ji/8AUf/y9v8ASf8ATf+8y/+Urv8AV/86cf9HZv8AWv/X3//+/f/6+v/S1P93fv8AVf/u7f/l5v/w8f+fpf+Umf9Zev/Mz//Q0v+nrP9xjf/Bw/+8v/9bgf+0xv9sg/8hYP9abf8oaf85tDlXAAAAh0lEQVR4AdXMxRXEIBQFUOLugjv0X+LINpxfQO72CXqtLEewooSzqm5aMOzKfgDDsZ/qeVn/kmzbp+kozuvnTkJMaD81bOOcLc/sxEKU0yGV1jwZMq2VOaZJCJy8rozzzTbT4QhOhvf1c9Jj8vuWhOvfktfTERAk9mUHhrapKwSqCwTLM/RWX49aCA4xm4Q1AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 36,
+      "title": "Best SERP API in 2026: 10 Tools Tested, Priced & Compared",
+      "link": "https://scrapecreators.com/blog/serp-api-comparison",
+      "source": "Scrape Creators",
+      "domain": "scrapecreators.com",
+      "displayed_link": "https://scrapecreators.com › Blog",
+      "snippet": "The 10 best SERP APIs in 2026 · 01. Scrape Creators · 02. SerpApi · 03. Serper · 04. SearchApi · 05. ScraperAPI · 06. Bright Data · 07. Oxylabs.",
+      "snippet_highlighted_words": [
+        "01. Scrape Creators"
+      ],
+      "date": "Jan 20, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAwUlEQVR4AezNHYzEQBxA8afj0ORg+KR0XB0oVIdqtZWT4mpx3caTFkfLxVKhNEl9HP7J7Eemya7r/vTB4ytzq0W3XQlQdq2mWR2ZTb68pIcbjOnh+utTm2MvhiPA0DAkRzFvGLnm+C8Ne7QlsEYFRUEtPS/VtmtaSbJUxMDLz7YbnproFVA7iRw5MkV7Pmt6A16YpIb+fJ4xxtFJwEh0k7zHLg2q8uGY/8DMRxiVGtKFbAmWD3ZfOKEVH5S+b0SlEAAu3l6/giyXzgAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 37,
+      "title": "Best SERP APIs in 2026 (+ Alternatives)",
+      "link": "https://www.rapidseedbox.com/blog/best-serp-apis",
+      "source": "RapidSeedbox",
+      "domain": "www.rapidseedbox.com",
+      "displayed_link": "https://www.rapidseedbox.com › blog › best-serp-apis",
+      "snippet": "Top SERP APIs in 2026 compared by speed, price, features, and scale—plus real-world alternatives for devs, marketers, and SEO teams.",
+      "snippet_highlighted_words": [
+        "Top SERP APIs in 2026"
+      ],
+      "date": "Jun 1, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXUlEQVR4Ae3RA2xYURSA4TsjmIIxmG1b0Ww7mG3bW23btm3bNoMyal//2o3dJN/jyT0Su76mHoMiFHpQxHfMwS38x98e/uM6RomOD9IAyrAOvoP8t8eY4QPaD3iHYhT1UII4rIQNqlCOsp1f0kp2fklvfdbf/S2l7YA52IgNPWzEGkzc/ilzzqZ3eQs3v89deFg2dM0dM5OTLxzUXl7QcFsqSUK0HvAQ0YjqIRoe+3/GzzPLvTxZNfbJduWYZ2+Uop+7oRjVytHPtnEXg86gtdRH1ro3CApWjHpRhWJUQOrwEkMfcNfc6AwHOBN4AWtwEOFogjMmDLmFo/LBaznAnkBj7MYVhMAT8Vg11AHlW97nLKT31x0l16MREnKhgbNDHtA6fQa4g8BaSD0EYDGmth5wDoYw6MEQSts+Zs3QSLg/jcBYNKMIrjgG0TnEEYMRQmoNGok7uI8VmADRqQUF500o8wt4cwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 38,
+      "title": "Free SERP checker - google ranking check - serprobot.com",
+      "link": "https://www.serprobot.com/",
+      "source": "SERP Robot",
+      "domain": "www.serprobot.com",
+      "displayed_link": "https://www.serprobot.com",
+      "snippet": "Free SERP check, track and monitor your search engine keyword ranking quickly and accurately.",
+      "snippet_highlighted_words": [
+        "Free SERP check"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAKlBMVEVHcEw/XXY/XXY/XXY/XXY/XXY/XXY/XXY/XXY+XXY/XXY/XXY/XXY/XXbqppuTAAAADXRSTlMAIk5p6ZO0xjkMg6bU6Oj/8AAAAKxJREFUKJF9k+sShSAIhEUUzMv7v+6pTimXRn418w24C1sIoo6YiZkyQrBVeMzqqFkeqlIRjIatNbs5FieLGxb6hsGUgQCRFFtT/w5QsgWrcy/1UDzccqT7bJeXlNSsu1Eb6bCjSffKm1yTrWQSLyfnCHBh+erzDf0D4rsb8rBe8muBsuIw5ZqE3GvcsPEk6OAP1t5GH6019JSaDNNXRZEhf7LzT6iNmRvKLP8A+FMTd7jpkxoAAAAASUVORK5CYII="
+    },
+    {
+      "position": 39,
+      "title": "Reader API",
+      "link": "https://jina.ai/reader/",
+      "source": "Jina AI",
+      "domain": "jina.ai",
+      "displayed_link": "https://jina.ai › reader",
+      "snippet": "Reader for web search and SERP. Reader can be used as SERP API. It allows you to feed your LLM with the content behind the search results engine page. Simply ...",
+      "snippet_highlighted_words": [
+        "Reader can be used as SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAuUlEQVR4Ae3WMQ5GQBCGYflP8Z9jG0eQiFqvUeIY22pUarVSqXIXcQhGsgmZ4FsJEFu8xUYyT6ZgWU7iXZoBnwdaWfZbCoN7kTQVVA8Sh21Iw0IN0H89aEDXgPeBVRT9uyCQVEnJ8XwaSEBM9QvFO0GBwBGzGcKzdUE1E4I1AGsF+gBsdMEWgK0mKK4E82kmBiUAJQAbfAGjLdl2HASbYVChBcOK+XMG5vw9xeDGB2Dt1ufnb/y1GXAAv6wltzu43oUAAAAASUVORK5CYII="
+    },
+    {
+      "position": 40,
+      "title": "7 Best SERP APIs in 2026: Pricing & Features Compare",
+      "link": "https://www.webscrapingapi.com/top-7-best-google-serp-apis-free-and-paid",
+      "source": "WebScrapingAPI",
+      "domain": "www.webscrapingapi.com",
+      "displayed_link": "https://www.webscrapingapi.com › Blog › Guides",
+      "snippet": "Compare the best SERP APIs of 2026 with normalized pricing from 10K to 1M searches, response-time benchmarks, feature grids, and a decision ...",
+      "snippet_highlighted_words": [
+        "best SERP APIs"
+      ],
+      "date": "May 1, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACbUlEQVR4Ab2XA5AcQBBFJ7Zt27Zt27ZtuxDbtm07hTgpxLaNf577NT27teqqd759b3qtmjVrpurUqeMyRbaMSQpSGojr6H/93Gro0KHKxQmS/xPoqBwM3G4HDBPk30BsXwTcFQI2KoxXAyApbFl/VZcCii24UQJ0NNDUEDBPkD8HYZQ2s0+kqgo6GqgbHABJGPAE/DOwnOSRwFshYCrJo4IP4J+BSXpATV1KlKGA+pb1Z6eA5rqUyOwnzqTChPX7fEiQPwC8/t2C/IqigeSQID/vd3g/cT9w03L6MSRPBP4KAb1JnsJy+i5BAYnBX0tAGgoYIMh/g/gUMFKQfwdxgu8FkOwW5CcMt/5rQsAOkvtxXwjYoDB6QB0hoB3J82lCpg4FlLWsvzIHhAMvSf4FxKSAGYL8DYhIAasF+VNAD0QYyKZRwBqShwevhIDZJI8FvgoBExTGFJARfNECilJALcv6C1FAJ8v6M9oeivOA4aC04ca3XZDfDhMxnKKAc4L8nNJmx44d4pMRy+OD30LAUJJntpy+o9Lm0qVLTgf0sqw/KQVMFuRfQWxXA64I8oMk9+O5ELBe0XCAJM9hOX3zQHFGkA8MtN/3XQuYJsg/gWja6e+wlO/7tgCWBn0OA54LActp/UMsARPZ4SggJWgGxlrWX5YCklgCMjkTwBFHLfJHQPFAtNf0vK8wrgS0sgSMU4aBrKEhoLOrAdHAJyEgvRAQCbzl532nAwwRSwzys4qGIrqEetGJcSeghCHAtFKOSAcyK4xbAQlqFuZ3P99AHOXiuPpAVBF8phedHgtw6u05xBFANP65u/To0UP9B3/k7pOgQybLAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 41,
+      "title": "4 Best SERP APIs in 2026 - Blog",
+      "link": "https://www.capturekit.dev/blog/4-best-scraper-serp-api",
+      "source": "CaptureKit",
+      "domain": "www.capturekit.dev",
+      "displayed_link": "https://www.capturekit.dev › blog › 4-best-scraper-serp-api",
+      "snippet": "Serper.dev is a high-performance SERP API known for its speed and aggressive pricing. It queries Google directly and returns structured JSON in ...",
+      "snippet_highlighted_words": [
+        "SERP API"
+      ],
+      "date": "Feb 20, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEAUlEQVR4Ab2VA8wlSxCFJ7bXti7Wtm3G1tq7v/+rZ9u24uTZjp8VPtvurrN1prKZxeD3Tb50p+Z09elq3KA2D70bcnjk5Hj8eWI85OQEQPvGhLZRF7VZUCd1E+Sv+jwebZmNPkFTEQ+X9cOJMeKOjwHOYmzECYP9mHh7EVfJA41FPBDo6n8JE42DKOgqTp7L+AittK/TWGMOXwR1OfgTMULrdx/MX18QF9Tnz9nvrIET2kddAszVUASChoIFMsl1LTTXMJEGil2XlNVsM6pvNAPtGxjqCzHxAleUMb5AovGNk2iAg3KRIIsjI6x89WbEKFrsyEig7rQZxtkmobomGtAyWKCYDpPR8T17gYuWseRcMWGfMcHde4DmKdQynpLP5kTTZBqYlDZxlMhKLPj9B4+nrxHs7w+0TFOmAvsHAM9eL/j5K0HzVKGW+5tO0cwGdJElppDt3j7Aczc6/PcPcPVm4Mhwg/3/NfbcTR57elulmqawTYF51XyQJuS3Y6OBe/cL/v1L8MItQMsMjw9fcuDv09cN/j540aFlug81//0N3HdAcGwUK8RSxzDJKhg0JwgIV87yX7JC8CxX/q9O/iIPmsejDQ7vPmM8on3GPnqJlfBaif9xyUoJx4b5p8QwOc5AjJDfeQ4ODBJcvdVBIDq5YF9fvvkSsq8fY4D3gmtUc3CgsMRcPReRhFYMCOgiTUQD1JRmcTsEn7zm8e5TEj6lrTOj+PvPCT59U/SaCsqzOYZjU4gMZAgjA/yLVgNiBiZobDZQmWPn5P3nBZ+pgaMjYAamc1w6rTOAoDVLON224vAw4NptACB4rNHrlpghcnAwwph4wbXbBYeHRiu0HPGwggFdJApmWKLLVgtevBX4/1877Y2TPB5vRnggP1KeaAEaJ4veDh9ex5duAy5fY2NLM5knFlbVDLAK1p4rsCf6voMef/6qV+w2h/Jcj49fsUp89pbDZ287ABbjtxfvcPjrN4/7D3nU5bgdKQb0W5DmkCVqmcHEgtIcLftgVoL3XHDdLhcevmNjtL/ThbEXb+NtUb1qK3PFJpmZTDk0MIsTkWShVYcVEfz+o4QvHk97bT5QVY6OBJ6/2eOXbwTVeaa1G5KOGZidLTQNVwY8eMzhivVilZltqEGNadmPuNCUafktHd6gwIRtp75gB7Ry5rg5Fqsv2uRRPJ3K3MiABbNhyTkwLhm/WT+LudZWaaDSjgFsuxKelyBVNC+ZahfAigXakY4OtrZzBHpqfWeT1OJYELXJiAsuWohfNInQCIM9g7gLFwIXLcIXgXYevmY5cNFCcbWF5wgXtp8LslgEXLxI3HUrQgMPBC3L0ae6CA9WF+I7FXgTdSfilG+1/+ClOvcpToX7s+Qb9xEAAAAASUVORK5CYII="
+    },
+    {
+      "position": 42,
+      "title": "SERP Simulator: Free SERP Snippet Preview Tool",
+      "link": "https://mangools.com/free-seo-tools/serp-simulator",
+      "source": "Mangools",
+      "domain": "mangools.com",
+      "displayed_link": "https://mangools.com › free-seo-tools › serp-simulator",
+      "snippet": "With the new Google updates, you can also see how much space AI Overviews take at the top of the SERP. ... Mangools API · Custom data exports · Free SEO tools.",
+      "snippet_highlighted_words": [
+        "top",
+        "SERP",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEz9RJb+Znv9Znn+h3b9Xmv/uBj9Wmv9YXP9YXb+lqX9Ymz+c1r+oTf+lUL9YGv/vgH9Xmn+kDH/wAD+izj/wgD+ek3/tBT/pyP+al3+nCypUrIqAAAAEHRSTlMAHC5PGePv/mk8CqCcoYKB+frU+wAAAMVJREFUKJG10tkSgjAMBVAUaurepOn6/x9q3DAt8qZ3eOLMvQOFYfh7ttbuV2hvIuVcL9/MFkrBS3bTslfIeXePdwtFyk+T7PrRyLM5f27RcP2gSxttB70q1VP3OBpD7N6jNqh3LRIFjaPCEYjTXPUpWoUTRKpzNdSiccBCnMO7SNB8gKNURe9nGxJHOGicEJiYckqpMoNpj+iIyEQsIUa0LQ6AUIRJNhE7k2FEkPty4fJ/mAy+0o8+cn2QWf2PrN2u0A9zAzpXEunP0iwRAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 43,
+      "title": "Custom Search JSON API | Google for Developers",
+      "link": "https://developers.google.com/custom-search/v1/overview",
+      "source": "Google for Developers",
+      "domain": "developers.google.com",
+      "displayed_link": "https://developers.google.com › overview",
+      "snippet": "The Custom Search JSON API lets you develop websites and applications to retrieve and display search results from Programmable Search Engine programmatically.",
+      "snippet_highlighted_words": [
+        "API"
+      ],
+      "date": "Feb 18, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAqFBMVEVHcEz////////////////////6+/v////00MzqpJ3kjIHuuLTaSjPZQyjvvrnb3d7ifG/bUTvXOBbcWkbssKn8/Pz9/f3qkSr65cz1uSr1shr////51Y95oPKFp/Lp8Pf9/f74zHb2wEknc+w/fu7W4fsxdu5plvBLnVW61r6yx/bFrCo+mEeqzrDP48xEhdT4+PhurXRImk50prr09PW/2cKRvpX4+fk/1NRtAAAAOHRSTlMASZG/1P9bmf////////8L////////U//////I/////+P///////////////////+p////bP//1K7ZPBUAAAEVSURBVHgBjZAFEoMwFAVrv0ZSd3fF9f436wuuM12cnSwktT+pN5qtVrNRL1ENimnkVJsytNOuQzk6Bdft9fu9bs4GTYlxBjgbpMtDEoz4OIBNeiQYJtERE6+n0wnno3TYb2Icn82J5r3AAeEWBJZszFeUZRFWV+sNm5VNZ4vrbr3ezAnsDz77I+63kCdcz+v1hQTXm8/1jvtThXxEMsqS4CnAyCAb/tBm/XpTyOdxexDoRFP5vl7yMXBzZPfBVAABRYb1x6pa+D9UE+gEDBNWNgxTNrXHgYCeWnhDfgETh2ylFr5mU1CWTSDLCglsiCRMc8c1DNchiqJpmyblUJ6n1RzNNEM91nN9WCvQ1r3TydPbtf/4AWLQIeTekR1qAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 44,
+      "title": "Top 5 SERP APIs for Real-Time Data",
+      "link": "https://trajectdata.com/top-serp-apis/",
+      "source": "Traject Data",
+      "domain": "trajectdata.com",
+      "displayed_link": "https://trajectdata.com › Blog",
+      "snippet": "This guide compares the top 5 providers and explains why Traject Data stands out with real-time, structured data, global coverage, and unbeatable reliability.",
+      "snippet_highlighted_words": [
+        "top"
+      ],
+      "date": "Apr 14, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcExtoYtvooduooduooduoodwoIpwn4xtoohuoYpqoIRknYCVu6fV49qiwrL//////v+yzL6aMsSfAAAACnRSTlMALH696/9dEttFG0XhegAAAKJJREFUeAF900UWg0AQRdGyT3tk/4tNcGg4xZtepJX2WNQAU2G6Nhj2bOgoRHTFcFjCLXas0wAgl64MYPlyHK22rjpqpLEBI77eXRMijWg3/CwYiRhz9ai9FwSTYClvle+GQopLByrZFfOOkeCjPePjZ9VHJfFRiH0MROZhJKLBw7RsWV9dtky3ze7K+2Y/HRNX2T+aGtxDHRNdY9FoFs/X4Q+O6xHJinCKLQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 45,
+      "title": "8 Best SERP APIs in 2026",
+      "link": "https://www.scrapingbee.com/blog/best-serp-apis/",
+      "source": "ScrapingBee",
+      "domain": "www.scrapingbee.com",
+      "displayed_link": "https://www.scrapingbee.com › blog › best-serp-apis",
+      "snippet": "8 Best SERP APIs in 2026 · 1. ScrapingBee SERP API · 2. Oxylabs SERP API · 3. Decodo SERP API · 4. SerpApi · 5. ZenRows · 6. Apify · 7.",
+      "snippet_highlighted_words": [
+        "Best SERP APIs"
+      ],
+      "date": "Apr 8, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAmVBMVEX/yR//yh//ziD/0SD/zyDuuxyObgBTPQBXQACXdQD6xR//zR+xixMAAACPkZbLzM6Ag4nEmxrPoxfx8fH////h4eLktBsxIQC/wMKio6ZhSgDp6en/2SFUWGAAAAuHiYu8kwvxvh0ADy2DZgAnHAAdKT0ZBwA/MxBsb3VJNQDarByFahV8YhS3uLt4e4KigBdtVxNvVgCkgABIZKtmAAAAwklEQVR4Ac3RBYKDQAxAUUKGWja4O+t1uf/dKrgdoB/n4UhvG8iIMsybUBbL1XpDc4YfrGqazoY8NTLZsp857MIE0fPtsiDEsQGwXRXxFDds13GMSBPUkpSrViaOMONcKYqNy7blf37hANNvInhWlNf/yWmAZrlZo/OLAyTooc3Qv24qVejWSD3Ev1yUy/X/y/wt9pB2qYJEuGOr/BK7wUcURro3jANnvn88sSFGn35zvlwuh2sYXm/THwck6gikd+0BCCEQN2sYGfIAAAAASUVORK5CYII="
+    },
+    {
+      "position": 46,
+      "title": "SerpApi Alternatives: Best Web Search APIs in 2026",
+      "link": "https://serpapi.com/blog/serpapi-alternatives-best-web-search-apis/",
+      "source": "SerpApi",
+      "domain": "serpapi.com",
+      "displayed_link": "https://serpapi.com › blog › serpapi-alternatives-best-we...",
+      "snippet": "Serperdev is closer to SerpApi in how they return raw search engine results. ... When you want something closer to traditional SERP scraping ...",
+      "snippet_highlighted_words": [
+        "SERP"
+      ],
+      "date": "Feb 22, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEVHcExiYu03f+qKQvBUX+xVbOxVbOxjYe1VaexxWO43f+qNRfCNRvCNRfBPc+3///9PbuxIc+tdZe13VO9pXu6LR/D29/45fut8Ue/Au/dCeOtJX+uBTe9+Pe9oUe6FSu9iRO0eb+mvr/XLzfm6ovZhS+3t6/1xe+/i4fuTnfJkWe2GjPGZdvJEAbqyAAAADnRSTlMAuOPj/J4v/f78uLieLw44KcEAAAFqSURBVCiRXdLZYoIwEAXQUQGD1QYwBDESUWRx+f/v6yyh2s4TznEScgkAVhKnvR3a/eFwOp3PZVmutjsItTDGML61LL/E1us1Y7//oyueKwpUwnT/fzZRBappcdk0ZWyapmTeQawUjdZa1560vU1D92oIt6AIC6uxLGrb0ZN+4XizgixTykkHZ/1LnuyNCjFTbpDW1Pur/iiazNwkPzrv76FfU0FOo0/pjA/jrRjt2UBO6u7Ys8+HMQ8zsfFxEb9523F0EUVl2lrfQsxwDEoHoqiMr/XVS1Rw/FUlGpCUEZWW5VnT07Ic5AERNZMXihALfqGeFaoKOZxuLIooHMWTwmcinYvmEPgjgKUKncm5OT7DeKGag3dzVrYnhWVFu8onozDkfxRWmkJcsWKvzjiq+6AnDBkxhqRivVidc8zKYQgSJF7PDStiiIqRolrQ9Vu+kVQxosrF3QQMQQou5iufxEvEijXPCOOE+j9L4zsttDe+kQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 47,
+      "title": "Best Web Search API for Developers, SEO Teams, and AI ...",
+      "link": "https://www.techtimes.com/articles/316823/20260611/best-web-search-api-developers-seo-teams-ai-2026-comprehensive-serpapi-review.htm",
+      "source": "Tech Times",
+      "domain": "www.techtimes.com",
+      "displayed_link": "https://www.techtimes.com › articles › best-web-search-...",
+      "snippet": "SerpApi does not. Every query triggers a real-time fetch from the target engine, ensuring the data reflects the exact SERP a user would see at ...",
+      "snippet_highlighted_words": [
+        "SERP"
+      ],
+      "date": "5 days ago",
+      "favicon": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8OBgkIDQ8KERILDRYPDQ0MDRsUDxAWIB0iGCAdHxMkKDQgJCYxJx8fITkpJSk1Li4uIys/ODUsNygtLisBCgoKDQwNGhAPGjclHSU3NTc3Lzc3LDcvNy8yODc3NS40Kzc4NS44LSs2KzU4LSstKzEuNysrKzctKy0rLS0rLf/AABEIABwAHAMBEQACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAABAUGAf/EACYQAAEEAQIEBwAAAAAAAAAAAAMAAQIEEgURBhMhQRUjMTJRVJP/xAAaAQACAwEBAAAAAAAAAAAAAAAAAwEEBQIH/8QAIxEAAgICAAUFAAAAAAAAAAAAAAIBAwQRBRNBUlMSFDEyM//aAAwDAQACEQMRAD8AFuHn5Q8CufVt/k6Xzq+4teyyfHIvb08wWi5hGHn7eZF23Uq6t8SLsotq/RZgWXYk6ygk23BurWTFvsYxJ8uu8oZdn+VSyK0WI1Bv8MyrrWf1tvUGTuamexEbHKQmHWOfbdW1rVPrBjW5Nt0RzG2KLsQdUElzhbVRVSXZGz84GEcY79Ui+tniNGhw/Jrx5eX6wQm9GTzOgFIAgAQAIAEAf//Z"
+    },
+    {
+      "position": 48,
+      "title": "SERP APIs That Can Beat Google at Their Own Game",
+      "link": "https://medium.com/nerd-for-tech/5-serp-apis-that-can-beat-google-at-their-own-game-665b86aa822c",
+      "source": "Medium · Bright Data",
+      "domain": "medium.com",
+      "displayed_link": "60+ likes  ·  3 years ago",
+      "snippet": "What Are Google Search APIs Good for? ... Generally speaking, SERP (Search Engine Results Page) APIs enable you to scrape SERP data in real-time, ...",
+      "snippet_highlighted_words": [
+        "APIs Good",
+        "SERP",
+        "APIs",
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAARVBMVEVHcEwAAAAAAAAAAAAAAAAAAABwcHCoqKifn58bGxt8fHzKysr///8rKyv5+fnW1tbp6emQkJCsrKxaWlq0tLTBwcE+Pj777dpoAAAABnRSTlMAS8D5/5mXKh4CAAAA3ElEQVR4AXzRUQ6EIAwEUNRZClgFQb3/UbfQEDUbd76qL5WMGGOGccJPpnEwkg9e8pE9vGYw4zuOZnrHyeBPFC055zw0wTkKN8TMzEHHZWWOuCMJJh03QXpgrlr0IzLmB+6L4KzHZ0Ub947+EF3q4rI3zByuzSLogDOiYeCICxGZVxmsYuR8x9DaJFQkL3UoX+iTvNg2xbPVvrB37ZgfeGr7/tl0Q/2HXjEjSe0HWnlWJGz1DEXEAsla2lyXcIj2K6O6Wvr1kQXCnL7DG9l4kwneBIY3aeJN1HizAwDOfRO3mlC3PQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 49,
+      "title": "Top 5 SERP API Services",
+      "link": "https://serpstat.com/blog/top-5-serp-api-services/",
+      "source": "Serpstat",
+      "domain": "serpstat.com",
+      "displayed_link": "https://serpstat.com › Blog › SEO",
+      "snippet": "This article aims to identify and evaluate the top 5 SERP API services currently available based on a comprehensive analysis of their features, prices, and ...",
+      "snippet_highlighted_words": [
+        "top",
+        "SERP API"
+      ],
+      "date": "Sep 3, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABiElEQVR4AWIgFoyCUcAdt1BCMHiiGTUxT/RcTQAv5QvTMBBHYUgwBIc3eDUFBjkxgyCYKQTBzacKMYkZahqJmCt4N0tqpqsaRFXnJnq8l7xblvaWtrnbNflyl/v3vd+1ae8A2LAEVWCKIQFuQQZMSAa9Bl1dFiFAtBAKED+EXwCFuAelZ4DKJ8AzqDzkBc/wkXdVXwvjoDy1vAJzrd245Oezn6uz2fc0uFykly9fFwffSsogah84B3kCtqeQF5RwD0WslC1/5TYUxK+UAzNYrnYuSpecIklWYA0W9r/PQBozoB4kF8vG3EbirHW9lAhJpwwDdr0C8MCGPLWVUGSvlmNsWZ1TLiSu1e8OwINZsXi7fvy4oUiST13xZL+Bfcl74g6AiTF4ByNWaYclXzWqyClmWM0ZrwCS51rwBxIbQqGMg63WKliLXHQEkNxx+EJySsxAfsEI3LHfmm+8P8lDIbkeZ4ho8iMhOPAUTa6Hc/sQku8CsnbK3SESeyWTQIz/B86qJIBRMAoAIRPZ5kAE5lAAAAAASUVORK5CYII="
+    },
+    {
+      "position": 50,
+      "title": "The Best SerpApi Alternative for Real-Time SERP Data",
+      "link": "https://crustdata.com/vs/serpapi-alternative",
+      "source": "Crustdata",
+      "domain": "crustdata.com",
+      "displayed_link": "https://crustdata.com › serpapi-alternative",
+      "snippet": "SerpAPI focuses on structured extraction of individual search engine result pages. It provides APIs for many specific engines and services (Google Search, ...",
+      "snippet_highlighted_words": [
+        "APIs"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAZlBMVEUUEjwQDjYQDjQWFEAzMHw6NooZF0YrKGxYU8xdWNdRTL1PSrlbVtMbGUtIRKoKCCsAAB0PDTNBPZtGQqZUT8QHBCYoJWQkIl0ODDFEQKEAABo2M4RMR7IfHFIAACArKGo8OJAwLHWcsGBDAAAA5UlEQVR4AcSR1QKFIAxACWPIBBOG7f//5O3up3sMYr2x/8LFHv5MJKN4T5Q8iEUKKtuiASEVd8IcDbO2SAxAhvmtzBptWckqZeqm1cZey7hTniiCxiUqJa/cddiyCZ3LsKd2GCyzIaMrWQ+5UUEST9XItmAvLl5BwzBORFNTbf/U9niRzQhNFXag2S81zvxaGOotBof6sG6FJ7ZutS8stbAc3MJFJnqQtTLJVUIlO0NZ6LzGhR9Lacq7JpS0AqQS10sTrtvH+aKGqikv7bs0PrF2kgagwfyXkTGenIYt+Wb4ksmAAgDBgBDmbyAm9AAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 51,
+      "title": "7 Best SERP APIs in 2026",
+      "link": "https://cybernews.com/best-proxy/serp-api/",
+      "source": "Cybernews",
+      "domain": "cybernews.com",
+      "displayed_link": "https://cybernews.com › best-proxy › serp-api",
+      "snippet": "Best SERP APIs in 2026 · 1. Oxylabs – enterprise-grade SERP and proxy infrastructure · 2. Decodo (formerly Smartproxy) – most affordable proxy ...",
+      "snippet_highlighted_words": [
+        "Best SERP APIs"
+      ],
+      "date": "Dec 5, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAxUlEQVR4AYXSQQqEMAyF4Z5HEOYenqigp3HtIdxKzuB6Vt33BZJJsUhpRvx1Yz8jFQ1ARi5nDZZdlgUYPhfu25vqQg6wRF1yTSLLFpeuuEmd1BhcUeukLh5nw2yIJ8SNKx01Wh2SSk3J4SEAW4AcfzFZhmVy6ZDTNI5TYk7neX65xyGEIXFmZmFkQzT4CWFMDC7B8ugf22KzIXisr9IgqV6oSg5Xor3sdidaO3S94/PHrihbnLviJgZvP9hj2WOT4XW4bOkHahMT9tLeTFgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 52,
+      "title": "SerpAPI Alternative 2026 – Best Replacement",
+      "link": "https://www.scraperapi.com/comparisons/serpapi-alternative/",
+      "source": "ScraperAPI",
+      "domain": "www.scraperapi.com",
+      "displayed_link": "https://www.scraperapi.com › comparisons › serpapi-alte...",
+      "snippet": "... API designed to extract structured data from Google, Bing, Yahoo, eBay ... SERP scraping with structured JSON output; Supports multiple search engines ...",
+      "snippet_highlighted_words": [
+        "API",
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwYIOMaIuQZIeQYIOQZIeQaIuQZIeQaIuQaIuQaIuQZIeMaIeQaIuQAAOL////m5/wNGOTv8P3a2/pLUOgAD+SPkvDNz/g3Pee8vvX4+P6ho/JyduyEh+58f+0kLOVgZOp/BG0vAAAADXRSTlMACvswFnDLi+Lyu0amIm/CBAAAAX1JREFUOI1tU9m2gyAMpK0LdUkEwX37/6+8AYK19s6ThxkzkwSE+OCVVpmUWZW+xH9I3/WJd/pL1zfcJNmdr5/ZhX7IH54gH6cgulsIUJzkVh/2uW08jLLWnWRf+aBDnFgwzJ06kz6Yn7ExbDEgYgPu1MXIPa8ObMH02qGZ0HS4uBo5CZ6hQIuwILYe+hQ8ab7cAY6Aur5b1K/oYLAzuMLgCoxHzSGdR3ERdDC4DPT7ADzPQvAQFVlMevcOlho2XEHGKVJISyH9GGYKoSFOkwXk4dp0vMZJrbhaFsQ9uUEdoYnFddQDWxQsUG7USBFbCz1Cyx4Ft1nDsoHqemqy/xLkoowZUStexUH1KZEnSiF8/Q3nDZswaNLuC3YhJC+LOj92nHTAWNO3ZQchkrAKQtw2rOegEsEl1DCOBrZwXyiO+RQgSN8lKMWCfuVbKeOlfp6zCLC8qfNaJ1HxjeTzMJJ/Hoa88OfNvCC/P86kutJVcucdyjyj5b+zvLwc/gGlbS/OIXT/3wAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 53,
+      "title": "Best SERP APIs & Web Search APIs in 2025",
+      "link": "https://www.linkup.so/blog/best-serp-apis-web-search",
+      "source": "Linkup",
+      "domain": "www.linkup.so",
+      "displayed_link": "https://www.linkup.so › blog › best-serp-apis-web-search",
+      "snippet": "The Best SERP & Web Search APIs of 2025 · 1. Linkup Web Search API (Best Overall) · 2. Tavily · 3. Exa · 4. SerpApi · 5. DDGS · 6. Serper · 7.",
+      "snippet_highlighted_words": [
+        "Best SERP",
+        "APIs",
+        "API",
+        "Best"
+      ],
+      "date": "May 8, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAA4UlEQVR4AdxRIQyDMBB8My/mZtB4h8Yb1AwSO4esmheo6qoafJrM1KKQTaoR+CbIWxsooSTMZye+f7m77ydP/4em+Sn3sAb6WjcmVLVc6cKur7TERHejMx7YGwxSoz0blIyLcOefDDmlWAdky0BkQ7oXqf6yoT7BYv/WqeHT+dKi3Kd1KjW4woeQrWRkWyJdgeG+kTB+SZesJmrw2EjJF+PgMQYWMzmK0DT9hFmhGsIPKChCSDwp5xaTrD2dSxDV6I93EtxBxWNq171mF6wRGlDV0Q+TXp61Ca35jb4jEYwCAIEZa8505WPRAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 54,
+      "title": "6 Best SERP APIs for Real-Time Data",
+      "link": "https://oxylabs.io/blog/best-serp-api",
+      "source": "Oxylabs",
+      "domain": "oxylabs.io",
+      "displayed_link": "https://oxylabs.io › Blog",
+      "snippet": "7 best Google SERP APIs · Oxylabs – best overall SERP API provider, with reliable performance metrics, additional AI features, and a very ...",
+      "snippet_highlighted_words": [
+        "best",
+        "SERP APIs",
+        "best",
+        "SERP API"
+      ],
+      "date": "Nov 5, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAMFBMVEVHcEwTDzUTDzUZZmMj56gSAC8TCDMj7awWS1EYW14ULkITHDoh2qEgw5QeroccnHthWnG9AAAAAnRSTlMApkkmy+UAAACSSURBVCiRjdPbDsMgCAZgi4J4mH3/t92oXUez+Kdc+kXDyRA2WsQW1ma6NqInyMxynYnckHXsxCc11eaQNefcp0qNn/A4ckqp23PSzGKVH+6GqbOc5lGoG+YX07TCPqGapqq3q5SvFrN7KUfCh44Sy3+HWOddZ88QPYsSQqXAJsD24cajkcFh4zVZBEa41Og7vAGGtQpnLptTFQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 55,
+      "title": "How IT Teams Can Choose the Best Google SERP API",
+      "link": "https://www.artsyltech.com/blog/selecting-the-best-google-serp-api",
+      "source": "Artsyl",
+      "domain": "www.artsyltech.com",
+      "displayed_link": "https://www.artsyltech.com › blog › selecting-the-best-g...",
+      "snippet": "HasData's SERP API is built to meet the demands of production systems, excelling across all critical evaluation criteria. Consistent, Low-Latency Performance.",
+      "snippet_highlighted_words": [
+        "SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAPFBMVEUwO2wsN2n4+vv+//8tOGkxPG03QnM5RHU0P3A7RnciMGYXJl89SHi7v8t1e5mTma9UXILk5+yus8PP0twteRtYAAAACnRSTlP2////U////E5ZzSgeYAAAAQJJREFUKJF1ktlixCAIRV2qmYJxy///a5HFptPJfUiUIyoX3Xd51Msd+VGHe2Y53yCI/A0mUz9FM+/QhjCjqsI79GUEUbzAG/QibDEY7aBBg94SCZ5oUCjUnUjqxg6mcC0YJ+fHyamE8qLQJbFM+WdmbIJzyEE6rMupDZwTE6joQ86qgLx9GInDbn2A64gD7GKxrlLFPqmDNqPxUCPMIV0+srdNyAivDqHWwQWUmxELah2dO4anpBaBMo0XlkryNWwjCCaZVVq0GoZDNuJMvcJAbhodpldqsGDgFjcKLo2cJBAIgjyPWaDJM+loA74Qi9z/N9jN/iSF6TP8+gXp78e9fgBn2RDPcnUu4QAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 56,
+      "title": "The Only OpenClaw Tutorial You Will Ever Need",
+      "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en",
+      "source": "YouTube · Metics Media",
+      "domain": "www.youtube.com",
+      "displayed_link": "53.5K+ views  ·  4 weeks ago",
+      "snippet": "... Best Practices 17:48 Understanding & Finding Skills 19:42 Install ... SERP API (Google Flights): https://serpapi.com OpenClaw install ...",
+      "snippet_highlighted_words": [
+        "Best",
+        "SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+      "video": {
+        "link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQNY3ifAI_CTWLXDnczFDx6Oi9raQgVa4smTQ",
+        "length": "51:29",
+        "key_moments": [
+          {
+            "time": "00:00",
+            "seconds": 0,
+            "title": "Intro",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=0",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqO6Ot0lc5bEnOIkyvUGOU1hdzd1E8dDlZ0TJKfOlxYg&s"
+          },
+          {
+            "time": "00:54",
+            "seconds": 54,
+            "title": "What OpenClaw Actually Is",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=54",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEsVhrMlZJhagv48CQT_K3yy8CJjhslvSwmrTkHWCQhw&s"
+          },
+          {
+            "time": "03:29",
+            "seconds": 209,
+            "title": "Plan What Your Assistant Does",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=209",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrGoc6kPpXET2kzJlwHEKs-JzryUrXIEMIorkV-FB5Aw&s"
+          },
+          {
+            "time": "04:07",
+            "seconds": 247,
+            "title": "Where to Run It",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=247",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkDv2ezh1L1pbPO7gPGru1eBi038uPMxN-jnvs__MOXQ&s"
+          },
+          {
+            "time": "06:14",
+            "seconds": 374,
+            "title": "Sign Up & Deploy",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=374",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdzX1GaLaA-r7WxrFdF37xvLjka8bptUNY_mKx-SBiA&s"
+          },
+          {
+            "time": "12:56",
+            "seconds": 776,
+            "title": "First Conversation, Bootstrap & Pair Telegram",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=776",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkAxZqy44vN3ucRAtSWZmybWqpo4y2Q-SfTesnrt4-1g&s"
+          },
+          {
+            "time": "16:44",
+            "seconds": 1004,
+            "title": "A Few Security Best Practices",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=1004",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQINJtdH8JzMeGz11EBtNVSctZ4mRTitlAxhNnfkeohg&s"
+          },
+          {
+            "time": "17:48",
+            "seconds": 1068,
+            "title": "Understanding & Finding Skills",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=1068",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-EHu73-2_oOUBcgjsErGqSAPK4TMD1MrhlTfa86F-1A&s"
+          },
+          {
+            "time": "19:42",
+            "seconds": 1182,
+            "title": "Install Google Workspace",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=1182",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLo-w1ZkyVMyZ54mIwzBGw1TM-QyaVfJmLIhUYsn6cfA&s"
+          },
+          {
+            "time": "26:29",
+            "seconds": 1589,
+            "title": "Memory, Identity, & Workspace Tour",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=1589",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2G8lF8SkrKIi9ruSWzlyoaoNuY1txD5ZK6Sk6EmE0Q&s"
+          },
+          {
+            "time": "30:55",
+            "seconds": 1855,
+            "title": "API Keys & Environment Variables",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=1855",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3bevhDaP7SK-KbPejmofwpsYAxKRL9_mcQtnYyNTS2A&s"
+          },
+          {
+            "time": "34:17",
+            "seconds": 2057,
+            "title": "Your First Automation",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2057",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHRJJAUldtP7L4R37DGL05WwY9XVTRavqeoHyoHwczQ&s"
+          },
+          {
+            "time": "37:03",
+            "seconds": 2223,
+            "title": "Model Selection, Routing, & Cost",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2223",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBR4vNLheb-iPbJ4_0nln5bvOlSSzK8bRVWecEhL0LSA&s"
+          },
+          {
+            "time": "42:09",
+            "seconds": 2529,
+            "title": "Dreaming",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2529",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6TjOn55o5KobMYfHu_PDQF5VoAnYWZOiqwSbS-TNPAw&s"
+          },
+          {
+            "time": "44:13",
+            "seconds": 2653,
+            "title": "Sub-Agents",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2653",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZsUSC972RJcP5NG5Z1O8bSW30bj7TPMQpZcHX2zDYQ&s"
+          },
+          {
+            "time": "45:33",
+            "seconds": 2733,
+            "title": "When Things Break",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2733",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp7df2BLoXMk6srVYkjZBO4CSNkNEXQF1TEvZx_SVk8g&s"
+          },
+          {
+            "time": "48:32",
+            "seconds": 2912,
+            "title": "Moving to Your Own Hardware",
+            "link": "https://www.youtube.com/watch?v=UrPuSAFd_Ss&vl=en&t=2912",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzowz6jdyWZzZpi_jJu3sYc4nuiZVNoniAxNTr5-jt0w&s"
+          }
+        ]
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUk3DTj89VY3OEeWNM-Tlvdc2NuNw_AScukft2x66fOq0vW-eyTIYmw&s"
+    },
+    {
+      "position": 57,
+      "title": "[TOP] 10+ Best Google SERP APIs in 2026",
+      "link": "https://www.designveloper.com/blog/best-serp-api/",
+      "source": "Designveloper",
+      "domain": "www.designveloper.com",
+      "displayed_link": "https://www.designveloper.com › Blog",
+      "snippet": "Serper built a reputation as a lightweight, fast, and developer-friendly Google SERP API. It focuses on speed, clean JSON output, and simple ...",
+      "snippet_highlighted_words": [
+        "SERP API"
+      ],
+      "date": "Nov 25, 2025",
+      "rich_snippet": {
+        "detected_extensions": {
+          "rating": 5.0,
+          "reviews": 52
+        },
+        "extensions": [
+          "5.0",
+          "(52)"
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAALVBMVEVHcEz8wyn8wR38wBT8wBb8xz38wBX8vw/8wR/8wBn8vxP8vxL8wBT8vxH8wBYH3GrRAAAAD3RSTlMAFTe9jQmf/ylW0Omu9nBFj1uwAAAAfklEQVR4AWOgMhBA5Sq7IvMYGdItkPkenOULkbjMDu3lDkh8Y8byaiTz2g+0lxfBeRzXE3jKyydAeazHSxh4y+HS08sTGK+Xl5dBue7lB6aXl5cXQrnPyxcDedUBcMUgcABmsDqIVwm3J7wcZA4c8AJ5SG5iKV+H4t8GBhoAAOZOJK7aMXgsAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 58,
+      "title": "The Best SERP APIs to consider in 2026",
+      "link": "https://droidcrunch.com/best-serp-apis/",
+      "source": "DroidCrunch",
+      "domain": "droidcrunch.com",
+      "displayed_link": "https://droidcrunch.com › API",
+      "snippet": "A SERP API eliminates the need to insert data into your database manually. Instead, it collects massive volumes of SERP data for you, filters out the irrelevant ...",
+      "snippet_highlighted_words": [
+        "SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAV1BMVEVHcEz1DCf2DSf3DCj3DSf3DCj3DCf3DCj3DSj3DCf3DCf3ABn3AAv3ASP8pKz91dn9x8z5bXj4ITj7jpf/8vT/+fr6e4b////+5ej5WGb3DSf4NEj3DCiuBUgqAAAAHXRSTlMAFFqi1PP/MrKdJv///////////////////1r/1AP3D00AAAFJSURBVHgBdJIHdoQwDERNG4osd3ruf84ggsnWD+5qb2z1T1FWdQM0dVUW6p22wwNdq17o8UKvHhkavNEMD+HxkTvNgC/kGA2+0OT6vtLnAkifEOGA6ZgcLZfRAWys4IwHgUK0aUxuIga6Qz8AnOaLZdVrXtjAQKHKyyClNMq2Oe3cIhYANlVdBkFrXm0Oo7Uf5yUwKlVfBjsDxOKYdqlPeyMpatU8GIC8JNEQiPiUAkIIASe87zueUBCYGXiYPfCnM0k8ge/ZrfaPbDtrdz4zLMviCRkpsnosUosK7iySwQSgUlvWQfSfZiFqYtIuTSxCZanjNEXRaTx+t65e5oFRyGWJQcbu9p5HQifX/WCwRCIyf6vk9fXqevDqhXXXp8jw0UTPdD/tBkxC1ohJ+B0oEAgnWsLJnnDGIZz1CGdeRPaXgmR/GZTsDwCpUCPnrCgiPAAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 59,
+      "title": "APILayer: Discover, Integrate, and Build APIs with Our API Hub",
+      "link": "https://apilayer.com/",
+      "source": "APILayer",
+      "domain": "apilayer.com",
+      "displayed_link": "https://apilayer.com",
+      "snippet": "serp-icon. Serpstack. DEV ... The sheer variety of APIs—over 40,000—on their best API marketplace has empowered our team to scale faster than ever before.",
+      "snippet_highlighted_words": [
+        "serp",
+        "Serpstack",
+        "best API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEwAUswAUc0AUswAUcwAUcoAUcwAUcwAUcwAUcwAUswAUswAUcwAUswAUszdSlsGAAAADnRSTlMA9G6/OgpghCUVouVP1HrnlIEAAADLSURBVCiRpZLLFgMhCENlBBUd+f/PbZxXxdNu2mxziJdICP9K0zaLnZnNKTozerPtb0vC5k2rj1eqKHmzl3uuGq+PWr4HOwB4GY3XqIJGtXqTDiROIRNS0ookeDBGLc2alGUbQm4xSgGR6RNSGQGgAVJfihDEWmMUhE4WJENuGgH76GRvNCvKsSXqIOsse5qlo5980WSVWWcH3ECDbluclfUsCCC80mC/UxuBhh1Mf/5zdCNfD2jQ8CydTCB58TI695Zcrj9Mf5c/6QXSMxKbIZ3IMwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 60,
+      "title": "Scrape.do - Powerful Toolkit for Hassle-Free and Scalable ...",
+      "link": "https://scrape.do/",
+      "source": "Scrape.do",
+      "domain": "scrape.do",
+      "displayed_link": "https://scrape.do",
+      "snippet": "Only successful requests use up API credits—failed requests won't be deducted from your balance. ... Best Google SERP APIs · SerpApi Alternatives. Use Cases. Is ...",
+      "snippet_highlighted_words": [
+        "API",
+        "Best",
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADYklEQVR4Ab2WY5QdTRCG57Nt27Y1VTObz7Zt27Zt27ZjJ109641tJ/d21T2d7R+Tsx3OTnZS51zf7nq68HYFeWxqcui6RsFTTDCRFXSb0OfQVYNFYdP1wRtJgi8yhdOYoJI+REdnF+rYNsDmouBNVlByDmd/GB1fWIzj+njbisYPmKDsnbjm+C6VxjvuKwzAJoftIgq/YEJu4Vik5uT/7bCXL7TTp+8no74/oc0BTN9wb9bwg3M2y7FGluqT/7JD3z7HOXaPNgfg3vHBQtHvfm7RcPUZv8jIT05PnRYCYAj+9/JLWOKaM76T0V+f5DmdD4BQ9JptvHqZXACzV3Sl7uK37OTRBzonmQDSh4KhRsVX2J6XLJUPwIvCUU3c/6GbsgJ4axMY4FJivzh5iVYBGAr/MxoG+Zsd39MMe/WCBaZAhV8LYZMHo6FBdHSWtcFimQAq1dE9A/49b1mm8DYhHD9b+/0uo749cX5F+O+/9y1pCC4xGgbOFpXqMkUnZwJIv5tcu/caRofPMeGMFl1RMrXnfWrHdW43vy6wyclLm754NRMM89RSQR9R0TEZAHwJNgo+83SB4knSeOVLMvKz0+bXhnZAczRVeJMoHDVbarqV+mJVJoDUbB/Yy9WIfwFVjc+iA1bFK7DCO4VwnA+CHWxf3C1I5Va0+wPe5RbMazNR8dFMkOS5jMb3xFU4gfvFXeHpWhUNCYzG972TKRhV0XCjC+FcT3TffYubJLyYCYbmUUJbXbU66+iHdO2sk1UIes92sqGGwqs8YfE2OnTLvFLs0u0BpObaxbVNFmGxCW7c5gDOnHC4CUcIG/2IRPVCcKYNgsWKA/BATl5CmnNtyFdHplCXdbsTbE24SaEAnrAouKZMONwDSaL6wgE8kCEnL8cEt7CCMQs7E4rCV1sF4IHUHbMSE9xjFExoLUCpz2FHiMYeLeR9Uv65UeN2WQFYxaFo7OjNHRrGlAnOzA2QpQusjvcXgr+9dLnIabzXRdL9pxAAS/EeTPizP+TAZFbRI5aOXC2TgzwAlnAnIfjGvz3Dac2PZ6ao/ddO17Y5AFP0uFHhJ6yRWwy3M0SHr9i6aH1vYTEAXqjLQvj2jNpDNw2KtKl6n3V858gmwY9tTbRVsKhMCF5icqHGr8oq3jHPHjMBAwsonEBQiB8AAAAASUVORK5CYII="
+    },
+    {
+      "position": 61,
+      "title": "11 Best SEO APIs in 2026: Compare by Price & Coverage",
+      "link": "https://nextgrowth.ai/best-seo-api/",
+      "source": "NextGrowth.ai",
+      "domain": "nextgrowth.ai",
+      "displayed_link": "https://nextgrowth.ai › SEO Tools",
+      "snippet": "The best SEO API for your project depends on your specific use case: DataForSEO for comprehensive keyword and backlink data, ScrapingBee for real-time SERP ...",
+      "snippet_highlighted_words": [
+        "best",
+        "API",
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEUAbqBHcEwAftoAgeEAftsAb7YAd8sAec8Ae9QAf9wAf94AfdgiEXUIAAAADHRSTlMDAKb/vxYuR2bY7IbSbGfJAAABJUlEQVR4AVXOgUcDcRQH8O+TEPCettttA+daFtDttW7bgbUIwDpIwG9nRGCOwsBMiqBZYUA5IOC6f7Bfbdie9/X18eBhZ2RH5EMENkwCEvFx1GAaXZhKk93maAlVcjXrSGaS01Qhfh5/8nIYB5kRHxR7xUTS3NWI6Z++qnq0XABrPj8+GEfDzTXN5d7shTpcs9aaqgzy+YIKyz4P9KPe5VLEBwCIymMBgfY3P9OmbETYLolAQIL3O+96+uacXMkPu8f47gVJFqRd9XxTjSDzIGmLDkthksc9oBYkudvhcqv2VcyBapDM3JDprN5eHUJiy0rETuREnRJeMkvKJrfnkrVd6OUfE9UZFQtgXA1uDOT1ick2JO0L2yIb2ys12JpVg7cpsq1fBKtF+QllBSUAAAAASUVORK5CYII="
+    },
+    {
+      "position": 62,
+      "title": "Cloud APIs",
+      "link": "https://cloud.google.com/apis",
+      "source": "Google Cloud",
+      "domain": "cloud.google.com",
+      "displayed_link": "https://cloud.google.com › apis",
+      "snippet": "Vision API. Integrates image labeling, face, logo, and landmark detection ... A Google Cloud expert will help you find the best solution. Contact sales ...",
+      "snippet_highlighted_words": [
+        "API",
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACjUlEQVR4AWKgBIyCV86mHCBMZ0tNALTVQ4AdQRSF4WCwiW3btm3btr2JzW1s27btLLPJ2OxodPPXGFXDzuJ7fnXObXYidAXO4EqsM1ihvvtfk5aJDf0OSQO/abRE/ceu8Da4hwhIOkXgHtpkZVM7sUA//IFklGvn1nJs9NqwDuutfh3WWU6ZmbwHXCCZcXjsRum9ykMo4IIemdnnPhADCx/YSvcU9RpW3OSEq+DEfFAmveEO3h0bb0sl/BFGeHdoVAkFYlVSn+FRosmTWmdt49khPQWa+XRu5OI3pLYETK4qQXMqSvDi8hI4o7IEzqz07PfBfOXC7znmMF0X+q1020WQBUnGBc3SLBAwrvqy0PUl5M/J3BJ2w1kIixZ2N5ofrx9gnun/TFoE51SoxjJjcNg9BycW7hF22ylIBaaBMg63eK6jLcH+NmwFH/TQnhUqHC6QDHiDfIYS9zQF9GcFi5SBDySD3rDlihgKrEocbDwrWMSBRbZlJhz11BqGApMShxrPChapwf78pgmwcAFNUA1j+N0r0+SaAvnQAhdgaQp867A+tIYq0IPFLE2BCwQWSHag1uKze4bJDWdFaIHYEpKMhR6qwBCIRgu77qaxW0I0hhgLqGltK7DOqmUswCYdZNgC45DDhulzYJzhQByktkAH+GkKvEIdGwrUwStIUqF+6KAOrCIE3Ute4C+X3nc3i1qNTg3ch1VaJ4ZvUOe7WegOnkMgGvfUZTvuWjAveYFPNwvL8LOdhKBUsVBmJb2fqGt73OQqvNPpXsZQGwrc0t0L6uDNZ/PkdhV4A/2xRYF8vc90P9Hw1EA/+wuog846gnypHrWE50EHFj8FLxsKeOGUOuLxb3zo9o2CUQAAQTP7qwJoUEkAAAAASUVORK5CYII="
+    },
+    {
+      "position": 63,
+      "title": "Free Domain Authority Checker",
+      "link": "https://moz.com/domain-analysis",
+      "source": "Moz",
+      "domain": "moz.com",
+      "displayed_link": "https://moz.com › domain-analysis",
+      "snippet": "Top Featured Snippets — Spot featured snippet opportunities with a list of ranking keywords that trigger a featured snippet in the SERP. ... Moz API · Moz ...",
+      "snippet_highlighted_words": [
+        "Top",
+        "SERP",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAOVBMVEVNvetVv+xfwuxEuuqt3/X////z+/6/5vhmxe2o3fT5/f7M6/m54/ea2fSM1PKs4PXl9fx4y++f2vQMWunWAAAAhElEQVR4Ad3RxxXDMAwEUTCMJK7E5P57dc6mGxBu8/5tYTs75713fzJEmOblkcs8QQwPTAJWfyu/AkqfqO2qftMAUXRmLooRomyWxRihFBigagMkoFV9Y+kXvVgvvxjyBDDlMELLAmX7wgic0RIkOyNvC1nPh3xdr9brfufsgw842+mdAC4OBqWvVW0xAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 64,
+      "title": "Bright Data - All in One Platform for Proxies and Web Scraping",
+      "link": "https://brightdata.com/",
+      "source": "Bright Data",
+      "domain": "brightdata.com",
+      "displayed_link": "https://brightdata.com",
+      "snippet": "SERP API. Get multi-engine search results on-demand · Browser API. Spin up ... Over 400M+ residential proxy IPs, best-in-class technology and the ability ...",
+      "snippet_highlighted_words": [
+        "SERP API",
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEU9f/w8fvxCgvxNif00fPx1o/2gwf5hl/y1zv72+f+Ls/280f7///+IsP5SjvzQ3/6VuP5Jh/z7/P/o7/9yoP2qxf1nm/ybvf2Cqv3d6f7w9P/E2P7X4/9Ghfx9p/260P6lb7ToAAAAe0lEQVR4Ac3NNQKDAAxA0Rju7nD/U1bXhKVF/voicEa4Q8S2iuOKpej5QciGURTHcWJgmr0wB1Sx8Mu4qtH62UQJ6YhFm3RNrZ+VfhiDwPrZTmVcGgjCs41Ie7jcDCl9YVeoJmsWxOXop6ggOn60bVGnItDyCdTwG/yjJ+gWB6/VJxq3AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 65,
+      "title": "How to Choose the Best Google Search API",
+      "link": "https://zenserp.com/how-to-choose-the-best-google-search-api/",
+      "source": "Zenserp",
+      "domain": "zenserp.com",
+      "displayed_link": "https://zenserp.com › how-to-choose-the-best-google-se...",
+      "snippet": "Zenserp API stands out as one of the best Google Search APIs on the market because it offers a reliable, fast, and flexible solution.",
+      "snippet_highlighted_words": [
+        "Zenserp API",
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAKlBMVEUMUMsNV9QKSMINXt0SbewIQrwSZeL9/v8IObEide+ZsOpxk+PF0/Te5vnjrw7EAAAA60lEQVQokXXQ27qEIAgGUNQIQX3/151f0XTPbvi6qRVHUo9LrxW3R0qJvuQgx256ilPH/wWXBbqerP5+UgBOuqy1auCHwshEJBOPEpzSxruImCatItrNEweiT/+IglSk0YRAROh2o6h5M6ooPBUx5quyRixiNGViaEJzsxescs/NrCPRxqdYCNxEl8RIY46ABSMS2KTyIqD3UpFatDT8tM0RvbSNA1Vcg6LTQN8qqpndjAYyjZn2rfqvyOrKw/g81gh2HUHPqdYcHKFh40FTLcMy/clag3TLJz7Uc/Ag3shl45fxxvhOA39Rzh8sNgvqA0LgjwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 66,
+      "title": "Best SERP API Analysis: Who Really Wins?",
+      "link": "https://www.brandvm.com/post/best-serp-api-analysis-who-really-wins",
+      "source": "Brand Vision",
+      "domain": "www.brandvm.com",
+      "displayed_link": "https://www.brandvm.com › post › best-serp-api-analys...",
+      "snippet": "A Google Search Engine Results Page (SERP) API is a tool that automates the extraction of public data from search results.",
+      "snippet_highlighted_words": [
+        "SERP",
+        "API"
+      ],
+      "date": "Oct 24, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA4UlEQVR4AcXQIYyCYBjH4afaZzXZLEbbNftGvEo1u5Htm5FkoNHYiOxLBALJZN9sl0i278ohQ6/7pHf7venvw7K6CdXRf+r2uGJz6kuvktt2ds5aJ3qa18WVyFRNhPU8JqWnVYOofTwCoPOUJ4g/J4oInA5GAWK6rKsyVGVdf9mURg1EHnWeDocqonmL5846ai+zGGBIiC69iFVlVOxxiHvVJa6KgGNmtCshHWIZiTu0Jp0/tyy7YVebbMaa3u/p63yO4+swoE/MHHogP1tfE+Y2bbWH76ZZeLctQmhCvvRRv89bZAMVIHFoAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 67,
+      "title": "SERP API as an alternative for Google scraping - #8 by Tim",
+      "link": "https://forum.seocontentmachine.com/t/serp-api-as-an-alternative-for-google-scraping/257/8",
+      "source": "SEO Content Machine Forum",
+      "domain": "forum.seocontentmachine.com",
+      "displayed_link": "https://forum.seocontentmachine.com › serp-api-as-an-a...",
+      "snippet": "If selected correctly, it appears next to search engine settings in tasks. image800×233 7.32 KB. 2 Likes. show post in topic.",
+      "date": "Nov 26, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAP1BMVEVHcExegaxegaxegaxegaxegaxegaxegaxegaxYdJhegaxMVmpMVmpMVmpMVmpMVmpMVmpMVmpSZIBMVmpMVmqXgYKbAAAAFXRSTlMAcDPl/6Nd9EUOyKLMjLxw/zUa4U586HQ8AAAAuUlEQVR4AYWQBxKDMAwEZXpz5/9vjc50pAmbUJc7F/rElEOlqpuWuqYfNNkcjIocdqcWt2jk7kmqiTMVX0eEFdkTqHGjJI95CdkZrKSMbIw6277l0o7AvPDJunsxwGx9CCHSyGd/yqnDCe5i3vevTzRuu5cvKffL34KCwPjoleQSQDo+ClnIrc7q0h5jS3m8cUJ6O+9RBGfrSZmTyyUmmP+sM4aL+JZryfiSX0UUC+QzWjVSRANOH/wAkg0NM9X6BmYAAAAASUVORK5CYII="
+    },
+    {
+      "position": 68,
+      "title": "20+ SERP APIs to Try Today [Updated List]",
+      "link": "https://www.lupagedigital.com/blog/serp-api/",
+      "source": "Lupage Digital",
+      "domain": "www.lupagedigital.com",
+      "displayed_link": "https://www.lupagedigital.com › Blog",
+      "snippet": "AvesAPI has a top-notch SERP tracking API that allows you to extract HTML results directly from Google. If you are a business owner and already own a parser, ...",
+      "snippet_highlighted_words": [
+        "top",
+        "SERP",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEVZKNoeWvvIM9LYO9TlPtNHcEwfU/wdXPwRZv34N8ztQNTzQtThPdTTOdTHN9S7M9SuMNSfLNPtQdQaZP2QKdPtQdQZaf14I9PtQNQTdP0YcP2DJdNpH9NtINMVefxYY7VfHNNbG9MShf0Tgv1aG9MRiv0PlP4Qjv2fLdQOlv6rMNQNm/4Kpv4Kof5PL9sJqf4IsP4Gtv4Cyv8SkPu0AJIGtv4ByP9kHtMFvP8Ay/9hF9ECwv8PlP0Cx/8eVvwIsP4WePwUfvwMnv4jXuzdmVcRAAAARHRSTlNIXx1gSADB/701//////////+9///j//+Bvf///5//BMb/uv/w/73/0P+V/77/Ff//vkocB//Bb///Lv85cv+Q6cvkCmYcO4wAAAFVSURBVHgBbdEFAoIADEDRGTNIm067u1vvfydHWnyaRwOQoiCdicqmMQ5yeapQZBiW43hBLJV5tpKNsFClPGR8K5VrAsvUiyE2KA853j+xXJNIGdlHRaWU4vtETdI5xtMYMR0FhqRrLGnWQ5NSMMqiyXZ4QobQbVIufmX4p8rJaLUYL8I29YUWIogMx3FF6HSpDv7U43iez0CnT/3hgBcEYQCdIfWHIIii2IPRmBr94oS+R4lwOp3+o0XfsRzg7ActRPrGtR7MZ9T8GxfLVa2maQbM19Q3WptlWtMkaQvzHfWNiz2CJOn6ATZHavNpp/0eDV13WgiF2X6//8TzkTZbjuNsEXKXxnAX4+m63h335wNZCz3MV6vq7e66bucxns48RJvwEGJDNc1mu9sfBrgA/6KJeF6RASbgdL2wHMeeYBJeLWgZh+jfoPWcLJfLk9/S+yEY9wJ8Mz31rgKllAAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 69,
+      "title": "SerpApi VS Serper VS ValueSERP VS SearchApi (2026)",
+      "link": "https://serpapi.com/blog/compare-serpapi-with-the-alternatives-serper-and-searchapi/",
+      "source": "SerpApi",
+      "domain": "serpapi.com",
+      "displayed_link": "https://serpapi.com › blog › compare-serpapi-with-the-a...",
+      "snippet": "SerpApi is your best choice if you care about the quality of your data. General SerpApi vs the Alternatives comparison. There are other benefits ...",
+      "snippet_highlighted_words": [
+        "best"
+      ],
+      "date": "Mar 25, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEVHcExiYu03f+qKQvBUX+xVbOxVbOxjYe1VaexxWO43f+qNRfCNRvCNRfBPc+3///9PbuxIc+tdZe13VO9pXu6LR/D29/45fut8Ue/Au/dCeOtJX+uBTe9+Pe9oUe6FSu9iRO0eb+mvr/XLzfm6ovZhS+3t6/1xe+/i4fuTnfJkWe2GjPGZdvJEAbqyAAAADnRSTlMAuOPj/J4v/f78uLieLw44KcEAAAFqSURBVCiRXdLZYoIwEAXQUQGD1QYwBDESUWRx+f/v6yyh2s4TznEScgkAVhKnvR3a/eFwOp3PZVmutjsItTDGML61LL/E1us1Y7//oyueKwpUwnT/fzZRBappcdk0ZWyapmTeQawUjdZa1560vU1D92oIt6AIC6uxLGrb0ZN+4XizgixTykkHZ/1LnuyNCjFTbpDW1Pur/iiazNwkPzrv76FfU0FOo0/pjA/jrRjt2UBO6u7Ys8+HMQ8zsfFxEb9523F0EUVl2lrfQsxwDEoHoqiMr/XVS1Rw/FUlGpCUEZWW5VnT07Ic5AERNZMXihALfqGeFaoKOZxuLIooHMWTwmcinYvmEPgjgKUKncm5OT7DeKGag3dzVrYnhWVFu8onozDkfxRWmkJcsWKvzjiq+6AnDBkxhqRivVidc8zKYQgSJF7PDStiiIqRolrQ9Vu+kVQxosrF3QQMQQou5iufxEvEijXPCOOE+j9L4zsttDe+kQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 70,
+      "title": "firecrawl/firecrawl: The API to search, scrape, and interact ...",
+      "link": "https://github.com/firecrawl/firecrawl",
+      "source": "GitHub",
+      "domain": "github.com",
+      "displayed_link": "https://github.com › firecrawl › firecrawl",
+      "snippet": "The API to search, scrape, and interact with the web at scale ... Model Selection. Choose between two models based on your needs: Model, Cost, Best For ...",
+      "snippet_highlighted_words": [
+        "API",
+        "Best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX////4+Pi3ubtvcnZNUVU+Q0cpLjLr6+x3en0sMTYkKS59gIORk5aUl5n8/Pzw8PFTV1tbX2Pc3d5DSEzn5+g3PECLjpFKTlKFh4qxs7XCxMUuMze/wcLh4uPV1tZzd3o/Q0jOz9CmqKpjZ2qfoaTxAyfNAAABPUlEQVR4AW3TBYKDMBQE0AltAgzuzur9z7ibH5oKfWjc4UEFl6s2Rl8vgcJZGMX04iTEM5UaPomzHA+KkidVAa/WfKNpffMd32oKCHUlWfb27Q19ZSMVrNHGTMDckMtQLqSegdXGpvi3Sf93W9UudRby2WzsEgL4oMvwoqY1AsrQNfFipbXkCGh1BV6oT1pfRwvfOJlo9ZA5NAonStbmB1pawBuDTAgkX4MzV/eC2H3e0C7lk1aBEzd+7SpigJOZVoXx+J5UxzADil+8+KZYoRaK5y2WZxSdgm0j+dakzkIc2kzT6W3IcFnDTzdt4sKbWMqkpNl229IMsfMmg6UaMsJXmv4qCMXDoI4mO5oADwyFDnGoO3KI0jSHQ6E3eJum5TP4Y+EVyUOGXHZjgWd7ZEwOJzZRjbPQt7mF8P4AzsYZpmkFLF4AAAAASUVORK5CYII="
+    },
+    {
+      "position": 71,
+      "title": "DataForSEO: Powerful API Stack For Data-Driven SEO Tools",
+      "link": "https://dataforseo.com/",
+      "source": "DataForSEO",
+      "domain": "dataforseo.com",
+      "displayed_link": "https://dataforseo.com",
+      "snippet": "We provide comprehensive data solutions for SEO and SEM analytics via API. DataForSEO is a trusted partner for 750+ SEO software companies and agencies.",
+      "snippet_highlighted_words": [
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEVHcEwgLJ0gLJ4gLJ4gLZ4gLZ4gLZ0fLJwgLZ4gLJ0WH5wSIKEAEaUAFKT/1QD90wDzywD70AD70AD4zQD7zwD6zwD70AD70AD6zwD70AD60AD70AD6zwD6zwCbli+nAAAAHnRSTlMAQI3M9v9tIelXDaL///+jDPT/HGsu6sxbwJDZh0BDBrAJAAAA70lEQVR4AYWPBYLEIAwAp+7uK///5kGD3PrUaAYiOIIwipMkjsKAZ1IlLHH6oLI8eSDPcBTJC8Fn521mc4VBlgWhrSCZzV/xlChHkcqyxFFK5ykgq9OlVZWeViaCwJVPffrCBEPJL06s7SMkkvSSSrA7IymZ+YOyNZB8taIBqtpRQdnoBa0G6FpHB72Eh1ExwTw6Zlj0d2XTnx16LzFbDy76s9l/s5OrXty4n4HFWHE+OEh6RT933YzmsDE5sPHA1aRgPe26YJHgFc00CsfeQ79vu9gJcOU9dzy/7LQ+2oUH5sGrdeeZ5XasShw3f+wPV8cYQ9OKu/4AAAAASUVORK5CYII="
+    },
+    {
+      "position": 72,
+      "title": "What is the best search engine API around?",
+      "link": "https://www.quora.com/What-is-the-best-search-engine-API-around",
+      "source": "Quora",
+      "domain": "www.quora.com",
+      "displayed_link": "1 answer  ·  7 years ago",
+      "snippet": "It provides a simple, unified API that returns results from multiple search engines in a consistent format. Zenserp supports a wide range of ...",
+      "snippet_highlighted_words": [
+        "API",
+        "Zenserp"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEy4Kia5Kie5Kie5Kia5Kie5Kye5Kya5Kia5Kya5Kye5Kye5Kia5Kie5Kye4KybpLYg9AAAAEHRSTlMADBsoY5+1xoDS+f/mdeg3NaD4rAAAALBJREFUeAFjIAIwKhsJIHjMrullIQZwuc7Vu3fvmgGTFwfygPxCqOTs3WCwUwAiuXv3ntirp3fvhkh37d7XyMAg8Xr3CrCxs3cfAdF+u3eCDGdZvbsBxOXYvcsBSInu3iMANvH07kAgpbZ7K8SG6N1JQNJ8914I9/buYjQummI0o9AsgjjjCcwZEEfugToS1QuJKB7cPR/mfaiHP8ADBwyS4EFXDgKN8IA1BgEBAuEPAM0eYq2VgXsvAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 73,
+      "title": "Best SERP APIs for Scraping Google in 2026",
+      "link": "https://iproyal.com/blog/best-google-serp-api/",
+      "source": "IPRoyal.com",
+      "domain": "iproyal.com",
+      "displayed_link": "https://iproyal.com › blog › best-google-serp-api",
+      "snippet": "Serpstack is the best option if you want to see what SERP APIs are all about without paying any money. Their free forever plan gives 100 ...",
+      "snippet_highlighted_words": [
+        "best",
+        "SERP APIs"
+      ],
+      "date": "Jan 11, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAMFBMVEUAQEcjytUAQEcm1eEAO0IZprEAMzoMaXEetcAAPkUjztkUjpcYn6kFS1MgvskPcnoNbxHCAAAAAXRSTlPOPDo30QAAAK1JREFUKJHFk0sOxCAMQwkhKZ+U3v+2E1IKzEjtqtJ4ZfnJzgac87dyD0zp32EI95BL4V+YUu9tiEfvWqYw7bvR5AEgd2+ZawUJLeGYlVYbDtImDFI7xaUxyGKetgHV6kEw5eZphbQn6MrgPX3DYgdPGosG8yZJRRjCKmtTCHE2EaOss6gaRdXatAAnQ5iwWoAZjwO7aodpq/GUMJduBwx8SWcuG158Ce/Bp+/wAZ5OCh/Oq9jEAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 74,
+      "title": "8 Best SERP APIs in 2026 for Real-Time Search Results",
+      "link": "https://crustdata.com/blog/best-serp-api",
+      "source": "Crustdata",
+      "domain": "crustdata.com",
+      "displayed_link": "https://crustdata.com › Blog",
+      "snippet": "8 Best SERP APIs to Consider in 2026 · 1. Crustdata SERP API · 2. SerpApi · 3. Zenserp · 4. ScrapingBee · 5. DataForSEO · 6. Bright Data SERP ...",
+      "snippet_highlighted_words": [
+        "Best SERP APIs"
+      ],
+      "date": "Dec 31, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAZlBMVEUUEjwQDjYQDjQWFEAzMHw6NooZF0YrKGxYU8xdWNdRTL1PSrlbVtMbGUtIRKoKCCsAAB0PDTNBPZtGQqZUT8QHBCYoJWQkIl0ODDFEQKEAABo2M4RMR7IfHFIAACArKGo8OJAwLHWcsGBDAAAA5UlEQVR4AcSR1QKFIAxACWPIBBOG7f//5O3up3sMYr2x/8LFHv5MJKN4T5Q8iEUKKtuiASEVd8IcDbO2SAxAhvmtzBptWckqZeqm1cZey7hTniiCxiUqJa/cddiyCZ3LsKd2GCyzIaMrWQ+5UUEST9XItmAvLl5BwzBORFNTbf/U9niRzQhNFXag2S81zvxaGOotBof6sG6FJ7ZutS8stbAc3MJFJnqQtTLJVUIlO0NZ6LzGhR9Lacq7JpS0AqQS10sTrtvH+aKGqikv7bs0PrF2kgagwfyXkTGenIYt+Wb4ksmAAgDBgBDmbyAm9AAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 75,
+      "title": "Documentation to Improve SEO | Google Search Central",
+      "link": "https://developers.google.com/search/docs",
+      "source": "Google for Developers",
+      "domain": "developers.google.com",
+      "displayed_link": "https://developers.google.com › search › docs",
+      "snippet": "The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.",
+      "snippet_highlighted_words": [
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAqFBMVEVHcEz////////////////////6+/v////00MzqpJ3kjIHuuLTaSjPZQyjvvrnb3d7ifG/bUTvXOBbcWkbssKn8/Pz9/f3qkSr65cz1uSr1shr////51Y95oPKFp/Lp8Pf9/f74zHb2wEknc+w/fu7W4fsxdu5plvBLnVW61r6yx/bFrCo+mEeqzrDP48xEhdT4+PhurXRImk50prr09PW/2cKRvpX4+fk/1NRtAAAAOHRSTlMASZG/1P9bmf////////8L////////U//////I/////+P///////////////////+p////bP//1K7ZPBUAAAEVSURBVHgBjZAFEoMwFAVrv0ZSd3fF9f436wuuM12cnSwktT+pN5qtVrNRL1ENimnkVJsytNOuQzk6Bdft9fu9bs4GTYlxBjgbpMtDEoz4OIBNeiQYJtERE6+n0wnno3TYb2Icn82J5r3AAeEWBJZszFeUZRFWV+sNm5VNZ4vrbr3ezAnsDz77I+63kCdcz+v1hQTXm8/1jvtThXxEMsqS4CnAyCAb/tBm/XpTyOdxexDoRFP5vl7yMXBzZPfBVAABRYb1x6pa+D9UE+gEDBNWNgxTNrXHgYCeWnhDfgETh2ylFr5mU1CWTSDLCglsiCRMc8c1DNchiqJpmyblUJ6n1RzNNEM91nN9WCvQ1r3TydPbtf/4AWLQIeTekR1qAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 76,
+      "title": "Serpstat – Marketing Tool for SEO and Content Tasks",
+      "link": "https://serpstat.com/",
+      "source": "Serpstat",
+      "domain": "serpstat.com",
+      "displayed_link": "https://serpstat.com",
+      "snippet": "Boost your online presence with Serpstat ➤ A powerful tool for ✓ Backlinks Analysis ✓ Rank Tracking ✓ Keyword Research ✓ Competitor Analysis ✓ Site Audit.",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABiElEQVR4AWIgFoyCUcAdt1BCMHiiGTUxT/RcTQAv5QvTMBBHYUgwBIc3eDUFBjkxgyCYKQTBzacKMYkZahqJmCt4N0tqpqsaRFXnJnq8l7xblvaWtrnbNflyl/v3vd+1ae8A2LAEVWCKIQFuQQZMSAa9Bl1dFiFAtBAKED+EXwCFuAelZ4DKJ8AzqDzkBc/wkXdVXwvjoDy1vAJzrd245Oezn6uz2fc0uFykly9fFwffSsogah84B3kCtqeQF5RwD0WslC1/5TYUxK+UAzNYrnYuSpecIklWYA0W9r/PQBozoB4kF8vG3EbirHW9lAhJpwwDdr0C8MCGPLWVUGSvlmNsWZ1TLiSu1e8OwINZsXi7fvy4oUiST13xZL+Bfcl74g6AiTF4ByNWaYclXzWqyClmWM0ZrwCS51rwBxIbQqGMg63WKliLXHQEkNxx+EJySsxAfsEI3LHfmm+8P8lDIbkeZ4ho8iMhOPAUTa6Hc/sQku8CsnbK3SESeyWTQIz/B86qJIBRMAoAIRPZ5kAE5lAAAAAASUVORK5CYII="
+    },
+    {
+      "position": 77,
+      "title": "Best Google Search APIs in 2026 (Since Google Won't Give ...",
+      "link": "https://getairefs.com/blog/best-serp-apis/",
+      "source": "getairefs.com",
+      "domain": "getairefs.com",
+      "displayed_link": "https://getairefs.com › Blog",
+      "snippet": "SERP APIs are the infrastructure layer underneath rank trackers, SEO tools, AI visibility platforms, and content intelligence products.",
+      "snippet_highlighted_words": [
+        "SERP APIs"
+      ],
+      "date": "Jun 2, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAHGklEQVR4AbWVY7gryxZFxyp0JxvHvNazbdu2bdu2bVt/n23z2sbZ3nF3Va1X6eTaqnzjizPHXFVJHFfzuu/nDmUQZhET0WCQIDhNLBdb2DU6k6tV4G5fOop9Nvf53x5ls6U1DHKACN4JJ23urK9v8+7qE7j35//Jw/Y+k08ctz9zPt5scWhel4Z6WxPEDcX8b96kt/17vfzl1SbQlQ184ZSNzJThur2RfGU00OsxBEmKR+7cNrLvtV183NUicJ/PH0pflLkiFQs9+6rBUK+nFZgkoKBRCZGDMfKiq0VgENoMDdRR7z6q9aGpUmwUJIFJig0gNRjh9le5wP0/fVgOj2yxMr8w5EVhkObMSDA1SEq4AK6mkTCY+atU4Kmf/w0n9TbTMz1Kqw+pBuku2lfcWCCAieCD4mtwQbAGuUoFunE77bLLnGHnWb30/LoXvR2AqaQJd0FxTXgmgrXKVSbwsR//lz+fmTj+lMg+G+Xxw164ufTSpH2didoE+1rxAWwSrJerTuBfJ3nqKNxohxx86kr9rHo9iO2DrQSZtvfntFecGhzmqhF45if+Bk75zjOvzYM+dPgze6v1NUz3gu2n449jBI/ihUsXeMjXTuAbh/yKBx19b/rB4I2yyQYCwsIfv8dfPv0SZspNrA0jT//M0TfrrIUn5va4gWBHNOE2NGPPCD6OAS8Zeylb8NCvn8ymFtz4X/fn4PmwlxGum1m4xn7zhx565ELceL378NLP3B2xcMfrzrkf/W3ted3lsMv1mLZnevKF4mwSFDFfW4sLlyDwyK8ew9ZZ5QtHtLn17nivk9flXYM6XrdE135/6Opn9yr1Pb1+1V2qoOWUfxwxuPPKUnhYXFf8wDR7bwLYCGUTbnIw+LGACl4NPl2swBJHnrWA7wq32x3uePp6+tx6t9qXqqIK1Y4o4XX46G+wLb6BMFsftKuc/fdRvRd1FsIG15emvW32Xs5tH2USPkaEAoOPF3MIH/apk+naOUofdh+/PHr32upgX/oDTDWCumYYo6x5XnhUx/6vbcw3pCoesLCnvkfsKn5kcJlxuI2TcJ9xCi6BVyjEUBjBXdQEHvuR31K0HT948jW4xXv+/bzVpcFttNPHjCqkqpEQkZgYou31tn/1rn3LY/Ys1s/rrtSlrZg2H2NwgUbCKA0u4xG80mDhwgIrPUu30+Xu7/vrrU88a+3p1XIPM6wwoxpTN+EZRRX6vXDdzrx+cTCqrsFAcbXNGEww2Ag+jls2wdO9h5KMTCZik55f4DHv/S1DI+yYc/P/Pn79td2F3k7pjXJ4QKrYBEsCkmTAtZ1JdXm92EkUlcFn7FggCS5C0Yx8ct0ag9DOlM02gKnOI/C4d/6U61xjjnflr96NrzH/hJWzuvdJq0PsKGKacDKCaCZNrrfs2kLsW9xIm2BXmcn407RxptTMOFwz0AgUMJlMjZwjMKxa/Pavq9zl+puue+zJnZdWiwPnhjELJCQokgyiprkmMzvfZq61gXp9cvB8Muf859tMebbABdsLeKbbolOBJ7/j91TANQ/YVPzsT3te2VkcHSy9hB03q5rm09YmYxGxbN+yBRmaHK7NqXdqMEYw4Zzg6einAG2ZtkewmSLjnvf+n/OJd3a4/n2FM/dUD1larB8ZOoIfOkyVMLViIkgyGYuqsHHLDPOtNrEzHf300JmSLARFPM/oY0aFlghtAaeTcKdkRFy/N8/DnlFTFGa/w4/rvHqwQtuOyibcZkwYC2gjgArWKdt3bMSMwATBxQl2DFDMZNbOM3o9t32JYBvANNcqrt0yvPhpB5sXveWoF3eW9cZmWGBqhwmCiSkTGyCRqNi0bZa5mRapq7g0/TVLglXB1VBsgLLOdKbhIk14yxj8NFzGiOC9JHfsCUPe/MET7r6yHJ8SBgYXPRLdtLGCVCQbUSpcGdm5ayO2BhelCS+SwWpmerjKCMU2aFXQHtAEN3svZhKuYEQwBnxpltxB+7d3HnZU7zX9btpk1aIiIKAmEX0kakSIQGDvvTYzV7TRbmrCG8YCIjgHRZERaPnMvkL75Hxdm8kPT8Y04ZP21oFz8kt3ypnDV6x26jslBbGKukgaX6yCBqDCmMjeW7ew95bt0FN8MBOi4IxgnOC84scCpVA4KNtQXEvwpwiuMw0nMw63YAr5hzj9kBuGdD+xdMoZSSkoMSopE1MiacxtHPtu3sru9rzagWJF1RrBWcFmTIHYQnEeyeBLKDw4B3ZesJtAFhrUDCRYZNF6fiNeP2qG7gi3aYN/hLemCFUiBNUQlRBjRlAx7N64ha1mlrozUuui2rZgPEoEVRUtBbwK1oiMhZwiRhDJ1ApWSfsCm1Xd6a4yPZbsQYOFdPxM2vyr/XAicijNEgQ951azVDIQYjrnmfMvAT3fO0A5/0oCQUEEtJEmnFSAiZz64H/xf3winrcHR7evAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 78,
+      "title": "Jina AI - Your Search Foundation, Supercharged.",
+      "link": "https://jina.ai/",
+      "source": "Jina AI",
+      "domain": "jina.ai",
+      "displayed_link": "https://jina.ai",
+      "snippet": "Best-in-class embeddings, rerankers, web reader, deepsearch, small language models ... report_problemWe cannot generate an API key because we couldn't verify if ...",
+      "snippet_highlighted_words": [
+        "Best",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAuUlEQVR4Ae3WMQ5GQBCGYflP8Z9jG0eQiFqvUeIY22pUarVSqXIXcQhGsgmZ4FsJEFu8xUYyT6ZgWU7iXZoBnwdaWfZbCoN7kTQVVA8Sh21Iw0IN0H89aEDXgPeBVRT9uyCQVEnJ8XwaSEBM9QvFO0GBwBGzGcKzdUE1E4I1AGsF+gBsdMEWgK0mKK4E82kmBiUAJQAbfAGjLdl2HASbYVChBcOK+XMG5vw9xeDGB2Dt1ufnb/y1GXAAv6wltzu43oUAAAAASUVORK5CYII="
+    },
+    {
+      "position": 79,
+      "title": "Gemini API reference | Google AI for Developers",
+      "link": "https://ai.google.dev/api",
+      "source": "Google AI for Developers",
+      "domain": "ai.google.dev",
+      "displayed_link": "https://ai.google.dev › api",
+      "snippet": "This is best for non-interactive tasks where you can wait for the entire result. Streaming content generation ( streamGenerateContent ): Uses Server-Sent ...",
+      "snippet_highlighted_words": [
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAqFBMVEVHcEz////////////////////6+/v////00MzqpJ3kjIHuuLTaSjPZQyjvvrnb3d7ifG/bUTvXOBbcWkbssKn8/Pz9/f3qkSr65cz1uSr1shr////51Y95oPKFp/Lp8Pf9/f74zHb2wEknc+w/fu7W4fsxdu5plvBLnVW61r6yx/bFrCo+mEeqzrDP48xEhdT4+PhurXRImk50prr09PW/2cKRvpX4+fk/1NRtAAAAOHRSTlMASZG/1P9bmf////////8L////////U//////I/////+P///////////////////+p////bP//1K7ZPBUAAAEVSURBVHgBjZAFEoMwFAVrv0ZSd3fF9f436wuuM12cnSwktT+pN5qtVrNRL1ENimnkVJsytNOuQzk6Bdft9fu9bs4GTYlxBjgbpMtDEoz4OIBNeiQYJtERE6+n0wnno3TYb2Icn82J5r3AAeEWBJZszFeUZRFWV+sNm5VNZ4vrbr3ezAnsDz77I+63kCdcz+v1hQTXm8/1jvtThXxEMsqS4CnAyCAb/tBm/XpTyOdxexDoRFP5vl7yMXBzZPfBVAABRYb1x6pa+D9UE+gEDBNWNgxTNrXHgYCeWnhDfgETh2ylFr5mU1CWTSDLCglsiCRMc8c1DNchiqJpmyblUJ6n1RzNNEM91nN9WCvQ1r3TydPbtf/4AWLQIeTekR1qAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 80,
+      "title": "Best SERP APIs: 8 Options for Search Data, SEO, and AI ...",
+      "link": "https://www.talordata.com/blog/best-serp-apis",
+      "source": "talordata.com",
+      "domain": "www.talordata.com",
+      "displayed_link": "https://www.talordata.com › blog › best-serp-apis",
+      "snippet": "SERP API. Best For. Main Strength. Talordata SERP API. SEO, AI workflows, market monitoring, e-commerce search data ; Factor. What to Check.",
+      "snippet_highlighted_words": [
+        "SERP API",
+        "Best",
+        "SERP API"
+      ],
+      "date": "May 23, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAS1BMVEUcHR8AAAAJCw4VFhjY2NmGh4hJSkvd3d3k5ORTVFX///+cnZ329/dfYGEREhXExMR4eXlCQ0S8vLzKysoWFxmPkJAAAwmVlZbs7OzEGhVDAAAAXklEQVR4AeXLBQ6AQBAEwV3c4fz+/1HcJYZDxaczcB80TBwxJ82yHcvtef64YhD6UTCIk2NimhGauuUcpSXmcBjXhCOK8uxihcOcVFU0ofLv6G1EQ+gosjhsVCzBkxUHhgfSc251agAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 81,
+      "title": "Screaming Frog SEO Spider Website Crawler",
+      "link": "https://www.screamingfrog.co.uk/seo-spider/",
+      "source": "Screaming Frog",
+      "domain": "www.screamingfrog.co.uk",
+      "displayed_link": "https://www.screamingfrog.co.uk › seo-spider",
+      "snippet": "Google Analytics Integration – Connect to the Google Analytics API and pull in user and conversion data directly during a crawl. ... best birthday presents I ...",
+      "snippet_highlighted_words": [
+        "API",
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABCFBMVEX////o7+LW6cjl8dz1+vCozodttxcAAABdoAdpshJnsQlksACZyXDH4LJKfwoSIQBdlSNOfhtqshdutCJopydxtSlssx2t0o47ZgAsTgA6RTFeY1nS6r1zhmNViSCOw16926RxtSq01pZ7enyEhIXLys0yWQDp6elKSkpiYmKYo4/S5sEpLCZQdylTZkNzsTODvkv9/vyNxlc8YhNsbGzB3apZlRLj89awuqiVk5fS2cwUMwCvsq25ubmnpakJDwQrKSyAgYAuJzOjzX9mdFlroDd4witFWzFWVlaIkYApRQohHiM3VBkJFADy/uhdhTY3bQARLwBMjAAbDSM3NzdCYiEiNw0mGy1Gnt2oAAABrElEQVR4AW3PVULEMBRA0VfLo8l0JGmCQwV3d3d32f9OiACj56dyo/DP838F0CGMCPaR2CCUVdp6wqq1eqOhKxeNVCoWwb9+JsnA4NDwSJKMjCKOpTIeh18Zy1kBJU4AwCQaU4JXXPOYZD7ANM4AzKI1R3I2b+O4iBPzXMDFJddKmKdyGbSQiRX9WF0bwHXXNuwMFuhHEvNN/VhRKf7N0+ZjnulHsdW3rYdQme+4uGviHleRucfW/sHh9FpKgiOTjhsnAKdwtqXObdy6mNlt4CXMmDh2db0LN4e3V8LG6t0C3j/gEJj2KIldfePxzkZFnkq7F2rPktqv05S4SAM4QecsM1/TkxAy9R8n0YFI6C93+/8IN7ZNPlEZb5voUTsz4/E8wLSNFySXcjnTVoSdue3G3L7s6/qa6Kw4VyKnm6ApyUIzKH/T9X3silqsAkYWixUwvODwA3E4sEJwloVaWwVn+gQnoVXIhRCJG3qEZwBt2ZNKcibzXH5ibflyGc3Af6vnzMy+WkdcF1/rby7+CzcrKyuXiI2vO/ySe9DtEK37b5yGXqYnJ1f/P34AAiUyWkeqMKoAAAAASUVORK5CYII="
+    },
+    {
+      "position": 82,
+      "title": "8 Best SERP APIs Tested: Speed, Cost, and What They ...",
+      "link": "https://thunderbit.com/blog/best-serp-api-for-fast-accurate-data",
+      "source": "Thunderbit",
+      "domain": "thunderbit.com",
+      "displayed_link": "https://thunderbit.com › blog › best-serp-api-for-fast-acc...",
+      "snippet": "Compare the top 8 SERP APIs of 2026 by parsing coverage, speed, and real-world cost. An apples-to-apples guide for SEO, development, ...",
+      "snippet_highlighted_words": [
+        "top",
+        "SERP APIs"
+      ],
+      "date": "May 14, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABR1BMVEVHcEze+/6Q4uzE0OZ06+5A3OU83OnD3PGd8fRU1OU+3eMk5+m15PVb2+Ye5/K94fVcQ6B4XMeWmOIq5eWPddBkP+KWnNj///90yeQw2+0k4/OljNxoQ+5uUcyFcNByveQs3PYq3vUo4fIt3+mnkuRfR9xoUMuC1Ogx2fW5pu92Yc2q9vm+svFjSepB0uoy1/dybf5u2+9Bzuq79/peUelnVfNvY/qIe/lX1/o01PU11uu7vPI21Pk70/ow2fry/f5wcv6FiPk70Pjw//9ud/5tePKR4/bi6/2Mmulte/1BzPhpgv4wue2S2PFrgfBqf/44xPQys+bD1/pohf8yte40tO2ft+hrkOpmi/5oh/x6ifU0vPFlj/51f/I5t+dlkfR0guSTvek8u/BjlP+InuhYvOJBuux8l+RjnPV/kOtrmvBgmv9kl/6AavnKAAAAbXRSTlMAD3UHZL/pK0uo2fMxif8+JaxA5lv/JwJK//9t//+GJP////+a/91g/763k+j/2///3fl+////////+vz///9Q////Qf//v9P9/////5X////+V///+Rn9///n//9q4/W5D87/VpG8c+Oiyf/ttgn9ZAAAAhBJREFUeAF8jwMCBDEMRce2bfP+p6vWfHWDn1Bv0AxL/YHmeEH8Y5dkRVWln2ZNV1TDEEx0tWyH+hRXDIyLM3i+bwcv5jDi4wRhGEQi9TM/L57KLXUhruq6aRKjxQ6djzz64a4z8vVUVU1TYwcGfcx+hukX3JI4ykJFwgntigQ3v8/2fc/2vkOtHScKr2o8ElgnPSxIEARRFI2xbdu22i60bbv/fz0vMse42zz1slHLAvSczp3J9i7p6vrw4pDDCNpeusE3kuD29u7+gR6fLkSHS0ti5xlg9GXu7Bbg/lICg+HiwiAEBoYBJl72bm9xjBgYjMani6cLE27ZfL466SIyA9xbLAys9Ggz2AQ4NJls/Sd2WiCyv9xeOpwOEAGQAM/XLjtOMeD2OBwOBcDCQGXwZDA8XZmxjt/F/eJUFE2BAXkDBoNR1b3y8RerT9P8fkUICVSYgB7sJhTy+LRwGAKEjVxQA3okGD3AeSyeCIfDyTAAhENxpugxwMdIgIF4AiWTSU0ShUE6EtF1gEWAiXgmkREC1wApWVKDOGWRYxDKZ5AcgfEViuTN5aKRNCqNEi2E8uXyO0loqYp4V6u1ks5gQywwQJhI1UnWM1Gt5SRYmGiURQBN+dZKsoiVGi+MttptBvkW1r8WA2EwANDm4wX6WXGxyK83QKeFywH+bKPRaNVj9H+xRmsaT//fwjz96BWu/JT+KG1cagAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 83,
+      "title": "CrewAI Documentation - CrewAI",
+      "link": "https://docs.crewai.com/",
+      "source": "CrewAI Documentation",
+      "domain": "docs.crewai.com",
+      "displayed_link": "https://docs.crewai.com",
+      "snippet": "Build collaborative AI agents, crews, and flows — production ready from day one.",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAP1BMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC6E+JdAAAAFXRSTlMATYqVfjCh9Rg+5iZW/10K16vHb7h9Rhd5AAAA6UlEQVR4AX2SBWIAIQwEcV/8/1+tpTRcbU8igxPxlFTaWPGrnDc2RJfyT1RQyWmpfGe6s9/lk415R2iPfvM46/2v3MWqPwMgvJuYmIUzjMYU32GSZCVA3hq8iUm2ASBv83J9I7uB9JnhjpqsBdApo8TR2UUHQF3S1zbbJpsB4GMncfIeK1mHd3Va/EamZCDo8aFUNozXJd1TBlwyQuCGEqwhvsH6ZMHfMB5Edz4WLSjfC/KG9kUdhTRkg9F62XPKtAU+SFbz9rhGf2MRmYO+/iknMTeftKabvyTTXDFbqfpkxArFKLXiI/cK+PQK/QMj3KAAAAAASUVORK5CYII="
+    },
+    {
+      "position": 84,
+      "title": "Vercel: Build and deploy the best web experiences with the AI ...",
+      "link": "https://vercel.com/",
+      "source": "Vercel",
+      "domain": "vercel.com",
+      "displayed_link": "https://vercel.com",
+      "snippet": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAZ0lEQVR4AWMYwkBICI/krCm45eQ/ftfCKbnp//9FuOTsfv3//98Fh+TB/0BwELtc8H8wiMMqeRUieRWbXPF/KCjGIvkYJvkYU27KfzjoxAi4jwjJ7/KY/keA1ahy3E2dSKCJm2FEAQAD1l2xzdeQ1AAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 85,
+      "title": "Top 10 SerpApi Alternatives & Competitors in 2026",
+      "link": "https://www.g2.com/products/serpapi-serpapi/competitors/alternatives",
+      "source": "G2",
+      "domain": "www.g2.com",
+      "displayed_link": "https://www.g2.com › Data Extraction Tools › SerpApi",
+      "snippet": "The best SerpApi alternatives are Apify, Oxylabs, and Fivetran. Find top-ranking free & paid apps similar to SerpApi for your Data Extraction Tools needs.",
+      "snippet_highlighted_words": [
+        "best",
+        "top"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAARVBMVEVHcEz/SSz/SSz/SSz/SSz/SSz/SSz/SSz/SSz/SSz/Pxz/OA//MgH/XEX/tKv/7Or/////fGz/pJr/xsD/2tb/h3n/9vSOWCvuAAAACnRSTlMAMobC7P9gGN5Dzy4TxgAAAOxJREFUeAFkkdESxBAMRbV1265AwP7/p+5IZjpbzpPMGdwk5mHbDwvYY9/MzGnxYM+Xum68uC/z8MHCZ3WrvaDAkScH57TSl28tKMTEHH0uWt+SE4KPPEDhyoTByGzVVXGV4DI77ciYTb8rQ7UYQI2zSmxmhzBc9w6ufHOGspvjudhJTq0lKId+SY05eQxCCHAqrdE4SbIAJLkClEkGHjSv8v0sJRY0r50C9Z77aFfk8d9K9o58CJEZwj4NoVRunovG3abxDXpXZ6fBC9VDOJeVfWsmre912b+Bohsa2fiSCb4Ehi9pEk7UeLMDAJ5AFVu/MpWgAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 86,
+      "title": "SE Ranking — AI SEO Software That Gets Results",
+      "link": "https://seranking.com/",
+      "source": "SE Ranking",
+      "domain": "seranking.com",
+      "displayed_link": "https://seranking.com",
+      "snippet": "SE Ranking is a trusted AI SEO tool that pays for itself. Get accurate data, actionable insights, and automated reports. Powerful tools, simple execution.",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAP1BMVEVHcEwSOvgSOvgSOvgSOvgROvgSOvgSOvgSOvgSOvgSOvgAL/gAIfiKl/vw8/////+3v/zFy/2fqfw7VvkrSviX5on8AAAAC3RSTlMAMofC6v9g7hfgP9peocEAAACzSURBVHgBfdNVFoAgFEXRR1wVHrbzn6oFizLO7zZIigmpNKCVFFTXtIi1TUGdQZHpklk8sj8WtUOM3Rl8/ssmmuuHs6Dmsiaz8SogmhPbyiK2RKK2iBAka5sYIUmqsjm+CEX606AJV7wEWxzfeSX4nG+Z7havpBHjdQxt4bPqaQM4DEh+GiSJT4OIy8fnOObC2mzhmd2WG5pyy9bcTNjshMnQVcdk3fj/ECX7P5r/h/r3OhxbaBM4FWmxyAAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 87,
+      "title": "SpyFu - Competitor Keyword Research Tools for Google Ads ...",
+      "link": "https://www.spyfu.com/",
+      "source": "SpyFu",
+      "domain": "www.spyfu.com",
+      "displayed_link": "https://www.spyfu.com",
+      "snippet": "PPC and SEO SERP Analysis. Big lessons in deep SERP analysis: Find ... Review top keyword tools available; More... Plus a Library of over 200 Video ...",
+      "snippet_highlighted_words": [
+        "SERP",
+        "SERP",
+        "top"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADmklEQVR4AWIgBRgbG7MCSq/HKDmaKADDZxHb1tr4bCO2bdu2bdu2bdu2bSc3b+fUnszp9DQ2P55p1dS9fVtV8EEJjMMR5Ec2pICXdS/OAnogGb5BXczCabyAqOVEnMJeTEMtBMM7tkE9kQ2F0B87cB/vITrv0AlV0RercVUZj+8dV0Wd8Sq8hdjQwuW/8RCExjiEW+iGNE4S8MIMiE1TkNygn/Roh9tYjWAnSTSE2PQKm1EBqQzuob9xDHsRbie4N1riPcSB19iBakir6zMKB7EFWc2Cp0M/PIHE0hvsRR1kcOn7R1zEOMQ3Cv4TNpmcuVPvcBTNkE3FqIJ7KKEPnhLjVZlO4CoeOUzmLXZiPqZhDAajK/IjPhJiIbYjpWsChbADPyANfPEPzkEcaAdPeJhc5v9xF8Vdb7rp2IykutfuPIgDZ+BncZMnxkbMhLe2ww/n0MqgcUuIQ01sPGmtcRY+2kZ+3MW/Bg3/w3OIA5uQ1CKBv3Eb+bSNpriOIIOGWWNxHzzEzxYJ+OHKx2qp5/48Mhs0jIclEIdaWySQFifQT9sYhnPI6KZxR4hDixHXJIFUOIzh2kYfXIWPm8Z58crGS+cGDmAzisPD4o17En1jPjwP8AOSIb6usQ8uufkIncN01EFDtESwjacgAFfRWNvIhUeogKZYjHLIDA/ExyqI8gRLURNhCEF7NLT73VcvozvIo21kx1mMQTMI3uAkBuEPDNOd+SUcwjYcQxV4Kknhjx+R0E0CnVXMHDEDkMlqRzsVXFw8xk1IjK/UUnmKlmiBKdip2q9AYoPgKbEH0+Eds7MgnmCV1YvnG/z61Vfy41esf0rmHUSng5uzL4VHKKofB67DG6jOjH2LHkERssYnROb4hUr34AiS+azdE/zu5vnfji1IoT9YAI8hZr5Cvqho2ZU9WB5lCpQrWQKleniURKnjyktUNhhrdsFjFDEqTVwMhliJRhWCnskaJA9IYqFvqFEVruJvl/7L4xFGIJ67xyM9VkKsfIXOlP9mZq0KQVIjTFcF4BAiUQq3sRYZrZ5Rf2ywk4B21lP9wz5WYbGqgusTopzCfWxGoN1heQ7MwRurS/F/1FeyOUeIXOdeqBMWyT7Dodpc+MRmhtQMl6ySqBARJUeyBcv4gDD5Vu1XLqEpkn3J5DQMfXEar929G/LzZPwX/RXrtKHs6INQk4+S4wmrH6pjFk7iMd4pj6nECcxUExNfeNrp+wMh4bgeAFKx3gAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 88,
+      "title": "Best SerpApi Alternatives in 2026 (Honest Comparison)",
+      "link": "https://prospeo.io/s/serpapi-alternatives",
+      "source": "Prospeo",
+      "domain": "prospeo.io",
+      "displayed_link": "https://prospeo.io › serpapi-alternatives",
+      "snippet": "Fastest real-time, Serper, ~0.83s avg in SerpApi's own benchmark ; SERP data to contacts, Prospeo, 98% email accuracy, enrichment API ; PAYG / sporadic usage ...",
+      "snippet_highlighted_words": [
+        "SerpApi's",
+        "SERP",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAATlBMVEVHcEz/Gib/Gib/Gib/Gib/ARP/AAL/FCH/Gib/pan/xsj/Gib/anD/////4eL/mZ3/Cxz/P0f/2dr/fYH/V17/7e7/9/j/tLf/jJH/MDnMxkurAAAADHRSTlMALMf+/////8H///kKsSK0AAABHElEQVR4AX3SCZKEIAwFUG3Jp2GMRtn0/hedKFUMzhZ3n5VEYBjG12R+iek1qpk/Yxxe7Z5gn/gepkbOG3rgx1CvFjMvnlfIT8S2cwBiyhH2iUSFC2lKwcGau0cKed9Qn0kKr9QhEh+Qr9r8xCPlGfauvXBgPHDWWvuJq7YD+MQD5a4Vri/Ep+wgPV4ZE8/AwU79qtKjweq15H7CWMTkje2RFHnB3SqEd3zH7DjAClZ2DVetUFETL2fMXralouiYb6gIi5BThMSKquS4EG40BiWQsQ2NwblzOHxkReqwjWlmDVBFdKghcJ5WDkAJgOMgF7Ygsji12RKudslU7OJuNqWIOrZTb3VZ1JWk2JZmz21p/ruoh/H98Wu8x+ETHQMZMjVQOAAAAAAASUVORK5CYII="
+    },
+    {
+      "position": 89,
+      "title": "10 Best SERP Scrapers & Analyzers (Tools + API)",
+      "link": "https://thruuu.com/blog/best-serp-scrapers/",
+      "source": "thruuu",
+      "domain": "thruuu.com",
+      "displayed_link": "https://thruuu.com › Blog",
+      "snippet": "The Best SERP APIs · Value SERP · DataForSEO · thruuu (SERP and On-Page API) · SearchApi · Zenserp · SerpApi. SerpApi provides access to search ...",
+      "snippet_highlighted_words": [
+        "Best SERP APIs"
+      ],
+      "date": "Aug 27, 2023",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAk1BMVEXemi3dmCbdlhzclBTckwvdlyHckgDkrWDuzqf14sv469vkr2Xpv4n89/D////+/Pjrw5HfnTb57+P79OzgoD/hpUzjqlnq6+0AACoGJz7h4+UsPlDz8/TsxpdCUWA3SFjDx8oADzAeM0gAHTi4vMHmtHGDipOGjZbW2Nvw1LPmtnYQK0F1foefpKsAIzwAFzSrsLYIcPMZAAAA/klEQVR4AYySAwLDQBREm1Vs17buf7liM2E5cd7ud+9PKYQyRonyBnGharph6JopeHeXsGwHcj3R2s39wGkojHiDxU5HSUUV35FKszzrg0alZREA5oO8hKGAUQs/hg+YOtCIFBsR52A8GAzGkyliZtKj6hSazR9wvljic/X0SjR8rdfzwXy92eJz97RLdeedT8egD8gMB0K0UMC+Q5jtQphFQF2IgBTzPdzLAgq3hodtBVlRPs+BFoPB5LisyiclQsDjYTDIT/LVZmXLIqek5/PlKt/iahh44lRVKh5mcxSi0GnIjnl7wEZuxTTWHU/CVjsjCIzdnpH7CCVqwgAAgtkhNMFDHx0AAAAASUVORK5CYII="
+    },
+    {
+      "position": 90,
+      "title": "Dify Marketplace",
+      "link": "https://marketplace.dify.ai/",
+      "source": "Dify Marketplace",
+      "domain": "marketplace.dify.ai",
+      "displayed_link": "https://marketplace.dify.ai",
+      "snippet": "Powered by Asqav. Top 20 Models. Top 20 most installed models. Model ... SearchApi is a robust real-time SERP API delivering structured data from a ...",
+      "snippet_highlighted_words": [
+        "Top",
+        "Top",
+        "SERP API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAATlBMVEVHcEz////////////////////////////////////////K1f8AMP8AGf8AAf/q7/+Onf/Z4v+wvf8AJ/8AH/9me/+9yf96jP8bR/8lT/9srjtmAAAAC3RSTlMAUpXN7f/JDKehHvQcBzoAAAEGSURBVHgBhZOHFoMgDEUD8pxAFej6/x8tjTZ1e12MjGdOoBlKFwYwpVa0Q1VjRtPSCo0VeulusMFUJLTYpRV/HPCLYXCAWenrIKOMKBUB1vkbD3rvnPOSpMHI4KwLvO9iSmk0qLMBfqQpgo/3RwYMkYLw4P3OxR6CmiTeBgYYhpDik8eMppK/wTsWdvMuWRt5zBRkJoP03cgGKVprRSQMgRlCeLyyAULoo70/QggYIQhvG7ciQebcwFBxblCSPjfQpM4N1FTqXNruZW2Xv31clppqrn9Kafz/bx2i1KH59ZN3a7x0HcvstrDEq5a7bNrrtr8+ONdHT2gbzKgr2kHp0gCmWBz/D6sRGe3IHk9rAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 91,
+      "title": "Free Keyword Research Tool from Wordtracker",
+      "link": "https://www.wordtracker.com/",
+      "source": "Wordtracker",
+      "domain": "www.wordtracker.com",
+      "displayed_link": "https://www.wordtracker.com",
+      "snippet": "The best FREE alternative to the Keyword Planner. Use Wordtracker to reveal 1000s of profitable longtail keywords with up to 10000 results per search.",
+      "snippet_highlighted_words": [
+        "best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAMAAACTisy7AAAAJFBMVEU+bbA9brI8crb///9AeLowarIqY6/l6vPM1eiJosxojMWtvNpRogMWAAAAAXRSTlPBrIUqQAAAANxJREFUKJGFkokOxCAIRBXBo/7//y4waOtmD9JkWp5DVUgpf430gyl9vBPiE6Q7Dlg1xLIiLp4IWGdrrWuaVYfCodpqwF5KacJiOoVEpfQTEntSaJheAijToRtLqdLsU43iG/Kl9Srl1iEUuwVsgOwFqm060YJhhE7A7TzCrwTOZep9vVTi5eRVcZW4iN9hpyjRqrGAFOs5Vo38gDmMTDiOGq1qdAUH1EzHBTAaB2iGSQsKMZoK2LVlbE5r1szB4p9otv0o2k3HmGA+2J89KP9nCDBvsuge3GD5aXwBC6cIAttPp6wAAAAASUVORK5CYII="
+    },
+    {
+      "position": 92,
+      "title": "Ahrefs—AI Marketing Platform Powered by Big Data",
+      "link": "https://ahrefs.com/",
+      "source": "Ahrefs",
+      "domain": "ahrefs.com",
+      "displayed_link": "https://ahrefs.com",
+      "snippet": "Agent A — your top 1% marketer · Unrestricted Ahrefs access. Not a filtered API. Not rate-limited endpoints. Everything Ahrefs sees, the agent sees. · Best AI ...",
+      "snippet_highlighted_words": [
+        "top",
+        "API",
+        "Best"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAk1BMVEU6V/w5Vvw0U/w0Vv9Ta/xpfv1pePFpYMxmYtItTvyrtv3/////79D/iAD/kAD1iwA6V/g5V/2nsv3/6dL/hAD/jQDwiCGgrP35+v/09f/24dX/liLwkTlIWun/9uwpTPwhR/xkef2Dk/3R1v7x8//K0f6Sn/3c4P5cc/1JYvx4iv3l6P63wP7W2/5wg/317uzriATX9cROAAAAvUlEQVR4AcXQRQKDMBBAUSbU3XCZ4C73P12xWpKu+TgPjTRjQKZkWeZssRxbrdcbFre7/djheDpfrgzeJrw/FFVinrzVdGPIPFm24zjCD9ou93tXUdgnwxARI0GKiNQTIKAfhH2GAGm0n+JxG+//IybdySjNsiznEEjYIRIAjHkEo0MKEtBE8Niiw5jSbbnncRzaojL2AgQM92OBaBBI2XNSp3ujOZ/bAT+KJMsuSKDbv1wGY0d+3Fyvnc3VE3i+FX/MPSMAAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 93,
+      "title": "Turn your browser into a Marketer's best friend",
+      "link": "https://keywordseverywhere.com/",
+      "source": "Keywords Everywhere",
+      "domain": "keywordseverywhere.com",
+      "displayed_link": "https://keywordseverywhere.com",
+      "snippet": "Start free. Upgrade when you need the data. · Related, PASF & long-tail keyword widgets · YouTube insights, SERP metrics & tags · Local SEO metrics · Instagram ...",
+      "snippet_highlighted_words": [
+        "SERP"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAkFBMVEX////z9PWusrdweIE0RFMQKj4qO0tncHqjqK7p6+yCiZEAHzYVLD8iNUYnOUkbMEIAGzPS1Ne4vMAlO0sAHTScoqgZOkseOktRP0xcQUw1PEutTU7IUU/PUk+jS07k5ee5T0/EUU8fOktVYWyCRk0+PUt7RU2+UE8AITeJR02XSU5tQ0x9hY3LztFGPkyRmJ6vLGEUAAABMUlEQVR4Aa3RBYKDMBAFUPTjkFpSwYa63/9228mWrPt+nBeP9Q+xHdfzfQRh9JbiJM1yIM8K4b7iQVrAJEuGz20o8l5GIwDjybN6AoCUbGo6k6yO6S/NgfmirOZQs7KsFQDR3DHm/mRLJbppSQtwsuW9YsJfakVlt6ayltBJBhqdlD+6DZFqqTcUsUY3u+O2JuoNuafRyzWuaEtUTke97jT64Kg9bbctHaRB+wXScUWEl4i8rynXJa3Ui2aDTOPhhnJBW/ViQGFhsDuWtOk0FieNkeAPyQi5pe0j7s6WaZeRpF6KvQSQcaucKGGsy1IBakvVZQSIgdnOMTCaHfnnaLrnh3+1TCasnV6ckWLj0Zg4IoNJJp7V4zTLpMhZ8mLnmf5MBrG3u8U7na33Y9vWt/MAr5AfYt/1EXYAAAAASUVORK5CYII="
+    },
+    {
+      "position": 94,
+      "title": "AlsoAsked: People Also Ask keyword research tool",
+      "link": "https://alsoasked.com/",
+      "source": "Also Asked",
+      "domain": "alsoasked.com",
+      "displayed_link": "https://alsoasked.com",
+      "snippet": "Discover the best keywords to boost your search engine ranking. Asynchronous API. Programmatically interact with PAA data using our sync/async API with webhook ...",
+      "snippet_highlighted_words": [
+        "best",
+        "API",
+        "API"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAARVBMVEVHcEwlavokafokafokafolafskafokafokafocZvoOYvoAW/pulPtIffuzxf36/P/////q7/+Jp/yiufzX4f4ATPnG0/0aG0cgAAAACXRSTlMAL3CTrAb/x+AuPeXKAAAA5klEQVR4AWSQVwKEIAxEFTRrCCj9/kfdQOy+H8ujzGS4GJWeJq3G4cOs4UTPT6fggbq7H7z4XW6BD8t333ev+prz3hkuEOGiZdanMWQdmasRy9O4dfM+RCAEgecCjCFIwbNi7XM04keOg4Qxe++31ZViq2eqJYMcSeP+7SvFXG3xW5WVqIeJQl9JvjrPsCymnbSaSWRI7i5dCiI19leffaXqt8Syf8bWRZ0tfLYcrYdO0PoqqcJeYkkUMnuVAQSkHkNKCPfxAR/Pna/xvQcPr8H/hzPK8EU2oWRCOIFhJk0iEjXe7AAAhF0VtPI9lAgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 95,
+      "title": "7 of the Best SERP APIs for SEO and Market Research in ...",
+      "link": "https://hackernoon.com/7-of-the-best-serp-apis-for-seo-and-market-research-in-2026",
+      "source": "HackerNoon",
+      "domain": "hackernoon.com",
+      "displayed_link": "https://hackernoon.com › 7-of-the-best-serp-apis-for-se...",
+      "snippet": "1. Zenserp Best overall SERP API for SEO teams ... Zenserp is built for teams that prioritise SERP accuracy over scraping mechanics. If your work ...",
+      "snippet_highlighted_words": [
+        "Best",
+        "SERP API"
+      ],
+      "date": "May 27, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEUA/wAD+wMZshkjkCMfmx4rdSs/Kz4+Mj0+Lz01RjQI9wgqeSo9NTw8PDs9OTw0TjMwMC8lJSMvLy5JSUipqajW1tZiYmLExMRWVlUZdRkpHyj///9ubm0ZGRf5+fnp6ekjIyEpJCciQiAjoyIhTyClsqXa2drx8fHAx8A8YjsrbCouHi1MREsyTzEH8Ac7kjpJX0geax0vEy4pEyc7QDo7RjoniSd4eHcA4QAlXyQnlyZGlEVTTlJWaVUmNiaxubFCUkIvXC4cphsnfyaB106FAAABA0lEQVR4AWySAxbEMBRFx67NsW1r/4uq+090D9rkhu+nkFFEKeCUyggVwlZrdaDRbOGy3eEAXmBIUeI4WWZLRdV0STNMWlq2xBmO6/lds9cfYGo4Gk+0ydR3vakT/czmC0SWl4YTkciI7kpApY1LZQ2qtdnyuDR3m00WXGk/1qao9LXZvtJKJw4PyTyQEdNjdZPOHC5pKZ3Olw0uryImsWWdaTf/OS5urfRA9/Fk6iD4E+3+yCLc3J4vA5Vd/X27FfEQAAgB4gPI+B6fb7fb9VPT7Wq/P1GyHpfMhpKRxe5OJhMoNvlMRFmWRY4pAUpWGx2gHg49aTo5IwFmtETNiDU7AAAs6DD3DqV89wAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 96,
+      "title": "Best free SERP APIs for 2025 to integrate with",
+      "link": "https://apyhub.com/blog/exploring-top-serp-apis",
+      "source": "ApyHub",
+      "domain": "apyhub.com",
+      "displayed_link": "https://apyhub.com › blog › exploring-top-serp-apis",
+      "snippet": "Explore the best SERP APIs to track search rankings, analyze competition, and improve visibility. Learn how these APIs can transform your ...",
+      "snippet_highlighted_words": [
+        "best SERP APIs"
+      ],
+      "date": "Apr 3, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAilBMVEXyxQr2yAr4ygr7zAq9mgh1XgBZRwB0XgXxxQpIOgAAAAAAGiMAIDdBNQNDr78+y+a0jwBW8f9WioH/zAAAABNX7P9V6f9FkZf4xQAQDQE3LQLftglZRAASSVQ1mamgggdTPwAVUFxnVASFbAZNOgDovQoZFQHCngijhQeRdgYSRlCLcQaVeQbLpQhIpWw3AAAAoUlEQVR4AdXRRQLDMAwAQUtymSnMjP//XsOce7vXMZv9coCEsGLEN9sdp0XbH46n8/F4WTI6HK+3O/HjhWYG/Hh9PF+sUI5TxM37I4gSYyQr6lRJ0z+CUSCaxyPHZSwUtkcVxmjZNRbB0aFVJPeIY/R6LLaFFfT35AS0jBC60THGCSaPh/EiIuTHAHpo9uk6+MAmeo+L0jTNclr6zSZg/9kXVbIL6qlPvREAAAAASUVORK5CYII="
+    },
+    {
+      "position": 97,
+      "title": "Semrush: Your Unfair Advantage for Growing Brand Visibility",
+      "link": "https://www.semrush.com/",
+      "source": "Semrush",
+      "domain": "www.semrush.com",
+      "displayed_link": "https://www.semrush.com",
+      "snippet": "API · Data Sources. Top Apps. AdClarity · Exploding Topics · SERP Gap Analyzer · Other ... with better SEO. Minimize Expand. Example of Site Audit insights ...",
+      "snippet_highlighted_words": [
+        "API",
+        "Top",
+        "SERP",
+        "better"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAaVBMVEUYHhUSGwoAEwAAEAAAFQAUHA40Lz6Larapf9+DZaslJikEFgAWHREAEQAqKTCXc8fLl//Gk//Ekv/Ilf9kT4EdIR2NbLnBkP9TRGoNGQC5ivMuKzYbIBlEOlV9YKJ0WpafeNEAAAA8NUoZ6owNAAAAkElEQVR4Ad3NtQGAQBAAQfzdcYf+e8QdKmDTObF+m+24rud/ku8GAEKEyZso40IqrZUJ2ZOcKDY6WZJpdjcMpFxtKnfvWARlIHY1lX2/miF1bJrwepd4tVbJkbk8paTRRumpHSk9jMetmIvbVQ1wLg89NtVlYDPIDjrWpTRzSc3oA/2+6pcC15vsqfaab/2xEfcDDcVxLhJhAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 98,
+      "title": "Top 5 SERP APIs: A Comprehensive Ranking",
+      "link": "https://ithy.com/article/top-5-serp-apis-ranked-comprehensively-7li9wffa",
+      "source": "Ithy",
+      "domain": "ithy.com",
+      "displayed_link": "https://ithy.com › article › top-5-serp-apis-ranked-comp...",
+      "snippet": "This analysis ranks the top 5 SERP APIs based on a variety of factors, including features, pricing, performance, scalability, ease of use, and ...",
+      "snippet_highlighted_words": [
+        "top",
+        "SERP APIs"
+      ],
+      "date": "Jan 6, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAA1ElEQVR4AWOgBxgFo2AUGKkxLqthPDqZcWcXY34II1CEU0xUKzHKtKrQuCxXOcCLZBMttBivLWC4MIfhzEwQCWT3ZYHFmyosW6uBpHVnvX5uCmmGbmiBmAhHIHPVxRhkvd0hhkLMlbQ0Jd5MNBOh7s3yY2DQ0oEbCmSoRwUTbybEIHSXxjozcOgbIBuqGupPgqF9WUBT0M0FAqDTkL3PpyBHcrCC4wqKXIwYGITEgQYBDQUiIAMYvuSkqlAHxuYkcHqCAWDMAB0L9DXIjfQBo2AUjAIA7ndpmQxlAjcAAAAASUVORK5CYII="
+    },
+    {
+      "position": 99,
+      "title": "Top 10 Best SERP API Providers for Accurate Rank ...",
+      "link": "https://www.serphouse.com/blog/best-serp-api-providers-for-rank-tracking/",
+      "source": "SERPHouse",
+      "domain": "www.serphouse.com",
+      "displayed_link": "https://www.serphouse.com › blog › best-serp-api-provid...",
+      "snippet": "Explore the Best SERP API Providers for Smarter SEO in 2025 · 1. SERPHouse · 2. Scrapingdog · 3. ScraperAPI · 4. Data For SEO · 5. Serpstack · 6 ...",
+      "snippet_highlighted_words": [
+        "Best SERP API"
+      ],
+      "date": "Apr 14, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEVHcEyEYOWEYOWEYOWEYOWEYOWEYOV/WeR6UeShh+vc0/f///+8q/Dz8P2JZufn4frLvvSwnO6TdeiEYOUN5I4AAAAAFHRSTlMATJbH6P8T////////////////+Nar5kQAAAEMSURBVHgBbJEHAoQgDARtYUNCsfz/r8chxjp2M7Slu9AP40Q0jUPffeAGujC4Z93KptybT/Ricpc6GQAZ7qPO3vPbsP5BoioEG+U+P3DQSmBcZ+qs96iNaOM46wBJai3n+pAE62Kvz1pZmBetzLtR8q3P1H6iuE2mSt8NJuSV9xx4zSYM3WiCJEKKcQWBl0MYu8kEDfC54OGJIalF0TLwcRdEihA0cFvo1gRi/v/1mkV9eS1RoAltCAGTh9fFV6FwpG2TXBi0hrWcSGLC+FgmiPBY5jsokmtQr6htS4+o2xj8G47IIhjdhBMMZpITYEckOYKJFluyZ0WSJ5Rx8GY9YSbSMi8i+wsLo2V/AHIJF6Lz8io7AAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 100,
+      "title": "Sam Altman (@sama) / Posts / X",
+      "link": "https://x.com/sama?lang=en",
+      "source": "X · sama",
+      "domain": "x.com",
+      "displayed_link": "5.2M+ followers",
+      "snippet": "The goal is not to remove people from the loop, but give them more agency over what is worth doing, and better tools for directing, reviewing, and improving the ...",
+      "snippet_highlighted_words": [
+        "better"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA/0lEQVR4AbXPIazCMACE4d+L2qoZFEGSIGcRc/gJJB5XMzGJmK9EN0HMi+qaibkKVF1txdQe4g0YzPK5yyWXHL9TaPNQ89LojH87N1rbJcXkMF4Fk31UMrf34hm14KUeoQxGArALHTMuQD2cAWQfJXOpgTbksGr9ng8qluShJTPhyCdx63POg7rEim95ZyR68I1ggQpnCEGwyPicw6hZtPEGmnhkycqOio1zm6XuFtyw5XDXfGvuau0dXHzJp8pfBPuhIXO9ZK5ILUCdSvLYMpc6ASBtl3EaC97I4KaFaOCaBE9Zn5jUsVqR2vcTJZO1DdbGoZryVp94Ka/mQfE7f2T3df0WBhLDAAAAAElFTkSuQmCC"
+    }
+  ]
+}

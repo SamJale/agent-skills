@@ -1,0 +1,192 @@
+{
+  "search_metadata": {
+    "id": "search_MG6OPWeEVjFEB8WyB4jR8w7N",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:21Z",
+    "request_time_taken": 1.0,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 1.0,
+    "request_url": "https://www.linkedin.com/ad-library/search?accountOwner=Nike&countries=US",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_MG6OPWeEVjFEB8WyB4jR8w7N.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_MG6OPWeEVjFEB8WyB4jR8w7N"
+  },
+  "search_parameters": {
+    "engine": "linkedin_ad_library",
+    "advertiser": "Nike",
+    "country": "US"
+  },
+  "search_information": {
+    "total_results": 11
+  },
+  "ads": [
+    {
+      "position": 1,
+      "ad_type": "text",
+      "link": "https://www.linkedin.com/ad-library/detail/732489586",
+      "id": "732489586"
+    },
+    {
+      "position": 2,
+      "advertiser": {
+        "name": "Nikesh Parekh",
+        "position": "Building again (If we connect, don’t sell me)",
+        "thumbnail": "https://static.licdn.com/aero-v1/sc/h/cs8pjfgyw96g44ln9r7tct85f"
+      },
+      "ad_type": "image",
+      "content": {
+        "headline": "Today, I am super excited to announce that we're launching Provn - the #AI Talent Draft to help employers find the great…",
+        "headline_links": [
+          "https://www.linkedin.com/company/provn-inc",
+          "https://www.linkedin.com/feed/hashtag/ai"
+        ],
+        "image": "https://media.licdn.com/dms/image/v2/D5622AQEr7XRdEWC-bg/feedshare-image-high-res/B56ZpK4EWNHQAs-/0/1762192804178?e=2147483647&v=beta&t=uWgUzNCCvu43Y-IeLyzhrkZUMEqvfFpWTROzncMbd_Y",
+        "description": "Founding team at Provn.co"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/953435306?trk=ad_library_ad_preview_content_image",
+      "id": "953435306"
+    },
+    {
+      "position": 3,
+      "advertiser": {
+        "name": "Niketa Calame-Harris, MFA",
+        "position": "Tech Sales Professional | Tech Career Pivot Author/Coach 📚 | 🌟 Original voice of Young Nala in Disney’s film The Lion King",
+        "thumbnail": "https://static.licdn.com/aero-v1/sc/h/cs8pjfgyw96g44ln9r7tct85f"
+      },
+      "ad_type": "image",
+      "content": {
+        "headline": "🚨 Job seekers — you don’t need 100 more applications. You need a smarter system. Most people are stuck: ❌ Applying onl…",
+        "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQGXlxmuBY_egQ/articleshare-shrink_1280_800/B56Z5HMh.NHkAY-/0/1779310929139?e=2147483647&v=beta&t=ynYih3LPBD4gt7MgbtNCxjuyzaW3UIY4st7n71Xs7eY",
+        "cta": "Ultimate Outreach Kit : AI Agent Prompt",
+        "description": "The Ultimate Outbound KitBuild your own AI SDR with custom Gems and high-conversion prompts for only $10Most outbound…"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/1389159976?trk=ad_library_ad_preview_content_image",
+      "id": "1389159976"
+    },
+    {
+      "position": 4,
+      "advertiser": {
+        "name": "Niken Patel",
+        "position": "Founder & CEO at Neuron7.ai | Building agentic AI for mission-critical service",
+        "thumbnail": "https://static.licdn.com/aero-v1/sc/h/cs8pjfgyw96g44ln9r7tct85f"
+      },
+      "ad_type": "text",
+      "content": {
+        "headline": "MIT just released research that should wake up every CEO and executive investing in AI. Numerous things put a smile on m…"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/839072826",
+      "id": "839072826"
+    },
+    {
+      "position": 5,
+      "advertiser": {
+        "name": "Rishi Gupta (Ex-Walmart, Nike)",
+        "position": "AI Strategy & Transformation Executive | Digital & M&A Integration | CIO/CMO Advisory | Ex-Walmart, Nike | WEF Expert Network | Forbes Council | Wharton CAIO",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D4E03AQFZpEBdX1FGUA/profile-displayphoto-scale_100_100/B4EZ6ZHJ7mKkAY-/0/1780685251880?e=1782950400&v=beta&t=iemljTe9ALn7qv8To6aYCDJiDg5oq8yWwAztBhNHeUI"
+      },
+      "ad_type": "text",
+      "content": {
+        "headline": "Here is my PoV on 𝗡𝗲𝘁𝗳𝗹𝗶𝘅'𝘀 𝗾𝘂𝗶𝗲𝘁𝗲𝘀𝘁 𝗮𝗻𝗱 𝗺𝗼𝘀𝘁 𝗰𝗼𝗻𝘀𝗲𝗾𝘂𝗲𝗻𝘁𝗶𝗮𝗹 𝗔𝗜 𝗯𝗲𝘁. 𝗧𝗵𝗲 𝗽�…"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/1233093204?trk=ad_library_ad_preview_article_content",
+      "id": "1233093204"
+    },
+    {
+      "position": 6,
+      "advertiser": {
+        "name": "Nikerson Frederique",
+        "position": "Computer Science Instructor at E-cubed Academy (PPSD) - Founder and CEO at Kiskeya Translations LLC - Foresters Financial Northeast Branch Councilor - Professional DJ - AKA DJ Wooch Entertainment",
+        "thumbnail": "https://static.licdn.com/aero-v1/sc/h/cs8pjfgyw96g44ln9r7tct85f"
+      },
+      "ad_type": "image",
+      "content": {
+        "headline": "52 Years in the Making: The Grenadiers are Back! ⚽ Hello everyone, Some warmth to brighten up this \"evil\" winter: Hait…",
+        "image": "https://media.licdn.com/dms/image/sync/v2/D4E27AQGBT-w4Hanlpw/articleshare-shrink_1280_800/B4EZ5Gq1ciJsAY-/0/1779302095700?e=2147483647&v=beta&t=yXZVc5aQJiu6H1jXlVTXXb-fl-zGlUqNhRPs1sIpJAs",
+        "cta": "Celebrate Haiti's Return to World Cup 2026! | Kiskeya Translations, Interpretations, & Support Services",
+        "description": "Get ready to celebrate as Haiti returns to the World Cup stage after 52 years! Order your Haiti soccer gear now and…"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/1134104934?trk=ad_library_ad_preview_content_image",
+      "id": "1134104934"
+    },
+    {
+      "position": 7,
+      "advertiser": {
+        "name": "Niken Patel",
+        "position": "Founder & CEO at Neuron7.ai | Building agentic AI for mission-critical service",
+        "thumbnail": "https://static.licdn.com/aero-v1/sc/h/cs8pjfgyw96g44ln9r7tct85f"
+      },
+      "ad_type": "text",
+      "content": {
+        "headline": "I've spent the last six months talking to service leaders. Same story, every time: \"We're drowning in data. But when …"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/1157636636",
+      "id": "1157636636"
+    },
+    {
+      "position": 8,
+      "advertiser": {
+        "name": "Nike",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D560BAQHJk7IdfuV1Dw/company-logo_100_100/company-logo_100_100/0/1732131503851/nike_logo?e=1782950400&v=beta&t=mOwZ5p5R-LkZ3h1Y9BVruLjD6H5UIAfRYoj_mY15EhQ"
+      },
+      "ad_type": "video",
+      "content": {
+        "headline": "This is where next began and where limits dissolved. Every day brings new possibilities, every space holds potential.",
+        "image": "https://media.licdn.com/dms/image/v2/D4E10AQENtc9mvUTbOw/videocover-high/B4EZZuStr3HcCM-/0/1745607130119/ALivingCampus_Cutdown_Linkedinmp4?e=2147483647&v=beta&t=XoDCRBT5AYf4QsILOQIzl0hT0OtXg6goDQ9MDUqkS30",
+        "cta": "Find Your Space at NIKE"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/656802214",
+      "id": "656802214"
+    },
+    {
+      "position": 9,
+      "advertiser": {
+        "name": "Rishi Gupta (Ex-Walmart, Nike)",
+        "position": "AI Strategy & Transformation Executive | Digital & M&A Integration | CIO/CMO Advisory | Ex-Walmart, Nike | WEF Expert Network | Forbes Council | Wharton CAIO",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D4E03AQFZpEBdX1FGUA/profile-displayphoto-scale_100_100/B4EZ6ZHJ7mKkAY-/0/1780685251880?e=1782950400&v=beta&t=iemljTe9ALn7qv8To6aYCDJiDg5oq8yWwAztBhNHeUI"
+      },
+      "ad_type": "image",
+      "content": {
+        "headline": "🚀 𝗣𝗿𝗼𝘂𝗱 𝘁𝗼 𝘀𝗵𝗮𝗿𝗲 𝗺𝘆 𝗳𝗶𝗿𝘀𝘁 Forbes Technology Council #Article - A New Digital Playbook: Why #SEO Alon…",
+        "headline_links": [
+          "https://www.linkedin.com/company/forbestechcouncil",
+          "https://www.linkedin.com/feed/hashtag/article",
+          "https://www.linkedin.com/feed/hashtag/seo"
+        ],
+        "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQGHAM-SPnIPLQ/articleshare-shrink_1280_800/B56Zj25_x2G0AQ-/0/1756489055771?e=2147483647&v=beta&t=5Xk763-Vctfvl1mPh9w0S9BSZbjais6Cex4ZkNpGOw0",
+        "cta": "A New Playbook: Navigating SEO And LLMs In The Age Of AI",
+        "description": "The message for leaders is crystal clear: SEO still matters, but LLMs are redefining discovery, engagement and…"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/747222364?trk=ad_library_ad_preview_content_image",
+      "id": "747222364"
+    },
+    {
+      "position": 10,
+      "advertiser": {
+        "name": "Nike",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D560BAQHJk7IdfuV1Dw/company-logo_100_100/company-logo_100_100/0/1732131503851/nike_logo?e=1782950400&v=beta&t=mOwZ5p5R-LkZ3h1Y9BVruLjD6H5UIAfRYoj_mY15EhQ"
+      },
+      "ad_type": "video",
+      "content": {
+        "headline": "The future of sport is shaped by teams that live what they create. And the strongest teammates are those with the courag…",
+        "image": "https://media.licdn.com/dms/image/v2/D4E10AQH4U5fFRE92Fw/videocover-high/B4EZZuSKXGHkCM-/0/1745606984736/CharlesElliott_Cutdown_Linkedinmp4?e=2147483647&v=beta&t=BdsRlYdzcvnp6Rnpe3ERcEXSIbZkn6nqffjMm4Wk9Ig",
+        "cta": "Redefine the Team with NIKE"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/656774414",
+      "id": "656774414"
+    },
+    {
+      "position": 11,
+      "advertiser": {
+        "name": "Nike DEI Workplace Discrimination",
+        "thumbnail": "https://media.licdn.com/dms/image/v2/D4D0BAQFvfL0JyaKNpA/company-logo_100_100/B4DZxkCxo6J8AQ-/0/1771204975500?e=1782950400&v=beta&t=DXP5PnrG_ElUpQCvmr3t7WGpUw3JXB8_Zw4xetZ-1TA"
+      },
+      "ad_type": "image",
+      "content": {
+        "headline": "If you worked at Nike and believe you were treated unfairly in layoffs, promotions, compensation, or workplace opportuni…",
+        "image": "https://media.licdn.com/dms/image/v2/D4D10AQH2_p1us78Ixw/image-shrink_1280/B4DZxkQM7XKEAc-/0/1771208495578/nikedeigif?e=2147483647&v=beta&t=4I6bcPJU2vS4mAJr2wzcXTPlOBLVoUdQZ8m9iQ-1Eqc",
+        "cta": "Confidential Review"
+      },
+      "link": "https://www.linkedin.com/ad-library/detail/1176734693?trk=ad_library_ad_preview_content_image",
+      "id": "1176734693"
+    }
+  ]
+}

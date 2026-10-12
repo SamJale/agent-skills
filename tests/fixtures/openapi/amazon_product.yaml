@@ -1,0 +1,1126 @@
+openapi: 3.0.0
+info:
+  title: Amazon Product API
+  description: |
+    Search for specific Amazon products using their unique ASIN (Amazon Standard Identification Number).
+    This API returns comprehensive product information including title, pricing, reviews, specifications,
+    images, and related products.
+
+    **Cross-linking**: ASINs found in Amazon search results can be used directly with this API.
+    Product information from this API complements Amazon search data with detailed specifications
+    and related product recommendations.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Amazon Product Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: ["amazon_product"]
+          description: 'Search engine to use. Must be "amazon_product"'
+        - name: asin
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Amazon Standard Identification Number - unique product identifier
+        - name: amazon_domain
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: ["amazon.ae", "amazon.ca", "amazon.co.jp", "amazon.co.uk", "amazon.com", "amazon.com.au", "amazon.com.be", "amazon.com.br", "amazon.com.tr", "amazon.com.mx", "amazon.de", "amazon.es", "amazon.eg", "amazon.fr", "amazon.in", "amazon.ie", "amazon.it", "amazon.nl", "amazon.pl", "amazon.sa", "amazon.se", "amazon.sg", "amazon.co.za"]
+            default: "amazon.com"
+          description: Amazon domain to search
+        - name: language
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: ["ar_SA", "ar_EG", "ar_AE", "zh_CN", "nl_NL", "nl_BE", "en_AE", "en_GB", "fr_FR", "fr_BE", "de_DE", "it_IT", "ja_JP", "pl_PL", "pt_BR", "es_ES", "es_MX", "es_US", "se_SE", "tr_TR"]
+          description: Language for the search results
+        - name: currency
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: ["AED", "AMD", "ARS", "AUD", "AWG", "AZN", "BBD", "BGN", "BHD", "BMD", "BND", "BOB", "BRL", "BSD", "BZD", "CAD", "CHF", "CLP", "CNY", "COP", "CRC", "CZK", "DKK", "DOP", "EGP", "EUR", "GBP", "GEL", "GHS", "GTQ", "GYD", "HKD", "HNL", "HUF", "IDR", "ILS", "INR", "JMD", "JOD", "JPY", "KES", "KHR", "KRW", "KWD", "KYD", "KZT", "LBP", "LKR", "MAD", "MNT", "MOP", "MUR", "MVR", "MXN", "MYR", "NAD", "NGN", "NIO", "NOK", "NZD", "OMR", "PAB", "PEN", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RUB", "SAR", "SEK", "SGD", "THB", "TRY", "TTD", "TWD", "TZS", "USD", "UYU", "UZS", "VND", "XAF", "XCD", "XOF", "XPF", "ZAR"]
+          description: ISO 4217 code of the currency Amazon displays prices in. Supported on amazon.com (only with a delivery_country other than us and br), amazon.ae, amazon.co.jp, amazon.co.uk, amazon.com.au, amazon.de, amazon.es, amazon.fr and amazon.it, each with its own list (https://www.searchapi.io/docs/parameters/amazon/currency). Each domain's own currency is always accepted.
+        - name: delivery_country
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: ["dz", "ao", "bh", "bw", "cm", "eg", "gh", "il", "jo", "ke", "kw", "kg", "mu", "yt", "ma", "na", "ng", "om", "ps", "qa", "re", "sa", "sn", "za", "tz", "tn", "ug", "ae", "zw", "ar", "aw", "bb", "bz", "bm", "bo", "br", "ca", "ky", "cl", "co", "cr", "do", "ec", "sv", "gf", "gp", "gt", "hn", "jm", "mq", "mx", "pa", "py", "pe", "kn", "mf", "tt", "uy", "ve", "au", "bd", "kh", "cn", "fj", "hk", "in", "id", "jp", "kz", "mo", "my", "mh", "fm", "nc", "nz", "pk", "pw", "ph", "sg", "kr", "lk", "tw", "th", "vn", "al", "ad", "am", "at", "by", "be", "ba", "bg", "hr", "cy", "cz", "dk", "ee", "fo", "fi", "fr", "ge", "de", "gi", "gr", "hu", "is", "ie", "it", "lv", "li", "lt", "lu", "mt", "md", "mc", "me", "nl", "mk", "no", "pl", "pt", "ro", "ru", "sm", "rs", "sk", "si", "es", "se", "ch", "tr", "ua", "gb", "us", "va"]
+          description: Delivery country code for pricing and availability
+        - name: postal_code
+          in: query
+          required: false
+          description: "Postal/ZIP code for the delivery address, used by postal-code marketplaces (e.g. 10001 for US, SW1A 0AA for UK, 10115 for DE). Max 20 characters. Mutually exclusive with delivery_city; see the Amazon delivery location reference for which parameter applies per country."
+          schema:
+            type: string
+            maxLength: 20
+        - name: delivery_city
+          in: query
+          required: false
+          description: "City for the delivery address in snake_case (e.g. riyadh, abu_dhabi, cairo), used only by city-based marketplaces (Saudi Arabia, UAE, Egypt). Max 100 characters. Mutually exclusive with postal_code; for other countries use postal_code."
+          schema:
+            type: string
+            maxLength: 100
+        - name: delivery_area
+          in: query
+          required: false
+          description: "Area/district within the city for city-based marketplaces that support it (e.g. business_bay on amazon.ae). Max 100 characters. Optional refinement; must be sent together with delivery_city."
+          schema:
+            type: string
+            maxLength: 100
+        - name: variant_prices
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: ["true", "false"]
+            default: "false"
+          description: When `true`, includes the `price` of each product variant. Enabling it may increase the response time. Some products include variant prices by default, even without this parameter.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        product:
+          $ref: '#/components/schemas/Product'
+        newer_model:
+          $ref: '#/components/schemas/NewerSimilarItem'
+        similar_item:
+          $ref: '#/components/schemas/NewerSimilarItem'
+        similar_products:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimilarProduct'
+        bundles:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bundle'
+        frequently_bought_together:
+          $ref: '#/components/schemas/FrequentlyBoughtTogether'
+        compare_with_similar:
+          $ref: '#/components/schemas/CompareWithSimilar'
+        sponsored_products:
+          type: array
+          items:
+            $ref: '#/components/schemas/SponsoredProduct'
+        review_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReviewResult'
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Amazon URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+        delivery_location:
+          type: string
+          enum: [applied, not_applied, unverified]
+          description: Outcome of the requested delivery location, present only when postal_code/delivery_city/delivery_area was sent. `applied` means the served page reflects the location, `not_applied` means it shows another location, `unverified` means the page has no verifiable location.
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        asin:
+          type: string
+          description: Amazon Standard Identification Number
+        language:
+          type: string
+          description: Language used for search
+        currency:
+          type: string
+          description: Requested display currency
+        amazon_domain:
+          type: string
+          description: Amazon domain searched
+        delivery_country:
+          type: string
+          description: Delivery country code
+        variant_prices:
+          type: string
+          description: Whether variant prices were requested (echoed when set)
+
+    Product:
+      type: object
+      required: [asin, title, categories, reviews, rating, reviews_histogram, search_alias, buybox, specifications, bestsellers_rank]
+      properties:
+        asin:
+          type: string
+          description: Amazon Standard Identification Number
+        parent_asin:
+          type: string
+          description: Parent ASIN for product variations
+        title:
+          type: string
+          description: Product title
+        brand_store:
+          $ref: '#/components/schemas/BrandStore'
+        marketplace_id:
+          type: string
+          description: Amazon marketplace identifier
+        link:
+          type: string
+          description: Direct link to the product page
+        rating:
+          type: number
+          description: Average customer rating
+        reviews:
+          type: integer
+          description: Total number of reviews
+        reviews_histogram:
+          $ref: '#/components/schemas/ReviewsHistogram'
+        authors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Author'
+        coupon:
+          $ref: '#/components/schemas/Coupon'
+        feature_rating:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeatureRating'
+        bestseller_badge:
+          $ref: '#/components/schemas/BestsellerBadge'
+        is_best_of_booktok:
+          type: boolean
+          description: Whether product has BookTok badge
+        is_bundle:
+          type: boolean
+          description: Whether product is a bundle
+        amazons_choice:
+          $ref: '#/components/schemas/AmazonsChoice'
+        bought_past_month:
+          type: string
+          description: Number of purchases in past month
+        description:
+          type: string
+          description: Product description
+        editorial_reviews:
+          type: array
+          items:
+            $ref: '#/components/schemas/EditorialReview'
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+        feature_bullets:
+          type: array
+          items:
+            type: string
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variant'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+        search_alias:
+          $ref: '#/components/schemas/SearchAlias'
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Document'
+        buybox:
+          $ref: '#/components/schemas/Buybox'
+        protection_plans:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProtectionPlan'
+        more_buying_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/BuyingOption'
+        specifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/Specification'
+        bestsellers_rank:
+          type: array
+          items:
+            $ref: '#/components/schemas/BestsellersRank'
+        bundle_items:
+          $ref: '#/components/schemas/BundleItems'
+        main_image:
+          type: string
+          description: URL of the main product image
+        has_360_image:
+          type: boolean
+          description: Whether product has 360-degree images
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductImage'
+        videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVideo'
+        whats_in_the_box:
+          type: array
+          items:
+            type: string
+
+    BrandStore:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Brand store identifier
+        text:
+          type: string
+          description: Brand store display text
+        link:
+          type: string
+          description: Link to brand store
+
+    Author:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Author name
+        link:
+          type: string
+          description: Link to author page
+        asin:
+          type: string
+          description: Author ASIN
+
+    Coupon:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Coupon description
+        badge_text:
+          type: string
+          description: Coupon badge text
+
+    FeatureRating:
+      type: object
+      required: [text, rating]
+      properties:
+        text:
+          type: string
+          description: Feature description
+        rating:
+          type: number
+          description: Feature rating value
+
+    BestsellerBadge:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Link to bestseller category
+        category:
+          type: string
+          description: Bestseller category
+        text:
+          type: string
+          description: Badge text
+
+    AmazonsChoice:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Link to Amazon's Choice explanation
+        keywords:
+          type: string
+          description: Keywords for Amazon's Choice
+
+    EditorialReview:
+      type: object
+      properties:
+        source:
+          type: string
+          description: Review source
+        text:
+          type: string
+          description: Review text
+
+    Attribute:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Attribute name
+        value:
+          type: string
+          description: Attribute value
+
+    Variant:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Variant ASIN
+        title:
+          type: string
+          description: Variant title
+        link:
+          type: string
+          description: Link to variant product page
+        is_current_product:
+          type: boolean
+          description: Whether this variant is the currently viewed product
+        price:
+          allOf:
+            - $ref: '#/components/schemas/Price'
+          description: Variant price. Included for products that provide it, or when the `variant_prices` request parameter is enabled. Omitted when the price is unavailable or hidden.
+        is_price_hidden:
+          type: boolean
+          description: Present and `true` when the variant is in stock but Amazon hides its price ("Price Hidden" / "See price in cart"). Only determined when `variant_prices` is enabled.
+        main_image:
+          type: string
+          description: URL of variant main image
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductImage'
+        dimensions:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariantDimension'
+
+    VariantDimension:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Dimension name
+        value:
+          type: string
+          description: Dimension value
+
+    Category:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Category identifier
+        title:
+          type: string
+          description: Category title
+        link:
+          type: string
+          description: Link to category
+
+    SearchAlias:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Search alias title
+        value:
+          type: string
+          description: Search alias value
+
+    Document:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Document name
+        link:
+          type: string
+          description: Document download link
+
+    Buybox:
+      type: object
+      properties:
+        price:
+          $ref: '#/components/schemas/Price'
+        original_price:
+          $ref: '#/components/schemas/Price'
+        price_per:
+          $ref: '#/components/schemas/PricePer'
+        save:
+          $ref: '#/components/schemas/BuyboxSave'
+        secondary_buybox:
+          type: object
+          properties:
+            title:
+              type: string
+            price:
+              $ref: '#/components/schemas/Price'
+            delivery:
+              type: string
+        subscribe_and_save:
+          type: object
+          properties:
+            base_discount_percentage:
+              type: number
+              description: Base discount percentage for subscribe and save
+            tiered_discount_percentage:
+              type: number
+              description: Tiered discount percentage for subscribe and save
+            delivery_message:
+              type: string
+              description: Delivery message for subscribe and save
+            default_delivery:
+              type: string
+              description: Default delivery frequency
+        subscription_buybox:
+          type: object
+          properties:
+            title:
+              type: string
+              description: Subscription buybox title
+        deal:
+          type: object
+          properties:
+            percentage:
+              type: number
+              description: Deal discount percentage
+            text:
+              type: string
+              description: Deal text
+        is_prime:
+          type: boolean
+          description: Whether Prime shipping is available
+        is_amazon_fresh:
+          type: boolean
+          description: Whether Amazon Fresh is available
+        minimum_order_quantity:
+          type: integer
+          description: Minimum quantity that can be ordered
+        maximum_order_quantity:
+          type: integer
+          description: Maximum quantity that can be ordered
+        offer_listing_id:
+          type: string
+          description: Amazon offer listing identifier
+        new_offers_count:
+          type: integer
+          description: Number of new offers available
+        new_offers_from:
+          $ref: '#/components/schemas/OffersFrom'
+        mixed_offers_count:
+          type: integer
+          description: Number of mixed offers available
+        mixed_offers_from:
+          $ref: '#/components/schemas/OffersFrom'
+        used_offers_count:
+          type: integer
+          description: Number of used offers available
+        used_offers_from:
+          $ref: '#/components/schemas/OffersFrom'
+        offer_details:
+          type: array
+          items:
+            type: string
+          description: Offer details for audiobooks
+        fulfillment:
+          $ref: '#/components/schemas/Fulfillment'
+        availability:
+          type: string
+          description: Availability status text
+        seller_certifications:
+          type: string
+          description: Seller certifications
+
+    Price:
+      type: object
+      properties:
+        raw:
+          type: string
+          description: Raw price text
+        value:
+          type: number
+          description: Numeric price value
+        symbol:
+          type: string
+          description: Currency symbol
+        currency:
+          type: string
+          description: Currency code
+
+    PricePer:
+      type: object
+      properties:
+        raw:
+          type: string
+          description: Raw price per unit text
+        value:
+          type: number
+          description: Numeric price per unit value
+        symbol:
+          type: string
+          description: Currency symbol
+        currency:
+          type: string
+          description: Currency code
+        unit:
+          type: string
+          description: Unit of measurement
+
+    BuyboxSave:
+      type: object
+      properties:
+        raw:
+          type: string
+          description: Raw savings text
+        value:
+          type: number
+          description: Numeric savings value
+        symbol:
+          type: string
+          description: Currency symbol
+        currency:
+          type: string
+          description: Currency code
+        percentage:
+          type: number
+          description: Savings percentage
+
+    OffersFrom:
+      type: object
+      properties:
+        price:
+          $ref: '#/components/schemas/Price'
+        link:
+          type: string
+          description: Link to offers page
+        delivery:
+          type: string
+          description: Delivery information
+
+    Fulfillment:
+      type: object
+      properties:
+        standard_delivery:
+          type: object
+          properties:
+            text:
+              type: string
+            type:
+              type: string
+            condition:
+              type: string
+            date:
+              type: string
+        fastest_delivery:
+          type: object
+          properties:
+            text:
+              type: string
+            type:
+              type: string
+            condition:
+              type: string
+            date:
+              type: string
+        holiday_message:
+          type: string
+        ships_from:
+          type: string
+        sold_by:
+          type: string
+        is_sold_by_amazon:
+          type: boolean
+        third_party_seller:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            link:
+              type: string
+
+    ProtectionPlan:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Protection plan ASIN
+        title:
+          type: string
+          description: Protection plan title
+        price:
+          $ref: '#/components/schemas/Price'
+
+    BuyingOption:
+      type: object
+      properties:
+        price:
+          $ref: '#/components/schemas/Price'
+        seller:
+          type: string
+          description: Seller name
+        seller_link:
+          type: string
+          description: Link to seller page
+
+    Specification:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Specification name
+        value:
+          type: string
+          description: Specification value
+
+    BestsellersRank:
+      type: object
+      properties:
+        category:
+          type: string
+          description: Category name
+        rank:
+          type: integer
+          description: Rank position
+        link:
+          type: string
+          description: Link to category
+
+    BundleItems:
+      type: object
+      description: Bundle items wrapper with pricing information
+      properties:
+        price:
+          $ref: '#/components/schemas/Price'
+        original_price:
+          $ref: '#/components/schemas/Price'
+        save:
+          $ref: '#/components/schemas/Price'
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/BundleItem'
+
+    BundleItem:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Bundle item title
+        link:
+          type: string
+          description: Link to bundle item
+        image:
+          type: string
+          description: Bundle item image URL
+        rating:
+          type: number
+          description: Item rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          $ref: '#/components/schemas/Price'
+        quantity:
+          type: integer
+          description: Number of items in bundle
+        feature_bullets:
+          type: array
+          items:
+            type: string
+          description: Feature bullets
+
+    ProductImage:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Image URL
+        variant:
+          type: string
+          description: Image variant name
+
+    ProductVideo:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        thumbnail:
+          type: string
+          description: Video thumbnail URL
+        duration_seconds:
+          type: number
+          description: Video duration in seconds
+        width:
+          type: integer
+          description: Video width in pixels
+        height:
+          type: integer
+          description: Video height in pixels
+        is_hero_video:
+          type: boolean
+          description: Whether video is a hero video
+        group_type:
+          type: string
+          description: Video group type
+        variant:
+          type: string
+          description: Product variant name
+
+    ReviewsHistogram:
+      type: object
+      properties:
+        five_star:
+          type: integer
+          description: Number of 5-star reviews
+        four_star:
+          type: integer
+          description: Number of 4-star reviews
+        three_star:
+          type: integer
+          description: Number of 3-star reviews
+        two_star:
+          type: integer
+          description: Number of 2-star reviews
+        one_star:
+          type: integer
+          description: Number of 1-star reviews
+
+    NewerSimilarItem:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Item ASIN
+        title:
+          type: string
+          description: Item title
+        link:
+          type: string
+          description: Link to item
+        image:
+          type: string
+          description: Item image URL
+        price:
+          $ref: '#/components/schemas/Price'
+        rating:
+          type: number
+          description: Item rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        availability:
+          type: string
+          description: Availability status
+
+    SimilarProduct:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Product ASIN
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        image:
+          type: string
+          description: Product image URL
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          $ref: '#/components/schemas/Price'
+        original_price:
+          $ref: '#/components/schemas/Price'
+        is_bestseller:
+          type: boolean
+          description: Whether product is a bestseller
+        is_prime:
+          type: boolean
+          description: Whether Prime shipping is available
+
+    Bundle:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Bundle ASIN
+        title:
+          type: string
+          description: Bundle title
+        link:
+          type: string
+          description: Bundle link
+        price:
+          $ref: '#/components/schemas/Price'
+        original_price:
+          $ref: '#/components/schemas/Price'
+        total_items:
+          type: integer
+          description: Number of items in bundle
+        image:
+          type: string
+          description: Bundle image URL
+
+    FrequentlyBoughtTogether:
+      type: object
+      properties:
+        total_price:
+          $ref: '#/components/schemas/Price'
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/FrequentlyBoughtProduct'
+
+    FrequentlyBoughtProduct:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Product title
+        asin:
+          type: string
+          description: Product ASIN
+        link:
+          type: string
+          description: Product link
+        image:
+          type: string
+          description: Product image URL
+        price:
+          $ref: '#/components/schemas/Price'
+
+    CompareWithSimilar:
+      type: array
+      items:
+        $ref: '#/components/schemas/ComparisonProduct'
+
+    ComparisonProduct:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Product ASIN
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        image:
+          type: string
+          description: Product image URL
+        delivery:
+          type: string
+          description: Delivery information
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          $ref: '#/components/schemas/Price'
+        seller:
+          type: string
+          description: Seller name
+        seller_link:
+          type: string
+          description: Link to seller page
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+
+    SponsoredProduct:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: Product ASIN
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        image:
+          type: string
+          description: Product image URL
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          $ref: '#/components/schemas/Price'
+        original_price:
+          $ref: '#/components/schemas/Price'
+        is_prime:
+          type: boolean
+          description: Whether Prime shipping is available
+        is_bestseller:
+          type: boolean
+          description: Whether product is a bestseller
+
+    ReviewResult:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Review ID
+        asin:
+          type: string
+          description: Product ASIN
+        title:
+          type: string
+          description: Review title
+        link:
+          type: string
+          description: Link to review
+        text:
+          type: string
+          description: Review text content
+        rating:
+          type: number
+          description: Review rating
+        date:
+          type: string
+          description: Review date text
+        extracted_date:
+          type: string
+          format: date
+          description: Extracted date in YYYY-MM-DD format
+        profile:
+          type: object
+          properties:
+            id:
+              type: string
+              description: Reviewer profile ID
+            name:
+              type: string
+              description: Reviewer name
+            link:
+              type: string
+              description: Link to reviewer profile
+        images:
+          type: array
+          items:
+            type: string
+          description: Review image URLs
+        is_verified_purchase:
+          type: boolean
+          description: Whether purchase is verified
+        is_vine_voice:
+          type: boolean
+          description: Whether review is from Vine Voice
+        helpful_votes:
+          type: integer
+          description: Number of helpful votes
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

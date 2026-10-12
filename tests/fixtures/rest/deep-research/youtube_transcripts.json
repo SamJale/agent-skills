@@ -1,0 +1,1290 @@
+{
+  "search_metadata": {
+    "id": "search_mMjwVJvBznT5RmVNLvynp5OY",
+    "status": "Success",
+    "created_at": "2026-07-23T12:21:46Z",
+    "request_time_taken": 2.04,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 2.05,
+    "request_url": "https://www.youtube.com/watch?v=00Q0G84kq3M",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_mMjwVJvBznT5RmVNLvynp5OY.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_mMjwVJvBznT5RmVNLvynp5OY"
+  },
+  "search_parameters": {
+    "engine": "youtube_transcripts",
+    "video_id": "00Q0G84kq3M",
+    "lang": "en"
+  },
+  "transcripts": [
+    {
+      "text": "let's talk about rag versus fine-tuning",
+      "start": 0.08,
+      "duration": 2.28
+    },
+    {
+      "text": "now they're both powerful ways to",
+      "start": 2.36,
+      "duration": 1.559
+    },
+    {
+      "text": "enhance the capabilities of large",
+      "start": 3.919,
+      "duration": 1.641
+    },
+    {
+      "text": "language models but today you're going",
+      "start": 5.56,
+      "duration": 1.56
+    },
+    {
+      "text": "to learn about their strengths their use",
+      "start": 7.12,
+      "duration": 2.08
+    },
+    {
+      "text": "cases and how you can choose between",
+      "start": 9.2,
+      "duration": 1.8
+    },
+    {
+      "text": "them so one of the biggest issues with",
+      "start": 11.0,
+      "duration": 2.28
+    },
+    {
+      "text": "dealing with generative AI right now is",
+      "start": 13.28,
+      "duration": 2.319
+    },
+    {
+      "text": "one enhancing the models but also to",
+      "start": 15.599,
+      "duration": 2.52
+    },
+    {
+      "text": "dealing with their limitations for",
+      "start": 18.119,
+      "duration": 1.721
+    },
+    {
+      "text": "example I just recently asked my",
+      "start": 19.84,
+      "duration": 2.08
+    },
+    {
+      "text": "favorite llm a simple question who won",
+      "start": 21.92,
+      "duration": 2.64
+    },
+    {
+      "text": "the Euro 2024 World Championship and",
+      "start": 24.56,
+      "duration": 3.08
+    },
+    {
+      "text": "while this might seem like a simple",
+      "start": 27.64,
+      "duration": 1.24
+    },
+    {
+      "text": "query for my model well there's a slight",
+      "start": 28.88,
+      "duration": 2.239
+    },
+    {
+      "text": "issue because the model wasn't trained",
+      "start": 31.119,
+      "duration": 1.801
+    },
+    {
+      "text": "on that specific information it can't",
+      "start": 32.92,
+      "duration": 2.28
+    },
+    {
+      "text": "give me an accurate or up-to-date answer",
+      "start": 35.2,
+      "duration": 2.4
+    },
+    {
+      "text": "at the same time these popular models",
+      "start": 37.6,
+      "duration": 1.76
+    },
+    {
+      "text": "are very generalistic and so how do we",
+      "start": 39.36,
+      "duration": 2.32
+    },
+    {
+      "text": "think about specializing them for",
+      "start": 41.68,
+      "duration": 2.32
+    },
+    {
+      "text": "specific use cases and adapt them in",
+      "start": 44.0,
+      "duration": 2.28
+    },
+    {
+      "text": "Enterprise applications because your",
+      "start": 46.28,
+      "duration": 2.24
+    },
+    {
+      "text": "data is one of the most important things",
+      "start": 48.52,
+      "duration": 1.719
+    },
+    {
+      "text": "that you can work with and in the field",
+      "start": 50.239,
+      "duration": 1.681
+    },
+    {
+      "text": "of AI using techniques such as rag or",
+      "start": 51.92,
+      "duration": 2.56
+    },
+    {
+      "text": "fine-tuning will allow you to",
+      "start": 54.48,
+      "duration": 1.719
+    },
+    {
+      "text": "supercharge the capabilities that your",
+      "start": 56.199,
+      "duration": 1.761
+    },
+    {
+      "text": "application delivers so in the next few",
+      "start": 57.96,
+      "duration": 1.68
+    },
+    {
+      "text": "minutes we're going to learn about both",
+      "start": 59.64,
+      "duration": 1.12
+    },
+    {
+      "text": "of these techniques the differences",
+      "start": 60.76,
+      "duration": 1.72
+    },
+    {
+      "text": "between them and where you can start",
+      "start": 62.48,
+      "duration": 1.28
+    },
+    {
+      "text": "seeing and using them in let's get",
+      "start": 63.76,
+      "duration": 2.08
+    },
+    {
+      "text": "started so let's begin with retrieval",
+      "start": 65.84,
+      "duration": 2.24
+    },
+    {
+      "text": "augmented generation which is a way to",
+      "start": 68.08,
+      "duration": 2.28
+    },
+    {
+      "text": "increase the capabilities of a model",
+      "start": 70.36,
+      "duration": 1.88
+    },
+    {
+      "text": "through retrieving external and",
+      "start": 72.24,
+      "duration": 1.519
+    },
+    {
+      "text": "up-to-date information augmenting the",
+      "start": 73.759,
+      "duration": 2.281
+    },
+    {
+      "text": "original prompt that was given to the",
+      "start": 76.04,
+      "duration": 1.36
+    },
+    {
+      "text": "model and then generating a response",
+      "start": 77.4,
+      "duration": 2.039
+    },
+    {
+      "text": "back using that context and information",
+      "start": 79.439,
+      "duration": 2.521
+    },
+    {
+      "text": "and this is really powerful because if",
+      "start": 81.96,
+      "duration": 1.88
+    },
+    {
+      "text": "we think back about that example of with",
+      "start": 83.84,
+      "duration": 1.76
+    },
+    {
+      "text": "the Euro Cup well the model didn't have",
+      "start": 85.6,
+      "duration": 2.0
+    },
+    {
+      "text": "the information in context to provide an",
+      "start": 87.6,
+      "duration": 2.0
+    },
+    {
+      "text": "answer and this is one of the big",
+      "start": 89.6,
+      "duration": 1.6
+    },
+    {
+      "text": "limitations of llms but this is",
+      "start": 91.2,
+      "duration": 1.76
+    },
+    {
+      "text": "mitigated in a way with rag because now",
+      "start": 92.96,
+      "duration": 3.439
+    },
+    {
+      "text": "instead of having an incorrect or",
+      "start": 96.399,
+      "duration": 1.961
+    },
+    {
+      "text": "possibly um a hallucinated answer we're",
+      "start": 98.36,
+      "duration": 2.88
+    },
+    {
+      "text": "able to work with what's known as a",
+      "start": 101.24,
+      "duration": 1.68
+    },
+    {
+      "text": "corpus of information so this could be",
+      "start": 102.92,
+      "duration": 2.44
+    },
+    {
+      "text": "data this could be PDFs documents",
+      "start": 105.36,
+      "duration": 1.96
+    },
+    {
+      "text": "spreadsheets things that are relevant to",
+      "start": 107.32,
+      "duration": 2.32
+    },
+    {
+      "text": "our specific organization or knowledge",
+      "start": 109.64,
+      "duration": 1.92
+    },
+    {
+      "text": "that we need to specialize in so when",
+      "start": 111.56,
+      "duration": 1.72
+    },
+    {
+      "text": "the query comes in this time we're",
+      "start": 113.28,
+      "duration": 2.0
+    },
+    {
+      "text": "working with what's known as a retriever",
+      "start": 115.28,
+      "duration": 2.32
+    },
+    {
+      "text": "that's able to pull the correct doc",
+      "start": 117.6,
+      "duration": 2.28
+    },
+    {
+      "text": "doents and Rel relative context to what",
+      "start": 119.88,
+      "duration": 2.68
+    },
+    {
+      "text": "the question is and then pass that",
+      "start": 122.56,
+      "duration": 2.199
+    },
+    {
+      "text": "knowledge uh as well as the original",
+      "start": 124.759,
+      "duration": 2.28
+    },
+    {
+      "text": "prompt to a large language model and",
+      "start": 127.039,
+      "duration": 2.28
+    },
+    {
+      "text": "with its intuition and pre-trained data",
+      "start": 129.319,
+      "duration": 2.041
+    },
+    {
+      "text": "it's able to give us a response back",
+      "start": 131.36,
+      "duration": 2.08
+    },
+    {
+      "text": "based on that contextualized information",
+      "start": 133.44,
+      "duration": 2.92
+    },
+    {
+      "text": "uh which is really really powerful",
+      "start": 136.36,
+      "duration": 1.44
+    },
+    {
+      "text": "because we can start to see that we can",
+      "start": 137.8,
+      "duration": 1.88
+    },
+    {
+      "text": "get better responses back from a model",
+      "start": 139.68,
+      "duration": 1.76
+    },
+    {
+      "text": "with our proprietary and confidential",
+      "start": 141.44,
+      "duration": 1.76
+    },
+    {
+      "text": "information without needing to do any",
+      "start": 143.2,
+      "duration": 1.36
+    },
+    {
+      "text": "retraining on the model uh and this is a",
+      "start": 144.56,
+      "duration": 2.28
+    },
+    {
+      "text": "great and popular way to enhance the",
+      "start": 146.84,
+      "duration": 1.88
+    },
+    {
+      "text": "capabilities of a model uh without",
+      "start": 148.72,
+      "duration": 1.879
+    },
+    {
+      "text": "having to do any fine-tuning so as the",
+      "start": 150.599,
+      "duration": 2.241
+    },
+    {
+      "text": "name implies what this involves is",
+      "start": 152.84,
+      "duration": 1.8
+    },
+    {
+      "text": "taking a large language foundational",
+      "start": 154.64,
+      "duration": 2.44
+    },
+    {
+      "text": "model but this time we're going to be",
+      "start": 157.08,
+      "duration": 2.36
+    },
+    {
+      "text": "specializing it in a certain domain or",
+      "start": 159.44,
+      "duration": 1.879
+    },
+    {
+      "text": "area so we're working with labeled and",
+      "start": 161.319,
+      "duration": 2.481
+    },
+    {
+      "text": "targeted data that's going to be",
+      "start": 163.8,
+      "duration": 1.84
+    },
+    {
+      "text": "provided to the model and and when we do",
+      "start": 165.64,
+      "duration": 2.12
+    },
+    {
+      "text": "some processing we'll have a specialized",
+      "start": 167.76,
+      "duration": 2.72
+    },
+    {
+      "text": "model for a specific use case to talk in",
+      "start": 170.48,
+      "duration": 2.72
+    },
+    {
+      "text": "a certain style to have a certain tone",
+      "start": 173.2,
+      "duration": 2.039
+    },
+    {
+      "text": "that could represent our organization or",
+      "start": 175.239,
+      "duration": 1.64
+    },
+    {
+      "text": "company and so then when a model is",
+      "start": 176.879,
+      "duration": 2.961
+    },
+    {
+      "text": "queried from um a user or any other type",
+      "start": 179.84,
+      "duration": 3.0
+    },
+    {
+      "text": "of way we'll have a a response that",
+      "start": 182.84,
+      "duration": 3.039
+    },
+    {
+      "text": "gives the correct tone and output or",
+      "start": 185.879,
+      "duration": 2.481
+    },
+    {
+      "text": "specialty in a domain that we'd like to",
+      "start": 188.36,
+      "duration": 2.48
+    },
+    {
+      "text": "receive and this is really important",
+      "start": 190.84,
+      "duration": 1.8
+    },
+    {
+      "text": "because what we're doing is essentially",
+      "start": 192.64,
+      "duration": 1.679
+    },
+    {
+      "text": "baking in this context and intuition",
+      "start": 194.319,
+      "duration": 2.681
+    },
+    {
+      "text": "into the model um and it's really",
+      "start": 197.0,
+      "duration": 2.2
+    },
+    {
+      "text": "important because this is now part of",
+      "start": 199.2,
+      "duration": 1.319
+    },
+    {
+      "text": "the model's weights versus being",
+      "start": 200.519,
+      "duration": 1.761
+    },
+    {
+      "text": "supplemented on top with a a technique",
+      "start": 202.28,
+      "duration": 2.08
+    },
+    {
+      "text": "like",
+      "start": 204.36,
+      "duration": 0.84
+    },
+    {
+      "text": "rag okay so we understand how both of",
+      "start": 205.2,
+      "duration": 2.399
+    },
+    {
+      "text": "these techniques can enhance a model's",
+      "start": 207.599,
+      "duration": 1.84
+    },
+    {
+      "text": "accur output and performance but let's",
+      "start": 209.439,
+      "duration": 2.401
+    },
+    {
+      "text": "take a look at their strengths and",
+      "start": 211.84,
+      "duration": 1.0
+    },
+    {
+      "text": "weaknesses in some common use cases",
+      "start": 212.84,
+      "duration": 1.64
+    },
+    {
+      "text": "because the direction that you go in can",
+      "start": 214.48,
+      "duration": 1.959
+    },
+    {
+      "text": "greatly affect a model's performance its",
+      "start": 216.439,
+      "duration": 2.201
+    },
+    {
+      "text": "accuracy outputs compute cost and much",
+      "start": 218.64,
+      "duration": 2.799
+    },
+    {
+      "text": "much more so let's begin with retrieval",
+      "start": 221.439,
+      "duration": 2.201
+    },
+    {
+      "text": "augmented generation and something that",
+      "start": 223.64,
+      "duration": 1.599
+    },
+    {
+      "text": "I want to point out here is that because",
+      "start": 225.239,
+      "duration": 1.761
+    },
+    {
+      "text": "we're working with a corpus of",
+      "start": 227.0,
+      "duration": 1.28
+    },
+    {
+      "text": "information and data this is perfect for",
+      "start": 228.28,
+      "duration": 2.28
+    },
+    {
+      "text": "dynamic data sources such as databases",
+      "start": 230.56,
+      "duration": 2.959
+    },
+    {
+      "text": "uh and other data repositories where we",
+      "start": 233.519,
+      "duration": 2.041
+    },
+    {
+      "text": "want to continuously pull information",
+      "start": 235.56,
+      "duration": 2.12
+    },
+    {
+      "text": "and have that up to date for the model",
+      "start": 237.68,
+      "duration": 1.52
+    },
+    {
+      "text": "to use",
+      "start": 239.2,
+      "duration": 1.039
+    },
+    {
+      "text": "understand and at the same time because",
+      "start": 240.239,
+      "duration": 2.401
+    },
+    {
+      "text": "we're working with this retriever system",
+      "start": 242.64,
+      "duration": 2.08
+    },
+    {
+      "text": "and passing in the information as",
+      "start": 244.72,
+      "duration": 1.56
+    },
+    {
+      "text": "context in the prompt well that really",
+      "start": 246.28,
+      "duration": 2.0
+    },
+    {
+      "text": "helps with hallucinations and providing",
+      "start": 248.28,
+      "duration": 2.28
+    },
+    {
+      "text": "the sources for this information is",
+      "start": 250.56,
+      "duration": 1.8
+    },
+    {
+      "text": "really important in systems where we",
+      "start": 252.36,
+      "duration": 1.879
+    },
+    {
+      "text": "need trust and transparency when we're",
+      "start": 254.239,
+      "duration": 1.801
+    },
+    {
+      "text": "using AI so this is fantastic but let's",
+      "start": 256.04,
+      "duration": 3.36
+    },
+    {
+      "text": "also think about this whole system",
+      "start": 259.4,
+      "duration": 1.48
+    },
+    {
+      "text": "because um having this efficient",
+      "start": 260.88,
+      "duration": 2.2
+    },
+    {
+      "text": "retrieval system uh is really important",
+      "start": 263.08,
+      "duration": 2.92
+    },
+    {
+      "text": "in how we select and pick the data that",
+      "start": 266.0,
+      "duration": 2.28
+    },
+    {
+      "text": "we want to provide in that limited",
+      "start": 268.28,
+      "duration": 1.72
+    },
+    {
+      "text": "context window and so maintaining this",
+      "start": 270.0,
+      "duration": 2.199
+    },
+    {
+      "text": "is also something that you need to think",
+      "start": 272.199,
+      "duration": 1.44
+    },
+    {
+      "text": "about and at the same time what we're",
+      "start": 273.639,
+      "duration": 2.481
+    },
+    {
+      "text": "doing here in this system is effectively",
+      "start": 276.12,
+      "duration": 2.32
+    },
+    {
+      "text": "supplementing that information on top of",
+      "start": 278.44,
+      "duration": 1.759
+    },
+    {
+      "text": "the model so we're not essentially",
+      "start": 280.199,
+      "duration": 2.361
+    },
+    {
+      "text": "enhancing the base model itself we're",
+      "start": 282.56,
+      "duration": 1.6
+    },
+    {
+      "text": "just giving it the relative and",
+      "start": 284.16,
+      "duration": 2.039
+    },
+    {
+      "text": "contextual information it needs versus",
+      "start": 286.199,
+      "duration": 2.401
+    },
+    {
+      "text": "fine-tuning is a little bit different",
+      "start": 288.6,
+      "duration": 1.4
+    },
+    {
+      "text": "because we're actually baking in that",
+      "start": 290.0,
+      "duration": 2.08
+    },
+    {
+      "text": "context and intuition into the model",
+      "start": 292.08,
+      "duration": 2.64
+    },
+    {
+      "text": "well we have greater um influence um in",
+      "start": 294.72,
+      "duration": 4.16
+    },
+    {
+      "text": "essentially how the model behaves and",
+      "start": 298.88,
+      "duration": 1.48
+    },
+    {
+      "text": "reacts in different situations is it an",
+      "start": 300.36,
+      "duration": 2.2
+    },
+    {
+      "text": "insurance adjuster can it summarize",
+      "start": 302.56,
+      "duration": 2.079
+    },
+    {
+      "text": "documents whatever we want the model to",
+      "start": 304.639,
+      "duration": 2.241
+    },
+    {
+      "text": "do we can essentially use fine tuning in",
+      "start": 306.88,
+      "duration": 1.84
+    },
+    {
+      "text": "order to uh help with that process and",
+      "start": 308.72,
+      "duration": 2.88
+    },
+    {
+      "text": "at the same time because that is baked",
+      "start": 311.6,
+      "duration": 1.599
+    },
+    {
+      "text": "into the model's weights itself well",
+      "start": 313.199,
+      "duration": 2.161
+    },
+    {
+      "text": "that's really great for Speed and",
+      "start": 315.36,
+      "duration": 1.88
+    },
+    {
+      "text": "inference cost and a variety of other um",
+      "start": 317.24,
+      "duration": 2.72
+    },
+    {
+      "text": "factors that come to running models so",
+      "start": 319.96,
+      "duration": 1.88
+    },
+    {
+      "text": "for example we can use smaller prompt",
+      "start": 321.84,
+      "duration": 2.44
+    },
+    {
+      "text": "context windows in order to get the",
+      "start": 324.28,
+      "duration": 2.0
+    },
+    {
+      "text": "responses that we want from the model",
+      "start": 326.28,
+      "duration": 1.96
+    },
+    {
+      "text": "and as we begin to special these models",
+      "start": 328.24,
+      "duration": 2.079
+    },
+    {
+      "text": "they can get smaller and smaller for",
+      "start": 330.319,
+      "duration": 1.641
+    },
+    {
+      "text": "specific use case so it's really great",
+      "start": 331.96,
+      "duration": 1.64
+    },
+    {
+      "text": "for running these specific uh",
+      "start": 333.6,
+      "duration": 2.4
+    },
+    {
+      "text": "specialized models in a variety of use",
+      "start": 336.0,
+      "duration": 1.68
+    },
+    {
+      "text": "cases but at the same time we have the",
+      "start": 337.68,
+      "duration": 2.0
+    },
+    {
+      "text": "same issue of cut off so up until the",
+      "start": 339.68,
+      "duration": 2.84
+    },
+    {
+      "text": "point where the model is trained well",
+      "start": 342.52,
+      "duration": 2.16
+    },
+    {
+      "text": "after that we have no more additional",
+      "start": 344.68,
+      "duration": 1.76
+    },
+    {
+      "text": "information that we can give to the",
+      "start": 346.44,
+      "duration": 1.4
+    },
+    {
+      "text": "model so the same issue that we had with",
+      "start": 347.84,
+      "duration": 1.52
+    },
+    {
+      "text": "the World Cup example so both of these",
+      "start": 349.36,
+      "duration": 2.679
+    },
+    {
+      "text": "have their strengths and weaknesses but",
+      "start": 352.039,
+      "duration": 1.961
+    },
+    {
+      "text": "let's actually see this in some examples",
+      "start": 354.0,
+      "duration": 1.759
+    },
+    {
+      "text": "and use cases here so when you're",
+      "start": 355.759,
+      "duration": 2.56
+    },
+    {
+      "text": "thinking about choosing between r and",
+      "start": 358.319,
+      "duration": 1.641
+    },
+    {
+      "text": "fine-tuning it's really important to",
+      "start": 359.96,
+      "duration": 1.64
+    },
+    {
+      "text": "consider your AI enabled application",
+      "start": 361.6,
+      "duration": 2.039
+    },
+    {
+      "text": "priorities and requirements so namely",
+      "start": 363.639,
+      "duration": 2.441
+    },
+    {
+      "text": "this starts off with the data is the",
+      "start": 366.08,
+      "duration": 1.959
+    },
+    {
+      "text": "data that you're working with slow",
+      "start": 368.039,
+      "duration": 1.761
+    },
+    {
+      "text": "moving or is it fast for example if we",
+      "start": 369.8,
+      "duration": 2.959
+    },
+    {
+      "text": "need to use uh up-to-date external",
+      "start": 372.759,
+      "duration": 2.521
+    },
+    {
+      "text": "information and have that ready",
+      "start": 375.28,
+      "duration": 1.639
+    },
+    {
+      "text": "contextually every time we use a model",
+      "start": 376.919,
+      "duration": 2.041
+    },
+    {
+      "text": "then this could be a great use case for",
+      "start": 378.96,
+      "duration": 1.519
+    },
+    {
+      "text": "rag for example a product documentation",
+      "start": 380.479,
+      "duration": 2.361
+    },
+    {
+      "text": "chatbot where we can continually update",
+      "start": 382.84,
+      "duration": 2.04
+    },
+    {
+      "text": "the responses with up-to-date",
+      "start": 384.88,
+      "duration": 2.28
+    },
+    {
+      "text": "information now at the same time let's",
+      "start": 387.16,
+      "duration": 2.08
+    },
+    {
+      "text": "think about the industry that you might",
+      "start": 389.24,
+      "duration": 1.48
+    },
+    {
+      "text": "be in now fine tuning is really uh",
+      "start": 390.72,
+      "duration": 2.879
+    },
+    {
+      "text": "powerful for specific industries that",
+      "start": 393.599,
+      "duration": 2.201
+    },
+    {
+      "text": "have nuances in their writing styles",
+      "start": 395.8,
+      "duration": 2.6
+    },
+    {
+      "text": "terminology vocabulary and so for",
+      "start": 398.4,
+      "duration": 2.4
+    },
+    {
+      "text": "example if we have a legal document",
+      "start": 400.8,
+      "duration": 1.839
+    },
+    {
+      "text": "summarizer well this could be a perfect",
+      "start": 402.639,
+      "duration": 2.0
+    },
+    {
+      "text": "use case for fine tuning now let's think",
+      "start": 404.639,
+      "duration": 2.721
+    },
+    {
+      "text": "about sources this is really important",
+      "start": 407.36,
+      "duration": 2.0
+    },
+    {
+      "text": "right now in having um transparency",
+      "start": 409.36,
+      "duration": 2.6
+    },
+    {
+      "text": "behind our models and with rag being",
+      "start": 411.96,
+      "duration": 2.12
+    },
+    {
+      "text": "able to provide the context and where",
+      "start": 414.08,
+      "duration": 2.0
+    },
+    {
+      "text": "the information came from uh is really",
+      "start": 416.08,
+      "duration": 2.44
+    },
+    {
+      "text": "really great so this could be a great",
+      "start": 418.52,
+      "duration": 2.079
+    },
+    {
+      "text": "use case again for that chatbot for",
+      "start": 420.599,
+      "duration": 2.201
+    },
+    {
+      "text": "retail insurance and a variety of other",
+      "start": 422.8,
+      "duration": 2.36
+    },
+    {
+      "text": "uh uh uh specialities where having that",
+      "start": 425.16,
+      "duration": 3.039
+    },
+    {
+      "text": "source and information in the context of",
+      "start": 428.199,
+      "duration": 2.12
+    },
+    {
+      "text": "the prompt is very important but at the",
+      "start": 430.319,
+      "duration": 1.921
+    },
+    {
+      "text": "same time we may have things such as",
+      "start": 432.24,
+      "duration": 1.959
+    },
+    {
+      "text": "past data in our organization that we",
+      "start": 434.199,
+      "duration": 2.201
+    },
+    {
+      "text": "can use to train a model so let it be uh",
+      "start": 436.4,
+      "duration": 2.919
+    },
+    {
+      "text": "accustomed to the data that we're going",
+      "start": 439.319,
+      "duration": 1.241
+    },
+    {
+      "text": "to be working with for example again",
+      "start": 440.56,
+      "duration": 1.8
+    },
+    {
+      "text": "that legal summarizer could have past",
+      "start": 442.36,
+      "duration": 2.119
+    },
+    {
+      "text": "data on different legal cases and and",
+      "start": 444.479,
+      "duration": 2.041
+    },
+    {
+      "text": "documents that we feed it so that it",
+      "start": 446.52,
+      "duration": 2.119
+    },
+    {
+      "text": "understands the situation that's working",
+      "start": 448.639,
+      "duration": 1.361
+    },
+    {
+      "text": "in we have better more desirable outputs",
+      "start": 450.0,
+      "duration": 2.84
+    },
+    {
+      "text": "so this is cool but I think the best um",
+      "start": 452.84,
+      "duration": 2.96
+    },
+    {
+      "text": "situation is a combination of both of",
+      "start": 455.8,
+      "duration": 2.16
+    },
+    {
+      "text": "these methods so let's say we have a",
+      "start": 457.96,
+      "duration": 1.799
+    },
+    {
+      "text": "financial news reporting service well we",
+      "start": 459.759,
+      "duration": 2.56
+    },
+    {
+      "text": "could fine-tune it to be uh native to",
+      "start": 462.319,
+      "duration": 2.521
+    },
+    {
+      "text": "the industry of finance and understand",
+      "start": 464.84,
+      "duration": 2.16
+    },
+    {
+      "text": "all the lingo there uh we could also",
+      "start": 467.0,
+      "duration": 2.08
+    },
+    {
+      "text": "give it past data of financial records",
+      "start": 469.08,
+      "duration": 2.0
+    },
+    {
+      "text": "and let it understand um how we work in",
+      "start": 471.08,
+      "duration": 2.44
+    },
+    {
+      "text": "that specific industry but also be able",
+      "start": 473.52,
+      "duration": 2.119
+    },
+    {
+      "text": "to provide the most up-to-date sources",
+      "start": 475.639,
+      "duration": 1.84
+    },
+    {
+      "text": "for news and data and be able to provide",
+      "start": 477.479,
+      "duration": 2.44
+    },
+    {
+      "text": "that with a level of confidence and",
+      "start": 479.919,
+      "duration": 1.361
+    },
+    {
+      "text": "transparency and Trust to the end user",
+      "start": 481.28,
+      "duration": 2.319
+    },
+    {
+      "text": "who's making that decision and needs to",
+      "start": 483.599,
+      "duration": 1.641
+    },
+    {
+      "text": "know the source and this is really where",
+      "start": 485.24,
+      "duration": 2.16
+    },
+    {
+      "text": "a combination of fine-tuning and rag is",
+      "start": 487.4,
+      "duration": 3.479
+    },
+    {
+      "text": "so awesome because we can really build",
+      "start": 490.879,
+      "duration": 2.16
+    },
+    {
+      "text": "amazing applications taking advantage of",
+      "start": 493.039,
+      "duration": 2.16
+    },
+    {
+      "text": "both rag as a way to retrieve that",
+      "start": 495.199,
+      "duration": 2.521
+    },
+    {
+      "text": "information and have it up to date but",
+      "start": 497.72,
+      "duration": 1.52
+    },
+    {
+      "text": "fine tuning to specialize our data uh",
+      "start": 499.24,
+      "duration": 3.56
+    },
+    {
+      "text": "but also specialize our model in a",
+      "start": 502.8,
+      "duration": 1.44
+    },
+    {
+      "text": "certain domain so uh they're both",
+      "start": 504.24,
+      "duration": 2.84
+    },
+    {
+      "text": "wonderful techniques and they have their",
+      "start": 507.08,
+      "duration": 1.399
+    },
+    {
+      "text": "strengths but the choice to use one or",
+      "start": 508.479,
+      "duration": 2.081
+    },
+    {
+      "text": "combination of both techniques is up to",
+      "start": 510.56,
+      "duration": 2.279
+    },
+    {
+      "text": "you and your specific use case and data",
+      "start": 512.839,
+      "duration": 2.281
+    },
+    {
+      "text": "so thank you so much for watching uh as",
+      "start": 515.12,
+      "duration": 2.52
+    },
+    {
+      "text": "always if you have any questions about",
+      "start": 517.64,
+      "duration": 1.639
+    },
+    {
+      "text": "fine-tuning rag or all AI related topics",
+      "start": 519.279,
+      "duration": 2.76
+    },
+    {
+      "text": "let us know in the comment section below",
+      "start": 522.039,
+      "duration": 1.92
+    },
+    {
+      "text": "don't forget to like the video and",
+      "start": 523.959,
+      "duration": 1.521
+    },
+    {
+      "text": "subscribe to the channel for more",
+      "start": 525.48,
+      "duration": 1.479
+    },
+    {
+      "text": "content thanks so much for watching",
+      "start": 526.959,
+      "duration": 4.361
+    }
+  ],
+  "available_languages": [
+    {
+      "name": "English (auto-generated)",
+      "lang": "en"
+    },
+    {
+      "name": "English (United States)",
+      "lang": "en-US"
+    }
+  ]
+}

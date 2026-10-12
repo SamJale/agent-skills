@@ -1,0 +1,187 @@
+{
+  "search_metadata": {
+    "id": "search_Z18NJlvnOYIOAbX0Dk3BOm7g",
+    "status": "Success",
+    "created_at": "2026-07-23T12:21:36Z",
+    "request_time_taken": 7.57,
+    "parsing_time_taken": 0.02,
+    "total_time_taken": 7.59,
+    "request_url": "https://www.google.com/search?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&oq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&gl=us&hl=en&udm=18&tbs=&ie=UTF-8",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_Z18NJlvnOYIOAbX0Dk3BOm7g.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_Z18NJlvnOYIOAbX0Dk3BOm7g"
+  },
+  "search_parameters": {
+    "engine": "google_forums",
+    "q": "retrieval augmented generation vs fine-tuning for LLMs",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "retrieval augmented generation vs fine-tuning for LLMs",
+    "total_results": 39600,
+    "time_taken_displayed": 0.33,
+    "detected_location": "Galveston County, Texas",
+    "has_no_results_for": false
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Fine-tuning vs. RAG: Understanding the Difference : r/OpenAI",
+      "link": "https://www.reddit.com/r/OpenAI/comments/1exoi1t/finetuning_vs_rag_understanding_the_difference/",
+      "source": "Reddit · r/OpenAI",
+      "domain": "www.reddit.com",
+      "displayed_link": "20+ comments  ·  1 year ago",
+      "snippet": "Fine-tuning specifically with LoRA is about optimizing how the model responds within a specific domain or style, not about embedding new ...",
+      "snippet_highlighted_words": [
+        "Fine-tuning specifically with LoRA is about optimizing how the model responds"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 2,
+      "title": "RAG vs Fine Tuning for LLM domain experts",
+      "link": "https://www.reddit.com/r/LocalLLaMA/comments/1itkgwf/rag_vs_fine_tuning_for_creating_llm_domain/",
+      "source": "Reddit · r/LocalLLaMA",
+      "domain": "www.reddit.com",
+      "displayed_link": "20+ comments  ·  1 year ago",
+      "snippet": "Fine tuning is certainly better than RAG. However, dealing with dynamic or real time data makes RAG more appealing.",
+      "snippet_highlighted_words": [
+        "Fine tuning is certainly better than RAG"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 3,
+      "title": "[Paper] RAG vs Fine-tuning: Pipelines, Tradeoffs, and a ...",
+      "link": "https://community.openai.com/t/paper-rag-vs-fine-tuning-pipelines-tradeoffs-and-a-case-study-on-agriculture/604444",
+      "source": "OpenAI Developer Community",
+      "domain": "community.openai.com",
+      "displayed_link": "https://community.openai.com › paper-rag-vs-fine-tuni...",
+      "snippet": "RAG augments the prompt with the external data, while fine-Tuning incorporates the additional knowledge into the model itself.",
+      "snippet_highlighted_words": [
+        "RAG augments the prompt with the external data"
+      ],
+      "date": "Jan 28, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAR2LVAAAAEnRSTlMAMlFAIfb/1ggSYbPDg+pxnOCDnJWcAAAAv0lEQVR4AcXQMW7EIAAF0cHAGIyN4f6XjZwGxcrW+9rRbz5fFrbIBym7a0yhwFv1AJpmT97OC0LPEWi+2i00b9gq7IOFkqdEIe16ETMLe0PiZDhI01uWJE/U1jxgM7McOzwxQLAHmGPFrVOsoQP0YaNaVjVxeU6eGBD6tuKVC/X0gMP4jmR/P5h95icWC4txupVn2584Byw5sumAZMTXu9cEKjQvqpG/+gxw2wqMwdtQbVCG/KOSpnoWPqiJL/sBFpkGhRkrfIQAAAAASUVORK5CYII="
+    },
+    {
+      "position": 4,
+      "title": "RAG vs Fine-Tuning: Choosing the Right LLM Approach",
+      "link": "https://www.facebook.com/groups/1135631650481128/posts/1927356357975316/",
+      "source": "Facebook · Decoding Data Science",
+      "domain": "www.facebook.com",
+      "displayed_link": "1 comment  ·  4 weeks ago",
+      "snippet": "RAG involves augmenting the prompt with external data, whereas Fine-Tuning integrates additional knowledge directly into the model.",
+      "snippet_highlighted_words": [
+        "RAG involves augmenting the prompt with external data"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEVHcEwHZv8HaP8IZ/8IZ/8IZv8IaP8IZ/8HZv8Haf8IZ/8IaP8IZ/8AXv8AV/8AYv+SqP/P1//m6//e5f9wlP////+tvP9jiv82c/8IZ/8Iaf+fsf////////8AW/+wrobhAAAAH3RSTlMAM4bC6v1h7v8Z3UL///////7/////////wRiFwenBhp/Z0gAAAOhJREFUeAFtk0UWwzAMBWWHFHOZe/9bBn9Nr7Mdg5AiQjZt17WNFFTTDxwZ+kKNigvUmJw2XGF0dByx1jlnPTPDjiYqDofj8XQ4L9bsL6vozpedq13/3eJk4G+XXPIac8zBHUs5EIl48Q4Tws3ziiAZ5f7j3Vq7O5b0iOGE1Z0cRxpqS3mwSbbU4VHndukW8GwHiQ/BzUO2KceIw7MIqJBHyIZk/WwKSv6KcD/frlsqt/P5joBELJ+3iNZD8YDC/82zz1pWS5U1u5bmmY1JLdMQmVoaOIxmIdVYDXWUxVAD8Xp/FvnN1mEG0f0e5ixC4ikAAAAASUVORK5CYII="
+    },
+    {
+      "position": 5,
+      "title": "RAG vs. Fine-Tuning: Which One Suits Your LLM?",
+      "link": "https://community.deeplearning.ai/t/rag-vs-fine-tuning-which-one-suits-your-llm/760881",
+      "source": "DeepLearning.AI",
+      "domain": "community.deeplearning.ai",
+      "displayed_link": "https://community.deeplearning.ai › rag-vs-fine-tuning-...",
+      "snippet": "Fine-Tuning, on the other hand, is perfect for improving an LLM's performance on specific tasks or domains by training it on a tailored dataset.",
+      "snippet_highlighted_words": [
+        "Fine-Tuning, on the other hand, is perfect for improving an LLM's performance"
+      ],
+      "date": "Jan 30, 2025",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEz/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmH/SmEfUzb8AAAADnRSTlMAL8ioFItmt9XveptM5hL171kAAAESSURBVCiRjZJZkgQhCEQRd9S8/3EbXLqqpmYihh/RJ0lKSPSvCCmPWmuW8EYZ2Wu01sDuyQSl1Ra9jxmxod2ZlnEJJTrH7FASypMxQSwvlTBuVIAI8pibjujQ8lEOgCASDgQNOGC58kCC0+2UZSBESN7CAPsJYYZ0CQJOq1SXyHAqfoIi6hYyVdae5TDWtAZbyQ6l6XV3YNCMFVaFA2hqMZtPC0dVr9tmwaGmlJLkLBTGajuh9QrJakT9uWZZtOq6DGmVxy14tuD1FGsUL+bt7XsmyyLN92uUPsdkR1t3zaMn6YE24zP4ZWJHwvf2tQNL7+k4+959WD2G6U96Y5fyT839HW7F+f1zKfkyRvHpTX6ND0ktFEfnQxjXAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 6,
+      "title": "Why fine tuning does not work as well as RAG?",
+      "link": "https://ai.stackexchange.com/questions/45701/why-fine-tuning-does-not-work-as-well-as-rag",
+      "source": "Artificial Intelligence Stack Exchange",
+      "domain": "ai.stackexchange.com",
+      "displayed_link": "https://ai.stackexchange.com › questions › why-fine-tun...",
+      "snippet": "I cannot find a definite answer to this question. Suppose I want to build a QA (question answering) system on a set of personal documents. It looks ...",
+      "date": "May 14, 2024",
+      "rich_snippet": {
+        "detected_extensions": {
+          "answer_link": "https://ai.stackexchange.com/a/45803",
+          "answer_count": 2,
+          "top_answer": "From LIMA: Less Is More for Alignment (2023) by Chunting Zhou et al.: These results ..."
+        }
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAQlBMVEVHcEwTCjkVCzsVCjsOBDRGFFUVCzsVCzsiLWJZKnWCJH9xHHBbG2UnRoIrVJRMP4kmPXdJS5dpNImPKIsYGko/M3bwm2ZMAAAACHRSTlMADPT///9Jz37dvScAAADsSURBVHgBYqApYEQDAKrnLMuhEAQC6OmIHQcKUR/732owo9bvZdzpFjwUA4VP/r94X5RyqVwjx1fFF5dBWs7Mtb7174ek0lsbY5bFdOKFDtc8pqdO2pGgSdXMYuRZq0/a8FLVlMzYW7lwCfxDghNUzbdmt8qVfp1JAVJ0a47TJ4e9E8ldYTbG4rhhAHCJdm324knntYAk7Wa5lVxLPNDV3ZqBjXns6L9AgL4OzsYt0Y4EVVesxmygcGCSJAKRppbUbUNXAhKuLnjZgc6qIqq5hnDg/aUe7ZXCyu0xRDIBycIUgGl2RrwpjoapGQAYmg+Unf55dwAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 7,
+      "title": "[D] retrieval-augmented generation vs Long-context LLM, ...",
+      "link": "https://www.reddit.com/r/MachineLearning/comments/1fabu65/d_retrievalaugmented_generation_vs_longcontext/",
+      "source": "Reddit · r/MachineLearning",
+      "domain": "www.reddit.com",
+      "displayed_link": "10+ comments  ·  1 year ago",
+      "snippet": "Fine tuning is not effective at adding new memories to an LLM, and in many cases seems to “overwrite” or “suppress” information learned during ...",
+      "snippet_highlighted_words": [
+        "Fine tuning is not effective at adding new memories to an LLM"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 8,
+      "title": "Full fine-tuning vs. LoRA fine-tuning vs. RAG : r/deeplearning",
+      "link": "https://www.reddit.com/r/deeplearning/comments/1b6g8ft/full_finetuning_vs_lora_finetuning_vs_rag/",
+      "source": "Reddit · r/deeplearning",
+      "domain": "www.reddit.com",
+      "displayed_link": "10+ comments  ·  2 years ago",
+      "snippet": "Retrieval augmented generation vs fine-tuning. LoRA fine-tuning might be a good option. If you have a larger dataset and more compute resources ...",
+      "snippet_highlighted_words": [
+        "Retrieval augmented generation vs fine-tuning"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 9,
+      "title": "What does fine tuning actually do? (Fine tuning vs. ...",
+      "link": "https://community.openai.com/t/what-does-fine-tuning-actually-do-fine-tuning-vs-knowledge-retrieval/709710",
+      "source": "OpenAI Developer Community",
+      "domain": "community.openai.com",
+      "displayed_link": "https://community.openai.com › what-does-fine-tuning-...",
+      "snippet": "The short answer is that you should opt for knowledge retrieval in this case. Fine-tuning is indeed not intended to teach a model new facts and ...",
+      "snippet_highlighted_words": [
+        "retrieval",
+        "Fine",
+        "tuning"
+      ],
+      "date": "Apr 7, 2024",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAR2LVAAAAEnRSTlMAMlFAIfb/1ggSYbPDg+pxnOCDnJWcAAAAv0lEQVR4AcXQMW7EIAAF0cHAGIyN4f6XjZwGxcrW+9rRbz5fFrbIBym7a0yhwFv1AJpmT97OC0LPEWi+2i00b9gq7IOFkqdEIe16ETMLe0PiZDhI01uWJE/U1jxgM7McOzwxQLAHmGPFrVOsoQP0YaNaVjVxeU6eGBD6tuKVC/X0gMP4jmR/P5h95icWC4txupVn2584Byw5sumAZMTXu9cEKjQvqpG/+gxw2wqMwdtQbVCG/KOSpnoWPqiJL/sBFpkGhRkrfIQAAAAASUVORK5CYII="
+    },
+    {
+      "position": 10,
+      "title": "RAG vs fine-tuning for business AI breakdown",
+      "link": "https://www.reddit.com/r/Rag/comments/1sdyqdp/rag_vs_finetuning_for_business_ai_when_does_each/",
+      "source": "Reddit · r/Rag",
+      "domain": "www.reddit.com",
+      "displayed_link": "5 comments  ·  3 months ago",
+      "snippet": "Retrieval-Augmented Generation vs fine-tuning. Best practices for ... How do you decide to choose between fine tuning an LLM model or using RAG?",
+      "snippet_highlighted_words": [
+        "Retrieval-Augmented Generation vs fine-tuning"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "Rag vs fine tuning reddit",
+      "link": "https://www.google.com/search?sca_esv=8805d6e2bc1a3171&hl=en&udm=18&gl=us&q=Rag+vs+fine+tuning+reddit&sa=X&ved=2ahUKEwj6h4bk5OiVAxU_TfUHHWyPD_8Q1QJ6BAhAEAE"
+    },
+    {
+      "query": "Types of LLM fine-tuning",
+      "link": "https://www.google.com/search?sca_esv=8805d6e2bc1a3171&hl=en&udm=18&gl=us&q=Types+of+LLM+fine-tuning&sa=X&ved=2ahUKEwj6h4bk5OiVAxU_TfUHHWyPD_8Q1QJ6BAg-EAE"
+    },
+    {
+      "query": "Best fine-tuning techniques",
+      "link": "https://www.google.com/search?sca_esv=8805d6e2bc1a3171&hl=en&udm=18&gl=us&q=Best+fine-tuning+techniques&sa=X&ved=2ahUKEwj6h4bk5OiVAxU_TfUHHWyPD_8Q1QJ6BAg_EAE"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&oq=retrieval+augmented+generation+vs+fine-tuning+for+LLMs&gl=us&hl=en&start=10&udm=18&tbs=&ie=UTF-8"
+  }
+}

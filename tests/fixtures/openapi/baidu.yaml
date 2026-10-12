@@ -1,0 +1,679 @@
+openapi: 3.0.0
+info:
+  title: Baidu API
+  description: |
+    Baidu API allows you to scrape Baidu search results. Baidu is the leading Chinese search engine with the majority market share in China.
+    
+    **Cross-linking**: This API does not directly cross-link with other SearchAPI services. It provides comprehensive search results from the Chinese market including organic results, ads, knowledge graph, inline shopping, videos, and more.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Baidu Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["baidu"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: ct
+          in: query
+          required: false
+          description: Character type for search results
+          schema:
+            type: string
+            enum: ["0", "1", "2"]
+            default: "0"
+        - name: gpc
+          in: query
+          required: false
+          description: GPC parameter for Baidu search
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          description: Page number to retrieve
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: num
+          in: query
+          required: false
+          description: Number of results per page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 10
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        error:
+          type: string
+          description: Error message if the search failed
+        answer_box:
+          $ref: '#/components/schemas/AnswerBox'
+        ads:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ad'
+        knowledge_graph:
+          $ref: '#/components/schemas/KnowledgeGraph'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        top_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopSearch'
+        blogs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Blog'
+        inline_images:
+          $ref: '#/components/schemas/InlineImages'
+        inline_shopping:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineShoppingItem'
+        top_stories:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopStory'
+        inline_videos:
+          type: array
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        people_also_search_for:
+          type: array
+          items:
+            $ref: '#/components/schemas/PeopleAlsoSearchFor'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Baidu URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        ct:
+          type: string
+          description: Character type
+        gpc:
+          type: string
+          description: GPC parameter
+        page:
+          type: integer
+          description: Page number
+        num:
+          type: integer
+          description: Number of results per page
+    AnswerBox:
+      type: object
+      oneOf:
+        - $ref: '#/components/schemas/AnswerBoxAiContent'
+        - $ref: '#/components/schemas/AnswerBoxAiSearch'
+        - $ref: '#/components/schemas/AnswerBoxCalculator'
+        - $ref: '#/components/schemas/AnswerBoxDictionary'
+    AnswerBoxAiContent:
+      type: object
+      required: [type, title, link, answer]
+      properties:
+        type:
+          type: string
+          enum: ["ai_content"]
+          description: Type of answer box
+        title:
+          type: string
+          description: Title of the answer
+        link:
+          type: string
+          description: Link to the source
+        answer:
+          type: string
+          description: Answer content
+    AnswerBoxAiSearch:
+      type: object
+      required: [type, answer, references]
+      properties:
+        type:
+          type: string
+          enum: ["ai_search"]
+          description: Type of answer box
+        answer:
+          type: string
+          description: Combined answer from references
+        references:
+          type: array
+          items:
+            type: object
+            required: [title, snippet, source]
+            properties:
+              title:
+                type: string
+                description: Reference title
+              snippet:
+                type: string
+                description: Reference snippet
+              source:
+                type: string
+                description: Reference source
+    AnswerBoxCalculator:
+      type: object
+      required: [type, query, answer]
+      properties:
+        type:
+          type: string
+          enum: ["calculator"]
+          description: Type of answer box
+        query:
+          type: string
+          description: Calculator expression
+        answer:
+          type: string
+          description: Calculation result
+    AnswerBoxDictionary:
+      type: object
+      required: [type, title, translation_meaning]
+      properties:
+        type:
+          type: string
+          enum: ["dictionary"]
+          description: Type of answer box
+        title:
+          type: string
+          description: Dictionary entry title
+        displayed_link:
+          type: string
+          description: Source link
+        translation_meaning:
+          type: string
+          description: Main translation or meaning
+        pronunciations:
+          type: object
+          properties:
+            uk:
+              type: object
+              properties:
+                phonetic:
+                  type: string
+                  description: UK phonetic notation
+                chinese_character:
+                  type: string
+                  description: Chinese character pronunciation
+                audio_link:
+                  type: string
+                  description: Audio URL for UK pronunciation
+            us:
+              type: object
+              properties:
+                phonetic:
+                  type: string
+                  description: US phonetic notation
+                chinese_character:
+                  type: string
+                  description: Chinese character pronunciation
+                audio_link:
+                  type: string
+                  description: Audio URL for US pronunciation
+        word_definitions:
+          type: array
+          items:
+            type: object
+            required: [part_of_speech, text]
+            properties:
+              part_of_speech:
+                type: string
+                description: Part of speech
+              text:
+                type: string
+                description: Definition text
+        example:
+          type: object
+          required: [english_text, translation, audio_link]
+          properties:
+            english_text:
+              type: string
+              description: English example sentence
+            translation:
+              type: string
+              description: Chinese translation
+            audio_link:
+              type: string
+              description: Audio URL for example
+    Ad:
+      type: object
+      required: [position, title, link, source, date, snippet]
+      properties:
+        position:
+          type: integer
+          description: Ad position
+        title:
+          type: string
+          description: Ad title
+        link:
+          type: string
+          description: Ad destination URL
+        source:
+          type: string
+          description: Ad source
+        date:
+          type: string
+          description: Ad date
+        snippet:
+          type: string
+          description: Ad description
+        sitelinks:
+          type: object
+          properties:
+            expanded:
+              type: array
+              items:
+                type: object
+                required: [title, link, thumbnail]
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  link:
+                    type: string
+                    description: Sitelink URL
+                  snippet:
+                    type: string
+                    description: Sitelink description
+                  thumbnail:
+                    type: string
+                    description: Sitelink thumbnail image
+        thumbnail:
+          type: string
+          description: Ad thumbnail image
+    KnowledgeGraph:
+      type: object
+      required: [title, link, displayed_link, snippet, snippet_highlighted_words, sitelinks, thumbnail]
+      properties:
+        title:
+          type: string
+          description: Knowledge graph title
+        link:
+          type: string
+          description: Knowledge graph link
+        displayed_link:
+          type: string
+          description: Display URL
+        snippet:
+          type: string
+          description: Knowledge graph description
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted search terms
+        sitelinks:
+          type: object
+          properties:
+            inline:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  link:
+                    type: string
+                    description: Sitelink URL
+        thumbnail:
+          type: string
+          description: Knowledge graph image
+    OrganicResult:
+      type: object
+      required: [position, title, link, displayed_link, snippet, snippet_highlighted_words]
+      properties:
+        position:
+          type: integer
+          description: Result position
+        title:
+          type: string
+          description: Result title
+        link:
+          type: string
+          description: Result URL
+        displayed_link:
+          type: string
+          description: Display URL
+        snippet:
+          type: string
+          description: Result description
+        snippet_highlighted_words:
+          type: array
+          items:
+            type: string
+          description: Highlighted search terms
+        date:
+          type: string
+          description: Result date
+        start_reading_link:
+          type: string
+          description: Link to start reading
+        latest_chapter_link:
+          type: string
+          description: Link to latest chapter
+        sitelinks:
+          type: object
+          properties:
+            inline:
+              type: array
+              items:
+                type: object
+                required: [title, link]
+                properties:
+                  title:
+                    type: string
+                    description: Sitelink title
+                  link:
+                    type: string
+                    description: Sitelink URL
+        is_official:
+          type: boolean
+          description: Official verification badge
+        is_baidu_guaranteed:
+          type: boolean
+          description: Baidu guarantee badge
+        thumbnail:
+          type: string
+          description: Result thumbnail image
+    TopSearch:
+      type: object
+      required: [position, query, link]
+      properties:
+        position:
+          type: integer
+          description: Search position
+        query:
+          type: string
+          description: Search query text
+        link:
+          type: string
+          description: Search query link
+        is_hot:
+          type: boolean
+          description: Whether marked as hot topic
+    Blog:
+      type: object
+      required: [title, link, source, snippet]
+      properties:
+        title:
+          type: string
+          description: Blog post title
+        link:
+          type: string
+          description: Blog post URL
+        source:
+          type: string
+          description: Blog source
+        snippet:
+          type: string
+          description: Blog post snippet
+        reads:
+          type: string
+          description: Read count
+    InlineImages:
+      type: object
+      required: [total_images, images]
+      properties:
+        total_images:
+          type: integer
+          description: Total number of images
+        suggestions:
+          type: array
+          items:
+            type: object
+            required: [title, link]
+            properties:
+              title:
+                type: string
+                description: Suggestion title
+              link:
+                type: string
+                description: Suggestion link
+        images:
+          type: array
+          items:
+            type: object
+            required: [original, thumbnail]
+            properties:
+              title:
+                type: string
+                description: Image title
+              original:
+                type: object
+                properties:
+                  link:
+                    type: string
+                    description: Original image URL
+              thumbnail:
+                type: string
+                description: Thumbnail image URL
+    InlineShoppingItem:
+      type: object
+      required: [position, title, link, seller, price, extracted_price, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Product position
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product link
+        seller:
+          type: string
+          description: Seller name
+        price:
+          type: string
+          description: Price as text
+        extracted_price:
+          type: number
+          description: Numeric price value
+        thumbnail:
+          type: string
+          description: Product thumbnail image
+    TopStory:
+      type: object
+      required: [title, link, source, date, snippet]
+      properties:
+        title:
+          type: string
+          description: Story title
+        link:
+          type: string
+          description: Story URL
+        source:
+          type: string
+          description: News source
+        date:
+          type: string
+          description: Publication date
+        snippet:
+          type: string
+          description: Story description
+        thumbnail:
+          type: string
+          description: Story image
+    InlineVideo:
+      type: object
+      required: [position, title, link, source, length, image]
+      properties:
+        position:
+          type: integer
+          description: Video position
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: Video URL
+        source:
+          type: string
+          description: Video source
+        length:
+          type: string
+          description: Video duration
+        image:
+          type: string
+          description: Video thumbnail
+    RelatedSearch:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Related search link
+    PeopleAlsoSearchFor:
+      type: object
+      required: [query, link]
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Related search link
+    Pagination:
+      type: object
+      required: [current]
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        next:
+          type: string
+          description: Next page URL
+        previous:
+          type: string
+          description: Previous page URL
+        other_pages:
+          type: object
+          additionalProperties:
+            type: string
+          description: Other page links
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

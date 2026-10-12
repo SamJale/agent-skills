@@ -1,0 +1,313 @@
+openapi: 3.0.0
+info:
+  title: TikTok Ads Library API
+  description: |
+    The TikTok Ads Library API provides programmatic access to search and analyze advertisements on TikTok's platform. 
+    This API allows you to search ads by keywords or advertiser IDs, filter by countries and date ranges, 
+    and retrieve detailed information about ad performance and audience reach.
+
+    **Key Features:**
+    - Search ads by keyword query or advertiser ID
+    - Filter by European countries or search across all available countries
+    - Specify custom date ranges for ad activity (from October 1, 2022 onwards)
+    - Sort results by various criteria including last shown date, published date, or audience reach
+    - Access detailed ad information including video content, audience estimates, and performance metrics
+    - Support for pagination using next_page_token
+
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: TikTok Ads Library Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Must be set to `tiktok_ads_library`
+          schema:
+            type: string
+            enum: ["tiktok_ads_library"]
+        - name: q
+          in: query
+          required: false
+          description: Search query term for ads
+          schema:
+            type: string
+        - name: advertiser_token
+          in: query
+          required: false
+          description: Filter ads by advertiser. Bundles the advertiser's ID and name, which TikTok needs together. Returned by this API, the Advertiser Search API and the Ad Details API.
+          schema:
+            type: string
+        - name: advertiser_id
+          in: query
+          required: false
+          description: Filter ads by specific advertiser ID. Must be passed with the advertiser's name in `q`; prefer `advertiser_token`.
+          schema:
+            type: string
+        - name: country
+          in: query
+          required: false
+          description: Filter ads by country code or all countries
+          schema:
+            type: string
+            enum: ["all", "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "CH", "TR", "GB"]
+            default: "all"
+        - name: time_period
+          in: query
+          required: false
+          description: 'Date range for ads search. Format: YYYY-MM-DD..YYYY-MM-DD. Dates cannot be in the future and start date must be on or after 2022-10-01'
+          schema:
+            type: string
+            pattern: '^\d{4}-\d{2}-\d{2}\.\.\d{4}-\d{2}-\d{2}$'
+            default: "2024-01-24..2025-01-24"
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for pagination to fetch next set of results
+          schema:
+            type: string
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort order for results
+          schema:
+            type: string
+            enum: ["last_shown_date_newest_to_oldest", "last_shown_date_oldest_to_newest", "published_date_newest_to_oldest", "published_date_oldest_to_newest", "unique_users_seen_low_to_high", "unique_users_seen_high_to_low"]
+            default: "last_shown_date_newest_to_oldest"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        ads:
+          type: array
+          description: Array of TikTok ads matching the search criteria
+          items:
+            $ref: '#/components/schemas/Ad'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if no results found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: TikTok Ads Library URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query term
+        advertiser_token:
+          type: string
+          description: Advertiser token filter
+        advertiser_id:
+          type: string
+          description: Advertiser ID filter
+        country:
+          type: string
+          description: Country code filter
+        time_period:
+          type: string
+          description: Date range for the search
+        next_page_token:
+          type: string
+          description: Pagination token
+        sort_by:
+          type: string
+          description: Sort order used
+    SearchInformation:
+      type: object
+      required: [total_results]
+      properties:
+        total_results:
+          type: integer
+          description: Total number of ads found
+    Ad:
+      type: object
+      required: [position, first_shown_datetime, last_shown_datetime]
+      properties:
+        position:
+          type: integer
+          description: Position of the ad in search results
+        id:
+          type: string
+          description: Unique identifier for the ad
+        advertiser:
+          type: string
+          description: Name of the advertiser. Absent on unavailable ads, unless the search is scoped to one advertiser.
+        advertiser_id:
+          type: string
+          description: Advertiser ID. Present only when the search is scoped to one advertiser.
+        advertiser_token:
+          type: string
+          description: Token for this ad's advertiser, for use as the `advertiser_token` parameter. Present only when the search is scoped to one advertiser.
+        title:
+          type: string
+          description: Headline text of the ad. Omitted when TikTok returns none.
+        format:
+          type: string
+          description: Creative format TikTok declares for the ad. Video ads may repeat their cover image in `image_urls`, and some ads carry no creative of either kind.
+          enum: ["video", "image"]
+        is_unavailable:
+          type: boolean
+          description: Whether the ad is currently unavailable
+        first_shown_datetime:
+          type: string
+          format: date-time
+          description: ISO 8601 UTC timestamp when the ad was first shown
+        last_shown_datetime:
+          type: string
+          format: date-time
+          description: ISO 8601 UTC timestamp when the ad was last shown
+        video_link:
+          type: string
+          description: URL to the ad video
+        cover_image:
+          type: string
+          description: URL to the ad cover image
+        image_urls:
+          type: array
+          items:
+            type: string
+          description: Image URLs attached to the ad. Video ads commonly repeat their cover image here, so presence of this field does not mean the ad is an image or carousel ad. Use `format` for that.
+        estimated_audience:
+          type: string
+          description: Estimated audience range (e.g., "10K-50K"). Omitted, with the min and max, when TikTok reports no range.
+        estimated_audience_min:
+          type: integer
+          description: Minimum estimated audience size
+        estimated_audience_max:
+          type: integer
+          description: Maximum estimated audience size
+        spent:
+          type: string
+          description: Amount spent on the ad
+        rejection_info:
+          type: object
+          description: TikTok's rejection notice for the ad, passed through as received. Omitted when there is none.
+          properties:
+            reasons:
+              type: array
+              items:
+                type: string
+              description: Policy reasons TikTok gives for the rejection
+            affected_regions:
+              type: array
+              items:
+                type: string
+              description: Country codes where the rejection applies
+            reporting_source:
+              type: string
+              description: How TikTok detected the violation
+            automated_notice:
+              type: string
+              description: TikTok's note on automated decision making
+            hit_illegal_content_reason:
+              type: integer
+              description: TikTok's illegal content flag, as received
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to fetch the next page of results
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

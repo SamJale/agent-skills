@@ -1,0 +1,45 @@
+{
+  "search_metadata": {
+    "id": "search_6dAL2p4KqYsDnbllDk7wnGOm",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:16Z",
+    "request_time_taken": 1.17,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 1.18,
+    "request_url": "https://www.bing.com/news/search?form=NSBABR&q=SearchApi&mkt=en-us",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsDnbllDk7wnGOm.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_6dAL2p4KqYsDnbllDk7wnGOm"
+  },
+  "search_parameters": {
+    "engine": "bing_news",
+    "q": "SearchApi",
+    "device": "desktop",
+    "market_code": "en-us"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "SerpApi Files Suit Against SearchApi for Stealing Proprietary Technology",
+      "link": "https://www.marketwatch.com/press-release/serpapi-files-suit-against-searchapi-for-stealing-proprietary-technology-88406d9b",
+      "source": "MarketWatch",
+      "date": "3mon",
+      "snippet": "The MarketWatch News Department was not involved in the creation of this content. AUSTIN, Texas, Feb. 16, 2026 /PRNewswire/ -- SerpApi filed suit in U.S. District Court for the Western District of ..."
+    },
+    {
+      "position": 2,
+      "title": "Serpapi, LLC v. Kucinskas",
+      "link": "https://www.law.com/radar/card/pm-62634139-serpapi-llc-v-kucinskas/",
+      "source": "Law",
+      "date": "4mon",
+      "snippet": "SerpApi LLC filed a trade secrets lawsuit against former SerpApi contractor and SearchAPI CEO Zilvinas Kucinskas and competitor SearchApi on Jan. 20 in Texas Western District Court. The lawsuit, ..."
+    },
+    {
+      "position": 3,
+      "title": "SerpApi Files Suit Against SearchApi for Stealing Proprietary Technology",
+      "link": "https://www.morningstar.com/news/pr-newswire/20260217da88076/serpapi-files-suit-against-searchapi-for-stealing-proprietary-technology",
+      "source": "Morningstar",
+      "date": "3mon",
+      "snippet": "AUSTIN, Texas, Feb. 16, 2026 /PRNewswire/ -- SerpApi filed suit in U.S. District Court for the Western District of Texas against Zilvinas Kucinskas and his company, SearchApi, for systematically ..."
+    }
+  ]
+}

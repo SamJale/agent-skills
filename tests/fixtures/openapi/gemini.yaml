@@ -1,0 +1,548 @@
+openapi: 3.0.0
+info:
+  title: Gemini API
+  description: |
+    Get Google Gemini's AI-generated answers in structured JSON. This API returns AI-synthesized
+    text blocks, a generated markdown version of the answer, the cited grounding reference links,
+    follow-up related questions, inline images, inline videos, typed structured cards, and response
+    metadata (model and conversation token).
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Gemini Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["gemini"]
+            default: "gemini"
+        - name: q
+          in: query
+          required: true
+          description: The question or terms you want to ask Gemini. The answer is returned in the same language as your query.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        text_blocks:
+          type: array
+          description: >
+            AI-generated content blocks including paragraphs, headers, lists, tables, and code.
+            Absent on a media-only answer — a "show me photos of ..." query returns its substance in
+            `inline_images` and no prose at all.
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: >
+            Markdown-formatted version of the AI-generated answer. Absent on a media-only answer
+            (see `text_blocks`).
+        reference_links:
+          type: array
+          description: Grounding reference links cited in the AI-generated answer
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+        inline_images:
+          type: array
+          description: Inline images attached to the AI-generated answer
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        inline_videos:
+          type: array
+          description: Inline YouTube videos attached to the AI-generated answer
+          items:
+            $ref: '#/components/schemas/InlineVideo'
+        cards:
+          type: array
+          description: Typed structured cards (weather, finance, …) rendered in the answer
+          items:
+            $ref: '#/components/schemas/AiAnswerCard'
+        related_questions:
+          type: array
+          description: >
+            Follow-up suggestions Gemini offers after the answer. `question` is the search it would
+            run; `label` is the conversational prompt it renders, present only when it differs.
+            Gemini emits these on only some turns, so the key is optional.
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+                description: The follow-up query
+              label:
+                type: string
+                description: Conversational phrasing of the same follow-up
+        response_metadata:
+          $ref: '#/components/schemas/ResponseMetadata'
+      # `text_blocks`/`markdown` are deliberately NOT required: a media-only answer carries neither.
+      required:
+        - search_metadata
+        - search_parameters
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Gemini URL for this search
+        html_url:
+          type: string
+          description: URL to view the raw response
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+    TextBlock:
+      type: object
+      required: [type]
+      properties:
+        type:
+          type: string
+          enum: ["header", "paragraph", "unordered_list", "ordered_list", "table", "code_blocks"]
+          description: Type of content block
+        answer:
+          type: string
+          description: Text content for header, paragraph, or list introduction
+        reference_indexes:
+          type: array
+          description: Indexes of related reference links
+          items:
+            type: integer
+        items:
+          type: array
+          description: List items (for ordered/unordered lists)
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        table:
+          type: object
+          description: Table data (for table type)
+          properties:
+            headers:
+              type: array
+              description: Table header row
+              items:
+                type: string
+            rows:
+              type: array
+              description: Table data rows
+              items:
+                type: array
+                items:
+                  type: string
+          required: [headers, rows]
+        language:
+          type: string
+          description: Programming language (for code_blocks type)
+        code:
+          type: string
+          description: Code content (for code_blocks type)
+    ReferenceLink:
+      type: object
+      required: [index, link]
+      properties:
+        index:
+          type: integer
+          description: Reference index number
+        title:
+          type: string
+          description: Page title
+        link:
+          type: string
+          description: URL of the reference
+        snippet:
+          type: string
+          description: Text snippet from the referenced page
+        source:
+          type: string
+          description: Source website name
+        favicon:
+          type: string
+          description: Favicon URL for the source
+        rank:
+          type: integer
+          description: Grounding rank of the reference
+    ResponseMetadata:
+      type: object
+      properties:
+        model:
+          type: string
+          description: Gemini model that generated the answer
+        language:
+          type: string
+          description: Language code of the answer (e.g. `en`)
+        detected_location:
+          type: string
+          description: >
+            Location Gemini inferred for the request (e.g. `California, USA`). Derived from the
+            request's network address rather than from any parameter, and it steers location-sensitive
+            answers — an unqualified "weather today" is answered for this place.
+        conversation_token:
+          type: string
+          description: Opaque token encoding the conversation and response IDs, returned as response metadata for debugging. The API does not currently accept it as a request parameter.
+    InlineVideo:
+      type: object
+      required: [position, link]
+      properties:
+        position:
+          type: integer
+          description: 1-based position of the video in the collection
+        title:
+          type: string
+          description: Video title
+        link:
+          type: string
+          description: YouTube watch URL
+        video_id:
+          type: string
+          description: YouTube video id
+        channel:
+          type: string
+          description: Publishing channel name
+        description:
+          type: string
+          description: Video description as provided by the channel
+        views:
+          type: integer
+          description: View count at the time of the answer
+        duration:
+          type: string
+          description: Video duration in m:ss or h:mm:ss
+        date:
+          type: string
+          description: Publish date (YYYY-MM-DD)
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+    InlineImage:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Image alt/title text shown in the answer
+        link:
+          type: string
+          description: Source page URL
+        source:
+          type: string
+          description: Source website name
+        original:
+          type: string
+          description: Full-size image URL
+        thumbnail:
+          type: string
+          description: Thumbnail image URL
+        width:
+          type: integer
+          description: Full-size image width in pixels
+        height:
+          type: integer
+          description: Full-size image height in pixels
+    # Canonical union from shared/ai_answer_components.yaml, narrowed to what this parser emits.
+    # Branches are pairwise disjoint so strict oneOf passes: known types pin `type` and forbid extra
+    # properties, RawCard requires `raw` and excludes known type names.
+    AiAnswerCard:
+      description: >
+        A structured card rendered alongside the AI answer. Known types are normalized to one
+        canonical schema each; unknown provider types fall back to RawCard with the native
+        payload preserved under `raw`.
+      oneOf:
+        - $ref: '#/components/schemas/WeatherCard'
+        - $ref: '#/components/schemas/FinanceCard'
+        - $ref: '#/components/schemas/RawCard'
+      # No OAS `discriminator` on purpose: 3.0 resolves an unmapped value as an implicit schema name,
+      # so an unknown type would fail lookup and make the RawCard fallback unreachable for exactly the
+      # types it exists for. The branches are disjoint, so plain oneOf resolves them anyway.
+    WeatherCard:
+      type: object
+      description: A weather card summarising current conditions and a daily forecast.
+      required: [type]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum: ["weather"]
+          description: The card type (always `weather`)
+        source:
+          type: object
+          description: Who supplied the card's data; the only attribution a widget-only answer carries
+          properties:
+            name:
+              type: string
+              description: Provider name (e.g. `Google Weather`)
+            link:
+              type: string
+              description: Provider page the data came from
+            date:
+              type: string
+              description: Provider's as-of timestamp, when it ships one
+        location:
+          type: string
+          description: Forecast location name
+        current:
+          type: object
+          description: Current weather conditions
+          properties:
+            temperature:
+              type: number
+              description: Current temperature, in the unit named by `unit`
+            unit:
+              type: string
+              description: >
+                Temperature unit (`F` or `C`). It governs `temperature`, `feels_like` and the forecast
+                `high`/`low` and nothing else — the wind, pressure, precipitation and visibility readings
+                below are served in their own fixed units.
+            condition:
+              type: string
+              description: Current condition text (e.g. `Sunny`)
+            is_day:
+              type: boolean
+              description: Whether it is currently daytime at the location
+            feels_like:
+              type: number
+              description: Apparent ("feels like") temperature, in the unit named by `unit`
+            humidity:
+              type: number
+              description: Relative humidity in percent
+            uv_index:
+              type: number
+              description: UV index
+            wind_speed:
+              type: number
+              description: >
+                Wind speed. `unit` does NOT apply here — it governs the temperatures only. The number is
+                taken out of the provider's locale-rendered string ("7 mph"), so a metric-locale answer
+                yields km/h with nothing on the card to say so. Treat it as mph unless the request pinned
+                a metric locale.
+            wind_direction:
+              type: string
+              description: Wind origin direction (e.g. `west`, `NNE`)
+            precipitation_chance:
+              type: number
+              description: Chance of precipitation in percent
+            precipitation_type:
+              type: string
+              description: Precipitation type for the current conditions (e.g. `rain`)
+        forecast:
+          type: array
+          description: Daily forecast entries
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+                description: Forecast day
+              high:
+                type: number
+                description: High temperature, in the unit named by `current.unit`
+              low:
+                type: number
+                description: Low temperature, in the unit named by `current.unit`
+              condition:
+                type: string
+                description: Daytime forecast condition text
+              night_condition:
+                type: string
+                description: Nighttime forecast condition text
+              humidity:
+                type: number
+                description: Relative humidity in percent
+              uv_index:
+                type: number
+                description: UV index
+              wind_speed:
+                type: number
+                description: Wind speed, with the same unit caveat as `current.wind_speed`
+              wind_direction:
+                type: string
+                description: Cardinal direction the wind blows from
+              precipitation_chance:
+                type: number
+                description: Chance of precipitation in percent
+              precipitation_type:
+                type: string
+                description: Precipitation type (e.g. `rain`, `snow`)
+    FinanceCard:
+      type: object
+      description: A finance card summarising a stock/ticker quote.
+      required: [type]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum: ["finance"]
+          description: The card type (always `finance`)
+        symbol:
+          type: string
+          description: Ticker symbol
+        name:
+          type: string
+          description: Company or instrument name
+        price:
+          type: number
+          description: Latest price
+        currency:
+          type: string
+          description: Quote currency code
+        change:
+          type: number
+          description: Absolute price change
+        change_percent:
+          type: number
+          description: Percent price change
+        previous_close:
+          type: number
+          description: Previous session's closing price
+        market_cap:
+          type: number
+          description: Market capitalization
+        pe_ratio:
+          type: number
+          description: Price/earnings ratio
+        price_open:
+          type: number
+          description: Opening price
+        price_high:
+          type: number
+          description: Intraday high price
+        price_low:
+          type: number
+          description: Intraday low price
+        price_52w_high:
+          type: number
+          description: 52-week high price
+        price_52w_low:
+          type: number
+          description: 52-week low price
+        exchange:
+          type: string
+          description: Listing exchange (e.g. `NASDAQ`)
+        eps:
+          type: number
+          description: Earnings per share, trailing twelve months
+        dividend_yield:
+          type: number
+          description: Trailing twelve-month (TTM) dividend yield
+        volume:
+          type: number
+          description: Volume traded in the most recent regular session
+        quote_time:
+          type: string
+          description: As-of time of the quote, ISO 8601 UTC (e.g. `2026-07-20T20:00:00Z`)
+    RawCard:
+      type: object
+      description: >
+        Structural fallback for provider card types without a canonical schema yet. The native
+        payload is preserved unflattened under `raw`, which is REQUIRED: a card holding only its
+        type tells a client nothing, so an emitter whose payload came out empty must drop the card
+        rather than serve `{type}`. Emit-side trap: `{type:, raw:}.compact_blank` strips an empty
+        `raw` and produces exactly that rejected shape.
+      required: [type, raw]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          description: Provider card type (singular snake_case), never a known canonical type
+          not:
+            enum: ["weather", "finance", "knowledge_entity"]
+        raw:
+          type: object
+          description: Provider-native card payload, preserved as-is; never empty
+          minProperties: 1
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

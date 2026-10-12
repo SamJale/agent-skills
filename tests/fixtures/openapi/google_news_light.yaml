@@ -1,0 +1,328 @@
+openapi: 3.0.0
+info:
+  title: Google News Light API
+  description: |
+    Access real-time news articles from Google News with a lightweight implementation optimized for performance.
+    
+    This API provides structured access to news articles, top stories, and pagination from Google News search results with minimal overhead. It offers the same core functionality as the standard Google News API but with optimized performance characteristics.
+    
+    **Cross-linking**: Results from this API can be used with other Google APIs for deeper insights. For example, you can use article URLs with the Google Light API for additional search context.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google News Light Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: The search engine to use
+          schema:
+            type: string
+            enum: ["google_news_light"]
+            default: "google_news_light"
+        - name: q
+          in: query
+          required: true
+          description: "Search query. When the site: operator is used, Google redirects the search to Google Search and the response carries web results. Use the Google News Portal API for news results filtered by publication."
+          schema:
+            type: string
+        - name: location
+          in: query
+          required: false
+          description: Location for localized search results
+          schema:
+            type: string
+        - name: uule
+          in: query
+          required: false
+          description: Google's encoded location parameter
+          schema:
+            type: string
+        - name: hl
+          in: query
+          required: false
+          description: Interface language code
+          schema:
+            type: string
+            default: "en"
+        - name: gl
+          in: query
+          required: false
+          description: Country code for search results
+          schema:
+            type: string
+            default: "us"
+        - name: nfpr
+          in: query
+          required: false
+          description: Auto-correction control
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: filter
+          in: query
+          required: false
+          description: Controls duplicate content and host crowding filters
+          schema:
+            type: string
+            enum: ["0", "1"]
+        - name: page
+          in: query
+          required: false
+          description: >-
+            Page number for pagination. Pages after the first of a site: query are served by the google
+            engine and follow its response shape: each organic result also carries source, domain,
+            favicon and snippet_highlighted_words, its displayed_link includes the scheme, and the page
+            can include an ads block.
+          schema:
+            type: integer
+            minimum: 1
+        - name: time_period
+          in: query
+          required: false
+          description: Filter results by time period
+          schema:
+            type: string
+            enum: ["last_hour", "last_day", "last_week", "last_month", "last_year"]
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort results order
+          schema:
+            type: string
+            enum: ["most_recent"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+          description: Array of news articles from the search results
+        top_stories:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopStory'
+          description: Array of top news stories
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message if the search failed
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google News URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query used
+        device:
+          type: string
+          description: Device type used for the search
+        uule:
+          type: string
+          description: Google's encoded location parameter used
+        location:
+          type: string
+          description: Location parameter used
+        location_used:
+          type: string
+          description: Canonical location name that was used
+        hl:
+          type: string
+          description: Interface language code used
+        gl:
+          type: string
+          description: Country code used
+        nfpr:
+          type: string
+          description: Auto-correction control setting used
+        filter:
+          type: string
+          description: Filter setting used
+        page:
+          type: string
+          description: Page number requested
+        time_period:
+          type: string
+          description: Time period filter used
+        sort_by:
+          type: string
+          description: Sort order used
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: The query as displayed by Google
+        page:
+          type: integer
+          description: Current page number
+        detected_location:
+          type: string
+          description: Location detected by Google
+        did_you_mean:
+          type: string
+          description: Suggested alternative query
+        showing_results_for:
+          type: string
+          description: Alternative query Google is showing results for
+    OrganicResult:
+      type: object
+      required: [position, title, link, source, snippet]
+      properties:
+        position:
+          type: integer
+          description: Position of the result in the search results
+        title:
+          type: string
+          description: Title of the news article
+        link:
+          type: string
+          description: URL to the news article
+        source:
+          type: string
+          description: Source publication of the article
+        date:
+          type: string
+          description: Publication date of the article
+        snippet:
+          type: string
+          description: Brief excerpt from the article
+        thumbnail:
+          type: string
+          description: URL to the article thumbnail image
+    TopStory:
+      type: object
+      required: [title, link, source, date]
+      properties:
+        position:
+          type: integer
+          description: Position of the story
+        title:
+          type: string
+          description: Title of the news story
+        link:
+          type: string
+          description: URL to the news story
+        source:
+          type: string
+          description: Source publication of the story
+        date:
+          type: string
+          description: Publication date of the story
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: URL for the previous page of results
+        next:
+          type: string
+          description: URL for the next page of results
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

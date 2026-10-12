@@ -1,0 +1,38 @@
+{
+  "search_metadata": {
+    "id": "search_gM5dQzeGq7sdGPx7mvOlAjp3",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:59Z",
+    "request_time_taken": 4.19,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 4.19,
+    "request_url": "https://library.tiktok.com/ads?region=all&start_time=1750046400000&end_time=1781582400000&sort_type=last_shown_date%2Cdesc&adv_name=NIKE+COM+SRL&adv_biz_ids=7587573238117498896&query_type=2",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_gM5dQzeGq7sdGPx7mvOlAjp3.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_gM5dQzeGq7sdGPx7mvOlAjp3"
+  },
+  "search_parameters": {
+    "engine": "tiktok_ads_library",
+    "advertiser_token": "eyJpZCI6Ijc1ODc1NzMyMzgxMTc0OTg4OTYiLCJuYW1lIjoiTklLRSBDT00gU1JMIn0=",
+    "country": "all",
+    "time_period": "2025-06-16..2026-06-16",
+    "sort_by": "last_shown_date_newest_to_oldest"
+  },
+  "search_information": {
+    "total_results": 1
+  },
+  "ads": [
+    {
+      "position": 1,
+      "id": "1852563327755778",
+      "advertiser_id": "7587573238117498896",
+      "advertiser": "NIKE COM SRL",
+      "advertiser_token": "eyJpZCI6Ijc1ODc1NzMyMzgxMTc0OTg4OTYiLCJuYW1lIjoiTklLRSBDT00gU1JMIn0=",
+      "is_unavailable": true,
+      "first_shown_datetime": "2025-12-25T19:00:00-05:00",
+      "last_shown_datetime": "2025-12-25T19:00:00-05:00",
+      "estimated_audience": "1K-10K",
+      "estimated_audience_min": 1000,
+      "estimated_audience_max": 10000
+    }
+  ]
+}

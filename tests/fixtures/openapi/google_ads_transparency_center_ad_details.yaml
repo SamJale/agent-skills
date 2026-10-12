@@ -1,0 +1,469 @@
+openapi: 3.0.0
+info:
+  title: Google Ads Transparency Center Ad Details API
+  description: |
+    This API retrieves detailed information about a specific Google ad from the Google Ads Transparency Center.
+    
+    **Cross-linking**: To get advertiser_id and creative_id values, first use the Google Ads Transparency Center API
+    to search for ads, then use those IDs with this API to get detailed ad information.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Google Ads Transparency Center Ad Details Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Engine to use for the search
+          schema:
+            type: string
+            enum: ["google_ads_transparency_center_ad_details"]
+        - name: advertiser_id
+          in: query
+          required: true
+          description: Advertiser ID in format AR followed by 20 digits
+          schema:
+            type: string
+            pattern: '^AR\d{20}$'
+        - name: creative_id
+          in: query
+          required: true
+          description: Creative ID in format CR followed by 20 digits
+          schema:
+            type: string
+            pattern: '^CR\d{20}$'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        ad_information:
+          $ref: '#/components/schemas/AdInformation'
+        variations:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdVariation'
+          description: Array of ad variations showing different formats of the ad
+        error:
+          type: string
+          description: Error message if the API didn't return results
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Google Ads Transparency Center URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Engine used for the search
+        advertiser_id:
+          type: string
+          description: Advertiser ID used in the search
+        creative_id:
+          type: string
+          description: Creative ID used in the search
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+    AdInformation:
+      type: object
+      properties:
+        format:
+          type: string
+          enum: ["text", "image", "video"]
+          description: Format of the ad
+        topic:
+          type: string
+          description: Topic category of the ad
+        first_shown_date:
+          type: string
+          format: date
+          description: Date when the ad was first shown
+        last_shown_date:
+          type: string
+          format: date
+          description: Date when the ad was last shown
+        last_shown_datetime:
+          type: string
+          format: date-time
+          description: Timestamp when the ad was last shown
+        impressions_data_available_from:
+          type: string
+          format: date
+          description: Date from which impressions data is available
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
+          description: Regions where the ad was shown
+        audience_selection:
+          $ref: '#/components/schemas/AudienceSelection'
+    Region:
+      type: object
+      required: [code, region_code, name]
+      properties:
+        region_code:
+          type: integer
+          description: Numeric code for the region
+        code:
+          type: string
+          description: ISO country/region code
+        name:
+          type: string
+          description: Name of the region
+        first_shown_date:
+          type: string
+          format: date
+          description: Date when the ad was first shown in this region
+        last_shown_date:
+          type: string
+          format: date
+          description: Date when the ad was last shown in this region
+        impressions:
+          $ref: '#/components/schemas/ImpressionRange'
+        platform_impressions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlatformImpression'
+          description: Impressions broken down by platform
+    ImpressionRange:
+      type: object
+      properties:
+        lower:
+          type: integer
+          description: Lower bound of impression range
+        upper:
+          type: integer
+          description: Upper bound of impression range
+    PlatformImpression:
+      type: object
+      properties:
+        platform:
+          type: string
+          enum: ["google_play", "google_maps", "google_search", "google_shopping", "youtube"]
+          description: Platform where the ad was shown
+        lower:
+          type: integer
+          description: Lower bound of impression range for this platform
+        upper:
+          type: integer
+          description: Upper bound of impression range for this platform
+    AudienceSelection:
+      type: object
+      properties:
+        demographic_info:
+          type: string
+          enum: ["Included", "Excluded", "Some included, some excluded", "Not used"]
+          description: How demographic information is used for targeting
+        geographic_locations:
+          type: string
+          enum: ["Included", "Excluded", "Some included, some excluded", "Not used"]
+          description: How geographic locations are used for targeting
+        contextual_signals:
+          type: string
+          enum: ["Included", "Excluded", "Some included, some excluded", "Not used"]
+          description: How contextual signals are used for targeting
+        topics_of_interest:
+          type: string
+          enum: ["Included", "Excluded", "Some included, some excluded", "Not used"]
+          description: How topics of interest are used for targeting
+        customer_lists:
+          type: string
+          enum: ["Included", "Excluded", "Some included, some excluded", "Not used"]
+          description: How customer lists are used for targeting
+    AdVariation:
+      type: object
+      description: Ad variation content which can contain different fields based on ad type
+      properties:
+        # Text ad fields
+        title:
+          type: string
+          description: Title of the ad
+        snippet:
+          type: string
+          description: Description or snippet text
+        displayed_link:
+          type: string
+          description: Display URL shown in the ad
+        link:
+          type: string
+          description: Destination URL
+        source:
+          type: string
+          description: Source or advertiser name
+        sitelinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sitelink'
+          description: Additional links shown with the ad
+        # Coupon fields
+        coupon:
+          $ref: '#/components/schemas/Coupon'
+        # Offers fields
+        offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Offer'
+          description: Product offers in the ad
+        # Rating fields
+        rating:
+          type: number
+          description: Average rating score
+        rating_link:
+          type: string
+          description: Link to rating source
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_histogram:
+          type: object
+          additionalProperties:
+            type: integer
+          description: Distribution of reviews by star rating
+        # App fields
+        product_id:
+          type: string
+          description: App or product identifier
+        name:
+          type: string
+          description: App or product name
+        app_name:
+          type: string
+          description: Full app name
+        short_name:
+          type: string
+          description: Short app name
+        developer:
+          type: string
+          description: App developer name
+        logo:
+          type: string
+          description: Logo image URL
+        cover_image:
+          type: string
+          description: Cover image URL
+        price:
+          type: string
+          description: App or product price
+        category:
+          type: string
+          description: App category
+        installs:
+          type: string
+          description: Number of app installs
+        version:
+          type: string
+          description: App version
+        screenshots:
+          type: array
+          items:
+            type: string
+          description: App screenshot URLs
+        # Shopping fields
+        brand:
+          type: string
+          description: Product brand
+        thumbnail:
+          type: string
+          description: Product thumbnail image URL
+        # Local ad fields
+        description:
+          type: string
+          description: Business or ad description
+        address:
+          type: string
+          description: Physical address
+        domain:
+          type: string
+          description: Website domain
+        call_to_action:
+          type: string
+          description: Call to action text
+        # Image fields
+        image:
+          type: string
+          description: Image URL. HTML5 creative bundles (display banners) are returned under html5_link, not here
+        images:
+          type: array
+          items:
+            type: string
+          description: Array of image URLs
+        # HTML5 fields
+        is_playable:
+          type: boolean
+          description: Present (true) only for interactive HTML5 playable ads from App campaigns
+        html5_link:
+          type: string
+          description: URL of the HTML5 creative bundle. Present for App campaign playables (with is_playable) and for HTML5 display banners (without it)
+        # Extensions
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional ad extensions
+        # Video fields
+        video_id:
+          type: string
+          description: YouTube video ID
+        video_link:
+          type: string
+          description: YouTube video URL
+        channel_id:
+          type: string
+          description: YouTube channel ID
+        channel:
+          type: string
+          description: YouTube channel name
+        channel_name:
+          type: string
+          description: YouTube channel name
+        duration:
+          type: string
+          description: Video duration
+        is_skippable:
+          type: boolean
+          description: Whether the video ad is skippable
+        aspect_ratio:
+          type: number
+          description: Video aspect ratio
+        icon:
+          type: string
+          description: Channel or app icon URL
+        # Availability
+        is_unavailable:
+          type: boolean
+          description: Whether the ad variation is unavailable
+    Sitelink:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Sitelink title
+        snippet:
+          type: string
+          description: Sitelink description
+    Coupon:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Coupon title
+        description:
+          type: string
+          description: Coupon description
+        discount:
+          type: string
+          description: Discount amount or percentage
+        code:
+          type: string
+          description: Coupon code
+        coupon_starts:
+          type: string
+          format: date
+          description: Date when coupon becomes valid
+    Offer:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Offer title
+        description:
+          type: string
+          description: Offer description
+        price:
+          type: string
+          description: Formatted price
+        extracted_price:
+          type: number
+          description: Numeric price value

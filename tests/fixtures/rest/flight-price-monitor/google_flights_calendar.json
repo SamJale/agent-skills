@@ -1,0 +1,357 @@
+{
+  "search_metadata": {
+    "id": "search_dXG2jzvrlqTLGOJy8eYoaOb8",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:36Z",
+    "request_time_taken": 0.45,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 0.45,
+    "request_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTA3LTE1agcIARIDSkZLcgcIARIDTEFYGh4SCjIwMjYtMDctMjJqBwgBEgNMQVhyBwgBEgNKRktAAUgBcAGCAQsI____________AZgBAQ&hl=en&gl=us&curr=USD",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_dXG2jzvrlqTLGOJy8eYoaOb8.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_dXG2jzvrlqTLGOJy8eYoaOb8"
+  },
+  "search_parameters": {
+    "engine": "google_flights_calendar",
+    "departure_id": "JFK",
+    "arrival_id": "LAX",
+    "currency": "USD",
+    "hl": "en",
+    "gl": "us",
+    "outbound_date": "2026-07-15",
+    "return_date": "2026-07-22",
+    "flight_type": "round_trip",
+    "travel_class": "economy",
+    "stops": "any",
+    "adults": "1",
+    "children": "0",
+    "infants_in_seat": "0",
+    "infants_on_lap": "0",
+    "outbound_date_start": "2026-07-15",
+    "outbound_date_end": "2026-07-22",
+    "return_date_start": "2026-07-22",
+    "return_date_end": "2026-07-29"
+  },
+  "calendar": [
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-22",
+      "price": 337,
+      "is_lowest_price": true
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-23",
+      "price": 387
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-24",
+      "price": 387
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-25",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-26",
+      "price": 390
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-27",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-28",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-22",
+      "return": "2026-07-29",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-22",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-23",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-24",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-25",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-26",
+      "price": 390
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-27",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-28",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-16",
+      "return": "2026-07-29",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-22",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-23",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-24",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-25",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-26",
+      "price": 390
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-27",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-28",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-15",
+      "return": "2026-07-29",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-22",
+      "price": 386
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-23",
+      "price": 386
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-24",
+      "price": 386
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-25",
+      "price": 381
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-26",
+      "price": 405
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-27",
+      "price": 383
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-28",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-20",
+      "return": "2026-07-29",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-22",
+      "price": 472
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-23",
+      "price": 472
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-24",
+      "price": 472
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-25",
+      "price": 524
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-26",
+      "price": 537
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-27",
+      "price": 524
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-28",
+      "price": 505
+    },
+    {
+      "departure": "2026-07-19",
+      "return": "2026-07-29",
+      "price": 513
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-22",
+      "price": 382
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-23",
+      "price": 382
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-24",
+      "price": 382
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-25",
+      "price": 382
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-26",
+      "price": 395
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-27",
+      "price": 382
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-28",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-17",
+      "return": "2026-07-29",
+      "price": 363
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-22",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-23",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-24",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-25",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-26",
+      "price": 390
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-27",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-28",
+      "price": 357
+    },
+    {
+      "departure": "2026-07-21",
+      "return": "2026-07-29",
+      "price": 357
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-22",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-23",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-24",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-25",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-26",
+      "price": 390
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-27",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-28",
+      "price": 377
+    },
+    {
+      "departure": "2026-07-18",
+      "return": "2026-07-29",
+      "price": 377
+    }
+  ]
+}

@@ -1,0 +1,728 @@
+{
+  "search_metadata": {
+    "id": "search_M92XEY4l2JFYZX7l9kQG3b0J",
+    "status": "Success",
+    "created_at": "2026-06-16T12:55:49Z",
+    "request_time_taken": 1.16,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 1.17,
+    "request_url": "https://www.google.com/maps/search/plumbers+in+Norwich%2C+England?hl=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_M92XEY4l2JFYZX7l9kQG3b0J.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_M92XEY4l2JFYZX7l9kQG3b0J"
+  },
+  "search_parameters": {
+    "engine": "google_maps",
+    "q": "plumbers in Norwich, England",
+    "hl": "en",
+    "gl": "uk",
+    "page": "1"
+  },
+  "search_information": {
+    "query_displayed": "plumbers in Norwich, England",
+    "state": "Showing results for exact spelling."
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "ludocid": "12669277023657181002",
+      "place_id": "ChIJ0y-Iwdjj2UcRSr8aDFRQ0q8",
+      "kgmid": "/g/11dz5q5wpx",
+      "data_id": "0x47d9e3d8c1882fd3:0xafd250540c1abf4a",
+      "title": "Norwich Plumber",
+      "address": "3 Overstone Ct, Norwich NR6 7EN",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07946 445535",
+      "rating": 5.0,
+      "website": "https://plumber-norwich.com/",
+      "domain": "plumber-norwich.com",
+      "gps_coordinates": {
+        "latitude": 52.6641726,
+        "longitude": 1.3059225
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Bathroom Renovator"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 5 pm",
+      "open_hours": {
+        "tuesday": "8 am–5 pm"
+      }
+    },
+    {
+      "position": 2,
+      "ludocid": "14201286231604149462",
+      "place_id": "ChIJ8xv5HHb9J2sR1jxpBJYaFcU",
+      "kgmid": "/g/11y13xldtz",
+      "data_id": "0x6b27fd761cf91bf3:0xc5151a9604693cd6",
+      "title": "Norwich Plumbing & Heating Ltd",
+      "timezone": "Europe/London",
+      "phone": "07864 770081",
+      "rating": 5.0,
+      "website": "https://norwichplumbingandheatingltd.co.uk/",
+      "domain": "norwichplumbingandheatingltd.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6718864,
+        "longitude": 0.9491757999999999
+      },
+      "type": "Central Heating Service",
+      "types": [
+        "Central Heating Service",
+        "Service establishment"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 6 pm",
+      "open_hours": {
+        "tuesday": "8 am–6 pm"
+      }
+    },
+    {
+      "position": 3,
+      "ludocid": "2934515182506604104",
+      "place_id": "ChIJpZHTLMXj2UcRSPZLwQJ-uSg",
+      "kgmid": "/g/11c509c6vf",
+      "data_id": "0x47d9e3c52cd391a5:0x28b97e02c14bf648",
+      "title": "24/7 Emergency Plumbers Norwich",
+      "address": "15 Lime Kiln Mews, Norwich NR3 2ET",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07775 280211",
+      "rating": 4.9,
+      "website": "https://www.emergencyplumbersnorwich.co.uk/",
+      "domain": "emergencyplumbersnorwich.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.642004099999994,
+        "longitude": 1.2862301
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Central Heating Service"
+      ],
+      "highlights": [
+        "LGBTQ+ friendly"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      },
+      "extensions": [
+        {
+          "title": "Accessibility",
+          "items": [
+            {
+              "title": "Wheelchair-accessible seating",
+              "value": "Has wheelchair-accessible seating"
+            },
+            {
+              "title": "Wheelchair-accessible toilet",
+              "value": "Has wheelchair-accessible toilet"
+            },
+            {
+              "title": "Wheelchair-accessible car park",
+              "value": "No wheelchair-accessible car park"
+            },
+            {
+              "title": "Wheelchair-accessible entrance",
+              "value": "No wheelchair-accessible entrance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "ludocid": "4387019512336296291",
+      "place_id": "ChIJi-287RHj2UcRYymDxwDT4Tw",
+      "kgmid": "/g/1yh9t_xg9",
+      "data_id": "0x47d9e311edbced8b:0x3ce1d300c7832963",
+      "title": "Royal Flush Plumbing",
+      "address": "5 Bek Cl, Norwich NR4 7NT",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 336301",
+      "rating": 4.9,
+      "website": "http://www.royalflushplumbingnorfolk.co.uk/",
+      "domain": "royalflushplumbingnorfolk.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6129825,
+        "longitude": 1.2529962
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      },
+      "reservation_links": [
+        {
+          "text": "Book online",
+          "link": "https://www.checkatrade.com/trades/royalflushplumbing?utm_source=google_appointments_redirect&utm_content=business_profile&rwg_token=AFd1xnF1u3I-H0gNCLN4pN7RcZvOZ0Vzekee1MoSywzKVxZ8Qjpu6NX_WP7VI-Y3Qt5-Dwoqv_nOmOm2ZAk82CH_zOc_M_Fx2g%3D%3D"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "ludocid": "1145075849895694508",
+      "place_id": "ChIJ9SbJ4c3j2UcRrFDpKWsg5A8",
+      "kgmid": "/g/1td12jqx",
+      "data_id": "0x47d9e3cde1c926f5:0xfe4206b29e950ac",
+      "title": "HGS Plumbing and Heating",
+      "address": "Unit 7, Capitol House, 4-6 Heigham St, Norwich NR2 4TE",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 630608",
+      "rating": 4.8,
+      "website": "http://www.hgsplumbingandheating.co.uk/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "domain": "hgsplumbingandheating.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6343557,
+        "longitude": 1.2863743
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Gas engineer",
+        "Central Heating Service"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 5 pm",
+      "open_hours": {
+        "tuesday": "8 am–5 pm"
+      },
+      "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=GyE-oQTKfzvU3KAhG7B34g&cb_client=search.gws-prod.gps&w=80&h=92&yaw=52.919113&pitch=0&thumbfov=100"
+    },
+    {
+      "position": 6,
+      "ludocid": "7980755272614627466",
+      "place_id": "ChIJ42atwVvj2UcRikiF96JWwW4",
+      "kgmid": "/g/11trtrqfqp",
+      "data_id": "0x47d9e35bc1ad66e3:0x6ec156a2f785488a",
+      "title": "Loader Plumbing Heating and Gas",
+      "address": "37 Womersley Rd, Norwich NR1 4QB",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "rating": 5.0,
+      "website": "https://loaderplumbingandheating.com/",
+      "domain": "loaderplumbingandheating.com",
+      "gps_coordinates": {
+        "latitude": 52.6339129,
+        "longitude": 1.3215927
+      },
+      "type": "Central Heating Service",
+      "types": [
+        "Central Heating Service"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      }
+    },
+    {
+      "position": 7,
+      "ludocid": "3581738062668861956",
+      "place_id": "ChIJGQEpcI7AOU4RBJLfh8rjtDE",
+      "kgmid": "/g/11y4ngpmbb",
+      "data_id": "0x4e39c08e70290119:0x31b4e3ca87df9204",
+      "title": "Flower's Plumbing & Heating",
+      "address": "6 Pilling Park Rd, Norwich NR1 4PA",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07738 422054",
+      "rating": 5.0,
+      "website": "https://flowersplumbing.co.uk/",
+      "domain": "flowersplumbing.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6320657,
+        "longitude": 1.3263362
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Boiler supplier",
+        "Contractor",
+        "Central Heating Service"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 9 pm",
+      "open_hours": {
+        "tuesday": "6:30 am–9 pm"
+      },
+      "reservation_links": [
+        {
+          "text": "Book online",
+          "link": "https://www.checkatrade.com/trades/flowersplumbingandheating?utm_source=google_appointments_redirect&utm_content=business_profile&rwg_token=AFd1xnEm3EO4DxvZJSADu28gdvGWzvnhkUSyQpL2wJeF-pku4Ld7FcwA_x-JNWMUExqjp7jd3WNKl81bZPM-R620Bui0E3FFLg%3D%3D"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "ludocid": "15970058883040602966",
+      "place_id": "ChIJB-_U9h3j2UcRVuu07fALod0",
+      "kgmid": "/g/11tt5vgdmz",
+      "data_id": "0x47d9e31df6d4ef07:0xdda10bf0edb4eb56",
+      "title": "Budget Plumber Norwich",
+      "address": "The Paddocks, Norwich NR6 7HE",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07411 298680",
+      "rating": 5.0,
+      "website": "http://budgetplumbernorwich.co.uk/",
+      "domain": "budgetplumbernorwich.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.666712399999994,
+        "longitude": 1.3045084
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 11 pm",
+      "open_hours": {
+        "tuesday": "7 am–11 pm"
+      }
+    },
+    {
+      "position": 9,
+      "ludocid": "5400845112430373730",
+      "place_id": "ChIJ49K_U33j2UcRYitRzQOo80o",
+      "kgmid": "/g/11fkyx_30t",
+      "data_id": "0x47d9e37d53bfd2e3:0x4af3a803cd512b62",
+      "title": "Darren Hunton Plumbing and Heating",
+      "address": "26 Trendall Rd, Norwich NR7 8BL",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07713 623795",
+      "rating": 5.0,
+      "website": "https://plumbingnorwich.co.uk/",
+      "domain": "plumbingnorwich.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6580215,
+        "longitude": 1.3337581
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 10 pm",
+      "open_hours": {
+        "tuesday": "7 am–10 pm"
+      }
+    },
+    {
+      "position": 10,
+      "ludocid": "6499724849175834615",
+      "place_id": "ChIJZa2a4kTh2UcR96_nNFCpM1o",
+      "kgmid": "/g/11bzs_vn76",
+      "data_id": "0x47d9e144e29aad65:0x5a33a95034e7aff7",
+      "title": "WWS Plumbing, Heating & Gas Services",
+      "address": "26 The Avenues, Norwich NR2 3QR",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 929172",
+      "rating": 4.8,
+      "website": "http://wws-heating.com/",
+      "domain": "wws-heating.com",
+      "gps_coordinates": {
+        "latitude": 52.626180899999994,
+        "longitude": 1.2654193
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Gas engineer"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 5 pm",
+      "open_hours": {
+        "tuesday": "9 am–5 pm"
+      },
+      "reservation_links": [
+        {
+          "text": "Book online",
+          "link": "https://www.checkatrade.com/trades/wwsplumbingandheatinglimited?utm_source=google_appointments_redirect&utm_content=business_profile&rwg_token=AFd1xnEZmZNSCLCCMMuRfdY4xLRQRdKVQKxr8rCMbzhKoi3xDo3-JnBwW-B8tluPa1EDfUpqt0jV0BWIop4AQ2EEdobUnTI_Sg%3D%3D"
+        }
+      ]
+    },
+    {
+      "position": 11,
+      "ludocid": "2286839601089494100",
+      "place_id": "ChIJm5lf1Cyq_G4RVDw8QYB8vB8",
+      "kgmid": "/g/11t6q8pjb6",
+      "data_id": "0x6efcaa2cd45f999b:0x1fbc7c80413c3c54",
+      "title": "Viktor's Plumbing Services",
+      "timezone": "Europe/London",
+      "phone": "07943 207332",
+      "rating": 5.0,
+      "website": "http://norwich-plumbing.co.uk/",
+      "domain": "norwich-plumbing.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6678946,
+        "longitude": 1.1064176
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Service establishment"
+      ],
+      "highlights": [
+        "LGBTQ+ friendly"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      }
+    },
+    {
+      "position": 12,
+      "ludocid": "2645148473842447187",
+      "place_id": "ChIJZZ-cEgRMW0IRU7OLuYV0tSQ",
+      "kgmid": "/g/11rvd1f4bf",
+      "data_id": "0x425b4c04129c9f65:0x24b57485b98bb353",
+      "title": "NR2 Plumbing and Heating",
+      "timezone": "Europe/London",
+      "phone": "07729 890186",
+      "rating": 5.0,
+      "website": "http://norwich-plumbers.com/",
+      "domain": "norwich-plumbers.com",
+      "gps_coordinates": {
+        "latitude": 52.641003299999994,
+        "longitude": 1.2847764
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Drainage service",
+        "Service establishment",
+        "Central Heating Service"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      }
+    },
+    {
+      "position": 13,
+      "ludocid": "14595251315771121978",
+      "place_id": "ChIJTfTbYN7j2UcROiEXJL6_jMo",
+      "kgmid": "/g/1tlncq85",
+      "data_id": "0x47d9e3de60dbf44d:0xca8cbfbe2417213a",
+      "title": "24/7 Taylor Plumbing & Heating Installations",
+      "address": "9 St Marys Plain, Norwich NR3 3AF",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07961 766105",
+      "rating": 4.9,
+      "website": "http://www.taylor-plumbing.com/",
+      "domain": "taylor-plumbing.com",
+      "gps_coordinates": {
+        "latitude": 52.6338826,
+        "longitude": 1.2907295
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Gas engineer",
+        "Central Heating Service",
+        "Heating equipment supplier"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      },
+      "extensions": [
+        {
+          "title": "Accessibility",
+          "items": [
+            {
+              "title": "Assistive hearing loop",
+              "value": "Has assistive hearing loop"
+            },
+            {
+              "title": "Wheelchair-accessible seating",
+              "value": "Has wheelchair-accessible seating"
+            },
+            {
+              "title": "Wheelchair-accessible toilet",
+              "value": "Has wheelchair-accessible toilet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "position": 14,
+      "ludocid": "13267497879560364974",
+      "place_id": "ChIJLY8QZp7h2UcRrqNx-QafH7g",
+      "kgmid": "/g/11gbfphg3m",
+      "data_id": "0x47d9e19e66108f2d:0xb81f9f06f971a3ae",
+      "title": "Thermal Plumbing and Heating Limited",
+      "address": "5 Louis Cl, Norwich NR6 7BG",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 442301",
+      "rating": 5.0,
+      "website": "http://www.thermalheating.co.uk/",
+      "domain": "thermalheating.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6675243,
+        "longitude": 1.2947108
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Boiler supplier",
+        "Engineer",
+        "Gas installation service",
+        "Gasfitter",
+        "Central Heating Service",
+        "Gas engineer",
+        "Repair service"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 6 pm",
+      "open_hours": {
+        "tuesday": "7 am–6 pm"
+      }
+    },
+    {
+      "position": 15,
+      "ludocid": "14031819533524168531",
+      "place_id": "ChIJHZoXHpXj2UcRU28YoIUJu8I",
+      "kgmid": "/g/11g8wydzx3",
+      "data_id": "0x47d9e3951e179a1d:0xc2bb0985a0186f53",
+      "title": "My Norwich Plumber",
+      "address": "Earlham Rd, Norwich NR4 7HR",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 612126",
+      "rating": 5.0,
+      "website": "http://www.mynorwichplumber.co.uk/",
+      "domain": "mynorwichplumber.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6293637,
+        "longitude": 1.2574931
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber"
+      ],
+      "hours": "Open now"
+    },
+    {
+      "position": 16,
+      "ludocid": "4052120265053771029",
+      "place_id": "ChIJ-9c-CeTg2UcRFRWxeekFPDg",
+      "kgmid": "/g/1hc5c7gq3",
+      "data_id": "0x47d9e0e4093ed7fb:0x383c05e979b11515",
+      "title": "Norfolk Plumbing",
+      "address": "29 Goodhale Rd, Norwich NR5 9AY",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "07950 471139",
+      "rating": 4.4,
+      "gps_coordinates": {
+        "latitude": 52.6383147,
+        "longitude": 1.2290563
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber"
+      ],
+      "open_state": "Open",
+      "hours": "Open 24 hours",
+      "open_hours": {
+        "tuesday": "Open 24 hours"
+      },
+      "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=WYWHb8VvpGKL1AolipExdg&cb_client=search.gws-prod.gps&w=80&h=92&yaw=304.42334&pitch=0&thumbfov=100"
+    },
+    {
+      "position": 17,
+      "ludocid": "3331459986207121874",
+      "place_id": "ChIJ75gd3xHj2UcR0qFN5TS5Oy4",
+      "kgmid": "/g/11nn0gns5m",
+      "data_id": "0x47d9e311df1d98ef:0x2e3bb934e54da1d2",
+      "title": "Robin Plumbing",
+      "address": "11 Dugard Ave, Norwich NR1 4NQ",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 552475",
+      "rating": 5.0,
+      "website": "http://www.robinplumbing.co.uk/",
+      "domain": "robinplumbing.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.638766999999994,
+        "longitude": 1.3234313
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Bathroom Renovator",
+        "Boiler supplier",
+        "Gas engineer",
+        "Gas installation service",
+        "Central Heating Service",
+        "Kitchen Renovator"
+      ],
+      "highlights": [
+        "LGBTQ+ friendly"
+      ],
+      "open_state": "Closed",
+      "hours": "Closed · Opens 9 am Mon",
+      "open_hours": {
+        "tuesday": "Closed"
+      },
+      "extensions": [
+        {
+          "title": "Accessibility",
+          "items": [
+            {
+              "title": "Wheelchair-accessible entrance",
+              "value": "No wheelchair-accessible entrance"
+            },
+            {
+              "title": "Wheelchair-accessible seating",
+              "value": "No wheelchair-accessible seating"
+            },
+            {
+              "title": "Wheelchair-accessible toilet",
+              "value": "No wheelchair-accessible toilet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "position": 18,
+      "ludocid": "14696565803513157954",
+      "place_id": "ChIJMUhBLFrh2UcRQhmOiLuw9Ms",
+      "kgmid": "/g/11krrj33jf",
+      "data_id": "0x47d9e15a2c414831:0xcbf4b0bb888e1942",
+      "title": "Express Heat - Emergency Plumber - Norwich",
+      "address": "105a Unthank Rd, Norwich NR2 2PE",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01473 554662",
+      "rating": 5.0,
+      "website": "http://www.ehemergencyplumbernorwich.co.uk/",
+      "domain": "ehemergencyplumbernorwich.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6247406,
+        "longitude": 1.2776243
+      },
+      "type": "Contractor",
+      "types": [
+        "Contractor"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 10 pm",
+      "open_hours": {
+        "tuesday": "7 am–10 pm"
+      },
+      "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=H3z_oECkcwHNmd9oHnQucQ&cb_client=search.gws-prod.gps&w=80&h=92&yaw=293.6679&pitch=0&thumbfov=100"
+    },
+    {
+      "position": 19,
+      "ludocid": "12355851588473081269",
+      "place_id": "ChIJUSIq83zh2UcRtU1iPI7NeKs",
+      "kgmid": "/g/11rx8qlyc4",
+      "data_id": "0x47d9e17cf32a2251:0xab78cd8e3c624db5",
+      "title": "Dr. Plumbing Solutions",
+      "timezone": "Europe/London",
+      "phone": "07477 572521",
+      "rating": 5.0,
+      "website": "https://www.drplumbingsolutions.co.uk/",
+      "domain": "drplumbingsolutions.co.uk",
+      "gps_coordinates": {
+        "latitude": 47.73855,
+        "longitude": 12.5088275
+      },
+      "type": "Plumber",
+      "types": [
+        "Plumber",
+        "Bathroom Renovator",
+        "Boiler manufacturer",
+        "Boiler supplier",
+        "Service establishment",
+        "Gas installation service",
+        "Central Heating Service",
+        "Heating oil supplier",
+        "Hot water system supplier",
+        "HVAC contractor",
+        "Kitchen Renovator"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 5 pm",
+      "open_hours": {
+        "tuesday": "8 am–5 pm"
+      }
+    },
+    {
+      "position": 20,
+      "ludocid": "3112371114053453259",
+      "place_id": "ChIJfaMoZb7j2UcRy8VXxgldMSs",
+      "kgmid": "/g/1tlgx6tm",
+      "data_id": "0x47d9e3be6528a37d:0x2b315d09c657c5cb",
+      "title": "Norfolk Discount Plumbing and Electrical Ltd",
+      "address": "38A Plumstead Rd, Norwich NR1 4HG",
+      "city": "Norwich",
+      "country_code": "GB",
+      "timezone": "Europe/London",
+      "phone": "01603 431549",
+      "rating": 4.9,
+      "website": "http://www.norfolk-discountplumbing.co.uk/",
+      "domain": "norfolk-discountplumbing.co.uk",
+      "gps_coordinates": {
+        "latitude": 52.6335866,
+        "longitude": 1.3170233
+      },
+      "type": "Plumbers' merchant",
+      "types": [
+        "Plumbers' merchant"
+      ],
+      "open_state": "Open",
+      "hours": "Open · Closes 6 pm",
+      "open_hours": {
+        "tuesday": "7:30 am–6 pm"
+      },
+      "extensions": [
+        {
+          "title": "Accessibility",
+          "items": [
+            {
+              "title": "Wheelchair-accessible entrance",
+              "value": "Has wheelchair-accessible entrance"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

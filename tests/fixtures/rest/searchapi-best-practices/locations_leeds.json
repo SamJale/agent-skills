@@ -1,0 +1,35 @@
+[
+  {
+    "google_id": 1006864,
+    "google_parent_id": 20339,
+    "name": "Leeds",
+    "canonical_name": "Leeds,England,United Kingdom",
+    "target_type": "City",
+    "country_code": "GB",
+    "reach": 1770000,
+    "lat": 53.8007554,
+    "lon": -1.5490774
+  },
+  {
+    "google_id": 9060902,
+    "google_parent_id": 20041,
+    "name": "West Leederville",
+    "canonical_name": "West Leederville,Western Australia,Australia",
+    "target_type": "Neighborhood",
+    "country_code": "AU",
+    "reach": 145000,
+    "lat": -31.9387359,
+    "lon": 115.8323508
+  },
+  {
+    "google_id": 1013055,
+    "google_parent_id": 21133,
+    "name": "Leeds",
+    "canonical_name": "Leeds,Alabama,United States",
+    "target_type": "City",
+    "country_code": "US",
+    "reach": 136000,
+    "lat": 33.5481597,
+    "lon": -86.5444288
+  }
+]

@@ -1,0 +1,25 @@
+name: test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python: "3.8"     # no 3.8 builds for Ubuntu 26.04, so pin this one
+            os: ubuntu-24.04
+          - python: "3.12"
+            os: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Lint
+        if: matrix.python == '3.12'
+        run: python build/lint.py
+      - name: Offline tests (no network, no credits)
+        run: python -m unittest discover -s tests -v

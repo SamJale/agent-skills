@@ -1,0 +1,29 @@
+{
+  "name": "searchapi",
+  "displayName": "SearchApi",
+  "version": "1.0.0",
+  "description": "SearchApi for AI agents: live search results as data from 100+ engines (Google, Bing, Maps, Shopping, Flights, News, YouTube, AI answers, ad libraries), lean responses, and a skill to migrate from other SERP APIs.",
+  "author": {
+    "name": "SearchApi",
+    "email": "support@searchapi.io"
+  },
+  "homepage": "https://www.searchapi.io",
+  "repository": "https://github.com/searchapi/agent-skills",
+  "license": "MIT",
+  "logo": "assets/icon.png",
+  "keywords": [
+    "searchapi",
+    "serp-api",
+    "web-search",
+    "google-search",
+    "search-api",
+    "serp",
+    "seo"
+  ],
+  "commands": [
+    "commands/setup.md",
+    "commands/credits.md",
+    "commands/search.md",
+    "commands/migrate.md"
+  ]
+}

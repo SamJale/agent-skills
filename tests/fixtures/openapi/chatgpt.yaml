@@ -1,0 +1,484 @@
+openapi: 3.0.0
+info:
+  title: ChatGPT API
+  description: |
+    Query the logged-out ChatGPT product and get back a structured answer. The API drives the
+    public chatgpt.com conversation flow and returns the assistant's reply as Markdown and typed
+    text blocks, the model that answered, and (when web search is enabled) the cited web reference
+    links. The response follows the shared AI-answer shape (text_blocks / markdown / reference_links
+    / inline_images / cards / response_metadata) used across the AI-answer engine family.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: ChatGPT Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Must be set to chatgpt
+          schema:
+            type: string
+            enum: ["chatgpt"]
+        - name: q
+          in: query
+          required: true
+          description: The prompt to send to ChatGPT.
+          schema:
+            type: string
+            maxLength: 4000
+        - name: web_search
+          in: query
+          required: false
+          description: 'Set to "true" to run a live web search and answer with cited sources (returned in the reference_links array). Only echoed in search_parameters when supplied.'
+          schema:
+            type: string
+            enum: ["true", "false"]
+            default: "false"
+        - name: expand_entities
+          in: query
+          required: false
+          description: 'Set to "true" to expand each knowledge-entity card in the answer into a rich detail card (description, sections, related entities, inline images and reference links), returned under cards[].details. Adds latency. Only echoed in search_parameters when supplied.'
+          schema:
+            type: string
+            enum: ["true", "false"]
+            default: "false"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      required:
+        - search_metadata
+        - search_parameters
+        - markdown
+        - text_blocks
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        text_blocks:
+          type: array
+          description: The answer split into typed blocks (paragraph, header, unordered_list, ordered_list, table, code_blocks). Each block carries its prose in `answer` (or its entries in `items` as nested paragraph blocks, a table in `table`, or a code body in `code`) plus best-effort `reference_indexes` into reference_links. The AI-answer family's shared block shape.
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        markdown:
+          type: string
+          description: The assistant's full reply as Markdown, with inline citation markers resolved to plain text.
+        reference_links:
+          type: array
+          description: Cited web reference links, the sources the answer actually cites inline. Present whenever the answer cites live web sources; ChatGPT also searches on its own initiative, so these can appear without web_search=true.
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+        citations:
+          type: array
+          description: Inline citations linking character positions in the markdown answer to the reference_links that back them, present only when the answer cites web sources. Character-precise, strictly richer than the block-level reference_indexes on text_blocks.
+          items:
+            $ref: '#/components/schemas/Citation'
+        inline_images:
+          type: array
+          description: Image carousel ChatGPT attaches to entity-style answers, present only when the answer includes one.
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        web_results:
+          type: array
+          description: The full ranked set of pages ChatGPT retrieved for the search turn, not just the ones it went on to cite. Present when ChatGPT reports its retrieved set; a search turn can cite sources without one, so read response_metadata.is_web_search_performed to tell whether a search ran. Complements reference_links; a result carrying a ref_id can be joined to the citations that point at it.
+          items:
+            $ref: '#/components/schemas/WebResult'
+        cards:
+          type: array
+          description: Structured cards attached to the answer, present only when the answer carries them. Each card leads with a `type` discriminator. Knowledge-entity cards (people, places, organizations) referenced by an entity-style answer are normalized to the knowledge_entity schema; ChatGPT-rendered genui widgets (e.g. a stock_chart price chart, a weather forecast widget) surface as RawCard entries.
+          items:
+            $ref: '#/components/schemas/AiAnswerCard'
+        search_queries:
+          type: array
+          description: The queries ChatGPT ran against the live web, in order, present whenever a web search was performed, including searches ChatGPT initiated itself.
+          items:
+            type: string
+        response_metadata:
+          $ref: '#/components/schemas/ResponseMetadata'
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Upstream URL used for this search
+        html_url:
+          type: string
+          description: URL to view the raw event stream
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: The prompt sent to ChatGPT
+        web_search:
+          type: boolean
+          description: Whether a live web search was requested
+        expand_entities:
+          type: boolean
+          description: Whether entity detail cards were requested
+    TextBlock:
+      type: object
+      required: [type]
+      properties:
+        type:
+          type: string
+          enum: ["header", "paragraph", "unordered_list", "ordered_list", "table", "code_blocks"]
+          description: The block kind.
+        answer:
+          type: string
+          description: The block's prose text. Absent on list blocks (which carry `items`), table blocks (which carry `table`) and code_blocks (which carry `code`).
+        items:
+          type: array
+          description: 'The list entries as nested text blocks (each `{type: "paragraph", answer, reference_indexes?}`), present on unordered_list / ordered_list blocks.'
+          items:
+            $ref: '#/components/schemas/TextBlock'
+        table:
+          type: object
+          required: [headers, rows]
+          description: Structured table content, present on table blocks.
+          properties:
+            headers:
+              type: array
+              description: The table's header cells, in column order.
+              items:
+                type: string
+            rows:
+              type: array
+              description: The table's body rows, each an array of cell strings in column order.
+              items:
+                type: array
+                items:
+                  type: string
+        language:
+          type: string
+          description: Programming language of a code_blocks block, when the fence declared one.
+        code:
+          type: string
+          description: The raw code body of a code_blocks block, indentation and newlines preserved. The AI-answer family's shared key for code content.
+        reference_indexes:
+          type: array
+          description: Best-effort 0-based positions into reference_links of the sources backing this block, derived from the character-precise citations. On list blocks this is the union of the per-item attributions.
+          items:
+            type: integer
+    ReferenceLink:
+      type: object
+      required: [index, link]
+      properties:
+        index:
+          type: integer
+          description: 0-based position of this reference link within its own array. At the top level it is the target of citations[].source_indexes and text_blocks[].reference_indexes.
+        title:
+          type: string
+          description: Title of the cited page
+        link:
+          type: string
+          description: URL of the cited page (tracking parameters stripped)
+        source:
+          type: string
+          description: Attribution / publisher of the page
+        snippet:
+          type: string
+          description: Excerpt summarizing the cited page (present for grouped web-search citations)
+        date:
+          type: string
+          format: date-time
+          description: Publish date of the cited page in ISO 8601 (when ChatGPT reports one)
+        ref_id:
+          type: string
+          description: The citation reference id (e.g. "turn0news9") the answer's inline citations use to point at this reference link.
+    WebResult:
+      type: object
+      required: [position, link]
+      properties:
+        position:
+          type: integer
+          description: 1-based rank of this result within the retrieved set.
+        title:
+          type: string
+          description: Title of the page
+        link:
+          type: string
+          description: URL of the page (tracking parameters stripped)
+        source:
+          type: string
+          description: Attribution / publisher of the page
+        snippet:
+          type: string
+          description: Excerpt summarizing the page
+        date:
+          type: string
+          format: date-time
+          description: Publish date of the page in ISO 8601 (when ChatGPT reports one)
+        ref_id:
+          type: string
+          description: The citation reference id (e.g. "turn0search0") shared with reference_links and the answer's inline citations, when this result was cited.
+    Citation:
+      type: object
+      required: [index, source_indexes]
+      properties:
+        index:
+          type: integer
+          description: Character offset into the markdown answer marking the end of the claim these sources back.
+        source_indexes:
+          type: array
+          description: Zero-based positions into the reference_links array of the sources cited at this point.
+          items:
+            type: integer
+    InlineImage:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the image
+        link:
+          type: string
+          description: Source page/image URL (tracking parameters stripped)
+        original:
+          type: string
+          description: Full-size image URL on ChatGPT's image CDN
+        thumbnail:
+          type: string
+          description: Thumbnail image URL on ChatGPT's image CDN
+        width:
+          type: integer
+          description: Width of the original image in pixels
+        height:
+          type: integer
+          description: Height of the original image in pixels
+        query:
+          type: string
+          description: The image search query that surfaced this image
+    # Cards union copied from public/openapi/shared/ai_answer_components.yaml (issue #5427):
+    # branches are pairwise disjoint so strict oneOf validation passes; a permissive generic
+    # Card branch would make a known-typed instance match two branches and FAIL. Keep in sync there.
+    AiAnswerCard:
+      description: >
+        A structured card rendered alongside the AI answer. Known types are normalized to one
+        canonical schema each; unknown provider types fall back to RawCard with the native
+        payload preserved under `raw`.
+      oneOf:
+        - $ref: '#/components/schemas/KnowledgeEntityCard'
+        - $ref: '#/components/schemas/RawCard'
+      # NO OAS `discriminator` here on purpose. OAS 3.0 resolves an unmapped discriminator value as
+      # an implicit *schema name*, so `stock_chart` would look for a schema of that name, find none,
+      # and fail, making the RawCard fallback unreachable for the very types it exists for.
+      # The branches are pairwise disjoint, so plain oneOf already resolves them unambiguously.
+    KnowledgeEntityCard:
+      type: object
+      required: [type, name]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum: ["knowledge_entity"]
+          description: The card kind. Always "knowledge_entity".
+        name:
+          type: string
+          description: The entity's name (e.g. "France", "Eiffel Tower")
+        category:
+          type: string
+          description: The entity type (e.g. "country", "city", "point_of_interest")
+        disambiguation:
+          type: string
+          description: A short qualifier distinguishing the entity (e.g. "Capital of France")
+        id:
+          type: string
+          description: ChatGPT's internal identifier for the entity
+        details:
+          $ref: '#/components/schemas/CardDetails'
+    RawCard:
+      type: object
+      description: >
+        Structural fallback for provider card types without a canonical schema yet. The native
+        payload is preserved unflattened under `raw`. For ChatGPT these are genui widgets served
+        with the answer (e.g. "stock_chart" carrying the full price series across timeframes,
+        "weather_widget_v3_with_source" carrying current conditions plus hourly/daily forecasts).
+      required: [type, raw]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          description: Provider card type (singular snake_case), never a known canonical type. For genui widgets this is the vendor widget name, suffixed with `_widget` if it would otherwise collide verbatim with a canonical card type.
+          not:
+            enum: ["weather", "finance", "knowledge_entity"]
+        raw:
+          type: object
+          description: Provider-native card payload, preserved as-is; never empty. For genui widgets this is the widget's data state (the values its rendered UI binds to).
+          # `required: [type, raw]` only catches a MISSING key — `raw: {}` satisfies it and would ship
+          # a schema-valid but information-free card. Emit-side trap: `{type:, raw:}.compact_blank`
+          # strips an empty `raw` and produces exactly that rejected shape.
+          minProperties: 1
+    CardDetails:
+      type: object
+      description: The rich detail card behind a knowledge-entity card, present only when expand_entities ran and the card was fetched.
+      properties:
+        description:
+          type: string
+          description: The lead summary paragraph of the entity card.
+        sections:
+          type: array
+          description: Titled prose sections of the card (e.g. "History and Construction", "Visitor Experience").
+          items:
+            $ref: '#/components/schemas/CardSection'
+        related_entities:
+          type: array
+          description: The card's "Key Areas" / "Nearby Landmarks" carousels.
+          items:
+            $ref: '#/components/schemas/RelatedEntity'
+        inline_images:
+          type: array
+          description: The card's image carousel.
+          items:
+            $ref: '#/components/schemas/InlineImage'
+        reference_links:
+          type: array
+          description: Web reference links the card cites (present when the card ran a web search).
+          items:
+            $ref: '#/components/schemas/ReferenceLink'
+        cards:
+          type: array
+          description: Cards nested in the card prose, inline knowledge-entity cards (people, events, places) plus any genui widgets the detail card served (RawCard shape). entity_thumbnail_list carousels surface as related_entities, never here.
+          items:
+            $ref: '#/components/schemas/AiAnswerCard'
+    CardSection:
+      type: object
+      required: [title, text]
+      properties:
+        title:
+          type: string
+          description: The section heading.
+        text:
+          type: string
+          description: The section body text.
+    RelatedEntity:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+          description: The related entity's name (e.g. "Summit", "Seine River").
+        category:
+          type: string
+          description: The related entity type, when ChatGPT provides one.
+        disambiguation:
+          type: string
+          description: A short qualifier distinguishing the related entity.
+        subtitle:
+          type: string
+          description: A short label (Key Areas entries, e.g. "Top Level").
+        description:
+          type: string
+          description: A short description (Nearby Landmarks entries).
+        query:
+          type: string
+          description: The click-through search query ChatGPT ties to this related entity (e.g. "Seine River").
+        thumbnail:
+          type: string
+          description: Thumbnail image URL on ChatGPT's image CDN, when present.
+    ResponseMetadata:
+      type: object
+      description: The conversation's identity fields grouped under one object.
+      properties:
+        model:
+          type: string
+          description: The model slug that produced the answer (the anonymous endpoint resolves to a guest model).
+        conversation_id:
+          type: string
+          description: The server-assigned conversation id.
+        message_id:
+          type: string
+          description: The id of the assistant's reply message.
+        is_web_search_performed:
+          type: boolean
+          description: Whether ChatGPT actually ran a live web search for this turn. Always present. ChatGPT decides this itself, so it can be true even when web_search was not requested.
+        is_truncated:
+          type: boolean
+          description: Whether the answer was cut off before ChatGPT finished it.
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

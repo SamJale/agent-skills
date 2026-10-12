@@ -1,0 +1,732 @@
+{
+  "search_metadata": {
+    "id": "search_rpB8WlvR38SqA67JGkXOyEn1",
+    "status": "Success",
+    "created_at": "2026-06-16T13:01:56Z",
+    "request_time_taken": 4.75,
+    "parsing_time_taken": 0.2,
+    "total_time_taken": 4.96,
+    "request_url": "https://www.google.com/search?q=hello&oq=hello&gl=us&hl=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_rpB8WlvR38SqA67JGkXOyEn1.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_rpB8WlvR38SqA67JGkXOyEn1"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "hello",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "hello",
+    "total_results": 142,
+    "time_taken_displayed": 0.23,
+    "detected_location": "92595, California",
+    "has_no_results_for": false
+  },
+  "knowledge_graph": {
+    "kgmid": "/g/11bwnh780b",
+    "knowledge_graph_type": "Music",
+    "title": "Hello",
+    "type": "Song by Adele ‧ 2015",
+    "artist": "Adele",
+    "artist_links": [
+      {
+        "text": "Adele",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Adele&si=AL3DRZGDMkmBg1SB5TH8o8Xeh03tgmwpgZCgiYi5BFB_ELNOTHElPqUe7iTtQ6subed6iEYCmBFg7dCMunU1naOlz0DFCWhN9no_WaK-wwuZwniGPwkRKBQZVvfTYgikQC-v0GTBHP3x5u4K4osepomX8Og-IAeM3ANcsUKm53XgAkfYg7tO3m4pkw0ChSzVIEtVX5QwlwIK&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQmxN6BAgWEAI"
+      }
+    ],
+    "released": "2015",
+    "album": "25",
+    "album_links": [
+      {
+        "text": "25",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Adele+25&si=AL3DRZELanY_V96Y0q8q1FLKlfOvBdnHgF7jIt9ftVkN5kp-lKYjJQu7BvCOgs4T-w0_QQz9tvs_5tq4FIDN4c3TbcaTZMsGY0SuK06AINPBDhex01d0TKJCAGbKR2hrRmLK4pu6e_0uLyMYH0ZmNNMpFtaVHSKXA4_RxgoDaosINOFi0IKFyNrPR-Vl7tycONWREWakrIqh3JQgWRwJj9uTCDb7sDALeA%3D%3D&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQmxN6BAgTEAI"
+      }
+    ],
+    "genre": "Soul music",
+    "genre_links": [
+      {
+        "text": "Soul music",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=&si=AL3DRZHmwLjWhgnaPB3UTu10R6S5qNLXiQiKMeezfKyB1FMsRiZ_AXjx-yCOcDzE4oj9sC54IZt4zgc6JKWPlXGyQZw12Ch9Bh6o3kabMWPVnX-rrMuILbabl8f-3xP8WHMuHxe4VqKrkJy-zLVxvQpxU6hGyM7qvKFgAtR1cLYLFE8rX73KyiQwzHPhWhJbr6tWJ-x4w569&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQmxN6BAghEAI"
+      }
+    ],
+    "people_also_search_for": [
+      {
+        "name": "Someone Like You",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&si=AL3DRZHnaVpOpV17tK9mg6av50PE-kRfFRFUaAr9T0Uxmp5elWUYdLir9-Godeur3_Ju2chSKtgkQ4FpVyWe_x3R_5pAsAHhk1Ynbvw3CUDn3AHON_7j9GrOz3CrJNSyEvPia_-34vW2lOFFPOx_RrEIa4ZIODoUUB5J8fJYRqslvaW-fREo6X2mQatJmh5S-4KdD_dE3d_2X5Dj_ZLXnaTjPF_FBjuotSz79jAiV-uCxfa4gin9K8g%3D&q=adele+someone+like+you&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQs9oBKAB6BAgOEAY",
+        "image": "data:image/jpeg;base64,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"
+      },
+      {
+        "name": "Set Fire to the Rain",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLnat8P2Xmzk7gz9QGk-61X_woSuJk1pS2JJM16GWJZld95RqN2RATTSBAQVtMKjm_Pjs1ngpKsucZ1trF7KjQnJZrQsSMAwbO1r1oi0xIVbImjWMrte1tZKX3wa9Saik20duLyInjQRlUIxrEybtmxXOHUD08mtpZbI3IYjOxE5_nPfxPbkOmDAMe8fF_LXRodabIJLM%3D&q=adele+set+fire+to+the+rain&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQs9oBKAB6BAgOEAo",
+        "image": "data:image/jpeg;base64,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"
+      },
+      {
+        "name": "Skyfall",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&si=AL3DRZHnaVpOpV17tK9mg6av50PE-kRfFRFUaAr9T0Uxmp5elXuhBHyV9Hb8ncVdOPqXvgDsjqSG1HztQvYltYCmf7KzHCdKu3QfUj_VkWzLct6pmb8h0yoRRvowII4lkXriDCOm8VUcH4Q3FnmmPyNqVzgZzaUkvmNGjHYadrNRUKcP_PIb-3tM1X9Uxep7X9xpWXj66C1MQLH5P7AIZBp3Zwkg-XVlJw%3D%3D&q=adele+skyfall&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQs9oBKAB6BAgOEA4",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAE4ATgMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgAEAQIDB//EADkQAAIBAwICBggDCAMAAAAAAAECAwAEEQUhEjEGEyJBUZEUMnGBocHR8CNhsTNSU2JykqLhFSVC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBQAE/8QAIxEAAgMAAQQBBQAAAAAAAAAAAAECAxESBCExQRMFFCIykf/aAAwDAQACEQMRAD8A8NqUSggidZZEjDrnsrncDzrtDFY9UA5j4lGCW2JPsNHBXJID1KJILRQEl6vjA3I5GilhY6c47L2zudzG8n6Hu+NdgsrFHyhZqUz36aZaxssloiScuEg8X6/GqltJp8gCzWLAkbMvf7q7AK3VuAOpTQdOtfTbcCAcEisvCQR2hvuO7bNFI9G0/GWtY8e+jxZOXUwjgh1KYukemwW1tHPBEIiWIKjvH2PjS9QawtXNTjyRajHWShpHPFgkkjIwPHBrlJKJCCsao38mw8qy8pA4I+JBjhYZ505dEdGhjto7+ZQ0rjMef/I8aKW9hLro0x5MD6f0X1C9CyXH4CH+J6xHs+tF06G2wXDTszeI2pnrYcqqq0ZE+uuk+zwRtQ6PXtgFkgb0mGM56tu4Vcs5be+jivI8EwsEdGUZQHb6HPgDTaQCMGkXWLVtC1gypk2d0GDL/KfWX3ZyPdQlHj3L0Xu/8ZeRgv4AWtpj66Trv7cr86sMuEqv15n020lPrSiJvfkGrO5WiiEtxJgrXofS4rW2xvNMASOfCASaA61pAgKvaocE4KfOmePEuosx5W6cI/qbc+QA/uqTqrHfxpWt7npqtdeI88/IV63DEsEMcKDCxqFA/IV5JXrFlcLd2kNwhysiBqFfkP1LeMTtWaxUqxkGwoH0wt1n0fJ5xyoQfaeH50boT0jkzaR2646yVwVBPhy/y4R76EvBfpt+aOAu19JfTbEQhd4gcnfh4QBy8q6SXd5awsjxGR1GzINj9K7RXVrbIsayDgRRHHk8wO/3/KsSX9u7gFl6tNyc7E9w+flSHubbf69iaUlwiP6SoDE8RPiT9OVZuX4XrpBeQSPwiRcnkM86Ha7ex2fAWyzOdgPD7xXPwLFOVngTaaeiWsi0HodyfwGOUb9w/SlarmngtKOHJIOSo8PEVKLxmldXGyDjI9SUhlDKQVO4I5GpSZ6bLavwWU5AHMDl5GsXWt6sFwkoAPJlRd/hVuZkfZTb7McLieO3iMkrYUeZ9lKc81zfaj18oMcZ7Ea53C/ed/z9lVLW/uBN1l2xlz+9viiMRe9kBVxEvuLfQfGg3peun4Nb/p3l9GUCN4owRjtFAQn+6n/WJ+zWDYYzhauqI7eHgjGFHickn8/Gt7eJW/EMajwwBRwk5rPZwtEU9tYwF7jw4zVHVXto3WS5CDHZBYA/fKi9zLHBC0jsFUDcnkKQdYvzfXRZc9UuyA/rSyeIt00XZLl6KFbRuY3DqcEcq0qVI1AmmpqB2ojn21t/ykffE3nQqpR1icIhM6lGR+zbzrWPUuqYOisGHfmh1Su1h4RGKPpLsOtgLY8GrsOlYVTi2JPd26V6lHkyT6ep+i9qWqXOouDO+EHqouwFUs1ipSllFRWI/9k="
+      },
+      {
+        "name": "Rolling in the Deep",
+        "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLnR0378-Xuaafy79M5lL6a2SbZ2DAe23NruyTtWDa-mrITjMs1U3-ajyhqQMCovkJo9idrJz_qFX0z6QwOW70XZEWi2w2E1QpE4pzAZBbHaAUAVlDbo-6EMkiPnbTTDlIjsxGOC9DqHWmPKMRmdR1fFogT5JMfNAgep5hO-M8_U6sVd8u6htE5lgrbF-DAukb6jm1oEk%3D&q=adele+rolling+in+the+deep&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQs9oBKAB6BAgOEBI",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAE4ATgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAEDBAcCBv/EADcQAAIBAwIEAwYDBwUAAAAAAAECAwAEEQUhBhIxQRNRYSIycYGRsQeh8RVSgsLR4fAUIzRCU//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwDDaVKlQKlSpUCqSFGduVBlj0HnUdWdOlEF9byv7qSKW+Gd6DQtP4XiFvbtJysk0AQg9Gk2I37ZHMv8VUNc05NPsxIzKfBjEa4wDgH3iPQlP0r3Cad+0tLjtYbn/aUZjmjHUdv8+dAda4JurhJTJqZd29olh1P6E/X4VpHhtQvI7vTFjjXEkBUZ/eDEnHy2oPJH4T8rncqDt6jNWLi0nsLhlfHMh+xqoxyxJrKuaVKlQKlSpUCp169cedNXSHDb9KDdPw8iEfDdvhg2QNx8BVrX7jwYnNDOFp47bgSwlS8jtVZWzPKdgeZh3+HegUWuTa2l7AZY5JLRS5ZBtIgO5Bzj7VpHj+JJOe4dse8aAmier6kdQfMUfLGvpQvNZU1XDpt0t8bKSMRzheZldwoUcvNuc4G29SaJDHJfCS4MYggUyyeJ7pA6A7HYsVXoetFo4XvFjlS5S9uUjnikMQcs3NHIydVGTnnHyWgD/sm7MkaIscgkfkV45UZebyJBwPnTPpk6qSr28vKpciKdHIUDJJwaL8O2txZXRF7FLF45SOOJwVaRudW2B9ARnHfHeubGwlWScQ6ZfwF7WZQJstznl2A9gevnQB7Sylukd42iREIDNLKqDJzgbn0P0qGeIwStGzIxXqY3DD5EbUYs9OuE0+6iutNvnYywsI41KNjEgzup27dKE3cTQXDxtBLBjpHN7yj12H2oNf8Aw4nS84Jit2VXEEskTKwyNzzfzV1r1rpWj8J6vd6baxQSSxmBnjXGSSBj86AfhFqKgajpjndgs8a+ePZb7rRH8RpoU0BbTwJYgX5mIAOSASOh6ZIyT696oypASDhsUxwp2OaYHamqCSCXwWJKK4Ixg1L/AKlAwYRe2O5I9fT1qrSoLJuY+bIgXpgg7+X9Pzp1u8HeNWAJxntVWlQXI7wIuPCycYzn0x5fOq80niuXIAz2FR1aGnXxi8UWdwYv3/CbH1xQd6Xfz6XeQ31o3LPC2VJ6HzB9CMitK4v0y41dIbqy0Z7gy26v46SLtkZ5cZyfpWU+lbpwperNwnp0rOAEtwrFjjHLsc/SrBjl/omo6fGZL22a3XycjP0obXqOOtfTW9RCW3/FgyEb/wBD3b4eX968/b8qgllLGoK9KnrtQAMkbUFzTdKkvnHM4ij7uRk/IUZurPSLGIRLA08p/wC8jn7DAoPDf3DOkMBCZPKM1xeTuk7KXZ2GxZu5qg/w7q2naXcP4ljG4Jzzjd1+Ge30r263Vrq1mLmylDxnYgdj6jtWOFiWJ7mjPCupTWGpKqE+HLs69jSCxxRpnhzvcxLgZ9sAfnRhtUhfgTU7W0lwUuFHKDvyMwP06ii+oW6SqWKjcVnmpQGzuZIo2IR+2e2elKKVSMSoGDUajLAedSSn2+mKg//Z"
+      }
+    ],
+    "people_also_search_for_link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Adele+Hello&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwqz8swtzBIUkLlagkGZ6aklidWFvulVpQEl6QWFP9iFAtIzS_ISVVIzCnOVyhOTSxKzlBIyy9axMrtmJIKFPdIzcnJv8UmybBU-Tb_s9CMhbEVx54oz3r3fFpTn9WKVNM8AKdffdl2AAAA&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQzO0BKAR6BAgOEBQ"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Hello - song and lyrics by Adele",
+      "link": "https://open.spotify.com/track/62PaSfnXSMyLshYJrlTuL3",
+      "source": "Spotify",
+      "domain": "open.spotify.com",
+      "displayed_link": "https://open.spotify.com › track",
+      "snippet": "Lyrics. Hello, it's me. I was wondering if after all these years you'd like to meet. To go over everything. They say that time's supposed to heal ya, ...",
+      "snippet_highlighted_words": [
+        "Lyrics"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Hello (Adele song)",
+      "link": "https://en.wikipedia.org/wiki/Hello_(Adele_song)",
+      "source": "Wikipedia",
+      "domain": "en.wikipedia.org",
+      "displayed_link": "https://en.wikipedia.org › wiki › Hello_(Adele_song)",
+      "snippet": "\"Hello\" is a song recorded by British singer-songwriter Adele, released on 23 October 2015 by XL Recordings as the lead single from her third studio album, 25 ...",
+      "snippet_highlighted_words": [
+        "Hello"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAnklEQVR4AeTNIQiDQABG4b+u17X1aF6PK3YEO9iMJqPVau82y4FgMezS0oVLhqsHtrcqeqzDXv3CEz/6L4yTtZM3dnHmPTtjzXZAXKYVo4agkU2GI2Lloc6JDez1+flswMu1EQZ3xlE7lK8eKDkjtwE+crBMV+wesKmCiisGGepZIfQJpMj9SNb2MYWrChjVkULuCyCfRvsdmBieyQQAsoDk/9ryhFMAAAAASUVORK5CYII="
+    },
+    {
+      "position": 3,
+      "title": "Lionel Richie - Hello (Official Music Video)",
+      "link": "https://www.youtube.com/watch?v=mHONNcZbwDY",
+      "source": "YouTube · lionelrichie",
+      "domain": "www.youtube.com",
+      "displayed_link": "133.1M+ views  ·  5 years ago",
+      "snippet": "REMASTERED IN HD! Explore the music of Lionel Richie: https://lnk.to/LionelBestOf Watch more Lionel videos: https://lnk.to/LionelVevo Get ...",
+      "snippet_highlighted_words": [
+        "REMASTERED IN HD"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+      "video": {
+        "link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRBeVehjFhwfRNCHhLEaS6DKqZ3am5J_e0AUQ",
+        "length": "5:27"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeoHO05igGdatR41S25MIhWxeBs69QTU-n0pNHFo6ODjkFAOCZI8BtSA&s"
+    },
+    {
+      "position": 4,
+      "title": "from YouTube",
+      "link": "https://music.youtube.com/search?q=hello",
+      "source": "YouTube Music",
+      "domain": "music.youtube.com",
+      "displayed_link": "https://music.youtube.com › search › q=hello",
+      "snippet": "Hello (Official Music Video) · Lionel Richie · 133M views ; Adele - Hello · Conor Maynard · 83M views ; Hello (Reggae Cover) (feat. Conkarah) · Baka Solomon & Rosie ...",
+      "snippet_highlighted_words": [
+        "Hello (Official Music Video) · Lionel Richie"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAllBMVEUAAAD/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/ADP/BDb/F0X/GUf/fZf/zNb/+/z/+vv/AzX/fJb/9ff/rb3/UXT/DT3/u8n/0Nn/L1n/tMP/Cjv/dpH/Bjj/IE3/////2+L/THD/t8X/KFP/jaT/Dz//6e3/ZIP/AjX/J1L/GEaLdxWzAAAAEXRSTlMAE2Ok0vP/Lqf6DZf+K9s48eoeiQYAAAEFSURBVHgBhZMDgsRQDEB/ldq2u9b9D7fIL1d5M3UMdiCIkqwAKLIkCuwnqqbDjq6p7IphWnDBMg12wnbgB47NdlwPfsFzd/3jux8E/iGx2jA2+2EUJ2maxFG4eeFxmIBkeVFWAUBQlUWeAWJifjz+umk7WOnapua5fGWrcf2mH2Bn6BtuQ2NM4PXJW/y+S7Q5r5jARB5f0X2dx2n3UvBIRSbhNSq/zvNycwsrZYQXicl4jSsusCx394BUMV5kpmB9kmATWJKHR/gkSLBiCgN8SoELIE/PLwCQog7QAqSLH0G+XoOk0zwX6u23QpGlJptFt5scGHrkyKGlx55eHGr1iOUl1v8DtTono2oD9lEAAAAASUVORK5CYII="
+    },
+    {
+      "position": 5,
+      "title": "Hello",
+      "link": "https://en.wikipedia.org/wiki/Hello",
+      "source": "Wikipedia",
+      "domain": "en.wikipedia.org",
+      "displayed_link": "https://en.wikipedia.org › wiki › Hello",
+      "snippet": "Hello is a salutation or greeting in the English language. It is first attested in writing from 1826. The greeting \"Hello\" became associated with telephones ...",
+      "snippet_highlighted_words": [
+        "a salutation or greeting in the English language"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAnklEQVR4AeTNIQiDQABG4b+u17X1aF6PK3YEO9iMJqPVau82y4FgMezS0oVLhqsHtrcqeqzDXv3CEz/6L4yTtZM3dnHmPTtjzXZAXKYVo4agkU2GI2Lloc6JDez1+flswMu1EQZ3xlE7lK8eKDkjtwE+crBMV+wesKmCiisGGepZIfQJpMj9SNb2MYWrChjVkULuCyCfRvsdmBieyQQAsoDk/9ryhFMAAAAASUVORK5CYII="
+    },
+    {
+      "position": 6,
+      "title": "HELLO Definition & Meaning",
+      "link": "https://www.merriam-webster.com/dictionary/hello",
+      "source": "Merriam-Webster",
+      "domain": "www.merriam-webster.com",
+      "displayed_link": "https://www.merriam-webster.com › dictionary › hello",
+      "snippet": ": an expression or gesture of greeting used interjectionally in greeting, in answering the telephone, or to express surprise",
+      "snippet_highlighted_words": [
+        "an expression or gesture of greeting"
+      ],
+      "date": "May 27, 2026",
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAolBMVEX////65+jqmpzcRUrWAADUAADcQUbpk5X77O3gYGTke37zxsf++vr0y8zmhYjfV1vwtrjso6XurrDrnqD54OHXBRT+9vfhZWn76uvjdXj4+vzn7PPx9Pjp9PreTlKdr8oAKYO2w9cAOYpXealFbaOvvtTX3+oARY773NvbOD4nWpkzYJwAHX+QpMO+ytt8lbvR2eZgf60PT5N+m8AAFHzZKjAX17AGAAABGUlEQVR4Aa3S1WKDMABA0VtGitY9UDdc1///tFk143E7SNzDP2hpb7oQetto8ZtpCdsxXdfsdPWeWkxfGDwMxJAXIzFWupkYr+2mKNzJo62ptrtmtbiaGTQMe9dwLlya9GtvowWSHxLpeXi+73tL49rdymG92cJ6t8XfHzhuTv55G4TXDuYQxRCfgVPENvE44Op8E1O8ND5l67MEzv4+X2+PIK6FLsU6y0sqr96f0jr34r0Ece8227LLiQvg9F5QlXx3e5tQviY/yTgFqKDO4DYhzZZZhuSUZRLwQQKacdsEaJrcttTSaOivlF1WTJ9Zfd1FdRnyoE1Mpd2lq16TwWtiiGLe041gCm6gTVat5tU02t9XMzTG/N0nS8QVm4bIwcgAAAAASUVORK5CYII="
+    },
+    {
+      "position": 7,
+      "title": "Adele – Hello Lyrics",
+      "link": "https://genius.com/Adele-hello-lyrics",
+      "source": "Genius",
+      "domain": "genius.com",
+      "displayed_link": "https://genius.com › Adele-hello-lyrics",
+      "snippet": "The song appears to be about a break-up from long ago, but the song can also be interpreted as Adele's attempt at reconciliation with her former self.",
+      "snippet_highlighted_words": [
+        "about a break-up from long ago"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAbFBMVEX//2T//2Xy8l///2Y5ORYAAADq6lyyskaGhjX//2eSkjm3t0iqqkO9vUpXVyL//2gKCgTY2FXe3ldqairT01NlZSjPz1E2NhXt7V15eS/m5loxMROWljvExE2MjDcbGwooKBAUFAienj5aWiO+wL5dAAAA1ElEQVR4AcWQRQ4DMQwA7bjTLrvM3P+/sZBIC9LeO0FrgpY/opqGURlCdCEusoGyCUxVbAZfaVnf5gVJllCZWN14Jw2Ym0SZ5aJTFu3lugSWJuoNk98eZZW3cg0bF902sEsSa+UeSovP4ZCn+Nie6yfW3yA/nw7xJxdYt9LWbE2+1uNVfqD3IvHqam2gAQidlDxIi6/g5jKKz4BzPu5qAFfpkQLNYyaZDTbuL+Zf9tUcIBveaBX3pnkQeboMyfcrEq9j61rU/fIsnnVwlTHM8txU/ssHWL8JBy/n/jQAAAAASUVORK5CYII="
+    }
+  ],
+  "inline_images": {
+    "images": [
+      {
+        "title": "Hello! | Kids Greeting Song and Feelings Song | Super Simple Songs",
+        "source": {
+          "name": "YouTube",
+          "link": "https://www.youtube.com/watch?v=tVlcKp3bWH8"
+        },
+        "original": {
+          "link": "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
+          "height": 720,
+          "width": 1280,
+          "size": "133KB"
+        },
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyqo4WrRTasO8_WVxTElc4q532Y32rkMER0t3MSUsV&s"
+      },
+      {
+        "title": "Hello SVG, Hello PNG, Hellow DXF , Hello Cut File, Hand Lettered Hello,  Calligraphy Hello, Hello Clipart",
+        "source": {
+          "name": "Etsy",
+          "link": "https://www.etsy.com/listing/1215176242/hello-svg-hello-png-hellow-dxf-hello-cut"
+        },
+        "original": {
+          "link": "https://i.etsystatic.com/29488153/r/il/e0f22b/3860244894/il_570xN.3860244894_p9az.jpg",
+          "height": 428,
+          "width": 570,
+          "size": "10KB"
+        },
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-63AOL8fBuvttA6RuUKnwWAxRdiWf4xspRs1USTtgLv9YnzCWmZ3Rdno&s"
+      },
+      {
+        "title": "Hello Kitty | Sanrio Wiki | Fandom",
+        "source": {
+          "name": "Sanrio Wiki - Fandom",
+          "link": "https://sanrio.fandom.com/wiki/Hello_Kitty"
+        },
+        "original": {
+          "link": "https://static.wikia.nocookie.net/sanrio/images/9/9f/Hello_Kitty.jpg/revision/latest?cb=20191128154539",
+          "height": 1200,
+          "width": 1200,
+          "size": "39KB"
+        },
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSetNvBRxhBk-2xFmd78Q-T42i9YZgeLlduqAeJMop3-Qwl4G-3UpVW4ss&s"
+      }
+    ]
+  },
+  "related_questions": [
+    {
+      "is_ai_overview": true,
+      "question": "What does \"hello 👋\" mean?",
+      "error": "Google AI Overview didn't return any results.",
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJSWFJJUjFkUU0zQnRWMFZzZDBkNFprNW5XREExVVZSd05HMHRla1pTVkc1RFJ6SXpOMWRvZFROaWVrRjVWSGRUUjBrNFYyYzRhMFYzY0ZwT1ZEbHZiRVU1UVdSaFQxbEpNV0l6Vlc4d1NWVlJiV2t6YzI5UE5XUTVkeElYVW10cmVHRnhhVlZFWDNFNWExQkpVRFU1UTJvd1VUZ2FJa0ZLUzB4R2JVcHBWVFExTkdwZldrTjJPR3RXVVhSV2NVNUlZamhSYUZKNWRWRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aW96OURpNkl1VkF4WDZIa1FJSFdmb0tQb1FxN2tCS0FCNkJBaEtFQUEiLCJxIjoiV2hhdCBkb2VzIFwiaGVsbG8g8J-Ri1wiIG1lYW4_IiwibGsiOiJHaGwzYUdGMElHUnZaWE1nYUdWc2JHOGc4Si1SaXlCdFpXRnUiLCJxYyI6IkNnVm9aV3hzYnhBQWZSb1BRejgiLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "Why does Gen Z not say hello?",
+      "error": "Google AI Overview didn't return any results.",
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJSWFJJUjFkUU0zQnRWMFZzZDBkNFprNW5XREExVVZSd05HMHRla1pTVkc1RFJ6SXpOMWRvZFROaWVrRjVWSGRUUjBrNFYyYzRhMFYzY0ZwT1ZEbHZiRVU1UVdSaFQxbEpNV0l6Vlc4d1NWVlJiV2t6YzI5UE5XUTVkeElYVW10cmVHRnhhVlZFWDNFNWExQkpVRFU1UTJvd1VUZ2FJa0ZLUzB4R2JVcHBWVFExTkdwZldrTjJPR3RXVVhSV2NVNUlZamhSYUZKNWRWRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aW96OURpNkl1VkF4WDZIa1FJSFdmb0tQb1FxN2tCS0FCNkJBaE1FQUEiLCJxIjoiV2h5IGRvZXMgR2VuIFogbm90IHNheSBoZWxsbz8iLCJsayI6IkdocDNhSGtnWkc4Z1oyVnVJSG9nYm05MElITmhlU0JvWld4c2J3IiwicWMiOiJDZ1ZvWld4c2J4QUFmUm9QUXo4IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "What is Adele's real name?",
+      "error": "Google AI Overview didn't return any results.",
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJSWFJJUjFkUU0zQnRWMFZzZDBkNFprNW5XREExVVZSd05HMHRla1pTVkc1RFJ6SXpOMWRvZFROaWVrRjVWSGRUUjBrNFYyYzRhMFYzY0ZwT1ZEbHZiRVU1UVdSaFQxbEpNV0l6Vlc4d1NWVlJiV2t6YzI5UE5XUTVkeElYVW10cmVHRnhhVlZFWDNFNWExQkpVRFU1UTJvd1VUZ2FJa0ZLUzB4R2JVcHBWVFExTkdwZldrTjJPR3RXVVhSV2NVNUlZamhSYUZKNWRWRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aW96OURpNkl1VkF4WDZIa1FJSFdmb0tQb1FxN2tCS0FCNkJBaFRFQUEiLCJxIjoiV2hhdCBpcyBBZGVsZSdzIHJlYWwgbmFtZT8iLCJsayI6IkdobDNhR0YwSUdseklHRmtaV3hsSjNNZ2NtVmhiQ0J1WVcxbCIsInFjIjoiQ2dWb1pXeHNieEFBZlJvUFF6OCIsImdsIjoidXMiLCJobCI6ImVuIn0"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "What is YouTube's most viewed video?",
+      "error": "Google AI Overview didn't return any results.",
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFJSWFJJUjFkUU0zQnRWMFZzZDBkNFprNW5XREExVVZSd05HMHRla1pTVkc1RFJ6SXpOMWRvZFROaWVrRjVWSGRUUjBrNFYyYzRhMFYzY0ZwT1ZEbHZiRVU1UVdSaFQxbEpNV0l6Vlc4d1NWVlJiV2t6YzI5UE5XUTVkeElYVW10cmVHRnhhVlZFWDNFNWExQkpVRFU1UTJvd1VUZ2FJa0ZLUzB4R2JVcHBWVFExTkdwZldrTjJPR3RXVVhSV2NVNUlZamhSYUZKNWRWRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aW96OURpNkl1VkF4WDZIa1FJSFdmb0tQb1FxN2tCS0FCNkJBaGRFQUEiLCJxIjoiV2hhdCBpcyBZb3VUdWJlJ3MgbW9zdCB2aWV3ZWQgdmlkZW8_IiwibGsiOiJHaU4zYUdGMElHbHpJSGx2ZFhSMVltVW5jeUJ0YjNOMElIWnBaWGRsWkNCMmFXUmxidyIsInFjIjoiQ2dWb1pXeHNieEFBZlJvUFF6OCIsImdsIjoidXMiLCJobCI6ImVuIn0"
+    }
+  ],
+  "perspectives": [
+    {
+      "position": 1,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "🎤 Adele Adele became one of the most powerful voices of modern music through raw emotion and timeless songwriting. Known for her soulful vocals and deeply personal ballads, songs like Someone Like You, Rolling in the Deep, and Hello resonated across",
+      "link": "https://www.instagram.com/reel/DWAABgBDIVk/?hl=en",
+      "author": "artistswithoutautotune · Instagram",
+      "source": "Music media outlet",
+      "date": "Mar 17, 2026",
+      "iso_date": "2026-03-17T07:00:00Z",
+      "reactions": "882.8K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrL6m0K5il8Q9bYU_mrxSpcojv8oHOQ52acqFaLqg_uWY_YM55enhHdmGo-w&usqp=CAI&s=10"
+    },
+    {
+      "position": 2,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "Wait for her MIND-BLOWING Vocal Range 😳😳🤯 #singers #adele #hello #cover",
+      "link": "https://www.tiktok.com/@lukesilvamusic/video/7465369832792263968?lang=en",
+      "author": "Luke Silva · TikTok",
+      "source": "Music content creator",
+      "date": "Jan 29, 2025",
+      "iso_date": "2025-01-29T08:00:00Z",
+      "reactions": "8.2M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDe9p-igriejQMfEak43HZWef-hGlHTEB9WOs0gBYqUDI22P98oGlSJDnEaQ&usqp=CAI&s=10"
+    },
+    {
+      "position": 3,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "Wait for her MIND-BLOWING Vocal Range 😳😳🤯 #singers #adele #hello #cover",
+      "link": "https://www.tiktok.com/@lukesilvamusic/video/7465374141995126049",
+      "author": "Luke Silva · TikTok",
+      "source": "Music content creator",
+      "date": "Jan 29, 2025",
+      "iso_date": "2025-01-29T08:00:00Z",
+      "reactions": "4.3M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjLY96WCiegK70WsO9QRTbA2S-_U-p_X1ZuEA_BXlJyawjw_zGtdHLWIhGPQ&usqp=CAI&s=10"
+    },
+    {
+      "position": 4,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "The version we didn't know we needed😍 “Hello” by Adele was released on October 23, 2015, as the lead single from her third studio album 25, marking her highly anticipated return after a four-year hiatus following 21. The song is a soulful piano-driven ballad t",
+      "link": "https://www.instagram.com/reel/DWGcMg8D2KQ/",
+      "author": "vocalisthub · Instagram",
+      "source": "Vocalists & pop music",
+      "date": "Mar 20, 2026",
+      "iso_date": "2026-03-20T07:00:00Z",
+      "reactions": "863.4K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOp6voW3WC5vloYKr1wHFd4SAj_a1g_GghDD1Y6xB2GnR90CB4-0v9xalmogs&usqp=CAI&s=10"
+    },
+    {
+      "position": 5,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "🎤 Adele is known for her powerful, soulful voice and ability to turn personal experiences into universally relatable music. With timeless hits like Someone Like You, Hello, and Rolling in the Deep, she’s built a career on emotion, simplicity, and vocal excellence.",
+      "link": "https://www.instagram.com/reel/DXZyrj8BwYP/?hl=en",
+      "author": "artistswithoutautotune · Instagram",
+      "source": "Music media outlet",
+      "date": "Apr 21, 2026",
+      "iso_date": "2026-04-21T07:00:00Z",
+      "reactions": "113.6K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4t1kPsbg2pJs0rtTheoRZv_cMYaRl95Ww64tzVODWfjh6hWhc60OPfK5qOrg&usqp=CAI&s=10"
+    },
+    {
+      "position": 6,
+      "topic": "Adele's unmatched vocal prowess",
+      "description": "Fans and singers worldwide praise Adele's raw emotion, powerful voice, and timeless songwriting in live performances and viral covers.",
+      "is_ai_overview": true,
+      "title": "GOLDEN BUZZER | Emotional 'HELLO' (Adele) Moves the judges into Tears | johGE Extra | Auditions",
+      "link": "https://www.youtube.com/watch?v=7zKvO_34X6c",
+      "author": "johGE Extra · YouTube",
+      "source": "Worship music enthusiast",
+      "date": "Jun 8, 2025",
+      "iso_date": "2025-06-08T19:17:09Z",
+      "reactions": "1.1M+ views",
+      "thumbnail": "https://img.youtube.com/vi/7zKvO_34X6c/hqdefault.jpg"
+    },
+    {
+      "position": 7,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "Ghost learns how to haunt #comedy #music #parody of Hello by Adele",
+      "link": "https://www.youtube.com/shorts/tDSm6TNk0cY",
+      "author": "Matt Storer · YouTube",
+      "source": "Musical comedy YouTuber",
+      "date": "Mar 27, 2025",
+      "iso_date": "2025-03-27T09:45:04Z",
+      "reactions": "4.6M+ views",
+      "thumbnail": "https://img.youtube.com/vi/tDSm6TNk0cY/hqdefault.jpg"
+    },
+    {
+      "position": 8,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "HILARIOUS Parodies - Hello (from the inside)",
+      "link": "https://www.youtube.com/watch?v=5bgKPtfzWpo",
+      "author": "RoomieOfficial · YouTube",
+      "source": "Singer & songwriter",
+      "date": "Apr 13, 2020",
+      "iso_date": "2020-04-13T16:48:43Z",
+      "reactions": "315.1K+ views",
+      "thumbnail": "https://img.youtube.com/vi/5bgKPtfzWpo/hqdefault.jpg"
+    },
+    {
+      "position": 9,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "Should Lucia forgive me? 😂 i say NO! @luseeyalu #couple #comedy #relationship #parody #couplecomedy og - hello by adele",
+      "link": "https://www.tiktok.com/@jasondchen/video/7213013974785215787?lang=en",
+      "author": "jasondchen · TikTok",
+      "source": "American pop singer",
+      "date": "Mar 21, 2023",
+      "iso_date": "2023-03-21T07:00:00Z",
+      "reactions": "6.9M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK996FyT7JwAkxCkVmtAhzY0Oul_Ku_dOaMa3HfZ-RWP5oyrPeN305hPla9Wg&usqp=CAI&s=10"
+    },
+    {
+      "position": 10,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "HELLO 🤖 IT’S 🤖 ME 🤖 CREWMATE 🤖 #helloitsmecrewmate #crewmate #voiceimpressions #foryoupage",
+      "link": "https://www.tiktok.com/@imfaithelizabeth/video/7638738043863600414",
+      "author": "imfaithelizabeth · TikTok",
+      "source": "TikTok star",
+      "date": "1 month ago",
+      "iso_date": "2026-05-11T07:00:00Z",
+      "reactions": "5.4M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXQDeg67ioI7WdaigheuWy62LOcubEQd7zTmBvpXMw-_y7jffkdaVgchQ244c&usqp=CAI&s=10"
+    },
+    {
+      "position": 11,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "Is that Adele? #impracticaljokers #impracticaljokersclips #yourcomedycave",
+      "link": "https://www.tiktok.com/@your.comedy.cave/video/7196051875551038762",
+      "author": "your.comedy.cave · TikTok",
+      "source": "Comedy enthusiast",
+      "date": "Feb 3, 2023",
+      "iso_date": "2023-02-03T08:00:00Z",
+      "reactions": "5.4M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTL8zCtkRbEpZGWTLiaDpYrgUdOBZtzOu9rCjhXPTFV-LmMfdwRyZvhSmlfw&usqp=CAI&s=10"
+    },
+    {
+      "position": 12,
+      "topic": "Funny parodies and memes",
+      "description": "Hilarious parodies abound online, featuring spam callers, inside jokes, and even a \"hello from the other side\" ghost.",
+      "is_ai_overview": true,
+      "title": "Hello #zakkwylde #funny #cover #comedy #satire",
+      "link": "https://www.tiktok.com/@zakkwyldebls/video/7376734826759523630",
+      "author": "Zakk Wylde · TikTok",
+      "source": "American musician",
+      "date": "Jun 4, 2024",
+      "iso_date": "2024-06-04T07:00:00Z",
+      "reactions": "605.7K+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rPlyh8lvv4-v3tRi30xFp1P9rvR-DOsUeR8cxlVbHsC8mwVYUYS3Gfu1wts&usqp=CAI&s=10"
+    },
+    {
+      "position": 13,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "When Adele appeared on The Tonight Show Starring Jimmy Fallon, she teamed up with Jimmy Fallon and The Roots for a playful version of “Hello” using classroom instruments. The performance swapped out the song’s dramatic production for toy xylophones,",
+      "link": "https://www.instagram.com/reel/DXTLeQkqzUx/?hl=en",
+      "author": "songspill · Instagram",
+      "source": "Music enthusiast",
+      "date": "Apr 18, 2026",
+      "iso_date": "2026-04-18T07:00:00Z",
+      "reactions": "185.4K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5fVI0HrRxwSPnKFPciuu4ZriXC9JP8d3xiko0NEV6DJUuN9eTJIb0-KtMFoU&usqp=CAI&s=10"
+    },
+    {
+      "position": 14,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "Jimmy, Adele, and @The Roots perform “Hello” with Classroom Instruments! #FallonFlashback #TonightShow #Adele #JimmyFallon",
+      "link": "https://www.tiktok.com/@fallontonight/video/7404970528680856862?lang=en",
+      "author": "FallonTonight · TikTok",
+      "source": "American talk show",
+      "date": "Aug 19, 2024",
+      "iso_date": "2024-08-19T07:00:00Z",
+      "reactions": "2.9M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX4v7mOt2hveLgbUlo5ZIheDE0LKUOB3Y8O_pyxSCWbBjWPhZYz9pGCS6r6HM&usqp=CAI&s=10"
+    },
+    {
+      "position": 15,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "@adele, Jimmy, and @theroots perform “Hello” with Classroom Instruments! #FallonFlashback",
+      "link": "https://www.instagram.com/reel/Cu7FeJItQ_C/?hl=en",
+      "author": "fallontonight · Instagram",
+      "source": "American talk show",
+      "date": "Jul 20, 2023",
+      "iso_date": "2023-07-20T07:00:00Z",
+      "reactions": "130.3K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRsafDYctDNlhunQHT1RGVnloChJn0rw0Y4-mVqn63oOAN88h1ub0iUKZ02Q&usqp=CAI&s=10"
+    },
+    {
+      "position": 16,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "Ten years ago, Adele joined Jimmy Fallon and The Roots on The Tonight Show and performed “Hello” using toy classroom instruments. No big production. No dramatic setup. Just tiny sounds and that once-in-a-generation voice carrying the entire room.",
+      "link": "https://www.instagram.com/reel/DXeAJqgEpNs/",
+      "author": "topvoice · Instagram",
+      "source": "Social interaction platform",
+      "date": "1 month ago",
+      "iso_date": "2026-04-23T07:00:00Z",
+      "reactions": "31.5K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThR56aQTz99hyFI7gW38Xs0F4WVRmdSqhskma3yrvNlovJPQQzUudaITdaeQ&usqp=CAI&s"
+    },
+    {
+      "position": 17,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "✨ A unique and unforgettable live performance of Hello by Adele with Jimmy Fallon & The Roots delivers a fun and creative twist on a global hit. Performed on The Tonight Show Starring Jimmy Fallon, this version uses classroom instruments to recreate the ico",
+      "link": "https://www.instagram.com/p/DWMEaiSkuXX/",
+      "author": "muisycall · Instagram",
+      "source": "Live music enthusiast",
+      "date": "Mar 22, 2026",
+      "iso_date": "2026-03-22T07:00:00Z",
+      "reactions": "14.3K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ41CHOHAJiRKWW0g2Qm07mo8jl2C7OaGYZCq8If1YwFPMw1wlStvb34z_lqA&usqp=CAI&s=10"
+    },
+    {
+      "position": 18,
+      "topic": "Viral classroom instrument performance",
+      "description": "Adele, Jimmy Fallon, and The Roots' playful classroom instrument rendition of the hit single remains an iconic viral moment.",
+      "is_ai_overview": true,
+      "title": "She sounds exactly the same live and one the album amazing 🤍✨ This viral performance featured Adele joining Jimmy Fallon and The Roots to perform a stripped-down version of her hit single \"Hello\" using only items found in a kindergarten classroom. The s",
+      "link": "https://www.instagram.com/reel/DWIbOAbCI1P/",
+      "author": "the_musicvibe_",
+      "source": "Instagram",
+      "date": "Mar 20, 2026",
+      "iso_date": "2026-03-20T07:00:00Z",
+      "reactions": "6K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpyF4-l36HSVqUZDfPsekrRUu99tjMsyFbf3WkURlDng_pmIKS75jzEHtifxE&usqp=CAI&s=10"
+    },
+    {
+      "position": 19,
+      "topic": "Adele broke music records",
+      "description": "The global smash hit shattered records: fastest to one billion YouTube views and over a million downloads in one week.",
+      "is_ai_overview": true,
+      "title": "ADELE E SEU RECORDE COM O ÁLBUM “25” #adele #25 #hello",
+      "link": "https://www.youtube.com/shorts/i8CCZ7DZ8X0",
+      "author": "Noah Nailo · YouTube",
+      "source": "Brazilian artist",
+      "date": "Oct 6, 2025",
+      "iso_date": "2025-10-06T07:00:00Z",
+      "reactions": "4K+ views",
+      "thumbnail": "https://img.youtube.com/vi/i8CCZ7DZ8X0/hqdefault.jpg"
+    },
+    {
+      "position": 20,
+      "topic": "Adele broke music records",
+      "description": "The global smash hit shattered records: fastest to one billion YouTube views and over a million downloads in one week.",
+      "is_ai_overview": true,
+      "title": "Celebrating 10 years of Adele’s “Hello” - the record-breaking hit that shattered streaming milestones, topped charts, and earned GRAMMYs, a BRIT Award, and a place in pop history. #adele #adele25 #hello #behindthesong",
+      "link": "https://www.tiktok.com/@universalmusicpublishing/video/7582714827513056525",
+      "author": "Universal Music Publishing · TikTok",
+      "source": "Global music publishing company",
+      "date": "Dec 11, 2025",
+      "iso_date": "2025-12-11T08:00:00Z",
+      "reactions": "1.6M+ views",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_OY_aohqQ1vkP0RRM2sYB0qlYcr-vuLqqJ4y5mPQIKrB81GQNMNZ1UOTqvA&usqp=CAI&s=10"
+    },
+    {
+      "position": 21,
+      "topic": "Adele broke music records",
+      "description": "The global smash hit shattered records: fastest to one billion YouTube views and over a million downloads in one week.",
+      "is_ai_overview": true,
+      "title": "In November 2015, Adele was having the biggest week of her career. Her album \"25\" had just sold 2.43 million copies in its first week — breaking a record that had stood since NSYNC in 2000. \"Hello\" was sitting at number one for the fourth week in a row. The",
+      "link": "https://www.instagram.com/reel/DWMHqk8CDB1/",
+      "author": "top1_songs",
+      "source": "Instagram",
+      "date": "Mar 22, 2026",
+      "iso_date": "2026-03-22T07:00:00Z",
+      "reactions": "90.1K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkMsQtorNZv1Nt13s90EOW8TjGLkCSzIqauVjWOIPDH-wcj-TUgyY-0xYJdg&usqp=CAI&s=10"
+    },
+    {
+      "position": 22,
+      "topic": "Adele broke music records",
+      "description": "The global smash hit shattered records: fastest to one billion YouTube views and over a million downloads in one week.",
+      "is_ai_overview": true,
+      "title": "𝙃𝙚𝙡𝙡𝙤, 𝙞𝙩’𝙨 𝙢𝙚 👋 On this day nine years ago, @adele created Stadium history with the 𝗟𝗮𝗿𝗴𝗲𝘀𝘁 𝗖𝗼𝗻𝗰𝗲𝗿𝘁 𝗔𝘁𝘁𝗲𝗻𝗱𝗮𝗻𝗰𝗲 (𝗦𝗶𝗻𝗴𝗹𝗲 𝗦𝗵𝗼𝘄) at Marvel Stadium. During her 𝘈𝘥𝘦𝘭𝘦 𝘓𝘪𝘷𝘦 2017 𝘛𝘰𝘶𝘳, 77,327 fans attended the show on March 19th,",
+      "link": "https://www.instagram.com/p/DWDcpSmD3nR/",
+      "author": "marvelstadium.au · Instagram",
+      "source": "Sports & entertainment stadium in Melbourne",
+      "date": "Mar 18, 2026",
+      "iso_date": "2026-03-18T07:00:00Z",
+      "reactions": "8.2K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XFYIfWpKV_g3axgXl-0oWrYlA-hjNlTfGNpwTDgqeHxBzcz2WOnx7b4_yw&usqp=CAI&s"
+    },
+    {
+      "position": 23,
+      "topic": "Adele broke music records",
+      "description": "The global smash hit shattered records: fastest to one billion YouTube views and over a million downloads in one week.",
+      "is_ai_overview": true,
+      "title": "Hello by Adele surpasses 1.8B streams on Spotify",
+      "link": "https://www.reddit.com/r/adele/comments/1rp47xo/hello_by_adele_surpasses_18b_streams_on_spotify/",
+      "author": "r/adele",
+      "source": "Reddit",
+      "iso_date": "2026-03-09T07:00:00Z",
+      "reactions": "Mar 9, 2026",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFus0BzKZb86IgFvqW7iSeEvt69Tu09WY-QxvAYyqd1oEfzcj7I6vMSWcBLw&usqp=CAI&s"
+    }
+  ],
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "Adele - Hello (Official Music Video)",
+      "link": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+      "source": "YouTube",
+      "channel": "Adele",
+      "length": "6:07",
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "position": 2,
+      "title": "Hello",
+      "link": "https://www.youtube.com/watch?v=yjo_aXygRDI",
+      "source": "YouTube",
+      "channel": "Adele - Topic",
+      "length": "4:56",
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "position": 3,
+      "title": "Adele - Hello (Lyrics)",
+      "link": "https://www.youtube.com/watch?v=8fIUkINS1uo",
+      "source": "YouTube",
+      "channel": "Rare Vibes",
+      "length": "4:50",
+      "image": "data:image/jpeg;base64,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"
+    }
+  ],
+  "inline_shorts": [
+    {
+      "position": 1,
+      "title": "Hello by Adele",
+      "link": "https://www.instagram.com/reel/C2AikC8RtdH/?hl=en",
+      "source": "Instagram",
+      "author": "matt hansen",
+      "length": "0:24",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBeZP8KUJPTY06ARGCWCf_VvfG5j5pKov6cpH_RNUOYS8Mh4iutIKIWw&s=10"
+    },
+    {
+      "position": 2,
+      "title": "Hello: Adele",
+      "link": "https://www.youtube.com/shorts/7eaBKuoHqSk",
+      "source": "YouTube",
+      "author": "Rozette",
+      "length": "0:26",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcR1g7gDvwgjMmP0CHnja314agIn8BBBFZe5sA",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsbxulhnBwUfgzLUvBvNVZ6bCPAF8Kvr6uUiPdQBMFeqROrf8QhZWrqwA&s=10"
+    },
+    {
+      "position": 3,
+      "title": "ADELE - HELLO (LIVE) #adele #hello #thelyricsyouneed | The ...",
+      "link": "https://www.facebook.com/thelyricsyouneed/videos/adele-hello-live-adele-hello-thelyricsyouneed/1971454983288058/",
+      "source": "Facebook",
+      "author": "The lyrics You need",
+      "length": "1:01",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSETYQyYLPF9S5OOf_JZbkFSSSCAvxZF3PKoCnXbx9j-DXXsv_L8s9GL8&s=10"
+    },
+    {
+      "position": 4,
+      "title": "“Hello” #adele",
+      "link": "https://www.youtube.com/shorts/wO_s4bPzNkA",
+      "source": "YouTube",
+      "author": "Souparnika Nair",
+      "length": "0:23",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QvYpYCgv8DH2O4rigkW-octWXPu6eTbjikkIlu2JFZS1fklZYJWJaDw&s=10"
+    },
+    {
+      "position": 5,
+      "title": "Hello ❤️ Song by @adele Version @overdriveroficial #hello ...",
+      "link": "https://www.instagram.com/reel/DR2vroCEY-3/?hl=en",
+      "source": "Instagram",
+      "author": "Overdriver Duo",
+      "length": "0:32",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWo9DbcsCxCtWEPFHRLdzu8fbIxDXICavxVCHmMpqRRAihYVZyJiI--TM&s=10"
+    },
+    {
+      "position": 6,
+      "title": "Hello",
+      "link": "https://www.youtube.com/watch?v=uBZtioJsZAE",
+      "source": "YouTube",
+      "author": "Tml Vibez - Topic",
+      "length": "2:51",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn61q3TxXLilFtIUupropXcTTowdFj02iqnFFWRNF5TIiePhjhyQf5yZ8&s=10"
+    },
+    {
+      "position": 7,
+      "title": "Hello - Adele",
+      "link": "https://www.instagram.com/reel/DTyDyvIkYnd/?hl=en",
+      "source": "Instagram",
+      "author": "A PRISCILLA QUE CANTA!",
+      "length": "0:25",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGcPxAXvKu7Ey1CN8T87qAs78r3BlXsdyvsm6xBTuDJ3yccbt9idBAz5k&s=10"
+    },
+    {
+      "position": 8,
+      "title": "Exciting news! The music video for “Hello” is officially ...",
+      "link": "https://www.facebook.com/LionelRichie/videos/hello-remastered-on-youtube-now/382339669857716/",
+      "source": "Facebook",
+      "author": "Lionel Richie",
+      "length": "0:15",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmU35Gb2bpqw5j5-KYAAARyuA6LA-LuWiem0W0ORsroB8IwJKtTpYuNWM&s=10"
+    },
+    {
+      "position": 9,
+      "title": "Lionel Richie - Hello (1984)",
+      "link": "https://www.youtube.com/shorts/bILyjDLjqwU",
+      "source": "YouTube",
+      "author": "DJ Dodz Channel",
+      "length": "0:41",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS25ADHk1PcEgKXD8L2pflgo_4xVbC3ZCLL68Bp_txACJHUsVojzcJpI-I&s=10"
+    },
+    {
+      "position": 10,
+      "title": "HELLO",
+      "link": "https://www.youtube.com/shorts/aHFAWZ_9TKs",
+      "source": "YouTube",
+      "author": "Adrian Lyles",
+      "length": "0:31",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTX38WFHihBTDoUKqiyu2-BK5oMhU3pb0VKKg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuq5BrrX3TgKFOL524alHqH3iSPW_scmfRMh0oVhJo7D_ZA_uQwdSz-F0&s=10"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "Hello meaning",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+meaning&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BAhxEAE"
+    },
+    {
+      "query": "Hello Song",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+Song&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BQiIARAB"
+    },
+    {
+      "query": "Hello song how are you",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+song+how+are+you&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BQiDARAB"
+    },
+    {
+      "query": "Hello movie",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+movie&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BQiAARAB"
+    },
+    {
+      "query": "English Hello Song",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=English+Hello+Song&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BAh7EAE"
+    },
+    {
+      "query": "Hello pronunciation",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+pronunciation&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BAh5EAE"
+    },
+    {
+      "query": "Hello Hello video",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Hello+Hello+video&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BAh2EAE"
+    },
+    {
+      "query": "Listen to Adele Hello",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&hl=en&gl=us&q=Listen+to+Adele+Hello&sa=X&ved=2ahUKEwioz9Di6IuVAxX6HkQIHWfoKPoQ1QJ6BAhzEAE"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=hello&oq=hello&gl=us&hl=en&pws=0&start=10"
+  }
+}

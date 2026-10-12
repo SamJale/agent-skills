@@ -1,0 +1,680 @@
+openapi: 3.0.0
+info:
+  title: Amazon Search API
+  description: |
+    Perform searches on Amazon across various domains and languages, with comprehensive product information including prices, ratings, and availability.
+
+    **Cross-linking**: The `asin` returned by this API can be used with the Amazon Product API to fetch detailed product information.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Amazon Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["amazon_search"]
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+        - name: rh
+          in: query
+          required: false
+          description: This parameter filters search results based on specific criteria such as brand and ratings. You can find <code>rh</code> values either by calling the Amazon Search API or directly from an Amazon URL.
+          schema:
+            type: string
+        - name: category_id
+          in: query
+          required: false
+          description: An Amazon browse node ID that limits results to a specific category. Use the Amazon Categories API to discover valid category IDs.
+          schema:
+            type: string
+          example: "172282"
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort order for search results
+          schema:
+            type: string
+            enum: ["featured", "price_low_to_high", "price_high_to_low", "average_review", "newest_arrivals", "bestsellers"]
+            default: "featured"
+        - name: amazon_domain
+          in: query
+          required: false
+          description: Amazon domain to search
+          schema:
+            type: string
+            enum: ["amazon.ae", "amazon.ca", "amazon.co.jp", "amazon.co.uk", "amazon.com", "amazon.com.au", "amazon.com.be", "amazon.com.br", "amazon.com.tr", "amazon.com.mx", "amazon.de", "amazon.es", "amazon.eg", "amazon.fr", "amazon.in", "amazon.ie", "amazon.it", "amazon.nl", "amazon.pl", "amazon.sa", "amazon.se", "amazon.sg", "amazon.co.za"]
+            default: "amazon.com"
+        - name: language
+          in: query
+          required: false
+          description: Language for search results
+          schema:
+            type: string
+            enum: ["ar_SA", "ar_EG", "ar_AE", "zh_CN", "nl_NL", "nl_BE", "en_AE", "en_GB", "fr_FR", "fr_BE", "de_DE", "it_IT", "ja_JP", "pl_PL", "pt_BR", "es_ES", "es_MX", "es_US", "se_SE", "tr_TR"]
+        - name: currency
+          in: query
+          required: false
+          description: ISO 4217 code of the currency Amazon displays prices in. Supported on amazon.com (only with a delivery_country other than us and br), amazon.ae, amazon.co.jp, amazon.co.uk, amazon.com.au, amazon.de, amazon.es, amazon.fr and amazon.it, each with its own list (https://www.searchapi.io/docs/parameters/amazon/currency). Each domain's own currency is always accepted.
+          schema:
+            type: string
+            enum: ["AED", "AMD", "ARS", "AUD", "AWG", "AZN", "BBD", "BGN", "BHD", "BMD", "BND", "BOB", "BRL", "BSD", "BZD", "CAD", "CHF", "CLP", "CNY", "COP", "CRC", "CZK", "DKK", "DOP", "EGP", "EUR", "GBP", "GEL", "GHS", "GTQ", "GYD", "HKD", "HNL", "HUF", "IDR", "ILS", "INR", "JMD", "JOD", "JPY", "KES", "KHR", "KRW", "KWD", "KYD", "KZT", "LBP", "LKR", "MAD", "MNT", "MOP", "MUR", "MVR", "MXN", "MYR", "NAD", "NGN", "NIO", "NOK", "NZD", "OMR", "PAB", "PEN", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RUB", "SAR", "SEK", "SGD", "THB", "TRY", "TTD", "TWD", "TZS", "USD", "UYU", "UZS", "VND", "XAF", "XCD", "XOF", "XPF", "ZAR"]
+        - name: price_min
+          in: query
+          required: false
+          description: Minimum price filter, in the marketplace's own currency even when `currency` is set
+          schema:
+            type: number
+            minimum: 0
+        - name: price_max
+          in: query
+          required: false
+          description: Maximum price filter, in the marketplace's own currency even when `currency` is set
+          schema:
+            type: number
+            minimum: 0
+        - name: page
+          in: query
+          required: false
+          description: Page number for pagination
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: delivery_country
+          in: query
+          required: false
+          description: Country for delivery calculations
+          schema:
+            type: string
+            enum: ["dz", "ao", "bh", "bw", "cm", "eg", "gh", "il", "jo", "ke", "kw", "kg", "mu", "yt", "ma", "na", "ng", "om", "ps", "qa", "re", "sa", "sn", "za", "tz", "tn", "ug", "ae", "zw", "ar", "aw", "bb", "bz", "bm", "bo", "br", "ca", "ky", "cl", "co", "cr", "do", "ec", "sv", "gf", "gp", "gt", "hn", "jm", "mq", "mx", "pa", "py", "pe", "kn", "mf", "tt", "uy", "ve", "au", "bd", "kh", "cn", "fj", "hk", "in", "id", "jp", "kz", "mo", "my", "mh", "fm", "nc", "nz", "pk", "pw", "ph", "sg", "kr", "lk", "tw", "th", "vn", "al", "ad", "am", "at", "by", "be", "ba", "bg", "hr", "cy", "cz", "dk", "ee", "fo", "fi", "fr", "ge", "de", "gi", "gr", "hu", "is", "ie", "it", "lv", "li", "lt", "lu", "mt", "md", "mc", "me", "nl", "mk", "no", "pl", "pt", "ro", "ru", "sm", "rs", "sk", "si", "es", "se", "ch", "tr", "ua", "gb", "us", "va"]
+        - name: postal_code
+          in: query
+          required: false
+          description: "Postal/ZIP code for the delivery address, used by postal-code marketplaces (e.g. 10001 for US, SW1A 0AA for UK, 10115 for DE). Max 20 characters. Mutually exclusive with delivery_city; see the Amazon delivery location reference for which parameter applies per country."
+          schema:
+            type: string
+            maxLength: 20
+        - name: delivery_city
+          in: query
+          required: false
+          description: "City for the delivery address in snake_case (e.g. riyadh, abu_dhabi, cairo), used only by city-based marketplaces (Saudi Arabia, UAE, Egypt). Max 100 characters. Mutually exclusive with postal_code; for other countries use postal_code."
+          schema:
+            type: string
+            maxLength: 100
+        - name: delivery_area
+          in: query
+          required: false
+          description: "Area/district within the city for city-based marketplaces that support it (e.g. business_bay on amazon.ae). Max 100 characters. Optional refinement; must be sent together with delivery_city."
+          schema:
+            type: string
+            maxLength: 100
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        filters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Filter'
+          description: Available filters to refine search results
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+          description: Search results from Amazon
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are found
+
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Amazon URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+        delivery_location:
+          type: string
+          enum: [applied, not_applied, unverified]
+          description: Outcome of the requested delivery location, present only when postal_code/delivery_city/delivery_area was sent. `applied` means the served page reflects the location, `not_applied` means it shows another location, `unverified` means the page has no verifiable location.
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        rh:
+          type: string
+          description: Refinement filter parameters
+        sort_by:
+          type: string
+          description: Sort order applied
+        amazon_domain:
+          type: string
+          description: Amazon domain searched
+        language:
+          type: string
+          description: Language used for search
+        currency:
+          type: string
+          description: Requested display currency
+        price_min:
+          type: number
+          description: Minimum price filter applied
+        price_max:
+          type: number
+          description: Maximum price filter applied
+        page:
+          type: integer
+          description: Page number
+        delivery_country:
+          type: string
+          description: Country for delivery calculations
+        category_id:
+          type: string
+          description: Amazon browse node ID for category-scoped search
+
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed on Amazon
+        price_min:
+          type: string
+          description: Minimum price from Amazon's price filter
+        extracted_price_min:
+          type: number
+          description: Numerical value of minimum price
+        price_max:
+          type: string
+          description: Maximum price from Amazon's price filter
+        extracted_price_max:
+          type: number
+          description: Numerical value of maximum price
+        has_no_results:
+          type: boolean
+          description: Indicates if search returned no results
+        delivering_to:
+          type: string
+          description: Location Amazon resolved the delivery address to (e.g. "Buffalo 14205"). Confirms the postal_code/delivery_city pin took effect.
+
+    Filter:
+      type: object
+      required: [type, options]
+      properties:
+        type:
+          type: string
+          description: Category name of the filter
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/FilterOption'
+          description: Available filter options
+
+    FilterOption:
+      type: object
+      required: [text, rh]
+      properties:
+        text:
+          type: string
+          description: Display text for the filter option
+        rh:
+          type: string
+          description: Refinement parameter for this filter
+
+    OrganicResult:
+      type: object
+      required: [position, asin, title, link, thumbnail]
+      properties:
+        position:
+          type: integer
+          description: Position of the result in search results
+        asin:
+          type: string
+          description: Amazon Standard Identification Number
+        title:
+          type: string
+          description: Product title
+        link:
+          type: string
+          description: Product page URL
+        brand:
+          type: string
+          description: Product brand
+        authors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Author'
+          description: Authors (for books and media)
+        tags:
+          type: array
+          items:
+            type: string
+          description: Product tags
+        versions:
+          $ref: '#/components/schemas/ProductVersions'
+        credits:
+          type: object
+          description: Credits information (directors, actors, etc.)
+          additionalProperties:
+            type: array
+            items:
+              $ref: '#/components/schemas/Credit'
+        rating:
+          type: number
+          description: Product rating (out of 5)
+        reviews:
+          type: number
+          description: Number of reviews
+        recent_sales:
+          type: string
+          description: Recent sales information text
+        extracted_recent_sales:
+          type: number
+          description: Numerical value of recent sales
+        media:
+          type: string
+          description: Media type information
+        price:
+          type: string
+          description: Current price as displayed
+        extracted_price:
+          type: number
+          description: Numerical value of current price
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numerical value of original price
+        price_per:
+          $ref: '#/components/schemas/PricePer'
+        secondary_price:
+          type: string
+          description: Secondary price information
+        extracted_secondary_price:
+          type: number
+          description: Numerical value of secondary price
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/PriceInfo'
+          description: Alternative pricing options
+        coupon:
+          $ref: '#/components/schemas/Coupon'
+        deal:
+          $ref: '#/components/schemas/Deal'
+        fulfillment:
+          $ref: '#/components/schemas/Fulfillment'
+        availability:
+          type: string
+          description: Product availability status
+        more_offers:
+          $ref: '#/components/schemas/MoreOffers'
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductAttribute'
+          description: Product attributes and specifications
+        other_formats:
+          type: array
+          items:
+            $ref: '#/components/schemas/OtherFormat'
+          description: Alternative product formats
+        is_sponsored:
+          type: boolean
+          description: Whether the result is sponsored
+        is_prime:
+          type: boolean
+          description: Whether the product has Prime shipping
+        is_prime_video:
+          type: boolean
+          description: Whether this is a Prime Video result
+        is_amazon_brand:
+          type: boolean
+          description: Whether this is an Amazon brand product
+        is_limited_time_deal:
+          type: boolean
+          description: Whether this product has a limited time deal
+        is_whole_foods_market:
+          type: boolean
+          description: Whether this is from Whole Foods Market
+        is_amazon_fresh:
+          type: boolean
+          description: Whether this is from Amazon Fresh
+        is_small_business:
+          type: boolean
+          description: Whether this is from a small business
+        is_kindle_unlimited:
+          type: boolean
+          description: Whether available with Kindle Unlimited
+        is_climate_pledge_friendly:
+          type: boolean
+          description: Whether this product is Climate Pledge Friendly
+        bestseller:
+          $ref: '#/components/schemas/BestsellerBadge'
+        amazons_choice:
+          $ref: '#/components/schemas/AmazonsChoiceBadge'
+        is_overall_pick:
+          type: boolean
+          description: Whether this is marked as an overall pick
+        editors_pick:
+          $ref: '#/components/schemas/EditorsPickBadge'
+        thumbnail:
+          type: string
+          description: Product image URL
+
+    Author:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Author name
+        link:
+          type: string
+          description: Author page URL
+
+    ProductVersions:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Version information text
+        link:
+          type: string
+          description: Link to other versions
+
+    Credit:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Person's name
+        link:
+          type: string
+          description: Person's page URL
+
+    PricePer:
+      type: object
+      properties:
+        price:
+          type: number
+          description: Price per unit
+        unit:
+          type: string
+          description: Unit of measurement
+
+    PriceInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Price option name
+        price:
+          type: string
+          description: Price as text
+        extracted_price:
+          type: number
+          description: Numerical price value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numerical original price value
+        fulfillment:
+          $ref: '#/components/schemas/Delivery'
+        more_offers:
+          $ref: '#/components/schemas/MoreOffers'
+
+    Coupon:
+      type: object
+      properties:
+        badge_text:
+          type: string
+          description: Coupon badge text
+        text:
+          type: string
+          description: Coupon details
+
+    Deal:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Deal page URL
+        badge_text:
+          type: string
+          description: Deal badge text
+
+    Fulfillment:
+      type: object
+      properties:
+        fulfillment:
+          $ref: '#/components/schemas/Delivery'
+        availability:
+          type: string
+          description: Availability information
+
+    Delivery:
+      type: object
+      properties:
+        standard_delivery:
+          $ref: '#/components/schemas/DeliveryOption'
+        fastest_delivery:
+          $ref: '#/components/schemas/DeliveryOption'
+
+    DeliveryOption:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Full delivery text
+        type:
+          type: string
+          description: Delivery type
+        condition:
+          type: string
+          description: Delivery conditions
+        date:
+          type: string
+          description: Delivery date
+
+    MoreOffers:
+      type: object
+      properties:
+        lowest_price:
+          type: string
+          description: Lowest price from other offers
+        extracted_lowest_price:
+          type: number
+          description: Numerical value of lowest price
+        link:
+          type: string
+          description: Link to all offers
+        offers_count:
+          type: number
+          description: Number of offers available
+        description:
+          type: string
+          description: Offers description
+
+    ProductAttribute:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Attribute name
+        value:
+          type: string
+          description: Attribute value
+
+    OtherFormat:
+      type: object
+      properties:
+        asin:
+          type: string
+          description: ASIN of the format
+        title:
+          type: string
+          description: Format title
+        link:
+          type: string
+          description: Format page URL
+
+    BestsellerBadge:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Bestseller page URL
+        category:
+          type: string
+          description: Bestseller category
+
+    AmazonsChoiceBadge:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Amazon's Choice page URL
+        keywords:
+          type: string
+          description: Keywords for Amazon's Choice
+
+    EditorsPickBadge:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Editor's Pick page URL
+        keywords:
+          type: string
+          description: Keywords for Editor's Pick
+
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: Previous page URL
+        next:
+          type: string
+          description: Next page URL
+        other_pages:
+          type: object
+          description: Other page URLs
+          additionalProperties:
+            type: string
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

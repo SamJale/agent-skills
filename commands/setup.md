@@ -1,0 +1,10 @@
+---
+name: setup
+description: Connect SearchApi to this agent (MCP sign-in or API key) and check that it works
+---
+
+Run the Connect step of the `searchapi` skill now, even if something already looks connected. If a SearchApi MCP tool or a key is already there, say so and skip to the check. Otherwise ask with buttons: I have a key, I need a key, Use MCP instead.
+
+Check: run the skill's `scripts/searchapi.py credits` and report "Connected" with the credits left. On MCP only, confirm the SearchApi tools are listed (no test search needed).
+
+$ARGUMENTS

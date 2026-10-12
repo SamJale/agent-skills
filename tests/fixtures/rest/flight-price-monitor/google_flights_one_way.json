@@ -1,0 +1,2857 @@
+{
+  "search_metadata": {
+    "id": "search_gM5dQzeGq7sdGP7ygvOlAjp3",
+    "status": "Success",
+    "created_at": "2026-06-16T12:56:34Z",
+    "request_time_taken": 1.24,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 1.25,
+    "request_url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTA3LTE1agcIARIDSkZLcgcIARIDTEFYQAFIAXABggELCP___________wGYAQI&tfu=EgIIAiIDEgEw&hl=en&gl=us&curr=USD",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_gM5dQzeGq7sdGP7ygvOlAjp3.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_gM5dQzeGq7sdGP7ygvOlAjp3"
+  },
+  "search_parameters": {
+    "engine": "google_flights",
+    "departure_id": "JFK",
+    "arrival_id": "LAX",
+    "currency": "USD",
+    "hl": "en",
+    "gl": "us",
+    "outbound_date": "2026-07-15",
+    "flight_type": "one_way",
+    "travel_class": "economy",
+    "stops": "any",
+    "sort_by": "price",
+    "adults": "1",
+    "children": "0",
+    "infants_in_seat": "0",
+    "infants_on_lap": "0"
+  },
+  "other_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "06:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "09:01"
+          },
+          "duration": 361,
+          "airplane": "Airbus A321neo",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 171",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 317 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 317
+          }
+        }
+      ],
+      "total_duration": 361,
+      "carbon_emissions": {
+        "this_flight": 318000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -6,
+        "lowest_route": 384000
+      },
+      "price": 204,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRFM01Sb0xDUFNlQVJBQ0dnTlZVMFE0SEhEMG5nRT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMTcxIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "07:05"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "10:07"
+          },
+          "duration": 362,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 33",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 362,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 204,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1JCUVRNekdnc0k5SjRCRUFJYUExVlRSRGdjY1BTZUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMzMiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "07:59"
+          },
+          "arrival_airport": {
+            "name": "Charlotte Douglas International Airport",
+            "id": "CLT",
+            "date": "2026-07-15",
+            "time": "10:07"
+          },
+          "duration": 128,
+          "airplane": "Boeing 737",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 1444",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 89 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 89
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Charlotte Douglas International Airport",
+            "id": "CLT",
+            "date": "2026-07-15",
+            "time": "11:56"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "13:55"
+          },
+          "duration": 299,
+          "airplane": "Airbus A321neo",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 1213",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 223 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 223
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 109,
+          "name": "Charlotte Douglas International Airport",
+          "id": "CLT"
+        }
+      ],
+      "total_duration": 536,
+      "carbon_emissions": {
+        "this_flight": 313000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -8,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZzFCUVRFME5EUjhRVUV4TWpFekdnc0l5S1lCRUFJYUExVlRSRGdjY01pbUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJDTFQiLG51bGwsIkFBIiwiMTQ0NCJdLFsiQ0xUIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIxMjEzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "08:15"
+          },
+          "arrival_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "11:11"
+          },
+          "duration": 236,
+          "airplane": "Boeing 737",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2234",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 180 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 180
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "13:11"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "14:20"
+          },
+          "duration": 189,
+          "airplane": "Airbus A321neo",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 3334",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 139 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 139
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 120,
+          "name": "Dallas Fort Worth International Airport",
+          "id": "DFW"
+        }
+      ],
+      "total_duration": 545,
+      "carbon_emissions": {
+        "this_flight": 320000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -6,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZzFCUVRJeU16UjhRVUV6TXpNMEdnc0l5S1lCRUFJYUExVlRSRGdjY01pbUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJERlciLG51bGwsIkFBIiwiMjIzNCJdLFsiREZXIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIzMzM0Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "09:16"
+          },
+          "arrival_airport": {
+            "name": "Phoenix Sky Harbor International Airport",
+            "id": "PHX",
+            "date": "2026-07-15",
+            "time": "11:36"
+          },
+          "duration": 320,
+          "airplane": "Boeing 737MAX 8 Passenger",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 1769",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 217 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 217
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Phoenix Sky Harbor International Airport",
+            "id": "PHX",
+            "date": "2026-07-15",
+            "time": "14:55"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "16:19"
+          },
+          "duration": 84,
+          "airplane": "Airbus A321neo",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2368",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 61 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 61
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 199,
+          "name": "Phoenix Sky Harbor International Airport",
+          "id": "PHX"
+        }
+      ],
+      "total_duration": 603,
+      "carbon_emissions": {
+        "this_flight": 279000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -18,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZzFCUVRFM05qbDhRVUV5TXpZNEdnc0l5S1lCRUFJYUExVlRSRGdjY01pbUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJQSFgiLG51bGwsIkFBIiwiMTc2OSJdLFsiUEhYIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIyMzY4Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "11:21"
+          },
+          "arrival_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "14:17"
+          },
+          "duration": 236,
+          "airplane": "Boeing 737",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2049",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 180 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 180
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "16:30"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "17:45"
+          },
+          "duration": 195,
+          "airplane": "Boeing 737",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 966",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 161 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 161
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 133,
+          "name": "Dallas Fort Worth International Airport",
+          "id": "DFW"
+        }
+      ],
+      "total_duration": 564,
+      "carbon_emissions": {
+        "this_flight": 342000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 1,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ3hCUVRJd05EbDhRVUU1TmpZYUN3aklwZ0VRQWhvRFZWTkVPQnh3eUtZQiIsW1siSkZLIiwiMjAyNi0wNy0xNSIsIkRGVyIsbnVsbCwiQUEiLCIyMDQ5Il0sWyJERlciLCIyMDI2LTA3LTE1IiwiTEFYIixudWxsLCJBQSIsIjk2NiJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "12:29"
+          },
+          "arrival_airport": {
+            "name": "Phoenix Sky Harbor International Airport",
+            "id": "PHX",
+            "date": "2026-07-15",
+            "time": "14:43"
+          },
+          "duration": 314,
+          "airplane": "Boeing 737MAX 8 Passenger",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2829",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 217 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 217
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Phoenix Sky Harbor International Airport",
+            "id": "PHX",
+            "date": "2026-07-15",
+            "time": "16:45"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "18:12"
+          },
+          "duration": 87,
+          "airplane": "Airbus A321",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2930",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 80 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 80
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 122,
+          "name": "Phoenix Sky Harbor International Airport",
+          "id": "PHX"
+        }
+      ],
+      "total_duration": 523,
+      "carbon_emissions": {
+        "this_flight": 298000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -12,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZzFCUVRJNE1qbDhRVUV5T1RNd0dnc0l5S1lCRUFJYUExVlRSRGdjY01pbUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJQSFgiLG51bGwsIkFBIiwiMjgyOSJdLFsiUEhYIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIyOTMwIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "14:42"
+          },
+          "arrival_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "17:44"
+          },
+          "duration": 242,
+          "airplane": "Boeing 737",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 1953",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 180 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 180
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Dallas Fort Worth International Airport",
+            "id": "DFW",
+            "date": "2026-07-15",
+            "time": "18:30"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "19:45"
+          },
+          "duration": 195,
+          "airplane": "Airbus A321",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 2766",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 30 inches",
+            "Carbon emission: 176 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "30 in",
+            "legroom_long": "30 inches",
+            "carbon_emission": 176
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 46,
+          "name": "Dallas Fort Worth International Airport",
+          "id": "DFW"
+        }
+      ],
+      "total_duration": 483,
+      "carbon_emissions": {
+        "this_flight": 357000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 5,
+        "lowest_route": 384000
+      },
+      "price": 214,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZzFCUVRFNU5UTjhRVUV5TnpZMkdnc0l5S1lCRUFJYUExVlRSRGdjY01pbUFRPT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJERlciLG51bGwsIkFBIiwiMTk1MyJdLFsiREZXIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIyNzY2Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "16:45"
+          },
+          "arrival_airport": {
+            "name": "Buffalo Niagara International Airport",
+            "id": "BUF",
+            "date": "2026-07-15",
+            "time": "18:25"
+          },
+          "duration": 100,
+          "airplane": "Airbus A220-300 Passenger",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 1202",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 32 inches",
+            "Carbon emission: 67 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "32 in",
+            "legroom_long": "32 inches",
+            "carbon_emission": 67
+          }
+        },
+        {
+          "departure_airport": {
+            "name": "Buffalo Niagara International Airport",
+            "id": "BUF",
+            "date": "2026-07-15",
+            "time": "20:20"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "22:38"
+          },
+          "duration": 318,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 491",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 32 inches",
+            "Carbon emission: 295 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "32 in",
+            "legroom_long": "32 inches",
+            "carbon_emission": 295
+          }
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 115,
+          "name": "Buffalo Niagara International Airport",
+          "id": "BUF"
+        }
+      ],
+      "total_duration": 533,
+      "carbon_emissions": {
+        "this_flight": 363000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 7,
+        "lowest_route": 384000
+      },
+      "price": 234,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ3hDTmpFeU1ESjhRalkwT1RFYUN3aVp0Z0VRQWhvRFZWTkVPQnh3bWJZQiIsW1siSkZLIiwiMjAyNi0wNy0xNSIsIkJVRiIsbnVsbCwiQjYiLCIxMjAyIl0sWyJCVUYiLCIyMDI2LTA3LTE1IiwiTEFYIixudWxsLCJCNiIsIjQ5MSJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "17:50"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "21:02"
+          },
+          "duration": 372,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 823",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 32 inches",
+            "Carbon emission: 404 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "32 in",
+            "legroom_long": "32 inches",
+            "carbon_emission": 404
+          }
+        }
+      ],
+      "total_duration": 372,
+      "carbon_emissions": {
+        "this_flight": 405000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 19,
+        "lowest_route": 384000
+      },
+      "price": 264,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpneU14b0xDT1ROQVJBQ0dnTlZVMFE0SEhEa3pRRT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiODIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "13:49"
+          },
+          "duration": 349,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 767",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 238 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 238
+          }
+        }
+      ],
+      "total_duration": 349,
+      "carbon_emissions": {
+        "this_flight": 238000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -30,
+        "lowest_route": 384000
+      },
+      "price": 269,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjMk54b0xDTmpSQVJBQ0dnTlZVMFE0SEhEWTBRRT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzY3Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "09:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "11:58"
+          },
+          "duration": 358,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 1",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 358,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 277,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ05CUVRFYUN3ajQxd0VRQWhvRFZWTkVPQnh3K05jQiIsW1siSkZLIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIxIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "14:40"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "17:48"
+          },
+          "duration": 368,
+          "airplane": "Airbus A321neo",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 255",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 317 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 317
+          }
+        }
+      ],
+      "total_duration": 368,
+      "carbon_emissions": {
+        "this_flight": 318000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -6,
+        "lowest_route": 384000
+      },
+      "price": 277,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRJMU5Sb0xDUGpYQVJBQ0dnTlZVMFE0SEhENDF3RT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMjU1Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "17:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "20:19"
+          },
+          "duration": 379,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 306",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 379,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 277,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRNd05ob0xDUGpYQVJBQ0dnTlZVMFE0SEhENDF3RT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMzA2Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "18:10"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "21:28"
+          },
+          "duration": 378,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 302",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 378,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 277,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRNd01ob0xDUGpYQVJBQ0dnTlZVMFE0SEhENDF3RT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMzAyIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "20:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "23:24"
+          },
+          "duration": 384,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 117",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 384,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 277,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRFeE54b0xDUGpYQVJBQ0dnTlZVMFE0SEhENDF3RT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMTE3Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "07:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "09:55"
+          },
+          "duration": 355,
+          "airplane": "Airbus A330-900neo",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 742",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 247 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 247
+          }
+        }
+      ],
+      "total_duration": 355,
+      "carbon_emissions": {
+        "this_flight": 248000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -27,
+        "lowest_route": 384000
+      },
+      "price": 289,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjME1ob0xDS2poQVJBQ0dnTlZVMFE0SEhDbzRRRT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzQyIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "08:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "10:58"
+          },
+          "duration": 358,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 713",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 238 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 238
+          }
+        }
+      ],
+      "total_duration": 358,
+      "carbon_emissions": {
+        "this_flight": 238000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -30,
+        "lowest_route": 384000
+      },
+      "price": 289,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjeE14b0xDS2poQVJBQ0dnTlZVMFE0SEhDbzRRRT0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzEzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "15:40"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "18:48"
+          },
+          "duration": 368,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 341",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 368,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 339,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRNME1Sb0xDTEdJQWhBQ0dnTlZVMFE0SEhDeGlBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMzQxIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "09:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "11:54"
+          },
+          "duration": 354,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 773",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 238 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 238
+          }
+        }
+      ],
+      "total_duration": 354,
+      "carbon_emissions": {
+        "this_flight": 238000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -30,
+        "lowest_route": 384000
+      },
+      "price": 344,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjM014b0xDS1NNQWhBQ0dnTlZVMFE0SEhDa2pBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzczIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "14:05"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "17:03"
+          },
+          "duration": 358,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 747",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 224 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 224
+          }
+        }
+      ],
+      "total_duration": 358,
+      "carbon_emissions": {
+        "this_flight": 225000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -34,
+        "lowest_route": 384000
+      },
+      "price": 344,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjME54b0xDS1NNQWhBQ0dnTlZVMFE0SEhDa2pBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzQ3Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "18:50"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "22:07"
+          },
+          "duration": 377,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 707",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 224 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 224
+          }
+        }
+      ],
+      "total_duration": 377,
+      "carbon_emissions": {
+        "this_flight": 225000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -34,
+        "lowest_route": 384000
+      },
+      "price": 344,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjd054b0xDS1NNQWhBQ0dnTlZVMFE0SEhDa2pBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzA3Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "20:20"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "23:38"
+          },
+          "duration": 378,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 752",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 224 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 224
+          }
+        }
+      ],
+      "total_duration": 378,
+      "carbon_emissions": {
+        "this_flight": 225000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -34,
+        "lowest_route": 384000
+      },
+      "price": 344,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjMU1ob0xDS1NNQWhBQ0dnTlZVMFE0SEhDa2pBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzUyIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "08:30"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "11:25"
+          },
+          "duration": 355,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 323",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 32 inches",
+            "Carbon emission: 404 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "32 in",
+            "legroom_long": "32 inches",
+            "carbon_emission": 404
+          }
+        }
+      ],
+      "total_duration": 355,
+      "carbon_emissions": {
+        "this_flight": 405000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 19,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpNeU14b0xDSXlVQWhBQ0dnTlZVMFE0SEhDTWxBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMzIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "09:38"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "12:45"
+          },
+          "duration": 367,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 523",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 367,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpVeU14b0xDSXlVQWhBQ0dnTlZVMFE0SEhDTWxBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiNTIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "14:05"
+          },
+          "duration": 365,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 1123",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 365,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1pDTmpFeE1qTWFDd2lNbEFJUUFob0RWVk5FT0J4d2pKUUMiLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMTEyMyJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "13:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "15:58"
+          },
+          "duration": 358,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 423",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 358,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpReU14b0xDSXlVQWhBQ0dnTlZVMFE0SEhDTWxBST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiNDIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "15:15"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "18:16"
+          },
+          "duration": 361,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 1523",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 361,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1pDTmpFMU1qTWFDd2lNbEFJUUFob0RWVk5FT0J4d2pKUUMiLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMTUyMyJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "16:16"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "19:20"
+          },
+          "duration": 364,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 1023",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 32 inches",
+            "Carbon emission: 404 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "32 in",
+            "legroom_long": "32 inches",
+            "carbon_emission": 404
+          }
+        }
+      ],
+      "total_duration": 364,
+      "carbon_emissions": {
+        "this_flight": 405000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 19,
+        "lowest_route": 384000
+      },
+      "price": 354,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1pDTmpFd01qTWFDd2lNbEFJUUFob0RWVk5FT0J4d2pKUUMiLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMTAyMyJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "13:58"
+          },
+          "duration": 358,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 3",
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 358,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 419,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ05CUVRNYUN3and4Z0lRQWhvRFZWTkVPQnh3OE1ZQyIsW1siSkZLIiwiMjAyNi0wNy0xNSIsIkxBWCIsbnVsbCwiQUEiLCIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "21:30"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-16",
+            "time": "00:54"
+          },
+          "duration": 384,
+          "airplane": "Airbus A321 (Sharklets)",
+          "airline": "American",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+          "travel_class": "Economy",
+          "flight_number": "AA 300",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Stream video to own device",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 546 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_stream_video_to_own_device": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 546
+          }
+        }
+      ],
+      "total_duration": 384,
+      "carbon_emissions": {
+        "this_flight": 546000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 61,
+        "lowest_route": 384000
+      },
+      "price": 419,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZCUVRNd01Cb0xDUERHQWhBQ0dnTlZVMFE0SEhEd3hnST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkFBIiwiMzAwIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "15:05"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "18:09"
+          },
+          "duration": 364,
+          "airplane": "Boeing 767",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 738",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 238 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 238
+          }
+        }
+      ],
+      "total_duration": 364,
+      "carbon_emissions": {
+        "this_flight": 238000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -30,
+        "lowest_route": 384000
+      },
+      "price": 454,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERjek9Cb0xDSnppQWhBQ0dnTlZVMFE0SEhDYzRnST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiNzM4Il1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "16:05"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "19:13"
+          },
+          "duration": 368,
+          "airplane": "Airbus A330",
+          "airline": "Delta",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+          "travel_class": "Economy",
+          "flight_number": "DL 353",
+          "extensions": [
+            "Power and USB outlets",
+            "On-demand video",
+            "Wi-Fi free",
+            "Seat type Average Legroom",
+            "Legroom 31 inches",
+            "Carbon emission: 258 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_on_demand_video": true,
+            "wifi": "free",
+            "seat_type": "Average Legroom",
+            "legroom_short": "31 in",
+            "legroom_long": "31 inches",
+            "carbon_emission": 258
+          }
+        }
+      ],
+      "total_duration": 368,
+      "carbon_emissions": {
+        "this_flight": 258000,
+        "typical_for_this_route": 340000,
+        "difference_percent": -24,
+        "lowest_route": 384000
+      },
+      "price": 454,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZFVERNMU14b0xDSnppQWhBQ0dnTlZVMFE0SEhDYzRnST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkRMIiwiMzUzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "06:00"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "08:49"
+          },
+          "duration": 349,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 123",
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 349,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 484,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpFeU14b0xDTlQ1QWhBQ0dnTlZVMFE0SEhEVStRST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMTIzIl1dXQ=="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "19:35"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-15",
+            "time": "22:49"
+          },
+          "duration": 374,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 1223",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 374,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 484,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1pDTmpFeU1qTWFDd2pVK1FJUUFob0RWVk5FT0J4dzFQa0MiLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiMTIyMyJdXV0="
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "John F. Kennedy International Airport",
+            "id": "JFK",
+            "date": "2026-07-15",
+            "time": "21:40"
+          },
+          "arrival_airport": {
+            "name": "Los Angeles International Airport",
+            "id": "LAX",
+            "date": "2026-07-16",
+            "time": "00:51"
+          },
+          "duration": 371,
+          "airplane": "Airbus A320",
+          "airline": "JetBlue",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+          "travel_class": "Economy",
+          "flight_number": "B6 923",
+          "is_often_delayed": true,
+          "extensions": [
+            "Power and USB outlets",
+            "Live TV",
+            "Wi-Fi free",
+            "Seat type Above Average Legroom",
+            "Legroom 33 inches",
+            "Carbon emission: 406 kg"
+          ],
+          "detected_extensions": {
+            "has_power_and_usb_outlets": true,
+            "has_live_tv": true,
+            "wifi": "free",
+            "seat_type": "Above Average Legroom",
+            "legroom_short": "33 in",
+            "legroom_long": "33 inches",
+            "carbon_emission": 406
+          }
+        }
+      ],
+      "total_duration": 371,
+      "carbon_emissions": {
+        "this_flight": 407000,
+        "typical_for_this_route": 340000,
+        "difference_percent": 20,
+        "lowest_route": 384000
+      },
+      "price": 484,
+      "type": "One way",
+      "extensions": [
+        "Checked baggage for a fee",
+        "Bag and fare conditions depend on the return flight"
+      ],
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png",
+      "booking_token": "WyJDalJJT0U1d1FsTlpabVJ0UnpoQlEyVkRUVkZDUnkwdExTMHRMUzE1YVdGd05pMXVNVUZCUVVGQlIyOTRVMEZOUzA4eWJGZEJFZ1ZDTmpreU14b0xDTlQ1QWhBQ0dnTlZVMFE0SEhEVStRST0iLFtbIkpGSyIsIjIwMjYtMDctMTUiLCJMQVgiLG51bGwsIkI2IiwiOTIzIl1dXQ=="
+    }
+  ],
+  "price_insights": {
+    "lowest_price": 204,
+    "price_level": "high",
+    "typical_price_range": {
+      "low_price": 150,
+      "high_price": 250
+    },
+    "price_history": [
+      {
+        "price": 149,
+        "iso_date": "2026-04-17T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-18T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-19T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-20T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-21T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-22T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-23T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-24T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-25T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-26T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-27T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-28T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-29T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-04-30T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-05-01T04:00:00Z"
+      },
+      {
+        "price": 209,
+        "iso_date": "2026-05-02T04:00:00Z"
+      },
+      {
+        "price": 209,
+        "iso_date": "2026-05-03T04:00:00Z"
+      },
+      {
+        "price": 209,
+        "iso_date": "2026-05-04T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-05-05T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-05-06T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-07T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-08T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-09T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-10T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-11T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-12T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-13T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-14T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-15T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-16T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-17T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-18T04:00:00Z"
+      },
+      {
+        "price": 179,
+        "iso_date": "2026-05-19T04:00:00Z"
+      },
+      {
+        "price": 164,
+        "iso_date": "2026-05-20T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-21T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-22T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-23T04:00:00Z"
+      },
+      {
+        "price": 179,
+        "iso_date": "2026-05-24T04:00:00Z"
+      },
+      {
+        "price": 169,
+        "iso_date": "2026-05-25T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-26T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-27T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-28T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-29T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-30T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-05-31T04:00:00Z"
+      },
+      {
+        "price": 154,
+        "iso_date": "2026-06-01T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-06-02T04:00:00Z"
+      },
+      {
+        "price": 149,
+        "iso_date": "2026-06-03T04:00:00Z"
+      },
+      {
+        "price": 169,
+        "iso_date": "2026-06-04T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-05T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-06T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-07T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-08T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-09T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-10T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-11T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-12T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-13T04:00:00Z"
+      },
+      {
+        "price": 197,
+        "iso_date": "2026-06-14T04:00:00Z"
+      },
+      {
+        "price": 199,
+        "iso_date": "2026-06-15T04:00:00Z"
+      },
+      {
+        "price": 204,
+        "iso_date": "2026-06-16T04:00:00Z"
+      }
+    ],
+    "cheapest_to_book": {
+      "estimated_savings": 24
+    }
+  },
+  "airports": [
+    {
+      "departure": [
+        {
+          "airport": {
+            "id": "JFK",
+            "name": "John F. Kennedy International Airport"
+          },
+          "city": "New York",
+          "country": "United States",
+          "country_code": "US",
+          "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRa1dwH1NZQk4dsbPiyA9Vrq2RX75jXSZ-OkHn7NkLHl-11HercqDXoZ4p2cDxJkH6vca2degawrCzHEQ",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEaUa9NsdPWGpAUGkTApkZDT_4M6_6V8wTcC0v1b1wJAJX-BuMSiipXbsoznGgcI1xLOc5QiTcR_xovexgjdOz0gqQe0tRQ9h0bUkZ07Q"
+        }
+      ],
+      "arrival": [
+        {
+          "airport": {
+            "id": "LAX",
+            "name": "Los Angeles International Airport"
+          },
+          "city": "Los Angeles",
+          "country": "United States",
+          "country_code": "US",
+          "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTFuS2Y5_b7ZIl-g2Hm7jnG7zoi2uk0CQltF_DFbp6gIzfYznnOB6uJm9d6ePT5PJO5XM1j8vigwCNxRA",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT4B0K7etaN3KgEgtU5dJajdcmLtB5QSDRYr4KqcwH1iWxMm7TIqwtcUTTHD5AmNyeeFIpVpTnbSDeuD_HVlkYzOam-TO9w1worRSGRTUo"
+        }
+      ]
+    }
+  ],
+  "airlines": {
+    "alliances": [
+      {
+        "code": "ONEWORLD",
+        "name": "Oneworld"
+      },
+      {
+        "code": "SKYTEAM",
+        "name": "SkyTeam"
+      },
+      {
+        "code": "STAR_ALLIANCE",
+        "name": "Star Alliance"
+      }
+    ],
+    "airlines": [
+      {
+        "code": "AS",
+        "name": "Alaska"
+      },
+      {
+        "code": "AA",
+        "name": "American"
+      },
+      {
+        "code": "AD",
+        "name": "Azul"
+      },
+      {
+        "code": "DE",
+        "name": "Condor"
+      },
+      {
+        "code": "DL",
+        "name": "Delta"
+      },
+      {
+        "code": "F9",
+        "name": "Frontier"
+      },
+      {
+        "code": "GF",
+        "name": "Gulf Air"
+      },
+      {
+        "code": "B6",
+        "name": "JetBlue"
+      },
+      {
+        "code": "KQ",
+        "name": "Kenya Airways"
+      },
+      {
+        "code": "AT",
+        "name": "Royal Air Maroc"
+      },
+      {
+        "code": "SV",
+        "name": "Saudia"
+      },
+      {
+        "code": "SY",
+        "name": "Sun Country Airlines"
+      },
+      {
+        "code": "WS",
+        "name": "WestJet"
+      }
+    ],
+    "hubs": [
+      {
+        "code": "ATL",
+        "name": "Atlanta"
+      },
+      {
+        "code": "AUS",
+        "name": "Austin"
+      },
+      {
+        "code": "BOS",
+        "name": "Boston"
+      },
+      {
+        "code": "BUF",
+        "name": "Buffalo"
+      },
+      {
+        "code": "CLT",
+        "name": "Charlotte"
+      },
+      {
+        "code": "ORD",
+        "name": "Chicago"
+      },
+      {
+        "code": "CLE",
+        "name": "Cleveland"
+      },
+      {
+        "code": "CMH",
+        "name": "Columbus"
+      },
+      {
+        "code": "DFW",
+        "name": "Dallas"
+      },
+      {
+        "code": "DEN",
+        "name": "Denver"
+      },
+      {
+        "code": "ELP",
+        "name": "El Paso"
+      },
+      {
+        "code": "FLL",
+        "name": "Fort Lauderdale"
+      },
+      {
+        "code": "IND",
+        "name": "Indianapolis"
+      },
+      {
+        "code": "MIA",
+        "name": "Miami"
+      },
+      {
+        "code": "MSP",
+        "name": "Minneapolis"
+      },
+      {
+        "code": "BNA",
+        "name": "Nashville"
+      },
+      {
+        "code": "PHX",
+        "name": "Phoenix"
+      },
+      {
+        "code": "PIT",
+        "name": "Pittsburgh"
+      },
+      {
+        "code": "PDX",
+        "name": "Portland"
+      },
+      {
+        "code": "RDU",
+        "name": "Raleigh"
+      },
+      {
+        "code": "SLC",
+        "name": "Salt Lake City"
+      },
+      {
+        "code": "SFO",
+        "name": "San Francisco"
+      },
+      {
+        "code": "SEA",
+        "name": "Seattle"
+      },
+      {
+        "code": "TUS",
+        "name": "Tucson"
+      },
+      {
+        "code": "DCA",
+        "name": "Washington"
+      }
+    ]
+  },
+  "baggage_allowance_links": [
+    {
+      "airline_code": "AA",
+      "airline": "American",
+      "url": "https://www.aa.com/i18n/travel-info/baggage/checked-baggage-policy.jsp"
+    },
+    {
+      "airline_code": "DL",
+      "airline": "Delta",
+      "url": "https://www.delta.com/content/www/en_US/traveling-with-us/baggage/before-your-trip/checked.html"
+    },
+    {
+      "airline_code": "B6",
+      "airline": "JetBlue",
+      "url": "https://www.jetblue.com/at-the-airport/baggage-information?intcmp=hd_info"
+    }
+  ],
+  "passenger_assistance_links": [
+    {
+      "airline_code": "AA",
+      "airline": "American",
+      "url": "https://www.aa.com/i18n/travel-info/special-assistance/special-assistance.jsp"
+    },
+    {
+      "airline_code": "B6",
+      "airline": "JetBlue",
+      "url": "https://www.jetblue.com/at-the-airport/accessibility-assistance"
+    },
+    {
+      "airline_code": "DL",
+      "airline": "Delta",
+      "url": "https://www.delta.com/us/en/accessible-travel-services/overview"
+    }
+  ]
+}

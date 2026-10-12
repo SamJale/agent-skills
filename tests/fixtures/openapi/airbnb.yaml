@@ -1,0 +1,551 @@
+openapi: 3.0.0
+info:
+  title: Airbnb Search API
+  description: |
+    Search for Airbnb properties with detailed filters including location, dates, pricing, guest counts, amenities, and property types.
+
+    Returns comprehensive property information including pricing, ratings, location coordinates, images, and availability.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Airbnb Property Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine identifier
+          schema:
+            type: string
+            enum: ["airbnb"]
+            default: "airbnb"
+        - name: q
+          in: query
+          required: false
+          description: 'Search query for location (e.g., "Barcelona", "Paris"). Either q or bounding_box is required.'
+          schema:
+            type: string
+        - name: bounding_box
+          in: query
+          required: false
+          description: 'Geographic bounding box coordinates for map-based search. Format: [[ne_lat,ne_lng],[sw_lat,sw_lng]]. Either q or bounding_box is required.'
+          schema:
+            type: string
+        - name: check_in_date
+          in: query
+          required: false
+          description: 'Check-in date in YYYY-MM-DD format. Must be a future date. Cannot be used together with time_period.'
+          schema:
+            type: string
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+        - name: check_out_date
+          in: query
+          required: false
+          description: Check-out date in YYYY-MM-DD format. Must be after check-in date. Requires check_in_date to be set.
+          schema:
+            type: string
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+        - name: time_period
+          in: query
+          required: false
+          description: 'Flexible trip length for searches without specific dates. Cannot be used together with check_in_date.'
+          schema:
+            type: string
+            enum: ["weekend_trip", "one_week", "one_month"]
+            default: "one_week"
+        - name: price_min
+          in: query
+          required: false
+          description: Minimum price filter per night
+          schema:
+            type: integer
+            minimum: 0
+        - name: price_max
+          in: query
+          required: false
+          description: Maximum price filter per night
+          schema:
+            type: integer
+            minimum: 0
+        - name: adults
+          in: query
+          required: false
+          description: Number of adult guests
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 16
+        - name: children
+          in: query
+          required: false
+          description: Number of children guests
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 15
+        - name: infants
+          in: query
+          required: false
+          description: Number of infant guests
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 5
+        - name: pets
+          in: query
+          required: false
+          description: Number of pets
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 5
+        - name: type_of_place
+          in: query
+          required: false
+          description: Type of accommodation
+          schema:
+            type: string
+            enum: ["any", "room", "entire_home"]
+        - name: bedrooms
+          in: query
+          required: false
+          description: Minimum number of bedrooms
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 8
+        - name: beds
+          in: query
+          required: false
+          description: Minimum number of beds
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 8
+        - name: bathrooms
+          in: query
+          required: false
+          description: Minimum number of bathrooms
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 8
+        - name: amenities
+          in: query
+          required: false
+          description: 'Comma-separated list of amenity keys (e.g., "wifi,pool,kitchen"). Supports hundreds of amenities including wifi, pool, kitchen, air_conditioning, heating, washer, dryer, parking, pets_allowed, wheelchair_accessible, gym, hot_tub, ev_charger, and many more. Also supports special filters: guest_favorite, instant_book, luxe.'
+          schema:
+            type: string
+        - name: property_types
+          in: query
+          required: false
+          description: Comma-separated list of property type keys
+          schema:
+            type: string
+        - name: currency
+          in: query
+          required: false
+          description: >-
+            Currency code for pricing. Defaults to USD on airbnb.com; country-specific
+            domains use their own local currency unless this parameter is set.
+          schema:
+            type: string
+            enum: ["USD", "AUD", "BRL", "BGN", "BAM", "CAD", "CLP", "CNY", "COP", "CRC", "CZK", "DKK", "EGP", "AED", "EUR", "GHS", "GTQ", "HNL", "HKD", "HUF", "INR", "IDR", "ILS", "JPY", "KZT", "KES", "MYR", "MXN", "MAD", "TWD", "NZD", "NOK", "PEN", "PHP", "PLN", "GBP", "QAR", "RON", "RUB", "SAR", "SGD", "ZAR", "KRW", "SEK", "CHF", "THB", "TRY", "UGX", "UAH", "UYU", "VND"]
+            default: "USD"
+        - name: airbnb_domain
+          in: query
+          required: false
+          description: Airbnb domain to search (affects language and regional results)
+          schema:
+            type: string
+            default: "airbnb.com"
+        - name: include_taxes
+          in: query
+          required: false
+          description: >-
+            When `true`, returns tax-inclusive search-card pricing. Each property's `price`
+            then carries `total_with_taxes` and itemizes its tax lines in `breakdown`,
+            without any extra per-property call. Applies to airbnb.com, where taxes
+            normally appear only at checkout; other country-specific domains are
+            unaffected (many, like EU domains, already show tax-inclusive totals by
+            default). The nightly prices are the same as the default response; taxes are
+            itemized on top.
+          schema:
+            type: string
+            enum: ["true", "false"]
+            default: "false"
+        - name: next_page_token
+          in: query
+          required: false
+          description: Token for pagination to retrieve subsequent pages of results
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        properties:
+          type: array
+          description: List of property results
+          items:
+            $ref: '#/components/schemas/Property'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are found
+
+    SearchMetadata:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Airbnb URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        airbnb_domain:
+          type: string
+          description: Airbnb domain searched
+        currency:
+          type: string
+          description: Currency code for pricing
+        include_taxes:
+          type: string
+          description: Whether tax-inclusive pricing was requested
+        q:
+          type: string
+          description: Search query location
+        bounding_box:
+          type: string
+          description: Geographic bounding box coordinates
+        check_in_date:
+          type: string
+          description: Check-in date
+        check_out_date:
+          type: string
+          description: Check-out date
+        time_period:
+          type: string
+          description: Flexible trip length
+        price_min:
+          type: integer
+          description: Minimum price filter
+        price_max:
+          type: integer
+          description: Maximum price filter
+        adults:
+          type: integer
+          description: Number of adults
+        children:
+          type: integer
+          description: Number of children
+        infants:
+          type: integer
+          description: Number of infants
+        pets:
+          type: integer
+          description: Number of pets
+        type_of_place:
+          type: string
+          description: Type of accommodation
+        bedrooms:
+          type: integer
+          description: Minimum bedrooms
+        beds:
+          type: integer
+          description: Minimum beds
+        bathrooms:
+          type: integer
+          description: Minimum bathrooms
+        amenities:
+          type: string
+          description: Amenities filter
+        property_types:
+          type: string
+          description: Property types filter
+        next_page_token:
+          type: string
+          description: Pagination token
+
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Location query as displayed by Airbnb
+        results:
+          type: string
+          description: Results summary text
+        time_period:
+          type: string
+          description: Time period display text
+        check_in_date:
+          type: string
+          description: Check-in date from search
+        check_out_date:
+          type: string
+          description: Check-out date from search
+        guests:
+          type: string
+          description: Guest count display text
+        adults:
+          type: integer
+          description: Number of adult guests
+        children:
+          type: integer
+          description: Number of child guests
+        infants:
+          type: integer
+          description: Number of infant guests
+        pets:
+          type: integer
+          description: Number of pets
+
+    Property:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position in search results
+        id:
+          type: string
+          description: Unique property listing ID
+        title:
+          type: string
+          description: Property title
+        description:
+          type: string
+          description: Property description
+        link:
+          type: string
+          description: URL to property details page
+        booking_link:
+          type: string
+          description: Direct booking URL with dates and guest parameters
+        time_period:
+          type: string
+          description: Date range display text
+        check_in_date:
+          type: string
+          description: Check-in date for this property
+        check_out_date:
+          type: string
+          description: Check-out date for this property
+        price:
+          $ref: '#/components/schemas/Price'
+        accommodations:
+          type: array
+          description: Accommodation details (bedrooms, beds, bathrooms)
+          items:
+            type: string
+        distance:
+          type: string
+          description: Distance from search location
+        extracted_distance:
+          type: number
+          description: Numeric distance value
+        gps_coordinates:
+          $ref: '#/components/schemas/GpsCoordinates'
+        rating:
+          type: number
+          description: Average rating score
+        reviews:
+          type: integer
+          description: Number of reviews
+        has_free_cancellation:
+          type: boolean
+          description: >-
+            Present and true when the card shows a "Free cancellation" highlight.
+            Omitted otherwise.
+        badges:
+          type: array
+          description: Property badges (e.g., Guest favorite, Superhost)
+          items:
+            type: string
+        images:
+          type: array
+          description: Property image URLs
+          items:
+            type: string
+
+    Price:
+      type: object
+      properties:
+        total_price:
+          type: string
+          description: Total price display text
+        extracted_total_price:
+          type: number
+          description: Numeric total price value
+        qualifier:
+          type: string
+          description: Price qualifier text (e.g., per night, per week)
+        extracted_qualifier:
+          type: integer
+          description: Numeric qualifier value
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numeric original price value
+        discount:
+          type: string
+          description: Discount amount display text
+        extracted_discount:
+          type: number
+          description: Numeric discount value
+        price_per_qualifier:
+          type: string
+          description: Price breakdown per qualifier
+        extracted_price_per_qualifier:
+          type: number
+          description: Numeric price per qualifier value
+        breakdown:
+          type: array
+          description: >-
+            Every itemized price line: the stay subtotal, any discount lines, any tax or
+            fee lines, and the total. The lines sum to the total, so a listing's taxes are
+            read from here rather than from a single field, since a card can carry several
+            tax lines. Line descriptions are localized to the airbnb_domain.
+          items:
+            $ref: '#/components/schemas/PriceBreakdownItem'
+        total_with_taxes:
+          type: string
+          description: >-
+            Formatted all-in total including taxes and fees. Exact, where `total_price`
+            is Airbnb's rounded display figure. Present only when Airbnb provides an
+            all-in figure, so its absence means no tax-inclusive price was available.
+        extracted_total_with_taxes:
+          type: number
+          description: Numeric all-in total extracted from `total_with_taxes`
+
+    PriceBreakdownItem:
+      type: object
+      properties:
+        description:
+          type: string
+          description: Breakdown item description
+        price:
+          type: string
+          description: Breakdown item price display text
+        extracted_price:
+          type: number
+          description: >-
+            Numeric breakdown item price. Signed, so discount lines are negative and the
+            lines sum to the total.
+
+    GpsCoordinates:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Latitude coordinate
+        longitude:
+          type: number
+          description: Longitude coordinate
+
+    Pagination:
+      type: object
+      properties:
+        next_page_token:
+          type: string
+          description: Token to retrieve the next page of results
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

@@ -1,0 +1,98 @@
+{
+  "search_metadata": {
+    "id": "search_G6ZMRV4jp7t7BOpJ8k2X071E",
+    "status": "Success",
+    "created_at": "2026-07-23T12:21:33Z",
+    "request_time_taken": 2.04,
+    "parsing_time_taken": 0.0,
+    "total_time_taken": 2.04,
+    "request_url": null,
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_G6ZMRV4jp7t7BOpJ8k2X071E.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_G6ZMRV4jp7t7BOpJ8k2X071E"
+  },
+  "search_parameters": {
+    "engine": "google_autocomplete",
+    "q": "retrieval augmented generation",
+    "hl": "en",
+    "gl": "us",
+    "client": "chrome"
+  },
+  "suggestions": [
+    {
+      "value": "retrieval augmented generation rag",
+      "relevance": 1250,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation definition",
+      "relevance": 601,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation explained",
+      "relevance": 600,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation example",
+      "relevance": 561,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation vs fine tuning",
+      "relevance": 560,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation paper",
+      "relevance": 559,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation for knowledge intensive nlp tasks",
+      "relevance": 558,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation ai",
+      "relevance": 557,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation (rag) model",
+      "relevance": 556,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation tutorial",
+      "relevance": 555,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation vs mcp",
+      "relevance": 554,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation system",
+      "relevance": 553,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation wiki",
+      "relevance": 552,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation pronunciation",
+      "relevance": 551,
+      "type": "QUERY"
+    },
+    {
+      "value": "retrieval augmented generation claude",
+      "relevance": 550,
+      "type": "QUERY"
+    }
+  ],
+  "verbatim_relevance": 1300
+}

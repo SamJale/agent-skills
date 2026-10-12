@@ -1,0 +1,502 @@
+openapi: 3.0.0
+info:
+  title: Walmart Search API
+  description: |
+    The Walmart Search API allows you to search for products on Walmart's website.
+    
+    **Cross-linking**: Use the `id` field from search results with the Walmart Product API to fetch detailed product information.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: Walmart Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: The search engine to use
+          schema:
+            type: string
+            enum: ["walmart_search"]
+            default: "walmart_search"
+        - name: q
+          in: query
+          required: true
+          description: The search query
+          schema:
+            type: string
+        - name: category_id
+          in: query
+          required: false
+          description: Filter results by Walmart category ID
+          schema:
+            type: string
+        - name: store_id
+          in: query
+          required: false
+          description: Filter results by Walmart store ID for location-specific pricing and availability
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          description: Page number for pagination
+          schema:
+            type: integer
+            minimum: 1
+        - name: price_min
+          in: query
+          required: false
+          description: Minimum price filter
+          schema:
+            type: number
+            minimum: 0
+        - name: price_max
+          in: query
+          required: false
+          description: Maximum price filter
+          schema:
+            type: number
+            minimum: 0
+        - name: filters
+          in: query
+          required: false
+          description: Additional filters to apply to the search
+          schema:
+            type: string
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort order for results
+          schema:
+            type: string
+            enum: ["best_match", "price_low_to_high", "price_high_to_low", "best_seller"]
+            default: "best_match"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        other_options:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        discover_great_brands:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        only_at_walmart:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        trending_items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        filters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Filter'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: Walmart URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        category_id:
+          type: string
+          description: Category ID filter
+        store_id:
+          type: string
+          description: Store ID filter
+        page:
+          type: integer
+          description: Page number
+        price_min:
+          type: number
+          description: Minimum price filter
+        price_max:
+          type: number
+          description: Maximum price filter
+        filters:
+          type: string
+          description: Additional filters
+        sort_by:
+          type: string
+          description: Sort order
+    SearchInformation:
+      type: object
+      properties:
+        total_results:
+          type: integer
+          description: Total number of results found
+        time_taken:
+          type: number
+          description: Time taken to perform the search in seconds
+        postal_code:
+          type: string
+          description: Postal code of the search location
+        province_code:
+          type: string
+          description: Province or state code of the search location
+        city:
+          type: string
+          description: City of the search location
+        store_id:
+          type: string
+          description: Store ID used for the search
+    OrganicResult:
+      type: object
+      required: [id, product_id, position, title, link]
+      properties:
+        position:
+          type: integer
+          description: Position of the result in the search results
+        id:
+          type: string
+          description: Walmart item ID (use with Walmart Product API)
+        product_id:
+          type: string
+          description: Walmart product ID
+        title:
+          type: string
+          description: Product title
+        description:
+          type: string
+          description: Product description (sanitized HTML removed)
+        link:
+          type: string
+          description: URL to the product page
+        brand:
+          type: string
+          description: Product brand
+        seller_id:
+          type: string
+          description: Seller ID
+        seller_name:
+          type: string
+          description: Seller name
+        rating:
+          type: number
+          description: Average product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        price:
+          type: string
+          description: Display price
+        extracted_price:
+          type: number
+          description: Extracted numeric price
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Extracted numeric original price
+        unit_price:
+          type: string
+          description: Price per unit
+        extracted_unit_price:
+          type: number
+          description: Extracted numeric unit price
+        price_range:
+          $ref: '#/components/schemas/PriceRange'
+        shipping:
+          type: string
+          description: Shipping cost text, present only when shipping is not free
+        extracted_shipping:
+          type: number
+          description: Extracted numeric shipping cost
+        fulfillment:
+          $ref: '#/components/schemas/Fulfillment'
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variant'
+        flag:
+          type: string
+          description: Product flag or label
+        stock:
+          type: integer
+          description: Stock quantity for low inventory items
+        order_limit:
+          type: integer
+          description: Maximum quantity allowed per order for this item
+        condition:
+          type: string
+          description: Product condition
+        is_preowned:
+          type: boolean
+          description: Whether the product is pre-owned
+        is_free_shipping:
+          type: boolean
+          description: Whether the product offers free shipping
+        is_free_shipping_with_walmart_plus:
+          type: boolean
+          description: Whether the product offers free shipping with Walmart Plus
+        is_out_of_stock:
+          type: boolean
+          description: Whether the product is out of stock
+        is_subscription_eligible:
+          type: boolean
+          description: Whether the product is eligible for subscription
+        is_sponsored:
+          type: boolean
+          description: Whether this is a sponsored listing
+        badges:
+          type: array
+          items:
+            $ref: '#/components/schemas/Badge'
+        thumbnail:
+          type: string
+          description: URL to product thumbnail image
+    PriceRange:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Display text for price range
+        from:
+          type: string
+          description: Starting price display
+        to:
+          type: string
+          description: Ending price display
+        extracted_from_price:
+          type: number
+          description: Extracted numeric starting price
+        extracted_to_price:
+          type: number
+          description: Extracted numeric ending price
+    Fulfillment:
+      type: object
+      properties:
+        delivery:
+          type: object
+          properties:
+            text:
+              type: string
+              description: Delivery method text
+            expected_date:
+              type: string
+              format: date
+              description: Expected delivery date
+        pickup:
+          type: object
+          properties:
+            text:
+              type: string
+              description: Pickup method text
+            expected_date:
+              type: string
+              format: date
+              description: Expected pickup date
+    Variant:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Variant item ID
+        product_id:
+          type: string
+          description: Variant product ID
+        title:
+          type: string
+          description: Variant title
+        link:
+          type: string
+          description: URL to variant product page
+        thumbnail:
+          type: string
+          description: URL to variant thumbnail
+        swatch_thumbnail:
+          type: string
+          description: URL to swatch thumbnail
+    Badge:
+      type: object
+      properties:
+        key:
+          type: string
+          description: Badge identifier key
+        text:
+          type: string
+          description: Badge display text
+        group_name:
+          type: string
+          description: Badge group name
+    Filter:
+      type: object
+      required: [name, type]
+      properties:
+        name:
+          type: string
+          description: Filter name
+        type:
+          type: string
+          description: Filter type
+        min_value:
+          type: integer
+          description: Minimum value for range filters
+        max_value:
+          type: integer
+          description: Maximum value for range filters
+        values:
+          type: array
+          items:
+            $ref: '#/components/schemas/FilterValue'
+    FilterValue:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Filter value ID
+        name:
+          type: string
+          description: Filter value display name
+        items_count:
+          type: integer
+          description: Number of items matching this filter
+        type:
+          type: string
+          description: Filter value type
+    RelatedSearch:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: URL to related search results
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        next:
+          type: string
+          description: URL to next page
+        previous:
+          type: string
+          description: URL to previous page
+        other_pages:
+          type: object
+          additionalProperties:
+            type: string
+          description: Map of page numbers to URLs
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

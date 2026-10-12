@@ -1,0 +1,1352 @@
+{
+  "search_metadata": {
+    "id": "search_rpB8WlvR38SqA63xWkXOyEn1",
+    "status": "Success",
+    "created_at": "2026-06-16T12:57:54Z",
+    "request_time_taken": 3.46,
+    "parsing_time_taken": 0.25,
+    "total_time_taken": 3.7,
+    "request_url": "https://www.google.com/search?q=what+is+a+vpn&oq=what+is+a+vpn&gl=us&hl=en",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_rpB8WlvR38SqA63xWkXOyEn1.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_rpB8WlvR38SqA63xWkXOyEn1"
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "what is a vpn",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "what is a vpn",
+    "total_results": 232000000,
+    "time_taken_displayed": 0.19,
+    "detected_location": "Prince William County, Virginia",
+    "has_no_results_for": false
+  },
+  "ai_overview": {
+    "text_blocks": [
+      {
+        "type": "paragraph",
+        "answer": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server.",
+        "reference_indexes": [
+          1,
+          5,
+          4
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "How It Works"
+      },
+      {
+        "type": "paragraph",
+        "answer": "Without a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary:",
+        "reference_indexes": [
+          5,
+          6
+        ]
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi."
+          },
+          {
+            "type": "paragraph",
+            "answer": "IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous"
+          }
+        ],
+        "reference_indexes": [
+          1,
+          5
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "Primary Benefits"
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Enhanced Privacy: Prevents companies from tracking your web history or selling your data."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship."
+          }
+        ],
+        "reference_indexes": [
+          1,
+          4,
+          0,
+          1,
+          7,
+          0,
+          4
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "When and Why People Use Them"
+      },
+      {
+        "type": "unordered_list",
+        "items": [
+          {
+            "type": "paragraph",
+            "answer": "Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home."
+          },
+          {
+            "type": "paragraph",
+            "answer": "Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling."
+          }
+        ],
+        "reference_indexes": [
+          4,
+          8,
+          0,
+          2,
+          6,
+          0
+        ]
+      },
+      {
+        "type": "header",
+        "answer": "What a VPN Cannot Do"
+      },
+      {
+        "type": "paragraph",
+        "answer": "While VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites.",
+        "reference_indexes": [
+          3,
+          0,
+          1
+        ]
+      }
+    ],
+    "markdown": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server. [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn) [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [4](https://protonvpn.com/what-is-a-vpn)\n\n## How It Works\n\nWithout a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary: [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [6](https://www.dropbox.com/resources/what-is-vpn)\n\n- Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi.\n- IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous\n\n## Primary Benefits\n\n- Enhanced Privacy: Prevents companies from tracking your web history or selling your data.\n- Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels.\n- Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship.\n\n## When and Why People Use Them\n\n- Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting.\n- Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home.\n- Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling.\n\n## What a VPN Cannot Do\n\nWhile VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites. [3](https://www.youtube.com/shorts/uThJ51bExlc) [0](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9) [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n\n[[0] - What is a VPN for beginners and How to Use one in 2025.](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9)\n[[1] - What Is a VPN? How Does a Virtual Private Network Work? - Fortinet](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n[[2] - What is a VPN? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)\n[[3] - What is a VPN?](https://www.youtube.com/shorts/uThJ51bExlc)\n[[4] - What is a VPN? How VPNs work & when to use one | Proton VPN](https://protonvpn.com/what-is-a-vpn)\n[[5] - What is VPN and how does it work? | VPN explained in layers](https://www.youtube.com/watch?v=0QFXYL43GM0)\n[[6] - What is a VPN and how does it work? Everything you need to know](https://www.dropbox.com/resources/what-is-vpn)\n[[7] - Are VPNs Safe and Secure? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn)\n[[8] - What is a VPN and why it's important - Reddit](https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/)",
+    "reference_links": [
+      {
+        "index": 0,
+        "title": "What is a VPN for beginners and How to Use one in 2025.",
+        "link": "https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9",
+        "snippet": "A VPN, which stands for virtual private network, is an encrypted connection over the internet from a device, such as a computer, t...",
+        "source": "YouTube",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_6xx3wmlrNXg_UIDkIv_hWkx94BYIkZVZqaNGEh_yBjscoct5vajNpHn1M96CA6pNJ9M0mw"
+      },
+      {
+        "index": 1,
+        "title": "What Is a VPN? How Does a Virtual Private Network Work? - Fortinet",
+        "link": "https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn",
+        "snippet": "VPN meaning: What does VPN stand for? A VPN, meaning a virtual private network masks your Internet protocol (IP) address, creating...",
+        "source": "Fortinet",
+        "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.fortinet.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4S1lXEZOKzO_oVEgEhkdLPYZ5ayqxj5QqngSe5mmzOhU7jRydp_O2Tyi8o6hUyD9Tvku5g"
+      },
+      {
+        "index": 2,
+        "title": "What is a VPN? - Microsoft Azure",
+        "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn",
+        "snippet": "VPN meaning. A VPN is a foundational networking and security technology in a cloud-first world where applications span on-premises...",
+        "source": "Microsoft Azure",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30fN2DD0vVNBzZl2X14Z04U15l1D3AahMrt18iKCzgd7AuW76R1Uat48tmA6aFt4HPpw1Yg"
+      },
+      {
+        "index": 3,
+        "title": "What is a VPN?",
+        "link": "https://www.youtube.com/shorts/uThJ51bExlc",
+        "snippet": "What is a VPN? Like. 6. What is a VPN? Ever wondered what a VPN actually does? Spoiler: it's not a private train carriage for nerd...",
+        "source": "YouTube",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQitMmfuTg5DmdO6xnq_hKtuLFgebCPMqvvycIZf-l7nfEtIt_cHMNU0iGJM0L1bxZVwTxDmJk"
+      },
+      {
+        "index": 4,
+        "title": "What is a VPN? How VPNs work & when to use one | Proton VPN",
+        "link": "https://protonvpn.com/what-is-a-vpn",
+        "snippet": "What is a VPN? VPN stands for virtual private network and refers to a suite of technologies designed to protect your privacy when ...",
+        "source": "Proton VPN",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://protonvpn.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGOnlEkyffxMNhBoDLxKxxTrXlQSmqMAyn2oK6KGFwCKc8BBqquavm7i_-KxJl5Ob2q3JzQw"
+      },
+      {
+        "index": 5,
+        "title": "What is VPN and how does it work? | VPN explained in layers",
+        "link": "https://www.youtube.com/watch?v=0QFXYL43GM0",
+        "snippet": "A VPN, which stands for virtual private network, is a tool that protects an internet connection by masking the user's IP address a...",
+        "source": "YouTube",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+        "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTICyQ7xx6FAQ4RMr2vXo_-FTVyc6k6FzOz1RCa-GDE_REEPGsUTY_m1jGuawV_ND3jmwZC1OI"
+      },
+      {
+        "index": 6,
+        "title": "What is a VPN and how does it work? Everything you need to know",
+        "link": "https://www.dropbox.com/resources/what-is-vpn",
+        "snippet": "VPN meaning and definition A VPN, or Virtual Private Network provides a secure, encrypted connection over a less secure network, s...",
+        "source": "Dropbox.com",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.dropbox.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS1O5E8WdUaH55vKCpt-4tQk3aDy1DzSJuZa9bMzafkyFf4MODueYxQC_cJrcG1aubqXU_YEA"
+      },
+      {
+        "index": 7,
+        "title": "Are VPNs Safe and Secure? - Microsoft Azure",
+        "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn",
+        "snippet": "What is a VPN? A VPN, which stands for virtual private network, is a type of online service that allows you to hide your browsing ...",
+        "source": "Microsoft Azure",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROPi23WBfCAPEGhQbsHoDXnV6KnMceaa1akRMKktQGu9J0hW_rpBxSJvim-7ovZ95BnZr3Hw"
+      },
+      {
+        "index": 8,
+        "title": "What is a VPN and why it's important - Reddit",
+        "link": "https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/",
+        "snippet": "{\"passageText\":\"VPN Core Function: A VPN, or virtual private network, establishes an encrypted connection between a user's de...",
+        "source": "www.reddit.com",
+        "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.reddit.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      }
+    ]
+  },
+  "ads": [
+    {
+      "position": 1,
+      "block_position": "bottom",
+      "title": "VPN for dummies guide for 2026 - VPN For Dummies",
+      "link": "https://www.google.com/aclk?sa=L&ai=DChsSEwiHu-nu54uVAxXdbkcBHSkrNogYACICCAIQChoCcXU&co=1&ase=2&gclid=EAIaIQobChMIh7vp7ueLlQMV3W5HAR0pKzaIEAMYASADEgJB8PD_BwE&cid=CAASugHkaN8sWXevmy3XulsjTMkJAvxObzocA69Z0wI2mfj_guXPSDrkzRi64caWEgQH_OESt44pwH4k3lsUraafFsEd6YIeUd0uUcdoTjlmO_KX9LiPDJD5NOQvViYVjTzXtggv402fEc1dvd_qz7__mdW4mXjP1ygWe1dYMpQ2NpK8t4ChnVF2R6f8i_JgwLt4ekTAo19n-_Q_ZzyJ1M-RbYaYnFhr6LLX2nw2hQYtJyLQn9nQHCHlhp9liSQ&cce=2&category=acrcp_v1_32&sig=AOD64_0NRGVL2ULZ8twZJlNH64ODCojgRg&q=&nis=4&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Qh78CegQIehAB&adurl=",
+      "source": "Surfshark B.V.",
+      "domain": "www.google.com",
+      "displayed_link": "https://www.surfshark.com",
+      "snippet": "Our VPN guide for beginners: Feeling like a dummy? Get the basics you need to make an informed decision.",
+      "snippet_highlighted_words": [
+        "VPN"
+      ],
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "What is a VPN? A beginner’s guide",
+            "link": "https://surfshark.com/blog/vpn-for-dummies%7Bignore%7D?coupon=%7B_coupon%7D&utm_campaign=%7Bcampaignid%7D&utm_content=%7Badgroupid%7D&utm_creative=%7Bcreative%7D&utm_term=%7Bkeyword%7D&utm_source=google&utm_medium=cpc&glcid=%7Bgclid%7D&segment1=%7B_segment1%7D&segment2=%7B_segment2%7D&sf_cs=google&sf_cm=cpc&sf_cn=%7Bcampaignid%7D&sf_ct=%7Bkeyword%7D&sf_cc=%7Badgroupid%7D"
+          },
+          {
+            "title": "What are VPNs used for?",
+            "link": "https://surfshark.com/use-cases"
+          },
+          {
+            "title": "Learn what is a VPN",
+            "link": "https://surfshark.com/blog/vpn-for-dummies%7Bignore%7D?coupon=%7B_coupon%7D&utm_campaign=%7Bcampaignid%7D&utm_content=%7Badgroupid%7D&utm_creative=%7Bcreative%7D&utm_term=%7Bkeyword%7D&utm_source=google&utm_medium=cpc&glcid=%7Bgclid%7D&segment1=%7B_segment1%7D&segment2=%7B_segment2%7D&sf_cs=google&sf_cm=cpc&sf_cn=%7Bcampaignid%7D&sf_ct=%7Bkeyword%7D&sf_cc=%7Badgroupid%7D"
+          },
+          {
+            "title": "Surfshark VPN",
+            "link": "https://surfshark.com/vpn"
+          }
+        ]
+      },
+      "thumbnail": "https://tpc.googlesyndication.com/simgad/16474344389678542971?sqp=-oaymwEKCFwQXCABUAFYAQ&rs=AOga4qn9YMw2MC4mofVlwNnCk8vXNtPbtg",
+      "favicon": "https://tpc.googlesyndication.com/simgad/1970122906134245814?sqp=-oaymwEKCCAQICABUAFYAQ&rs=AOga4qmZ2bZbmwKRvYpt3K7wEjQtc0Kg3Q",
+      "advertiser_info_token": "QVp3cnNrVl9GNkVvbGVJTkJpdHAtTkVsUGt3bkp4TS1td3VXT2RGNTRrVmlkNXJOZTY4T2JOUmJ2M0pQMkgwR1FoSjJLdmVBUzlJcHdTb25HZTRfbHIzTS1mZnc2OEFHVmNYSV8ycFJ4QzNCOGgyU2g1ZjUtdEk5bF9nQU5TNjRSaHJtSTJqSUFTVndwWmYwbW5halhWaHlYMXN3WnB5amk5OWFrc2JZdm4tNEl5SlN4VHJRZ0w3anZ2STlXbXJUZkljYjJlaUUwMVV5RXBOem5XdUxfSm1lcjFSQnRCUlJYNTluUW0wdk5aRFVZQVJoREdrNUZDNmtidEZCSngyM2dQUEVrNmlfdGFha0ZITUV5czIwbDNnU0gtT3Q="
+    },
+    {
+      "position": 2,
+      "block_position": "bottom",
+      "title": "VPN explained simply - VPN basics – a quick guide",
+      "link": "https://www.google.com/aclk?sa=L&ai=DChsSEwiHu-nu54uVAxXdbkcBHSkrNogYACICCAIQBhoCcXU&co=1&ase=2&gclid=EAIaIQobChMIh7vp7ueLlQMV3W5HAR0pKzaIEAMYAiAEEgLg5vD_BwE&cid=CAASugHkaN8sWXevmy3XulsjTMkJAvxObzocA69Z0wI2mfj_guXPSDrkzRi64caWEgQH_OESt44pwH4k3lsUraafFsEd6YIeUd0uUcdoTjlmO_KX9LiPDJD5NOQvViYVjTzXtggv402fEc1dvd_qz7__mdW4mXjP1ygWe1dYMpQ2NpK8t4ChnVF2R6f8i_JgwLt4ekTAo19n-_Q_ZzyJ1M-RbYaYnFhr6LLX2nw2hQYtJyLQn9nQHCHlhp9liSQ&cce=2&category=acrcp_v1_32&sig=AOD64_2l1EGryvfEx0NWb_daUnpX1j3BBA&q=&nis=4&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Qh78CegQIeRAB&adurl=",
+      "source": "NordVPN™",
+      "domain": "www.google.com",
+      "displayed_link": "https://www.nordvpn.com",
+      "snippet": "Worried about snoopers? NordVPN secures your internet and browsing with one...",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "What is a VPN?",
+            "link": "https://nordvpn.com/offer/what-is-a-vpn/?vpn=generic"
+          },
+          {
+            "title": "What is a VPN? Learn here",
+            "link": "https://www.google.com/aclk?sa=L&ai=DChsSEwiHu-nu54uVAxXdbkcBHSkrNogYACICCAIQCBoCcXU&co=1&ase=2&gclid=EAIaIQobChMIh7vp7ueLlQMV3W5HAR0pKzaIEAMYAiAFEgJel_D_BwE&cid=CAASugHkaN8sWXevmy3XulsjTMkJAvxObzocA69Z0wI2mfj_guXPSDrkzRi64caWEgQH_OESt44pwH4k3lsUraafFsEd6YIeUd0uUcdoTjlmO_KX9LiPDJD5NOQvViYVjTzXtggv402fEc1dvd_qz7__mdW4mXjP1ygWe1dYMpQ2NpK8t4ChnVF2R6f8i_JgwLt4ekTAo19n-_Q_ZzyJ1M-RbYaYnFhr6LLX2nw2hQYtJyLQn9nQHCHlhp9liSQ&cce=2&category=acrcp_v1_32&sig=AOD64_0KSdyhfuryh8SEPRvy9FUPnHzuTw&adurl=&q="
+          },
+          {
+            "title": "VPN – is it for me?",
+            "link": "https://www.google.com/aclk?sa=L&ai=DChsSEwiHu-nu54uVAxXdbkcBHSkrNogYACICCAIQCRoCcXU&co=1&ase=2&gclid=EAIaIQobChMIh7vp7ueLlQMV3W5HAR0pKzaIEAMYAiAGEgKiPfD_BwE&cid=CAASugHkaN8sWXevmy3XulsjTMkJAvxObzocA69Z0wI2mfj_guXPSDrkzRi64caWEgQH_OESt44pwH4k3lsUraafFsEd6YIeUd0uUcdoTjlmO_KX9LiPDJD5NOQvViYVjTzXtggv402fEc1dvd_qz7__mdW4mXjP1ygWe1dYMpQ2NpK8t4ChnVF2R6f8i_JgwLt4ekTAo19n-_Q_ZzyJ1M-RbYaYnFhr6LLX2nw2hQYtJyLQn9nQHCHlhp9liSQ&cce=2&category=acrcp_v1_32&sig=AOD64_1a-7Dj4XhylWd087OKdr-rJvhMcw&adurl=&q="
+          },
+          {
+            "title": "The Benefits of VPN",
+            "link": "https://nordvpn.com/offer/features/?vpn=generic"
+          },
+          {
+            "title": "Order Now!",
+            "link": "https://nordvpn.com/offer/pricing/?vpn=generic"
+          }
+        ]
+      },
+      "thumbnail": "https://tpc.googlesyndication.com/simgad/8047296516504010611?sqp=-oaymwEKCFwQXCABUAFYAQ&rs=AOga4qnb96KmiAMOXvP950bfsOY_DhMXrA",
+      "favicon": "https://tpc.googlesyndication.com/simgad/16098175442402189680?sqp=-oaymwEKCCAQICABUAFYAQ&rs=AOga4qmkI11pGJIVms6_lTnGwcKmo2WsUw",
+      "advertiser_info_token": "QVp3cnNrVjVLNFhjb1duRDhULVlRbXpZVDdjMzlJbGZUNldwVmFBT18wQXQ4aWg1MlJiUXJaN3VoeU1GNy04enc5ejRtWDlTRms4UFBPZHctcFNZOTI2SVpYYkd2ZkFITkp3M1hIWnJDQTI5R2diblF6TzVvNTEwTGYzNExIbU1VZ2VYMDJjdG00QVhlaG10ekpudElEdEE3NmZIU0hZUFluT1NYNDhIMTlpT2ZWUHBDSndneUU1eEJtY3JabHA5VllESHB5dGJuT2xiYWNqdExPN29xRlNhQ19DZnpIQ1VOZnA1UHVzQ2txTnVadFBzWVRlVGdVeDBMUmJTUlNxSDJVWjI4VlgzSWV5NE9ETTltOHBFTFBN"
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "What is a VPN and why it's important",
+      "link": "https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/",
+      "source": "Reddit · r/VPN",
+      "domain": "www.reddit.com",
+      "displayed_link": "100+ comments  ·  1 year ago",
+      "snippet": "VPN also known as a virtual private network is a service that creates an encrypted connection between the internet and your device.",
+      "snippet_highlighted_words": [
+        "VPN"
+      ],
+      "sitelinks": {
+        "list": [
+          {
+            "title": "What exactly is a VPN used for? : r/selfhosted",
+            "link": "https://www.reddit.com/r/selfhosted/comments/1m8uupj/what_exactly_is_a_vpn_used_for/",
+            "answer_count": 73,
+            "date": "Jul 25, 2025"
+          },
+          {
+            "title": "ELI5: What is a VPN and why do I need one?",
+            "link": "https://www.reddit.com/r/explainlikeimfive/comments/wysj1/eli5_what_is_a_vpn_and_why_do_i_need_one/",
+            "answer_count": 15,
+            "date": "Jul 22, 2012"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEz/RQD/RQD/RQD/RQD/RQD/RQD/RQD/RQD/PQD/NgD+XS32dlf5vK3////64dusLADUz9H+jXLOPAoSHiFrLBm3uLn3/f7jVS/b6e77pJDJo6H718//RQDw9ffs5+jm8fPIXlHqKwD5+PjolIP/VgP/SQLQ2uAyODvQ4ekABAhqcHK4ptuCAAAAHnRSTlMAPobB7P9mHdb//////////////////////////8J6YdtgAAABWUlEQVR4AWySYZNDMBCGWyw2SI9TGnWqILT////dm6Enc+MZH8Qz2V3Je/rj7Lgekec659N/fIgPnn+yCULaYaYwsCqShYhiQXQ+dJxIedltQDZfqZQyY6K1st3vO78WsiyNDI3zySK/caJUygTMzN7eTnxdBXMcb3+0TsMC30RUJfciqSIs8JCZycHwWV1n2UVuXDKzxsDOySWu5AGVoB/TUh5imhJFpQTNfav7uDcSlBERJLUN9LOLewn6LnpCNS0EyvKg+vLRjVRLUIuxe8hSDYyyLqatyr68jdO6cxpvWGIeDOQQujagNs7YuumbJmYiZz0E3aJvMc95Ps8F+rV6PQQ0JY4XpVqVv0Cu2lYps9HbDp6HRS9Kv1+vt1Z4HeDI/1yZiFMNFIzWqYkChftl8zSkegE6HSYmENgxYYQHRGzUHiLHyh3ModvZo7nHxA71ofwdSnYAAPpVIo4RUPiIAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 2,
+      "title": "What is a VPN?",
+      "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn",
+      "source": "Microsoft Azure",
+      "domain": "azure.microsoft.com",
+      "displayed_link": "https://azure.microsoft.com › cloud-computing-dictionary",
+      "snippet": "A VPN (virtual private network) is a networking and security technology that connects on-premises infrastructure with public cloud services.",
+      "snippet_highlighted_words": [
+        "A VPN (virtual private network"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABnRSTlMAAAAAAABupgeRAAAAWklEQVR4AWP4FKBEJPrip8wABrV7GOp3EYtGhgWjFoxaMGrBqAXf/OSIRD995CEWVO9hqN1FLBoOYNlnotF3iI7/O4lHQOVL3hONPo9agB2NWjBqwagFoxYAAB2zMZ7bQW2tAAAAAElFTkSuQmCC"
+    },
+    {
+      "position": 3,
+      "title": "What Is a VPN? How Does a Virtual Private Network Work?",
+      "link": "https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn",
+      "source": "Fortinet",
+      "domain": "www.fortinet.com",
+      "displayed_link": "https://www.fortinet.com › resources › cyberglossary",
+      "snippet": "A VPN, meaning a virtual private network masks your Internet protocol (IP) address, creating a private connection from a public wi-fi connection.",
+      "snippet_highlighted_words": [
+        "masks your Internet protocol (IP) address"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAxElEQVR4AWJwL/ChK6ad4aMW3tKUAbRbBicQg0AUrccurMNzOrARr+lgKrGEbSJnz1k/uDC7rJ/ZJUwg5PAOyTz+B0UxdEpHFKuaC4F5yAxvhePn/g0VtBOawcuYQ4jWIMJm9AKE6lgoEBo+HJYUPCCkzjJDBS2EZPX8j8VozjN+DSRZIBn30I5lDzcitAsWOixpYfxRuJK8fMqxiIwhHuadcrW5X97JsTC+JJlJBxaWzydGHMVVo+aVIMQTZN/PxOsUPgH0XG5VnZUfFQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 4,
+      "title": "What is a VPN? How VPNs work & when to use one",
+      "link": "https://protonvpn.com/what-is-a-vpn?srsltid=AfmBOoq0RXXLh_iLuLi707C724aLBC3cOO-mE4AvfLpr_kHypkMgaE5V",
+      "source": "Proton VPN",
+      "domain": "protonvpn.com",
+      "displayed_link": "https://protonvpn.com › what-is-a-vpn",
+      "snippet": "A VPN protects your online privacy by hiding your real IP address and encrypts your internet traffic so you can browse privately, avoid being tracked across ...",
+      "snippet_highlighted_words": [
+        "A VPN protects your online privacy by hiding your real IP address"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAABvklEQVR4Ae2VA5KkQRBG5xTrK6xOsLZt27btHdu2bdu2bU+7c76Kmhjb6njd/fNlZlGBpuAzxdJFaU05Kd6lvzdI9z05aFGgAyWEUF4au97WMl4pjD8uQsoOlB+S6hNSf0Gar1kMvc9k9JOs1cnTksK8KDmKBSsuosZ6EotHkgK4eouAuSLTIXcHfcC8HtasDh9nBACwDy3F7Xu7eLJQw8uzG8TFdaH+rH2Cw+VguI66ekIM7+1tfbizT45IKAJhkDUC9NaFxcoDE2TDSZMTZcd2iW4elkIEezf9Ij2+JMWTXAcqGuUjDKmX7wTnLwmQMoCdcYiBA34R4Bmu802RRBVIRh6nGECbz7Wcutl27nIHQIBu+BXc4jrgliEe7eD/bdy6+1EjOHa/pR+7bjfpuAi4zjlXhMJHK8XQ2/u2flBuqjWiXm4MLBONbZoahzRv/VU1EK4D1oWC8cz99dolYI1KcTf/QpuRHXQgr00yHineX2qc181R57Juo0etYPyr1EafvFVOWRzuMqhuAxNa+lCjgl8y+JBR02VsaM2Viia6np7IzALdRjA5i3S3TqWledJWftQLHcDB4sY3j6SdFGJiVRUZF1wAAAAASUVORK5CYII="
+    },
+    {
+      "position": 5,
+      "title": "What is a VPN? Virtual private network meaning",
+      "link": "https://nordvpn.com/what-is-a-vpn/?srsltid=AfmBOoqZnTLouHnmSg_2NNVDTA5H6-6_fHW6dVS6CbWXj4vlJJGruFo2",
+      "source": "NordVPN",
+      "domain": "nordvpn.com",
+      "displayed_link": "https://nordvpn.com › what-is-a-vpn",
+      "snippet": "A VPN (virtual private network) is a tool that creates an encrypted tunnel for your data, protects your online identity by hiding your IP address, and allows ...",
+      "snippet_highlighted_words": [
+        "A VPN (virtual private network"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAALVBMVEVHcEw/YP8+X/8+X/8+X/8+X/8/YP8+X/8+X/8+X/8+YP9CYP8+X/8+X/8+X/+ERyUxAAAAD3RSTlMAGWWUrZUSOsz/SwbheYU2KCYmAAAAoElEQVR4AWMgAgiZuKoheBUzgaALxtsyEwy8ITy2kxDunAQwd89MKDgN5nrCuFNAPK6ZcFAA5HKAGHNvgsgGIDcTxDgANmAikKsJYiwAa5kE5EYCzdBgYGgCmjgZYvBEFgaGWkmgMIR7gV2AgYsXwrWcOQPiupMzp4KNmg7hVoKNkpzpAOGygC3imJkA9QrYGeyTYB7VXAAiH8C4fAz0AwCzMU8XDnYUNQAAAABJRU5ErkJggg=="
+    },
+    {
+      "position": 6,
+      "title": "Virtual private network",
+      "link": "https://en.wikipedia.org/wiki/Virtual_private_network",
+      "source": "Wikipedia",
+      "domain": "en.wikipedia.org",
+      "displayed_link": "https://en.wikipedia.org › wiki › Virtual_private_network",
+      "snippet": "A virtual private network (VPN) is an overlay network that uses network virtualization to extend a private network across a public network, such as the Internet ...",
+      "snippet_highlighted_words": [
+        "an overlay network that uses network virtualization"
+      ],
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAnklEQVR4AeTNIQiDQABG4b+u17X1aF6PK3YEO9iMJqPVau82y4FgMezS0oVLhqsHtrcqeqzDXv3CEz/6L4yTtZM3dnHmPTtjzXZAXKYVo4agkU2GI2Lloc6JDez1+flswMu1EQZ3xlE7lK8eKDkjtwE+crBMV+wesKmCiisGGepZIfQJpMj9SNb2MYWrChjVkULuCyCfRvsdmBieyQQAsoDk/9ryhFMAAAAASUVORK5CYII="
+    },
+    {
+      "position": 7,
+      "title": "What is a VPN? - Mozilla",
+      "link": "https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/",
+      "source": "mozilla.org",
+      "domain": "www.mozilla.org",
+      "displayed_link": "https://www.mozilla.org › en-US › vpn › resource-center",
+      "snippet": "A VPN is a tool that allows you to access the internet securely wherever you are. A VPN works by creating a secure “tunnel” between your device and your VPN ...",
+      "snippet_highlighted_words": [
+        "A VPN is a tool that allows you to access the internet securely"
+      ],
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "What Is A Vpn?",
+            "link": "https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/#:~:text=What%20is%20a%20VPN%3F,-Many%20of%20us%20spend%20multiple"
+          },
+          {
+            "title": "How Do Vpns Work?",
+            "link": "https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/#:~:text=How%20do%20VPNs%20work%3F"
+          },
+          {
+            "title": "Are Vpns Safe?",
+            "link": "https://www.mozilla.org/en-US/products/vpn/resource-center/what-is-a-vpn/#:~:text=Are%20VPNs%20safe%3F"
+          }
+        ]
+      },
+      "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAb1BMVEUjHyAjGSAkEB8jFSAeUCMYfCcbbCYgSiMaeSckDh8XiSgA3jEKui0kAB8A3DEA2TEYgCgYhigTmSoUlioWkiklAB4A5DIQpisfTiMB0DAdYCQgPyIGxi8hNSEjHCAkCx8gQyIabiYhLyEeWiQMuC0mQL21AAAApUlEQVR4Ac2QAxbEMBBAwzaarW3c/4prVk+rH+eHg34HJvRcX8EvjnGLImxzcYbbz1YqbQAD17sTjnbJs/QcA8xT/pEgNA6fysiLkwiiKPWzhZ15IqAIM61LVdVTSRuwtJOpFuTRTSRCtDtKtweyJJFk/vFY4/b1VOKmaSCK8mTpQUMQnvHGpa8cQ7ARBPeKx/BUYnIHL7x2woelistViShI9B8cADBeDbvz/ZwUAAAAAElFTkSuQmCC"
+    }
+  ],
+  "related_questions": [
+    {
+      "question": "What is VPN and why do I need it?",
+      "answer": "A VPN enables secure remote access to private networks and cloud resources. VPNs uses encryption and tunneling to protect traffic from unauthorized access. VPNs are commonly used to support flexible work models, protect sensitive data, and improve compliance.",
+      "answer_highlight": "enables secure remote access to private networks and cloud resources",
+      "source": {
+        "title": "What is a VPN? - Microsoft Azure",
+        "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn#:~:text=A%20VPN%20enables%20secure%20remote,sensitive%20data%2C%20and%20improve%20compliance.",
+        "source": "Microsoft Azure",
+        "domain": "azure.microsoft.com",
+        "displayed_link": "https://azure.microsoft.com › cloud-computing-dictionary",
+        "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABnRSTlMAAAAAAABupgeRAAAAWklEQVR4AWP4FKBEJPrip8wABrV7GOp3EYtGhgWjFoxaMGrBqAXf/OSIRD995CEWVO9hqN1FLBoOYNlnotF3iI7/O4lHQOVL3hONPo9agB2NWjBqwagFoxYAAB2zMZ7bQW2tAAAAAElFTkSuQmCC"
+      },
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFNVVzFLYTA4dGJqZHVTM05tVmtwUU9XZHROWFZsTUZOTGQwSktZbVJhVEZSdWIyRmZjbWhMYmw5d2VFcGZiRmx0Vmtkc1NVVk9Ra2RYVkdaamVWVkxhamg0V0ZVMmJsTndXR1oxU0VaSFRHaEhSbE5mUTI0MVYxVjRRUklYVlRCbmVHRjFMVEJGWm1seE5VNXZVR28zWmtVMlVWa2FJa0ZLUzB4R2JVczRMVkkyVTNCNlNGZHRSVWRUV0RGWmJHTlhlRzAzWjFOeFpsRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aXZxdVB1NTR1VkF4VjRGVmtGSFk4Yk1XMFFxN2tCS0FCNkJBZ2JFQUEiLCJxIjoiV2hhdCBpcyBWUE4gYW5kIHdoeSBkbyBJIG5lZWQgaXQ_IiwibGsiOiJHaUIzYUdGMElHbHpJSFp3YmlCaGJtUWdkMmg1SUdSdklHa2dibVZsWkNCcGRBIiwicWMiOiJDZzEzYUdGMElHbHpJR0VnZG5CdUVBQjkyYWt2UHciLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "Can I use a VPN for free?",
+      "text_blocks": [
+        {
+          "type": "paragraph",
+          "answer": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server.",
+          "reference_indexes": [
+            1,
+            5,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "How It Works"
+        },
+        {
+          "type": "paragraph",
+          "answer": "Without a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary:",
+          "reference_indexes": [
+            5,
+            6
+          ]
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi."
+            },
+            {
+              "type": "paragraph",
+              "answer": "IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous"
+            }
+          ],
+          "reference_indexes": [
+            1,
+            5
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "Primary Benefits"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Enhanced Privacy: Prevents companies from tracking your web history or selling your data."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship."
+            }
+          ],
+          "reference_indexes": [
+            1,
+            4,
+            0,
+            1,
+            7,
+            0,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "When and Why People Use Them"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling."
+            }
+          ],
+          "reference_indexes": [
+            4,
+            8,
+            0,
+            2,
+            6,
+            0
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "What a VPN Cannot Do"
+        },
+        {
+          "type": "paragraph",
+          "answer": "While VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites.",
+          "reference_indexes": [
+            3,
+            0,
+            1
+          ]
+        }
+      ],
+      "markdown": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server. [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn) [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [4](https://protonvpn.com/what-is-a-vpn)\n\n## How It Works\n\nWithout a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary: [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [6](https://www.dropbox.com/resources/what-is-vpn)\n\n- Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi.\n- IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous\n\n## Primary Benefits\n\n- Enhanced Privacy: Prevents companies from tracking your web history or selling your data.\n- Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels.\n- Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship.\n\n## When and Why People Use Them\n\n- Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting.\n- Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home.\n- Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling.\n\n## What a VPN Cannot Do\n\nWhile VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites. [3](https://www.youtube.com/shorts/uThJ51bExlc) [0](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9) [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n\n[[0] - What is a VPN for beginners and How to Use one in 2025.](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9)\n[[1] - What Is a VPN? How Does a Virtual Private Network Work? - Fortinet](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n[[2] - What is a VPN? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)\n[[3] - What is a VPN?](https://www.youtube.com/shorts/uThJ51bExlc)\n[[4] - What is a VPN? How VPNs work & when to use one | Proton VPN](https://protonvpn.com/what-is-a-vpn)\n[[5] - What is VPN and how does it work? | VPN explained in layers](https://www.youtube.com/watch?v=0QFXYL43GM0)\n[[6] - What is a VPN and how does it work? Everything you need to know](https://www.dropbox.com/resources/what-is-vpn)\n[[7] - Are VPNs Safe and Secure? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn)\n[[8] - What is a VPN and why it's important - Reddit](https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/)",
+      "reference_links": [
+        {
+          "index": 0,
+          "title": "What is a VPN for beginners and How to Use one in 2025.",
+          "link": "https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9",
+          "snippet": "A VPN, which stands for virtual private network, is an encrypted connection over the internet from a device, such as a computer, t...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_6xx3wmlrNXg_UIDkIv_hWkx94BYIkZVZqaNGEh_yBjscoct5vajNpHn1M96CA6pNJ9M0mw"
+        },
+        {
+          "index": 1,
+          "title": "What Is a VPN? How Does a Virtual Private Network Work? - Fortinet",
+          "link": "https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn",
+          "snippet": "VPN meaning: What does VPN stand for? A VPN, meaning a virtual private network masks your Internet protocol (IP) address, creating...",
+          "source": "Fortinet",
+          "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.fortinet.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4S1lXEZOKzO_oVEgEhkdLPYZ5ayqxj5QqngSe5mmzOhU7jRydp_O2Tyi8o6hUyD9Tvku5g"
+        },
+        {
+          "index": 2,
+          "title": "What is a VPN? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn",
+          "snippet": "VPN meaning. A VPN is a foundational networking and security technology in a cloud-first world where applications span on-premises...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30fN2DD0vVNBzZl2X14Z04U15l1D3AahMrt18iKCzgd7AuW76R1Uat48tmA6aFt4HPpw1Yg"
+        },
+        {
+          "index": 3,
+          "title": "What is a VPN?",
+          "link": "https://www.youtube.com/shorts/uThJ51bExlc",
+          "snippet": "What is a VPN? Like. 6. What is a VPN? Ever wondered what a VPN actually does? Spoiler: it's not a private train carriage for nerd...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQitMmfuTg5DmdO6xnq_hKtuLFgebCPMqvvycIZf-l7nfEtIt_cHMNU0iGJM0L1bxZVwTxDmJk"
+        },
+        {
+          "index": 4,
+          "title": "What is a VPN? How VPNs work & when to use one | Proton VPN",
+          "link": "https://protonvpn.com/what-is-a-vpn",
+          "snippet": "What is a VPN? VPN stands for virtual private network and refers to a suite of technologies designed to protect your privacy when ...",
+          "source": "Proton VPN",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://protonvpn.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGOnlEkyffxMNhBoDLxKxxTrXlQSmqMAyn2oK6KGFwCKc8BBqquavm7i_-KxJl5Ob2q3JzQw"
+        },
+        {
+          "index": 5,
+          "title": "What is VPN and how does it work? | VPN explained in layers",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0",
+          "snippet": "A VPN, which stands for virtual private network, is a tool that protects an internet connection by masking the user's IP address a...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTICyQ7xx6FAQ4RMr2vXo_-FTVyc6k6FzOz1RCa-GDE_REEPGsUTY_m1jGuawV_ND3jmwZC1OI"
+        },
+        {
+          "index": 6,
+          "title": "What is a VPN and how does it work? Everything you need to know",
+          "link": "https://www.dropbox.com/resources/what-is-vpn",
+          "snippet": "VPN meaning and definition A VPN, or Virtual Private Network provides a secure, encrypted connection over a less secure network, s...",
+          "source": "Dropbox.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.dropbox.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS1O5E8WdUaH55vKCpt-4tQk3aDy1DzSJuZa9bMzafkyFf4MODueYxQC_cJrcG1aubqXU_YEA"
+        },
+        {
+          "index": 7,
+          "title": "Are VPNs Safe and Secure? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn",
+          "snippet": "What is a VPN? A VPN, which stands for virtual private network, is a type of online service that allows you to hide your browsing ...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROPi23WBfCAPEGhQbsHoDXnV6KnMceaa1akRMKktQGu9J0hW_rpBxSJvim-7ovZ95BnZr3Hw"
+        },
+        {
+          "index": 8,
+          "title": "What is a VPN and why it's important - Reddit",
+          "link": "https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/",
+          "snippet": "{\"passageText\":\"VPN Core Function: A VPN, or virtual private network, establishes an encrypted connection between a user's de...",
+          "source": "www.reddit.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.reddit.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+        }
+      ],
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFNVVzFLYTA4dGJqZHVTM05tVmtwUU9XZHROWFZsTUZOTGQwSktZbVJhVEZSdWIyRmZjbWhMYmw5d2VFcGZiRmx0Vmtkc1NVVk9Ra2RYVkdaamVWVkxhamg0V0ZVMmJsTndXR1oxU0VaSFRHaEhSbE5mUTI0MVYxVjRRUklYVlRCbmVHRjFMVEJGWm1seE5VNXZVR28zWmtVMlVWa2FJa0ZLUzB4R2JVczRMVkkyVTNCNlNGZHRSVWRUV0RGWmJHTlhlRzAzWjFOeFpsRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aXZxdVB1NTR1VkF4VjRGVmtGSFk4Yk1XMFFxN2tCS0FCNkJBZ2NFQUEiLCJxIjoiQ2FuIEkgdXNlIGEgVlBOIGZvciBmcmVlPyIsImxrIjoiR2hoallXNGdhU0IxYzJVZ1lTQjJjRzRnWm05eUlHWnlaV1UiLCJxYyI6IkNnMTNhR0YwSUdseklHRWdkbkJ1RUFCOTJha3ZQdyIsImdsIjoidXMiLCJobCI6ImVuIn0"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "How do I turn on VPN?",
+      "text_blocks": [
+        {
+          "type": "paragraph",
+          "answer": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server.",
+          "reference_indexes": [
+            1,
+            5,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "How It Works"
+        },
+        {
+          "type": "paragraph",
+          "answer": "Without a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary:",
+          "reference_indexes": [
+            5,
+            6
+          ]
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi."
+            },
+            {
+              "type": "paragraph",
+              "answer": "IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous"
+            }
+          ],
+          "reference_indexes": [
+            1,
+            5
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "Primary Benefits"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Enhanced Privacy: Prevents companies from tracking your web history or selling your data."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship."
+            }
+          ],
+          "reference_indexes": [
+            1,
+            4,
+            0,
+            1,
+            7,
+            0,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "When and Why People Use Them"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling."
+            }
+          ],
+          "reference_indexes": [
+            4,
+            8,
+            0,
+            2,
+            6,
+            0
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "What a VPN Cannot Do"
+        },
+        {
+          "type": "paragraph",
+          "answer": "While VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites.",
+          "reference_indexes": [
+            3,
+            0,
+            1
+          ]
+        }
+      ],
+      "markdown": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server. [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn) [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [4](https://protonvpn.com/what-is-a-vpn)\n\n## How It Works\n\nWithout a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary: [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [6](https://www.dropbox.com/resources/what-is-vpn)\n\n- Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi.\n- IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous\n\n## Primary Benefits\n\n- Enhanced Privacy: Prevents companies from tracking your web history or selling your data.\n- Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels.\n- Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship.\n\n## When and Why People Use Them\n\n- Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting.\n- Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home.\n- Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling.\n\n## What a VPN Cannot Do\n\nWhile VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites. [3](https://www.youtube.com/shorts/uThJ51bExlc) [0](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9) [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n\n[[0] - What is a VPN for beginners and How to Use one in 2025.](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9)\n[[1] - What Is a VPN? How Does a Virtual Private Network Work? - Fortinet](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n[[2] - What is a VPN? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)\n[[3] - What is a VPN?](https://www.youtube.com/shorts/uThJ51bExlc)\n[[4] - What is a VPN? How VPNs work & when to use one | Proton VPN](https://protonvpn.com/what-is-a-vpn)\n[[5] - What is VPN and how does it work? | VPN explained in layers](https://www.youtube.com/watch?v=0QFXYL43GM0)\n[[6] - What is a VPN and how does it work? Everything you need to know](https://www.dropbox.com/resources/what-is-vpn)\n[[7] - Are VPNs Safe and Secure? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn)\n[[8] - What is a VPN and why it's important - Reddit](https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/)",
+      "reference_links": [
+        {
+          "index": 0,
+          "title": "What is a VPN for beginners and How to Use one in 2025.",
+          "link": "https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9",
+          "snippet": "A VPN, which stands for virtual private network, is an encrypted connection over the internet from a device, such as a computer, t...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_6xx3wmlrNXg_UIDkIv_hWkx94BYIkZVZqaNGEh_yBjscoct5vajNpHn1M96CA6pNJ9M0mw"
+        },
+        {
+          "index": 1,
+          "title": "What Is a VPN? How Does a Virtual Private Network Work? - Fortinet",
+          "link": "https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn",
+          "snippet": "VPN meaning: What does VPN stand for? A VPN, meaning a virtual private network masks your Internet protocol (IP) address, creating...",
+          "source": "Fortinet",
+          "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.fortinet.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4S1lXEZOKzO_oVEgEhkdLPYZ5ayqxj5QqngSe5mmzOhU7jRydp_O2Tyi8o6hUyD9Tvku5g"
+        },
+        {
+          "index": 2,
+          "title": "What is a VPN? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn",
+          "snippet": "VPN meaning. A VPN is a foundational networking and security technology in a cloud-first world where applications span on-premises...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30fN2DD0vVNBzZl2X14Z04U15l1D3AahMrt18iKCzgd7AuW76R1Uat48tmA6aFt4HPpw1Yg"
+        },
+        {
+          "index": 3,
+          "title": "What is a VPN?",
+          "link": "https://www.youtube.com/shorts/uThJ51bExlc",
+          "snippet": "What is a VPN? Like. 6. What is a VPN? Ever wondered what a VPN actually does? Spoiler: it's not a private train carriage for nerd...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQitMmfuTg5DmdO6xnq_hKtuLFgebCPMqvvycIZf-l7nfEtIt_cHMNU0iGJM0L1bxZVwTxDmJk"
+        },
+        {
+          "index": 4,
+          "title": "What is a VPN? How VPNs work & when to use one | Proton VPN",
+          "link": "https://protonvpn.com/what-is-a-vpn",
+          "snippet": "What is a VPN? VPN stands for virtual private network and refers to a suite of technologies designed to protect your privacy when ...",
+          "source": "Proton VPN",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://protonvpn.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGOnlEkyffxMNhBoDLxKxxTrXlQSmqMAyn2oK6KGFwCKc8BBqquavm7i_-KxJl5Ob2q3JzQw"
+        },
+        {
+          "index": 5,
+          "title": "What is VPN and how does it work? | VPN explained in layers",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0",
+          "snippet": "A VPN, which stands for virtual private network, is a tool that protects an internet connection by masking the user's IP address a...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTICyQ7xx6FAQ4RMr2vXo_-FTVyc6k6FzOz1RCa-GDE_REEPGsUTY_m1jGuawV_ND3jmwZC1OI"
+        },
+        {
+          "index": 6,
+          "title": "What is a VPN and how does it work? Everything you need to know",
+          "link": "https://www.dropbox.com/resources/what-is-vpn",
+          "snippet": "VPN meaning and definition A VPN, or Virtual Private Network provides a secure, encrypted connection over a less secure network, s...",
+          "source": "Dropbox.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.dropbox.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS1O5E8WdUaH55vKCpt-4tQk3aDy1DzSJuZa9bMzafkyFf4MODueYxQC_cJrcG1aubqXU_YEA"
+        },
+        {
+          "index": 7,
+          "title": "Are VPNs Safe and Secure? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn",
+          "snippet": "What is a VPN? A VPN, which stands for virtual private network, is a type of online service that allows you to hide your browsing ...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROPi23WBfCAPEGhQbsHoDXnV6KnMceaa1akRMKktQGu9J0hW_rpBxSJvim-7ovZ95BnZr3Hw"
+        },
+        {
+          "index": 8,
+          "title": "What is a VPN and why it's important - Reddit",
+          "link": "https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/",
+          "snippet": "{\"passageText\":\"VPN Core Function: A VPN, or virtual private network, establishes an encrypted connection between a user's de...",
+          "source": "www.reddit.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.reddit.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+        }
+      ],
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFNVVzFLYTA4dGJqZHVTM05tVmtwUU9XZHROWFZsTUZOTGQwSktZbVJhVEZSdWIyRmZjbWhMYmw5d2VFcGZiRmx0Vmtkc1NVVk9Ra2RYVkdaamVWVkxhamg0V0ZVMmJsTndXR1oxU0VaSFRHaEhSbE5mUTI0MVYxVjRRUklYVlRCbmVHRjFMVEJGWm1seE5VNXZVR28zWmtVMlVWa2FJa0ZLUzB4R2JVczRMVkkyVTNCNlNGZHRSVWRUV0RGWmJHTlhlRzAzWjFOeFpsRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aXZxdVB1NTR1VkF4VjRGVmtGSFk4Yk1XMFFxN2tCS0FCNkJBZ2RFQUEiLCJxIjoiSG93IGRvIEkgdHVybiBvbiBWUE4_IiwibGsiOiJHaEpvYjNjZ2RHOGdkSFZ5YmlCdmJpQjJjRzQiLCJxYyI6IkNnMTNhR0YwSUdseklHRWdkbkJ1RUFCOTJha3ZQdyIsImdsIjoidXMiLCJobCI6ImVuIn0"
+    },
+    {
+      "is_ai_overview": true,
+      "question": "How do I get a VPN?",
+      "text_blocks": [
+        {
+          "type": "paragraph",
+          "answer": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server.",
+          "reference_indexes": [
+            1,
+            5,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "How It Works"
+        },
+        {
+          "type": "paragraph",
+          "answer": "Without a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary:",
+          "reference_indexes": [
+            5,
+            6
+          ]
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi."
+            },
+            {
+              "type": "paragraph",
+              "answer": "IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous"
+            }
+          ],
+          "reference_indexes": [
+            1,
+            5
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "Primary Benefits"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Enhanced Privacy: Prevents companies from tracking your web history or selling your data."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship."
+            }
+          ],
+          "reference_indexes": [
+            1,
+            4,
+            0,
+            1,
+            7,
+            0,
+            4
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "When and Why People Use Them"
+        },
+        {
+          "type": "unordered_list",
+          "items": [
+            {
+              "type": "paragraph",
+              "answer": "Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home."
+            },
+            {
+              "type": "paragraph",
+              "answer": "Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling."
+            }
+          ],
+          "reference_indexes": [
+            4,
+            8,
+            0,
+            2,
+            6,
+            0
+          ]
+        },
+        {
+          "type": "header",
+          "answer": "What a VPN Cannot Do"
+        },
+        {
+          "type": "paragraph",
+          "answer": "While VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites.",
+          "reference_indexes": [
+            3,
+            0,
+            1
+          ]
+        }
+      ],
+      "markdown": "A VPN, or Virtual Private Network, is a cybersecurity tool that creates a secure, encrypted tunnel between your device and the internet. It hides your browsing activity from your Internet Service Provider (ISP) and masks your IP address by routing your traffic through a remote server. [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn) [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [4](https://protonvpn.com/what-is-a-vpn)\n\n## How It Works\n\nWithout a VPN, your data travels directly through your ISP. A VPN acts as a secure intermediary: [5](https://www.youtube.com/watch?v=0QFXYL43GM0) [6](https://www.dropbox.com/resources/what-is-vpn)\n\n- Encryption: It scrambles your data so that hackers, advertisers, or your ISP cannot read what you are doing, which is especially vital on unsecured public Wi-Fi.\n- IP Masking: It replaces your real IP address (which reveals your physical location) with the IP address of the VPN server, making your online activities much more anonymous\n\n## Primary Benefits\n\n- Enhanced Privacy: Prevents companies from tracking your web history or selling your data.\n- Better Security: Protects your personal data from cybercriminals when you are connected to public Wi-Fi networks in coffee shops, airports, or hotels.\n- Bypassing Restrictions: Allows you to virtually \"relocate\" your device to another country, which can help bypass geographic blocks on streaming content or local internet censorship.\n\n## When and Why People Use Them\n\n- Everyday Browsing: Users on Reddit generally agree that a VPN is a foundational layer of protection for everyday privacy and safe torrenting.\n- Remote Work: Companies use VPNs to allow employees to securely access internal office networks and confidential data from home.\n- Bypassing Throttling: Sometimes ISPs deliberately slow down your internet speeds depending on the websites you visit. A VPN prevents them from seeing what you are doing, which can sometimes stop this throttling.\n\n## What a VPN Cannot Do\n\nWhile VPNs are excellent for privacy in transit, they are not a replacement for good overall digital hygiene. A VPN will not stop you from intentionally downloading malware, falling for phishing scams, or willingly handing over your personal information on social media or shopping sites. [3](https://www.youtube.com/shorts/uThJ51bExlc) [0](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9) [1](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n\n[[0] - What is a VPN for beginners and How to Use one in 2025.](https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9)\n[[1] - What Is a VPN? How Does a Virtual Private Network Work? - Fortinet](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)\n[[2] - What is a VPN? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)\n[[3] - What is a VPN?](https://www.youtube.com/shorts/uThJ51bExlc)\n[[4] - What is a VPN? How VPNs work & when to use one | Proton VPN](https://protonvpn.com/what-is-a-vpn)\n[[5] - What is VPN and how does it work? | VPN explained in layers](https://www.youtube.com/watch?v=0QFXYL43GM0)\n[[6] - What is a VPN and how does it work? Everything you need to know](https://www.dropbox.com/resources/what-is-vpn)\n[[7] - Are VPNs Safe and Secure? - Microsoft Azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn)\n[[8] - What is a VPN and why it's important - Reddit](https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/)",
+      "reference_links": [
+        {
+          "index": 0,
+          "title": "What is a VPN for beginners and How to Use one in 2025.",
+          "link": "https://www.youtube.com/watch?v=P_ZV6tW6D34&t=9",
+          "snippet": "A VPN, which stands for virtual private network, is an encrypted connection over the internet from a device, such as a computer, t...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_6xx3wmlrNXg_UIDkIv_hWkx94BYIkZVZqaNGEh_yBjscoct5vajNpHn1M96CA6pNJ9M0mw"
+        },
+        {
+          "index": 1,
+          "title": "What Is a VPN? How Does a Virtual Private Network Work? - Fortinet",
+          "link": "https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn",
+          "snippet": "VPN meaning: What does VPN stand for? A VPN, meaning a virtual private network masks your Internet protocol (IP) address, creating...",
+          "source": "Fortinet",
+          "favicon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.fortinet.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4S1lXEZOKzO_oVEgEhkdLPYZ5ayqxj5QqngSe5mmzOhU7jRydp_O2Tyi8o6hUyD9Tvku5g"
+        },
+        {
+          "index": 2,
+          "title": "What is a VPN? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn",
+          "snippet": "VPN meaning. A VPN is a foundational networking and security technology in a cloud-first world where applications span on-premises...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30fN2DD0vVNBzZl2X14Z04U15l1D3AahMrt18iKCzgd7AuW76R1Uat48tmA6aFt4HPpw1Yg"
+        },
+        {
+          "index": 3,
+          "title": "What is a VPN?",
+          "link": "https://www.youtube.com/shorts/uThJ51bExlc",
+          "snippet": "What is a VPN? Like. 6. What is a VPN? Ever wondered what a VPN actually does? Spoiler: it's not a private train carriage for nerd...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQitMmfuTg5DmdO6xnq_hKtuLFgebCPMqvvycIZf-l7nfEtIt_cHMNU0iGJM0L1bxZVwTxDmJk"
+        },
+        {
+          "index": 4,
+          "title": "What is a VPN? How VPNs work & when to use one | Proton VPN",
+          "link": "https://protonvpn.com/what-is-a-vpn",
+          "snippet": "What is a VPN? VPN stands for virtual private network and refers to a suite of technologies designed to protect your privacy when ...",
+          "source": "Proton VPN",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://protonvpn.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGOnlEkyffxMNhBoDLxKxxTrXlQSmqMAyn2oK6KGFwCKc8BBqquavm7i_-KxJl5Ob2q3JzQw"
+        },
+        {
+          "index": 5,
+          "title": "What is VPN and how does it work? | VPN explained in layers",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0",
+          "snippet": "A VPN, which stands for virtual private network, is a tool that protects an internet connection by masking the user's IP address a...",
+          "source": "YouTube",
+          "favicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4AWNwL/ChCFPHgP8MxqxA7ArEKVBcCcUNIAznI+RdQXrABgAZpv8ZjP6Tg0F6QQbsosCAXSADHmGVVPIC0jKEDHgAMuAbmgRE445D///feYzXIJBeBigH04BVW/9DAcgwqEGYaik2gGIvUByIlEbjDooTEiwps5GRlNmolpkowgBVP9wMSzSKGAAAAABJRU5ErkJggg==",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTICyQ7xx6FAQ4RMr2vXo_-FTVyc6k6FzOz1RCa-GDE_REEPGsUTY_m1jGuawV_ND3jmwZC1OI"
+        },
+        {
+          "index": 6,
+          "title": "What is a VPN and how does it work? Everything you need to know",
+          "link": "https://www.dropbox.com/resources/what-is-vpn",
+          "snippet": "VPN meaning and definition A VPN, or Virtual Private Network provides a secure, encrypted connection over a less secure network, s...",
+          "source": "Dropbox.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.dropbox.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS1O5E8WdUaH55vKCpt-4tQk3aDy1DzSJuZa9bMzafkyFf4MODueYxQC_cJrcG1aubqXU_YEA"
+        },
+        {
+          "index": 7,
+          "title": "Are VPNs Safe and Secure? - Microsoft Azure",
+          "link": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-vpn",
+          "snippet": "What is a VPN? A VPN, which stands for virtual private network, is a type of online service that allows you to hide your browsing ...",
+          "source": "Microsoft Azure",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://azure.microsoft.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROPi23WBfCAPEGhQbsHoDXnV6KnMceaa1akRMKktQGu9J0hW_rpBxSJvim-7ovZ95BnZr3Hw"
+        },
+        {
+          "index": 8,
+          "title": "What is a VPN and why it's important - Reddit",
+          "link": "https://www.reddit.com/r/VPN/comments/1f4whk1/what_is_a_vpn_and_why_its_important/",
+          "snippet": "{\"passageText\":\"VPN Core Function: A VPN, or virtual private network, establishes an encrypted connection between a user's de...",
+          "source": "www.reddit.com",
+          "favicon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.reddit.com&client=AIM&size=16&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+        }
+      ],
+      "next_page_token": "eyJmYyI6IkVxRUJDbUpCVFc0ekxYbFNVVzFLYTA4dGJqZHVTM05tVmtwUU9XZHROWFZsTUZOTGQwSktZbVJhVEZSdWIyRmZjbWhMYmw5d2VFcGZiRmx0Vmtkc1NVVk9Ra2RYVkdaamVWVkxhamg0V0ZVMmJsTndXR1oxU0VaSFRHaEhSbE5mUTI0MVYxVjRRUklYVlRCbmVHRjFMVEJGWm1seE5VNXZVR28zWmtVMlVWa2FJa0ZLUzB4R2JVczRMVkkyVTNCNlNGZHRSVWRUV0RGWmJHTlhlRzAzWjFOeFpsRSIsImZjdiI6IjMiLCJ2ZXQiOiIyYWhVS0V3aXZxdVB1NTR1VkF4VjRGVmtGSFk4Yk1XMFFxN2tCS0FCNkJBZ2dFQUEiLCJxIjoiSG93IGRvIEkgZ2V0IGEgVlBOPyIsImxrIjoiR2hKb2IzY2daRzhnYVNCblpYUWdZU0IyY0c0IiwicWMiOiJDZzEzYUdGMElHbHpJR0VnZG5CdUVBQjkyYWt2UHciLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    }
+  ],
+  "perspectives": [
+    {
+      "position": 1,
+      "title": "VPNs make you invisible. (NEW VIDEO ——> link in bio)",
+      "link": "https://www.instagram.com/p/DZnhzKlPp4f/",
+      "author": "networkchuck · Instagram",
+      "source": "Tech YouTuber",
+      "date": "18 hours ago",
+      "iso_date": "2026-06-15T19:06:36Z",
+      "reactions": "1K+ likes",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt1DBF8vqGzFybE7FAAOVrWCEf6vJczB74Kv66oV6I_vM_B0VgeKvEm8vspA&usqp=CAI&s"
+    },
+    {
+      "position": 2,
+      "title": "The Best VPNs We've Tested (June 2026)",
+      "link": "https://www.pcmag.com/picks/the-best-vpn-services",
+      "author": "Justyn Newman · PCMag",
+      "source": "Tech writer for WizCase",
+      "iso_date": "2026-06-01T07:00:00Z",
+      "reactions": "2 weeks ago",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZ6cilj1Wz5YT8ZXXkhjUw9wt0Y9WKEygaWqavzzG4gw3vLQhwZ55-ytXfg&usqp=CAI&s"
+    },
+    {
+      "position": 3,
+      "title": "The Truth About VPNs, Free VPNs, and Online Privacy \\\\ Day 19 - 2026 30 Day Security Challenge",
+      "link": "https://www.youtube.com/watch?v=onmT-SXckcE",
+      "author": "Shannon Morse · YouTube",
+      "source": "Security content producer",
+      "date": "2 weeks ago",
+      "iso_date": "2026-06-02T12:40:00Z",
+      "reactions": "10.7K+ views",
+      "thumbnail": "https://img.youtube.com/vi/onmT-SXckcE/hqdefault.jpg"
+    },
+    {
+      "position": 4,
+      "title": "VPNs. What are they, and what happens to your data and personal safety when you don’t use one, or choose the wrong one. When you connect to the internet at home, in a hotel, or on public Wi-Fi, your provider can see and log your activity. They do this to op",
+      "link": "https://www.linkedin.com/posts/paulwalsh_vpns-what-are-they-and-what-happens-to-activity-7465442637815365633-Ls6_",
+      "author": "Paul Walsh · LinkedIn",
+      "source": "Online safety & privacy expert",
+      "iso_date": "2026-05-27T16:43:46Z",
+      "reactions": "3 weeks ago"
+    },
+    {
+      "position": 6,
+      "title": "What is VPN? | VPN explained in 2 minutes!",
+      "link": "https://www.youtube.com/watch?v=InXJw25iTes&vl=en",
+      "author": "CoolTechZone · YouTube",
+      "source": "Video production service in Cardiff, Wales",
+      "date": "1 month ago",
+      "iso_date": "2026-05-10T01:00:30Z",
+      "reactions": "390+ views",
+      "thumbnail": "https://img.youtube.com/vi/InXJw25iTes/hqdefault.jpg"
+    },
+    {
+      "position": 8,
+      "title": "What Is A VPN - Simplest Explanation For Beginners?",
+      "link": "https://www.youtube.com/watch?v=C9RMO7OEP6s&vl=en",
+      "author": "Create WP Site · YouTube",
+      "source": "WordPress discounts",
+      "date": "1 month ago",
+      "iso_date": "2026-05-12T21:27:12Z",
+      "reactions": "260+ views",
+      "thumbnail": "https://img.youtube.com/vi/C9RMO7OEP6s/hqdefault.jpg"
+    },
+    {
+      "position": 9,
+      "title": "What does a VPN really do?",
+      "link": "https://www.reddit.com/r/VPN_Question/comments/1tohyqe/what_does_a_vpn_really_do/",
+      "author": "r/VPN_Question",
+      "source": "Reddit",
+      "date": "3 weeks ago",
+      "iso_date": "2026-05-26T07:00:00Z",
+      "reactions": "20+ comments"
+    },
+    {
+      "position": 10,
+      "title": "A privacy researcher’s honest take: What a Proxy Actually Does A proxy stands between you and the website you want to visit. It sends your request for you and hides your real IP address. It’s simple and fast, and it helps you get around geo-restrictions or access content blocked in your area. But there’s a catch. Most common proxies are configured per-app (often browsers), but some types (like SOCKS5) can handle broader traffic depending on setup. Your messaging apps, background syncing, and email still use your real connection. Many proxies don’t provide end-to-end encryption by default, unlike VPNs. The website you visit can’t see your IP, but anyone monitoring your connection, like your ISP, a network admin, or someone on public Wi-Fi, still can. Free proxies are usually the worst. Studies show that many free proxy services log your activity, add ads, or sell your browsing data. You wanted privacy, but they made money off you instead. What a VPN Actually Does A VPN create",
+      "link": "https://x.com/T3chFalcon/status/2060130244401742134?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet",
+      "author": "T3chFalcon · X",
+      "source": "Privacy researcher",
+      "date": "3 weeks ago",
+      "iso_date": "2026-05-28T07:00:00Z",
+      "reactions": "90+ likes"
+    },
+    {
+      "position": 11,
+      "title": "Personal VPNs: Encryption Myths and Data Security Explained",
+      "link": "https://www.youtube.com/watch?v=2fCTrjmDqyg",
+      "author": "IBM Technology · YouTube",
+      "source": "Tech educational content provider",
+      "date": "Mar 21, 2026",
+      "iso_date": "2026-03-21T11:00:05Z",
+      "reactions": "85.5K+ views",
+      "thumbnail": "https://img.youtube.com/vi/2fCTrjmDqyg/hqdefault.jpg"
+    }
+  ],
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "What is a VPN and how does it work? | Beginner's Guide to ...",
+      "link": "https://www.youtube.com/watch?v=kpn2efj6xjI",
+      "source": "YouTube",
+      "channel": "CBT Nuggets",
+      "length": "7:14",
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "position": 2,
+      "title": "Should you use a VPN in 2026?",
+      "link": "https://www.youtube.com/watch?v=axfNxZ1R6C4",
+      "source": "YouTube",
+      "channel": "NetworkChuck",
+      "length": "16:37",
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "position": 3,
+      "title": "What is VPN and how does it work? | VPN explained in layers",
+      "link": "https://www.youtube.com/watch?v=0QFXYL43GM0",
+      "source": "YouTube",
+      "channel": "Cybernews",
+      "length": "18:11",
+      "key_moments": [
+        {
+          "time": "00:00",
+          "seconds": 0,
+          "title": "Intro",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=0",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScvcG1wAtaRXfQVDqiSbU2ImyNz1npR0t8mtGujD69nA&s"
+        },
+        {
+          "time": "00:28",
+          "seconds": 28,
+          "title": "Layer 1: Surface (Basic Concepts)",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=28",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiZRIw7F2s3IJ1dzafAqLOJnY5_DpxaH8y7DfOI4bnyw&s"
+        },
+        {
+          "time": "03:06",
+          "seconds": 186,
+          "title": "Layer 2: Intermediate (Common features and use cases)",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=186",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp99gyi7UQW-adcHbzN_JrLOZdhZLBYTufjKvIeJ6uDQ&s"
+        },
+        {
+          "time": "06:56",
+          "seconds": 416,
+          "title": "Layer 3: Advanced (Advanced features and technical details)",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=416",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM7oauuh-bAd8LvKWf3tnRk4ZM1NGXaR03D-jud0YcWA&s"
+        },
+        {
+          "time": "10:44",
+          "seconds": 644,
+          "title": "Layer 4: Expert (Deep dive into security)",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=644",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZvzxnf275ZbXFCJ44grj2GzLOhoocSzy4uHG8xArDPw&s"
+        },
+        {
+          "time": "14:34",
+          "seconds": 874,
+          "title": "Layer 5: Into the VPN abyss (Highly technical and niche topics)",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=874",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVES6gU50QoJ8oS7eXg-bOj_0b814Lw6sXU8T5t8dpAQ&s"
+        },
+        {
+          "time": "17:39",
+          "seconds": 1059,
+          "title": "Final words",
+          "link": "https://www.youtube.com/watch?v=0QFXYL43GM0&t=1059",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmqxd7d1tQva73x9plRUe7nFonVtH3junwKYx1AVIRA&s"
+        }
+      ],
+      "image": "data:image/jpeg;base64,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"
+    }
+  ],
+  "inline_shorts": [
+    {
+      "position": 1,
+      "title": "What is a VPN?",
+      "link": "https://www.youtube.com/shorts/uThJ51bExlc",
+      "source": "YouTube",
+      "author": "Craig'n'Dave",
+      "length": "2:14",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQPZk50vF2PIwo6bM32567B0Xgiy0e9vAavLg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcuPLJgdPUH2RPkurvIcVfDepHaxklVR48_NMgiwiSg3uGH6F833HAqAk&s=10"
+    },
+    {
+      "position": 2,
+      "title": "This infographic explains how a VPN (Virtual Private Network ...",
+      "link": "https://www.instagram.com/reel/DY2OO5ZMr1w/",
+      "source": "Instagram",
+      "author": "SecureReading",
+      "length": "0:05",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVmtxueSot28LKoI3y44b1upurxsfjoxn9w1YRJD1bCPyOAi9Mna3bTo&s=10"
+    },
+    {
+      "position": 3,
+      "title": "What is a VPN? #vpn #explained",
+      "link": "https://www.youtube.com/shorts/Rud_tO3QuOc",
+      "source": "YouTube",
+      "author": "Hyve Managed Hosting",
+      "length": "1:09",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTBQ5YAbQRIL3hlQI82zGKVx3IKy_Gf-9CveQ",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasD4w5hrtOKNsFlPOentc2t5KZQ1Cm9InUv7fCl7PBPQLaTG3Jyf-yMw&s=10"
+    },
+    {
+      "position": 4,
+      "title": "How do vpn's work? #vpn #internet #schoolofit #cybersecurity",
+      "link": "https://www.instagram.com/reel/DNSKvrosgx9/",
+      "source": "Instagram",
+      "author": "School of IT",
+      "length": "1:56",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRwZoxDYqA8VaW-rrhzDktNHuzD15U7_oqCFg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvx9k_6f3z7_t1O6xrWqOde66xWwEbOrfnlKtKpYH6hQZVPBca4gJPKjk&s=10"
+    },
+    {
+      "position": 5,
+      "title": "What Is a VPN? Explained Simply! #privacy",
+      "link": "https://www.youtube.com/shorts/jRaG7yFEbIk",
+      "source": "YouTube",
+      "author": "Safety Detectives",
+      "length": "0:49",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQcEEtaDglhlezT365FEy76Nz1-wJcJ85WcQQ",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLPzdx1u2B65Xp4nkCjo-bpc0ZRr0wxDCEsAWHdiJ1SbFGXdnqJWdzDEk&s=10"
+    },
+    {
+      "position": 6,
+      "title": "How VPNs Protect Your Traffic Over Untrusted Networks",
+      "link": "https://www.youtube.com/shorts/z7UWDyKmr2E",
+      "source": "YouTube",
+      "author": "Total Seminars",
+      "length": "1:06",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkVF1z1aJ1VrmP0pJPAllG5mz-5CypjtYcz32Tdlbc9Qmoif4X46pj5kQ&s=10"
+    },
+    {
+      "position": 7,
+      "title": "What is a VPN? What happens when I am using a VPN?",
+      "link": "https://www.youtube.com/shorts/p1LJnazaBTs",
+      "source": "YouTube",
+      "author": "The TechCave",
+      "length": "0:59",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOkCfz1h6nhiGVKnfXsKA5r5uXG-hvtChbZB8QuTSW7TYxZ7wLORPBxPs&s=10"
+    },
+    {
+      "position": 8,
+      "title": "What Your VPN Isn't Telling You",
+      "link": "https://www.youtube.com/shorts/NrZaG0qgXaI",
+      "source": "YouTube",
+      "author": "Bite Technology",
+      "length": "0:45",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__dhPyUoa-O1ftQm66Jz3tZRLe_kG50MK50DPypUaoXkn68XYMNulTOM&s=10"
+    },
+    {
+      "position": 9,
+      "title": "The Importance of Using a VPN (Your Connection Is Naked ...",
+      "link": "https://www.youtube.com/shorts/Sr36pEDE8Sk",
+      "source": "YouTube",
+      "author": "Marca Oficial de Rave Privacy",
+      "length": "0:23",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcS_T4s5zAFVrsZMVNxg-c60p8RcS2GN9UNwYA",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeo6PpjiuWwfk8tkTczU0OL5RpYgH0FkwBQrPH2JWkD-WX93y7zDPOx5M&s=10"
+    },
+    {
+      "position": 10,
+      "title": "What is a VPN and what is it used for?",
+      "link": "https://www.youtube.com/shorts/vCzh3UKK1Gc",
+      "source": "YouTube",
+      "author": "Pixeleros",
+      "length": "1:46",
+      "preview": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcT_B6H9GHn1oZDTh7bXdcZyQ3TRJ5NOF62k5Q",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr4IMWemSrFxJU3MqeZuQGmjAIl4G7GtlNdseI2pEdcswn84V6YyIkNRg&s=10"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "How much is a VPN",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=How+much+is+a+VPN&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAgtEAE"
+    },
+    {
+      "query": "What is a VPN and why do I need it",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+and+why+do+I+need+it&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAg9EAE"
+    },
+    {
+      "query": "What is a VPN in networking",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+in+networking&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAg3EAE"
+    },
+    {
+      "query": "What is a VPN in computer",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+in+computer&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAg1EAE"
+    },
+    {
+      "query": "What is a VPN iPhone",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+iPhone&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAg0EAE"
+    },
+    {
+      "query": "What is a VPN and how do I turn it off",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+and+how+do+I+turn+it+off&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAgzEAE"
+    },
+    {
+      "query": "What is a VPN on a phone",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+VPN+on+a+phone&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAgyEAE"
+    },
+    {
+      "query": "What is a vpn used for",
+      "link": "https://www.google.com/search?sca_esv=ec2bff8bd1e2ef21&pws=0&gl=us&hl=en&q=What+is+a+vpn+used+for&sa=X&ved=2ahUKEwivquPu54uVAxV4FVkFHY8bMW0Q1QJ6BAguEAE"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=what+is+a+vpn&oq=what+is+a+vpn&gl=us&hl=en&pws=0&start=10"
+  }
+}

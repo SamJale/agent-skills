@@ -1,0 +1,127 @@
+{
+  "search_metadata": {
+    "id": "search_dXG2jzvrlqTLGOloLeYoaOb8",
+    "status": "Success",
+    "created_at": "2026-06-16T13:02:23Z",
+    "request_time_taken": 1.05,
+    "parsing_time_taken": 0.01,
+    "total_time_taken": 1.06,
+    "request_url": "https://www.google.com/search?q=coffee&oq=coffee&gl=us&hl=en&sourceid=chrome&ie=UTF-8",
+    "html_url": "https://www.searchapi.io/api/v1/searches/search_dXG2jzvrlqTLGOloLeYoaOb8.html",
+    "json_url": "https://www.searchapi.io/api/v1/searches/search_dXG2jzvrlqTLGOloLeYoaOb8"
+  },
+  "search_parameters": {
+    "engine": "google_light",
+    "q": "coffee",
+    "device": "desktop",
+    "hl": "en",
+    "gl": "us"
+  },
+  "search_information": {
+    "query_displayed": "coffee",
+    "detected_location": "Cleveland, Ohio"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Coffee - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Coffee",
+      "displayed_link": "en.wikipedia.org › wiki › Coffee",
+      "snippet": "Coffee is a beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans"
+    },
+    {
+      "position": 2,
+      "title": "Buy Coffee, Tea, Powders Online | The Coffee Bean & Tea Leaf ...",
+      "link": "https://www.coffeebean.com/",
+      "displayed_link": "www.coffeebean.com",
+      "snippet": "Buy exceptional coffee, tea, powders, equipment and drinkware at The Coffee Bean & Tea Leaf® online store to enjoy our globally sourced products at home."
+    },
+    {
+      "position": 3,
+      "title": "Single Origin, Blends, Espresso - Shop - Joe Coffee Company",
+      "link": "https://joecoffeecompany.com/collections/coffee?srsltid=AfmBOoo_p-mQmvjjADCv3gL-11Vuy7pCBSm6HfLCLdXXginIAFhvAZjt",
+      "displayed_link": "joecoffeecompany.com › collections › coffee",
+      "snippet": "Shop for single origin, espresso, blends, decaf, and specialty instant coffee in the Joe Coffee Company store.",
+      "extensions": [
+        "Free delivery over $65"
+      ]
+    },
+    {
+      "position": 4,
+      "title": "Coffee Shops Cleveland, OH - Last Updated June 2026 - Yelp",
+      "link": "https://www.yelp.com/search?find_desc=Coffee+Shops&find_loc=Cleveland%2C+OH",
+      "displayed_link": "www.yelp.com › Food",
+      "snippet": "Coffee Shops Cleveland, OH · 1. Rising Star Coffee · 2. Roasted Tremont · 3. Lionheart Coffee · 4. The Browsing Room Bookstore and Cafe · 5. Civilization · 6.",
+      "rating": 4.4,
+      "extensions": [
+        "Rating",
+        "4.4(8,097)"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Coffee and Tea Buying Guides - Serious Eats",
+      "link": "https://www.seriouseats.com/coffee-and-tea-buying-guides-7105482",
+      "displayed_link": "www.seriouseats.com › Equipment › Coffee & Tea",
+      "snippet": "These buying guides will you help decide which coffee and tea gear you need to make the perfect cup and how to get the most out of the gadgets you own."
+    },
+    {
+      "position": 6,
+      "title": "Products | Cleveland Coffee Company",
+      "link": "https://www.clevelandcoffeecompany.com/products",
+      "displayed_link": "www.clevelandcoffeecompany.com › products",
+      "snippet": "Automatic monthly ordering now available! Select \"monthly subscription\" at checkout. We ship worldwide! Select category Specialty Blends Africa Asian Pacific ..."
+    },
+    {
+      "position": 7,
+      "title": "What is coffee? - NCA",
+      "link": "https://www.aboutcoffee.org/origins/what-is-coffee/",
+      "displayed_link": "www.aboutcoffee.org › Origins",
+      "snippet": "What is coffee made of? Learn about the coffee tree, its lifespan, how it produces coffee beans, and the two most common coffee species, arabica and ..."
+    },
+    {
+      "position": 8,
+      "title": "Coffee - Walmart.com",
+      "link": "https://www.walmart.com/cp/coffee/1086446",
+      "displayed_link": "www.walmart.com › coffee",
+      "snippet": "Shop for Coffee at Walmart.com. Buy Ground coffee, coffee pods, instant coffee, and whole bean coffee. Save money. Live better."
+    },
+    {
+      "position": 9,
+      "title": "Rising Star Coffee Roasters | Buy Coffee Online | Cleveland",
+      "link": "https://risingstarcoffee.com/",
+      "displayed_link": "risingstarcoffee.com",
+      "snippet": "We're a Cleveland, Ohio-based coffee roaster with six local cafés and an online store featuring specialty coffees from around the world."
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "Coffee nearby"
+    },
+    {
+      "query": "Coffee types"
+    },
+    {
+      "query": "Coffee brands"
+    },
+    {
+      "query": "Coffee beans"
+    },
+    {
+      "query": "Coffee name"
+    },
+    {
+      "query": "Coffee Bean menu"
+    },
+    {
+      "query": "Coffee powder"
+    },
+    {
+      "query": "Coffee benefits"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=coffee&oq=coffee&gl=us&hl=en&pws=0&start=10"
+  }
+}

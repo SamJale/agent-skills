@@ -1,0 +1,676 @@
+openapi: 3.0.0
+info:
+  title: eBay Search API
+  description: |
+    The eBay Search API allows you to search for products across eBay's marketplace. You can filter by categories, prices, conditions, and more.
+
+    **Cross-linking**: The `item_id` and `product_id` returned in organic results can be used with the eBay Product API to fetch detailed information. Pass the `item_id` as the `item_id` parameter.
+  version: 1.0.0
+servers:
+  - url: https://www.searchapi.io/api/v1
+paths:
+  /search:
+    get:
+      summary: eBay Search
+      security:
+        - ApiKeyAuth: []
+        - ApiKeyQuery: []
+      parameters:
+        - name: engine
+          in: query
+          required: true
+          description: Search engine to use
+          schema:
+            type: string
+            enum: ["ebay_search"]
+            default: "ebay_search"
+        - name: q
+          in: query
+          required: false
+          description: Search query. Either 'q' or 'category_id' must be present
+          schema:
+            type: string
+        - name: category_id
+          in: query
+          required: false
+          description: Category ID to search within. Either 'q' or 'category_id' must be present
+          schema:
+            type: integer
+        - name: ebay_domain
+          in: query
+          required: false
+          description: eBay domain to search on
+          schema:
+            type: string
+            enum: ["ebay.com", "ebay.com.au", "ebay.at", "befr.ebay.be", "benl.ebay.be", "ebay.ca", "cafr.ebay.ca", "ebay.fr", "ebay.de", "ebay.com.hk", "ebay.ie", "ebay.it", "ebay.com.my", "ebay.nl", "ebay.ph", "ebay.pl", "ebay.com.sg", "ebay.es", "ebay.ch", "ebay.co.uk"]
+            default: "ebay.com"
+        - name: country
+          in: query
+          required: false
+          description: ISO 3166-1 alpha-2 country code
+          schema:
+            type: string
+            enum: ["US", "CA", "GB", "AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BA", "BW", "BR", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CK", "CR", "CI", "HR", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FJ", "FI", "FR", "GF", "PF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KR", "KW", "KG", "LA", "LV", "LB", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "MD", "MC", "MN", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "PR", "QA", "RO", "RU", "RW", "SH", "KN", "LC", "PM", "VC", "SM", "SA", "SN", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SR", "SZ", "SE", "CH", "TW", "TJ", "TZ", "TH", "TG", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "UY", "UZ", "VU", "VA", "VE", "VN", "VI", "WF", "EH", "WS", "YE", "FM", "RE", "ME", "RS"]
+        - name: delivery_country
+          in: query
+          required: false
+          description: Delivery country ISO 3166-1 alpha-2 code
+          schema:
+            type: string
+            enum: ["US", "CA", "GB", "AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BA", "BW", "BR", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CK", "CR", "CI", "HR", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FJ", "FI", "FR", "GF", "PF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KR", "KW", "KG", "LA", "LV", "LB", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "MD", "MC", "MN", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "PR", "QA", "RO", "RU", "RW", "SH", "KN", "LC", "PM", "VC", "SM", "SA", "SN", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SR", "SZ", "SE", "CH", "TW", "TJ", "TZ", "TH", "TG", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "UY", "UZ", "VU", "VA", "VE", "VN", "VI", "WF", "EH", "WS", "YE", "FM", "RE", "ME", "RS"]
+        - name: postal_code
+          in: query
+          required: false
+          description: Postal code for distance-based searches. Only supported for certain delivery countries (US, CA, GB, AU, AT, BE, CZ, FR, DE, IT, NL, PL)
+          schema:
+            type: string
+        - name: distance_radius
+          in: query
+          required: false
+          description: Distance radius in miles from postal code. Requires postal code to be set
+          schema:
+            type: number
+            minimum: 1
+        - name: product_origin_country
+          in: query
+          required: false
+          description: Product origin country ISO 3166-1 alpha-2 code
+          schema:
+            type: string
+            enum: ["US", "CA", "GB", "AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BA", "BW", "BR", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CO", "KM", "CD", "CG", "CK", "CR", "CI", "HR", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FJ", "FI", "FR", "GF", "PF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KR", "KW", "KG", "LA", "LV", "LB", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "MD", "MC", "MN", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NO", "OM", "PK", "PW", "PA", "PG", "PY", "PE", "PH", "PL", "PT", "PR", "QA", "RO", "RU", "RW", "SH", "KN", "LC", "PM", "VC", "SM", "SA", "SN", "SC", "SL", "SG", "SK", "SI", "SB", "SO", "ZA", "ES", "LK", "SR", "SZ", "SE", "CH", "TW", "TJ", "TZ", "TH", "TG", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "UY", "UZ", "VU", "VA", "VE", "VN", "VI", "WF", "EH", "WS", "YE", "FM", "RE", "ME", "RS"]
+        - name: layout
+          in: query
+          required: false
+          description: Results layout format
+          schema:
+            type: string
+            enum: ["list", "grid"]
+        - name: price_min
+          in: query
+          required: false
+          description: Minimum price filter
+          schema:
+            type: number
+            minimum: 0
+        - name: price_max
+          in: query
+          required: false
+          description: Maximum price filter (must be greater than or equal to price_min)
+          schema:
+            type: number
+            minimum: 0
+        - name: sort_by
+          in: query
+          required: false
+          description: Sort results by
+          schema:
+            type: string
+            enum: ["best_match", "price_shipping_low_to_high", "price_shipping_high_to_low", "distance_nearest", "time_ending_soonest", "time_newly_listed", "price_low_to_high", "price_high_to_low", "condition_new_first", "condition_used_first"]
+        - name: filters
+          in: query
+          required: false
+          description: Comma-separated list of filters to apply
+          schema:
+            type: string
+            pattern: ^(search_description|sale_items|deals_and_savings|free_shipping|local_pickup|fast_arrival|free_returns|returns_accepted|listed_as_lots|authenticity_guarantee|authorized_seller|benefits_charity|psa_vault)(,(search_description|sale_items|deals_and_savings|free_shipping|local_pickup|fast_arrival|free_returns|returns_accepted|listed_as_lots|authenticity_guarantee|authorized_seller|benefits_charity|psa_vault))*$
+        - name: advanced_filters
+          in: query
+          required: false
+          description: Comma-separated list of advanced filters in key=value format
+          schema:
+            type: string
+        - name: condition
+          in: query
+          required: false
+          description: Comma-separated list of item conditions
+          schema:
+            type: string
+            pattern: ^(new|new_opened|like_new|new_with_defects|pre_owned_fair|pre_owned_excellent|used_very_good|used_good|used_acceptable|certified_refurbished|excellent_refurbished|very_good_refurbished|good_refurbished|seller_refurbished|for_parts_or_not_working|not_specified)(,(new|new_opened|like_new|new_with_defects|pre_owned_fair|pre_owned_excellent|used_very_good|used_good|used_acceptable|certified_refurbished|excellent_refurbished|very_good_refurbished|good_refurbished|seller_refurbished|for_parts_or_not_working|not_specified))*$
+        - name: buying_format
+          in: query
+          required: false
+          description: Buying format filter
+          schema:
+            type: string
+            enum: ["auction", "buy_it_now", "best_offer"]
+        - name: preferred_location
+          in: query
+          required: false
+          description: Preferred seller location
+          schema:
+            type: string
+            enum: ["domestic", "regional", "worldwide"]
+        - name: page
+          in: query
+          required: false
+          description: Page number (starts at 1)
+          schema:
+            type: integer
+            minimum: 1
+        - name: num
+          in: query
+          required: false
+          description: Number of results per page
+          schema:
+            type: integer
+            enum: [60, 120, 240]
+        - name: include_related_results
+          in: query
+          required: false
+          description: When set to `true`, returns eBay's "Results matching fewer words" items under a separate `related_results` key when no exact matches are found. Defaults to `false`, which returns an error in that case.
+          schema:
+            type: string
+            enum: ["true", "false"]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Validation Error. There is an issue with query parameters, such as missing required parameters or invalid values.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication Error. The API key is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate Limit Exceeded. The number of allowed requests has been exceeded. Consider upgrading your plan or waiting for the limit to reset.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error. Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Timeout. We could not retrieve results in 90 seconds.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Use Bearer authentication. Format: "Bearer YOUR_API_KEY"'
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Pass API key as query parameter
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        search_metadata:
+          $ref: '#/components/schemas/SearchMetadata'
+        search_parameters:
+          $ref: '#/components/schemas/SearchParameters'
+        search_information:
+          $ref: '#/components/schemas/SearchInformation'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+        filters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Filter'
+        organic_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+        related_results:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganicResult'
+          description: Returned in place of `organic_results` when eBay has no exact matches but shows "Results matching fewer words" items.
+        sections:
+          type: array
+          items:
+            $ref: '#/components/schemas/Section'
+        related_searches:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedSearch'
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        error:
+          type: string
+          description: Error message when no results are found
+    SearchMetadata:
+      type: object
+      required: [id, status, created_at]
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the search request
+        status:
+          type: string
+          description: Status of the search request
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the search was created
+        request_time_taken:
+          type: number
+          description: Time taken to make the request in seconds
+        parsing_time_taken:
+          type: number
+          description: Time taken to parse the results in seconds
+        total_time_taken:
+          type: number
+          description: Total time taken for the search in seconds
+        request_url:
+          type: string
+          description: eBay URL for this search
+        html_url:
+          type: string
+          description: URL to view HTML results
+        json_url:
+          type: string
+          description: URL to view JSON results
+    SearchParameters:
+      type: object
+      properties:
+        engine:
+          type: string
+          description: Search engine used
+        q:
+          type: string
+          description: Search query
+        category_id:
+          type: integer
+          description: Category ID searched
+        ebay_domain:
+          type: string
+          description: eBay domain used
+        country:
+          type: string
+          description: Country code
+        layout:
+          type: string
+          description: Layout format
+        buying_format:
+          type: string
+          description: Buying format filter
+        condition:
+          type: string
+          description: Condition filters
+        delivery_country:
+          type: string
+          description: Delivery country
+        postal_code:
+          type: string
+          description: Postal code
+        distance_radius:
+          type: number
+          description: Distance radius
+        product_origin_country:
+          type: string
+          description: Product origin country
+        sort_by:
+          type: string
+          description: Sort order
+        price_min:
+          type: number
+          description: Minimum price
+        price_max:
+          type: number
+          description: Maximum price
+        filters:
+          type: string
+          description: Applied filters
+        advanced_filters:
+          type: string
+          description: Advanced filters
+        page:
+          type: integer
+          description: Page number
+        num:
+          type: integer
+          description: Results per page
+        include_related_results:
+          type: string
+          description: Whether to return "Results matching fewer words" items under a separate `related_results` key when no exact matches are found
+    SearchInformation:
+      type: object
+      properties:
+        query_displayed:
+          type: string
+          description: Query as displayed on eBay
+        category_displayed:
+          type: string
+          description: Category name displayed
+        total_results:
+          type: integer
+          description: Total number of results found
+        sorted_by:
+          type: string
+          description: Current sort order
+        filters_applied:
+          type: array
+          items:
+            type: string
+          description: List of applied filters
+        buying_format:
+          type: string
+          description: Selected buying format
+        shipping_to:
+          type: string
+          description: Shipping destination
+        language:
+          type: string
+          description: Page language code
+        notice:
+          type: string
+          description: Notice eBay surfaces above the results (e.g. "No exact matches found" when `related_results` is returned).
+    Category:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+          description: Category name
+        link:
+          type: string
+          description: Category link
+        category_id:
+          type: string
+          description: Category identifier
+        is_selected:
+          type: boolean
+          description: Whether this category is currently selected
+        subcategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+          description: Nested subcategories
+    Filter:
+      type: object
+      required: [options]
+      properties:
+        type:
+          type: string
+          description: Filter type name
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/FilterOption'
+          description: Available filter options
+    FilterOption:
+      type: object
+      properties:
+        text:
+          type: string
+          description: Option display text
+        items:
+          type: integer
+          description: Number of items matching this option
+        is_selected:
+          type: boolean
+          description: Whether this option is currently selected
+        link:
+          type: string
+          description: Link to apply this filter
+        type:
+          type: string
+          description: Option type (for size filters)
+    OrganicResult:
+      type: object
+      required: [position]
+      properties:
+        position:
+          type: integer
+          description: Result position in search results
+        product_id:
+          type: string
+          description: eBay product identifier
+        item_id:
+          type: string
+          description: eBay item identifier
+        title:
+          type: string
+          description: Item title
+        subtitle:
+          type: string
+          description: Item subtitle
+        tag:
+          type: string
+          description: Special tag (e.g., "SPONSORED")
+        link:
+          type: string
+          description: Link to item page
+        seller:
+          $ref: '#/components/schemas/Seller'
+        brand:
+          type: string
+          description: Item brand
+        condition:
+          type: string
+          description: Item condition
+        extensions:
+          type: array
+          items:
+            type: string
+          description: Additional item information
+        authenticity:
+          type: string
+          description: Authenticity guarantee information
+        is_sponsored:
+          type: boolean
+          description: Whether this is a sponsored result
+        rating:
+          type: number
+          description: Product rating
+        reviews:
+          type: integer
+          description: Number of reviews
+        reviews_link:
+          type: string
+          description: Link to reviews
+        buying_format:
+          type: string
+          description: Buying format (e.g., "Buy It Now", "Auction")
+        is_best_offer:
+          type: boolean
+          description: Whether best offer is available
+        is_buy_it_now:
+          type: boolean
+          description: Whether buy it now is available
+        is_auction:
+          type: boolean
+          description: Whether this is an auction
+        price:
+          type: string
+          description: Price as displayed
+        extracted_price:
+          type: number
+          description: Numeric price value
+        extracted_price_range:
+          type: object
+          properties:
+            from:
+              type: number
+              description: Minimum price in range
+            to:
+              type: number
+              description: Maximum price in range
+          description: Price range for items with variable pricing
+        is_price_range:
+          type: boolean
+          description: Whether price is a range
+        original_price:
+          type: string
+          description: Original price before discount
+        extracted_original_price:
+          type: number
+          description: Numeric original price value
+        unit_price:
+          type: string
+          description: Price per unit
+        extracted_unit_price:
+          type: number
+          description: Numeric unit price value
+        bids:
+          type: integer
+          description: Number of bids (for auctions)
+        time_left:
+          type: string
+          description: Time remaining (for auctions)
+        deal:
+          type: string
+          description: Deal information
+        discount:
+          type: string
+          description: Discount percentage
+        items_sold:
+          type: string
+          description: Number of items sold text
+        extracted_items_sold:
+          type: integer
+          description: Numeric items sold value
+        stock:
+          type: string
+          description: Stock status
+        watching:
+          type: string
+          description: Number of watchers text
+        extracted_watching:
+          type: integer
+          description: Numeric watchers value
+        shipping:
+          type: string
+          description: Shipping cost text
+        extracted_shipping:
+          type: number
+          description: Numeric shipping cost
+        shipping_details:
+          type: string
+          description: Additional shipping information
+        is_free_return:
+          type: boolean
+          description: Whether free returns are offered
+        is_in_psa_vault:
+          type: boolean
+          description: Whether item is in PSA vault
+        trending:
+          type: string
+          description: Trending information
+        thumbnail:
+          type: string
+          description: Main item image URL
+        images:
+          type: array
+          items:
+            type: string
+          description: Additional item images
+    Seller:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Seller username
+        reviews:
+          type: integer
+          description: Number of seller reviews
+        positive_feedback_percent:
+          type: number
+          description: Percentage of positive feedback
+        is_top_rated_plus:
+          type: boolean
+          description: Whether seller is top rated plus
+        is_direct_from_seller:
+          type: boolean
+          description: Whether item is direct from brand/manufacturer
+        thumbnail:
+          type: string
+          description: Seller logo or image URL
+    Section:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Section title
+        subtitle:
+          type: string
+          description: Section subtitle
+        is_sponsored:
+          type: boolean
+          description: Whether this section is sponsored
+        has_items:
+          type: boolean
+          description: Whether results contain item listings
+        results:
+          type: array
+          items:
+            oneOf:
+              - $ref: '#/components/schemas/SectionResult'
+              - $ref: '#/components/schemas/OrganicResult'
+          description: Section results (either category links or item listings)
+    SectionResult:
+      type: object
+      properties:
+        position:
+          type: integer
+          description: Position within section
+        title:
+          type: string
+          description: Result title
+        link:
+          type: string
+          description: Result link
+        category_id:
+          type: string
+          description: Category identifier
+        release_date:
+          type: string
+          description: Release date (for certain sections)
+        thumbnail:
+          type: string
+          description: Result thumbnail URL
+    RelatedSearch:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Related search query
+        link:
+          type: string
+          description: Link to perform this search
+    Pagination:
+      type: object
+      properties:
+        current:
+          type: integer
+          description: Current page number
+        previous:
+          type: string
+          description: Link to previous page
+        next:
+          type: string
+          description: Link to next page
+        other_pages:
+          type: object
+          additionalProperties:
+            type: string
+          description: Links to other pages (page number as key, URL as value)
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong

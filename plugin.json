@@ -1,0 +1,49 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "searchapi",
+  "version": "1.0.0",
+  "description": "SearchApi for AI agents: live search results as data from 100+ engines (Google, Bing, Maps, Shopping, Flights, News, YouTube, AI answers, ad libraries), lean responses, and a skill to migrate from other SERP APIs.",
+  "author": {
+    "name": "SearchApi",
+    "url": "https://www.searchapi.io"
+  },
+  "homepage": "https://www.searchapi.io",
+  "repository": "https://github.com/searchapi/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "searchapi",
+    "serp-api",
+    "web-search",
+    "google-search",
+    "search-api",
+    "serp",
+    "seo"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "SearchApi",
+        "shortDescription": "Live search results as data",
+        "longDescription": "SearchApi gives Codex the real results page as data from 100+ engines, for any country, language or city: rankings, local businesses, prices, flights and hotels, dated news, YouTube, AI answers from Google AI Mode, ChatGPT and Gemini, and ad libraries. The searchapi skill picks the right engine, checks every response for silent errors, and trims dead weight without dropping a result. The searchapi-migrate skill moves code from SerpApi, Serper, DataForSEO or Bright Data.",
+        "developerName": "SearchApi",
+        "category": "Productivity",
+        "capabilities": [
+          "Search",
+          "Web"
+        ],
+        "websiteURL": "https://www.searchapi.io",
+        "privacyPolicyURL": "https://www.searchapi.io/legal/privacy",
+        "termsOfServiceURL": "https://www.searchapi.io/legal/terms",
+        "supportURL": "https://github.com/searchapi/agent-skills/issues",
+        "defaultPrompt": [
+          "Who ranks for 'running shoes' in the UK? Top 10 with links.",
+          "Find dentists in Leeds rated 4.5 or higher, with phone numbers.",
+          "Is our brand cited by ChatGPT, Gemini and Google AI Mode for 'best crm'?"
+        ],
+        "brandColor": "#2563EB",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

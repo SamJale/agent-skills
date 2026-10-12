@@ -1,0 +1,6 @@
+---
+name: credits
+description: Show SearchApi credits left and searches used this hour
+---
+
+Use the `searchapi` skill: run its `scripts/searchapi.py credits` and report the line it prints. If there is no key or shell but the SearchApi MCP server is connected, say the balance is on https://www.searchapi.io (the MCP server has no credits tool). If nothing is connected, offer the setup command.
