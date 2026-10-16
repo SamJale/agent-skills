@@ -50,7 +50,7 @@ The [skills CLI](https://github.com/vercel-labs/skills) asks which skills to ins
 | Gemini CLI | `gemini extensions install https://github.com/searchapi/agent-skills`, then `/mcp auth searchapi` in Gemini to sign in to the MCP server |
 | GitHub Copilot CLI | `copilot plugin marketplace add searchapi/agent-skills`, then `copilot plugin install searchapi@searchapi` |
 | Kiro | `npx skills add searchapi/agent-skills -a kiro-cli` |
-| Hermes Agent | `hermes skills install searchapi/agent-skills/hermes/searchapi` and `hermes skills install searchapi/agent-skills/hermes/searchapi-migrate`. Connect with the skill's `setup` command. The Hermes copy reads only the saved key file (Hermes's scanner blocks scripts that read a key from the environment); a `SEARCHAPI_API_KEY` you already set gets saved there once |
+| Hermes Agent | `hermes skills install searchapi/agent-skills/hermes/searchapi` and `hermes skills install searchapi/agent-skills/hermes/searchapi-migrate`. Connect with the skill's `setup` command. The Hermes copy reads only the saved key file (Hermes's scanner blocks scripts that read a key from the environment); a `SEARCHAPI_API_KEY` you already set gets saved there once. In Docker or with `terminal.home_mode: profile`, run `setup` through Hermes, so the key is saved in Hermes's home. |
 | OpenClaw | `npx skills add searchapi/agent-skills -a openclaw -g` (`-g` puts it in `~/.openclaw/skills`; OpenClaw does not read the current folder) |
 | Grok Build | `grok plugin install searchapi/agent-skills --trust` (`--trust` is required: without it Grok stops before installing) |
 
