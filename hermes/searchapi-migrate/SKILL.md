@@ -5,11 +5,6 @@ description: "SearchApi migration from SerpApi, Serper, DataForSEO"
 version: 1.0.0
 author: SearchApi
 license: MIT
-required_environment_variables:
-  - name: SEARCHAPI_API_KEY
-    prompt: "SearchApi API key"
-    help: "Get one at https://www.searchapi.io/users/sign_up?utm_source=hermes&utm_medium=agent-skill&utm_campaign=searchapi-skill"
-    required_for: "the script path (the SearchApi MCP server signs in without a key)"
 metadata:
   hermes:
     tags: [search, serp, migration, serpapi, searchapi]
@@ -40,9 +35,7 @@ The user's code calls SerpApi, Serper, DataForSEO or Bright Data's SERP API and 
 Python shape of a ported call (keep the user's HTTP library):
 
 ```python
-key = os.environ.get("SEARCHAPI_API_KEY")
-if not key:
-    raise RuntimeError("SEARCHAPI_API_KEY is not set")
+# key: from SEARCHAPI_API_KEY, loaded the way the project loads its other secrets; fail fast when unset
 headers = {"Authorization": "Bearer " + key}
 params = {"engine": "google", "q": query, "location": "Austin,Texas,United States", "gl": "us", "hl": "en"}
 resp = requests.get("https://www.searchapi.io/api/v1/search", params=params, headers=headers, timeout=100)

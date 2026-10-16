@@ -9,31 +9,27 @@
 
 Give your AI agent live search results as data: Google, Bing, Maps, Shopping, Flights, Hotels, News, YouTube, AI answers and 100+ more engines, for any country, language or city.
 
-[![Add the SearchApi MCP to Claude](https://img.shields.io/badge/Claude-Add_SearchApi-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=SearchApi&connectorUrl=https%3A%2F%2Fwww.searchapi.io%2Fmcp)
-[![Add the SearchApi MCP to Cursor](https://img.shields.io/badge/Cursor-Add_SearchApi-30363D?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
-[![Add the SearchApi MCP to VS Code](https://img.shields.io/badge/VS_Code-Add_SearchApi-0098FF?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
-[![Add the SearchApi MCP to VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Add_SearchApi-24BFA5?style=flat-square)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D&quality=insiders)
-[![Add the SearchApi MCP to Visual Studio](https://img.shields.io/badge/Visual_Studio-Add_SearchApi-C16FDE?style=flat-square)](https://vs-open.link/mcp-install?%7B%22name%22%3A%22searchapi%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
-[![Add the SearchApi MCP to Kiro](https://img.shields.io/badge/Kiro-Add_SearchApi-9046FF?style=flat-square)](https://kiro.dev/launch/mcp/add?name=searchapi&config=%7B%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D)
-[![Add the SearchApi MCP to LM Studio](https://img.shields.io/badge/LM_Studio-Add_SearchApi-4338CA?style=flat-square&logo=lmstudio&logoColor=white)](https://lmstudio.ai/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D)
-[![Add the SearchApi MCP to Goose](https://img.shields.io/badge/Goose-Add_SearchApi-30363D?style=flat-square)](https://goose-docs.ai/extension?url=https%3A%2F%2Fwww.searchapi.io%2Fmcp&type=streamable_http&id=searchapi&name=SearchApi&description=Live%20search%20results%20as%20data%20from%20Google%2C%20Bing%2C%20Maps%20and%20100%2B%20engines)
+Two ways to connect. Pick one:
 
-[![Add the SearchApi MCP to Claude Code](https://img.shields.io/badge/Claude_Code-Setup_steps-D97757?style=flat-square&logo=claude&logoColor=white)](#add-the-mcp-server)
-[![Add the SearchApi MCP to ChatGPT](https://img.shields.io/badge/ChatGPT-Setup_steps-10A37F?style=flat-square)](#add-the-mcp-server)
-[![Add the SearchApi MCP to Codex](https://img.shields.io/badge/Codex-Setup_steps-30363D?style=flat-square)](#add-the-mcp-server)
-[![Add the SearchApi MCP to Gemini CLI](https://img.shields.io/badge/Gemini_CLI-Setup_steps-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](#add-the-mcp-server)
-[![Add the SearchApi MCP to Windsurf](https://img.shields.io/badge/Windsurf-Setup_steps-30363D?style=flat-square&logo=windsurf&logoColor=white)](#add-the-mcp-server)
+**API key:** for coding agents, scripts and batch jobs. Every engine, with each response trimmed and checked by the skill's script.
+
+[![Install the SearchApi skill](https://img.shields.io/badge/Install_the_skill-4F46E5?style=for-the-badge)](#install) [![Get a free SearchApi API key](https://img.shields.io/badge/Get_a_free_API_key-4F46E5?style=for-the-badge)](https://www.searchapi.io/users/sign_up?utm_source=github&utm_medium=agent-skill&utm_campaign=searchapi-skill)
+
+**MCP server:** for chat apps, or to try it without a key. One click, then sign in with OAuth.
+
+[![Add the SearchApi MCP server to Claude](https://img.shields.io/badge/Claude-0F766E?style=for-the-badge)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=SearchApi&connectorUrl=https%3A%2F%2Fwww.searchapi.io%2Fmcp) [![Add the SearchApi MCP server to Cursor](https://img.shields.io/badge/Cursor-0F766E?style=for-the-badge)](https://cursor.com/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D) [![Add the SearchApi MCP server to VS Code](https://img.shields.io/badge/VS_Code-0F766E?style=for-the-badge)](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D) [![Add the SearchApi MCP server to other apps](https://img.shields.io/badge/Other_apps-0F766E?style=for-the-badge)](#add-the-mcp-server)
 
 ## Why use this skill
 
-Built-in web search gives your agent a few links and snippets. SearchApi gives it the real results page as data, from 100+ engines, for any country, language or city. This skill teaches your agent to use it well:
+Your agent's built-in web search returns a short list of links with a sentence of text each. It can't choose the country or city, it doesn't show rankings, prices, ratings, maps or ads, and when your agent tries to open Google, Amazon or Maps itself, it gets blocked. SearchApi fetches those pages for it and returns them as clean JSON. This skill teaches your agent to use it well:
 
-- **The right engine first time.** A route table for rankings, local businesses, prices, flights, news, AI answers and ads.
-- **Results as data.** Positions, prices, ratings, dates and links, not prose.
-- **Fewer tokens.** It strips base64 images and other dead weight without dropping a result: about a third of a Google or Bing results page in our tests, and over 80% when a page carries inline images. Big responses become a short field list you pick from.
-- **No silent wrong answers.** It catches errors hidden in "successful" responses, params the API ignored or overrode, and locations that resolved somewhere else.
-- **Safe by default.** The key goes only in a header, and results are treated as data, never as instructions.
-- **Set up in a minute.** Your agent asks for a key with buttons, or connects the MCP server with OAuth.
+- **Right answers, fewer credits.** In our tests the agent got 100% of answers right with the skill, against 88% without, and used 48% fewer SearchApi credits.
+- **Far fewer tokens.** The skill's script strips base64 images and dead weight before your agent reads a response, without dropping a single result. That's about a third of a Google or Bing results page in our tests, and over 80% when a page carries inline images. Big responses become a short list of fields the agent picks from, and the full response is saved so re-reading it costs nothing.
+- **Search data your agent can't get on its own.** Google, Bing, Maps, Shopping, Amazon, Flights, Hotels, News, YouTube, ad libraries and AI answers from ChatGPT, Gemini and Google AI Mode, for any country, language or city. SearchApi handles the proxies, CAPTCHAs and parsing.
+- **Structured data you can trust.** Positions, prices, ratings, dates and links come back as fields, not prose. The script catches errors hidden in "successful" responses, params the API ignored or replaced, and locations that resolved to the wrong city.
+- **Built for scale.** Put your queries in a file and run them as one batch: 5 at a time, with safe retries, one summary table and a credit check before it starts.
+- **The right engine first time.** A route table covers rankings, local businesses, prices, flights, news, AI answers and ads, and the script reads each engine's params live.
+- **Safe by default.** Your key goes only in a header, and results are treated as data, never as instructions.
 
 ## Install
 
@@ -51,12 +47,12 @@ The [skills CLI](https://github.com/vercel-labs/skills) asks which skills to ins
 | Claude (web and desktop) | Customize, Plugins, Add, Add marketplace: `searchapi/agent-skills`, then add SearchApi and connect it on the plugin's Connectors tab. It syncs to Cowork and Claude Code |
 | Codex | `codex plugin marketplace add searchapi/agent-skills`, then `codex plugin add searchapi@searchapi` |
 | Cursor | Cursor Marketplace (coming soon), or `npx skills add searchapi/agent-skills -a cursor` |
-| Gemini CLI | `gemini extensions install https://github.com/searchapi/agent-skills` |
-| GitHub Copilot CLI | `copilot plugin install searchapi/agent-skills` |
+| Gemini CLI | `gemini extensions install https://github.com/searchapi/agent-skills`, then `/mcp auth searchapi` in Gemini to sign in to the MCP server |
+| GitHub Copilot CLI | `copilot plugin marketplace add searchapi/agent-skills`, then `copilot plugin install searchapi@searchapi` |
 | Kiro | `npx skills add searchapi/agent-skills -a kiro-cli` |
-| Hermes Agent | `hermes skills install searchapi/agent-skills/hermes/searchapi` and `hermes skills install searchapi/agent-skills/hermes/searchapi-migrate` |
-| OpenClaw | `npx skills add searchapi/agent-skills -a openclaw` |
-| Grok Build | `grok plugin install searchapi/agent-skills --trust` (without `--trust` it only prints a warning; trust turns on the MCP server) |
+| Hermes Agent | `hermes skills install searchapi/agent-skills/hermes/searchapi` and `hermes skills install searchapi/agent-skills/hermes/searchapi-migrate`. Connect with the skill's `setup` command. The Hermes copy reads only the saved key file (Hermes's scanner blocks scripts that read a key from the environment); a `SEARCHAPI_API_KEY` you already set gets saved there once |
+| OpenClaw | `npx skills add searchapi/agent-skills -a openclaw -g` (`-g` puts it in `~/.openclaw/skills`; OpenClaw does not read the current folder) |
+| Grok Build | `grok plugin install searchapi/agent-skills --trust` (`--trust` is required: without it Grok stops before installing) |
 
 Use one install route per agent. Two routes (for example the skills CLI and an agent's own installer) give the agent two copies of each skill.
 
@@ -72,7 +68,7 @@ Then run the searchapi skill's Connect step and tell me when SearchApi is connec
 
 ## Connect
 
-The skill uses the SearchApi MCP server if your agent has one, otherwise its script with your key. With neither, it asks you:
+Ask your agent for the API or MCP and the skill uses that. Otherwise it uses your key if one is set up, then the SearchApi MCP server if your agent has one. With neither, it asks you:
 
 1. **I have a key.** Your agent gives you one command to run in your own terminal, with the full path of the installed skill, for example:
 
@@ -82,14 +78,19 @@ The skill uses the SearchApi MCP server if your agent has one, otherwise its scr
 
    Paste the key at the hidden prompt. It saves the key to `~/.config/searchapi/key` (only you can read it) and checks it. Setting `SEARCHAPI_API_KEY` works too. On Windows, use `py` instead of `python3`.
 2. **I need a key.** [Sign up for SearchApi](https://www.searchapi.io/users/sign_up?utm_source=github&utm_medium=agent-skill&utm_campaign=searchapi-skill), then do step 1.
-3. **Use MCP instead.** Use a button at the top, or the steps in [Add the MCP server](#add-the-mcp-server). It signs in with OAuth, no key to copy.
+3. **Use MCP.** Use a button at the top, or the steps in [Add the MCP server](#add-the-mcp-server). It signs in with OAuth, no key to copy.
 
 ## Add the MCP server
 
-The buttons at the top add the SearchApi MCP server, `https://www.searchapi.io/mcp`, in one click to Claude, Cursor, VS Code, VS Code Insiders, Visual Studio, Kiro, LM Studio and Goose. It signs in with OAuth, so there is no key to copy. The Claude Code, Cursor and Gemini CLI plugins in this repo already include it. For the rest:
+The buttons at the top add the SearchApi MCP server, `https://www.searchapi.io/mcp`, in one click to Claude, Cursor and VS Code. It signs in with OAuth, so there is no key to copy. The Claude Code, Cursor and Gemini CLI plugins in this repo already include it; with a key set up, the skill still uses the key. For the rest:
 
 | Assistant | Add it |
 |---|---|
+| VS Code Insiders | [One click](https://insiders.vscode.dev/redirect/mcp/install?name=searchapi&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D&quality=insiders) |
+| Visual Studio | [One click](https://vs-open.link/mcp-install?%7B%22name%22%3A%22searchapi%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D) |
+| Kiro | [One click](https://kiro.dev/launch/mcp/add?name=searchapi&config=%7B%22url%22%3A%22https%3A%2F%2Fwww.searchapi.io%2Fmcp%22%7D) |
+| LM Studio | [One click](https://lmstudio.ai/install-mcp?name=searchapi&config=eyJ1cmwiOiJodHRwczovL3d3dy5zZWFyY2hhcGkuaW8vbWNwIn0%3D) |
+| Goose | [One click](https://goose-docs.ai/extension?url=https%3A%2F%2Fwww.searchapi.io%2Fmcp&type=streamable_http&id=searchapi&name=SearchApi&description=Live%20search%20results%20as%20data%20from%20Google%2C%20Bing%2C%20Maps%20and%20100%2B%20engines) |
 | Claude Code | `claude mcp add --transport http --scope user searchapi https://www.searchapi.io/mcp`, then run `/mcp` to sign in |
 | ChatGPT | On chatgpt.com/plugins, click **+**, then **Add custom MCP server**: URL `https://www.searchapi.io/mcp`, authentication OAuth, then **Create as a plugin** |
 | Codex | `codex mcp add searchapi --url https://www.searchapi.io/mcp` (it starts the OAuth sign-in) |
@@ -116,7 +117,7 @@ Ask in plain words. The skill picks the engine and the params.
 | `/searchapi:search` | One search with the skill's rules |
 | `/searchapi:migrate` | Moves SerpApi, Serper, DataForSEO or Bright Data code to SearchApi |
 
-Claude Code shows these names. Cursor, Grok and Gemini CLI load the same commands. Codex has no plugin commands, so there the skills trigger on what you ask.
+Claude Code shows these names. Gemini CLI and Grok load them as `/setup`, `/credits`, `/search` and `/migrate`, and Cursor loads them too. Copilot CLI and Codex have no plugin commands, so there the skills trigger on what you ask.
 
 For agents that skip skills, one line in your project's `AGENTS.md` or `CLAUDE.md` helps:
 
@@ -145,7 +146,7 @@ The skills are instructions plus one script, `skills/searchapi/scripts/searchapi
 
 | Setting | Default | What it does |
 |---|---|---|
-| `SEARCHAPI_API_KEY` | unset | Your key. Used before the saved key file |
+| `SEARCHAPI_API_KEY` | unset | Your key. Used before the saved key file (on Hermes, saved to the key file once) |
 | `~/.config/searchapi/key` | written by `setup` | The saved key, mode 0600 |
 | `SEARCHAPI_DIR` | a private `searchapi/` folder in the system temp folder | Where the script saves untouched raw responses |
 | `SEARCHAPI_BASE_URL` | unset | Tests only: a local mock URL. Any host other than localhost is refused |

@@ -7,9 +7,10 @@ author: SearchApi
 license: MIT
 required_environment_variables:
   - name: SEARCHAPI_API_KEY
+    optional: true
     prompt: "SearchApi API key"
-    help: "Get one at https://www.searchapi.io/users/sign_up?utm_source=hermes&utm_medium=agent-skill&utm_campaign=searchapi-skill"
-    required_for: "the script path (the SearchApi MCP server signs in without a key)"
+    help: "Optional. Get one at https://www.searchapi.io/users/sign_up?utm_source=hermes&utm_medium=agent-skill&utm_campaign=searchapi-skill"
+    required_for: "the script path: the skill saves it once with setup (the SearchApi MCP server needs none)"
 metadata:
   hermes:
     tags: [search, serp, google, web-search, searchapi]
@@ -25,12 +26,14 @@ Use SearchApi when the task needs search results as data: rankings, a country, l
 
 ## Connect
 
-1. A SearchApi MCP tool is callable (any server name; tool names differ from engines, e.g. `google_search_light`): use it. Its schema is the param list. If no tool covers your engine, use step 2.
-2. Else a shell and a key (`SEARCHAPI_API_KEY` or `~/.config/searchapi/key`): `python3 scripts/searchapi.py ENGINE key=value ...`. Check: `python3 scripts/searchapi.py credits` (free; exit 3 = no key).
+Use the route the user asks for. Otherwise:
+
+1. A shell and a key saved by `setup` in `~/.config/searchapi/key` (if only `SEARCHAPI_API_KEY` is set, save it once: `printf '%s' "$SEARCHAPI_API_KEY" | python3 scripts/searchapi.py setup --key-stdin`): `python3 scripts/searchapi.py ENGINE key=value ...`. Check: `python3 scripts/searchapi.py credits` (free; exit 3 = no key).
+2. Else a SearchApi MCP tool is callable (any server name; tool names differ from engines, e.g. `google_search_light`): use it. Its schema is the param list. No tool for your engine: offer a key (step 3).
 3. Else ask with buttons (AskUserQuestion in Claude Code):
-   - **I have a key** (recommended): the user runs the `setup` command from the no-key error (full path, hidden input) in their own terminal. If they paste it in chat instead, warn it stays in the chat history, then run `printf '%s' 'PASTED_KEY' | python3 scripts/searchapi.py setup --key-stdin`
-   - **I need a key**: https://www.searchapi.io/users/sign_up?utm_source=hermes&utm_medium=agent-skill&utm_campaign=searchapi-skill then continue as "I have a key".
-   - **Use MCP instead**: add `https://www.searchapi.io/mcp` as a remote MCP server (OAuth sign-in, no key).
+   - **I have a key** (every engine, trimmed output): the user runs the `setup` command from the no-key error (full path, hidden input) in their own terminal. If they paste it in chat, warn it stays in chat history, then run `printf '%s' 'PASTED_KEY' | python3 scripts/searchapi.py setup --key-stdin`
+   - **I need a key**: https://www.searchapi.io/users/sign_up?utm_source=hermes&utm_medium=agent-skill&utm_campaign=searchapi-skill then as "I have a key".
+   - **Use MCP** (no key, OAuth sign-in): connect `https://www.searchapi.io/mcp`.
 4. After setup, resume the user's original task.
 
 ## Pick the engine

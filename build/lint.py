@@ -21,8 +21,11 @@ SKILLS = os.path.join(ROOT, "skills")
 spec = importlib.util.spec_from_file_location("searchapi", os.path.join(SKILLS, "searchapi", "scripts", "searchapi.py"))
 sa = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(sa)
+vspec = importlib.util.spec_from_file_location("variants", os.path.join(ROOT, "build", "variants.py"))
+variants = importlib.util.module_from_spec(vspec)
+vspec.loader.exec_module(variants)
 
-MAX_BYTES = 8000                     # Codex cuts SKILL.md here
+MAX_BYTES = 8000                    # Codex cuts SKILL.md here
 MAX_DESC = 500
 BRAND_WITHIN = 57                    # Hermes shows 57 chars of a description
 KEYS = {"name", "description", "license", "metadata"}
@@ -43,6 +46,11 @@ SCAN = [   # mirrors of Hermes skills_guard rules, so a failure comes with our o
     (r"pip\s+install|npm\s+install|\bsudo\b", "install or privilege command"),
     (r"(api[_-]?key|token|secret)\s*[=:]\s*[\"'](?![A-Z][A-Z0-9_]+[\"'])[A-Za-z0-9+/=_-]{20,}", "hardcoded secret"),
     (r"\$\{CLAUDE_|\$ARGUMENTS|\$\{HERMES_|\{baseDir\}", "harness-only syntax"),
+]
+HERMES_SCAN = [   # Hermes 0.19 skills_guard env rules, verbatim: critical blocks for good, high needs --force
+    (r'os\.environ\b(?!\s*\.get\s*\(\s*["\'](?![^"\']*(?:KEY|TOKEN|SECRET|PASSWORD|CREDENTIAL)))', "os.environ use (high)"),
+    (r'os\.environ\s*\.get\s*\(\s*["\'][^"\']*(?:KEY|TOKEN|SECRET|PASSWORD|CREDENTIAL)', "secret read via os.environ.get (critical)"),
+    (r'os\.getenv\s*\(\s*[^\)]*(?:KEY|TOKEN|SECRET|PASSWORD|CREDENTIAL)', "secret read via os.getenv (critical)"),
 ]
 errors = []
 
@@ -164,6 +172,10 @@ def scan_text(top, commands=False):
                     continue                       # $ARGUMENTS is the command placeholder
                 if re.search(rx, line, re.I if "AGENTS" not in rx and "CLAUDE_" not in rx else 0):
                     err(f, "line %d: %s" % (n, why))
+            if os.path.relpath(f, ROOT).startswith("hermes" + os.sep):
+                for rx, why in HERMES_SCAN:          # case-sensitive, as in Hermes
+                    if re.search(rx, line):
+                        err(f, "line %d: Hermes blocks the install: %s (edit HERMES_TEXT in build/variants.py)" % (n, why))
 
 
 def repo_text_rules(tops):
@@ -205,13 +217,17 @@ def check_variants(names):
                 err(folder, "missing: run python3 build/variants.py")
                 continue
             fm, data, vbody = frontmatter(path)
-            if vbody != body.replace("utm_source=agent-skill", "utm_source=" + harness):
-                err(path, "body differs from skills/%s/SKILL.md (beyond its sign-up utm_source): run python3 build/variants.py" % name)
+            want = body.replace("utm_source=agent-skill", "utm_source=" + harness)
+            if vbody != (variants.hermes_text(name + "/SKILL.md", want) if harness == "hermes" else want):
+                err(path, "body differs from skills/%s/SKILL.md (beyond its sign-up utm_source and HERMES_TEXT): run python3 build/variants.py" % name)
             for f in glob.glob(os.path.join(canon, "**", "*"), recursive=True):
                 rel = os.path.relpath(f, canon)
                 if os.path.isfile(f) and rel != "SKILL.md" and not rel.startswith("agents"):
                     copy = os.path.join(folder, rel)
-                    if not os.path.isfile(copy) or open(copy, "rb").read() != open(f, "rb").read():
+                    want = open(f, "rb").read()
+                    if harness == "hermes" and os.path.join(name, rel).replace(os.sep, "/") in variants.HERMES_TEXT:
+                        want = variants.hermes_text(os.path.join(name, rel), want.decode("utf-8")).encode("utf-8")
+                    if not os.path.isfile(copy) or open(copy, "rb").read() != want:
                         err(copy, "support file missing or different: run python3 build/variants.py")
             desc = data.get("description") or ""
             if data.get("name") != name or "SearchApi" not in desc[:BRAND_WITHIN]:
@@ -221,16 +237,16 @@ def check_variants(names):
                     err(path, "Hermes description over 60 chars")
                 if not data.get("version") or not data.get("author") or not ((data.get("metadata") or {}).get("hermes") or {}).get("tags"):
                     err(path, "Hermes needs version, author and metadata.hermes.tags")
-                if "SEARCHAPI_API_KEY" not in json.dumps(data.get("required_environment_variables")):
-                    err(path, "Hermes variant must declare SEARCHAPI_API_KEY")
+                if any(str(e.get("optional")).lower() != "true" for e in data.get("required_environment_variables") or []):
+                    err(path, "Hermes env vars must be optional: true (the script reads only the setup key file; MCP users need no key)")
             else:
                 oc = (data.get("metadata") or {}).get("openclaw") or {}
                 if len(desc) > 160:
                     err(path, "ClawHub description over 160 chars")
                 if oc.get("primaryEnv") != "SEARCHAPI_API_KEY" or (oc.get("requires") or {}).get("env"):
                     err(path, "ClawHub needs primaryEnv SEARCHAPI_API_KEY and no requires.env")
-                if "python3" not in ((oc.get("requires") or {}).get("anyBins") or []):
-                    err(path, "ClawHub requires.anyBins must list python3")
+                if not {"python3", "python", "py"} <= set((oc.get("requires") or {}).get("anyBins") or []):
+                    err(path, "ClawHub requires.anyBins must list python3, python and py (Windows has py and python, rarely python3)")
                 if any(v.get("required") is not False for v in oc.get("envVars") or [{}]):
                     err(path, "ClawHub envVars must be required: false")
                 declared = {v.get("name") for v in oc.get("envVars") or []}
@@ -267,6 +283,21 @@ def check_commands():
             t = tomllib.loads(read(toml))
             if not t.get("prompt") or t.get("description") != data.get("description"):
                 err(toml, "stale: run python3 build/variants.py")
+
+
+README_INSTALL = [   # install commands that were tested and broke (install test 2026-10-16)
+    (r"skills add \S+(?: -a \S+)* -a openclaw(?![^`|]*\s-g\b)", "OpenClaw needs -g: a project install lands in ./skills, which OpenClaw does not read"),
+    (r"copilot plugin install [\w.-]+/[\w.-]+(?!@)", "Copilot direct repo installs are deprecated: use marketplace add, then install searchapi@searchapi"),
+    (r"grok plugin install (?![^`|]*--trust)", "Grok refuses to install without --trust"),
+]
+
+
+def check_readme():
+    path = os.path.join(ROOT, "README.md")
+    for n, line in enumerate(read(path).split("\n"), 1):
+        for rx, why in README_INSTALL:
+            if re.search(rx, line):
+                err(path, "line %d: %s" % (n, why))
 
 
 def check_manifests(version):
@@ -363,6 +394,7 @@ def main():
         check_variants(names)
         check_commands()
         check_manifests(version)
+        check_readme()
     sizes = ", ".join("%s %d bytes" % (n, os.path.getsize(os.path.join(SKILLS, n, "SKILL.md"))) for n in names)
     if errors:
         print("\n".join(errors))

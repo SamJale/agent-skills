@@ -6,6 +6,14 @@ Hermes and ClawHub get the canonical SKILL.md body under their own frontmatter (
 utm_source changes, to the catalog's name), plus byte-identical copies of the skill's scripts/ and references/.
 The ClawHub frontmatter declares every env var the script reads, as ClawHub's scan compares the two. Gemini CLI gets a .toml copy of each command next to its
 .md source, because Gemini loads extension commands only from the root commands/ folder.
+
+Hermes is the exception: its skills_guard scan blocks a community skill that reads a secret-named env var
+(os.environ.get("..._KEY") is critical, any other os.environ use is high), and --force cannot override it.
+So the Hermes copy takes the key only from the file setup writes, and HERMES_TEXT edits the script and the
+SKILL.md bodies to say so. Each edit must match exactly once, so a change to the source fails here, loudly.
+SEARCHAPI_API_KEY stays usable: the core skill declares it as an optional Hermes env var (Hermes passes it to
+the terminal only when set, and never prompts for it), and its Connect step pipes it into setup once, so the
+shell reads the variable and the script reads only stdin.
 """
 import glob
 import json
@@ -33,6 +41,41 @@ VARIANTS = {   # per skill: the short descriptions the two catalogs can show
 }
 
 
+HERMES_TEXT = {   # file (relative to skills/) -> [(canonical text, Hermes text)]
+    "searchapi/scripts/searchapi.py": [
+        ("Key: SEARCHAPI_API_KEY, else ~/.config/searchapi/key. It is sent",
+         "Key: ~/.config/searchapi/key, saved by setup. It is sent"),
+        ('    key, src = (os.environ.get("SEARCHAPI_API_KEY") or "").strip(), "SEARCHAPI_API_KEY"\n',
+         '    key, src = "", KEY_FILE                                 # Hermes copy: the setup file only\n'),
+        ("    harness = next((name for var, name in HARNESSES if os.environ.get(var)), None)\n",
+         '    harness = "hermes"                                      # Hermes copy: no env scan\n'),
+        ("Use SEARCHAPI_API_KEY or the setup command.", "Use the setup command."),
+        ('    if (os.environ.get("SEARCHAPI_API_KEY") or "").strip() not in ("", key):\n'
+         '        head["note"] = "SEARCHAPI_API_KEY is set in this shell and is used before the saved key."\n', ""),
+        ("Set SEARCHAPI_API_KEY instead.", "Check that folder is writable, or use the MCP server."),
+    ],
+    "searchapi/SKILL.md": [
+        ("1. A shell and a key (`SEARCHAPI_API_KEY` or `~/.config/searchapi/key`):",
+         "1. A shell and a key saved by `setup` in `~/.config/searchapi/key` (if only `SEARCHAPI_API_KEY` is set, "
+         "save it once: `printf '%s' \"$SEARCHAPI_API_KEY\" | python3 scripts/searchapi.py setup --key-stdin`):"),
+    ],
+    "searchapi-migrate/SKILL.md": [
+        ('key = os.environ.get("SEARCHAPI_API_KEY")\nif not key:\n    raise RuntimeError("SEARCHAPI_API_KEY is not set")\n',
+         "# key: from SEARCHAPI_API_KEY, loaded the way the project loads its other secrets; fail fast when unset\n"),
+    ],
+}
+
+
+def hermes_text(rel, text):
+    """The Hermes copy of skills/<rel>: HERMES_TEXT applied, each edit exactly once."""
+    for old, new in HERMES_TEXT.get(rel.replace(os.sep, "/"), []):
+        if text.count(old) != 1:
+            raise SystemExit("variants.py: HERMES_TEXT edit for %s matches %d times, update it: %r"
+                             % (rel, text.count(old), old[:60]))
+        text = text.replace(old, new)
+    return text
+
+
 def split(path):
     with open(path, encoding="utf-8") as f:
         text = f.read()
@@ -45,6 +88,14 @@ def field(fm, key):
 
 
 def hermes(name, fm, v):
+    env = [   # optional: Hermes passes it through when set and never prompts; the script still reads only the file
+        "required_environment_variables:",
+        "  - name: SEARCHAPI_API_KEY",
+        "    optional: true",
+        '    prompt: "SearchApi API key"',
+        '    help: "Optional. Get one at %s"' % (SIGN_UP % "hermes"),
+        '    required_for: "the script path: the skill saves it once with setup (the SearchApi MCP server needs none)"',
+    ] if name == "searchapi" else []
     return "\n".join([
         "---",
         BANNER % ("skills/%s/SKILL.md" % name),
@@ -53,11 +104,7 @@ def hermes(name, fm, v):
         "version: %s" % field(fm, "version"),
         "author: SearchApi",
         "license: MIT",
-        "required_environment_variables:",
-        "  - name: SEARCHAPI_API_KEY",
-        '    prompt: "SearchApi API key"',
-        '    help: "Get one at %s"' % (SIGN_UP % "hermes"),
-        '    required_for: "the script path (the SearchApi MCP server signs in without a key)"',
+    ] + env + [
         "metadata:",
         "  hermes:",
         "    tags: [%s]" % ", ".join(v["tags"]),
@@ -101,7 +148,7 @@ def clawhub(name, fm, v):
         % (SIGN_UP % "clawhub"),
     ] + extra + [
         "    requires:",
-        "      anyBins: [python3]",
+        "      anyBins: [python3, python, py]",   # Windows Python ships py and python, rarely python3
         "    homepage: https://www.searchapi.io",
         "---",
     ]) + "\n"
@@ -122,9 +169,15 @@ def skills():
                         and "__pycache__" not in rel:
                     os.makedirs(os.path.dirname(os.path.join(out, rel)), exist_ok=True)
                     shutil.copy2(f, os.path.join(out, rel))
+                    if harness == "hermes" and os.path.join(name, rel).replace(os.sep, "/") in HERMES_TEXT:
+                        with open(f, encoding="utf-8") as src_f, open(os.path.join(out, rel), "w", encoding="utf-8") as dst:
+                            dst.write(hermes_text(os.path.join(name, rel), src_f.read()))
             os.makedirs(out, exist_ok=True)
-            with open(os.path.join(out, "SKILL.md"), "w", encoding="utf-8") as f:   # sign-ups credited to the catalog
-                f.write(make(name, fm, VARIANTS[name]) + body.replace("utm_source=agent-skill", "utm_source=" + harness))
+            text = body.replace("utm_source=agent-skill", "utm_source=" + harness)   # sign-ups credited to the catalog
+            if harness == "hermes":
+                text = hermes_text(name + "/SKILL.md", text)
+            with open(os.path.join(out, "SKILL.md"), "w", encoding="utf-8") as f:
+                f.write(make(name, fm, VARIANTS[name]) + text)
         print("wrote hermes/%s, clawhub/%s" % (name, name))
 
 

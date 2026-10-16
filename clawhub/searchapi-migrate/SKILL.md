@@ -61,7 +61,7 @@ metadata:
         required: false
         description: "Read only to name the agent in the X-SearchApi-Client header."
     requires:
-      anyBins: [python3]
+      anyBins: [python3, python, py]
     homepage: https://www.searchapi.io
 ---
 

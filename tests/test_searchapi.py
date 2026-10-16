@@ -1406,5 +1406,46 @@ class Onboarding(MockCase):
         self.assertEqual(self.state.requests[-1][3]["authorization"], "Bearer " + key)
 
 
+class HermesCopy(MockCase):
+    """hermes/ gets a script that takes the key only from the setup file: Hermes blocks skills that read a secret env var."""
+    HERMES = os.path.join(ROOT, "hermes", "searchapi", "scripts", "searchapi.py")
+
+    def run_hermes(self, *args):
+        r = subprocess.run([sys.executable, "-I", self.HERMES] + list(args), capture_output=True, text=True,
+                           env=self.env, timeout=60, stdin=subprocess.DEVNULL)
+        return r.returncode, r.stdout
+
+    def test_env_key_ignored_and_setup_file_used(self):
+        code, out = self.run_hermes("credits")                 # SEARCHAPI_API_KEY is set in self.env
+        self.assertEqual(code, 3, out)
+        self.assertIn("No SearchApi key. Run: ", out)
+        self.assertEqual(self.state.requests, [])
+        folder = os.path.join(self.home, ".config", "searchapi")
+        os.makedirs(folder)
+        with open(os.path.join(folder, "key"), "w") as f:
+            f.write(TEST_KEY)
+        os.chmod(os.path.join(folder, "key"), 0o600)
+        code, out = self.run_hermes("credits")
+        self.assertEqual(code, 0, out)
+        headers = self.state.requests[-1][3]
+        self.assertEqual(headers["authorization"], "Bearer " + TEST_KEY)
+        self.assertEqual(headers["x-searchapi-client"], "searchapi-skills/1.0.0 (hermes; searchapi)")
+
+    def test_env_key_saved_once_with_the_skill_md_pipe(self):
+        with open(os.path.join(ROOT, "hermes", "searchapi", "SKILL.md"), encoding="utf-8") as f:
+            pipe = re.search(r"`(printf '%s' \"\$SEARCHAPI_API_KEY\" \| python3 scripts/searchapi\.py setup --key-stdin)`",
+                             f.read()).group(1)
+        cmd = pipe.replace("python3", shlex.quote(sys.executable) + " -I", 1)
+        r = subprocess.run(["/bin/sh", "-c", cmd], cwd=os.path.dirname(os.path.dirname(self.HERMES)), env=self.env,
+                           capture_output=True, text=True, timeout=60)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertNotIn(TEST_KEY, r.stdout + r.stderr)
+        path = os.path.join(self.home, ".config", "searchapi", "key")
+        self.assertEqual(stat.S_IMODE(os.stat(path).st_mode), 0o600)
+        code, out = self.run_hermes("credits")
+        self.assertEqual(code, 0, out)
+        self.assertEqual(self.state.requests[-1][3]["authorization"], "Bearer " + TEST_KEY)
+
+
 if __name__ == "__main__":
     unittest.main()

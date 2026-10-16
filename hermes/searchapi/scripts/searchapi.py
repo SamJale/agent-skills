@@ -9,7 +9,7 @@
   searchapi.py credits                           credits left and searches this hour
   searchapi.py setup [--key-stdin]               save your key (hidden prompt) and check it
 
-Key: SEARCHAPI_API_KEY, else ~/.config/searchapi/key. It is sent only in the Authorization
+Key: ~/.config/searchapi/key, saved by setup. It is sent only in the Authorization
 header. Line 1 of every output is a JSON status line: ignored = params the API dropped,
 changed = values it used instead of yours, location_used = the place it searched from when
 that is not your location. Raw responses are saved untouched in $SEARCHAPI_DIR (default: a
@@ -178,7 +178,7 @@ def base_url():
 
 
 def load_key():
-    key, src = (os.environ.get("SEARCHAPI_API_KEY") or "").strip(), "SEARCHAPI_API_KEY"
+    key, src = "", KEY_FILE                                 # Hermes copy: the setup file only
     if not key:
         src = KEY_FILE
         try:
@@ -200,7 +200,7 @@ def load_key():
 
 
 def client(skill):
-    harness = next((name for var, name in HARNESSES if os.environ.get(var)), None)
+    harness = "hermes"                                      # Hermes copy: no env scan
     agent = re.sub(r"[^a-z0-9_.-]", "", (os.environ.get("AI_AGENT") or os.environ.get("AGENT") or "").lower())[:30]
     harness = harness or (agent if agent not in ("", "1", "true") else "unknown")
     return "searchapi-skills/%s (%s; %s)" % (VERSION, harness, skill)
@@ -516,7 +516,7 @@ def parse_pairs(items):
         if not sep or not k:
             raise ApiError(2, "Bad argument %r: use key=value" % kv)
         if k.lower() == "api_key":
-            raise ApiError(2, "Never pass the key as a param. Use SEARCHAPI_API_KEY or the setup command.")
+            raise ApiError(2, "Never pass the key as a param. Use the setup command.")
         if k == "engine":
             raise ApiError(2, "The engine is the first argument, not a param.")
         if k in sent:
@@ -753,8 +753,6 @@ def setup(from_stdin, skill):
         fail(2, "That does not look like a SearchApi key. Copy it from your SearchApi dashboard. "
                 "No account yet? Sign up: %s" % SIGN_UP)
     head = {"ok": True, "saved": KEY_FILE.replace(os.sep, "/")}
-    if (os.environ.get("SEARCHAPI_API_KEY") or "").strip() not in ("", key):
-        head["note"] = "SEARCHAPI_API_KEY is set in this shell and is used before the saved key."
     try:
         info = me(key, skill)
     except ApiError as e:
@@ -764,7 +762,7 @@ def setup(from_stdin, skill):
     try:
         save_key(key)
     except OSError as e:
-        fail(2, "Could not save the key to %s (%s). Set SEARCHAPI_API_KEY instead." % (head["saved"], e))
+        fail(2, "Could not save the key to %s (%s). Check that folder is writable, or use the MCP server." % (head["saved"], e))
     if info is None:
         fail(why.code, "Key saved to %s but not checked: %s" % (head["saved"], why.msg), saved=head["saved"])
     head["credits"] = info["credits"]
